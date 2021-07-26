@@ -7,6 +7,6 @@ import './home.css';
  */
 export default function Home() {
 	return (
-		<>Coming Soon!</>
+		<>Home Coming Soon!</>
 	);
 };

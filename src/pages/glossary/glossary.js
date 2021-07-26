@@ -7,6 +7,6 @@ import './glossary.css';
  */
 export default function Glossary() {
 	return (
-		<>Coming Soon!</>
+		<>Glossary Coming Soon!</>
 	);
 };

@@ -7,6 +7,6 @@ import './blog.css';
  */
 export default function Blog() {
 	return (
-		<>Coming Soon!</>
+		<>Blog Coming Soon!</>
 	);
 };

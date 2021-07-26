@@ -7,6 +7,6 @@ import './discovery.css';
  */
 export default function Discovery() {
 	return (
-		<>Coming Soon!</>
+		<>Discovery Coming Soon!</>
 	);
 };
