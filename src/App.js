@@ -1,13 +1,26 @@
+import {createContext} from "react";
 import './App.css';
+import Main from "./components/main";
 
+/**
+ * @returns {JSX.Element}
+ * @constructor
+ */
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+        <div className={'content'}>
+            <UniversalContext.Provider value={
+                {
 
-      </header>
+                }
+            }>
+                <Main/>
+            </UniversalContext.Provider>
+        </div>
     </div>
   );
 }
 
 export default App;
+export const UniversalContext = createContext()

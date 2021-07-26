@@ -6,6 +6,7 @@ import App from './App';
 import history from "./history";
 import reportWebVitals from './reportWebVitals';
 
+// .env to be used for dev environmental variables such as api keys. Should NOT be committed.
 require('dotenv').config();
 
 ReactDOM.render(
