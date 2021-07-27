@@ -1,6 +1,7 @@
 import {createContext} from "react";
 import './App.css';
 import Main from "./components/main";
+import Nav_desktop from "./components/navigation/nav_desktop";
 
 /**
  * @returns {JSX.Element}
@@ -15,6 +16,7 @@ function App() {
 
                 }
             }>
+                <Nav_desktop/>
                 <Main/>
             </UniversalContext.Provider>
         </div>
@@ -23,4 +25,4 @@ function App() {
 }
 
 export default App;
-export const UniversalContext = createContext()
+export const UniversalContext = createContext();
