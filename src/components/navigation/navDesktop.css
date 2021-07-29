@@ -1,0 +1,19 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 100vw;
+    background: transparent;
+    z-index: 99;
+}
+
+nav div {
+    padding: 1em 1em;
+    font-size: 1.5em;
+    color: white;
+}
+
+nav span:hover, nav span:visited {
+    color: #ea8a8a;
+    border-bottom: 2px solid #7000FF;;
+}

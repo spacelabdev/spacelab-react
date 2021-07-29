@@ -1,5 +1,6 @@
 import React from "react";
 import './blog.css';
+import HeroImage from "../../components/heroImage/heroImage";
 
 /**
  * @returns {JSX.Element}
@@ -7,6 +8,8 @@ import './blog.css';
  */
 export default function Blog() {
 	return (
-		<>Blog Coming Soon!</>
+		<>
+			<HeroImage/>
+		</>
 	);
 };

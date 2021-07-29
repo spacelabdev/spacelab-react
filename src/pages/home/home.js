@@ -1,4 +1,5 @@
 import React from "react";
+import HeroImage from "../../components/heroImage/heroImage";
 import "./home.scss";
 
 /**
@@ -6,9 +7,9 @@ import "./home.scss";
  * @constructor
  */
 export default function Home() {
-  return (
-    <>
-      <h1>Home Coming Soon!</h1>
-    </>
-  );
-}
+	return (
+		<>
+			<HeroImage/>
+		</>
+	);
+};
