@@ -1,7 +1,6 @@
 import {createContext} from "react";
 import './App.css';
 import Main from "./components/main";
-import NavDesktop from "./components/navigation/navDesktop";
 
 /**
  * @returns {JSX.Element}
@@ -16,7 +15,6 @@ function App() {
 
 					}
 				}>
-					<NavDesktop/>
 					<Main/>
 				</UniversalContext.Provider>
 			</div>

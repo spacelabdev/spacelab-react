@@ -1,6 +1,7 @@
 import React from "react";
 import "./heroImage.css";
 import heroImage from "../../assets/felix-mittermeier-Knwea-mLGAg-unsplash.jpg"
+import NavDesktop from "../navigation/navDesktop";
 
 /**
  * @returns {JSX.Element}
@@ -19,9 +20,9 @@ export default function HeroImage() {
 
 	return (
 		<div id={'hero-image-container'}>
+			<NavDesktop/>
 			<img id={'hero-image'} src={heroImage} alt={'milky way at night'}/>
-			<div id={'hero-circle'}>
-			</div>
+			<div id={'hero-circle'}/>
 			<p id={'hero-page'} >{pageTitle}</p>
 		</div>
 	);
