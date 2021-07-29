@@ -1,5 +1,6 @@
 import React from "react";
 import './home.css';
+import HeroImage from "../../components/heroImage/heroImage";
 
 /**
  * @returns {JSX.Element}
@@ -7,6 +8,8 @@ import './home.css';
  */
 export default function Home() {
 	return (
-		<>Home Coming Soon!</>
+		<>
+			<HeroImage/>
+		</>
 	);
 };

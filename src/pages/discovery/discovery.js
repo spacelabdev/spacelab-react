@@ -1,5 +1,6 @@
 import React from "react";
 import './discovery.css';
+import HeroImage from "../../components/heroImage/heroImage";
 
 /**
  * @returns {JSX.Element}
@@ -7,6 +8,8 @@ import './discovery.css';
  */
 export default function Discovery() {
 	return (
-		<>Discovery Coming Soon!</>
+		<>
+			<HeroImage/>
+		</>
 	);
 };
