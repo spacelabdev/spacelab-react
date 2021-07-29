@@ -1,6 +1,6 @@
 import React from "react";
-import './home.css';
 import HeroImage from "../../components/heroImage/heroImage";
+import "./home.scss";
 
 /**
  * @returns {JSX.Element}
