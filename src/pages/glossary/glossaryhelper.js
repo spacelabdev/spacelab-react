@@ -219,6 +219,7 @@ export const glossaryTermsArray = [
 		+ "reference plane is an arbitrary choice.",
 		15
 	],
+	// Current mid point in terms array. Will change as additional terms are added. We may also transition to more than two buttons.
 	[
 		"Photoevaporation",
 		"Photoevaporation is the process in which radiation ionises gas and causes it to disperse away "
