@@ -14,7 +14,7 @@
 #hero-circle {
     position: absolute;
     border-radius: 50%;
-    background: rgba(179, 175, 175, 0.95);
+    background: rgba(179,175,175,.95);
     opacity: .25;
     width: 60vh;
     height: 60vh;
