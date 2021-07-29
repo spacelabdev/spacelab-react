@@ -4,8 +4,6 @@ import './glossary.css';
 export default function OfficeListItem(props) {
 	const glossaryTerm = props.element;
 
-	console.log(glossaryTerm);
-	
 	return (
 		<div className={'glossary-term-container'}>
 			<div className={'glossary-term'}>{glossaryTerm[0]}</div>
