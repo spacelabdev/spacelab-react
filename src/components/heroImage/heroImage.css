@@ -15,7 +15,7 @@
     position: absolute;
     border-radius: 50%;
     background: rgba(179, 175, 175, 0.95);
-    opacity: 25%;
+    opacity: .25;
     width: 60vh;
     height: 60vh;
     z-index: 50;
@@ -31,4 +31,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -100%);
+    z-index: 99;
 }
