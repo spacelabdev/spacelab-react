@@ -16,7 +16,7 @@ function App() {
 
 					}
 				}>
-					<NavDesktop/>
+					{/*<NavDesktop/>*/}
 					<Main/>
 				</UniversalContext.Provider>
 			</div>

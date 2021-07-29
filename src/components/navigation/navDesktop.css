@@ -1,7 +1,7 @@
 nav {
     display: flex;
     justify-content: flex-end;
-    position: relative;
+    position: absolute;
     width: 100vw;
     background: transparent;
     z-index: 99;

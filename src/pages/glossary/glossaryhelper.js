@@ -1,4 +1,4 @@
-const glossaryTerms = {
+export const glossaryTerms = {
 	"Astrometric solution": "An astrometric solution is an optical technique used in astronomical imaging, "
 		+ "where \"solving\" an image means finding a match between the imaged stars and a star catalogue. "
 		+ "Therefore an astrometric solution is a model describing the astronomical position of each image pixel.",
@@ -22,11 +22,7 @@ const glossaryTerms = {
 	"Gravitational Lensing": "Gravitational lensing is when light from a star located behind a black hole or other "
 		+ "massive object is bent around the massive object, distorting the image of the star and allowing you to see "
 		+ "it even though it exists behind another object in the sky. In some cases it can result in multiple images "
-		+ "of the same object appearing in the region around a black hole.\n"
-		+ <a
-			href={'https://sci.esa.int/web/gaia/-/12-rare-einstein-crosses-discovered-with-gaia'}
-			target="_blank"
-			rel="nofollow noopener noreferrer">See Einstein cross</a>,
+		+ "of the same object appearing in the region around a black hole.",
 	"Hot Jupiter": "A hot jupiter is a class of giant exoplanets that resemble Jupiter and have very short orbital "
 		+ "periods, meaning that they are orbiting much closer to their star. According to CalTech, orbital periods of "
 		+ "Hot Jupiters are usually less than or equal to 10 days. They are easy to identify using transit methods "
