@@ -1,5 +1,5 @@
 import {createContext, useEffect, useState} from "react";
-import {findFirstHalf} from "./pages/glossary/glossaryhelper";
+import {findFirstThird, glossaryTermsArray} from "./pages/glossary/glossaryhelper";
 import './App.css';
 import Main from "./components/main";
 
@@ -9,10 +9,12 @@ import Main from "./components/main";
  */
 function App() {
 	const [glossaryTerms, setGlossaryTerms] = useState();
+	const [currentGlossaryTerm, setCurrentGlossaryTerm] = useState(glossaryTermsArray[0][0]);
+	const [glossaryTermDef, setGlossaryTermDef] = useState(glossaryTermsArray[0][1]);
 
 	// Set initial state for glossaryTerms on app load
 	useEffect(() => {
-		setGlossaryTerms(findFirstHalf());
+		setGlossaryTerms(findFirstThird());
 	}, []);
 
 	return (
@@ -22,9 +24,13 @@ function App() {
 					{
 						glossaryTerms,
 						setGlossaryTerms,
+						glossaryTermDef,
+						setGlossaryTermDef,
+						currentGlossaryTerm,
+						setCurrentGlossaryTerm
 					}
 				}>
-					<Main/>
+				<Main/>
 				</UniversalContext.Provider>
 			</div>
 		</div>

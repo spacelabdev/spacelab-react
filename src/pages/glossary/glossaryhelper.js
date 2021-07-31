@@ -1,11 +1,11 @@
 /**
- * Returns glossary terms with alphabetic index less than or equal to 15, which is A-O.
+ * Returns glossary terms with alphabetic index less than or equal to 9, which is A-I.
  * @returns {*[]}
  */
-export const findFirstHalf = () => {
+export const findFirstThird = () => {
 	const glossaryArray = [];
 	for (let i = 0; i < glossaryTermsArray.length; i++) {
-		if (glossaryTermsArray[i][2] <= 15) {
+		if (glossaryTermsArray[i][2] <= 9) {
 			glossaryArray.push(glossaryTermsArray[i]);
 		}
 	}
@@ -13,13 +13,27 @@ export const findFirstHalf = () => {
 };
 
 /**
- * Returns glossary terms with alphabetic index greater than 15, which is P-Z.
+ * Returns glossary terms with alphabetic index between 10 and 19, which is L-S.
  * @returns {*[]}
  */
-export const findSecondHalf = () => {
+export const findMiddleThird = () => {
 	const glossaryArray = [];
 	for (let i = 0; i < glossaryTermsArray.length; i++) {
-		if (glossaryTermsArray[i][2] > 15) {
+		if (glossaryTermsArray[i][2] > 9 && glossaryTermsArray[i][2] <= 19) {
+			glossaryArray.push(glossaryTermsArray[i]);
+		}
+	}
+	return glossaryArray;
+};
+
+/**
+ * Returns glossary terms with alphabetic index greater than 19, which is T-Z.
+ * @returns {*[]}
+ */
+export const findLastThird = () => {
+	const glossaryArray = [];
+	for (let i = 0; i < glossaryTermsArray.length; i++) {
+		if (glossaryTermsArray[i][2] > 19) {
 			glossaryArray.push(glossaryTermsArray[i]);
 		}
 	}
@@ -247,7 +261,6 @@ export const glossaryTermsArray = [
 		+ "reference plane is an arbitrary choice.",
 		15
 	],
-	// Current mid point in terms array. Will change as additional terms are added. We may also transition to more than two buttons.
 	[
 		"Photoevaporation",
 		"Photoevaporation is the process in which radiation ionises gas and causes it to disperse away "
