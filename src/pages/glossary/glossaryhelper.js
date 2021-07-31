@@ -1,4 +1,32 @@
 /**
+ * Returns glossary terms with alphabetic index less than or equal to 15, which is A-O.
+ * @returns {*[]}
+ */
+export const findFirstHalf = () => {
+	const glossaryArray = [];
+	for (let i = 0; i < glossaryTermsArray.length; i++) {
+		if (glossaryTermsArray[i][2] <= 15) {
+			glossaryArray.push(glossaryTermsArray[i]);
+		}
+	}
+	return glossaryArray;
+};
+
+/**
+ * Returns glossary terms with alphabetic index greater than 15, which is P-Z.
+ * @returns {*[]}
+ */
+export const findSecondHalf = () => {
+	const glossaryArray = [];
+	for (let i = 0; i < glossaryTermsArray.length; i++) {
+		if (glossaryTermsArray[i][2] > 15) {
+			glossaryArray.push(glossaryTermsArray[i]);
+		}
+	}
+	return glossaryArray;
+};
+
+/**
  * Dictionary of Glossary terms organized by key value pairs where the key is the term and the value is the definition.
  * @type {{"Black Body": string, "Stellar Limb": string, "Stellar Variability": string,
  * "Hydrogen-Helium Envelope": string, Eccentricity: string, "Limb Darkening": string, "Secondary Eclipse": string,

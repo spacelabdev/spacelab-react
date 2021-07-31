@@ -1,4 +1,5 @@
-import {createContext} from "react";
+import {createContext, useEffect, useState} from "react";
+import {findFirstHalf} from "./pages/glossary/glossaryhelper";
 import './App.css';
 import Main from "./components/main";
 
@@ -7,12 +8,20 @@ import Main from "./components/main";
  * @constructor
  */
 function App() {
+	const [glossaryTerms, setGlossaryTerms] = useState();
+
+	// Set initial state for glossaryTerms on app load
+	useEffect(() => {
+		setGlossaryTerms(findFirstHalf());
+	}, []);
+
 	return (
 		<div className="App">
 			<div className={'content'}>
 				<UniversalContext.Provider value={
 					{
-
+						glossaryTerms,
+						setGlossaryTerms,
 					}
 				}>
 					<Main/>
