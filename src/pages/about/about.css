@@ -1,0 +1,81 @@
+#main-header{
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  margin-top: 60px;
+  margin-bottom: 0px;
+}
+
+#second-header{
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+}
+
+.section-one{
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 100vh;
+
+} 
+
+.team-picture-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+}
+
+.team-picture{
+  width: 70px;
+  border-radius: 5px;
+  margin: 50px;
+}
+
+.section-two{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  margin-top: 10%;
+}
+
+.inner-section-two{
+  display: flex;
+  flex-direction: row;
+}
+
+.section-two-image{
+  width: 70px;
+  border-radius: 5px;
+  margin: 150px;
+}
+
+.left-div-section-two{
+  width: 50%;
+  margin-left: 0px;
+}
+
+.right-div-section-two{
+  width: 50%;
+  text-align: left;
+}
+
+.nested-div-two{
+  display: flex;
+  flex-direction: row;
+}
+
+.nested-inner-div{
+  width: 50%;
+  margin-right: 10%;
+  margin-top: 10%;
+}
