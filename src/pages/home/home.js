@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
+import IntroductionSection from "./IntroductionSection";
 import "./home.scss";
 
 /**
@@ -7,9 +8,10 @@ import "./home.scss";
  * @constructor
  */
 export default function Home() {
-	return (
-		<>
-			<HeroImage/>
-		</>
-	);
-};
+  return (
+    <>
+      <HeroImage />
+      <IntroductionSection />
+    </>
+  );
+}
