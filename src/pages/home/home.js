@@ -8,10 +8,10 @@ import "./home.scss";
  * @constructor
  */
 export default function Home() {
-  return (
-    <>
-      <HeroImage />
-      <IntroductionSection />
-    </>
-  );
+	return (
+		<>
+			<HeroImage/>
+			<IntroductionSection/>
+		</>
+	);
 }
