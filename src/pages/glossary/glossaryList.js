@@ -1,31 +1,19 @@
-import React, {useContext} from "react";
+import React from "react";
 import GlossaryListItem from "./glossaryListItem";
-import {UniversalContext} from "../../App";
-import {findFirstThird, findMiddleThird, findLastThird} from "./glossaryhelper";
+import {glossaryTerms} from "./glossaryhelper";
 import './glossary.css';
 
 export default function GlossaryList() {
-	const context = useContext(UniversalContext);
-	let glossaryArray = [];
-
-	if (context.glossaryTerms !== undefined) {
-		glossaryArray = context.glossaryTerms;
+	// change dictionary of glossary terms to an array to arrays.
+	const termsArray = [];
+	for (const key in glossaryTerms) {
+		if (glossaryTerms.hasOwnProperty(key)) {
+			termsArray.push([ key, glossaryTerms[key]]);
+		}
 	}
 
-	const handleFirstThirdClick = () => {
-		context.setGlossaryTerms(findFirstThird);
-	};
-
-	const handleMiddleThirdClick = () => {
-		context.setGlossaryTerms(findMiddleThird);
-	};
-
-	const handledLastThirdClick = () => {
-		context.setGlossaryTerms(findLastThird);
-	}
-
-	// map over each element in the glossaryTermsArray and pass them to the GlossaryListItem component as props
-	const glossaryTermArray = glossaryArray.map((e, index) => {
+	// map over each element in the termsArray and pass them to the GlossaryListItem component as props
+	const glossaryTermArray = termsArray.map((e, index) => {
 		return (
 			<GlossaryListItem element={e} key={index}/>
 		);
@@ -33,16 +21,8 @@ export default function GlossaryList() {
 
 	return (
 		<div className={'glossary-results-wrapper'}>
-			<div id={'glossary-button-container'}>
-				<span className={'glossary-filter-button'} onClick={handleFirstThirdClick}>A - I</span>
-				<span className={'glossary-filter-button'} onClick={handleMiddleThirdClick}>L - S</span>
-				<span className={'glossary-filter-button'} onClick={handledLastThirdClick}>T - Z</span>
-			</div>
-			<div id={'glossary-term-wrapper'}>
-				{glossaryTermArray}
-			</div>
-			<div id={'glossary-term-name'}>{context.currentGlossaryTerm}</div>
-			<div id={'glossary-term-def'}>{context.glossaryTermDef}</div>
+			<div id={'glossary-title'}>Glossary of Terms</div>
+			{glossaryTermArray}
 		</div>
 	);
 };
