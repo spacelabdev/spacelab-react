@@ -65,6 +65,7 @@ export default function Discovery() {
 			<br/>
 
 			<DiscoveryPlanetSystemsList/>
+			{/*TODO: Create List and List item components for other filter methods */}
 
 			{/*<div id="filters">*/}
 			{/*	<h2>Planet System</h2>*/}
