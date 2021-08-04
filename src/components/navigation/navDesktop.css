@@ -2,7 +2,7 @@ nav {
     display: flex;
     justify-content: flex-end;
     position: absolute;
-    width: 100vw;
+    width: 100%;
     background: transparent;
     z-index: 99;
 }
@@ -13,7 +13,8 @@ nav div {
     color: white;
 }
 
-nav span:hover, nav span:visited {
+nav span:hover,
+nav span:visited {
     color: #ea8a8a;
-    border-bottom: 2px solid #7000FF;
+    border-bottom: 2px solid #7000ff;
 }

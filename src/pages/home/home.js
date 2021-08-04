@@ -1,5 +1,6 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
+import IntroductionSection from "./IntroductionSection";
 import "./home.scss";
 
 /**
@@ -10,6 +11,7 @@ export default function Home() {
 	return (
 		<>
 			<HeroImage/>
+			<IntroductionSection/>
 		</>
 	);
-};
+}

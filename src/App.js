@@ -30,7 +30,7 @@ function App() {
 						setCurrentGlossaryTerm
 					}
 				}>
-				<Main/>
+					<Main/>
 				</UniversalContext.Provider>
 			</div>
 		</div>

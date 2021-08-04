@@ -1,3 +1,36 @@
-h1 {
-  color: purple;
+section.introduction-section {
+  max-width: 1200px;
+  padding: 1rem;
+  margin: 4rem auto;
+  .content-container {
+    display: flex;
+    .images {
+      background: #e5e5e5;
+      margin-right: 2rem;
+      flex: 2;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .about {
+      background: #e5e5e5;
+      width: 20rem;
+      padding: 1rem;
+      flex: 1;
+    }
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      .images {
+        margin-right: unset;
+        margin-bottom: 2rem;
+      }
+      .about {
+        width: 100%;
+      }
+    }
+  }
 }
