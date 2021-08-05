@@ -2,6 +2,11 @@ section.introduction-section {
   max-width: 1200px;
   padding: 1rem;
   margin: 4rem auto;
+  h2 {
+    font-size: 2.85em;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+  }
   .content-container {
     display: flex;
     .images {

@@ -11,6 +11,7 @@ function App() {
 	const [glossaryTerms, setGlossaryTerms] = useState();
 	const [currentGlossaryTerm, setCurrentGlossaryTerm] = useState(glossaryTermsArray[0][0]);
 	const [glossaryTermDef, setGlossaryTermDef] = useState(glossaryTermsArray[0][1]);
+	const [pageTitle, setPageTitle] = useState("");
 
 	// Set initial state for glossaryTerms on app load
 	useEffect(() => {
@@ -27,7 +28,9 @@ function App() {
 						glossaryTermDef,
 						setGlossaryTermDef,
 						currentGlossaryTerm,
-						setCurrentGlossaryTerm
+						setCurrentGlossaryTerm,
+						pageTitle,
+						setPageTitle
 					}
 				}>
 					<Main/>

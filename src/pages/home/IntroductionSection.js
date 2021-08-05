@@ -8,7 +8,7 @@ import "./home.scss";
 export default function IntroductionSection() {
 	return (
 		<section className="introduction-section">
-			<h2>Introduction Section</h2>
+			<h2>INTRODUCTION</h2>
 			<div className="content-container">
 				<div className="images">
 					<img
