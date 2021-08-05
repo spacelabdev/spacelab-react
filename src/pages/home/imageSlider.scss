@@ -3,6 +3,8 @@
     width: 100%;
     position: relative;
     flex: 5;
+    overflow: hidden;
+    background: black;
 
     img {
         position: absolute;
@@ -13,12 +15,14 @@
         object-fit: cover;
         visibility: hidden;
         opacity: 0;
-        transition: opacity 2s;
+        transform: translateX(100%);
+        transition: opacity 1s, transform 1s;
 
         &.show-image {
+            transform: translateX(0);
             visibility: visible;
             opacity: 1;
-            transition: opacity 2s;
+            transition: opacity 1s, transform 1s;
         }
     }
 
@@ -38,7 +42,7 @@
             height: 15px;
             border-radius: 50%;
             padding: 0;
-            background: black;
+            background: rgba(0, 0, 0, 0.171);
             border: solid white 2px;
             &:not(:last-of-type) {
                 margin-right: 1rem;

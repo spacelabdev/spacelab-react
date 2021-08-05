@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./imageSlider.scss";
-import placeHolder from "../../assets/img_placeholder.png";
 
 /**
  * @returns {JSX.Element}
@@ -11,32 +10,33 @@ export default function ImageSlider() {
     const images = [
         {
             id: 1,
-            url: "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,w_680/v1607377421/interiordesign/sidekix-media-lrk0l9w8rI0-unsplash_lql3f3.jpg",
+            url: "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,w_771/v1628183232/samples/greg-rakozy-oMpAz-DN-9I-unsplash_fsnc7t.jpg",
             alt: "placeholder",
         },
         {
             id: 2,
-            url: placeHolder,
-            alt: "nothing is showing",
+            url: "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,w_817/v1628183234/samples/john-fowler-7Ym9rpYtSdA-unsplash_ebolox.jpg",
+            alt: "placeholder 2",
         },
         {
             id: 3,
-            url: "https://res.cloudinary.com/djv69vvs7/image/upload/c_scale,w_680/v1607377421/interiordesign/sidekix-media-lrk0l9w8rI0-unsplash_lql3f3.jpg",
-            alt: "nothing is showing",
+            url: "https://res.cloudinary.com/djv69vvs7/image/upload/v1628183342/samples/guillermo-ferla-Oze6U2m1oYU-unsplash_mjn1oa.jpg",
+            alt: "placeholder 3",
         },
     ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            images.length > currentImageID
+                ? setCurrentImageID((prev) => prev + 1)
+                : setCurrentImageID(1);
+        }, 5000);
+        return () => clearInterval(interval);
+    });
 
     function sliderHandler(id) {
         setCurrentImageID(id);
     }
-
-    // function nextImageHandler() {
-    //     setCurrentImageID((prev) => prev + 1);
-    // }
-
-    // function prevImageHandler() {
-    //     setCurrentImageID((prev) => prev - 1);
-    // }
 
     return (
         <div className="images">
@@ -52,43 +52,16 @@ export default function ImageSlider() {
             <div className="slider-dots">
                 {images.map((button) => (
                     <button
+                        style={
+                            currentImageID === button.id
+                                ? { background: "white" }
+                                : {}
+                        }
                         key={button.id}
                         onClick={() => sliderHandler(button.id)}
                     ></button>
                 ))}
             </div>
-            {/* <button
-                className={
-                    currentImageID > 1
-                        ? "show prev-button button"
-                        : "prev-button button"
-                }
-                onClick={() => prevImageHandler()}
-            >
-                prev
-            </button> */}
-            {/* {currentImageID < images.length && (
-                <button
-                    className={
-                        currentImageID < images.length
-                            ? "show next-button button"
-                            : "next-button button"
-                    }
-                    onClick={() => nextImageHandler()}
-                >
-                    next
-                </button>
-            )} */}
         </div>
     );
 }
-
-// function ImageComponent({ url, alt, id, currentImageID }) {
-//     return (
-//         <img
-//             // className={currentImageID === id ? "show-image" : ""}
-//             src={url}
-//             alt={alt}
-//         />
-//     );
-// }

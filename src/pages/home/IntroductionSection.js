@@ -6,6 +6,7 @@ import "./home.scss";
  * @returns {JSX.Element}
  * @constructor
  */
+
 export default function IntroductionSection() {
     return (
         <section className="introduction-section">

@@ -1,24 +1,22 @@
-section {
+.introduction-section {
     max-width: 1200px;
     padding: 2rem;
     margin: 4rem auto;
-}
 
-.introduction-section {
     h2 {
-        font-size: 45px;
+        font-size: 2.85em;
         font-family: "Poppins", sans-serif;
         text-transform: uppercase;
     }
 
     h3 {
         font-family: "Poppins", sans-serif;
-        font-size: 25px;
+        font-size: 1.85em;
     }
 
     p {
         font-family: "Lato", sans-serif;
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
     .content-container {
@@ -55,4 +53,40 @@ section {
 }
 
 .exoplanet-101-section {
+    background-image: url("../../assets/exo-bg.png");
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    text-align: left;
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .line-break {
+        display: block;
+    }
+
+    .content-container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        padding: 3rem 2rem;
+        margin: 4rem auto;
+    }
+
+    .left-container {
+        width: 50%;
+    }
+
+    @media screen and (max-width: 730px) {
+        .content-container {
+            flex-direction: column;
+        }
+        .left-container {
+            width: 100%;
+        }
+    }
 }

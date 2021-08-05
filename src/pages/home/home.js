@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import IntroductionSection from "./IntroductionSection";
-import ExoPlanet101 from "./ExoPlanet101";
+import ExoPlanet101Section from "./ExoPlanet101Section";
 import "./home.scss";
 
 /**
@@ -13,7 +13,7 @@ export default function Home() {
         <>
             <HeroImage />
             <IntroductionSection />
-            <ExoPlanet101 />
+            <ExoPlanet101Section />
         </>
     );
 }
