@@ -1,5 +1,6 @@
 import React from "react";
-import ImageSlider from "./ImageSlider";
+import ImageSlider from "../../components/imageSlider/ImageSlider";
+import {homeSliderImages} from "./homepageHelper";
 import "./home.scss";
 
 /**
@@ -12,14 +13,14 @@ export default function IntroductionSection() {
         <section className="introduction-section">
             <h2>Introduction</h2>
             <div className="content-container">
-                <ImageSlider />
+                <ImageSlider images={homeSliderImages}/>
                 <div className="about">
                     <h3>What is the Space Lab?</h3>
                     <p>
                         SpaceLab is a project with the goal to explore
                         NASA/CalTech data from the TESS, Kepler and K2 Missions
                         using various degrees of Machine Learning and Deep
-                        Neural Networks in the persuit of Earth-Like planets
+                        Neural Networks in the pursuit of Earth-Like planets
                         around nearby stars in the Milky Way Galaxy.
                     </p>
                     <p>
