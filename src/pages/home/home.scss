@@ -1,23 +1,26 @@
+//Global
+
+h2 {
+    font-size: 2.85em;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.85em;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
 .introduction-section {
     max-width: 1200px;
     padding: 2rem;
     margin: 4rem auto;
-
-    h2 {
-        font-size: 2.85em;
-        font-family: "Poppins", sans-serif;
-        text-transform: uppercase;
-    }
-
-    h3 {
-        font-family: "Poppins", sans-serif;
-        font-size: 1.85em;
-    }
-
-    p {
-        font-family: "Lato", sans-serif;
-        font-size: 1.2em;
-    }
 
     .content-container {
         //container
@@ -33,7 +36,6 @@
             width: 20rem;
             padding: 1rem;
             flex: 2;
-            line-height: 1.5;
         }
 
         @media screen and (max-width: 1150px) {
