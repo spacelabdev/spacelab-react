@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.scss";
-import planet from "./planet_7.svg";
+import planet from "../../assets/planet.svg";
 
 /**
  * @returns {JSX.Element}
