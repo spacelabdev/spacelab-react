@@ -22,6 +22,7 @@ export default function About() {
     message: '',
   })
 
+
   const handleSubmit = event => {
     event.preventDefault()
     window.alert(`Submitting ${JSON.stringify(formdata, null, 2)}`)
@@ -99,36 +100,40 @@ export default function About() {
 
       <section className="section-four">
         <div className="form-background">
-          <div><p>Contact us</p></div>
-          <div className="column is-6-tablet is-offset-3-tablet is-8-mobile is-offset-2-mobile box">
-            <form onSubmit={handleSubmit}>
-              <div className="field">
-                <label className="label">First Name</label>
-                <div className="control">
-                  <input
-                    className="input"
-                    name="firstName"
-                    value={formdata.firstName}
-                    onChange={handleChange}
-                  />
+          <div className="form-title">
+            <p id="title-text">Contact us</p>
+          </div>
+          <div >
+          <form onSubmit={handleSubmit}>
+            <div className="first-input-row">
+                <div className="field">
+                    <label className="label">First Name*</label>
+                    <div>
+                      <input
+                        className="small-input"
+                        name="firstName"
+                        value={formdata.firstName}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label className="label">Last Name*</label>
+                    <div >
+                      <input
+                        className="small-input"
+                        name="lastName"
+                        value={formdata.lastName}
+                        onChange={handleChange}
+                      />
+                    </div>
                 </div>
               </div>
               <div className="field">
-                <label className="label">Last Name</label>
-                <div className="control">
+                <label className="label">Email*</label>
+                <div>
                   <input
-                    className="input"
-                    name="lastName"
-                    value={formdata.lastName}
-                    onChange={handleChange}
-                  />
-                </div>
-              </div>
-              <div className="field">
-                <label className="label">Email</label>
-                <div className="control">
-                  <input
-                    className="input"
+                    className="large-input"
                     name="email"
                     value={formdata.email}
                     onChange={handleChange}
@@ -137,9 +142,9 @@ export default function About() {
               </div>
               <div className="field">
                 <label className="label">Phone</label>
-                <div className="control">
+                <div >
                   <input
-                    className="input"
+                    className="large-input"
                     name="phone"
                     value={formdata.phone}
                     onChange={handleChange}
@@ -148,9 +153,9 @@ export default function About() {
               </div>
               <div className="field">
                 <label className="label">Message</label>
-                <div className="control">
+                <div >
                   <textarea
-                    className="textarea"
+                    className="message-input"
                     name="message"
                     value={formdata.message}
                     onChange={handleChange}
