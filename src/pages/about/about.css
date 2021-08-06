@@ -1,128 +1,156 @@
-#main-header{
-  color: black;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  font-size: 40px;
-  margin-top: 60px;
-  margin-bottom: 0px;
+#main-header {
+    color: black;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 0px;
 }
 
-#second-header{
-  color: black;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  font-size: 30px;
+#second-header {
+    color: black;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
 }
 
-.section-one{
-  font-family: 'Lato', sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  height: 100vh;
-
-} 
-
-.team-picture-div{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 60%;
+.section-one {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 100vh;
 }
 
-.team-picture{
-  width: 70px;
-  border-radius: 5px;
-  margin: 50px;
+.team-picture-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
 }
 
-.section-two{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10%;
-  margin-bottom: 10%;
+.team-picture {
+    width: 70px;
+    border-radius: 5px;
+    margin: 50px;
 }
 
-.inner-section-two{
-  display: flex;
-  flex-direction: row;
-  font-family: 'Lato', sans-serif;
+.section-two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
-.section-two-image{
-  width: 70px;
-  border-radius: 5px;
-  margin: 150px;
+.inner-section-two {
+    display: flex;
+    flex-direction: row;
+    font-family: "Lato", sans-serif;
 }
 
-.left-div-section-two{
-  width: 50%;
-  margin-left: 0px;
+.section-two-image {
+    width: 70px;
+    border-radius: 5px;
+    margin: 150px;
 }
 
-.right-div-section-two{
-  width: 50%;
-  text-align: left;
+.left-div-section-two {
+    width: 50%;
+    margin-left: 0px;
 }
 
-.nested-div-two{
-  display: flex;
-  flex-direction: row;
+.right-div-section-two {
+    width: 50%;
+    text-align: left;
 }
 
-.nested-inner-div{
-  width: 50%;
-  margin-right: 10%;
-  margin-top: 10%;
+.nested-div-two {
+    display: flex;
+    flex-direction: row;
 }
 
-.section-three{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: 'Lato', sans-serif;
+.nested-inner-div {
+    width: 50%;
+    margin-right: 10%;
+    margin-top: 10%;
 }
 
-.section-three-inner-div{
-  display: flex;
-  flex-direction: row;
+.section-three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 10%;
 }
 
-.left-side-section-three{
-  width: 50%;
-  text-align: left;
-  padding-right: 10%;
+.section-three-inner-div {
+    display: flex;
+    flex-direction: row;
 }
 
-#faq{
-  color: black;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  font-size: 40px;
-  margin-bottom: 10%;
+.left-side-section-three {
+    width: 50%;
+    text-align: left;
+    padding-right: 10%;
 }
 
-.right-side-section-three{
-  width: 50%;
+#faq {
+    color: black;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    margin-bottom: 10%;
 }
 
-.right-side-nested-div{
-  display: flex;
-  flex-direction: row;
+.right-side-section-three {
+    width: 50%;
 }
 
-.question-div{
-  text-align: left;
-  width: 100%;
-  font-size: 20px;
+.right-side-nested-div {
+    display: flex;
+    flex-direction: row;
 }
 
-.answer-div{
-  text-align: center;
-  font-size: 20px;
+.question-div {
+    text-align: left;
+    width: 100%;
+    font-size: 20px;
+}
+
+.answer-div {
+    text-align: center;
+    font-size: 20px;
+}
+
+.section-four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 80%;
+    text-align: left;
+    padding-top: 2%;
+    text-transform: uppercase;
+    font-size: 30px;
+    height: 600px;
+}
+
+#half-input {
+    width: 30%;
+}
+
+.submit-button {
+    width: 90%;
 }

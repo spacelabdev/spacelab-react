@@ -3,6 +3,7 @@ import React from "react";
 import './about.css';
 import HeroImage from "../../components/heroImage/heroImage";
 import PlaceHolder from "../../assets/img_placeholder.png";
+import useForm from "./useForm";
 
 /**
  * @returns {JSX.Element}
@@ -12,6 +13,19 @@ export default function About() {
 
   const teamImages = [ PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, 
                       PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder ]
+
+    const { formdata, handleChange } = useForm({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    window.alert(`Submitting ${JSON.stringify(formdata, null, 2)}`)
+  }
 
 
 	return (
@@ -79,6 +93,76 @@ export default function About() {
                 <p>Answer</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-four">
+        <div className="form-background">
+          <div><p>Contact us</p></div>
+          <div className="column is-6-tablet is-offset-3-tablet is-8-mobile is-offset-2-mobile box">
+            <form onSubmit={handleSubmit}>
+              <div className="field">
+                <label className="label">First Name</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    name="firstName"
+                    value={formdata.firstName}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Last Name</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    name="lastName"
+                    value={formdata.lastName}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Email</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    name="email"
+                    value={formdata.email}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Phone</label>
+                <div className="control">
+                  <input
+                    className="input"
+                    name="phone"
+                    value={formdata.phone}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div className="field">
+                <label className="label">Message</label>
+                <div className="control">
+                  <textarea
+                    className="textarea"
+                    name="message"
+                    value={formdata.message}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+              <div >
+                <button className="submit-button" type="submit">
+                  Send
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
