@@ -41,5 +41,9 @@
   "devDependencies": {
     "dotenv": "^10.0.0",
     "react-router-dom": "^5.2.0"
+  },
+  "engines": {
+    "node": ">= 14.0.0 <15",
+    "npm": ">=6.0.0 <7"
   }
 }
