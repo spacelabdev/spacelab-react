@@ -169,6 +169,7 @@
     height: 67px;
     margin-top: 5%;
     margin-bottom: 0px;
+    font-size: 36px;
 }
 
 .large-input {
@@ -176,6 +177,7 @@
     height: 67px;
     margin-top: 2%;
     margin-bottom: 5%;
+    font-size: 36px;
 }
 
 .first-input-row {
@@ -189,6 +191,7 @@
     height: 335px;
     margin-bottom: 3%;
     margin-top: 3%;
+    font-size: 36px;
 }
 .submit-button {
     width: 990px;
