@@ -5,7 +5,7 @@ function useForm(initialState) {
   const [errors, setErrors] = React.useState(initialState)
 
   const handleChange = event => {
-    const value = event.target.type === 'checkbox' ? event.target.checked : event.target.value
+    const value = event.target.value
     const nextState = { ...formdata, [event.target.name]: value }
     const nextErrorState = { ...errors, [event.target.name]: '' }
     setFormdata(nextState)
