@@ -1,6 +1,6 @@
 
 import React from "react";
-import './about.css';
+import './about.scss';
 import HeroImage from "../../components/heroImage/heroImage";
 import PlaceHolder from "../../assets/img_placeholder.png";
 import useForm from "./useForm";
