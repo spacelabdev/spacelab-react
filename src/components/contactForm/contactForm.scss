@@ -1,0 +1,76 @@
+#contact-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 1131px;
+    height: 1350px;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 10%;
+
+    .contact-form-title {
+      width: 990px;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 39px;
+      margin-top: 0px;
+
+      #title-text {
+        margin-top: 2%;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+      }
+    }
+
+    .first-input-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 8%;
+    }
+    .contact-form-label {
+      font-size: 36px;
+    }
+
+    .small-input {
+      width: 481px;
+      height: 67px;
+      margin-top: 5%;
+      margin-bottom: 0;
+      font-size: 36px;
+    }
+
+    .large-input {
+      width: 990px;
+      height: 67px;
+      margin-top: 2%;
+      margin-bottom: 5%;
+      font-size: 36px;
+    }
+
+    .message-input {
+      width: 990px;
+      height: 335px;
+      margin-bottom: 3%;
+      margin-top: 3%;
+      font-size: 36px;
+    }
+    .submit-button {
+      width: 990px;
+      height: 67px;
+      border-radius: 10px;
+      font-size: 36px;
+      font-family: "Poppins", sans-serif;
+      background-color: #7000ff;
+      color: white;
+      margin-top: 10px;
+    }
+  }
+}
