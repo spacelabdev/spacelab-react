@@ -3,6 +3,7 @@ import RSSParser from "rss-parser";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
 import Main from "./main";
+import {getExoplanets} from "./services/calTechApiHelper";
 
 /**
  * @returns {JSX.Element}
@@ -20,8 +21,13 @@ function App() {
 	const [glossaryTermImg, setGlossaryTermImg] = useState(glossaryTermsArray[0][3]);
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
+
 	/** Medium Blog RSS Feed State */
 	const [blogArray, setBlogArray] = useState([]);
+	const [exoplanetData, setExoplanetData] = useState(() => {
+		const result = sessionStorage.getItem('exoplanetSearchResults');
+		return result ? JSON.parse(result) : {}
+	});
 
 	// Get RSS feed from Medium for Blog page
 	useEffect(() => {
@@ -39,6 +45,28 @@ function App() {
 	useEffect(() => {
 		setGlossaryTerms(returnFilteredTerms(1, 9));
 	}, []);
+
+	// Get initial information from cal tech data base. Save to session storage.
+	// TODO: Probably don't want this to run with every re render. Eventually relocate to search button. This is for testing.
+	useEffect(() => {
+		const queryExoplanetDatabase = async () => {
+			await getExoplanets().then(res => {
+				if (res.status === 200) {
+					setExoplanetData(res.data);
+					sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
+				} else {
+					console.log("error retrieving exoplanetData");
+				}
+			}).catch(e => {
+				console.log(e);
+			});
+		};
+		queryExoplanetDatabase();
+	}, []);
+
+	if (exoplanetData !== undefined) {
+		console.log(exoplanetData);
+	}
 
 	return (
 		<div className="App">
