@@ -1,8 +1,9 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
-import DiscoveryFilterList from "./planetSytemFilters/discoveryFilterList";
+import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
 import {discoveryMethodFiltersArray, planetSystemsFiltersArray, planetTypeFiltersArray} from "./discoveryHelper";
+import "./discovery.scss";
 
 /**
  * @returns {JSX.Element}
@@ -42,31 +43,34 @@ export default function Discovery() {
 	return (
 		<>
 			<HeroImage/>
-			<div id="discovery-table">
-				<ReactBootStrap.Table striped bordered hover size="sm">
-					<thead>
-					<tr>
-						<th>Name</th>
-						<th>Light Years From Earth</th>
-						<th>Planet Mass</th>
-						<th>Stellar Magnitude</th>
-						<th>Discovery Date</th>
-					</tr>
-					</thead>
-					<tbody>
-					{discTable.map(renderDiscTable)}
-					</tbody>
-				</ReactBootStrap.Table>
+			<div id={"database-search-wrapper"}>
+				<div id="discovery-table">
+					<ReactBootStrap.Table striped bordered hover size="sm">
+						<thead>
+						<tr>
+							<th>Name</th>
+							<th>Light Years From Earth</th>
+							<th>Planet Mass</th>
+							<th>Stellar Magnitude</th>
+							<th>Discovery Date</th>
+						</tr>
+						</thead>
+						<tbody>
+						{discTable.map(renderDiscTable)}
+						</tbody>
+					</ReactBootStrap.Table>
+					<br/>
+				</div>
+				<div id="searchBttn">
+				</div>
 				<br/>
-			</div>
-			<div id="searchBttn">
-			</div>
-			<br/>
 
-			<div id={"filtersContainer"}>
-				<DiscoveryFilterList filterArray={planetSystemsFiltersArray} title={"Planet Systems"}/>
-				<DiscoveryFilterList filterArray={planetTypeFiltersArray} title={"Planet Type"}/>
-				<DiscoveryFilterList filterArray={discoveryMethodFiltersArray} title={"Discovery Method"}/>
+				<div id={"filtersContainer"}>
+					<p>Filters</p>
+					<DiscoveryFilterList filterArray={planetSystemsFiltersArray} title={"Planet Systems"}/>
+					<DiscoveryFilterList filterArray={planetTypeFiltersArray} title={"Planet Type"}/>
+					<DiscoveryFilterList filterArray={discoveryMethodFiltersArray} title={"Discovery Method"}/>
+				</div>
 			</div>
 		</>
 	);

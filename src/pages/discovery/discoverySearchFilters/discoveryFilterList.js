@@ -1,5 +1,6 @@
 import React from "react";
 import DiscoveryFilterListItem from "./discoveryFilterListItem";
+import "../discovery.scss"
 
 /**
  * Maps over filtersArray and passes elements to DiscoveryFilterListItem to be parsed and rendered.
@@ -18,7 +19,7 @@ export default function DiscoveryFilterList(props) {
 	});
 
 	return (
-		<div id={"filters"}>
+		<div className={"filters"}>
 			<div className={"title"}>{title}</div>
 			<div className={"planet-system"}>
 				{filtersArray}

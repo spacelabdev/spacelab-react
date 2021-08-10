@@ -1,0 +1,29 @@
+#database-search-wrapper {
+  display: flex;
+  #discovery-table {
+
+  }
+
+  #filtersContainer {
+    width: 30vw;
+    border-style: groove;
+    margin: 1rem;
+    text-align: left;
+    p {
+      font-size: 2rem;
+      padding-left: 1rem;
+    }
+    .filters {
+      padding: 2rem;
+
+      .title {
+        padding: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .planet-system {
+        padding: .5rem;
+      }
+    }
+  }
+}
