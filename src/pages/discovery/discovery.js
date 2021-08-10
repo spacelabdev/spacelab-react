@@ -4,6 +4,7 @@ import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryPlanetSystemsList from "./planetSytemFilters/discoveryPlanetSystemsList";
 import DiscoveryPlanetTypeList from "./planetType/discoveryPlanetTypeList";
+import DiscoveryMethodList from "./discoveryMethod/discoveryMethodList";
 
 /**
  * @returns {JSX.Element}
@@ -66,6 +67,7 @@ export default function Discovery() {
 
 			<DiscoveryPlanetSystemsList/>
 			<DiscoveryPlanetTypeList/>
+			<DiscoveryMethodList/>
 			{/*TODO: Create List and List item components for discoveryMethod */}
 
 			{/*TODO: Delete commented code when no longer needed for reference */}

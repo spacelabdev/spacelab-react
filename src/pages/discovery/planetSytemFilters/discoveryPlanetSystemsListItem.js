@@ -10,7 +10,7 @@ export default function DiscoveryPlanetSystemsListItem(props) {
 	const filterElements = props.element;
 
 	return (
-		<>
+		<div>
 			<input
 				type="checkbox"
 				id="planet-system"
@@ -18,7 +18,7 @@ export default function DiscoveryPlanetSystemsListItem(props) {
 				value={filterElements[0]}
 				// checked={isChecked} onChange{handleOnChange}
 			/>
-			<p>{filterElements[1]}</p>
-		</>
+			<span>{filterElements[1]}</span>
+		</div>
 	);
 }

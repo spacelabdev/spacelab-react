@@ -10,14 +10,14 @@ export default function DiscoveryPlanetTypeListItem(props) {
 	const filterTypes = props.element;
 
 	return (
-		<>
+		<div>
 			<input
 				type="checkbox"
 				id="planet-type"
 				name="planet-type"
 				value={filterTypes[0]}
 			/>
-			<p>{filterTypes[1]}</p>
-		</>
+			<span>{filterTypes[1]}</span>
+		</div>
 	);
 }
