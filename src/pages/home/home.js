@@ -1,7 +1,9 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
-import IntroductionSection from "./IntroductionSection";
-import ExoPlanet101Section from "./ExoPlanet101Section";
+import Introduction from "./IntroductionSection";
+import ExoPlanet101 from "./ExoPlanet101Section";
+import FeaturedArticles from "./FeaturedArticlesSection";
+import Explore from "./ExploreSection";
 import "./home.scss";
 
 /**
@@ -12,8 +14,10 @@ export default function Home() {
     return (
         <>
             <HeroImage />
-            <IntroductionSection />
-            <ExoPlanet101Section />
+            <Introduction />
+            <ExoPlanet101 />
+            <FeaturedArticles />
+            <Explore />
         </>
     );
 }
