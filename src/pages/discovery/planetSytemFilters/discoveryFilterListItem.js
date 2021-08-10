@@ -6,11 +6,11 @@ import React from "react";
  * @returns {JSX.Element}
  * @constructor
  */
-export default function DiscoveryPlanetSystemsListItem(props) {
+export default function DiscoveryFilterListItem(props) {
 	const filterElements = props.element;
 
 	return (
-		<div>
+		<div id={"filter-item"}>
 			<input
 				type="checkbox"
 				id="planet-system"
