@@ -4,14 +4,14 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    height: 80vh;
+    height: 90vh;
     background: #160d39;
 }
 nav {
     position: absolute;
 }
 #hero-image {
-    height: 80vh;
+    height: 90vh;
     width: 100%;
 }
 #hero-circle {
@@ -30,9 +30,12 @@ nav {
 }
 #hero-page {
     position: absolute;
+    width: 90%;
     color: white;
     font-family: "Seymour One", sans-serif;
-    font-size: 4em;
+    font-weight: bold;
+    font-size: 2.85em;
+    letter-spacing: 3px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -100%);
