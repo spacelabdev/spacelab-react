@@ -1,3 +1,7 @@
+/**
+ * Array of filter options for filtering on system type
+ * @type {string[][]}
+ */
 export const planetSystemsFiltersArray = [
 	[
 		'planets-discovered-by-kepler',
@@ -14,6 +18,10 @@ export const planetSystemsFiltersArray = [
 	// TODO: add remaining elements
 ];
 
+/**
+ * Array of filter options for filtering on planet type
+ * @type {string[][]}
+ */
 export const planetTypeFiltersArray = [
 	[
 		'gas-giant',
@@ -37,7 +45,11 @@ export const planetTypeFiltersArray = [
 	],
 ];
 
-export const disoveryMethodFiltersArray = [
+/**
+ * Array of filter options for filtering on discovery method
+ * @type {string[][]}
+ */
+export const discoveryMethodFiltersArray = [
 	[
 		'astronomy',
 		'Astronomy'
@@ -83,5 +95,3 @@ export const disoveryMethodFiltersArray = [
 		'Transit Timing Variations'
 	]
 ];
-
-// TODO: create arrays for planetType and discoveryMethod

@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * Creates check box for planet system element
+ * @param props
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function DiscoveryPlanetSystemsListItem(props) {
 	const filterElements = props.element;
 

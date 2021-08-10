@@ -3,14 +3,13 @@ import './discovery.css';
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryPlanetSystemsList from "./planetSytemFilters/discoveryPlanetSystemsList";
-import DiscoveryPlanetTypeList from "./planetSystemFilters/discoveryPlanetTypeList";
+import DiscoveryPlanetTypeList from "./planetType/discoveryPlanetTypeList";
 
 /**
  * @returns {JSX.Element}
  * @constructor
  */
 export default function Discovery() {
-
 	const discTable = [
 		{
 			name: "",
@@ -67,8 +66,9 @@ export default function Discovery() {
 
 			<DiscoveryPlanetSystemsList/>
 			<DiscoveryPlanetTypeList/>
-			{/*TODO: Create List and List item components for other filter methods */}
+			{/*TODO: Create List and List item components for discoveryMethod */}
 
+			{/*TODO: Delete commented code when no longer needed for reference */}
 			{/*<div id="filters">*/}
 			{/*	<h2>Planet System</h2>*/}
 			{/*	<div className="planet-system">*/}
