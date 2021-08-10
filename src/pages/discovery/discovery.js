@@ -3,6 +3,7 @@ import './discovery.css';
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryPlanetSystemsList from "./planetSytemFilters/discoveryPlanetSystemsList";
+import DiscoveryPlanetTypeList from "./planetSystemFilters/discoveryPlanetTypeList";
 
 /**
  * @returns {JSX.Element}
@@ -65,6 +66,7 @@ export default function Discovery() {
 			<br/>
 
 			<DiscoveryPlanetSystemsList/>
+			<DiscoveryPlanetTypeList/>
 			{/*TODO: Create List and List item components for other filter methods */}
 
 			{/*<div id="filters">*/}
