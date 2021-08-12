@@ -24,7 +24,7 @@
     color: white;
     background: black;
 }
-.glossary-term:hover, .glossary-term:visited {
+.glossary-term:hover {
     background: #7000FF;
     cursor: pointer;
 }
@@ -40,13 +40,18 @@
     display: flex;
     justify-content: flex-start;
 }
-.glossary-filter-button {
-    margin: .5em;
-    font-size: 2.5em;
-    border-bottom: 2px solid #a0a0aa;
-}
-.glossary-filter-button:hover, .glossary-filter-button:visited {
+#glossary-filter-button-A-J {
     color: #7000FF;
     border-bottom: 2px solid #7000FF;
+}
+.glossary-filter-button {
+    color: white;
+    margin: .5em;
+    font-size: 2.5em;
+    border-bottom: 2px solid white;
+}
+.glossary-filter-button:hover {
+    /*color: #7000FF;*/
+    /*border-bottom: 2px solid #7000FF;*/
     cursor: pointer;
 }
