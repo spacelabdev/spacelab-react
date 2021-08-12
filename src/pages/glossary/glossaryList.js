@@ -12,7 +12,7 @@ export default function GlossaryList() {
 		glossaryArray = context.glossaryTerms;
 	}
 
-	// updates the css color for the currently selected filter, and returns all other filters to white.
+	// Updates the css color for the currently selected filter, and returns all other filters to white.
 	const highlightCurrentFilter = (currentSelection) => {
 		const alphabetFilters = document.querySelectorAll(".glossary-filter-button");
 		alphabetFilters.forEach(alphabetFilter => {
