@@ -4,17 +4,20 @@ h2 {
     font-size: 2.85em;
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
+    color: #a0a0aa;
 }
 
 h3 {
     font-family: "Poppins", sans-serif;
     font-size: 1.85em;
+    color: #a0a0aa;
 }
 
 p {
     font-family: "Lato", sans-serif;
     font-size: 1.2em;
     line-height: 1.5;
+    color: #a0a0aa;
 }
 
 :root {
@@ -25,6 +28,7 @@ p {
     max-width: var(--content-container);
     padding: 2rem;
     margin: 4rem auto;
+    //color: black;
 
     .content-container {
         //container
@@ -36,7 +40,7 @@ p {
         }
 
         .about {
-            background: #fbfafc;
+            color: black;
             width: 20rem;
             padding: 1rem;
             flex: 2;
@@ -158,6 +162,7 @@ p {
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 3px;
+            color: black;
         }
     }
 }

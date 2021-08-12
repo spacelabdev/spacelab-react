@@ -1,6 +1,6 @@
 import {createContext, useEffect, useState} from "react";
-import {findFirstThird, glossaryTermsArray} from "./pages/glossary/glossaryhelper";
 import {getExoplanets} from "./services/calTechApiHelper";
+import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import Main from "./components/main";
 import './App.css';
 
@@ -20,7 +20,7 @@ function App() {
 
 	// Set initial state for glossaryTerms on app load
 	useEffect(() => {
-		setGlossaryTerms(findFirstThird());
+		setGlossaryTerms(returnFilteredTerms(1, 9));
 	}, []);
 
 	// Get initial information from cal tech data base. Save to session storage.
