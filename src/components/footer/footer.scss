@@ -1,12 +1,14 @@
 .footer-section {
     background: black;
-    color: white;
     text-align: left;
 
     h2 {
         font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        font-style: italic;
         font-size: 30px;
         margin-bottom: 0;
+        color: white;
     }
 
     .content-container {
