@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./footer.scss";
 
 /**
@@ -6,7 +6,18 @@ import "./footer.scss";
  * @constructor
  */
 
-export default function footer() {
+export default function Footer() {
+    const [email, setEmail] = useState("");
+
+    function handleChange(e) {
+        setEmail(e.target.value);
+    }
+
+    function handleSubscription(e) {
+        e.preventDefault();
+        alert("Subscription Coming Soon!");
+    }
+
     return (
         <section className="footer-section">
             <div className="content-container">
@@ -16,11 +27,16 @@ export default function footer() {
                         Sign up to learn about the latest discoveries, news and
                         more! Delivered weekly.
                     </p>
-                    <form className="subscription-form">
+                    <form
+                        className="subscription-form"
+                        onSubmit={handleSubscription}
+                    >
                         <input
                             type="email"
                             id="email"
                             placeholder="EMAIL"
+                            value={email}
+                            onChange={handleChange}
                         ></input>
                         <button type="submit">Subscribe</button>
                     </form>
