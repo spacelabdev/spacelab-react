@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
-import {findFirstThird, findMiddleThird, findLastThird} from "./glossaryhelper";
+import {returnFilteredTerms} from "./glossaryhelper";
 import './glossary.css';
 
 export default function GlossaryList() {
@@ -21,23 +21,12 @@ export default function GlossaryList() {
 		});
 	}
 
-	const handleFirstThirdClick = () => {
-		const currentSelection = 'glossary-filter-button-A-J';
-		context.setGlossaryTerms(findFirstThird);
+	const handleFilterClick = (beginningAlphabetIndex, endingAlphabetIndex, filterRange) => {
+		const termsGroup = returnFilteredTerms(beginningAlphabetIndex, endingAlphabetIndex);
+		const currentSelection = 'glossary-filter-button-' + filterRange;
+		context.setGlossaryTerms(termsGroup);
 		highlightCurrentFilter(currentSelection);
 	};
-
-	const handleMiddleThirdClick = () => {
-		const currentSelection = 'glossary-filter-button-K-S';
-		context.setGlossaryTerms(findMiddleThird);
-		highlightCurrentFilter(currentSelection);
-	};
-
-	const handledLastThirdClick = () => {
-		const currentSelection = 'glossary-filter-button-T-Z';
-		context.setGlossaryTerms(findLastThird);
-		highlightCurrentFilter(currentSelection);
-	}
 
 	// map over each element in the glossaryTermsArray and pass them to the GlossaryListItem component as props
 	const glossaryTermArray = glossaryArray.map((e, index) => {
@@ -52,19 +41,19 @@ export default function GlossaryList() {
 				<span
 					className={'glossary-filter-button'}
 					id={'glossary-filter-button-A-J'}
-					onClick={handleFirstThirdClick}>
+					onClick={ () => handleFilterClick(1, 9, 'A-J')}>
 					A - J
 				</span>
 				<span
 					className={'glossary-filter-button'}
 					id={'glossary-filter-button-K-S'}
-					onClick={handleMiddleThirdClick}>
+					onClick={ () => handleFilterClick(10, 19, 'K-S')}>
 					K - S
 				</span>
 				<span
 					className={'glossary-filter-button'}
 					id={'glossary-filter-button-T-Z'}
-					onClick={handledLastThirdClick}>
+					onClick={ () => handleFilterClick(20, 26, 'T-Z')}>
 					T - Z
 				</span>
 			</div>
