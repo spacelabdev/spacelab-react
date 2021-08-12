@@ -4,6 +4,7 @@ import Introduction from "./IntroductionSection";
 import ExoPlanet101 from "./ExoPlanet101Section";
 import FeaturedArticles from "./FeaturedArticlesSection";
 import Explore from "./ExploreSection";
+import Footer from "../../components/footer/footer";
 import "./home.scss";
 
 /**
@@ -18,6 +19,7 @@ export default function Home() {
             <ExoPlanet101 />
             <FeaturedArticles />
             <Explore />
+            <Footer />
         </>
     );
 }
