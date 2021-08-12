@@ -3,6 +3,7 @@ import './about.scss';
 import HeroImage from "../../components/heroImage/heroImage";
 import PlaceHolder from "../../assets/img_placeholder.png";
 import ContactForm from "../../components/contactForm/contactForm";
+import Footer from "../../components/footer/footer";
 
 /**
  * @returns {JSX.Element}
@@ -82,6 +83,7 @@ export default function About() {
 			</section>
 
 			<ContactForm/>
+			<Footer/>
 		</>
 	);
 };
