@@ -34,6 +34,8 @@ export default function HeroImage() {
 		<div id={"hero-image-container"}>
 			<img id={"hero-image"} src={heroImage} alt={"milky way at night"}/>
 			<div id={"hero-circle"}/>
+			{/* This code looks confusing but the logo for home page is an image, 
+			so the text in the span needs to be hidden */}
 			<h1 id={pageTitle === "SPACE LAB" ? "home-page" : "hero-page"}><span>{pageTitle}</span></h1>
 		</div>
 		</>
