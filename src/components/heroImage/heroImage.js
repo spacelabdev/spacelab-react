@@ -19,9 +19,9 @@ export default function HeroImage() {
 	context.setPageTitle(title);
 
 	if (pageTitle === "") {
-		pageTitle = "SPACE LAB";
+		pageTitle = `SPACE LAB`;
 		let circle = document.getElementById("hero-circle");
-		let font_size = document.getElementById("hero-page")
+		let font_size = document.getElementById("home-page") || document.getElementById("hero-page");
 		if (circle !== null) {
 			circle.style.display = "none";
 			font_size.style.fontSize = "7.5em";
@@ -29,11 +29,13 @@ export default function HeroImage() {
 	}
 
 	return (
+		<>
+		<NavDesktop/>
 		<div id={"hero-image-container"}>
-			<NavDesktop/>
 			<img id={"hero-image"} src={heroImage} alt={"milky way at night"}/>
 			<div id={"hero-circle"}/>
-			<p id={"hero-page"}>{pageTitle}</p>
+			<h1 id={pageTitle === "SPACE LAB" ? "home-page" : "hero-page"}><span>{pageTitle}</span></h1>
 		</div>
+		</>
 	);
 }
