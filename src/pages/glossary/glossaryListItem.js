@@ -15,7 +15,7 @@ export default function OfficeListItem(props) {
 		<div className={'glossary-term-container'}>
 			<div
 				className={'glossary-term'}
-				id={'glossary-term-' + `${glossaryTerm[0]}`}
+				id={`glossary-term- ${glossaryTerm[0]}`}
 				onClick={handleTermClick}>{glossaryTerm[0]}
 			</div>
 		</div>

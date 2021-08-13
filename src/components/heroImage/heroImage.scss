@@ -4,14 +4,12 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    height: 90vh;
+    height: calc(90vh - 120px);
     background: #160d39;
 }
-nav {
-    position: absolute;
-}
+
 #hero-image {
-    height: 90vh;
+    height: 100%;
     width: 100%;
 }
 #hero-circle {
@@ -28,20 +26,47 @@ nav {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 #hero-page {
     position: absolute;
     width: 90%;
+    height: 200px;
     color: white;
     font-family: "Seymour One", sans-serif;
     font-weight: bold;
-    font-size: 2.85em;
+    font-size: 8em;
     letter-spacing: 3px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -100%);
     z-index: 99;
-
     @media screen and (max-width: 600px) {
         font-size: 10vw;
     }
+}
+
+#home-page {
+    position: absolute;
+    width: 90%;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 99;
+
+    //spacelab logo displaying
+    background-image: url("../../assets/spacelab.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 50%;
+
+    span {
+        display:none; //adding span for screen reader accessibility
+    }
+}
+
+.planet {
+    position: absolute;
+    right:0%;
+    top: -20%;
 }
