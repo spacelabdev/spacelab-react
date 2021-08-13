@@ -4,7 +4,7 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    height: calc(90vh - 120px);
+    height: calc(90vh - 120px); //120px is the nav bar
     background: #160d39;
 }
 
@@ -30,15 +30,14 @@
 #hero-page {
     position: absolute;
     width: 90%;
-    height: 200px;
     color: white;
     font-family: "Seymour One", sans-serif;
     font-weight: bold;
-    font-size: 8em;
+    font-size: 2.85rem;
     letter-spacing: 3px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -50%);
     z-index: 99;
     @media screen and (max-width: 600px) {
         font-size: 10vw;
@@ -63,10 +62,4 @@
     span {
         display:none; //adding span for screen reader accessibility
     }
-}
-
-.planet {
-    position: absolute;
-    right:0%;
-    top: -20%;
 }
