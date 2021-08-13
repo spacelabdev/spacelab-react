@@ -5,12 +5,16 @@ h2 {
     font-family: "Poppins", sans-serif;
     text-transform: uppercase;
     color: #a0a0aa;
+    margin-bottom: 3rem;
 }
 
 h3 {
     font-family: "Poppins", sans-serif;
-    font-size: 1.85em;
+    font-weight:100;
+    font-size: 1.5em;
+    text-transform: uppercase;
     color: #a0a0aa;
+    margin-bottom: 3rem;
 }
 
 p {
@@ -33,7 +37,7 @@ p {
     .content-container {
         //container
         display: flex;
-        min-height: 643px;
+        min-height: 550px;
 
         .images {
             margin-right: 29px;
@@ -44,6 +48,9 @@ p {
             width: 20rem;
             padding: 1rem;
             flex: 2;
+            p {
+                margin-bottom: 3rem;
+            }
         }
 
         @media screen and (max-width: 1150px) {
@@ -125,6 +132,7 @@ p {
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #D9D9D9;
+            margin: 0.5rem;
         }
         p:first-of-type {
             font-size: 1.1em;
@@ -162,6 +170,7 @@ p {
             text-transform: uppercase;
             letter-spacing: 3px;
             color: black;
+            padding: 1.5rem;
         }
     }
 }
