@@ -123,16 +123,15 @@ p {
         }
         p {
             text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #D9D9D9;
         }
         p:first-of-type {
-            font-size: 0.75em;
-            color: #4f4f4f;
+            font-size: 1.1em;
         }
         p:last-of-type {
-            font-size: 0.875rem;
+            font-size: 1.2em;
             font-weight: bold;
-            letter-spacing: 2px;
-            color: #828282;
         }
     }
 }
