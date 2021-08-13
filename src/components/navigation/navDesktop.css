@@ -1,5 +1,5 @@
 nav {
-    height: 120px;
+    height: 85px;
     width: 100%;
     background: #1C1A22;
     color:white;
@@ -12,10 +12,8 @@ nav {
 .nav-wrapper {
     width: 100%;
     height: 100%;
-    max-width: 1189px;
     margin: 0 auto;
     padding: 0 2rem;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
