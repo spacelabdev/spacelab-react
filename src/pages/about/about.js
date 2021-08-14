@@ -6,7 +6,7 @@ import ContactForm from "../../components/contactForm/contactForm";
 import Footer from "../../components/footer/footer";
 import Rocket from "../../assets/aboutAssets/rocket.svg"
 import Planet from "../../assets/aboutAssets/planet.svg"
-import Planet_Rings from "../../assets/aboutAssets/Planets.svg"
+import Planet_Rings from "../../assets/aboutAssets/planet_rings.svg"
 
 /**
  * @returns {JSX.Element}
