@@ -86,7 +86,7 @@ export default function ContactForm() {
                   />
 							</div>
 						</div>
-						<div>
+						<div className={"contact-button-container"}>
 							<button className="submit-button" type="submit">
 								Send
 							</button>

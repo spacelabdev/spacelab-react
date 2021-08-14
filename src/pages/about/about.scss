@@ -1,13 +1,10 @@
-//SECTION ONE
-.section-one {
+#about-team-container {
     font-family: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
-    //justify-content: center;
     align-items: center;
     margin-top: 10px;
-    margin-bottom: 20px;
-    //height: 100vh;
+    margin-bottom: 15%;
 
     #main-header {
         color: #a0a0aa;
@@ -40,56 +37,57 @@
     }
 }
 
-//SECTION
-.section-two {
+#about-mission-statement-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 
     .inner-section-two {
-        display: flex;
         flex-direction: row;
         font-family: "Lato", sans-serif;
 
-        .left-div-section-two {
-            width: 40%;
-            margin-left: 0px;
-
-            .section-two-image {
-                width: 70px;
-                border-radius: 5px;
-                margin: 150px;
-            }
-        }
-        .right-div-section-two {
-            width: 50%;
+        .about-mission-segment-container {
+            display: flex;
+            justify-content: space-between;
+            width: 75%;
             text-align: left;
-            margin-left: 4%;
+            margin: 0 auto;
+            padding-bottom: 5rem;
 
-            .nested-div-two {
-                display: flex;
-                flex-direction: row;
+            .about-mission-image-wrapper {
+                width: 50%;
+                margin: auto;
 
-                .nested-inner-div {
-                    width: 50%;
-                    margin-right: 10%;
-                    margin-top: 10%;
+                .about-mission-image {
+                    margin: 0 auto;
+                }
+            }
+
+            .about-mission-content {
+                width: 50%;
+                text-align: center;
+
+                .about-mission-header {
+                    padding-bottom: 1rem;
+                    color: #7000FF;
                 }
             }
         }
     }
 }
 
-//SECTION THREE
-.section-three {
+#about-faq-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Lato", sans-serif;
-    margin-bottom: 10%;
+    margin: 10% 0 10% 0;
+    background-color: white;
+    color: black;
+    padding: 5rem 0 10rem 0;
 
     .section-three-inner-div {
         display: flex;
@@ -101,7 +99,6 @@
             padding-right: 10%;
 
             #faq {
-                color: #a0a0aa;
                 text-transform: uppercase;
                 font-family: "Poppins", sans-serif;
                 font-size: 40px;
@@ -115,6 +112,10 @@
             .right-side-nested-div {
                 display: flex;
                 flex-direction: row;
+
+                p {
+                    color: black;
+                }
 
                 .question-div {
                     text-align: left;
