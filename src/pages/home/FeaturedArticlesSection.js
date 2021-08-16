@@ -16,13 +16,13 @@ export default function FeaturedArticles() {
         },
         {
             image: placeHolder,
-            date: "10 april, 2017",
+            date: "5 april, 2017",
             title: "Life and death of a lanetary",
             featured: true,
         },
         {
             image: placeHolder,
-            date: "10 april, 2017",
+            date: "30 March, 2017",
             title: "Life and death of a lanetary",
             featured: true,
         },
