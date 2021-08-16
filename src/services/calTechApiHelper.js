@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const parameters = {
+const params = {
 	table: 'cumulative',
 	where: 'koi_disposition like \'CANDIDATE\' and koi_period>300 and koi_prad<2',
 	order: 'koi_period',
@@ -13,9 +13,7 @@ const api = axios.create({
 
 export const getExoplanets = async () => {
 	try {
-		console.log(parameters);
-		return await api.get('', { parameters });
-		// return await api.get(`?table=cumulative&where=koi_disposition like 'CANDIDATE' and koi_period>300 and koi_prad<2&order=koi_period&format=json`);
+		return await api.get('', { params });
 	} catch (error) {
 		return error;
 	}
