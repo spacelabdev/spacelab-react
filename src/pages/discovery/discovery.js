@@ -4,7 +4,7 @@ import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
 import {discoveryMethodFiltersArray, planetSystemsFiltersArray, planetTypeFiltersArray} from "./discoveryHelper";
 import "./discovery.scss";
-
+import Footer from "../../components/footer/footer"
 /**
  * @returns {JSX.Element}
  * @constructor
@@ -72,6 +72,7 @@ export default function Discovery() {
 					<DiscoveryFilterList filterArray={discoveryMethodFiltersArray} title={"Discovery Method"}/>
 				</div>
 			</div>
+			<Footer/>
 		</>
 	);
 };
