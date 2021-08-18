@@ -39,6 +39,29 @@
         .filter-item {
           display: flex;
           padding-bottom: .5rem;
+
+          .discovery-checkbox-wrapper {
+            .discovery-checkbox:hover {
+              cursor: pointer;
+            }
+            .discovery-checkbox:active, .discovery-checkbox:checked:active {
+              box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 1px 3px rgba(0,0,0,0.1);
+            }
+            .discovery-checkbox:checked {
+              background-color: #e9ecee;
+              border: 1px solid #adb8c0;
+              box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+              color: #99a1a7;
+            }
+            .discovery-checkbox:checked:after {
+              content: '\2714';
+              font-size: 14px;
+              position: absolute;
+              top: 0px;
+              left: 3px;
+              color: #99a1a7;
+            }
+          }
         }
       }
     }

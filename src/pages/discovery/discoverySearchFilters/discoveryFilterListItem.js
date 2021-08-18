@@ -16,11 +16,12 @@ export default function DiscoveryFilterListItem(props) {
 	return (
 		<div className={"filter-item"}>
 			{/*wrapping the input in a div protects the check box from squishing when text wraps*/}
-			<div>
+			<div className={'discovery-checkbox-wrapper'}>
 				<input
 					type="checkbox"
 					style={checkbox_style}
 					id="planet-system"
+					className={'discovery-checkbox'}
 					name="planet-system"
 					value={filterElements[0]}
 					// checked={isChecked} onChange{handleOnChange}
