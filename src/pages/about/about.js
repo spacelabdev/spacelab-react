@@ -1,21 +1,18 @@
 import React from "react";
 import './about.scss';
 import HeroImage from "../../components/heroImage/heroImage";
-import PlaceHolder from "../../assets/img_placeholder.png";
 import ContactForm from "../../components/contactForm/contactForm";
 import Footer from "../../components/footer/footer";
 import Rocket from "../../assets/aboutAssets/rocket.svg"
 import Planet from "../../assets/aboutAssets/planet.svg"
 import Planet_Rings from "../../assets/aboutAssets/planet_rings.svg"
+import { teamImages, contributorImages } from "./teamData";
 
 /**
  * @returns {JSX.Element}
  * @constructor
  */
 export default function About() {
-	const teamImages = [PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder,
-		PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder, PlaceHolder]
-
 	return (
 		<>
 			<HeroImage/>
@@ -72,8 +69,23 @@ export default function About() {
 				<h1 id="main-header">We're Space Lab</h1>
 				<h4> Meet the team!</h4>
 				<div className="team-picture-div">
-					{teamImages.map(image =>
-						<div><img className="team-picture" src={image} alt="placeholder"/></div>
+					{teamImages.map(team =>
+						<div className="team-card">
+							<img className="team-picture" src={team.image} alt={team.fullName}/>
+							<p className="team-name" >{team.fullName}</p>
+							<p className="team-title" >{team.title}</p>
+						</div>
+					)}
+				</div>
+
+				<h1 id="contributers-header">Addtional Contributors</h1>
+			    <div className="team-picture-div">
+					{contributorImages.map(team =>
+						<div className="team-card">
+							<img className="team-picture" src={team.image} alt={team.fullName}/>
+							<p className="team-name" >{team.fullName}</p>
+							<p className="team-title" >{team.title}</p>
+						</div>
 					)}
 				</div>
 			</section>
