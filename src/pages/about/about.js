@@ -6,33 +6,13 @@ import Footer from "../../components/footer/footer";
 import Rocket from "../../assets/aboutAssets/rocket.svg"
 import Planet from "../../assets/aboutAssets/planet.svg"
 import Planet_Rings from "../../assets/aboutAssets/planet_rings.svg"
+import { teamImages, contributorImages } from "./teamData";
 
 /**
  * @returns {JSX.Element}
  * @constructor
  */
 export default function About() {
-	const teamImages = [{image:"https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png", fullName: "Raysean Williams", title: "3D Graphics Developer"},
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131440/team_pics/matt_ksbosg.jpg", fullName: "Matt Paterson", title: "Data Science Project Manager| Machine Learning Engineer"},
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629131393/team_pics/anna_kc4hqb.jpg", fullName:"Anna Chowattanakul", title:"Front End Developer | Project Manager"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629131368/team_pics/ricky_fdzb1y.png", fullName:"Ricky Rong", title:"Machine Learning Engineer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629131338/team_pics/uma_n6hcdv.jpg", fullName:"Uma Muthu", title:"Product Designer"},
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629131297/team_pics/Christy_kn3wxm.jpg", fullName:"Christy Min", title:"UX Designer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130990/team_pics/Ollie_pic_yabvpi.png", fullName:"Ollie Jackson", title:"Software Engineer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130971/team_pics/Megan_ncesok.png", fullName:"Meghan Slan", title: "DEIB Specialist"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png", fullName:"Deen Haque", title: "Full Stack Software Engineer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/yumi_j5x47l.png", fullName:"Yumi Jeon", title:"UX Designer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/mamadou_mtnlfc.png", fullName:"Mamadou Diallo", title: "3D Graphics Developer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png", fullName:"Angelines Yaport-Garcia", title:"Full Stack Software Engineer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130968/team_pics/alex_s0g0a6.png", fullName:"Alex Simon", title:"Data Scientist | Staff Writer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/robert_oggyg8.png", fullName:"Robert Sato", title: "Data Scientist | Machine Learning Engineer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png", fullName:"Brandon Cantello", title:"Software Developer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/kat_wzzzo3.png", fullName:"Kat Hackethal", title:"Software Engineer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png", fullName:"Jon Zivku", title:"Software Engineer"},
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/subin_p8gjt5.png", fullName:"Subin Shin", title:"UI/UX Designer"}, 
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png", fullName:"Phally Bell", title:"UX Research Project Manager"},
-	{image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png", fullName:"Charlie Arboleda", title:"Software Engineer"}]
-
 	return (
 		<>
 			<HeroImage/>
@@ -90,6 +70,17 @@ export default function About() {
 				<h4> Meet the team!</h4>
 				<div className="team-picture-div">
 					{teamImages.map(team =>
+						<div className="team-card">
+							<img className="team-picture" src={team.image} alt={team.fullName}/>
+							<p className="team-name" >{team.fullName}</p>
+							<p className="team-title" >{team.title}</p>
+						</div>
+					)}
+				</div>
+
+				<h1 id="contributers-header">Addtional Contributors</h1>
+			    <div className="team-picture-div">
+					{contributorImages.map(team =>
 						<div className="team-card">
 							<img className="team-picture" src={team.image} alt={team.fullName}/>
 							<p className="team-name" >{team.fullName}</p>
