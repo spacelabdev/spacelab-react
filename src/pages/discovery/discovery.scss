@@ -1,28 +1,45 @@
+#discovery-title {
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 #database-search-wrapper {
   display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
   #discovery-table {
-
+    align-self: center;
+    margin: 0 auto;
+    font-size: 2rem;
   }
 
   #filtersContainer {
-    width: 30vw;
+    width: 27vw;
     border-style: groove;
     margin: 1rem;
     text-align: left;
+    padding-bottom: 2rem;
+    vertical-align: middle;
     p {
       font-size: 2rem;
-      padding-left: 1rem;
+      padding-left: 2rem;
     }
     .filters {
-      padding: 2rem;
+      padding: 1rem 2rem 0 2rem;
 
       .title {
-        padding: 1rem;
+        padding: .5rem 0;
         font-size: 1.5rem;
+        border-top: 2px solid #a0a0aa;
       }
 
       .planet-system {
-        padding: .5rem;
+        .filter-item {
+          display: flex;
+          padding-bottom: .5rem;
+        }
       }
     }
   }
