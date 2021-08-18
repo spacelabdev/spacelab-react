@@ -1,5 +1,5 @@
 import {createContext, useEffect, useState} from "react";
-import {findFirstThird, glossaryTermsArray} from "./pages/glossary/glossaryhelper";
+import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
 import Main from "./components/main";
 
@@ -15,7 +15,7 @@ function App() {
 
 	// Set initial state for glossaryTerms on app load
 	useEffect(() => {
-		setGlossaryTerms(findFirstThird());
+		setGlossaryTerms(returnFilteredTerms(1, 9));
 	}, []);
 
 	return (

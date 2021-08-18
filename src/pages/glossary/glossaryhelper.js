@@ -1,39 +1,13 @@
 /**
- * Returns glossary terms with alphabetic index less than or equal to 9, which is A-I.
+ * Returns glossary terms within specified alphabetic index range. Alphabet is NOT zero indexed. A=1 ... Z=26.
+ * @param beginningAlphabeticIndex
+ * @param endingAlphabeticIndex
  * @returns {*[]}
  */
-export const findFirstThird = () => {
+export const returnFilteredTerms = (beginningAlphabeticIndex, endingAlphabeticIndex) => {
 	const glossaryArray = [];
 	for (let i = 0; i < glossaryTermsArray.length; i++) {
-		if (glossaryTermsArray[i][2] <= 9) {
-			glossaryArray.push(glossaryTermsArray[i]);
-		}
-	}
-	return glossaryArray;
-};
-
-/**
- * Returns glossary terms with alphabetic index between 10 and 19, which is L-S.
- * @returns {*[]}
- */
-export const findMiddleThird = () => {
-	const glossaryArray = [];
-	for (let i = 0; i < glossaryTermsArray.length; i++) {
-		if (glossaryTermsArray[i][2] > 9 && glossaryTermsArray[i][2] <= 19) {
-			glossaryArray.push(glossaryTermsArray[i]);
-		}
-	}
-	return glossaryArray;
-};
-
-/**
- * Returns glossary terms with alphabetic index greater than 19, which is T-Z.
- * @returns {*[]}
- */
-export const findLastThird = () => {
-	const glossaryArray = [];
-	for (let i = 0; i < glossaryTermsArray.length; i++) {
-		if (glossaryTermsArray[i][2] > 19) {
+		if (glossaryTermsArray[i][2] >= beginningAlphabeticIndex && glossaryTermsArray[i][2] <= endingAlphabeticIndex) {
 			glossaryArray.push(glossaryTermsArray[i]);
 		}
 	}

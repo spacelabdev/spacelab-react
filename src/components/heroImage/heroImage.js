@@ -18,22 +18,25 @@ export default function HeroImage() {
 	let title = urlArray[element].toUpperCase();
 	context.setPageTitle(title);
 
-	if (pageTitle === "") {
-		pageTitle = "SPACE LAB";
-		let circle = document.getElementById("hero-circle");
-		let font_size = document.getElementById("hero-page")
-		if (circle !== null) {
-			circle.style.display = "none";
-			font_size.style.fontSize = "7.5em";
-		}
+	// Hide background circle for home page
+	if (pageTitle === "" || pageTitle === "home") {
+		pageTitle = `SPACE LAB`;
+		// let circle = document.getElementById("hero-circle");
+		// if (circle !== null) {
+		// 	circle.style.display = "none";
+		// }
 	}
 
 	return (
-		<div id={"hero-image-container"}>
+		<>
 			<NavDesktop/>
-			<img id={"hero-image"} src={heroImage} alt={"milky way at night"}/>
-			<div id={"hero-circle"}/>
-			<p id={"hero-page"}>{pageTitle}</p>
-		</div>
+			<div id={"hero-image-container"}>
+				<img id={"hero-image"} src={heroImage} alt={"milky way at night"}/>
+				{/*<div id={"hero-circle"}/>*/}
+				{/* Logo for home page is an image. Need to set the id to be different
+			so that different SCSS styling will apply. */}
+				<h1 id={pageTitle === "SPACE LAB" ? "home-page" : "hero-page"}><span>{pageTitle}</span></h1>
+			</div>
+		</>
 	);
 }
