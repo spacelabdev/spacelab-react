@@ -4,7 +4,9 @@ import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
 import {discoveryMethodFiltersArray, planetSystemsFiltersArray, planetTypeFiltersArray} from "./discoveryHelper";
 import "./discovery.scss";
-import Footer from "../../components/footer/footer"
+import Footer from "../../components/footer/footer";
+
+
 /**
  * @returns {JSX.Element}
  * @constructor
@@ -43,17 +45,21 @@ export default function Discovery() {
 	return (
 		<>
 			<HeroImage/>
+
+			<div id={'discovery-title'}>Current Discoveries</div>
+
 			<div id={"database-search-wrapper"}>
 				<div id="discovery-table">
 					<ReactBootStrap.Table striped bordered hover size="sm">
 						<thead>
-						<tr>
-							<th>Name</th>
-							<th>Light Years From Earth</th>
-							<th>Planet Mass</th>
-							<th>Stellar Magnitude</th>
-							<th>Discovery Date</th>
-						</tr>
+						<p>Exoplanet Search Coming Soon!</p>
+						{/*<tr>*/}
+						{/*	<th>Name</th>*/}
+						{/*	<th>Light Years From Earth</th>*/}
+						{/*	<th>Planet Mass</th>*/}
+						{/*	<th>Stellar Magnitude</th>*/}
+						{/*	<th>Discovery Date</th>*/}
+						{/*</tr>*/}
 						</thead>
 						<tbody>
 						{discTable.map(renderDiscTable)}

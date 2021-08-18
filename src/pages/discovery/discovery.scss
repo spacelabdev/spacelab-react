@@ -1,28 +1,74 @@
+#discovery-title {
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 #database-search-wrapper {
   display: flex;
-  #discovery-table {
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 
+  #discovery-table {
+    align-self: center;
+    margin: 0 auto;
+    font-size: 2rem;
   }
 
   #filtersContainer {
-    width: 30vw;
+    width: 27vw;
     border-style: groove;
     margin: 1rem;
     text-align: left;
+    padding-bottom: 2rem;
+    vertical-align: middle;
+
     p {
       font-size: 2rem;
-      padding-left: 1rem;
+      padding-left: 2rem;
     }
+
     .filters {
-      padding: 2rem;
+      padding: 1rem 2rem 0 2rem;
 
       .title {
-        padding: 1rem;
+        padding: .5rem 0;
         font-size: 1.5rem;
+        border-top: 2px solid #a0a0aa;
       }
 
       .planet-system {
-        padding: .5rem;
+        .filter-item {
+          display: flex;
+          padding-bottom: .5rem;
+
+          .discovery-checkbox-wrapper {
+            .discovery-checkbox:hover {
+              cursor: pointer;
+            }
+
+            .discovery-checkbox:active, .discovery-checkbox:checked:active {
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            }
+
+            .discovery-checkbox:checked {
+              background-color: #e9ecee;
+              border: 1px solid #adb8c0;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+              color: #99a1a7;
+            }
+
+            .discovery-checkbox:checked:after {
+              content: '\2714';
+              font-size: 14px;
+              position: absolute;
+              top: 0;
+              left: 3px;
+              color: #99a1a7;
+            }
+          }
+        }
       }
     }
   }

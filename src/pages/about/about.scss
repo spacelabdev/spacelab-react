@@ -6,7 +6,7 @@
     margin-top: 10px;
     margin-bottom: 15%;
 
-    #main-header {
+    #main-header, #contributers-header{
         color: #a0a0aa;
         text-transform: uppercase;
         font-family: "Poppins", sans-serif;
@@ -17,13 +17,18 @@
 
     h4{
         margin-bottom: 2.5rem;
-    }
+    }   
 
     #second-header {
         color: #a0a0aa;
         text-transform: uppercase;
         font-family: "Poppins", sans-serif;
         font-size: 30px;
+    }
+
+    #contributers-header {
+        margin-bottom: 2.5rem;
+        margin-top: 10rem;
     }
 
     .team-picture-div {
