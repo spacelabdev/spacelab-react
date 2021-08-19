@@ -9,9 +9,9 @@ import placeHolder from "../../assets/img_placeholder.png";
  */
 export default function Explore() {
     const exoplanets = [
-        { image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629294533/space_images/neptune_exzqod.png", title: "Neptune" },
         { image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629294524/space_images/saturn_yzposd.png", title: "Saturn" },
         { image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629294461/space_images/mars_mqbvm6.png", title: "Mars" },
+        { image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629294533/space_images/neptune_exzqod.png", title: "Neptune" },
     ];
     return (
         <section className="explore-section">
@@ -19,7 +19,7 @@ export default function Explore() {
                 <h2>Explore</h2>
                 <div className="card-display">
                     {exoplanets.map((exoplanet) => (
-                        <div className="card">
+                        <div className="card" key={exoplanet.title}>
                             <div
                                 className="image"
                                 style={{
