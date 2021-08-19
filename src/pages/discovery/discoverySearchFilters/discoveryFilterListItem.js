@@ -9,8 +9,8 @@ import React from "react";
 export default function DiscoveryFilterListItem(props) {
 	const filterElements = props.element;
 	const checkbox_style = {
-		width: "1.5rem",
-		height: "1.5rem"
+		width: "1.25rem",
+		height: "1.25rem"
 	}
 
 	return (
