@@ -21,11 +21,13 @@
       text-transform: uppercase;
       font-size: 39px;
       margin-top: 0;
+      margin-bottom: 2rem;
 
       #title-text {
         margin-top: 2%;
         font-family: "Poppins", sans-serif;
         font-weight: bold;
+        color: white;
       }
     }
 
@@ -36,15 +38,16 @@
       margin-bottom: 8%;
     }
     .contact-form-label {
-      font-size: 36px;
+      font-size: 24px;
     }
 
     .small-input {
       width: 100%;
+      min-width: 400px;
       height: 67px;
       margin-top: 5%;
       margin-bottom: 0;
-      font-size: 36px;
+      font-size: 24px;
     }
 
     .large-input {
