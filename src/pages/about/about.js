@@ -37,7 +37,7 @@ export default function About() {
         <h4> Meet the team!</h4>
         <div className="team-picture-div">
             {teamImages.map(image => 
-              <div><img className="team-picture" src={image} alt="placeholder" /></div>
+              <div id="inner-team-picture-div"><img className="team-picture" src={image} alt="placeholder" /></div>
             )}
         </div>
       </section>

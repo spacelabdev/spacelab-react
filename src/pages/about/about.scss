@@ -7,7 +7,7 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 20px;
-    height: 100vh;
+    max-height: 100vh;
 
     #main-header {
         color: black;
@@ -30,7 +30,12 @@
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        width: 60%;
+        width: 50rem;
+
+        // #inner-team-picture-div {
+        //     background-color: #f2f7fc;
+        //     margin: 12px;
+        // }
 
         .team-picture {
             width: 70px;
@@ -205,6 +210,37 @@
             background-color: #7000ff;
             color: white;
             margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    // .section-one {
+    //     .team-picture-div {
+    //         position: relative;
+    //     }
+    // }
+
+    .section-two {
+        .inner-section-two {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .left-div-section-two {
+                display: flex;
+                justify-content: center;
+            }
+
+            .nested-div-two {
+                flex-direction: column;
+            }
+        }
+    }
+    .section-three {
+        .section-three-inner-div {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
