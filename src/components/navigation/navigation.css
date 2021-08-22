@@ -6,7 +6,7 @@
     height: 3.25em;
     text-align: left;
     position: fixed;
-    width: 100%;
+    width: 100vw;
     background-color: #1C1A22;
     z-index: 99;
 }
