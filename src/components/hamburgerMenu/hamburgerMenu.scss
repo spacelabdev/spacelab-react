@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 28px;
+  height: 22px;
+  right: 36px;
+  top: 15px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  opacity: 90%;
+}
+
+.bm-burger-bars-click {
+  opacity: 90%;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #7000FF;
+}
+
+/* Sidebar wrapper styles */
+.bm-menu-wrap {
+  position: fixed;
+  height: 35vh !important;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #ffffff;
+  padding: 7px 27.6px 0;
+  font-size: 1.15em;
+  height: 35vh !important;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hamburger-nav-links {
+  text-align: left;
+  padding-left: 2em;
+  padding-top: 2em;
+}
+
+.hamburger-nav-link {
+  font-size: 1.25em;
+  color: black !important;
+  text-align: left;
+  font-family: "Lato", sans-serif;
+}
