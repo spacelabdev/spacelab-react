@@ -12,7 +12,6 @@ class HamburgerMenu extends React.Component {
 		return (
 			<>
 				<Menu right>
-
 					<div className="hamburger-nav-links">
 						<div>
 							<Link className={'hamburger-nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
@@ -35,38 +34,6 @@ class HamburgerMenu extends React.Component {
 							</Link>
 						</div>
 					</div>
-
-					{/*<Link to={'/dashboard'} style={{textDecoration: 'none'}}>*/}
-					{/*	/!*<div className="menu-logo">*!/*/}
-					{/*	/!*	<img className="fetch-menu" src={Logo} alt='Fetch!'/>*!/*/}
-					{/*	/!*</div>*!/*/}
-					{/*</Link>*/}
-
-					{/*<div className="menu-profile">*/}
-					{/*	<Link to={'/profile'} style={{textDecoration: 'none'}}>*/}
-					{/*		<img className="user-photo" src={Pup} alt='Photo'/>*/}
-					{/*		<h1 className="user-name">{this.props.userName}</h1>*/}
-					{/*	</Link>*/}
-					{/*	<Link to={'/login'} style={{textDecoration: 'none'}}>*/}
-					{/*		<p className="profile-action">Sign Out</p>*/}
-					{/*	</Link>*/}
-					{/*</div>*/}
-
-					{/*<Link to={'/dashboard'} style={{textDecoration: 'none'}}>*/}
-					{/*	<img className="user-home" src={House} alt='Home'/>*/}
-					{/*	<div className="menu-home">Home</div>*/}
-					{/*</Link>*/}
-
-					{/*<Link to={'/addpet'} style={{textDecoration: 'none'}}>*/}
-					{/*	<img className="user-pets" src={Paw} alt='Pets'/>*/}
-					{/*	<div className="menu-pets">Add Pet</div>*/}
-					{/*</Link>*/}
-
-					{/*<Link to={'/our-team'} style={{textDecoration: 'none'}}>*/}
-					{/*	<img className="about-team" src={Ball} alt='Our Team'/>*/}
-					{/*	<div className="menu-about">Our Team</div>*/}
-					{/*</Link>*/}
-
 				</Menu>
 			</>
 		);
