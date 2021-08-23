@@ -10,7 +10,7 @@ import Footer from "../../components/footer/footer";
 export default function Blog() {
 	return (
 		<>
-			{/*<HeroImage/>*/}
+			<HeroImage/>
 			<Footer/>
 		</>
 	);
