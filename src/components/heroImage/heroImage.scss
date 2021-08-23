@@ -39,8 +39,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 98;
-    @media screen and (max-width: 600px) {
-        font-size: 10vw;
+    @media screen and (max-width: 766px) {
+        font-size: 8vw;
     }
 }
 
