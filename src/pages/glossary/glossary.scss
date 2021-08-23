@@ -1,12 +1,23 @@
+#glossary-wrapper {
+    background-color: white;
+}
+
 .glossary-results-wrapper {
     max-width: 1400px;
     margin: 0 auto auto auto;
-    width: 85%;
+    width: 90%;
     font-family: Roboto, serif;
     overflow-wrap: break-word;
+    color: black;
 }
 .glossary-term-container {
     padding: 1em 1em;
+    @media (min-width: 767px) and (max-width: 1023px) {
+        padding: .5em;
+    }
+    @media (max-width: 766px) {
+        padding: .5em;
+    }
 }
 #glossary-term-wrapper {
     display: flex;
@@ -16,6 +27,9 @@
 #glossary-term-name {
     padding: 1em;
     font-size: 2.5em;
+    @media (max-width: 766px) {
+        font-size: 1.75em;
+    }
 }
 .glossary-term {
     text-align: center;
@@ -23,6 +37,9 @@
     font-size: 1.5em;
     color: white;
     background: black;
+    @media (max-width: 766px) {
+        font-size: 1em;
+    }
 }
 .glossary-term:hover {
     background: #7000FF;
@@ -35,20 +52,33 @@
     max-width: 60vw;
     height: 40vh;
     margin: auto;
+    @media (max-width: 766px) {
+        height: 100%;
+        font-size: 1em;
+    }
 }
 #glossary-button-container {
     display: flex;
     justify-content: flex-start;
+    @media (min-width: 767px) and (max-width: 1023px) {
+        padding-left: 2em;
+    }
+    @media (max-width: 766px) {
+        justify-content: space-evenly;
+    }
 }
 #glossary-filter-button-A-J {
     color: #7000FF;
     border-bottom: 2px solid #7000FF;
 }
 .glossary-filter-button {
-    color: white;
+    color: black;
     margin: .5em;
     font-size: 2.5em;
     border-bottom: 2px solid white;
+    @media (max-width: 766px) {
+        font-size: 1.75em;
+    }
 }
 .glossary-filter-button:hover {
     /*color: #7000FF;*/
