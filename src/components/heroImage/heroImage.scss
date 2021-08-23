@@ -42,6 +42,9 @@
     @media screen and (max-width: 766px) {
         font-size: 8vw;
     }
+    @media (min-width: 767px) and (max-width: 1023px) {
+        font-size: 4.25rem;
+    }
 }
 
 #home-page {
