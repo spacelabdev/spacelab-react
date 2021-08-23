@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {UniversalContext} from "../../App";
-import './glossary.css';
+import './glossary.scss';
 
 export default function OfficeListItem(props) {
 	const glossaryTerm = props.element;
