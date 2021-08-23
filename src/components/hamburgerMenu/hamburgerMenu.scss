@@ -11,6 +11,12 @@
   height: 22px;
   right: 36px;
   top: 15px;
+  @media (min-width: 767px) and (max-width: 1023px) {
+    height: 25px;
+    width: 30px;
+    top: 17px;
+    right: 40px;
+  }
 }
 
 /* Color/shape of burger icon bars */

@@ -3,12 +3,20 @@
 }
 
 .logo-container {
-    height: 3.25em;
+    height: 5.25em;
     text-align: left;
     position: fixed;
     width: 100vw;
     background-color: #1C1A22;
     z-index: 99;
+    @media (max-width: 766px) {
+        height: 3.5em;
+        padding-top: .25em;
+    }
+    @media (min-width: 767px) and (max-width: 1023px) {
+        height: 4.0em;
+        padding-top: .5em;
+    }
 }
 
 .logo-nav img {
@@ -32,7 +40,7 @@
     nav {
         top: 0;
         left: 0;
-        height: 55px;
+        height: 70px;
         width: 100%;
         background: #1C1A22;
         color: white;
@@ -41,6 +49,9 @@
         font-family: "Lato", sans-serif;
         font-size: 0.8em;
         position: fixed;
+        @media (max-width: 766px) {
+            height: 60px;
+        }
     }
 
     .nav-wrapper {

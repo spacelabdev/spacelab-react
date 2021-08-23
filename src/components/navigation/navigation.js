@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import {Link} from 'react-router-dom';
 import Logo from "../../assets/spacelab.svg";
-import './navigation.css'
+import './navigation.scss'
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
 
