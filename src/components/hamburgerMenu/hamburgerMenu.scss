@@ -48,6 +48,11 @@
 .bm-menu-wrap {
   position: fixed;
   height: 35vh !important;
+  width: 60vw !important;
+  @media (min-width: 767px) and (max-width: 1023px) {
+    height: 25vh !important;
+    width: 40vw !important;
+  }
 }
 
 /* General sidebar styles */
@@ -56,6 +61,10 @@
   padding: 7px 27.6px 0;
   font-size: 1.15em;
   height: 35vh !important;
+  @media (min-width: 767px) and (max-width: 1023px) {
+    height: 25vh !important;
+    width: 40vw !important;
+  }
 }
 
 /* Wrapper for item list */
@@ -71,7 +80,7 @@
 
 .hamburger-nav-links {
   text-align: left;
-  padding-left: 2em;
+  padding-left: .5em;
   padding-top: 2em;
 }
 
