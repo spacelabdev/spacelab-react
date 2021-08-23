@@ -1,19 +1,46 @@
 nav {
-    display: flex;
-    justify-content: flex-end;
-    position: relative;
-    width: 100vw;
-    background: transparent;
+    height: 85px;
+    width: 100%;
+    background: #1C1A22;
+    color:white;
     z-index: 99;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8em;
 }
 
-nav div {
-    padding: 1em 1em;
+.nav-wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    font-family: "Seymour One", sans-serif;
+}
+
+.logo-nav {
+    font-size: 2.2em;
+}
+
+.nav-links {
+    display:flex;
     font-size: 1.5em;
+}
+
+a {
     color: white;
 }
 
-nav span:hover, nav span:visited {
-    color: #ea8a8a;
-    border-bottom: 2px solid #7000FF;;
+a:hover {
+    color: #7000ff;
+}
+
+.nav-links a:not(:last-of-type) {
+    margin-right: 2rem;
+    
 }

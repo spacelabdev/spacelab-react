@@ -1,3 +1,194 @@
-h1 {
-  color: purple;
+//Global
+
+h2 {
+    font-size: 2.85em;
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    color: #a0a0aa;
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight:100;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #a0a0aa;
+    margin-bottom: 3rem;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: #a0a0aa;
+}
+
+:root {
+    --content-container: 1189px;
+}
+
+.introduction-section {
+    max-width: var(--content-container);
+    padding: 2rem;
+    margin: 4rem auto;
+    //color: black;
+
+    .content-container {
+        //container
+        display: flex;
+        min-height: 550px;
+
+        .images {
+            margin-right: 29px;
+        }
+
+        .about {
+            color: black;
+            width: 20rem;
+            padding: 1rem;
+            flex: 2;
+            p {
+                margin-bottom: 3rem;
+            }
+        }
+
+        @media screen and (max-width: 1150px) {
+            flex-direction: column;
+            .images {
+                margin-right: unset;
+                margin-bottom: 2rem;
+                flex: unset;
+                height: 30rem;
+            }
+            .about {
+                width: 100%;
+                flex: unset;
+            }
+        }
+    }
+}
+
+.exoplanet-101-section {
+    background-image: url("../../assets/exo-bg.png");
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+    text-align: left;
+
+    .bold {
+        font-weight: 700;
+    }
+
+    .line-break {
+        display: block;
+    }
+
+    .content-container {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        max-width: var(--content-container);
+        padding: 3rem 2rem;
+        margin: 4rem auto;
+    }
+
+    .left-container {
+        width: 50%;
+    }
+
+    @media screen and (max-width: 730px) {
+        .content-container {
+            flex-direction: column;
+        }
+        .left-container {
+            width: 100%;
+        }
+    }
+}
+
+.featured-articles-section {
+    max-width: var(--content-container);
+    padding: 2rem;
+    margin: 4rem auto;
+    .card-display {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 30px;
+        padding-bottom: 4rem;
+    }
+    .article-card {
+        text-align: left;
+        .image {
+            width: 100%;
+            height: 230px;
+            background: #1C1A22;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 62px;
+            border: 1px solid #F5F5F5;
+
+            //aligning the text
+            display: grid;
+            place-items: center;
+            text-align: center;
+
+            p {
+                text-transform: capitalize;
+                background: #D9D9D9;
+                color:#7000FF;
+                padding: 0.7rem;
+            }
+        }
+        p {
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #D9D9D9;
+            margin: 0.5rem;
+        }
+        p:first-of-type {
+            font-size: 1.1em;
+        }
+        p:last-of-type {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+}
+
+.explore-section {
+    max-width: var(--content-container);
+    padding: 2rem;
+    margin: 4rem auto;
+    .card-display {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 30px;
+        padding-bottom: 4rem;
+
+        .card {
+            background: #f5f5f5;
+        }
+        .image {
+            width: 100%;
+            height: 426.4px;
+            background: #fbfafc;
+            background-repeat: no-repeat;
+            background-size: 62px;
+            background-position: center;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        p {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: black;
+            padding: 1.5rem;
+        }
+    }
 }
