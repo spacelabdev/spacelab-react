@@ -4,7 +4,7 @@
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    height: calc(90vh - 85px); //85px is the nav bar
+    height: calc(90vh - 70px); //70px is the nav bar
     background: #160d39;
 }
 
@@ -38,9 +38,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
-    @media screen and (max-width: 600px) {
-        font-size: 10vw;
+    z-index: 98;
+    @media screen and (max-width: 766px) {
+        font-size: 8vw;
+    }
+    @media (min-width: 767px) and (max-width: 1023px) {
+        font-size: 4.25rem;
     }
 }
 
@@ -51,7 +54,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
+    z-index: 98;
 
     //spacelab logo displaying
     background-image: url("../../assets/spacelab.svg");

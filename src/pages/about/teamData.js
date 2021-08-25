@@ -22,4 +22,6 @@ export const contributorImages = [
     {image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png", fullName:"Jon Zivku", title:"Software Engineer"},
     {image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png", fullName:"Charlie Arboleda", title:"Software Engineer"},
     {image:"https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/yumi_j5x47l.png", fullName:"Yumi Jeon", title:"UX Designer"}, 
+    {image:"https://i.imgur.com/vxMri4M.png", fullName:"Cally Lin", title:"Data Scientist | Machine Learning Engineer"}, 
+    {image:"https://i.imgur.com/UXz18XD.png", fullName:"Xu Xu", title:"Software Engineer"}, 
 ]
