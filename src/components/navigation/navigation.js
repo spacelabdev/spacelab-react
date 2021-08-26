@@ -17,7 +17,7 @@ export default function Navigation() {
 				<div className="nav-wrapper">
 					<div className="logo-container">
 						<Link className={'logo-nav'} to={'/'} style={{textDecoration: 'none'}}>
-							<img src={Logo}/>
+							<img src={Logo} alt="logo" />
 						</Link>
 					</div>
 					<div className="nav-links">
