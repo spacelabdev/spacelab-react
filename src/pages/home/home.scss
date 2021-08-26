@@ -6,6 +6,9 @@ h2 {
     text-transform: uppercase;
     color: #a0a0aa;
     margin-bottom: 3rem;
+    @media (max-width: 766px) {
+        font-size: 2.5em;
+    }
 }
 
 h3 {
