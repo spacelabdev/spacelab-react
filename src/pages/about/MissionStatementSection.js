@@ -32,7 +32,7 @@ import Planet_Rings from "../../assets/aboutAssets/planet_rings.svg"
                     </div>
                     <div className={"about-mission-content"}>
                         <h1 className="about-mission-header">Our Values</h1>
-                        <p>
+                        <p >
                         We value the voices of those too often talked over and under appreciated, because we firmly believe
                         that a diverse group of people approaching a problem will arrive at a more creative and unique 
                         solution; a solution that incorporates each individual's perspectives, values, and needs. 
