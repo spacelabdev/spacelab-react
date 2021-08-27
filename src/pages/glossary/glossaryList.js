@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
-import {findFirstThird, findMiddleThird, findLastThird} from "./glossaryhelper";
+import {returnFilteredTerms} from "./glossaryhelper";
 import './glossary.css';
 
 export default function GlossaryList() {
@@ -12,17 +12,23 @@ export default function GlossaryList() {
 		glossaryArray = context.glossaryTerms;
 	}
 
-	const handleFirstThirdClick = () => {
-		context.setGlossaryTerms(findFirstThird);
-	};
-
-	const handleMiddleThirdClick = () => {
-		context.setGlossaryTerms(findMiddleThird);
-	};
-
-	const handledLastThirdClick = () => {
-		context.setGlossaryTerms(findLastThird);
+	// Updates the css color for the currently selected filter, and returns all other filters to white.
+	const highlightCurrentFilter = (currentSelection) => {
+		const alphabetFilters = document.querySelectorAll(".glossary-filter-button");
+		alphabetFilters.forEach(alphabetFilter => {
+			alphabetFilter.id === currentSelection
+				? alphabetFilter.setAttribute('style', 'color: #7000FF; border-bottom: 2px solid #7000FF;')
+				: alphabetFilter.setAttribute('style', 'color: white; border-bottom: 2px solid white;');
+		});
 	}
+
+	// Updates displayed terms based on selected filter
+	const handleFilterClick = (beginningAlphabetIndex, endingAlphabetIndex, filterRange) => {
+		const termsGroup = returnFilteredTerms(beginningAlphabetIndex, endingAlphabetIndex);
+		const currentSelection = 'glossary-filter-button-' + filterRange;
+		context.setGlossaryTerms(termsGroup);
+		highlightCurrentFilter(currentSelection);
+	};
 
 	// map over each element in the glossaryTermsArray and pass them to the GlossaryListItem component as props
 	const glossaryTermArray = glossaryArray.map((e, index) => {
@@ -34,13 +40,26 @@ export default function GlossaryList() {
 	return (
 		<div className={'glossary-results-wrapper'}>
 			<div id={'glossary-button-container'}>
-				<span className={'glossary-filter-button'} onClick={handleFirstThirdClick}>A - I</span>
-				<span className={'glossary-filter-button'} onClick={handleMiddleThirdClick}>L - S</span>
-				<span className={'glossary-filter-button'} onClick={handledLastThirdClick}>T - Z</span>
+				<span
+					className={'glossary-filter-button'}
+					id={'glossary-filter-button-A-J'}
+					onClick={ () => handleFilterClick(1, 9, 'A-J')}>
+					A - J
+				</span>
+				<span
+					className={'glossary-filter-button'}
+					id={'glossary-filter-button-K-S'}
+					onClick={ () => handleFilterClick(10, 19, 'K-S')}>
+					K - S
+				</span>
+				<span
+					className={'glossary-filter-button'}
+					id={'glossary-filter-button-T-Z'}
+					onClick={ () => handleFilterClick(20, 26, 'T-Z')}>
+					T - Z
+				</span>
 			</div>
-			<div id={'glossary-term-wrapper'}>
-				{glossaryTermArray}
-			</div>
+			<div id={'glossary-term-wrapper'}>{glossaryTermArray}</div>
 			<div id={'glossary-term-name'}>{context.currentGlossaryTerm}</div>
 			<div id={'glossary-term-def'}>{context.glossaryTermDef}</div>
 		</div>
