@@ -8,6 +8,9 @@ import Main from "./components/main";
  * @constructor
  */
 function App() {
+	const [navToggle, setNavToggle] = useState("open");
+	const [hamburgerToggle, setHamburgerToggle] = useState("open");
+	const [hamburgerToggleIcon, setHamburgerToggleIcon] = useState("hamburger-toggle");
 	const [glossaryTerms, setGlossaryTerms] = useState();
 	const [currentGlossaryTerm, setCurrentGlossaryTerm] = useState(glossaryTermsArray[0][0]);
 	const [glossaryTermDef, setGlossaryTermDef] = useState(glossaryTermsArray[0][1]);
@@ -23,6 +26,12 @@ function App() {
 			<div className={'content'}>
 				<UniversalContext.Provider value={
 					{
+						navToggle,
+						setNavToggle,
+						hamburgerToggle,
+						setHamburgerToggle,
+						hamburgerToggleIcon,
+						setHamburgerToggleIcon,
 						glossaryTerms,
 						setGlossaryTerms,
 						glossaryTermDef,

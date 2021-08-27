@@ -1,4 +1,92 @@
+:root {
+    --content-container: 1189px;
+}
+
+#about-mission-statement-container {
+    max-width: var(--content-container);
+    width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    .inner-section-two {
+        flex-direction: row;
+        font-family: "Lato", sans-serif;
+
+        .about-mission-segment-container {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+            margin: 0 auto;
+            padding-bottom: 5rem;
+
+            .about-mission-image-wrapper {
+                width: 50%;
+                margin: auto;
+
+                .about-mission-image {
+                    margin: 0 auto;
+                }
+            }
+
+            @media screen and(max-width: 815px) {
+                flex-direction: column;
+                align-items: center;
+                .about-mission-image-wrapper {
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .about-mission-content {
+                width: 50%;
+                text-align: left;
+
+                .about-mission-header {
+                    padding-bottom: 1rem;
+                    color: #7000ff;
+                    text-align: center;
+                }
+
+                @media screen and (max-width: 815px) {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            &:nth-child(even) {
+                //alternating text + image (left vs right)
+                .about-mission-image-wrapper {
+                    order: 2;
+                }
+                .about-mission-content {
+                    order: 1;
+                    text-align: center;
+                }
+
+                @media screen and (max-width: 815px) {
+                    .about-mission-image-wrapper {
+                        order: unset;
+                    }
+                    .about-mission-content {
+                        order: unset;
+                    }
+                }
+            }
+        }
+    }
+}
+
 #about-team-container {
+    max-width: var(--content-container);
+    width: 100%;
+    margin: 0 auto;
+
     font-family: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
@@ -21,7 +109,7 @@
     }
 
     #second-header {
-        color: #a0a0aa; 
+        color: #a0a0aa;
         text-transform: uppercase;
         font-family: "Poppins", sans-serif;
         font-size: 30px;
@@ -33,11 +121,18 @@
     }
 
     .team-picture-div {
+        max-width: var(--content-container);
+        width: 100%;
+        margin: 0 auto;
+
         display: grid;
         row-gap: 4rem;
         column-gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        width: 60%;
+
+        @media screen and (max-width: 860px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
 
         .team-card {
             display: flex;
@@ -67,48 +162,6 @@
     }
 }
 
-#about-mission-statement-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
-
-    .inner-section-two {
-        flex-direction: row;
-        font-family: "Lato", sans-serif;
-
-        .about-mission-segment-container {
-            display: flex;
-            justify-content: space-between;
-            width: 75%;
-            text-align: left;
-            margin: 0 auto;
-            padding-bottom: 5rem;
-
-            .about-mission-image-wrapper {
-                width: 50%;
-                margin: auto;
-
-                .about-mission-image {
-                    margin: 0 auto;
-                }
-            }
-
-            .about-mission-content {
-                width: 50%;
-                text-align: center;
-
-                .about-mission-header {
-                    padding-bottom: 1rem;
-                    color: #7000ff;
-                }
-            }
-        }
-    }
-}
-
 #about-faq-container {
     display: flex;
     flex-direction: column;
@@ -120,8 +173,14 @@
     padding: 5rem 0 10rem 0;
 
     .section-three-inner-div {
+        max-width: var(--content-container);
+        width: 100%;
+        padding: 0 1rem;
+        margin: 0 auto;
+
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         .left-side-section-three {
             width: 50%;
