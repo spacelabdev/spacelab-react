@@ -83,6 +83,9 @@ on tablets. Can be updated per UX team as necessary.
 
     .left-container {
         flex: 4;
+        @media (max-width: 766px) {
+            padding-bottom: 1em;
+        }
     }
     .right-container {
         flex: 1;
