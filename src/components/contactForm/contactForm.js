@@ -1,5 +1,5 @@
 import React from "react";
-import { useForm, ValidationError } from '@formspree/react'
+import {useForm, ValidationError} from '@formspree/react'
 import "./contactForm.scss"
 
 /**
@@ -9,10 +9,10 @@ import "./contactForm.scss"
  */
 export default function ContactForm() {
 
-  const [state, handleSubmit] = useForm("mrgrrlkv")
-  if (state.succeeded) {
-    return <p>Thank you for getting in touch!</p>
-  } 
+	const [state, handleSubmit] = useForm("mrgrrlkv")
+	if (state.succeeded) {
+		return <p>Thank you for getting in touch!</p>
+	}
 
 	return (
 		<section id={"contact-form-container"}>
@@ -28,16 +28,16 @@ export default function ContactForm() {
 								<div>
 									<input
 										className="small-input"
-                    id="firstName"
+										id="firstName"
 										name="firstName"
-                    type="firstName"
-                    required
+										type="firstName"
+										required
 									/>
-                  <ValidationError 
-                    prefix="FirstName" 
-                    field="firstName"
-                    errors={state.errors}
-                  />
+									<ValidationError
+										prefix="FirstName"
+										field="firstName"
+										errors={state.errors}
+									/>
 								</div>
 							</div>
 							<div className="contact-form-field">
@@ -45,16 +45,16 @@ export default function ContactForm() {
 								<div>
 									<input
 										className="small-input"
-                    id="lastName"
+										id="lastName"
 										name="lastName"
-                    type="lastName"
-                    required
+										type="lastName"
+										required
 									/>
-                  <ValidationError 
-                    prefix="LastName" 
-                    field="firstName"
-                    errors={state.errors}
-                  />
+									<ValidationError
+										prefix="LastName"
+										field="firstName"
+										errors={state.errors}
+									/>
 								</div>
 							</div>
 						</div>
@@ -63,16 +63,16 @@ export default function ContactForm() {
 							<div>
 								<input
 									className="large-input"
-                  id="email"
+									id="email"
 									name="email"
-                  type="email"
-                  required
+									type="email"
+									required
 								/>
-                <ValidationError 
-                  prefix="Email" 
-                  field="email"
-                  errors={state.errors}
-                />
+								<ValidationError
+									prefix="Email"
+									field="email"
+									errors={state.errors}
+								/>
 							</div>
 						</div>
 						<div className="contact-form-field">
@@ -80,32 +80,32 @@ export default function ContactForm() {
 							<div>
 								<input
 									className="large-input"
-                  id="phone"
+									id="phone"
 									name="phone"
-                  type="phone"
+									type="phone"
 								/>
-                <ValidationError 
-                  prefix="Phone" 
-                  field="phone"
-                  errors={state.errors}
-                />
+								<ValidationError
+									prefix="Phone"
+									field="phone"
+									errors={state.errors}
+								/>
 							</div>
 						</div>
 						<div className="contact-form-field">
 							<label className="contact-form-label">Message*</label>
 							<div>
-                  <textarea
-	                  className="message-input"
-                    id="message"
-	                  name="message"
-                    type="message"
-                    required
-                  />
-                  <ValidationError 
-                    prefix="Message" 
-                    field="message"
-                    errors={state.errors}
-                  />
+								<textarea
+									className="message-input"
+									id="message"
+									name="message"
+									type="message"
+									required
+								/>
+								<ValidationError
+									prefix="Message"
+									field="message"
+									errors={state.errors}
+								/>
 							</div>
 						</div>
 						<div className={"contact-button-container"}>
