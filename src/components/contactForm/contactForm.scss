@@ -22,6 +22,9 @@
             font-size: 39px;
             margin-top: 0;
             margin-bottom: 2rem;
+            @media (max-width: 766px) {
+                width: 85%;
+            }
 
             #title-text {
                 margin-top: 2%;
