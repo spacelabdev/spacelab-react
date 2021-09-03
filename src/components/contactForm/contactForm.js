@@ -27,7 +27,7 @@ export default function ContactForm() {
 				<div className="contact-form-title">
 					<p id="title-text">Contact us</p>
 				</div>
-				<div>
+				<div id={"contact-form-field-container"}>
 					<form onSubmit={handleSubmit}>
 						<div className="first-input-row">
 							<div className="contact-form-field">

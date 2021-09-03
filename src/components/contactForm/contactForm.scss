@@ -32,62 +32,79 @@
             }
         }
 
-        .first-input-row {
-            width: 100%;
-            min-width: 690px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin-bottom: 8%;
-        }
-        .contact-form-label {
-            font-size: 24px;
-        }
+        #contact-form-field-container {
+            max-width: 80vw;
 
-        .small-input {
-            width: 100%;
-            min-width: 320px;
-            height: 67px;
-            margin-top: 5%;
-            margin-bottom: 0;
-            font-size: 24px;
-        }
+            .first-input-row {
+                width: 100%;
+                min-width: 690px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 8%;
+                @media (min-width: 767px) and (max-width: 1023px) {
+                    min-width: 600px;
+                }
+                @media (max-width: 766px) {
+                    flex-direction: column;
+                    min-width: 0;
+                }
+            }
+            .contact-form-label {
+                font-size: 24px;
+            }
 
-        .large-input {
-            width: 100%;
-            height: 67px;
-            margin-top: 2%;
-            margin-bottom: 5%;
-            font-size: 36px;
-        }
+            .small-input {
+                width: 100%;
+                min-width: 320px;
+                height: 67px;
+                margin-top: 5%;
+                margin-bottom: 0;
+                font-size: 24px;
+                @media (min-width: 767px) and (max-width: 1023px) {
+                    min-width: 280px;
+                }
+                @media (max-width: 766px) {
+                    min-width: 0;
+                }
+            }
 
-        .message-input {
-            width: 100%;
-            height: 250px;
-            margin-bottom: 3%;
-            margin-top: 3%;
-            font-size: 36px;
-        }
+            .large-input {
+                width: 100%;
+                height: 67px;
+                margin-top: 2%;
+                margin-bottom: 5%;
+                font-size: 36px;
+            }
 
-        .contact-button-container {
-            display: flex;
-            justify-content: space-around;
-        }
-        .submit-button {
-            width: 50%;
-            height: 67px;
-            border-radius: 10px;
-            border: 2px solid #7000ff;
-            font-size: 36px;
-            font-family: "Poppins", sans-serif;
-            background-color: #1c1a22;
-            color: #7000ff;
-            margin: 0 auto;
-        }
+            .message-input {
+                width: 100%;
+                height: 250px;
+                margin-bottom: 3%;
+                margin-top: 3%;
+                font-size: 36px;
+            }
 
-        .submit-button:hover {
-            color: white;
-            background-color: #7000ff;
+            .contact-button-container {
+                display: flex;
+                justify-content: space-around;
+            }
+            .submit-button {
+                width: 50%;
+                height: 67px;
+                border-radius: 10px;
+                border: 2px solid #7000ff;
+                font-size: 36px;
+                font-family: "Poppins", sans-serif;
+                background-color: #1c1a22;
+                color: #7000ff;
+                margin: 0 auto;
+            }
+
+            .submit-button:hover {
+                color: white;
+                background-color: #7000ff;
+            }
         }
     }
 }
