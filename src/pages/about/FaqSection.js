@@ -11,7 +11,7 @@ import React from "react";
             <div className="section-three-inner-div">
                 <div className="left-side-section-three">
                     <div id="faq">FAQ</div>
-                    <div>
+                    <div id={"faq-description"}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vestibulum ligula nisi, tristique ut massa.
                     </div>

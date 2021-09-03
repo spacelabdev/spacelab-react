@@ -175,15 +175,29 @@
         width: 100%;
         padding: 0 1rem;
         margin: 0 auto;
-
         display: flex;
         flex-direction: row;
         align-items: center;
+
+        @media (max-width: 766px) {
+            flex-direction: column;
+        }
 
         .left-side-section-three {
             width: 50%;
             text-align: left;
             padding-right: 10%;
+            @media (max-width: 766px) {
+                width: 90%;
+                padding: 0;
+            }
+
+            #faq-description {
+                @media (max-width: 766px) {
+                    width: 100%;
+                    padding-bottom: 3em;
+                }
+            }
 
             #faq {
                 text-transform: uppercase;
@@ -195,6 +209,9 @@
 
         .right-side-section-three {
             width: 50%;
+            @media (max-width: 766px) {
+                width: 90%;
+            }
 
             .right-side-nested-div {
                 display: flex;
@@ -208,11 +225,18 @@
                     text-align: left;
                     width: 100%;
                     font-size: 20px;
+                    @media (max-width: 766px) {
+                        font-size: 1em;
+                        padding-right: 1em;
+                    }
                 }
 
                 .answer-div {
                     text-align: center;
                     font-size: 20px;
+                    @media (max-width: 766px) {
+                        font-size: 1em;
+                    }
                 }
             }
         }
