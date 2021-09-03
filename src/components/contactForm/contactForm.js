@@ -1,5 +1,5 @@
 import React from "react";
-import useForm from "./useForm";
+import { useForm, ValidationError } from '@formspree/react'
 import "./contactForm.scss"
 
 /**
@@ -8,18 +8,11 @@ import "./contactForm.scss"
  * @constructor
  */
 export default function ContactForm() {
-	const {formData, handleChange} = useForm({
-		firstName: '',
-		lastName: '',
-		email: '',
-		phone: '',
-		message: '',
-	});
 
-	const handleSubmit = event => {
-		event.preventDefault()
-		window.alert(`Submitting ${JSON.stringify(formData, null, 2)}`)
-	};
+  const [state, handleSubmit] = useForm("mrgrrlkv")
+  if (state.succeeded) {
+    return <p>Thank you for getting in touch!</p>
+  } 
 
 	return (
 		<section id={"contact-form-container"}>
@@ -35,10 +28,16 @@ export default function ContactForm() {
 								<div>
 									<input
 										className="small-input"
+                    id="firstName"
 										name="firstName"
-										value={formData.firstName}
-										onChange={handleChange}
+                    type="firstName"
+                    required
 									/>
+                  <ValidationError 
+                    prefix="FirstName" 
+                    field="firstName"
+                    errors={state.errors}
+                  />
 								</div>
 							</div>
 							<div className="contact-form-field">
@@ -46,10 +45,16 @@ export default function ContactForm() {
 								<div>
 									<input
 										className="small-input"
+                    id="lastName"
 										name="lastName"
-										value={formData.lastName}
-										onChange={handleChange}
+                    type="lastName"
+                    required
 									/>
+                  <ValidationError 
+                    prefix="LastName" 
+                    field="firstName"
+                    errors={state.errors}
+                  />
 								</div>
 							</div>
 						</div>
@@ -58,10 +63,16 @@ export default function ContactForm() {
 							<div>
 								<input
 									className="large-input"
+                  id="email"
 									name="email"
-									value={formData.email}
-									onChange={handleChange}
+                  type="email"
+                  required
 								/>
+                <ValidationError 
+                  prefix="Email" 
+                  field="email"
+                  errors={state.errors}
+                />
 							</div>
 						</div>
 						<div className="contact-form-field">
@@ -69,25 +80,36 @@ export default function ContactForm() {
 							<div>
 								<input
 									className="large-input"
+                  id="phone"
 									name="phone"
-									value={formData.phone}
-									onChange={handleChange}
+                  type="phone"
 								/>
+                <ValidationError 
+                  prefix="Phone" 
+                  field="phone"
+                  errors={state.errors}
+                />
 							</div>
 						</div>
 						<div className="contact-form-field">
-							<label className="contact-form-label">Message</label>
+							<label className="contact-form-label">Message*</label>
 							<div>
                   <textarea
 	                  className="message-input"
+                    id="message"
 	                  name="message"
-	                  value={formData.message}
-	                  onChange={handleChange}
+                    type="message"
+                    required
+                  />
+                  <ValidationError 
+                    prefix="Message" 
+                    field="message"
+                    errors={state.errors}
                   />
 							</div>
 						</div>
 						<div className={"contact-button-container"}>
-							<button className="submit-button" type="submit">
+							<button className="submit-button" type="submit" disabled={state.submitting}>
 								Send
 							</button>
 						</div>
