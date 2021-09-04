@@ -9,6 +9,12 @@
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
+  @media (min-width: 767px) and (max-width: 1023px) {
+    width: 90%;
+  }
+  @media (max-width: 766px) {
+    flex-direction: column-reverse;
+  }
 
   #discovery-table {
     align-self: center;
@@ -23,6 +29,13 @@
     text-align: left;
     padding-bottom: 2rem;
     vertical-align: middle;
+    @media (min-width: 767px) and (max-width: 1023px) {
+      width: 45vw;
+    }
+    @media (max-width: 766px) {
+      width: 80vw;
+      margin: 0 auto;
+    }
 
     p {
       font-size: 2rem;
@@ -44,6 +57,7 @@
           padding-bottom: .5rem;
 
           .discovery-checkbox-wrapper {
+            padding-right: 1em;
             .discovery-checkbox:hover {
               cursor: pointer;
             }

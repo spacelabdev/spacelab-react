@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
 import {returnFilteredTerms} from "./glossaryhelper";
-import './glossary.css';
+import './glossary.scss';
 
 export default function GlossaryList() {
 	const context = useContext(UniversalContext);

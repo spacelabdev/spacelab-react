@@ -1,6 +1,14 @@
+/**
+Note: No media queries were added for tablet layouts. Desktop footer looks fine
+on tablets. Can be updated per UX team as necessary.
+ */
 .footer-section {
     background: black;
     text-align: left;
+    width: 100vw;
+    @media (max-width: 766px) {
+        text-align: center;
+    }
 
     a {
         color: #a0a0aa;
@@ -17,22 +25,38 @@
         font-size: 30px;
         margin-bottom: 1.25rem;
         color: white;
+        @media (max-width: 766px) {
+            font-size: 21px;
+        }
     }
 
     p {
         margin-bottom: 2rem;
+        @media (max-width: 766px) {
+            display: none;
+        }
     }
 
     .content-container {
         display: flex;
+        width: 100vw;
         max-width: 1189px;
         margin: 0 auto;
         padding: 4rem 2rem;
+        @media (max-width: 766px) {
+            flex-direction: column;
+            align-content: center;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+        }
     }
 
     .subscription-form {
         border-radius: 3px;
         height: 2.5rem;
+        @media (max-width: 766px) {
+            width: 100%;
+        }
         input {
             height: 100%;
             max-width: 502px;
@@ -40,6 +64,9 @@
             padding: 0.5rem 1.5rem;
             &::placeholder {
                 letter-spacing: 3px;
+            }
+            @media (max-width: 766px) {
+                width: 59%;
             }
         }
         button {
@@ -56,12 +83,18 @@
 
     .left-container {
         flex: 4;
+        @media (max-width: 766px) {
+            padding-bottom: 1em;
+        }
     }
     .right-container {
         flex: 1;
         ul {
             list-style: none;
             text-transform: uppercase;
+            @media (max-width: 766px) {
+                padding-left: 0;
+            }
             li {
                 line-height: 2;
             }
