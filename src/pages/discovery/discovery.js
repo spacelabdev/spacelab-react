@@ -5,6 +5,7 @@ import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
 import {discoveryMethodFiltersArray, planetSystemsFiltersArray, planetTypeFiltersArray} from "./discoveryHelper";
 import "./discovery.scss";
 import Footer from "../../components/footer/footer";
+import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 
 /**
  * @returns {JSX.Element}
@@ -49,7 +50,9 @@ export default function Discovery() {
 				<div id="discovery-table">
 					<ReactBootStrap.Table striped bordered hover size="sm">
 						<thead>
-						<p>Exoplanet Search Coming Soon!</p>
+
+						<UnderConstruction/>
+
 						{/*<tr>*/}
 						{/*	<th>Name</th>*/}
 						{/*	<th>Light Years From Earth</th>*/}
