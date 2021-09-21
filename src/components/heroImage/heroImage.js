@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import "./heroImage.scss";
 import heroImage from "../../assets/felix-mittermeier-Knwea-mLGAg-unsplash.jpg";
-import NavDesktop from "../navigation/navDesktop";
+import Navigation from "../navigation/navigation";
 import {UniversalContext} from "../../App";
 
 /**
@@ -29,7 +29,7 @@ export default function HeroImage() {
 
 	return (
 		<>
-			<NavDesktop/>
+			<Navigation/>
 			<div id={"hero-image-container"}>
 				<img id={"hero-image"} src={heroImage} alt={"milky way at night"}/>
 				{/*<div id={"hero-circle"}/>*/}
