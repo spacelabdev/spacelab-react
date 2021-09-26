@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import "./heroImage.scss";
-import heroImage from "../../assets/felix-mittermeier-Knwea-mLGAg-unsplash.jpg";
+import heroImage from "../../assets/componentAssets/felix-mittermeier-Knwea-mLGAg-unsplash.jpg";
 import Navigation from "../navigation/navigation";
 import {UniversalContext} from "../../App";
 
