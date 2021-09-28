@@ -25,6 +25,8 @@ export const contributorImages = [
     {image:"https://i.imgur.com/vxMri4M.png", fullName:"Cally Lin", title:"Data Scientist | Machine Learning Engineer"}, 
     {image:"https://i.imgur.com/UXz18XD.png", fullName:"Xu Xu", title:"Software Engineer"}, 
     {image:"https://i.imgur.com/dEaWWjr.png", fullName:"Kausar Akther", title:"Software Developer"},
-    {image:"https://i.imgur.com/2o5c7rh.jpg", fullName:"Bach Le", title:""},
-    {image:"https://i.imgur.com/XqclTZG.png", fullName:"Ian", title:""},
+    {image:"https://i.imgur.com/2o5c7rh.jpg", fullName:"Bach Le", title:"Software Engineer"},
+    {image:"https://i.imgur.com/XqclTZG.png", fullName:"Ian Walls", title:"3D Graphics Developer"},
+    {image:"https://i.imgur.com/qQAPxUW.jpg", fullName:"Kat Rendon", title:"Staff Writer"},
+    
 ]
