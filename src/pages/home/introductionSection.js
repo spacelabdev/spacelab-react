@@ -1,5 +1,5 @@
 import React from "react";
-import ImageSlider from "../../components/imageSlider/ImageSlider";
+import ImageSlider from "../../components/imageSlider/imageSlider";
 import {homeSliderImages} from "./homepageHelper";
 import "./home.scss";
 

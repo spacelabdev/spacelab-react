@@ -18,7 +18,7 @@ export default function GlossaryList() {
 		alphabetFilters.forEach(alphabetFilter => {
 			alphabetFilter.id === currentSelection
 				? alphabetFilter.setAttribute('style', 'color: #7000FF; border-bottom: 2px solid #7000FF;')
-				: alphabetFilter.setAttribute('style', 'color: white; border-bottom: 2px solid white;');
+				: alphabetFilter.setAttribute('style', 'color: black; border-bottom: 2px solid black;');
 		});
 	}
 

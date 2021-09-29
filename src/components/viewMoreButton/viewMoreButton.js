@@ -1,5 +1,5 @@
 import React from "react";
-import "./ViewMoreButton.scss";
+import "./viewMoreButton.scss";
 import { Link } from "react-router-dom";
 
 /**
