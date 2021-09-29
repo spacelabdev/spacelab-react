@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.scss";
-import placeHolder from "../../assets/img_placeholder.png";
-import ViewMoreButton from "../../components/viewMoreButton/ViewMoreButton";
+import placeHolder from "../../assets/generalAssets/img_placeholder.png";
+import ViewMoreButton from "../../components/viewMoreButton/viewMoreButton";
 /**
  * @returns {JSX.Element}
  * @constructor
