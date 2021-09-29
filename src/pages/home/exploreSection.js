@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.scss";
-import ViewMoreButton from "../../components/viewMoreButton/ViewMoreButton";
+import ViewMoreButton from "../../components/viewMoreButton/viewMoreButton";
 import placeHolder from "../../assets/generalAssets/img_placeholder.png";
 
 /**

@@ -1,9 +1,9 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
-import Introduction from "./IntroductionSection";
-import ExoPlanet101 from "./ExoPlanet101Section";
-import FeaturedArticles from "./FeaturedArticlesSection";
-import Explore from "./ExploreSection";
+import Introduction from "./introductionSection";
+import ExoPlanet101 from "./exoPlanet101Section";
+import FeaturedArticles from "./featuredArticlesSection";
+import Explore from "./exploreSection";
 import Footer from "../../components/footer/footer";
 import "./home.scss";
 

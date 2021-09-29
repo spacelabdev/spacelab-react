@@ -1,5 +1,5 @@
 import React from "react";
-import { teamImages, contributorImages } from "./teamData";
+import { teamImages, contributorImages } from "./aboutHelper";
 
 /**
  * @returns {JSX.Element}
