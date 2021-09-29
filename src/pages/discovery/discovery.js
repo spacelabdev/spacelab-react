@@ -7,6 +7,7 @@ import "./discovery.scss";
 import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 
+
 /**
  * @returns {JSX.Element}
  * @constructor
@@ -45,7 +46,9 @@ export default function Discovery() {
 	return (
 		<>
 			<HeroImage/>
+
 			<div id={'discovery-title'}>Current Discoveries</div>
+
 			<div id={"database-search-wrapper"}>
 				<div id="discovery-table">
 					<ReactBootStrap.Table striped bordered hover size="sm">
