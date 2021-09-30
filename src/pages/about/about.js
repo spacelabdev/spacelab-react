@@ -17,7 +17,7 @@ export default function About() {
 			<HeroImage/>
 			<MissionStatement/>
 			<Team/>
-			<Faq/>
+      <Faq/>
 			<ContactForm/>
 			<Footer/>
 		</>
