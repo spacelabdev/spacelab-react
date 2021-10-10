@@ -2,6 +2,41 @@
     --content-container: 1189px;
 }
 
+// History Section 
+.history-section{
+    font-family: "Poppins";
+
+    .about-history-header{
+        color: #FFFFFF;
+        font-size: 3rem;
+        margin: 0 auto;
+        padding: 2rem;
+        text-transform: uppercase;
+      }
+      
+         
+      .history-container{
+          display: flex;
+          height: 100%;
+          align-items: center;
+          justify-content: space-between;
+          max-width: var(--content-container);
+          padding: 3rem 2rem;
+          margin: 4rem auto;
+          font-family: "Poppins";
+      
+       }
+
+       .about-history-content{
+           flex-direction: column;
+       }
+
+    h3, p{
+        color: #FFFFFF;
+    }
+}
+
+    
 
 
 
