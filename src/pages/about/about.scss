@@ -8,7 +8,7 @@
 
     .about-history-header{
         color: #FFFFFF;
-        font-size: 3rem;
+        font-size: 2rem;
         margin: 0 auto;
         padding: 2rem;
         text-transform: uppercase;
@@ -18,19 +18,22 @@
       .history-container{
           display: flex;
           height: 100%;
-          align-items: center;
-          justify-content: space-between;
           max-width: var(--content-container);
           padding: 3rem 2rem;
-          margin: 4rem auto;
+          margin: auto;
           font-family: "Poppins";
+          flex-wrap: wrap;
+          flex-flow: row wrap;
       
        }
 
-       .about-history-content{
-           flex-direction: column;
+       .history{
+           display: flex;
+           flex-direction: column; 
+           flex-wrap: wrap;
        }
 
+     
     h3, p{
         color: #FFFFFF;
     }
