@@ -16,6 +16,7 @@ function App() {
 	const [glossaryTerms, setGlossaryTerms] = useState();
 	const [currentGlossaryTerm, setCurrentGlossaryTerm] = useState(glossaryTermsArray[0][0]);
 	const [glossaryTermDef, setGlossaryTermDef] = useState(glossaryTermsArray[0][1]);
+	const [glossaryTermImg, setGlossaryTermImg] = useState(glossaryTermsArray[0][3]);
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
 
@@ -39,6 +40,8 @@ function App() {
 						setGlossaryTerms,
 						glossaryTermDef,
 						setGlossaryTermDef,
+						glossaryTermImg,
+						setGlossaryTermImg,
 						currentGlossaryTerm,
 						setCurrentGlossaryTerm,
 						pageTitle,

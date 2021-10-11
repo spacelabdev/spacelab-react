@@ -2,13 +2,19 @@ import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
 import {returnFilteredTerms} from "./glossaryhelper";
+import placeholderImage from "../../assets/generalAssets/img_placeholder.png";
 import './glossary.scss';
 
 export default function GlossaryList() {
 	const context = useContext(UniversalContext);
+	const termImage = context.glossaryTermImg ? context.glossaryTermImg : placeholderImage;
 	let glossaryArray = [];
 
 	if (context.glossaryTerms !== undefined) {
+		glossaryArray = context.glossaryTerms;
+	}
+
+	if (context.glossaryTermImg !== undefined) {
 		glossaryArray = context.glossaryTerms;
 	}
 
@@ -61,7 +67,12 @@ export default function GlossaryList() {
 			</div>
 			<div id={'glossary-term-wrapper'}>{glossaryTermArray}</div>
 			<div id={'glossary-term-name'}>{context.currentGlossaryTerm}</div>
-			<div id={'glossary-term-def'}>{context.glossaryTermDef}</div>
+			<div id={'glossary-term-def'}>
+				{context.glossaryTermDef}
+				<div id={'glossary-term-image-wrapper'}>
+					<img id={'glossary-term-image'} src={termImage} alt={`${context.currentGlossaryTerm} image`}/>
+				</div>
+			</div>
 		</div>
 	);
 };

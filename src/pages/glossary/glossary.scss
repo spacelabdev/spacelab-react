@@ -56,6 +56,12 @@
         height: 100%;
         font-size: 1em;
     }
+
+    #glossary-term-image-wrapper {
+        img {
+            margin: 0 auto;
+        }
+    }
 }
 #glossary-button-container {
     display: flex;
