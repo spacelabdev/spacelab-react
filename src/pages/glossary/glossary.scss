@@ -1,5 +1,5 @@
 #glossary-wrapper {
-    background-color: white;
+    background-color: #F2F7FC;
 }
 
 .glossary-results-wrapper {
@@ -50,7 +50,7 @@
     font-size: 1.5em;
     padding-bottom: 3em;
     max-width: 60vw;
-    height: 40vh;
+    height: 100%;
     margin: auto;
     @media (max-width: 766px) {
         height: 100%;
@@ -59,7 +59,7 @@
 
     #glossary-term-image-wrapper {
         img {
-            margin: 0 auto;
+            margin: 2em auto;
         }
     }
 }
@@ -81,7 +81,7 @@
     color: black;
     margin: .5em;
     font-size: 2.5em;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid black;
     @media (max-width: 766px) {
         font-size: 1.75em;
     }

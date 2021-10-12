@@ -1,14 +1,23 @@
 import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
-import {returnFilteredTerms} from "./glossaryhelper";
+import {returnFilteredTerms, handleTermImage, handleMissingTermImage, highlightCurrentFilter} from "./glossaryhelper";
 import placeholderImage from "../../assets/generalAssets/img_placeholder.png";
 import './glossary.scss';
 
 export default function GlossaryList() {
 	const context = useContext(UniversalContext);
-	const termImage = context.glossaryTermImg ? context.glossaryTermImg : placeholderImage;
+	let termImage;
 	let glossaryArray = [];
+
+	if (context.glossaryTermImg !== undefined) {
+		termImage = context.glossaryTermImg;
+		handleTermImage();
+	}
+	else {
+		termImage = placeholderImage;
+		handleMissingTermImage();
+	}
 
 	if (context.glossaryTerms !== undefined) {
 		glossaryArray = context.glossaryTerms;
@@ -16,16 +25,6 @@ export default function GlossaryList() {
 
 	if (context.glossaryTermImg !== undefined) {
 		glossaryArray = context.glossaryTerms;
-	}
-
-	// Updates the css color for the currently selected filter, and returns all other filters to white.
-	const highlightCurrentFilter = (currentSelection) => {
-		const alphabetFilters = document.querySelectorAll(".glossary-filter-button");
-		alphabetFilters.forEach(alphabetFilter => {
-			alphabetFilter.id === currentSelection
-				? alphabetFilter.setAttribute('style', 'color: #7000FF; border-bottom: 2px solid #7000FF;')
-				: alphabetFilter.setAttribute('style', 'color: black; border-bottom: 2px solid black;');
-		});
 	}
 
 	// Updates displayed terms based on selected filter
