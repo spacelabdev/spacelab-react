@@ -1,7 +1,7 @@
 import React from 'react';
 import Planets_Circle from '../../assets/aboutAssets/planets_circle.svg'
 import Dot from '../../assets/aboutAssets/dot.svg'
-
+import Line from '../../assets/aboutAssets/line.png'
 /**
  * @returns {JSX.Element}
  * @constructor
@@ -16,6 +16,7 @@ export default function History(){
                 <div className="history">
                 <div className="history-dot">
                     <img src={Dot} alt={"Space"}/>
+                    <img src={Line} alt={"Space"}/>
                 </div>
                 <div className="about-history-content">  
                     <h3>spacelab 2021.00.00</h3>                
@@ -29,6 +30,8 @@ export default function History(){
                 <div className="about-history-content"> 
                     <div className="history-dot">
                         <img src={Dot} alt={"Space"}/>
+                        <img src={Line} alt={"Space"}/>
+
                      </div>  
                     <h3>spacelab 2021.00.00</h3>               
                     <p>
@@ -41,6 +44,8 @@ export default function History(){
                 <div className="about-history-content"> 
                     <div className="history-dot">
                         <img src={Dot} alt={"Space"}/>
+                        <img src={Line} alt={"Space"}/>
+
                     </div> 
                     <h3>spacelab 2021.00.00</h3>                
                     <p>
