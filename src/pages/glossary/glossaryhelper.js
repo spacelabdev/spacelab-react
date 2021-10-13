@@ -15,6 +15,40 @@ export const returnFilteredTerms = (beginningAlphabeticIndex, endingAlphabeticIn
 };
 
 /**
+ * Updates CSS for term images where an actual image is not present in the provided term array and thus the default
+ * placeholder image is used.
+ */
+export const handleMissingTermImage = () => {
+	const termImgs = document.querySelectorAll("#glossary-term-image");
+	termImgs.forEach(termImg => {
+		termImg.setAttribute('style', 'width: 300px; padding: 4.5em; background: white; border: 1px solid black;');
+	});
+};
+
+/**
+ * Updates CSS for term images where a unique image is present in the provided term array.
+ */
+export const handleTermImage = () => {
+	const termImgs = document.querySelectorAll("#glossary-term-image");
+	termImgs.forEach(termImg => {
+		termImg.setAttribute('style', 'width: 600px; padding: 0; border: none;');
+	});
+};
+
+/**
+ * Updates the CSS color for the currently selected filter, and returns all other filters to black.
+ * @param currentSelection
+ */
+export const highlightCurrentFilter = (currentSelection) => {
+	const alphabetFilters = document.querySelectorAll(".glossary-filter-button");
+	alphabetFilters.forEach(alphabetFilter => {
+		alphabetFilter.id === currentSelection
+			? alphabetFilter.setAttribute('style', 'color: #7000FF; border-bottom: 2px solid #7000FF;')
+			: alphabetFilter.setAttribute('style', 'color: black; border-bottom: 2px solid black;');
+	});
+};
+
+/**
  * Dictionary of Glossary terms organized by key value pairs where the key is the term and the value is the definition.
  * @type {{"Black Body": string, "Stellar Limb": string, "Stellar Variability": string,
  * "Hydrogen-Helium Envelope": string, Eccentricity: string, "Limb Darkening": string, "Secondary Eclipse": string,
@@ -148,7 +182,8 @@ export const glossaryTermsArray = [
 		"The eccentricity of an exoplanet or orbiting object is a measure of how much the orbit of an "
 		+ "orbiting body deviates from a circle. An eccentricity of 0 would be a perfectly circular orbit, an "
 		+ "eccentricity of 1 is a parabolic orbit, anything in between is an elliptical orbit.",
-		5
+		5,
+		'https://res.cloudinary.com/spacelabdev/image/upload/v1634069686/Glossary%20Images/planetary_orbits_glxqeb.jpg'
 	],
 	[
 		"Eclipsing Binaries",
