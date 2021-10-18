@@ -2,6 +2,53 @@
     --content-container: 1189px;
 }
 
+// Add History section scss
+.history-section{
+    font-family: "Poppins";
+
+    .about-history-header{
+        color: #FFFFFF;
+        font-size: 2rem;
+        margin: 0 auto;
+        padding: 2rem;
+        text-transform: uppercase;
+      }
+      
+         
+      .history-container {
+          display: flex;
+          height: 100%;
+          max-width: var(--content-container);
+          //padding: 3rem 2rem;
+          margin: auto;
+          font-family: "Poppins";
+          flex-wrap: wrap;
+          flex-flow: row wrap;
+
+          .history {
+              display: flex;
+              flex-direction: column;
+              flex-wrap: wrap;
+
+              .about-history-content {
+                  display: flex;
+                  flex-direction: row;
+
+                  .history-dot {
+                      .history-line {
+                          height: 50%;
+                      }
+                  }
+
+                  h3, p{
+                      color: #FFFFFF;
+                  }
+              }
+          }
+      }
+
+}
+
 #about-mission-statement-container {
     max-width: var(--content-container);
     width: 100%;
