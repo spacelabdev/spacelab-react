@@ -7,7 +7,7 @@ import Line from '../../assets/aboutAssets/line.png'
  * @constructor
  */
 
-export default function History(){
+export default function HistorySection(){
     return (
         <section className="history-section">
             <h2 className="about-history-header"> <span className="bold-history">History</span></h2>

@@ -4,7 +4,7 @@ import HeroImage from "../../components/heroImage/heroImage";
 import MissionStatement  from "./missionStatementSection";
 import Team from "./TeamSection";
 import ContactForm from "../../components/contactForm/contactForm";
-import History from "./history";
+import HistorySection from "./historySection";
 import Footer from "../../components/footer/footer";
 
 /**
@@ -15,7 +15,7 @@ export default function About() {
 	return (
 		<>
 			<HeroImage/>
-			<History/>
+			<HistorySection/>
 			<MissionStatement/>
 			<Team/>
 			<ContactForm/>
