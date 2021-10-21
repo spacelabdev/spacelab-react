@@ -36,6 +36,9 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
 							Blog
 						</Link>
+						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
+							Contact
+						</Link>
 					</div>
 				</div>
 			</nav>
