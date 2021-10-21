@@ -5,6 +5,7 @@ import Blog from "../pages/blog/blog";
 import Discovery from "../pages/discovery/discovery";
 import Glossary from "../pages/glossary/glossary";
 import Home from "../pages/home/home";
+import Project from "../pages/project/project";
 
 /**
  * @returns {JSX.Element}
@@ -19,6 +20,7 @@ export default function Main() {
 			<Route exact path="/discovery" component={Discovery}/>
 			<Route exact path="/glossary" component={Glossary}/>
 			<Route exact path="/home" component={Home}/>
+			<Route exact path="/project" component={Project}/>
 			<Redirect to='/home'/>
 		</Switch>
 	);

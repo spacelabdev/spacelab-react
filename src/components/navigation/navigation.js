@@ -30,6 +30,9 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
 							Glossary
 						</Link>
+						<Link className={'nav-link'} to={'/project'} style={{textDecoration: 'none'}}>
+							Projects
+						</Link>
 						<Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
 							Blog
 						</Link>
