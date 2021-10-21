@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import {useForm, ValidationError} from '@formspree/react'
 import "./contactForm.scss"
 
@@ -11,7 +12,13 @@ export default function ContactForm() {
 
 	const [state, handleSubmit] = useForm("mrgrrlkv")
 	if (state.succeeded) {
-		return <p>Thank you for getting in touch!</p>
+		return <div>
+			<p>Thank you! Your submission has been received! We'll be in touch with you shortly.</p>
+			<div className={"contact-button-container"}>
+			<button className="submit-button"><Link to="/">
+				<h6>Home Page</h6></Link></button>
+			</div>
+		</div>
 	}
 
 	return (
