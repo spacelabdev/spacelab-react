@@ -2,7 +2,7 @@
     --content-container: 1189px;
 }
 
-// Add History section scss
+// Add History Section SCSS
 .history-section{
     font-family: "Poppins";
 
@@ -13,8 +13,8 @@
         padding: 2rem;
         text-transform: uppercase;
       }
-      
-         
+
+          
       .history-container{
           display: flex;
           height: 100%;
@@ -31,6 +31,11 @@
            display: flex;
            flex-direction: column; 
            flex-wrap: wrap;
+       }
+
+       .about-mission-content{
+           display: flex;
+           flex-direction: row; 
        }
 
      
