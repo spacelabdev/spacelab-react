@@ -6,7 +6,7 @@ export const teamImages = [
 	{
 		image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131440/team_pics/matt_ksbosg.jpg",
 		fullName: "Matt Paterson",
-		title: "Data Science Project Manager| Machine Learning Engineer"
+		title: "Data Science | Project Manager | Machine Learning Engineer"
 	},
 	{
 		image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131393/team_pics/anna_kc4hqb.jpg",

@@ -1,6 +1,7 @@
 
 
 import React from "react";
+import Exoplanetarium from "../../assets/projectsAssets/exoplanetarium.png"
 
 export default function ProjectsIntro (){
     return(
@@ -8,6 +9,10 @@ export default function ProjectsIntro (){
             {/*TODO: These lines should be wrapped at 120 characters per our style guide. Code should not continue
             forever to the right of the screen requiring the next dev who gets into your file to scroll right to
             figure out what is going on.*/}
+            <div className={"projects-exoplanetarium-image"}>
+                <img className={"exoplanetarium-image"} src={Exoplanetarium} alt={""}/>
+
+            </div>
             <p>Spacelab is a project with the goal to explore NASA/CallTech data from the TESS, Kepler and K2 Missions using various degrees of Machine Learning and Deep Natural Networks in the pursuit of Earth-Like planets around nearby stars in the Milky Way Galaxy.</p>
             <br/>
 
