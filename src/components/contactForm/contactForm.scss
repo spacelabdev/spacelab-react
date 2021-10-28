@@ -108,6 +108,25 @@
                 color: white;
                 background-color: #7000ff;
             }
+     
         }
     }
+}
+.submit-button-back_home {
+    width: 50%;
+    height: 67px;
+    border-radius: 10px;
+    border: 2px solid #7000ff;
+    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    background-color: #1c1a22;
+    color: #7000ff;
+    margin: 0 auto;
+}
+.submit-button-back_home:hover {
+    color: white;
+    background-color: #7000ff;
+}
+.party_popper-image {
+    position: relative;
 }

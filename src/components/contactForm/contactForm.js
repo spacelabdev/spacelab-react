@@ -2,6 +2,7 @@ import React from "react";
 import {Link} from 'react-router-dom';
 import {useForm, ValidationError} from '@formspree/react'
 import "./contactForm.scss"
+import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png"
 
 /**
  * Creates Contact form
@@ -13,9 +14,10 @@ export default function ContactForm() {
 	const [state, handleSubmit] = useForm("mrgrrlkv")
 	if (state.succeeded) {
 		return <div>
+			<img className={"party_popper-image"} src={PartyPopper} alt={""}/>
 			<p>Thank you! Your submission has been received! We'll be in touch with you shortly.</p>
 			<div className={"contact-button-container"}>
-			<button className="submit-button"><Link to="/">
+			<button className="submit-button-back_home"><Link to="/">
 				<h6>Home Page</h6></Link></button>
 			</div>
 		</div>
