@@ -1,9 +1,14 @@
 import React from "react";
 import './contact.scss';
 import HeroImage from "../../components/heroImage/heroImage";
-import Footer from "../../components/footer/footer";
 import ContactForm from "../../components/contactForm/contactForm";
+import Footer from "../../components/footer/footer";
 
+/**
+ * Renders Contact form page with hero image, nav, and footer
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Contact(){
     return (
         <>

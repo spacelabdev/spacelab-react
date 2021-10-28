@@ -10,10 +10,12 @@ import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png"
  * @constructor
  */
 export default function ContactForm() {
-
 	const [state, handleSubmit] = useForm("mrgrrlkv")
 	if (state.succeeded) {
 		return <div>
+
+			{/*TODO: "CONTACT US" title is missing after submission. Needs to be added.*/}
+
 			<img className={"party_popper-image"} src={PartyPopper} alt={""}/>
 			<p>Thank you! Your submission has been received! We'll be in touch with you shortly.</p>
 			<div className={"contact-button-container"}>
