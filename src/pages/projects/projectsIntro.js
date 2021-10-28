@@ -1,11 +1,8 @@
-// TODO: Rename this file. Any file that is name "Helper" should contain functions or data that support the logic of
-// some other file (See Glossary Helper). It would make more sense to call this projectsIntro.js or something like that.
+
 
 import React from "react";
 
-// TODO: The name of the exported function should match the name of the file. This function name will need to be updated
-// to match whatever you decide to change the file name to.
-export default function ProjectStatement (){
+export default function ProjectsIntro (){
     return(
         <div>
             {/*TODO: These lines should be wrapped at 120 characters per our style guide. Code should not continue

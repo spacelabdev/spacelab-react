@@ -5,7 +5,7 @@ import Blog from "../pages/blog/blog";
 import Discovery from "../pages/discovery/discovery";
 import Glossary from "../pages/glossary/glossary";
 import Home from "../pages/home/home";
-import Project from "../pages/project/project";
+import Projects from "../pages/projects/projects";
 import Contact from "../pages/contact/contact";
 
 /**
@@ -21,7 +21,7 @@ export default function Main() {
 			<Route exact path="/discovery" component={Discovery}/>
 			<Route exact path="/glossary" component={Glossary}/>
 			<Route exact path="/home" component={Home}/>
-			<Route exact path="/project" component={Project}/>
+			<Route exact path="/projects" component={Projects}/>
 			<Route exact path="/contact" component={Contact}/>
 			<Redirect to='/home'/>
 		</Switch>

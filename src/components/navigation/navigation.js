@@ -9,9 +9,9 @@ import Dropdown from "../dropdown/dropdown";
 export default function Navigation() {
 	const context = useContext(UniversalContext);
 
-	const [click, setClick] = useState{false};
+	// const [click, setClick] = useState{false};
 
-	const handleClick = () => setClick{!click};
+	// const handleClick = () => setClick{!click};
 
 	return (
 		<>
@@ -29,8 +29,8 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 							About
 						</Link>
-						<Link className={'nav-link'} to={'/project'} style={{textDecoration: 'none'}}>
-							Project
+						<Link className={'nav-link'} to={'/projects'} style={{textDecoration: 'none'}}>
+							Projects
 						</Link>
 						<Link className={'nav-link'} to={'/discovery'} style={{textDecoration: 'none'}}>
 							Discovery
@@ -44,9 +44,9 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
 							Contact
 						</Link>
-						<div className='menu-icon' onClick={handleClick}>
+						{/* <div className='menu-icon' onClick={handleClick}>
 							<i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
-						</div>
+						</div> */}
 					</div>
 				</div>
 			</nav>
