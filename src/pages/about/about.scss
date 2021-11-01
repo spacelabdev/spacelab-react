@@ -4,65 +4,71 @@
 
 // Add History Section SCSS
 .history-section {
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 10em;
 
   .about-history-header {
     color: #FFFFFF;
     font-size: 2rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 5rem;
     text-transform: uppercase;
   }
 
   .history-container {
     display: flex;
-    flex-direction: column;
-    justify-content: left;
-    height: 100%;
     max-width: var(--content-container);
-    //padding: 3rem 2rem;
     margin: auto;
-    font-family: "Poppins";
-    flex-wrap: wrap;
     flex-flow: row wrap;
 
-    .about-history-image {
-      display: flex;
-      justify-content: left;
-
+    #planet-image-container {
+      width: 20%;
     }
 
     .history {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      flex-wrap: wrap;
+      width: 80%;
     }
 
-    .about-history-warper {
+    .about-history-wrapper {
       display: flex;
       flex-direction: column;
-    }
-
-    .about-mission-content {
-      display: flex;
-      flex-direction: row;
-
     }
 
     .history-dot {
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      margin-top: -13px;
+      img {
+        width: 20px;
+      }
+      h3 {
+        margin-bottom: 0;
+        padding-left: 23%;
+        color: #FFFFFF;
+      }
     }
 
-    .line {
-      width: 4px;
-      height: 150px;
-    }
-
-    h3, p {
-      color: #FFFFFF;
+    .about-history-content {
+      display: flex;
+      flex-direction: row;
+      .line {
+        margin-right: 10%;
+        margin-left: 1%;
+        margin-top: -12px;
+        img {
+          height: 199px;
+          //height: 100%;
+          width: 2px;
+        }
+      }
+      p {
+        color: #FFFFFF;
+        text-align: left;
+        padding: 1em 0 3em 0;
+        width: 55%;
+      }
     }
   }
 }
@@ -71,14 +77,11 @@
     max-width: var(--content-container);
     width: 100%;
     padding: 0 1rem;
-    margin: 0 auto;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 5% auto;
 
     .inner-section-two {
       flex-direction: row;
@@ -149,14 +152,11 @@
   #about-team-container {
     max-width: var(--content-container);
     width: 100%;
-    margin: 0 auto;
-
     font-family: "Lato", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 15%;
+    margin: 10px auto 15%;
 
     #main-header,
     #contributers-header {
