@@ -20,7 +20,7 @@ export default function HistorySection() {
                             <h3>spacelab 2021.00.00</h3>
                         </div>
                         <div className="about-history-content">
-                            <img src={Line} alt={"Space"} />
+                            <img className={"line"} src={Line} alt={"Space"} />
                             <p>
                                 Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing
                                 Elit Adipiscing Sed Risus Neque Faucibus Tempus Et
@@ -35,7 +35,7 @@ export default function HistorySection() {
                             <h3>spacelab 2021.00.00</h3>
                         </div>
                         <div className="about-history-content">
-                            <img src={Line} alt={"Space"} />
+                            <img className={"line"} src={Line} alt={"Space"} />
                             <p>
                                 Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing
                                 Elit Adipiscing Sed Risus Neque Faucibus Tempus Et
@@ -50,7 +50,7 @@ export default function HistorySection() {
                             <h3>spacelab 2021.00.00</h3>
                         </div>
                         <div className="about-history-content">
-                            <img src={Line} alt={"Space"} />
+                            <img className={"line"} src={Line} alt={"Space"} />
                             <p>
                                 Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing
                                 Elit Adipiscing Sed Risus Neque Faucibus Tempus Et
