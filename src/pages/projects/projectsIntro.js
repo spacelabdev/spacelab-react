@@ -11,7 +11,6 @@ export default function ProjectsIntro() {
 		<div className={"projects-main-container"}>
 			<div className={"projects-exoplanetarium-image"}>
 				<img className={"exoplanetarium-image"} src={Exoplanetarium} alt={""}/>
-
 			</div>
 			<p className={"exoplanetarium-paragraphs"}>
 				Spacelab is a project with the goal to explore NASA/CallTech data from the TESS, Kepler and K2 Missions
@@ -25,5 +24,5 @@ export default function ProjectsIntro() {
 				false-positives by the astronomical community.
 			</p>
 		</div>
-	)
+	);
 }
