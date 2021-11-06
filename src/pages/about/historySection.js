@@ -1,5 +1,5 @@
 import React from 'react';
-import Planets_Circle from '../../assets/aboutAssets/planet_circle.svg'
+import Planets_Circle from '../../assets/aboutAssets/planet_circle.png'
 import Dot from '../../assets/aboutAssets/dot.svg'
 import Line from '../../assets/aboutAssets/line.svg'
 
@@ -57,7 +57,7 @@ export default function HistorySection() {
 						</div>
 						<div className="about-history-content">
 							<div className={"line"}>
-								<img src={Line} alt={"Space"}/>
+								<img id="last-line"  src={Line} alt={"Space"}/>
 							</div>
 							<p>
 								Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing
