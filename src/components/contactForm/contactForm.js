@@ -12,7 +12,7 @@ import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png"
 export default function ContactForm() {
 	const [state, handleSubmit] = useForm("mrgrrlkv")
 	if (state.succeeded) {
-		return <div>
+		return <div className={"submit-form-container"}>
 
 			{/*TODO: "CONTACT US" title is missing after submission. Needs to be added.*/}
 			<h2>CONTACT US</h2>
