@@ -1,2 +1,44 @@
-// TODO: rename file to projects.scss and add necessary styling for page. Should be built mobile first
-//  with media queries for tablet and desktop.
+.projects-main-container {
+    max-width: 80vw;
+
+    .projects-exoplanetarium-image {
+        width: 100%;
+        min-width: 690px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 8%;
+        @media (min-width: 767px) and (max-width: 1023px) {
+            min-width: 600px;
+        }
+        @media (max-width: 766px) {
+            flex-direction: column;
+            min-width: 0;
+        }
+    }
+
+    .exoplanetarium-image {
+        // width: 100%;
+        // min-width: 320px;
+        // height: 67px;
+        // margin-top: 5%;
+        // margin-bottom: 0;
+        // font-size: 24px;
+        @media (min-width: 767px) and (max-width: 1023px) {
+            min-width: 280px;
+        }
+        @media (max-width: 766px) {
+            min-width: 0;
+        }
+    }
+    // .exoplanetarium-paragraphs {
+    //     width: 100%;
+        
+    //     @media (min-width: 767px) and (max-width: 1023px) {
+    //         min-width: 280px;
+    //     }
+    //     @media (max-width: 766px) {
+    //         min-width: 0;
+    //     }
+    // }
+}
