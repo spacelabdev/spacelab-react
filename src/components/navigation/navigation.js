@@ -1,17 +1,17 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import {Link} from 'react-router-dom';
 import Logo from "../../assets/spacelab.svg";
-import './navigation.scss'
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
-import Dropdown from "../dropdown/dropdown";
+import './navigation.scss'
 
+/**
+ * Renders Navigation Bar
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Navigation() {
 	const context = useContext(UniversalContext);
-
-	// const [click, setClick] = useState{false};
-
-	// const handleClick = () => setClick{!click};
 
 	return (
 		<>
@@ -44,9 +44,6 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
 							Contact
 						</Link>
-						{/* <div className='menu-icon' onClick={handleClick}>
-							<i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
-						</div> */}
 					</div>
 				</div>
 			</nav>

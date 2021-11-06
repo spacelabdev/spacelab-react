@@ -1,5 +1,4 @@
 import React from "react";
-import './contact.scss';
 import HeroImage from "../../components/heroImage/heroImage";
 import ContactForm from "../../components/contactForm/contactForm";
 import Footer from "../../components/footer/footer";
@@ -12,9 +11,9 @@ import Footer from "../../components/footer/footer";
 export default function Contact(){
     return (
         <>
-        <HeroImage/>
-        <ContactForm/>
-        <Footer/>
+            <HeroImage/>
+            <ContactForm/>
+            <Footer/>
         </>
-    )
+    );
 }
