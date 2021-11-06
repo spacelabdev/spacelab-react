@@ -1,0 +1,71 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/carousel";
+
+.carousel-indicators {
+  margin-bottom: 6rem;
+
+  button {
+    background-color: #99a1a7;
+  }
+}
+
+.carousel-inner {
+  margin: 0 auto !important;
+  width: 300px;
+  padding-bottom: 115px;
+
+  .blog-carousel-image-wrapper {
+    height: 250px;
+    width: 300px;
+  }
+
+  .d-block {
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-caption {
+    bottom: -8.5em;
+    right: 0;
+    left: 0;
+
+    p {
+      color: #99a1a7;
+      font-size: 1.25em;
+      height: 100px;
+      width: 100%;
+
+      @media (min-width: 767px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  @media (min-width: 767px) and (max-width: 1023px) {
+    width: 650px;
+
+    .blog-carousel-image-wrapper {
+      height: 400px;
+      width: 650px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 800px;
+
+    .blog-carousel-image-wrapper {
+      height: 500px;
+      width: 800px;
+    }
+  }
+}
+
+.carousel-control-prev {
+  display: none;
+}
+
+.carousel-control-next {
+  display: none;
+}

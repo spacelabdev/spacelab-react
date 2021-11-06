@@ -1,8 +1,8 @@
 import React from "react";
 import './blog.scss';
 import HeroImage from "../../components/heroImage/heroImage";
+import BlogCarousel from "./blogCarousel";
 import Footer from "../../components/footer/footer";
-import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 
 /**
  * @returns {JSX.Element}
@@ -12,7 +12,9 @@ export default function Blog() {
 	return (
 		<>
 			<HeroImage/>
-			<UnderConstruction/>
+			<div id={"blog-gallery"}>
+				<BlogCarousel/>
+			</div>
 			<Footer/>
 		</>
 	);
