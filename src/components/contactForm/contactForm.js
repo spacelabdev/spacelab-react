@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import {useForm, ValidationError} from '@formspree/react'
-import "./contactForm.scss"
 import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png"
+import "./contactForm.scss"
 
 /**
  * Creates Contact form
@@ -12,17 +12,18 @@ import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png"
 export default function ContactForm() {
 	const [state, handleSubmit] = useForm("mrgrrlkv")
 	if (state.succeeded) {
-		return <div className={"submit-form-container"}>
-
-			{/*TODO: "CONTACT US" title is missing after submission. Needs to be added.*/}
-			<h2>CONTACT US</h2>
-			<img className={"party_popper-image"} src={PartyPopper} alt={""}/>
-			<p>Thank you! Your submission has been received! We'll be in touch with you shortly.</p>
-			<div className={"contact-button-container"}>
-			<button className="submit-button-back_home"><Link to="/">
-				<h6>Home Page</h6></Link></button>
+		return (
+			<div className={"submit-form-container"}>
+				<h2>CONTACT US</h2>
+				<img className={"party_popper-image"} src={PartyPopper} alt={""}/>
+				<p>Thank you! Your submission has been received! We'll be in touch with you shortly.</p>
+				<div className={"contact-button-container"}>
+					<button className="submit-button-back_home">
+						<Link to="/">Home Page</Link>
+					</button>
+				</div>
 			</div>
-		</div>
+		);
 	}
 
 	return (

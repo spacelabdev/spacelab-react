@@ -6,6 +6,7 @@ import Footer from "../../components/footer/footer";
 import './projects.scss';
 
 /**
+ * Renders Projects Page
  * @returns {JSX.Element}
  * @constructor
  */
