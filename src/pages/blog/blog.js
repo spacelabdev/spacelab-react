@@ -12,7 +12,8 @@ export default function Blog() {
 	return (
 		<>
 			<HeroImage/>
-			<div id={"blog-gallery"}>
+			<div id={"blog-container"}>
+				<div id={"blog-header"}>Featured Blogs</div>
 				<BlogCarousel/>
 			</div>
 			<Footer/>
