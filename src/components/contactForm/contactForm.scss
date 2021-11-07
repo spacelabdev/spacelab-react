@@ -2,21 +2,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+    @media (min-width: 767px) and (max-width: 1023px) {
+        max-width: 600px;
+    }
 
     .contact-form-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
         background-color: #1c1a22;
         color: white;
         width: 100%;
         text-align: left;
-        font-size: 30px;
+        font-size: 20px;
         margin-bottom: 10%;
+        @media (max-width: 766px) {
+            align-items: center;
+        }
 
         .contact-form-title {
-            width: 50%;
             text-align: left;
             text-transform: uppercase;
             font-size: 39px;
@@ -24,10 +30,11 @@
             margin-bottom: 2rem;
             @media (max-width: 766px) {
                 width: 85%;
+                font-size: 35px;
             }
 
             #title-text {
-                margin-top: 2%;
+                margin-top: 10%;
                 font-family: "Poppins", sans-serif;
                 font-weight: bold;
                 color: white;
@@ -36,7 +43,7 @@
         }
 
         #contact-form-field-container {
-            max-width: 80vw;
+            max-width: 100%;
 
             .first-input-row {
                 width: 100%;
@@ -44,15 +51,18 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                margin-bottom: 8%;
+                margin-bottom: 2%;
                 @media (min-width: 767px) and (max-width: 1023px) {
                     min-width: 600px;
+                    margin-top: .5em;
                 }
                 @media (max-width: 766px) {
                     flex-direction: column;
+                    margin-top: -.5em;
                     min-width: 0;
                 }
             }
+
             .contact-form-label {
                 font-size: 24px;
             }
@@ -60,9 +70,7 @@
             .small-input {
                 width: 100%;
                 min-width: 320px;
-                height: 67px;
-                margin-top: 5%;
-                margin-bottom: 0;
+                height: 45px;
                 font-size: 24px;
                 @media (min-width: 767px) and (max-width: 1023px) {
                     min-width: 280px;
@@ -74,24 +82,23 @@
 
             .large-input {
                 width: 100%;
-                height: 67px;
-                margin-top: 2%;
-                margin-bottom: 5%;
-                font-size: 36px;
+                height: 45px;
+                margin-bottom: 2%;
+                font-size: 25px;
             }
 
             .message-input {
                 width: 100%;
                 height: 250px;
                 margin-bottom: 3%;
-                margin-top: 3%;
-                font-size: 36px;
+                font-size: 20px;
             }
 
             .contact-button-container {
                 display: flex;
                 justify-content: space-around;
             }
+
             .submit-button {
                 width: 50%;
                 height: 67px;
@@ -107,7 +114,60 @@
             .submit-button:hover {
                 color: white;
                 background-color: #7000ff;
+                cursor: pointer;
             }
         }
+    }
+}
+
+.submit-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 2em;
+    @media (min-width: 767px) and (max-width: 1023px) {
+        min-width: 280px;
+    }
+    @media (max-width: 766px) {
+        min-width: 0;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    .party_popper-image {
+        position: relative;
+        padding-bottom: 5em;
+        @media (max-width: 766px) {
+            padding-bottom: 2em;
+        }
+    }
+
+    p {
+        max-width: 80%;
+    }
+
+    .submit-button-back_home {
+        border-radius: 10px;
+        border: 2px solid #7000ff;
+        font-size: 36px;
+        font-family: "Poppins", sans-serif;
+        background-color: #1c1a22;
+        margin: 1em auto;
+
+        a {
+            text-decoration: none;
+            padding: 0 .5em;
+            color: #7000ff;
+        }
+    }
+
+    .submit-button-back_home:hover {
+        a {
+            color: white;
+        }
+        background-color: #7000ff;
     }
 }
