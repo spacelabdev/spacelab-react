@@ -20,6 +20,7 @@ function App() {
 	const [glossaryTermImg, setGlossaryTermImg] = useState(glossaryTermsArray[0][3]);
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
+	/** Medium Blog RSS Feed State */
 	const [blogArray, setBlogArray] = useState([]);
 
 	// Get RSS feed from Medium for Blog page
