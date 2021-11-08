@@ -1,7 +1,7 @@
 import React from "react";
-import "./home.scss";
-import placeHolder from "../../assets/generalAssets/img_placeholder.png";
-import NavigationButton from "../../components/navigationButton/navigationButton";
+import "../home.scss";
+import placeHolder from "../../../assets/generalAssets/img_placeholder.png";
+import NavigationButton from "../../../components/navigationButton/navigationButton";
 /**
  * @returns {JSX.Element}
  * @constructor
