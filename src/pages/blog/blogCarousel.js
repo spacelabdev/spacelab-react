@@ -3,6 +3,11 @@ import {UniversalContext} from "../../App";
 import {Carousel} from "react-bootstrap";
 import "./blog.scss";
 
+/**
+ * Renders blog carousel items
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function BlogCarousel() {
 	const context = useContext(UniversalContext);
 	const blogs = context.blogArray.items;

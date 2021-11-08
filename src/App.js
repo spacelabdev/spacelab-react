@@ -2,7 +2,7 @@ import {createContext, useEffect, useState} from "react";
 import RSSParser from "rss-parser";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
-import Main from "./components/main";
+import Main from "./main";
 
 /**
  * @returns {JSX.Element}

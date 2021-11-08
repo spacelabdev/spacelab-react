@@ -1,0 +1,33 @@
+#blog-archive-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5em 3em;
+  margin: 0 auto;
+  @media (min-width: 1024px) {
+    max-width: 80%;
+  }
+
+  .blog-tile {
+    min-height: 250px;
+    margin: 1em auto;
+    text-decoration: none;
+    background-color: #9aa3aa;
+    border-radius: 10px;
+    box-shadow: 25px 25px 13px -20px rgba(0,0,0,0.95);
+
+    .blog-tile-image-wrapper {
+      padding-top: .5em;
+
+      img {
+        width: 280px;
+        height: 180px;
+        padding: 5px;
+      }
+
+      .blog-title {
+        padding-top: .5em;
+        color: black;
+      }
+    }
+  }
+}

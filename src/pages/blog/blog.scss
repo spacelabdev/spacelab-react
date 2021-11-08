@@ -4,7 +4,7 @@
 @import "~bootstrap/scss/carousel";
 
 #blog-container {
-  padding: 5em 0;
+  padding-top: 5em;
 
   #blog-header {
     font-size: 3em;
@@ -103,4 +103,45 @@
       display: none;
     }
   }
+
+  //.archives-link {
+  //  font-size: 0.875em;
+  //  padding: 10px;
+  //  color: #7000ff;
+  //  letter-spacing: 2px;
+  //  border-radius: 3px;
+  //  border: 2px solid #7000ff;
+  //  margin: 3rem auto;
+  //}
+  //
+  //.archives-link:hover {
+  //  color: white;
+  //  background: #7000ff;
+  //}
+
+
+
+  .archives-button {
+    border-radius: 10px;
+    border: 2px solid #7000ff;
+    font-size: 36px;
+    font-family: "Poppins", sans-serif;
+    background-color: #1c1a22;
+    margin: 1em auto;
+
+    a {
+      text-decoration: none;
+      padding: 0 .5em;
+      color: #7000ff;
+    }
+  }
+
+  .archives-button:hover {
+    a {
+      color: white;
+    }
+    background-color: #7000ff;
+  }
+
+
 }
