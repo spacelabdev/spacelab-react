@@ -1,7 +1,8 @@
 import {createContext, useEffect, useState} from "react";
+import RSSParser from "rss-parser";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
-import Main from "./components/main";
+import Main from "./main";
 
 /**
  * @returns {JSX.Element}
@@ -19,6 +20,20 @@ function App() {
 	const [glossaryTermImg, setGlossaryTermImg] = useState(glossaryTermsArray[0][3]);
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
+	/** Medium Blog RSS Feed State */
+	const [blogArray, setBlogArray] = useState([]);
+
+	// Get RSS feed from Medium for Blog page
+	useEffect(() => {
+		const parser = new RSSParser();
+		const fetchPosts = async () => {
+			const proxyUrl = 'https://spacelab-cors-anywhere.herokuapp.com/';
+			const url = `${proxyUrl}https://medium.com/feed/@spacelabdev/`;
+			const feed = await parser.parseURL(url);
+			setBlogArray(feed);
+		}
+		fetchPosts();
+	}, []);
 
 	// Set initial state for glossaryTerms on app load
 	useEffect(() => {
@@ -45,7 +60,8 @@ function App() {
 						currentGlossaryTerm,
 						setCurrentGlossaryTerm,
 						pageTitle,
-						setPageTitle
+						setPageTitle,
+						blogArray
 					}
 				}>
 					<Main/>
