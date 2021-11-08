@@ -103,45 +103,30 @@
       display: none;
     }
   }
+}
 
-  //.archives-link {
-  //  font-size: 0.875em;
-  //  padding: 10px;
-  //  color: #7000ff;
-  //  letter-spacing: 2px;
-  //  border-radius: 3px;
-  //  border: 2px solid #7000ff;
-  //  margin: 3rem auto;
-  //}
-  //
-  //.archives-link:hover {
-  //  color: white;
-  //  background: #7000ff;
-  //}
+#archives-button-container {
+  margin-bottom: 2em;
 
-
-
-  .archives-button {
+  #archives-button {
     border-radius: 10px;
     border: 2px solid #7000ff;
-    font-size: 36px;
+    font-size: 18px;
     font-family: "Poppins", sans-serif;
     background-color: #1c1a22;
     margin: 1em auto;
 
-    a {
+    #archives-link {
       text-decoration: none;
       padding: 0 .5em;
       color: #7000ff;
     }
   }
 
-  .archives-button:hover {
-    a {
+  #archives-button:hover {
+    #archives-link {
       color: white;
     }
     background-color: #7000ff;
   }
-
-
 }

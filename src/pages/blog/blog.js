@@ -18,19 +18,11 @@ export default function Blog() {
 				<div id={"blog-header"}>Featured Blogs</div>
 				<BlogCarousel/>
 			</div>
-			{/*<Link*/}
-			{/*	className="archives-link"*/}
-			{/*	to={"/archives"}*/}
-			{/*	style={{ textDecoration: "none" }}*/}
-			{/*>*/}
-			{/*	View Full Blog Archives*/}
-			{/*</Link>*/}
-			<div className={"archives-button-container"}>
-				<button className="archives-button" type="submit">
+			<div id={"archives-button-container"}>
+				<button id="archives-button">
 					<Link
-						className="archives-link"
+						id="archives-link"
 						to={"/archives"}
-						style={{ textDecoration: "none" }}
 					>
 						View Full Blog Archives
 					</Link>
