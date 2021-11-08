@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.scss";
-import ViewMoreButton from "../../components/viewMoreButton/viewMoreButton";
+import NavigationButton from "../../components/navigationButton/navigationButton";
 import placeHolder from "../../assets/generalAssets/img_placeholder.png";
 
 /**
@@ -32,7 +32,7 @@ export default function Explore() {
                         </div>
                     ))}
                 </div>
-                <ViewMoreButton pathName="/discovery" />
+                <NavigationButton pathName="/discovery" />
             </div>
         </section>
     );
