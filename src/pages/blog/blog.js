@@ -2,8 +2,8 @@ import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import BlogCarousel from "./blogCarousel";
 import Footer from "../../components/footer/footer";
+import NavigationButton from "../../components/navigationButton/navigationButton";
 import './blog.scss';
-import {Link} from "react-router-dom";
 
 /**
  * Renders Blog page
@@ -18,16 +18,7 @@ export default function Blog() {
 				<div id={"blog-header"}>Featured Blogs</div>
 				<BlogCarousel/>
 			</div>
-			<div id={"archives-button-container"}>
-				<button id="archives-button">
-					<Link
-						id="archives-link"
-						to={"/archives"}
-					>
-						View Full Blog Archives
-					</Link>
-				</button>
-			</div>
+			<NavigationButton pathName={"/archives"} buttonText={"View Full Blog Archives"}/>
 			<Footer/>
 		</>
 	);

@@ -104,29 +104,3 @@
     }
   }
 }
-
-#archives-button-container {
-  margin-bottom: 2em;
-
-  #archives-button {
-    border-radius: 10px;
-    border: 2px solid #7000ff;
-    font-size: 18px;
-    font-family: "Poppins", sans-serif;
-    background-color: #1c1a22;
-    margin: 1em auto;
-
-    #archives-link {
-      text-decoration: none;
-      padding: 0 .5em;
-      color: #7000ff;
-    }
-  }
-
-  #archives-button:hover {
-    #archives-link {
-      color: white;
-    }
-    background-color: #7000ff;
-  }
-}
