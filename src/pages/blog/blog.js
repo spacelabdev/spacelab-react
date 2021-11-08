@@ -18,7 +18,9 @@ export default function Blog() {
 				<div id={"blog-header"}>Featured Blogs</div>
 				<BlogCarousel/>
 			</div>
-			<NavigationButton pathName={"/archives"} buttonText={"View Full Blog Archives"}/>
+			<div id={"archives-button-container"}>
+				<NavigationButton pathName={"/archives"} buttonText={"View Full Blog Archives"}/>
+			</div>
 			<Footer/>
 		</>
 	);
