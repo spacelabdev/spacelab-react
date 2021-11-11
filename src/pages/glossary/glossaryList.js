@@ -1,25 +1,30 @@
 import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
-import {returnFilteredTerms} from "./glossaryhelper";
+import {returnFilteredTerms, handleTermImage, handleMissingTermImage, highlightCurrentFilter} from "./glossaryhelper";
+import placeholderImage from "../../assets/generalAssets/img_placeholder.png";
 import './glossary.scss';
 
 export default function GlossaryList() {
 	const context = useContext(UniversalContext);
+	let termImage;
 	let glossaryArray = [];
+
+	if (context.glossaryTermImg !== undefined) {
+		termImage = context.glossaryTermImg;
+		handleTermImage();
+	}
+	else {
+		termImage = placeholderImage;
+		handleMissingTermImage();
+	}
 
 	if (context.glossaryTerms !== undefined) {
 		glossaryArray = context.glossaryTerms;
 	}
 
-	// Updates the css color for the currently selected filter, and returns all other filters to white.
-	const highlightCurrentFilter = (currentSelection) => {
-		const alphabetFilters = document.querySelectorAll(".glossary-filter-button");
-		alphabetFilters.forEach(alphabetFilter => {
-			alphabetFilter.id === currentSelection
-				? alphabetFilter.setAttribute('style', 'color: #7000FF; border-bottom: 2px solid #7000FF;')
-				: alphabetFilter.setAttribute('style', 'color: white; border-bottom: 2px solid white;');
-		});
+	if (context.glossaryTermImg !== undefined) {
+		glossaryArray = context.glossaryTerms;
 	}
 
 	// Updates displayed terms based on selected filter
@@ -61,7 +66,12 @@ export default function GlossaryList() {
 			</div>
 			<div id={'glossary-term-wrapper'}>{glossaryTermArray}</div>
 			<div id={'glossary-term-name'}>{context.currentGlossaryTerm}</div>
-			<div id={'glossary-term-def'}>{context.glossaryTermDef}</div>
+			<div id={'glossary-term-def'}>
+				{context.glossaryTermDef}
+				<div id={'glossary-term-image-wrapper'}>
+					<img id={'glossary-term-image'} src={termImage} alt={`${context.currentGlossaryTerm}`}/>
+				</div>
+			</div>
 		</div>
 	);
 };

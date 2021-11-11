@@ -1,7 +1,7 @@
 import React from "react";
-import "./home.scss";
-import placeHolder from "../../assets/img_placeholder.png";
-import ViewMoreButton from "../../components/viewMoreButton/ViewMoreButton";
+import "../home.scss";
+import placeHolder from "../../../assets/generalAssets/img_placeholder.png";
+import NavigationButton from "../../../components/navigationButton/navigationButton";
 /**
  * @returns {JSX.Element}
  * @constructor
@@ -59,7 +59,7 @@ export default function FeaturedArticles() {
                             </div>
                         ))}
                 </div>
-                <ViewMoreButton pathName="/Blog" />
+                <NavigationButton pathName="/Blog" />
             </div>
         </section>
     );

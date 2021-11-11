@@ -1,9 +1,8 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
-import Introduction from "./IntroductionSection";
-import ExoPlanet101 from "./ExoPlanet101Section";
-import FeaturedArticles from "./FeaturedArticlesSection";
-import Explore from "./ExploreSection";
+import Introduction from "./introductionSection";
+import HorizonSection from "./horizonSection";
+import SupportTheCauseSection from "./supportTheCauseSection";
 import Footer from "../../components/footer/footer";
 import "./home.scss";
 
@@ -16,10 +15,9 @@ export default function Home() {
         <>
             <HeroImage />
             <Introduction />
-            <ExoPlanet101 />
-            <FeaturedArticles />
-            <Explore />
+            <HorizonSection/>
+            <SupportTheCauseSection/>
             <Footer />
         </>
     );
-}
+  };
