@@ -52,6 +52,7 @@ export default function Footer() {
                 <div className="right-container">
                     <ul>
                         <li>
+                            {/* TODO: add actual links to the rest of these in the list */}
                             <Link to={"/about"} style={link_style}>
                                 About
                             </Link>
@@ -72,9 +73,7 @@ export default function Footer() {
             <div className="socialmedia-container">
                 <center>
                     <hr />
-                    {/* 
-										TODO: fill in the usernames for the social media links below
-										 */}
+                    {/* TODO: fill in the usernames for the social media links below */}
                     <IconContext.Provider
                         value={{ color: "D9D9D9", size: "2rem" }}
                     >
