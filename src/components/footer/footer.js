@@ -7,12 +7,10 @@ import {
     AiOutlineInstagram,
     AiOutlineTwitter,
 } from "react-icons/ai";
-
 /**
  * @returns {JSX.Element}
  * @constructor
  */
-
 export default function Footer() {
     const [email, setEmail] = useState("");
     const link_style = {
@@ -58,33 +56,37 @@ export default function Footer() {
                                 About
                             </Link>
                         </li>
-                        <li>FAQ</li>
-                        <li>Help</li>
-                        <li>Terms of Use</li>
+                        <li>Projects</li>
+                        <li>Donate</li>
+                        <li>Contact Us</li>
+                        <li>Glossary</li>
                         <li>
                             <Link to={"/blog"} style={link_style}>
                                 Blog
                             </Link>
                         </li>
+                        <li>Terms of Use</li>
                     </ul>
                 </div>
             </div>
             <div className="socialmedia-container">
                 <center>
-                    <hr width="80%" />
+                    <hr />
+                    <IconContext.Provider
+                        value={{ color: "D9D9D9", size: "2rem" }}
+                    >
+                        <a href="https://www.linkedin.com/company/spacelab-space/">
+                            <AiOutlineLinkedin />
+                        </a>
+                        {/* <a href="https://www.instagram.com/{Spacelab}"> */}
+                        <AiOutlineInstagram />
+                        {/* </a> */}
+                        {/* <a href="https://twitter.com/{SpaceLab}"> */}
+                        <AiOutlineTwitter />
+                        {/* </a> */}
+                    </IconContext.Provider>
+                    <h5>@2021 by SpaceLab</h5>
                 </center>
-                <IconContext.Provider value={{ color: "white", size: "2rem" }}>
-                    <a href="https://www.linkedin.com/company/spacelab-space/">
-                        <AiOutlineLinkedin />
-                    </a>
-                    {/* <a href="https://www.instagram.com/{Spacelab}"> */}
-                    <AiOutlineInstagram />
-                    {/* </a> */}
-                    {/* <a href="https://twitter.com/{SpaceLab}"> */}
-                    <AiOutlineTwitter />
-                    {/* </a> */}
-                </IconContext.Provider>
-                <h5>@2021 by SpaceLab</h5>
             </div>
         </section>
     );
