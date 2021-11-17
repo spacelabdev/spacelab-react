@@ -3,7 +3,7 @@ import "./accordion.scss"
 
 export default function accordion() {
   return (
-    <div id={"accordion-container"}>
+    <div className={"accordion-container"}>
       Accordian
     </div>
   )
