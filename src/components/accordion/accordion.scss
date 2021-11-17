@@ -1,6 +1,30 @@
-.accordion-container{
-  color:red;
-  width: 100px;
-  height: 100px;
-  border: 1px solid white;
+.accordion-container {
+    width: 85vw;
+    height: auto;
+    
+
+    &-heading {
+		font-family: "Poppins", sans-serif;
+        font-size: 24px;
+        line-height: 29px;
+		text-transform: uppercase;
+		color: #a0a0aa;
+		height: 4.4rem;
+		// border: 1px solid white;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		
+
+		&-icon{
+			color: #BA68C8;
+		}
+    }
+
+    &-content {
+		color: #7000ff;
+		// border: 1px solid white;
+		border-top: none;
+		height: 100px;
+    }
 }
