@@ -146,7 +146,7 @@ export const contributorImages = [
 //Accordion Test
 
 export const accordionTest = {
-    title: "board of directors",
+    title: "software engineering",
     team: [
         {
             image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131440/team_pics/matt_ksbosg.jpg",
