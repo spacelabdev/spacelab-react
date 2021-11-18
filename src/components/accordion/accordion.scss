@@ -1,30 +1,42 @@
 .accordion-container {
     width: 85vw;
     height: auto;
-    
 
     &-heading {
-		font-family: "Poppins", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 24px;
         line-height: 29px;
-		text-transform: uppercase;
-		color: #a0a0aa;
-		height: 4.4rem;
-		// border: 1px solid white;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		
+        text-transform: uppercase;
+        color: #a0a0aa;
+        height: 4.4rem;
+        // border: 1px solid white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-		&-icon{
-			color: #BA68C8;
+        &-icon {
+            color: #ba68c8;
+            transform: rotate(180deg);
+			transition: transform .3s ease-in-out;
+			cursor: pointer;
+        }
+
+		.icon-flip {
+			transform: rotate(0deg);
 		}
     }
 
     &-content {
-		color: #7000ff;
-		// border: 1px solid white;
-		border-top: none;
-		height: 100px;
+        color: #7000ff;
+        // border: 1px solid white;
+        // border-top: none;
+        height: 0px;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
     }
+    .accordion-open {
+        height: 100px;
+    }
+
+
 }
