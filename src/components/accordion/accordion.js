@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "./accordion.scss";
-import { accordionTest } from "../../pages/about/aboutHelper";
 import MemberCard from "../memberCard/memberCard";
 
 export default function Accordion(props) {
+  //States
     const [open, setOpen] = useState(false);
     const [arrow, setArrow] = useState(false);
-
-    const {title, team} = accordionTest;
-
+  //Props
+    const {title, members} = props;
+    console.log(title,members);
+  
     const handleAccordion = () => {
       setOpen(!open);
       setArrow(!arrow);
@@ -26,7 +27,7 @@ export default function Accordion(props) {
                 <div className={`accordion-container-heading-icon ${flipArrow}`} onClick={handleAccordion}>▲</div>
             </div>
             <div className={`accordion-container-content ${openAccordion}`}>
-              {team.map(member => <MemberCard member={member}/>)}
+              {members.map(member => <MemberCard member={member}/>)}
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import Accordion from "../../components/accordion/accordion";
-import { teamImages, contributorImages } from "./aboutHelper";
+
+import { boardOFDirectors, teamLeads, uxDesigners, frontEnd } from "../../pages/about/aboutHelper";
 
 /**
  * @returns {JSX.Element}
@@ -8,31 +9,25 @@ import { teamImages, contributorImages } from "./aboutHelper";
  */
 
 export default function Team() {
+
+	const {title:boardTitle, members:boardMembers} = boardOFDirectors;
+	const {title:teamLeadTitle, members:teamLeadmembers} = teamLeads;
+	const {title:uxTitle, members:uxMembers} = uxDesigners;
+	const {title:frontEndTitle, members:frontEndMembers} = frontEnd;
+
+	const boardOFDirectorsAccordion = <Accordion title={boardTitle} members={boardMembers}/>
+	const teamLeadAccordion = <Accordion title={teamLeadTitle} members={teamLeadmembers}/>
+	const uxDesignersAccordion = <Accordion title={uxTitle} members={uxMembers}/>
+	const frontEndAccordion = <Accordion title={frontEndTitle} members={frontEndMembers}/>
+
     return (
         <section id="about-team-container">
             <h1 id="main-header">We're Space Lab</h1>
             <h4> Meet the team!</h4>
-            <Accordion />
-            {/* <div className="team-picture-div">
-            {teamImages.map(team =>
-                <div className="team-card">
-                    <img className="team-picture" src={team.image} alt={team.fullName}/>
-                    <p className="team-name" >{team.fullName}</p>
-                    <p className="team-title" >{team.title}</p>
-                </div>
-            )}
-        </div> */}
-
-            {/* <h1 id="contributers-header">Addtional Contributors</h1>
-        <div className="team-picture-div">
-            {contributorImages.map(team =>
-                <div className="team-card">
-                    <img className="team-picture" src={team.image} alt={team.fullName}/>
-                    <p className="team-name" >{team.fullName}</p>
-                    <p className="team-title" >{team.title}</p>
-                </div>
-            )}
-        </div> */}
+			{boardOFDirectorsAccordion}
+            {teamLeadAccordion}
+			{uxDesignersAccordion}
+			{frontEndAccordion}
         </section>
     );
 }

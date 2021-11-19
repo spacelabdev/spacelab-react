@@ -1,6 +1,6 @@
 .accordion-container {
-    width: 85vw;
     height: auto;
+    width: 100%;
 
     &-heading {
         font-family: "Poppins", sans-serif;
@@ -14,7 +14,7 @@
         align-items: center;
 
         @media (min-width: 767px) and (max-width: 1023px) {
-            justify-content: space-evenly;
+            justify-content: center;
         }
 
         @media (min-width: 1024px) {
@@ -28,8 +28,11 @@
             cursor: pointer;
 
             @media (min-width: 1024px) {
-              margin-left: 4rem;
-          }
+                margin-left: 4rem;
+            }
+            @media (min-width: 767px) and (max-width: 1023px) {
+                margin-left: 2rem;
+            }
         }
 
         .icon-flip {
@@ -44,6 +47,7 @@
         transition: all 0.3s ease-in-out;
         display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
 
         @media (min-width: 767px) and (max-width: 1023px) {
             flex-direction: row;
@@ -52,10 +56,11 @@
 
         @media (min-width: 1024px) {
             flex-direction: row;
+            
         }
     }
     .accordion-open {
         height: auto;
-        max-height: 1000px;
+        max-height: 2000px;
     }
 }
