@@ -8,8 +8,7 @@ export default function Accordion(props) {
     const [arrow, setArrow] = useState(false);
   //Props
     const {title, members} = props;
-    console.log(title,members);
-  
+
     const handleAccordion = () => {
       setOpen(!open);
       setArrow(!arrow);
@@ -27,7 +26,7 @@ export default function Accordion(props) {
                 <div className={`accordion-container-heading-icon ${flipArrow}`} onClick={handleAccordion}>▲</div>
             </div>
             <div className={`accordion-container-content ${openAccordion}`}>
-              {members.map(member => <MemberCard member={member}/>)}
+              {members.map(member => <MemberCard key={`${title}-${member.fullName}`} member={member}/>)}
             </div>
         </div>
     );

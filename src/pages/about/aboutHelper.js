@@ -227,40 +227,98 @@ export const frontEnd = {
             fullName: "Kat Hackethal",
             title: "Software Engineer",
         },
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png",
-			fullName: "Angelines Yaport-Garcia",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://i.imgur.com/UXz18XD.png",
-			fullName: "Xu Xu",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
-			fullName: "Charlie Arboleda",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://i.imgur.com/fPunQXz.png",
-			fullName: "Bach Le",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
-			fullName: "Kausar Akther",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
-			fullName: "Jon Zivku",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
-			fullName: "Deen Haque",
-			title: "Software Engineer",
-		},
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png",
+            fullName: "Angelines Yaport-Garcia",
+            title: "Software Engineer",
+        },
+        {
+            image: "https://i.imgur.com/UXz18XD.png",
+            fullName: "Xu Xu",
+            title: "Software Engineer",
+        },
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
+            fullName: "Charlie Arboleda",
+            title: "Software Engineer",
+        },
+        {
+            image: "https://i.imgur.com/fPunQXz.png",
+            fullName: "Bach Le",
+            title: "Software Engineer",
+        },
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
+            fullName: "Kausar Akther",
+            title: "Software Engineer",
+        },
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
+            fullName: "Jon Zivku",
+            title: "Software Engineer",
+        },
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
+            fullName: "Deen Haque",
+            title: "Software Engineer",
+        },
+    ],
+};
+
+export const dataScience = {
+    title: "data scientists",
+    members: [
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131368/team_pics/ricky_fdzb1y.png",
+            fullName: "Ricky Rong",
+            title: "Data Scientist",
+        },
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/robert_oggyg8.png",
+            fullName: "Robert Sato",
+            title: "Data Scientist",
+        },
+        {
+            image: "https://i.imgur.com/vxMri4M.png",
+            fullName: "Cally Lin",
+            title: "Data Scientist",
+        },
+        {
+            image: "https://i.imgur.com/6QT53lE.png",
+            fullName: "Gio Abou Jaoude",
+            title: "Data Scientist",
+        },
+    ],
+};
+
+export const webGL = {
+    title: "webgls",
+    members: [
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/mamadou_mtnlfc.png",
+            fullName: "Mamadou Diallo",
+            title: "3D Graphics Developer",
+        },
+        {
+            image: "https://i.imgur.com/tHUZq9s.png",
+            fullName: "Nemi Gugssa",
+            title: "3D Graphics Developer",
+        },
+    ],
+};
+
+export const writers = {
+    title: "staff writers",
+    members: [
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130968/team_pics/alex_s0g0a6.png",
+            fullName: "Alex Simon",
+            title: "Staff Writer",
+        },
+        {
+            image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632850171/katgirl_lbfxk8.jpg",
+            fullName: "Kat Rendon",
+            title: "Staff Writer",
+        },
     ],
 };
