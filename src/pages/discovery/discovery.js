@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
@@ -6,12 +6,15 @@ import {discoveryMethodFiltersArray, planetSystemsFiltersArray, planetTypeFilter
 import "./discovery.scss";
 import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
+import { getExoplanets } from "../../services/calTechApiRequest";
+import { UniversalContext } from "../../App";
 
 /**
  * @returns {JSX.Element}
  * @constructor
  */
 export default function Discovery() {
+	const context = useContext(UniversalContext);
 	const discTable = [
 		{
 			name: "",
@@ -34,6 +37,23 @@ export default function Discovery() {
 		)
 	}
 
+	/**
+	 * Query exo-planet db and set exoplanetData in App state
+	 * @return {Promise<void>}
+	 */
+	const queryExoplanetDatabase = async () => {
+		await getExoplanets().then(res => {
+			if (res.status === 200) {
+				context.setExoplanetData(res.data);
+				sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
+			} else {
+				console.log("error retrieving exoplanetData");
+			}
+		}).catch(e => {
+			console.log(e);
+		});
+	};
+
 	// const [isChecked, setIsChecked] = useState(
 	// 	new Array (filters.length).fill(false)
 	// );
@@ -41,6 +61,8 @@ export default function Discovery() {
 	// const handleOnChange = () =>{
 	// 	setIsChecked(!isChecked)
 	// };
+
+	console.log(context.exoplanetData)
 
 	return (
 		<>
@@ -76,6 +98,11 @@ export default function Discovery() {
 					<DiscoveryFilterList filterArray={planetSystemsFiltersArray} title={"Planet Systems"}/>
 					<DiscoveryFilterList filterArray={planetTypeFiltersArray} title={"Planet Type"}/>
 					<DiscoveryFilterList filterArray={discoveryMethodFiltersArray} title={"Discovery Method"}/>
+					{/* todo: button styling */}
+					<ReactBootStrap.Button
+						variant={"primary"}
+						onClick={queryExoplanetDatabase}
+					>Filter</ReactBootStrap.Button>
 				</div>
 			</div>
 			<Footer/>

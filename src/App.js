@@ -1,7 +1,6 @@
 import {createContext, useEffect, useState} from "react";
 import RSSParser from "rss-parser";
 import Main from "./main";
-import {getExoplanets} from "./services/calTechApiHelper";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
 
@@ -46,35 +45,6 @@ function App() {
 		setGlossaryTerms(returnFilteredTerms(1, 9));
 	}, []);
 
-
-
-
-	// Get initial information from cal tech data base. Save to session storage.
-	// TODO: Don't want this to run with every re render.
-	useEffect(() => {
-		const queryExoplanetDatabase = async () => {
-			await getExoplanets().then(res => {
-				if (res.status === 200) {
-					setExoplanetData(res.data);
-					sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
-				} else {
-					console.log("error retrieving exoplanetData");
-				}
-			}).catch(e => {
-				console.log(e);
-			});
-		};
-		queryExoplanetDatabase();
-	}, []);
-
-	// TODO: Delete this for production or when no longer needed. For development only.
-	if (exoplanetData !== undefined) {
-		console.log(exoplanetData);
-	}
-
-
-
-
 	return (
 		<div className="App">
 			<div className={'content'}>
@@ -96,7 +66,9 @@ function App() {
 						setCurrentGlossaryTerm,
 						pageTitle,
 						setPageTitle,
-						blogArray
+						blogArray,
+						setExoplanetData,
+						exoplanetData
 					}
 				}>
 					<Main/>
