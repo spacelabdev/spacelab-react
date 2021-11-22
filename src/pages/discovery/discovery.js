@@ -25,6 +25,7 @@ import initialiseCheckedState from "./initialiseCheckedState";
  */
 export default function Discovery() {
 	const context = useContext(UniversalContext);
+	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set state for the checkboxes in App instead
 	const [checked, setChecked] = useState(initialiseCheckedState())
 	const discTable = [
 		{
@@ -147,7 +148,7 @@ export default function Discovery() {
 						checked={checked}
 						setChecked={setChecked}
 					/>
-					{/* todo: button styling */}
+					{/* todo: [Sven Gerlach] button styling */}
 					<ReactBootStrap.Button
 						variant={"primary"}
 						onClick={queryExoplanetDatabase}

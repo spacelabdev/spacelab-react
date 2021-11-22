@@ -106,17 +106,12 @@ export const projectDispositionFiltersArray = [
 	}
 ];
 
-// todo: build out
 export const transitPropertiesFiltersArray = []
 
-// todo: build out
 export const thresholdCrossingEventFiltersArray = []
 
-// todo: build out
 export const stellarParametersFiltersArray = []
 
-// todo: build out
 export const kicParametersFiltersArray = []
 
-// todo: build out
 export const pixelBasedKoiVettingFiltersArray = []
