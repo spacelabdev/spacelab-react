@@ -12,9 +12,9 @@ export default function DiscoveryFilterList(props) {
 	const filterArray = props.filterArray;
 	const title = props.title;
 
-	const filtersArray = filterArray.map((e, index) => {
+	const filtersArray = filterArray.map((filterColumn, index) => {
 		return (
-			<DiscoveryFilterListItem element={e} key={index}/>
+			<DiscoveryFilterListItem filterColumn={filterColumn} key={index}/>
 		)
 	});
 
