@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
@@ -17,6 +17,7 @@ import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 import { getExoplanets } from "../../services/calTechApiRequest";
 import { UniversalContext } from "../../App";
+import initialiseCheckedState from "./initialiseCheckedState";
 
 /**
  * @returns {JSX.Element}
@@ -24,6 +25,7 @@ import { UniversalContext } from "../../App";
  */
 export default function Discovery() {
 	const context = useContext(UniversalContext);
+	const [checked, setChecked] = useState(initialiseCheckedState())
 	const discTable = [
 		{
 			name: "",
