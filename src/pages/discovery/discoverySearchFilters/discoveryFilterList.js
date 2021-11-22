@@ -11,10 +11,17 @@ import "../discovery.scss"
 export default function DiscoveryFilterList(props) {
 	const filterArray = props.filterArray;
 	const title = props.title;
+	const setChecked = props.setChecked
+	const checked = props.checked
 
 	const filtersArray = filterArray.map((filterColumn, index) => {
 		return (
-			<DiscoveryFilterListItem filterColumn={filterColumn} key={index}/>
+			<DiscoveryFilterListItem
+				key={index}
+				filterColumn={filterColumn}
+				setChecked={setChecked}
+				checked={checked}
+			/>
 		)
 	});
 
