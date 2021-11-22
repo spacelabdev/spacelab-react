@@ -17,14 +17,17 @@ export default function DiscoveryFilterListItem(props) {
 	}
 
 	function handleCheckboxClick(e) {
-		setChecked(prevState => !prevState)
+		setChecked(prevState => {
+			const newState = { ...prevState }
+			newState[filterColumn.name] = !prevState[filterColumn.name]
+			return newState
+		})
 	}
-	
+
 	return (
 		<div className={"filter-item"}>
 			{/*wrapping the input in a div protects the check box from squishing when text wraps*/}
 			<div className={'discovery-checkbox-wrapper'}>
-				{/* todo: replace value with state var defined in discovery.js */}
 				<input
 					type="checkbox"
 					style={checkbox_style}
