@@ -1,8 +1,16 @@
 #blog-archive-container {
-  display: flex;
-  flex-wrap: wrap;
   padding: 5em 3em;
   margin: 0 auto;
+
+  #blog-archive-header {
+    font-size: 3em;
+    padding-bottom: 2rem;
+  }
+  #blog-archives{
+    display: flex;
+    flex-direction: row;
+  }
+
   @media (min-width: 1024px) {
     max-width: 80%;
   }
