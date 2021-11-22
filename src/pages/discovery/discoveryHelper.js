@@ -1,97 +1,99 @@
 /**
- * Array of filter options for filtering on system type
- * @type {string[][]}
+ * Module for all filter arrays. Each filter array represents a sub-section of the columns available in the cumulative
+ * CalTech dataset. Filter arrays and their elements are mutually exclusive and non-overlapping.
+ *
+ * Source: https://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html
  */
-export const planetSystemsFiltersArray = [
-	[
-		'planets-discovered-by-kepler',
-		'Planets Discovered by Kepler'
-	],
-	[
-		'planets-with-host-stars-visible-to-naked-eye',
-		'Planets With Host Stars Visible To The Naked Eye'
-	],
-	[
-		'planets-within-multiple-planet-systems',
-		'Planets Within Multiple Planet Systems'
-	]
-	// TODO: add remaining elements
-];
+
 
 /**
- * Array of filter options for filtering on planet type
+ * Array of filter options for filtering identifier columns
  * @type {string[][]}
  */
-export const planetTypeFiltersArray = [
+export const identificationFiltersArray = [
 	[
-		'gas-giant',
-		'Gas Giant'
+		'kepid',
+		'Kepler Identification'
 	],
 	[
-		'neptune-like',
-		'Neptune Like'
-	],
-	[
-		'super-earth',
-		'Super Earth'
-	],
-	[
-		'terrestrial',
-		'Terrestrial'
-	],
-	[
-		'unknown',
-		'Unknown'
+		'kepoi_name',
+		'KOI Name'
 	],
 ];
 
 /**
- * Array of filter options for filtering on discovery method
+ * Array of filter options for filtering exoplanet columns
  * @type {string[][]}
  */
-export const discoveryMethodFiltersArray = [
+export const exoplanetArchiveFiltersArray = [
 	[
-		'astronomy',
-		'Astronomy'
+		'kepler_name',
+		'Kepler Name'
 	],
 	[
-		'disk-kinematics',
-		'Disk Kinematics'
+		'koi_disposition',
+		'Exoplanet Archive Disposition'
 	],
 	[
-		'eclipse-timing-variations',
-		'Eclipse Timing Variations'
+		'koi_vet_stat',
+		'Vetting Status'
 	],
 	[
-		'imaging',
-		'Imaging'
+		'koi_vet_date',
+		'Date of Last Parameter Update'
 	],
-	[
-		'microlensing',
-		'Microlensing'
-	],
-	[
-		'orbital-brightness-modulation',
-		'Orbital Brightness Modulation'
-	],
-	[
-		'pulsar-timing',
-		'Pulsar Timing'
-	],
-	[
-		'pulsar-timing-variations',
-		'Pulsar Timing Variations'
-	],
-	[
-		'radial-velocity',
-		'Radial Velocity'
-	],
-	[
-		'transit',
-		'Transit'
-	],
-	[
-		'transit-timing-variations',
-		'Transit Timing Variations'
-	]
 ];
+
+/**
+ * Array of filter options for filtering project disposition columns
+ * @type {string[][]}
+ */
+export const projectDispositionFiltersArray = [
+	[
+		'koi_disposition',
+		'Disposition using Kepler Data'
+	],
+	[
+		'koi_score',
+		'Disposition Score'
+	],
+	[
+		'koi_fpflag_nt',
+		'Not Transit-Like Flag'
+	],
+	[
+		'koi_fpflag_ss',
+		'Stellar Eclipse Flag'
+	],
+	[
+		'koi_fpflag_co',
+		'Centroid Offset Flag'
+	],
+	[
+		'koi_fpflag_ec',
+		'Ephemeris Match Indicates Contamination Flag'
+	],
+	[
+		'koi_disp_prov',
+		'Disposition Provenance'
+	],
+	[
+		'koi_comment',
+		'KOI Comment'
+	],
+];
+
+// todo: build out
+export const transitPropertiesFiltersArray = []
+
+// todo: build out
+export const thresholdCrossingEventFiltersArray = []
+
+// todo: build out
+export const stellarParametersFiltersArray = []
+
+// todo: build out
+export const kicParametersFiltersArray = []
+
+// todo: build out
+export const pixelBasedKoiVettingFiltersArray = []

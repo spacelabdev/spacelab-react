@@ -2,7 +2,16 @@ import React, { useContext } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
-import {discoveryMethodFiltersArray, planetSystemsFiltersArray, planetTypeFiltersArray} from "./discoveryHelper";
+import {
+	projectDispositionFiltersArray,
+	identificationFiltersArray,
+	exoplanetArchiveFiltersArray,
+	transitPropertiesFiltersArray,
+	thresholdCrossingEventFiltersArray,
+	stellarParametersFiltersArray,
+	kicParametersFiltersArray,
+	pixelBasedKoiVettingFiltersArray,
+} from "./discoveryHelper";
 import "./discovery.scss";
 import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
@@ -38,7 +47,7 @@ export default function Discovery() {
 	}
 
 	/**
-	 * Query exo-planet db and set exoplanetData in App state
+	 * Query CalTech db and set exoplanetData in App state and store as session var
 	 * @return {Promise<void>}
 	 */
 	const queryExoplanetDatabase = async () => {
@@ -53,14 +62,6 @@ export default function Discovery() {
 			console.log(e);
 		});
 	};
-
-	// const [isChecked, setIsChecked] = useState(
-	// 	new Array (filters.length).fill(false)
-	// );
-	//
-	// const handleOnChange = () =>{
-	// 	setIsChecked(!isChecked)
-	// };
 
 	console.log(context.exoplanetData)
 
@@ -95,9 +96,14 @@ export default function Discovery() {
 
 				<div id={"filtersContainer"}>
 					<p>Filters</p>
-					<DiscoveryFilterList filterArray={planetSystemsFiltersArray} title={"Planet Systems"}/>
-					<DiscoveryFilterList filterArray={planetTypeFiltersArray} title={"Planet Type"}/>
-					<DiscoveryFilterList filterArray={discoveryMethodFiltersArray} title={"Discovery Method"}/>
+					<DiscoveryFilterList filterArray={identificationFiltersArray} title={"Identifications"}/>
+					<DiscoveryFilterList filterArray={exoplanetArchiveFiltersArray} title={"Exoplanets"}/>
+					<DiscoveryFilterList filterArray={projectDispositionFiltersArray} title={"Dispositions"}/>
+					<DiscoveryFilterList filterArray={transitPropertiesFiltersArray} title={"Transit Properties"}/>
+					<DiscoveryFilterList filterArray={thresholdCrossingEventFiltersArray} title={"Threshold Crossing Events"}/>
+					<DiscoveryFilterList filterArray={stellarParametersFiltersArray} title={"Stellar Parameters"}/>
+					<DiscoveryFilterList filterArray={kicParametersFiltersArray} title={"KIC Parameters"}/>
+					<DiscoveryFilterList filterArray={pixelBasedKoiVettingFiltersArray} title={"Pixel Based KOI Vetting"}/>
 					{/* todo: button styling */}
 					<ReactBootStrap.Button
 						variant={"primary"}
