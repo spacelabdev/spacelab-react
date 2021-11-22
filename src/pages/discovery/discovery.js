@@ -65,6 +65,7 @@ export default function Discovery() {
 		});
 	};
 
+	console.log(checked)
 	console.log(context.exoplanetData)
 
 	return (
@@ -98,14 +99,54 @@ export default function Discovery() {
 
 				<div id={"filtersContainer"}>
 					<p>Filters</p>
-					<DiscoveryFilterList filterArray={identificationFiltersArray} title={"Identifications"}/>
-					<DiscoveryFilterList filterArray={exoplanetArchiveFiltersArray} title={"Exoplanets"}/>
-					<DiscoveryFilterList filterArray={projectDispositionFiltersArray} title={"Dispositions"}/>
-					<DiscoveryFilterList filterArray={transitPropertiesFiltersArray} title={"Transit Properties"}/>
-					<DiscoveryFilterList filterArray={thresholdCrossingEventFiltersArray} title={"Threshold Crossing Events"}/>
-					<DiscoveryFilterList filterArray={stellarParametersFiltersArray} title={"Stellar Parameters"}/>
-					<DiscoveryFilterList filterArray={kicParametersFiltersArray} title={"KIC Parameters"}/>
-					<DiscoveryFilterList filterArray={pixelBasedKoiVettingFiltersArray} title={"Pixel Based KOI Vetting"}/>
+					<DiscoveryFilterList
+						filterArray={identificationFiltersArray}
+						title={"Identifications"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
+					<DiscoveryFilterList
+						filterArray={exoplanetArchiveFiltersArray}
+						title={"Exoplanets"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
+					<DiscoveryFilterList
+						filterArray={projectDispositionFiltersArray}
+						title={"Dispositions"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
+					<DiscoveryFilterList
+						filterArray={transitPropertiesFiltersArray}
+						title={"Transit Properties"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
+					<DiscoveryFilterList
+						filterArray={thresholdCrossingEventFiltersArray}
+						title={"Threshold Crossing Events"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
+					<DiscoveryFilterList
+						filterArray={stellarParametersFiltersArray}
+						title={"Stellar Parameters"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
+					<DiscoveryFilterList
+						filterArray={kicParametersFiltersArray}
+						title={"KIC Parameters"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
+					<DiscoveryFilterList
+						filterArray={pixelBasedKoiVettingFiltersArray}
+						title={"Pixel Based KOI Vetting"}
+						checked={checked}
+						setChecked={setChecked}
+					/>
 					{/* todo: button styling */}
 					<ReactBootStrap.Button
 						variant={"primary"}

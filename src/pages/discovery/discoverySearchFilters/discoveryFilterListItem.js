@@ -8,11 +8,18 @@ import React from "react";
  */
 export default function DiscoveryFilterListItem(props) {
 	const filterColumn = props.filterColumn;
+	const checked = props.checked
+	const setChecked = props.setChecked
+
 	const checkbox_style = {
 		width: "1.25rem",
 		height: "1.25rem"
 	}
 
+	function handleCheckboxClick(e) {
+		setChecked(prevState => !prevState)
+	}
+	
 	return (
 		<div className={"filter-item"}>
 			{/*wrapping the input in a div protects the check box from squishing when text wraps*/}
@@ -23,7 +30,8 @@ export default function DiscoveryFilterListItem(props) {
 					style={checkbox_style}
 					className={'discovery-checkbox'}
 					name={filterColumn.name}
-					value={false}
+					checked={checked[filterColumn.name]}
+					onChange={handleCheckboxClick}
 				/>
 			</div>
 			<div className={'search-parameter-name'}>{filterColumn.label}</div>
