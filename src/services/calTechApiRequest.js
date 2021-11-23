@@ -31,26 +31,50 @@
  * Source: https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html
  */
 
+
 import axios from "axios";
 
 const api = axios.create({
 	baseURL: 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI'
 });
 
-
+/**
+ * Return either an empty string if no checkboxes are checked or return a query string with all comma seperated column
+ * names checked in the filter UI
+ * @param select
+ * @return {string}
+ */
 function getSelectQueryString(select) {
 	// set prefix query string with distinct which makes sure that only selected columns are returned
 	let queryString = "distinct "
 
+	// counter for checked checkboxes
+	let countChecked = 0
+
 	for (const [columnName, checked] of Object.entries(select)) {
-		queryString += checked ? `,${columnName}` : ""
+		if (checked) {
+			countChecked += 1
+			queryString += `,${columnName}`
+		}
 	}
 
-	console.log(queryString)
-
-	return queryString
+	// if no checkboxes checked return empty query string otherwise return queryString
+	return countChecked ? queryString : ""
 }
 
+function getWhereQueryString(where) {
+	return where
+}
+
+/**
+ * Populate params in compliance with API SQL query restrictions
+ * @param table
+ * @param select
+ * @param where
+ * @param order
+ * @param format
+ * @return {Promise<AxiosResponse<any>|*>}
+ */
 export const getExoplanets = async (
 	{
 		table = "cumulative",
@@ -61,15 +85,15 @@ export const getExoplanets = async (
 	}) => {
 
 	const selectQueryString = getSelectQueryString(select)
+	const whereQueryString = getWhereQueryString(where)
 
 	const params = {
 		table: table,
 		select: selectQueryString,
-		where: where,
+		where: whereQueryString,
 		order: order,
 		format: format
 	}
-
 
 	try {
 		return await api.get('', { params });
