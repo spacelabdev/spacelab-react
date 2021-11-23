@@ -56,7 +56,7 @@ export default function Discovery() {
 	const queryExoplanetDatabase = async () => {
 		await getExoplanets({
 			select: checkedColumns,
-			where: '',
+			where: 'koi_score>0.999',
 			order: ''
 		}).then(res => {
 			if (res.status === 200) {
