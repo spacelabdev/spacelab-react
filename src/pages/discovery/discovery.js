@@ -26,7 +26,7 @@ import initialiseCheckedState from "./initialiseCheckedState";
 export default function Discovery() {
 	const context = useContext(UniversalContext);
 	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set state for the checkboxes in App instead
-	const [checked, setChecked] = useState(initialiseCheckedState())
+	const [checkedColumns, setCheckedColumns] = useState(initialiseCheckedState())
 	const discTable = [
 		{
 			name: "",
@@ -54,9 +54,14 @@ export default function Discovery() {
 	 * @return {Promise<void>}
 	 */
 	const queryExoplanetDatabase = async () => {
-		await getExoplanets().then(res => {
+		await getExoplanets({
+			select: checkedColumns,
+			where: '',
+			order: ''
+		}).then(res => {
 			if (res.status === 200) {
 				context.setExoplanetData(res.data);
+				/*  todo: why store this in session storage at all? */
 				sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
 			} else {
 				console.log("error retrieving exoplanetData");
@@ -66,7 +71,7 @@ export default function Discovery() {
 		});
 	};
 
-	console.log(checked)
+	console.log(checkedColumns)
 	console.log(context.exoplanetData)
 
 	return (
@@ -103,50 +108,50 @@ export default function Discovery() {
 					<DiscoveryFilterList
 						filterArray={identificationFiltersArray}
 						title={"Identifications"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					<DiscoveryFilterList
 						filterArray={exoplanetArchiveFiltersArray}
 						title={"Exoplanets"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					<DiscoveryFilterList
 						filterArray={projectDispositionFiltersArray}
 						title={"Dispositions"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					<DiscoveryFilterList
 						filterArray={transitPropertiesFiltersArray}
 						title={"Transit Properties"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					<DiscoveryFilterList
 						filterArray={thresholdCrossingEventFiltersArray}
 						title={"Threshold Crossing Events"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					<DiscoveryFilterList
 						filterArray={stellarParametersFiltersArray}
 						title={"Stellar Parameters"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					<DiscoveryFilterList
 						filterArray={kicParametersFiltersArray}
 						title={"KIC Parameters"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					<DiscoveryFilterList
 						filterArray={pixelBasedKoiVettingFiltersArray}
 						title={"Pixel Based KOI Vetting"}
-						checked={checked}
-						setChecked={setChecked}
+						checked={checkedColumns}
+						setChecked={setCheckedColumns}
 					/>
 					{/* todo: [Sven Gerlach] button styling */}
 					<ReactBootStrap.Button
