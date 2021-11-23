@@ -57,10 +57,26 @@ export default function Footer() {
                                 About
                             </Link>
                         </li>
-                        <li>Projects</li>
-                        <li>Donate</li>
-                        <li>Contact Us</li>
-                        <li>Glossary</li>
+                        <li>
+                            <Link to={"/projects"} style={link_style}>
+                                Projects
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={"/contact"} style={link_style}>
+                                Donate
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={"/contact"} style={link_style}>
+                                Contact Us
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to={"/glossary"} style={link_style}>
+                                Glossary
+                            </Link>
+                        </li>
                         <li>
                             <Link to={"/blog"} style={link_style}>
                                 Blog

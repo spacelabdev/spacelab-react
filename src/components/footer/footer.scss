@@ -71,7 +71,7 @@ on tablets. Can be updated per UX team as necessary.
             }
         }
         button {
-            padding: 5px 10px;
+            padding: 2.5px 5px;
             border: solid 1px white;
             background: #7000ff;
             color: white;
@@ -84,8 +84,10 @@ on tablets. Can be updated per UX team as necessary.
 
     .left-container {
         flex: 4;
+        width: 100%;
         @media (max-width: 766px) {
-            padding-bottom: 1em;
+            padding-bottom: 1rem;
+            width: 19.5rem;
         }
     }
     .right-container {
@@ -97,7 +99,7 @@ on tablets. Can be updated per UX team as necessary.
             padding-left: 3.1rem;
             @media (max-width: 766px) {
                 padding-left: 0;
-                padding-top: 2rem;
+                padding-top: 1.5rem;
                 text-align: center;
             }
             li {
