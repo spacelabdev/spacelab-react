@@ -1,4 +1,5 @@
 import React from "react";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 /**
  * Creates check box for planet system element
@@ -24,6 +25,27 @@ export default function DiscoveryFilterListItem(props) {
 		})
 	}
 
+	function ColumnLabelWithTooltip () {
+		const renderTooltip = (props) => (
+			<Tooltip id={'column-tooltip'} {...props}>
+				{filterColumn.description}
+			</Tooltip>
+		)
+
+		return (
+			<OverlayTrigger
+				trigger={['hover', 'focus', 'click']}
+				delay={{ show: 250, hide: 400 }}
+				overlay={renderTooltip}
+				placement={'auto'}
+			>
+				<div className={'search-parameter-name'}>
+					{filterColumn.label}
+				</div>
+			</OverlayTrigger>
+		)
+	}
+
 	return (
 		<div className={"filter-item"}>
 			{/*wrapping the input in a div protects the check box from squishing when text wraps*/}
@@ -37,7 +59,7 @@ export default function DiscoveryFilterListItem(props) {
 					onChange={handleCheckboxClick}
 				/>
 			</div>
-			<div className={'search-parameter-name'}>{filterColumn.label}</div>
+			<ColumnLabelWithTooltip />
 		</div>
 	);
 }

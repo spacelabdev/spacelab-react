@@ -4,6 +4,14 @@
   padding: 2rem;
 }
 
+//
+.tooltip-inner {
+  color: white;
+  background-color: rgba(100,100,100,0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
 #database-search-wrapper {
   display: flex;
   flex-direction: column-reverse;

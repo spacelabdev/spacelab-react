@@ -64,10 +64,10 @@ export default function Discovery() {
 				/*  todo: why store this in session storage at all? */
 				sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
 			} else {
-				console.log("error retrieving exoplanetData");
+				console.error("error retrieving exoplanetData");
 			}
 		}).catch(e => {
-			console.log(e);
+			console.error(e);
 		});
 	};
 
