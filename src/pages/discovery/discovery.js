@@ -80,11 +80,9 @@ export default function Discovery() {
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 				<div id="discovery-table">
+					<UnderConstruction/>
 					<ReactBootStrap.Table striped bordered hover size="sm">
 						<thead>
-
-						<UnderConstruction/>
-
 						{/*<tr>*/}
 						{/*	<th>Name</th>*/}
 						{/*	<th>Light Years From Earth</th>*/}
