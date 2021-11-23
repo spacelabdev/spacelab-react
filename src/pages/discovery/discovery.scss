@@ -6,14 +6,15 @@
 
 #database-search-wrapper {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
   @media (min-width: 767px) and (max-width: 1023px) {
     width: 90%;
   }
-  @media (max-width: 766px) {
-    flex-direction: column-reverse;
+  @media (min-width: 766px) {
+    flex-direction: row;
   }
 
   #discovery-table {
@@ -23,18 +24,18 @@
   }
 
   #filtersContainer {
-    width: 27vw;
+    width: 80vw;
+    margin: 0 auto;
     border-style: groove;
     margin: 1rem;
     text-align: left;
     padding-bottom: 2rem;
     vertical-align: middle;
     @media (min-width: 767px) and (max-width: 1023px) {
-      width: 45vw;
+      width: 45vw;  //looks better (I think :))  at 100vw, but since under construction, I don't think it matters.
     }
-    @media (max-width: 766px) {
-      width: 80vw;
-      margin: 0 auto;
+    @media (min-width: 1024px) {
+      width: 27vw;
     }
 
     p {
