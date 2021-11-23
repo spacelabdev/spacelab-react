@@ -1,16 +1,17 @@
 import React, {useState} from "react";
 import "./footer.scss";
 import {Link} from "react-router-dom";
+import {IconContext} from "react-icons";
+import {AiOutlineLinkedin, AiOutlineInstagram, AiOutlineTwitter} from "react-icons/ai";
 
 /**
  * @returns {JSX.Element}
  * @constructor
  */
-
 export default function Footer() {
 	const [email, setEmail] = useState("");
 	const link_style = {
-		textDecoration: 'none',
+		textDecoration: "none",
 	};
 
 	function handleChange(e) {
@@ -31,10 +32,7 @@ export default function Footer() {
 						Sign up to learn about the latest discoveries, news and
 						more! Delivered weekly.
 					</p>
-					<form
-						className="subscription-form"
-						onSubmit={handleSubscription}
-					>
+					<form className="subscription-form" onSubmit={handleSubscription}>
 						<input
 							type="email"
 							id="email"
@@ -47,13 +45,57 @@ export default function Footer() {
 				</div>
 				<div className="right-container">
 					<ul>
-						<li><Link to={'/about'} style={link_style}>About</Link></li>
-						<li>FAQ</li>
-						<li>Help</li>
+						<li>
+							<Link to={"/about"} style={link_style}>
+								About
+							</Link>
+						</li>
+						<li>
+							<Link to={"/projects"} style={link_style}>
+								Projects
+							</Link>
+						</li>
+						<li>
+							<Link to={"/contact"} style={link_style}>
+								Donate
+							</Link>
+						</li>
+						<li>
+							<Link to={"/contact"} style={link_style}>
+								Contact Us
+							</Link>
+						</li>
+						<li>
+							<Link to={"/glossary"} style={link_style}>
+								Glossary
+							</Link>
+						</li>
+						<li>
+							<Link to={"/blog"} style={link_style}>
+								Blog
+							</Link>
+						</li>
 						<li>Terms of Use</li>
-						<li><Link to={'/blog'} style={link_style}>Blog</Link></li>
 					</ul>
 				</div>
+			</div>
+			<div className="socialmedia-container">
+				<center>
+					<hr/>
+					{/* TODO: fill in the usernames for the social media links below */}
+					<IconContext.Provider value={{color: "D9D9D9", size: "2rem"}}>
+						<a href="https://www.linkedin.com/company/spacelab-space/">
+							<AiOutlineLinkedin/>
+						</a>
+						{/* <a href="https://www.instagram.com/{Spacelab}"> */}
+						<AiOutlineInstagram/>
+						{/* </a> */}
+						{/* <a href="https://twitter.com/{SpaceLab}"> */}
+						<AiOutlineTwitter/>
+						{/* </a> */}
+					</IconContext.Provider>
+					<h5>@2021 by SpaceLab</h5>
+				</center>
 			</div>
 		</section>
 	);
