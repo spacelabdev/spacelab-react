@@ -5,7 +5,7 @@ on tablets. Can be updated per UX team as necessary.
 .footer-section {
     background: black;
     text-align: left;
-    width: 100vw;
+    width: auto;
     @media (max-width: 766px) {
         text-align: center;
     }
@@ -39,10 +39,11 @@ on tablets. Can be updated per UX team as necessary.
 
     .content-container {
         display: flex;
-        width: 100vw;
+        align-items: center;
+        width: auto;
         max-width: 1189px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
+        margin: auto;
+        padding: 4rem;
         @media (max-width: 766px) {
             flex-direction: column;
             align-content: center;
@@ -70,7 +71,7 @@ on tablets. Can be updated per UX team as necessary.
             }
         }
         button {
-            padding: 5px 10px;
+            padding: 2.5px 5px;
             border: solid 1px white;
             background: #7000ff;
             color: white;
@@ -83,21 +84,43 @@ on tablets. Can be updated per UX team as necessary.
 
     .left-container {
         flex: 4;
+        width: 100%;
         @media (max-width: 766px) {
-            padding-bottom: 1em;
+            padding-bottom: 1rem;
+            width: 19.5rem;
         }
     }
     .right-container {
         flex: 1;
+        text-align: left;
         ul {
             list-style: none;
             text-transform: uppercase;
+            padding-left: 3.1rem;
             @media (max-width: 766px) {
                 padding-left: 0;
+                padding-top: 1.5rem;
+                text-align: center;
             }
             li {
-                line-height: 2;
+                line-height: 2rem;
             }
+        }
+    }
+    .socialmedia-container {
+        text-align: center;
+        padding-bottom: 2rem;
+        color: #d9d9d9;
+        font-family: Lato, sans-serif;
+        letter-spacing: 1px;
+    }
+    hr {
+        width: 90%;
+        color: #d9d9d9;
+        max-width: 1100px;
+        margin-bottom: 2rem;
+        @media (max-width: 766px) {
+            width: 70%;
         }
     }
 }
