@@ -44,7 +44,8 @@ export default function BlogArchives() {
 		<>
 			<HeroImage/>
 			<div id={"blog-archive-container"}>
-				{blogArray}
+				<div id={"blog-archive-header"}>Archived Blogs</div>
+				<div id={"blog-archives"}>{blogArray}</div>
 			</div>
 			<Footer/>
 		</>
