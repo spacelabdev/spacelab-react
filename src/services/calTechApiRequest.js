@@ -37,17 +37,34 @@ const api = axios.create({
 	baseURL: 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI'
 });
 
+
+function getSelectQueryString(select) {
+	// set prefix query string with distinct which makes sure that only selected columns are returned
+	let queryString = "distinct "
+
+	for (const [columnName, checked] of Object.entries(select)) {
+		queryString += checked ? `,${columnName}` : ""
+	}
+
+	console.log(queryString)
+
+	return queryString
+}
+
 export const getExoplanets = async (
-	table='cumulative',
-	select='*',
-	where='koi_disposition like \'CANDIDATE\' and koi_period>300 and koi_prad<2',
-	order='koi_period',
-	format='json'
-) => {
+	{
+		table = "cumulative",
+		select = "",
+		where = "",
+		order = "",
+		format = "json"
+	}) => {
+
+	const selectQueryString = getSelectQueryString(select)
 
 	const params = {
 		table: table,
-		select: select,
+		select: selectQueryString,
 		where: where,
 		order: order,
 		format: format
