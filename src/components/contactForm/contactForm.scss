@@ -18,19 +18,21 @@
         text-align: left;
         font-size: 20px;
         margin-bottom: 10%;
-        @media (max-width: 766px) {
-            align-items: center;
+        align-items: center;
+        @media (min-width: 766px) {
+            align-items: initial;
         }
 
         .contact-form-title {
             text-align: left;
             text-transform: uppercase;
-            font-size: 39px;
+            width: 85%;
+            font-size: 35px;
             margin-top: 0;
             margin-bottom: 2rem;
-            @media (max-width: 766px) {
-                width: 85%;
-                font-size: 35px;
+            @media (min-width: 766px) {
+                width: 100%;
+                font-size: 39px;
             }
 
             #title-text {
@@ -47,19 +49,22 @@
 
             .first-input-row {
                 width: 100%;
-                min-width: 690px;
+                min-width: 0;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: space-between;
+                margin-top: -0.5em;
                 margin-bottom: 2%;
+
                 @media (min-width: 767px) and (max-width: 1023px) {
                     min-width: 600px;
-                    margin-top: .5em;
+                    flex-direction: row;
+                    margin-top: 0.5em;
                 }
-                @media (max-width: 766px) {
-                    flex-direction: column;
-                    margin-top: -.5em;
-                    min-width: 0;
+                @media (min-width: 1024px) {
+                    min-width: 690px;
+                    flex-direction: row;
+                    margin-top: 0em;
                 }
             }
 
@@ -69,14 +74,14 @@
 
             .small-input {
                 width: 100%;
-                min-width: 320px;
+                min-width: 0;
                 height: 45px;
                 font-size: 24px;
                 @media (min-width: 767px) and (max-width: 1023px) {
                     min-width: 280px;
                 }
-                @media (max-width: 766px) {
-                    min-width: 0;
+                @media (min-width: 1024px) {
+                    min-width: 320px;
                 }
             }
 
@@ -124,13 +129,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    min-width: 0;
     padding-top: 2em;
     @media (min-width: 767px) and (max-width: 1023px) {
         min-width: 280px;
     }
-    @media (max-width: 766px) {
-        min-width: 0;
+    @media (min-width: 1024px) {
+        width: 100%;
     }
 
     h2 {
@@ -139,9 +144,9 @@
 
     .party_popper-image {
         position: relative;
-        padding-bottom: 5em;
-        @media (max-width: 766px) {
-            padding-bottom: 2em;
+        padding-bottom: 2em;
+        @media (min-width: 766px) {
+          padding-bottom: 5em;
         }
     }
 
@@ -159,7 +164,7 @@
 
         a {
             text-decoration: none;
-            padding: 0 .5em;
+            padding: 0 0.5em;
             color: #7000ff;
         }
     }
