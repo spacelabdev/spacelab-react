@@ -292,7 +292,7 @@ export const dataScience = {
 };
 
 export const webGL = {
-    title: "webgls",
+    title: "WebGL Developers",
     members: [
         {
             image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/mamadou_mtnlfc.png",
@@ -321,4 +321,9 @@ export const writers = {
             title: "Staff Writer",
         },
     ],
+};
+
+export const additionalContributors = {
+    title: "staff writers",
+    members: [],
 };

@@ -6,7 +6,7 @@ export default function MemberCard(props) {
     const { member } = props;
     return (
         <div className="member-card">
-            <img src={member.image} alt="team member"></img>
+            <img src={member.image} alt={`${member.fullName}.png`}></img>
             <div className="member-card-text">
                 <p className="member-card-text-name">{member.fullName}</p>
                 <p className="member-card-text-title">{member.title}</p>
