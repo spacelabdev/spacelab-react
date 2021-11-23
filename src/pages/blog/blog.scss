@@ -22,14 +22,14 @@
     .carousel .carousel-indicators li {
         margin: 0 1rem 7rem;
         background-color: white;
-		opacity: .5;
+        opacity: 0.5;
         height: 10px;
         width: 10px;
     }
 
-	.carousel .carousel-indicators li.active {
-		opacity: 1 !important;
-	}
+    .carousel .carousel-indicators li.active {
+        opacity: 1 !important;
+    }
 
     .carousel-inner {
         margin: 0 auto !important;
