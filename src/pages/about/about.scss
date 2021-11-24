@@ -1,244 +1,204 @@
 :root {
-    --content-container: 1189px;
+		--content-container: 1189px;
 }
 
 #about-mission-statement-container {
-    max-width: var(--content-container);
-    width: 100%;
-    padding: 0 1rem;
-    margin: 0 auto;
+		max-width: var(--content-container);
+		width: 100%;
+		padding: 0 1rem;
+		margin: 0 auto;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5%;
-    margin-bottom: 5%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 5%;
+		margin-bottom: 5%;
 
-    .inner-section-two {
-        flex-direction: row;
-        font-family: "Lato", sans-serif;
+		.inner-section-two {
+				flex-direction: row;
+				font-family: "Lato", sans-serif;
 
-        .about-mission-segment-container {
-            display: flex;
-            justify-content: space-between;
-            margin: 0 auto;
-            padding-bottom: 5rem;
+				.about-mission-segment-container {
+						display: flex;
+						justify-content: space-between;
+						margin: 0 auto;
+						padding-bottom: 5rem;
 
-            .about-mission-image-wrapper {
-                width: 50%;
-                margin: auto;
+						.about-mission-image-wrapper {
+								width: 50%;
+								margin: auto;
 
-                .about-mission-image {
-                    margin: 0 auto;
-                }
-            }
+								.about-mission-image {
+										margin: 0 auto;
+								}
+						}
 
-            @media screen and (max-width: 815px) {
-                flex-direction: column;
-                align-items: center;
-                .about-mission-image-wrapper {
-                    margin-bottom: 2rem;
-                }
-            }
+						@media screen and (max-width: 815px) {
+								flex-direction: column;
+								align-items: center;
+								.about-mission-image-wrapper {
+										margin-bottom: 2rem;
+								}
+						}
 
-            .about-mission-content {
-                width: 50%;
-                text-align: left;
+						.about-mission-content {
+								width: 50%;
+								text-align: left;
 
-                .about-mission-header {
-                    padding-bottom: 1rem;
-                    color: #7000ff;
-                    text-align: center;
-                }
+								.about-mission-header {
+										padding-bottom: 1rem;
+										color: #7000ff;
+										text-align: center;
+								}
 
-                @media screen and (max-width: 815px) {
-                    width: 100%;
-                    text-align: center;
-                }
-            }
+								@media screen and (max-width: 815px) {
+										width: 100%;
+										text-align: center;
+								}
+						}
 
-            &:nth-child(even) {
-                //alternating text + image (left vs right)
-                .about-mission-image-wrapper {
-                    order: 2;
-                }
-                .about-mission-content {
-                    order: 1;
-                }
+						&:nth-child(even) {
+								//alternating text + image (left vs right)
+								.about-mission-image-wrapper {
+										order: 2;
+								}
+								.about-mission-content {
+										order: 1;
+								}
 
-                @media screen and (max-width: 815px) {
-                    .about-mission-image-wrapper {
-                        order: unset;
-                    }
-                    .about-mission-content {
-                        order: unset;
-                    }
-                }
-            }
-        }
-    }
+								@media screen and (max-width: 815px) {
+										.about-mission-image-wrapper {
+												order: unset;
+										}
+										.about-mission-content {
+												order: unset;
+										}
+								}
+						}
+				}
+		}
 }
 
 #about-team-container {
-    max-width: var(--content-container);
-    width: 100%;
-    margin: 0 auto;
+		max-width: var(--content-container);
+		width: 100%;
+		margin: 0 auto;
 
-    font-family: "Lato", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: 15%;
+		font-family: "Lato", sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10px;
+		margin-bottom: 15%;
 
-    #main-header,
-    #contributers-header {
-        color: #a0a0aa;
-        text-transform: uppercase;
-        font-family: "Poppins", sans-serif;
-        font-size: 40px;
-        margin-top: 60px;
-        margin-bottom: 0;
-    }
+		#main-header {
+				color: #a0a0aa;
+				text-transform: uppercase;
+				font-family: "Poppins", sans-serif;
+				font-size: 40px;
+				margin-top: 60px;
+				margin-bottom: 0;
+				@media (min-width: 767px) and (max-width: 1023px) {
+						justify-content: center;
+						font-size: 46px;
+				}
+				@media (min-width: 1024px) {
+						font-size: 52px;
+				}
+		}
 
-    h4 {
-        margin-bottom: 5rem;
-    }
+		h4 {
+				margin-bottom: 5rem;
+		}
 
-    #second-header {
-        color: #a0a0aa;
-        text-transform: uppercase;
-        font-family: "Poppins", sans-serif;
-        font-size: 30px;
-    }
-
-    #contributers-header {
-        margin-bottom: 2.5rem;
-        margin-top: 10rem;
-    }
-
-    .team-picture-div {
-        max-width: var(--content-container);
-        width: 100%;
-        margin: 0 auto;
-
-        display: grid;
-        row-gap: 4rem;
-        column-gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-        @media screen and (max-width: 860px) {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-
-        .team-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .team-picture {
-            width: 175px;
-            height: 143px;
-            object-fit: cover;
-            border-radius: 5px;
-            margin-bottom: 1rem;
-            background-image: url("../../assets/generalAssets/img_placeholder.png"); //fallback image
-            background-size: contain;
-        }
-
-        .team-name {
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        .team-title {
-            font-size: 0.8rem;
-        }
-    }
+		#second-header {
+				color: #a0a0aa;
+				text-transform: uppercase;
+				font-family: "Poppins", sans-serif;
+				font-size: 30px;
+		}
 }
 
 #about-faq-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: "Lato", sans-serif;
-    margin: 10% 0 10% 0;
-    background-color: white;
-    color: black;
-    padding: 5rem 0 10rem 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		font-family: "Lato", sans-serif;
+		margin: 10% 0 10% 0;
+		background-color: white;
+		color: black;
+		padding: 5rem 0 10rem 0;
 
-    .section-three-inner-div {
-        max-width: var(--content-container);
-        width: 100%;
-        padding: 0 1rem;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+		.section-three-inner-div {
+				max-width: var(--content-container);
+				width: 100%;
+				padding: 0 1rem;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
 
-        @media (max-width: 766px) {
-            flex-direction: column;
-        }
+				@media (max-width: 766px) {
+						flex-direction: column;
+				}
 
-        .left-side-section-three {
-            width: 50%;
-            text-align: left;
-            padding-right: 10%;
-            @media (max-width: 766px) {
-                width: 90%;
-                padding: 0;
-            }
+				.left-side-section-three {
+						width: 50%;
+						text-align: left;
+						padding-right: 10%;
+						@media (max-width: 766px) {
+								width: 90%;
+								padding: 0;
+						}
 
-            #faq-description {
-                @media (max-width: 766px) {
-                    width: 100%;
-                    padding-bottom: 3em;
-                }
-            }
+						#faq-description {
+								@media (max-width: 766px) {
+										width: 100%;
+										padding-bottom: 3em;
+								}
+						}
 
-            #faq {
-                text-transform: uppercase;
-                font-family: "Poppins", sans-serif;
-                font-size: 40px;
-                margin-bottom: 10%;
-            }
-        }
+						#faq {
+								text-transform: uppercase;
+								font-family: "Poppins", sans-serif;
+								font-size: 40px;
+								margin-bottom: 10%;
+						}
+				}
 
-        .right-side-section-three {
-            width: 50%;
-            @media (max-width: 766px) {
-                width: 90%;
-            }
+				.right-side-section-three {
+						width: 50%;
+						@media (max-width: 766px) {
+								width: 90%;
+						}
 
-            .right-side-nested-div {
-                display: flex;
-                flex-direction: row;
+						.right-side-nested-div {
+								display: flex;
+								flex-direction: row;
 
-                p {
-                    color: black;
-                }
+								p {
+										color: black;
+								}
 
-                .question-div {
-                    text-align: left;
-                    width: 100%;
-                    font-size: 20px;
-                    @media (max-width: 766px) {
-                        font-size: 1em;
-                        padding-right: 1em;
-                    }
-                }
+								.question-div {
+										text-align: left;
+										width: 100%;
+										font-size: 20px;
+										@media (max-width: 766px) {
+												font-size: 1em;
+												padding-right: 1em;
+										}
+								}
 
-                .answer-div {
-                    text-align: center;
-                    font-size: 20px;
-                    @media (max-width: 766px) {
-                        font-size: 1em;
-                    }
-                }
-            }
-        }
-    }
+								.answer-div {
+										text-align: center;
+										font-size: 20px;
+										@media (max-width: 766px) {
+												font-size: 1em;
+										}
+								}
+						}
+				}
+		}
 }
