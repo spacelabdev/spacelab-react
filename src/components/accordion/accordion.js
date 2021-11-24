@@ -19,15 +19,15 @@ export default function Accordion(props) {
     const handleAccordion = () => {
         setOpen(!open);
         setArrow(!arrow);
-        if (props.firstLoad) setFirstLoad(false);
+        if (firstLoad) setFirstLoad(false);
     };
 
     useEffect(() => {
         if (firstLoad) {
-            setOpen(!open);
-            setArrow(!arrow);
+            setOpen(true);
+            setArrow(true);
         }
-    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+    }, [firstLoad]);
 
     const openAccordion = open ? "accordion-open" : "";
     let flipArrow = arrow ? "icon-flip" : "";
