@@ -1,0 +1,38 @@
+.member-card {
+	font-family: "Poppins", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0.5rem 1rem;
+	padding: 1rem;
+	@media (min-width: 767px) and (max-width: 1023px) {
+		flex: 1 0 21%;
+	}
+	@media (min-width: 1024px) {
+		flex: 1 0 21%;
+	}
+
+	img {
+		height: 8.375rem;
+		width: 8.375rem;
+		border-radius: 50%;
+		object-fit: cover;
+		background-image: url("../../../../assets/generalAssets/img_placeholder.png"); //fallback image
+		background-size: contain;
+	}
+
+	&-text {
+		line-height: 30px;
+		word-wrap: break-word;
+
+		&-name {
+			color: #7000ff;
+			margin-top: 0.5rem;
+		}
+
+		&-title {
+			color: #ffffff;
+			margin-top: 1rem;
+		}
+	}
+}
