@@ -13,7 +13,7 @@
         justify-content: space-evenly;
         align-items: center;
         @media (min-width: 767px) and (max-width: 1023px) {
-            justify-content: center;
+            justify-content: space-evenly;
             font-size: 32px;
         }
         @media (min-width: 1024px) {
@@ -23,6 +23,7 @@
 
         &-text-container {
             width: 500px;
+						text-align: left;
         }
 
         &-icon {
@@ -62,7 +63,7 @@
             flex-direction: row;
         }
     }
-		
+
     .accordion-open {
         height: auto;
         max-height: 2500px;

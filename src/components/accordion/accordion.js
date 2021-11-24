@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./accordion.scss";
 import MemberCard from "../memberCard/memberCard";
 
@@ -14,20 +14,33 @@ export default function Accordion(props) {
     const [open, setOpen] = useState(false);
     const [arrow, setArrow] = useState(false);
     //Props
-    const { title, members } = props;
+    const { title, members, firstLoad, setFirstLoad } = props;
 
     const handleAccordion = () => {
         setOpen(!open);
         setArrow(!arrow);
+        if (props.firstLoad) setFirstLoad(false);
     };
 
+    useEffect(() => {
+        if (firstLoad) {
+            setOpen(!open);
+            setArrow(!arrow);
+        }
+    }, []);
+
     const openAccordion = open ? "accordion-open" : "";
-    const flipArrow = arrow ? "icon-flip" : "";
+    let flipArrow = arrow ? "icon-flip" : "";
+    if (firstLoad) {
+        flipArrow = "icon-flip";
+    }
 
     return (
         <div className="accordion-container">
             <div className="accordion-container-heading">
-                <div className="accordion-container-heading-text">{title}</div>
+                <div className="accordion-container-heading-text-container">
+                    {title}
+                </div>
                 <div
                     className={`accordion-container-heading-icon ${flipArrow}`}
                     onClick={handleAccordion}

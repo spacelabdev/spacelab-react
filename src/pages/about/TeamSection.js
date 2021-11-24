@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import Accordion from "../../components/accordion/accordion";
 import {
     boardOFDirectors,
@@ -24,11 +24,13 @@ export default function Team() {
     const { title: webGLTitle, members: webGLMembers } = webGL;
     const { title: writersTitle, members: writersMembers } = writers;
 
+		const [firstLoad, setFirstLoad] = useState(true)
+
     return (
         <section id="about-team-container">
             <h1 id="main-header">We're Space Lab</h1>
             <h4> Meet the team!</h4>
-            <Accordion title={boardTitle} members={boardMembers} />
+            <Accordion title={boardTitle} members={boardMembers} firstLoad={firstLoad} setFirstLoad={setFirstLoad}/>
             <Accordion title={teamLeadTitle} members={teamLeadMembers} />
             <Accordion title={frontEndTitle} members={frontEndMembers} />
             <Accordion title={dataScienceTitle} members={dataScienceMembers} />
