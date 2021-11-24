@@ -1,8 +1,8 @@
 import React from "react";
-import {Link} from 'react-router-dom';
-import {useForm, ValidationError} from '@formspree/react'
-import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png"
-import "./contactForm.scss"
+import { Link } from "react-router-dom";
+import { useForm, ValidationError } from "@formspree/react";
+import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png";
+import "./contactForm.scss";
 
 /**
  * Creates Contact form
@@ -10,13 +10,20 @@ import "./contactForm.scss"
  * @constructor
  */
 export default function ContactForm() {
-	const [state, handleSubmit] = useForm("mrgrrlkv")
+	const [state, handleSubmit] = useForm("mrgrrlkv");
 	if (state.succeeded) {
 		return (
 			<div className={"submit-form-container"}>
 				<h2>CONTACT US</h2>
-				<img className={"party_popper-image"} src={PartyPopper} alt={""}/>
-				<p>Thank you! Your submission has been received! We'll be in touch with you shortly.</p>
+				<img
+					className={"party_popper-image"}
+					src={PartyPopper}
+					alt={""}
+				/>
+				<p>
+					Thank you! Your submission has been received! We'll be in
+					touch with you shortly.
+				</p>
 				<div className={"contact-button-container"}>
 					<button className="submit-button-back_home">
 						<Link to="/">Home Page</Link>
@@ -36,7 +43,9 @@ export default function ContactForm() {
 					<form onSubmit={handleSubmit}>
 						<div className="first-input-row">
 							<div className="contact-form-field">
-								<label className="contact-form-label">First Name*</label>
+								<label className="contact-form-label">
+									First Name*
+								</label>
 								<div>
 									<input
 										className="small-input"
@@ -53,7 +62,9 @@ export default function ContactForm() {
 								</div>
 							</div>
 							<div className="contact-form-field">
-								<label className="contact-form-label">Last Name*</label>
+								<label className="contact-form-label">
+									Last Name*
+								</label>
 								<div>
 									<input
 										className="small-input"
@@ -104,7 +115,9 @@ export default function ContactForm() {
 							</div>
 						</div>
 						<div className="contact-form-field">
-							<label className="contact-form-label">Message*</label>
+							<label className="contact-form-label">
+								Message*
+							</label>
 							<div>
 								<textarea
 									className="message-input"
@@ -121,7 +134,11 @@ export default function ContactForm() {
 							</div>
 						</div>
 						<div className={"contact-button-container"}>
-							<button className="submit-button" type="submit" disabled={state.submitting}>
+							<button
+								className="submit-button"
+								type="submit"
+								disabled={state.submitting}
+							>
 								Send
 							</button>
 						</div>
@@ -130,4 +147,4 @@ export default function ContactForm() {
 			</div>
 		</section>
 	);
-};
+}
