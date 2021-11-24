@@ -27,7 +27,7 @@ export default function Accordion(props) {
             setOpen(!open);
             setArrow(!arrow);
         }
-    }, []);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     const openAccordion = open ? "accordion-open" : "";
     let flipArrow = arrow ? "icon-flip" : "";
