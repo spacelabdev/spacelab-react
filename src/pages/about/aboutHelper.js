@@ -1,11 +1,7 @@
-///////////////////////
-//////Accordion Helpers
-///////////////////////
 /**
- * Objects containing title and members various space lab teams
- * @type {title:string, members:[{image: string, fullName: string, title: string}]}
+ * Object containing details for the Board of Directors
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
-
 export const boardOFDirectors = {
 	title: "board of directors",
 	members: [
@@ -27,6 +23,10 @@ export const boardOFDirectors = {
 	],
 };
 
+/**
+ * Object containing details for the Team Leads
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const teamLeads = {
 	title: "team leads",
 	members: [
@@ -53,6 +53,10 @@ export const teamLeads = {
 	],
 };
 
+/**
+ * Object containing details for the UX Designers
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const uxDesigners = {
 	title: "ux designers",
 	members: [
@@ -79,6 +83,10 @@ export const uxDesigners = {
 	],
 };
 
+/**
+ * Object containing details for the Front End Developers
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const frontEnd = {
 	title: "front end developers",
 	members: [
@@ -125,6 +133,10 @@ export const frontEnd = {
 	],
 };
 
+/**
+ * Object containing details for the Data Science Team
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const dataScience = {
 	title: "data scientists",
 	members: [
@@ -151,6 +163,10 @@ export const dataScience = {
 	],
 };
 
+/**
+ * Object containing details for the WebGL Team
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const webGL = {
 	title: "WebGL Developers",
 	members: [
@@ -167,6 +183,10 @@ export const webGL = {
 	],
 };
 
+/**
+ * Object containing details for the Staff Writers team
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const writers = {
 	title: "staff writers",
 	members: [
@@ -183,6 +203,10 @@ export const writers = {
 	],
 };
 
+/**
+ * Object containing details for additional contributors to the Spacelab project
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const additionalContributors = {
 	title: "additional contributors",
 	members: [],

@@ -1,20 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import "./accordion.scss";
 import MemberCard from "../memberCard/memberCard";
 
 /**
- * Creates a member card that displays team member's image, name and title
+ * Renders an accordion style drop down div containing cards displaying the info passed as props
  * {title: (string), members: [{image: (string), fullName: (string), title: (string)}]}
  * @param props Object with Title of the team and its respective members
  * @returns {JSX.Element}
  * @constructor
  */
 export default function Accordion(props) {
-	//States
 	const [open, setOpen] = useState(false);
 	const [arrow, setArrow] = useState(false);
-	//Props
-	const { title, members, firstLoad, setFirstLoad } = props;
+	const {title, members, firstLoad, setFirstLoad} = props;
 
 	const handleAccordion = () => {
 		setOpen(!open);
@@ -41,19 +39,13 @@ export default function Accordion(props) {
 				<div className="accordion-container-heading-text-container">
 					{title}
 				</div>
-				<div
-					className={`accordion-container-heading-icon ${flipArrow}`}
-					onClick={handleAccordion}
-				>
+				<div className={`accordion-container-heading-icon ${flipArrow}`} onClick={handleAccordion}>
 					▲
 				</div>
 			</div>
 			<div className={`accordion-container-content ${openAccordion}`}>
 				{members.map((member) => (
-					<MemberCard
-						key={`${title}-${member.fullName}`}
-						member={member}
-					/>
+					<MemberCard key={`${title}-${member.fullName}`} member={member}/>
 				))}
 			</div>
 		</div>
