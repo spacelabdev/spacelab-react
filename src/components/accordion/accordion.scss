@@ -1,71 +1,71 @@
 .accordion-container {
-    height: auto;
-    width: 90%;
+		height: auto;
+		width: 90%;
 
-    &-heading {
-        font-family: "Poppins", sans-serif;
-        font-size: 24px;
-        line-height: 3rem;
-        text-transform: uppercase;
-        color: #a0a0aa;
-        height: 4.4rem;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        @media (min-width: 767px) and (max-width: 1023px) {
-            justify-content: space-evenly;
-            font-size: 32px;
-        }
-        @media (min-width: 1024px) {
-            justify-content: center;
-            font-size: 40px;
-        }
+		&-heading {
+				font-family: "Poppins", sans-serif;
+				font-size: 24px;
+				line-height: 3rem;
+				text-transform: uppercase;
+				color: #a0a0aa;
+				height: 4.4rem;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				@media (min-width: 767px) and (max-width: 1023px) {
+						justify-content: space-evenly;
+						font-size: 32px;
+				}
+				@media (min-width: 1024px) {
+						justify-content: center;
+						font-size: 40px;
+				}
 
-        &-text-container {
-            width: 500px;
+				&-text-container {
+						width: 500px;
 						text-align: left;
-        }
+				}
 
-        &-icon {
-            color: #ba68c8;
-            transform: rotate(180deg);
-            transition: transform 0.2s ease-in;
-            cursor: pointer;
-            @media (min-width: 1024px) {
-                margin-left: 4rem;
-            }
-            @media (min-width: 767px) and (max-width: 1023px) {
-                margin-left: 2rem;
-            }
-            &:hover {
-                color: #f5bcff;
-            }
-        }
+				&-icon {
+						color: #ba68c8;
+						transform: rotate(180deg);
+						transition: transform 0.2s ease-in;
+						cursor: pointer;
+						@media (min-width: 1024px) {
+								margin-left: 4rem;
+						}
+						@media (min-width: 767px) and (max-width: 1023px) {
+								margin-left: 2rem;
+						}
+						&:hover {
+								color: #f5bcff;
+						}
+				}
 
-        .icon-flip {
-            transform: rotate(0deg);
-        }
-    }
+				.icon-flip {
+						transform: rotate(0deg);
+				}
+		}
 
-    &-content {
-        color: #7000ff;
-        max-height: 0px;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        @media (min-width: 767px) and (max-width: 1023px) {
-            flex-direction: row;
-            justify-content: space-around;
-        }
-        @media (min-width: 1024px) {
-            flex-direction: row;
-        }
-    }
+		&-content {
+				color: #7000ff;
+				max-height: 0px;
+				overflow: hidden;
+				transition: all 0.3s ease-in-out;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;
+				@media (min-width: 767px) and (max-width: 1023px) {
+						flex-direction: row;
+						justify-content: space-around;
+				}
+				@media (min-width: 1024px) {
+						flex-direction: row;
+				}
+		}
 
-    .accordion-open {
-        height: auto;
-        max-height: 2500px;
-    }
+		.accordion-open {
+				height: auto;
+				max-height: 2500px;
+		}
 }
