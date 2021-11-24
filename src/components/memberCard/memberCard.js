@@ -12,7 +12,7 @@ export default function MemberCard(props) {
     return (
         <div className="member-card">
             <img src={member.image} alt={`${member.fullName}.png`}></img>
-            <div className="member-card-text">
+            <div className="member-card-text-container">
                 <p className="member-card-text-name">{member.fullName}</p>
                 <p className="member-card-text-title">{member.title}</p>
             </div>

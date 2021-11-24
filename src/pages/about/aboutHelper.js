@@ -1,76 +1,3 @@
-/**
- * Array of objects containing an image url, fullname, and position title for additional contributors
- * to the Spacelab project.
- * @type {[{image: string, fullName: string, title: string}, {}]}
- */
-export const contributorImages = [
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png",
-        fullName: "Raysean Williams",
-        title: "3D Graphics Developer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131338/team_pics/uma_n6hcdv.jpg",
-        fullName: "Uma Muthu",
-        title: "UX Designer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
-        fullName: "Deen Haque",
-        title: "Full Stack Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/mamadou_mtnlfc.png",
-        fullName: "Mamadou Diallo",
-        title: "3D Graphics Developer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
-        fullName: "Jon Zivku",
-        title: "Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
-        fullName: "Charlie Arboleda",
-        title: "Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/yumi_j5x47l.png",
-        fullName: "Yumi Jeon",
-        title: "UX Designer",
-    },
-    {
-        image: "https://i.imgur.com/vxMri4M.png",
-        fullName: "Cally Lin",
-        title: "Data Scientist | Machine Learning Engineer",
-    },
-    {
-        image: "https://i.imgur.com/UXz18XD.png",
-        fullName: "Xu Xu",
-        title: "Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849799/IMG_0284_ptdawp.jpg",
-        fullName: "Bach Le",
-        title: "Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632851200/IMG_0289_dbnhp3.jpg",
-        fullName: "Ian Walls",
-        title: "3D Graphics Developer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
-        fullName: "Kausar Akther",
-        title: "Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632850171/katgirl_lbfxk8.jpg",
-        fullName: "Kat Rendon",
-        title: "Staff Writer",
-    },
-];
-
 ///////////////////////
 //////Accordion Helpers
 ///////////////////////
@@ -257,6 +184,6 @@ export const writers = {
 };
 
 export const additionalContributors = {
-    title: "staff writers",
+    title: "additional contributors",
     members: [],
 };

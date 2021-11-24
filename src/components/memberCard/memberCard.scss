@@ -1,17 +1,13 @@
 .member-card {
     font-family: "Poppins", sans-serif;
-    
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0.5rem 1rem;
     padding: 1rem;
-
     @media (min-width: 767px) and (max-width: 1023px) {
         flex: 1 0 21%;
     }
-
     @media (min-width: 1024px) {
         flex: 1 0 21%;
     }
