@@ -2,17 +2,24 @@ import React, { useState } from "react";
 import "./accordion.scss";
 import MemberCard from "../memberCard/memberCard";
 
+/**
+ * Creates a member card that displays team member's image, name and title
+ * {title: (string), members: [{image: (string), fullName: (string), title: (string)}]}
+ * @param props Object with Title of the team and its respective members
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Accordion(props) {
-  //States
+    //States
     const [open, setOpen] = useState(false);
     const [arrow, setArrow] = useState(false);
-  //Props
-    const {title, members} = props;
+    //Props
+    const { title, members } = props;
 
     const handleAccordion = () => {
-      setOpen(!open);
-      setArrow(!arrow);
-    }
+        setOpen(!open);
+        setArrow(!arrow);
+    };
 
     const openAccordion = open ? "accordion-open" : "";
     const flipArrow = arrow ? "icon-flip" : "";
@@ -20,13 +27,21 @@ export default function Accordion(props) {
     return (
         <div className="accordion-container">
             <div className="accordion-container-heading">
-                <div className="accordion-container-heading-text">
-                    {title}
+                <div className="accordion-container-heading-text">{title}</div>
+                <div
+                    className={`accordion-container-heading-icon ${flipArrow}`}
+                    onClick={handleAccordion}
+                >
+                    ▲
                 </div>
-                <div className={`accordion-container-heading-icon ${flipArrow}`} onClick={handleAccordion}>▲</div>
             </div>
             <div className={`accordion-container-content ${openAccordion}`}>
-              {members.map(member => <MemberCard key={`${title}-${member.fullName}`} member={member}/>)}
+                {members.map((member) => (
+                    <MemberCard
+                        key={`${title}-${member.fullName}`}
+                        member={member}
+                    />
+                ))}
             </div>
         </div>
     );

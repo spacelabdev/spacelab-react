@@ -1,7 +1,12 @@
 import React from "react";
-
 import "./memberCard.scss";
 
+/**
+ * Creates a member card that displays team member's image, name and title
+ * @param props Array of Objects of team members
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function MemberCard(props) {
     const { member } = props;
     return (

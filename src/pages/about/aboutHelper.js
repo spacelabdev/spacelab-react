@@ -1,71 +1,4 @@
 /**
- * Array of objects containing an image url, fullname, and position title for the members of the Spacelab team.
- * @type {[{image: string, fullName: string, title: string}, {}]}
- */
-export const teamImages = [
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131393/team_pics/anna_kc4hqb.jpg",
-        fullName: "Anna Chowattanakul",
-        title: "Lead Front End Developer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png",
-        fullName: "Brandon Cantello",
-        title: "Lead Software Developer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131368/team_pics/ricky_fdzb1y.png",
-        fullName: "Ricky Rong",
-        title: "Machine Learning Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131297/team_pics/Christy_kn3wxm.jpg",
-        fullName: "Christy Min",
-        title: "UX Designer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png",
-        fullName: "Angelines Yaport-Garcia",
-        title: "Full Stack Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130968/team_pics/alex_s0g0a6.png",
-        fullName: "Alex Simon",
-        title: "Data Scientist | Staff Writer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/robert_oggyg8.png",
-        fullName: "Robert Sato",
-        title: "Data Scientist | Machine Learning Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/kat_wzzzo3.png",
-        fullName: "Kat Hackethal",
-        title: "Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/subin_p8gjt5.png",
-        fullName: "Subin Shin",
-        title: "UI/UX Designer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png",
-        fullName: "Phally Bell",
-        title: "Lead UX Designer & Researcher",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130990/team_pics/Ollie_pic_yabvpi.png",
-        fullName: "Ollie Jackson",
-        title: "Software Engineer",
-    },
-    {
-        image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130971/team_pics/Megan_ncesok.png",
-        fullName: "Meghan Slan",
-        title: "DEIB Specialist",
-    },
-];
-
-/**
  * Array of objects containing an image url, fullname, and position title for additional contributors
  * to the Spacelab project.
  * @type {[{image: string, fullName: string, title: string}, {}]}
@@ -142,7 +75,7 @@ export const contributorImages = [
 //////Accordion Helpers
 ///////////////////////
 /**
- * Objects containing title and members various teams
+ * Objects containing title and members various space lab teams
  * @type {title:string, members:[{image: string, fullName: string, title: string}]}
  */
 
