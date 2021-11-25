@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
-import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
+import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
 	projectDispositionFiltersArray,
 	identificationFiltersArray,
@@ -27,6 +27,7 @@ export default function Discovery() {
 	const context = useContext(UniversalContext);
 	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set state for the checkboxes in App instead
 	const [checkedColumns, setCheckedColumns] = useState(initialiseCheckedState())
+	const [numberFilter, setNumberFilter] = useState({})
 	const discTable = [
 		{
 			name: "",
@@ -71,9 +72,6 @@ export default function Discovery() {
 		});
 	};
 
-	console.log(checkedColumns)
-	console.log(context.exoplanetData)
-
 	return (
 		<>
 			<HeroImage/>
@@ -103,53 +101,69 @@ export default function Discovery() {
 
 				<div id={"filtersContainer"}>
 					<p>Filters</p>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={identificationFiltersArray}
 						title={"Identifications"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={exoplanetArchiveFiltersArray}
 						title={"Exoplanets"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={projectDispositionFiltersArray}
 						title={"Dispositions"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={transitPropertiesFiltersArray}
 						title={"Transit Properties"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={thresholdCrossingEventFiltersArray}
 						title={"Threshold Crossing Events"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={stellarParametersFiltersArray}
 						title={"Stellar Parameters"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={kicParametersFiltersArray}
 						title={"KIC Parameters"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={pixelBasedKoiVettingFiltersArray}
 						title={"Pixel Based KOI Vetting"}
 						checked={checkedColumns}
 						setChecked={setCheckedColumns}
+						numberFilter={numberFilter}
+						setNumberFilter={setNumberFilter}
 					/>
 					{/* todo: [Sven Gerlach] button styling */}
 					<ReactBootStrap.Button
