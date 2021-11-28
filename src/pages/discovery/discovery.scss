@@ -12,8 +12,9 @@
   margin: 0 auto;
   @media (min-width: 767px) and (max-width: 1023px) {
     width: 90%;
+    flex-direction: column;
   }
-  @media (min-width: 766px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
   }
 
@@ -26,13 +27,13 @@
   #filtersContainer {
     width: 80vw;
     margin: 0 auto;
+    margin-bottom: 2rem;
     border-style: groove;
-    margin: 1rem;
     text-align: left;
     padding-bottom: 2rem;
     vertical-align: middle;
     @media (min-width: 767px) and (max-width: 1023px) {
-      width: 45vw;  //looks better (I think :))  at 100vw, but since under construction, I don't think it matters.
+      width: 80vw;
     }
     @media (min-width: 1024px) {
       width: 27vw;
