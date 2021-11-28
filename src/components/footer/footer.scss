@@ -81,7 +81,6 @@ on tablets. Can be updated per UX team as necessary.
 
     .left-container {
         flex: 4;
-        width: 100%;
         padding-bottom: 1rem;
         width: 19.5rem;
         @media (min-width: 766px) {
@@ -94,7 +93,6 @@ on tablets. Can be updated per UX team as necessary.
         ul {
             list-style: none;
             text-transform: uppercase;
-            padding: 1.5rem auto auto 0;
             text-align: center;
             @media (min-width: 766px) {
                 text-align: left;
