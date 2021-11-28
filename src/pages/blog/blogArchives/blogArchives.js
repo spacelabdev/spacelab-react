@@ -22,7 +22,7 @@ export default function BlogArchives() {
 				content.indexOf(">", content.indexOf("src=") + 5) - 3);
 
 			blogArray.push(
-				<a className={"blog-tile" }
+				<a className={"blog-tile"}
 				   href={blogs[i].link}
 				   target="_blank"
 				   rel="nofollow noopener noreferrer">

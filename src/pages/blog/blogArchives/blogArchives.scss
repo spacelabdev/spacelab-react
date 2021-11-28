@@ -3,12 +3,12 @@
   margin: 0 auto;
 
   #blog-archive-header {
-    font-size: 3em;
+    font-size: 2.5em;
     padding-bottom: 2rem;
   }
   #blog-archives{
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 1024px) {
