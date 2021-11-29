@@ -14,7 +14,9 @@ export const planetSystemsFiltersArray = [
 	[
 		'planets-within-multiple-planet-systems',
 		'Planets Within Multiple Planet Systems'
-	]
+	],
+
+	
 	// TODO: add remaining elements
 ];
 

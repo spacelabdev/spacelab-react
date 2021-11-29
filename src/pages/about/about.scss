@@ -27,6 +27,7 @@
     #planet-image-container {
       width: 12%;
       align-items: center;
+      margin-left: 100px;
     }
 
     .about-history-image{
@@ -36,7 +37,7 @@
     .history {
       display: flex;
       flex-direction: column;
-      width: 80%;
+      width: 52%;
       margin: auto;
       
     }
@@ -50,13 +51,13 @@
     .history-dot {
       display: flex;
       flex-direction: row;
-      margin-top: -13px;
+      margin-top: -14px;
       img {
         width: 20px;
       }
       h3 {
         margin-bottom: 0;
-        padding-left: 30px;
+        padding-left: 12px;
         color: #FFFFFF;
       }
     }
@@ -66,8 +67,8 @@
       flex-direction: row;
 
       .line {
-        margin-right: 4.5%;
-        margin-left: 1%;
+        margin-right: 5%;
+        margin-left: 1.5%;
         margin-top: -12px;
         margin-bottom: 5px;
        #last-line {
@@ -85,7 +86,7 @@
         color: #FFFFFF;
         text-align: left;
         padding: 1em 0 3em 0;
-        width: 50%;
+        width: 85%;
       }
     }
   }
