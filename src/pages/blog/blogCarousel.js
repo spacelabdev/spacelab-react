@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { UniversalContext } from "../../App";
-import { Carousel } from "react-bootstrap";
+import React, {useContext} from "react";
+import {UniversalContext} from "../../App";
+import {Carousel} from "react-bootstrap";
 import "./blog.scss";
 
 /**
@@ -24,6 +24,7 @@ export default function BlogCarousel() {
 		for (let i = 0; i < numberOfBlogs; i++) {
 			let content = blogs[i]["content:encoded"];
 			content = content.toString();
+			// Parse image url from blog content
 			let imageURL = content.substring(
 				content.indexOf("src=") + 5,
 				content.indexOf(">", content.indexOf("src=") + 5) - 3
@@ -38,11 +39,7 @@ export default function BlogCarousel() {
 							target="_blank"
 							rel="nofollow noopener noreferrer"
 						>
-							<img
-								className={"d-block"}
-								src={imageURL}
-								alt={"carousel slide"}
-							/>
+							<img className={"d-block"} src={imageURL} alt={"carousel slide"}/>
 						</a>
 						<Carousel.Caption>
 							<p className={"blog-title"}>{blogs[i].title}</p>

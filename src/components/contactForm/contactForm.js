@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { useForm, ValidationError } from "@formspree/react";
+import {Link} from "react-router-dom";
+import {useForm, ValidationError} from "@formspree/react";
 import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png";
 import "./contactForm.scss";
 
@@ -15,11 +15,7 @@ export default function ContactForm() {
 		return (
 			<div className={"submit-form-container"}>
 				<h2>CONTACT US</h2>
-				<img
-					className={"party_popper-image"}
-					src={PartyPopper}
-					alt={""}
-				/>
+				<img className={"party_popper-image"} src={PartyPopper} alt={"Hooray!"}/>
 				<p>
 					Thank you! Your submission has been received! We'll be in
 					touch with you shortly.
@@ -43,9 +39,7 @@ export default function ContactForm() {
 					<form onSubmit={handleSubmit}>
 						<div className="first-input-row">
 							<div className="contact-form-field">
-								<label className="contact-form-label">
-									First Name*
-								</label>
+								<label className="contact-form-label">First Name*</label>
 								<div>
 									<input
 										className="small-input"
@@ -54,17 +48,11 @@ export default function ContactForm() {
 										type="firstName"
 										required
 									/>
-									<ValidationError
-										prefix="FirstName"
-										field="firstName"
-										errors={state.errors}
-									/>
+									<ValidationError prefix="FirstName" field="firstName" errors={state.errors}/>
 								</div>
 							</div>
 							<div className="contact-form-field">
-								<label className="contact-form-label">
-									Last Name*
-								</label>
+								<label className="contact-form-label">Last Name*</label>
 								<div>
 									<input
 										className="small-input"
@@ -73,11 +61,7 @@ export default function ContactForm() {
 										type="lastName"
 										required
 									/>
-									<ValidationError
-										prefix="LastName"
-										field="firstName"
-										errors={state.errors}
-									/>
+									<ValidationError prefix="LastName" field="firstName" errors={state.errors}/>
 								</div>
 							</div>
 						</div>
@@ -91,11 +75,7 @@ export default function ContactForm() {
 									type="email"
 									required
 								/>
-								<ValidationError
-									prefix="Email"
-									field="email"
-									errors={state.errors}
-								/>
+								<ValidationError prefix="Email" field="email" errors={state.errors}/>
 							</div>
 						</div>
 						<div className="contact-form-field">
@@ -107,17 +87,11 @@ export default function ContactForm() {
 									name="phone"
 									type="phone"
 								/>
-								<ValidationError
-									prefix="Phone"
-									field="phone"
-									errors={state.errors}
-								/>
+								<ValidationError prefix="Phone" field="phone" errors={state.errors}/>
 							</div>
 						</div>
 						<div className="contact-form-field">
-							<label className="contact-form-label">
-								Message*
-							</label>
+							<label className="contact-form-label">Message*</label>
 							<div>
 								<textarea
 									className="message-input"
@@ -126,21 +100,11 @@ export default function ContactForm() {
 									type="message"
 									required
 								/>
-								<ValidationError
-									prefix="Message"
-									field="message"
-									errors={state.errors}
-								/>
+								<ValidationError prefix="Message" field="message" errors={state.errors}/>
 							</div>
 						</div>
 						<div className={"contact-button-container"}>
-							<button
-								className="submit-button"
-								type="submit"
-								disabled={state.submitting}
-							>
-								Send
-							</button>
+							<button className="submit-button" type="submit" disabled={state.submitting}>Send</button>
 						</div>
 					</form>
 				</div>
