@@ -69,7 +69,7 @@ export default function GlossaryList() {
 			<div id={'glossary-term-def'}>
 				{context.glossaryTermDef}
 				<div id={'glossary-term-image-wrapper'}>
-					<img id={'glossary-term-image'} src={termImage} alt={`${context.currentGlossaryTerm} image`}/>
+					<img id={'glossary-term-image'} src={termImage} alt={`${context.currentGlossaryTerm}`}/>
 				</div>
 			</div>
 		</div>

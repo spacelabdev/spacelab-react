@@ -1,10 +1,15 @@
 import React, {useContext} from "react";
 import {Link} from 'react-router-dom';
 import Logo from "../../assets/spacelab.svg";
-import './navigation.scss'
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
+import './navigation.scss'
 
+/**
+ * Renders Navigation Bar
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function Navigation() {
 	const context = useContext(UniversalContext);
 
@@ -24,6 +29,9 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 							About
 						</Link>
+						<Link className={'nav-link'} to={'/projects'} style={{textDecoration: 'none'}}>
+							Projects
+						</Link>
 						<Link className={'nav-link'} to={'/discovery'} style={{textDecoration: 'none'}}>
 							Discovery
 						</Link>
@@ -32,6 +40,9 @@ export default function Navigation() {
 						</Link>
 						<Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
 							Blog
+						</Link>
+						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
+							Contact
 						</Link>
 					</div>
 				</div>
