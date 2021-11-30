@@ -5,6 +5,9 @@
 .history-section {
   font-family: "Poppins", sans-serif;
   padding-bottom: 10em;
+  @media (max-width: 766px) {
+    padding-bottom: 3em;
+  }
 
   .about-history-header {
     color: #FFFFFF;
@@ -24,6 +27,9 @@
       width: 15%;
       align-items: center;
       margin-left: 140px;
+      @media (max-width: 766px) {
+        margin-left: 10px;
+      }
     }
 
     .about-history-image {
@@ -35,6 +41,10 @@
       flex-direction: column;
       width: 58%;
       margin: 0 auto 0 45px;
+      @media (max-width: 766px) {
+        margin-left: 15px;
+        width: 75%;
+      }
     }
 
     .about-history-wrapper {
@@ -56,6 +66,10 @@
         margin-bottom: 0;
         padding-left: 12px;
         color: #FFFFFF;
+        @media (max-width: 766px) {
+          font-size: 1.25em;
+          padding-left: 0;
+        }
       }
     }
 
@@ -65,6 +79,9 @@
 
       .line {
         margin: -12px 5% 5px 1.5%;
+        @media (max-width: 766px) {
+          margin: -9px 5% 5px 2.95%;
+        }
 
         #last-line {
           height: 150px;
@@ -75,6 +92,9 @@
           width: 2px;
           background-color: #FFFFFF;
           margin-right: 20px;
+          @media (max-width: 766px) {
+            height: 240px;
+          }
         }
       }
 
@@ -83,6 +103,9 @@
         text-align: left;
         padding: 1em 0 3em 0;
         width: 85%;
+      }
+      @media (max-width: 766px) {
+        font-size: 1em;
       }
     }
   }
