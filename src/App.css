@@ -47,7 +47,6 @@ img,
 picture {
   max-width: 100%;
   display: block;
-  margin-right: 20px;
 }
 
 /* Inherit fonts for inputs and buttons */

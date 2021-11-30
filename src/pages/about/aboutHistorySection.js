@@ -7,7 +7,7 @@ import Line from '../../assets/aboutAssets/line.svg'
  * @returns {JSX.Element}
  * @constructor
  */
-export default function HistorySection() {
+export default function AboutHistorySection() {
 	return (
 		<section className="history-section">
 			<h2 className="about-history-header">History</h2>
