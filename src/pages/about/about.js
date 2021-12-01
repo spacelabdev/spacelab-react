@@ -17,5 +17,5 @@ export default function About() {
 			<Team/>
 			<Footer/>
 		</>
-		);
+	);
 };
