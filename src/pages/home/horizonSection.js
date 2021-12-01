@@ -3,6 +3,7 @@ import planet from "../../assets/planet.svg";
 import "./home.scss";
 
 /**
+ * Renders What's on the Horizon Section
  * @returns {JSX.Element}
  * @constructor
  */
@@ -11,16 +12,13 @@ export default function HorizonSection() {
 		<section className="horizon-section">
 			<div className="horizon-content-container">
 				<div className="horizon-left-container">
-					<div>Whats on the horizon</div>
+					<div>What's on the horizon</div>
 					<p>
-						Our current project, the Exoplanetarium, focuses on
-						using data from previous and current NASA satellite
-						missions in a convolutional neural network to search for
-						additional planetary candidates that went unclassified
-						by NASA. Our volunteers come from different disciplines,
-						including data scientists, front-end developers, WebGL
-						developers, and back-end developers, who collaborate and
-						use innovation problem-solving to find more exoplanets.
+						Our current project, the Exoplanetarium, focuses on using data from previous and current NASA
+						satellite missions in a convolutional neural network to search for additional planetary
+						candidates that went unclassified by NASA. Our volunteers come from different disciplines,
+						including data scientists, front-end developers, WebGL developers, and back-end developers,
+						who collaborate and use innovative problem-solving to find potential exoplanets.
 					</p>
 				</div>
 				<div className="horizon-right-container">
