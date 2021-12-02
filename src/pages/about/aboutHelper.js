@@ -1,4 +1,26 @@
 /**
+ * Array of Dates and descriptions for Spacelab History timeline
+ * @type {string[][]}
+ */
+export const aboutHistoryArray = [
+	[
+		'spacelab 2021.00.00',
+		'Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Adipiscing Sed Risus Neque Faucibus Tempus Et Ante. ' +
+		'Neque Aliquam Eleifend Donec Scelerisque Sagittis Risus Semper Faucibus.'
+	],
+	[
+		'spacelab 2021.00.00',
+		'Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Adipiscing Sed Risus Neque Faucibus Tempus Et Ante. ' +
+		'Neque Aliquam Eleifend Donec Scelerisque Sagittis Risus Semper Faucibus.'
+	],
+	[
+		'spacelab 2021.00.00',
+		'Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Adipiscing Sed Risus Neque Faucibus Tempus Et Ante. ' +
+		'Neque Aliquam Eleifend Donec Scelerisque Sagittis Risus Semper Faucibus.'
+	],
+]
+
+/**
  * Object containing details for the Board of Directors
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
