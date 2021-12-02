@@ -5,13 +5,13 @@ import './navigation.scss'
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
 import Dropdown from "../dropdown/dropdown";
+import Button from "../dropdown/button"
 
 export default function Navigation() {
 	const context = useContext(UniversalContext);
+	const [click, setClick] = useState(false);	
+	const handleClick = () => setClick(!click)
 
-	const [click, setClick] = useState{false};
-
-	const handleClick = () => setClick{!click};
 
 	return (
 		<>
@@ -31,9 +31,11 @@ export default function Navigation() {
 						</Link>
 						<Link className={'nav-link'} to={'/project'} style={{textDecoration: 'none'}}>
 							Project
+	
 						</Link>
 						<Link className={'nav-link'} to={'/discovery'} style={{textDecoration: 'none'}}>
-							Discovery
+							Discovery 
+							
 						</Link>
 						<Link className={'nav-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
 							Glossary
@@ -44,6 +46,7 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
 							Contact
 						</Link>
+						<Button />
 						<div className='menu-icon' onClick={handleClick}>
 							<i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
 						</div>
