@@ -7,6 +7,7 @@ import Team from "./TeamSection";
 import Footer from "../../components/footer/footer";
 
 /**
+ * Renders About Page
  * @returns {JSX.Element}
  * @constructor
  */
@@ -19,5 +20,5 @@ export default function About() {
 			<Team/>
 			<Footer/>
 		</>
-		);
+	);
 };

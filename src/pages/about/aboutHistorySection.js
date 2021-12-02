@@ -1,13 +1,37 @@
 import React from 'react';
 import Planets_Circle from '../../assets/aboutAssets/planet_circle.png'
-import Dot from '../../assets/aboutAssets/dot.svg'
-import Line from '../../assets/aboutAssets/line.svg'
+import {aboutHistoryArray} from "./aboutHelper";
+import Dot from "../../assets/aboutAssets/dot.svg";
 
 /**
  * @returns {JSX.Element}
  * @constructor
  */
 export default function AboutHistorySection() {
+	const historyItems = [];
+
+	for (let i = 0; i < aboutHistoryArray.length; i++) {
+		let isLast = 'normal';
+		if (i === aboutHistoryArray.length - 1) {
+			isLast = 'last';
+		}
+
+		historyItems.push(
+			<div className="about-history-wrapper">
+				<div className="history-dot">
+					<img src={Dot} alt={"Space"}/>
+					<h3>{aboutHistoryArray[i][0]}</h3>
+				</div>
+				<div className="about-history-content">
+					<div className={'div-line'} />
+					<p className={`history-paragraph-${isLast}`}>
+						{aboutHistoryArray[i][1]}
+					</p>
+				</div>
+			</div>
+		);
+	}
+
 	return (
 		<section className="history-section">
 			<h2 className="about-history-header">History</h2>
@@ -16,57 +40,7 @@ export default function AboutHistorySection() {
 					<img className={"about-history-image"} src={Planets_Circle} alt={"Space"}/>
 				</div>
 				<div className="history">
-					<div className="about-history-wrapper">
-						<div className="history-dot">
-							<img src={Dot} alt={"Space"}/>
-							<h3>spacelab 2021.00.00</h3>
-						</div>
-						<div className="about-history-content">
-							<div className={"line"}>
-								<img src={Line} alt={"Space"}/>
-							</div>
-							<p>
-								Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing
-								Elit Adipiscing Sed Risus Neque Faucibus Tempus Et
-								Ante. Neque Aliquam Eleifend Donec Scelerisque Sagittis
-								Risus Semper Faucibus.
-							</p>
-						</div>
-					</div>
-					<div className="about-history-wrapper">
-						<div className="history-dot">
-							<img src={Dot} alt={"Space"}/>
-							<h3>spacelab 2021.00.00</h3>
-						</div>
-						<div className="about-history-content">
-							<div className={"line"}>
-								<img src={Line} alt={"Space"}/>
-							</div>
-							<p>
-								Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing
-								Elit Adipiscing Sed Risus Neque Faucibus Tempus Et
-								Ante. Neque Aliquam Eleifend Donec Scelerisque Sagittis
-								Risus Semper Faucibus.
-							</p>
-						</div>
-					</div>
-					<div className="about-history-wrapper">
-						<div className="history-dot">
-							<img src={Dot} alt={"Space"}/>
-							<h3>spacelab 2021.00.00</h3>
-						</div>
-						<div className="about-history-content">
-							<div className={"line"}>
-								<img id="last-line"  src={Line} alt={"Space"}/>
-							</div>
-							<p>
-								Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing
-								Elit Adipiscing Sed Risus Neque Faucibus Tempus Et
-								Ante. Neque Aliquam Eleifend Donec Scelerisque Sagittis
-								Risus Semper Faucibus.
-							</p>
-						</div>
-					</div>
+					{historyItems}
 				</div>
 			</div>
 		</section>

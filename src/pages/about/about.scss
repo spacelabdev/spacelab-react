@@ -27,8 +27,11 @@
         width: 15%;
         align-items: center;
         margin-left: 140px;
-        @media (max-width: 768px) {
-          margin-left: 10px;
+        @media (max-width: 766px) {
+          display: none;
+        }
+        @media (min-width: 767px) and (max-width: 1023px) {
+          margin-left: 75px;
         }
       }
   
@@ -43,7 +46,7 @@
         margin: 0 auto 0 45px;
         @media (max-width: 766px) {
           margin-left: 15px;
-          width: 75%;
+          width: 90%;
         }
       }
   
@@ -86,7 +89,7 @@
           #last-line {
             height: 150px;
             @media (max-width: 768px) {
-                height: 200px;
+                height: 235px;
             }
           }
   
@@ -100,7 +103,16 @@
             }
           }
         }
-  
+
+        .div-line {
+          height: 100%;
+          border-left: 2px solid white;
+          margin: -7px 13% 5px 9px;
+          @media (min-width: 767px) {
+            margin: -7px 50px 5px 9px;
+          }
+        }
+
         p {
           color: #FFFFFF;
           text-align: left;
@@ -109,7 +121,10 @@
         }
         @media (max-width: 766px) {
           font-size: 1em;
-         
+        }
+
+        .history-paragraph-last {
+          padding-bottom: .5em !important;
         }
       }
     }
