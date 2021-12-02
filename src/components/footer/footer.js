@@ -75,7 +75,8 @@ export default function Footer() {
 								Blog
 							</Link>
 						</li>
-						<li>Terms of Use</li>
+						{/*Hidden until terms of use page is created*/}
+						{/*<li>Terms of Use</li>*/}
 					</ul>
 				</div>
 			</div>
