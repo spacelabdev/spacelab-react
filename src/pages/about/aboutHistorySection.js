@@ -23,7 +23,7 @@ export default function AboutHistorySection() {
 					<h3>{aboutHistoryArray[i][0]}</h3>
 				</div>
 				<div className="about-history-content">
-					<div className={'div-line'} />
+					<div className={'div-line'}/>
 					<p className={`history-paragraph-${isLast}`}>
 						{aboutHistoryArray[i][1]}
 					</p>
