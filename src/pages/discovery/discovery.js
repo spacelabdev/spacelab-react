@@ -50,6 +50,10 @@ export default function Discovery() {
 		)
 	}
 
+	console.log(context.exoplanetData)
+	console.log(checkedColumns)
+	console.log(numberFilter)
+
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var
 	 * @return {Promise<void>}
