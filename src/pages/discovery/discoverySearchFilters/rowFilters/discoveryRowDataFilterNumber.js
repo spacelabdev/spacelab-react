@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Form } from "react-bootstrap";
 
 
@@ -11,8 +11,8 @@ import { Form } from "react-bootstrap";
 export default function DiscoveryRowDataFilterNumber(props) {
     const {
         dataName,
-        numberFilter,
-        setNumberFilter
+        whereFilter,
+        setWhereFilter
     } = props;
 
     const handleFormValueChange = (e) => {
@@ -20,7 +20,7 @@ export default function DiscoveryRowDataFilterNumber(props) {
         const value = e.target.value
 
         // update operator and value state
-        setNumberFilter(prevState => {
+        setWhereFilter(prevState => {
             const newDataNameObj = Object.assign(prevState[dataName], { [key]: value })
             return { ...prevState, [dataName]: newDataNameObj}
         })
@@ -32,7 +32,7 @@ export default function DiscoveryRowDataFilterNumber(props) {
             <Form.Control
                 as="select"
                 name={'operator'}
-                value={numberFilter[dataName]['operator']}
+                value={whereFilter[dataName]['operator']}
                 onChange={e => handleFormValueChange(e)}
             >
                 <option value={"<"}>&lt;</option>
@@ -42,7 +42,7 @@ export default function DiscoveryRowDataFilterNumber(props) {
             <Form.Control
                 placeholder={'Number'}
                 name={'value'}
-                value={numberFilter[dataName]['value']}
+                value={whereFilter[dataName]['value']}
                 onChange={e => handleFormValueChange(e)}
             />
         </>

@@ -74,14 +74,23 @@ function getWhereQueryString(where) {
 
 	// iterate over all keys with a valid value and append to query string
 	propertyKeysWithValue.forEach((columnName, index) => {
+		const value = where[columnName].value
+		const dataType = where[columnName].dataType
+
 		// add " and " string if at least one more filter criteria is added
 		if (index > 0) {
 			queryString += ' and '
 		}
-		const operator = where[columnName].operator
-		const value = where[columnName].value
-		queryString += `${columnName}${operator}${value}`
+		if (dataType === 'number') {
+			const operator = where[columnName].operator
+			queryString += `${columnName}${operator}${value}`
+		}
+		else if (dataType === 'string') {
+			queryString += `${columnName} like '${value}'`
+		}
 	})
+
+	console.log(queryString)
 
 	return queryString
 }

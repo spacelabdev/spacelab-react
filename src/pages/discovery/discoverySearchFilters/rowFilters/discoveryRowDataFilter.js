@@ -1,13 +1,14 @@
 import React, { useEffect } from "react";
 import DiscoveryRowDataFilterNumber from "./discoveryRowDataFilterNumber";
+import DiscoveryRowDataFilterGeneric from "./discoveryRowDataFilterGeneric";
 
 
 export default function DiscoveryRowDataFilter(props) {
     const {
         dataType,
         dataName,
-        numberFilter,
-        setNumberFilter
+        whereFilter,
+        setWhereFilter
     } = props
 
     const getFilterType = () => {
@@ -17,19 +18,19 @@ export default function DiscoveryRowDataFilter(props) {
                 return (
                     <DiscoveryRowDataFilterNumber
                         dataName={dataName}
-                        numberFilter={numberFilter}
-                        setNumberFilter={setNumberFilter}
+                        whereFilter={whereFilter}
+                        setWhereFilter={setWhereFilter}
                     />
                 )
-            case 'string':
-                console.log('string')
-                return ''
-            case 'enum':
-                console.log('enum')
-                return ''
-            case 'date':
-                console.log('date')
-                return ''
+            default:
+                return (
+                    <DiscoveryRowDataFilterGeneric
+                        dataType={dataType}
+                        dataName={dataName}
+                        whereFilter={whereFilter}
+                        setWhereFilter={setWhereFilter}
+                    />
+                )
         }
     }
 

@@ -12,10 +12,10 @@ export default function DiscoveryColumnFilterList(props) {
 	const {
 		filterArray,
 		title,
-		setChecked,
-		checked,
-		numberFilter,
-		setNumberFilter,
+		selectedColumns,
+		setSelectedColumns,
+		whereFilter,
+		setWhereFilter,
 	} = props;
 
 
@@ -24,10 +24,10 @@ export default function DiscoveryColumnFilterList(props) {
 			<DiscoveryColumnFilterListItem
 				key={index}
 				filterColumn={filterColumn}
-				setChecked={setChecked}
-				checked={checked}
-				numberFilter={numberFilter}
-				setNumberFilter={setNumberFilter}
+				setSelectedColumns={setSelectedColumns}
+				selectedColumns={selectedColumns}
+				whereFilter={whereFilter}
+				setWhereFilter={setWhereFilter}
 			/>
 		)
 	});

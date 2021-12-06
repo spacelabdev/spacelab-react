@@ -26,8 +26,8 @@ import initialiseCheckedState from "./initialiseCheckedState";
 export default function Discovery() {
 	const context = useContext(UniversalContext);
 	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set state for the checkboxes in App instead
-	const [checkedColumns, setCheckedColumns] = useState(initialiseCheckedState())
-	const [numberFilter, setNumberFilter] = useState({})
+	const [selectedColumns, setSelectedColumns] = useState(initialiseCheckedState())
+	const [whereFilter, setWhereFilter] = useState({})
 	const discTable = [
 		{
 			name: "",
@@ -51,8 +51,8 @@ export default function Discovery() {
 	}
 
 	console.log(context.exoplanetData)
-	console.log(checkedColumns)
-	console.log(numberFilter)
+	console.log(selectedColumns)
+	console.log(whereFilter)
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var
@@ -60,8 +60,8 @@ export default function Discovery() {
 	 */
 	const queryExoplanetDatabase = async () => {
 		await getExoplanets({
-			select: checkedColumns,
-			where: numberFilter,
+			select: selectedColumns,
+			where: whereFilter,
 			order: ''
 		}).then(res => {
 			if (res.status === 200) {
@@ -108,66 +108,66 @@ export default function Discovery() {
 					<DiscoveryColumnFilterList
 						filterArray={identificationFiltersArray}
 						title={"Identifications"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={exoplanetArchiveFiltersArray}
 						title={"Exoplanets"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={projectDispositionFiltersArray}
 						title={"Dispositions"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={transitPropertiesFiltersArray}
 						title={"Transit Properties"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={thresholdCrossingEventFiltersArray}
 						title={"Threshold Crossing Events"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={stellarParametersFiltersArray}
 						title={"Stellar Parameters"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={kicParametersFiltersArray}
 						title={"KIC Parameters"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={pixelBasedKoiVettingFiltersArray}
 						title={"Pixel Based KOI Vetting"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
-						numberFilter={numberFilter}
-						setNumberFilter={setNumberFilter}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
 					/>
 					{/* todo: [Sven Gerlach] button styling */}
 					<ReactBootStrap.Button

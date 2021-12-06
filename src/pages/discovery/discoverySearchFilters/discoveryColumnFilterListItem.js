@@ -11,13 +11,13 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 export default function DiscoveryColumnFilterListItem(props) {
 	const {
 		filterColumn,
-		checked,
-		setChecked,
-		numberFilter,
-		setNumberFilter
+		selectedColumns,
+		setSelectedColumns,
+		whereFilter,
+		setWhereFilter
 	} = props;
 
-	const isFilterListItemChecked = checked[filterColumn.name]
+	const isFilterListItemChecked = selectedColumns[filterColumn.name]
 
 	const checkbox_style = {
 		width: "1.25rem",
@@ -27,25 +27,31 @@ export default function DiscoveryColumnFilterListItem(props) {
 	function handleCheckboxClick(e) {
 		// if current state of checkbox is unchecked, create base state for number filter
 		// this is necessary since the value of the controlled component must be declared before the initial render
-		if (!checked[filterColumn.name]) {
+		if (!selectedColumns[filterColumn.name]) {
 			console.log('checked')
-			setNumberFilter(prevState => {
-				return Object.assign(prevState, { [filterColumn.name]: { 'operator': '<', 'value': '' } })
+			setWhereFilter(prevState => {
+				switch (filterColumn.dataType) {
+					case 'number':
+						return Object.assign(prevState, {
+							[filterColumn.name]: { 'operator': '<', 'value': '', 'dataType': filterColumn.dataType }
+						})
+					default:
+						return Object.assign(prevState, {
+							[filterColumn.name]: { 'value': '', 'dataType': filterColumn.dataType }
+						})
+				}
 			})
 		}
 		else {
 			// delete the state if the filter is removed
-			setNumberFilter(prevState => {
+			setWhereFilter(prevState => {
 				delete prevState[filterColumn.name]
 				return prevState
 			})
 		}
 
 		// set state of checked / unchecked checkbox
-		setChecked(prevState => {
-			// const newState = { ...prevState }
-			// newState[filterColumn.name] = !prevState[filterColumn.name]
-			// return newState
+		setSelectedColumns(prevState => {
 			return { ...prevState, [filterColumn.name]: !prevState[filterColumn.name] }
 		})
 	}
@@ -75,8 +81,8 @@ export default function DiscoveryColumnFilterListItem(props) {
 		<DiscoveryRowDataFilter
 			dataType={filterColumn.dataType}
 			dataName={filterColumn.name}
-			numberFilter={numberFilter}
-			setNumberFilter={setNumberFilter}
+			whereFilter={whereFilter}
+			setWhereFilter={setWhereFilter}
 		/>
 	)
 
