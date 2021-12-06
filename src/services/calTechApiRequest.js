@@ -63,7 +63,27 @@ function getSelectQueryString(select) {
 }
 
 function getWhereQueryString(where) {
-	return where
+	let queryString = ''
+
+	// iterate over all column names and add their operators and values to the query string
+	// collect all own properties of object
+	const propertyKeys = Object.keys(where)
+
+	// filter keys for those that have a value other than an empty string
+	const propertyKeysWithValue = propertyKeys.filter(columnName => where[columnName].value !== '')
+
+	// iterate over all keys with a valid value and append to query string
+	propertyKeysWithValue.forEach((columnName, index) => {
+		// add " and " string if at least one more filter criteria is added
+		if (index > 0) {
+			queryString += ' and '
+		}
+		const operator = where[columnName].operator
+		const value = where[columnName].value
+		queryString += `${columnName}${operator}${value}`
+	})
+
+	return queryString
 }
 
 /**

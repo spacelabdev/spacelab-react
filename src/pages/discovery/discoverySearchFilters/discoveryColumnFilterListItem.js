@@ -1,6 +1,6 @@
 import React from "react";
 import DiscoveryRowDataFilter from "./rowFilters/discoveryRowDataFilter";
-import { Form, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 /**
  * Creates check box for planet system element
@@ -25,10 +25,28 @@ export default function DiscoveryColumnFilterListItem(props) {
 	}
 
 	function handleCheckboxClick(e) {
+		// if current state of checkbox is unchecked, create base state for number filter
+		// this is necessary since the value of the controlled component must be declared before the initial render
+		if (!checked[filterColumn.name]) {
+			console.log('checked')
+			setNumberFilter(prevState => {
+				return Object.assign(prevState, { [filterColumn.name]: { 'operator': '<', 'value': '' } })
+			})
+		}
+		else {
+			// delete the state if the filter is removed
+			setNumberFilter(prevState => {
+				delete prevState[filterColumn.name]
+				return prevState
+			})
+		}
+
+		// set state of checked / unchecked checkbox
 		setChecked(prevState => {
-			const newState = { ...prevState }
-			newState[filterColumn.name] = !prevState[filterColumn.name]
-			return newState
+			// const newState = { ...prevState }
+			// newState[filterColumn.name] = !prevState[filterColumn.name]
+			// return newState
+			return { ...prevState, [filterColumn.name]: !prevState[filterColumn.name] }
 		})
 	}
 

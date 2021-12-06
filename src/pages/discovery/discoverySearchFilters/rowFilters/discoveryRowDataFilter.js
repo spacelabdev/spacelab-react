@@ -1,7 +1,5 @@
-import React from "react";
-import { Form } from "react-bootstrap";
+import React, { useEffect } from "react";
 import DiscoveryRowDataFilterNumber from "./discoveryRowDataFilterNumber";
-import data from "bootstrap/js/src/dom/data";
 
 
 export default function DiscoveryRowDataFilter(props) {
@@ -15,6 +13,7 @@ export default function DiscoveryRowDataFilter(props) {
     const getFilterType = () => {
         switch (dataType) {
             case 'number':
+                // render the row data filter
                 return (
                     <DiscoveryRowDataFilterNumber
                         dataName={dataName}
