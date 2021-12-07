@@ -32,10 +32,12 @@ export default function DiscoveryColumnFilterListItem(props) {
 			setWhereFilter(prevState => {
 				switch (filterColumn.dataType) {
 					case 'number':
+					case 'date':
 						return Object.assign(prevState, {
 							[filterColumn.name]: { 'operator': '<', 'value': '', 'dataType': filterColumn.dataType }
 						})
-					default:
+					case 'string':
+					case 'enum':
 						return Object.assign(prevState, {
 							[filterColumn.name]: { 'value': '', 'dataType': filterColumn.dataType }
 						})
@@ -56,6 +58,7 @@ export default function DiscoveryColumnFilterListItem(props) {
 		})
 	}
 
+	// add tooltips as an overlay when hovering over the column filters
 	function ColumnLabelWithTooltip () {
 		const renderTooltip = (props) => (
 			<Tooltip id={'column-tooltip'} {...props}>
@@ -77,6 +80,7 @@ export default function DiscoveryColumnFilterListItem(props) {
 		)
 	}
 
+	// display row filters for any checked column whereby row filters are subject to the column's data type
 	const discoveryRowDataFilter = (
 		<DiscoveryRowDataFilter
 			dataType={filterColumn.dataType}

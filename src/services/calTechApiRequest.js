@@ -19,6 +19,7 @@
  * 		&where=validColName>value -> returns all rows where row value of validColName is greater than value
  * 		&where=kepler_name like 'Kepler-52 c' -> returns rows containing the specified string
  * 		&where=kepler_name is null -> use "is" if searching for null values
+ * 		&where=koi_vet_date>to_date('2013-02-10','yyyy-mm-dd') -> filter rows with dates after 2013-02-10
  * 		&where=discoverymethod like 'Microlensing' and st_nts > 0 -> use "and" for joined filters
  * 	5) order: controls order in which rows are returned
  * 		&order=colA,colB -> ascending order with "colA" as primary filter and "colB" as secondary filter
@@ -87,6 +88,10 @@ function getWhereQueryString(where) {
 		}
 		else if (dataType === 'string') {
 			queryString += `${columnName} like '${value}'`
+		}
+		else if (dataType === 'date') {
+			const operator = where[columnName].operator
+			queryString += `${columnName}${operator}to_date('${value}','yyyy-mm-dd')`
 		}
 	})
 

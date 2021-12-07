@@ -3,12 +3,12 @@ import { Form } from "react-bootstrap";
 
 
 /**
- * Component "where" row filter component for all columns with data type 'string', 'enum', and 'data'
+ * Filter data columns with data type 'string' and 'enum'
  * @param props
  * @return {JSX.Element}
  * @constructor
  */
-export default function DiscoveryRowDataFilterGeneric(props) {
+export default function DiscoveryRowDataFilterStringAndEnum(props) {
     const {
         dataType,
         dataName,
@@ -42,16 +42,6 @@ export default function DiscoveryRowDataFilterGeneric(props) {
                 return (
                     <Form.Control
                         placeholder={'Select'}
-                        name={'value'}
-                        value={whereFilter[dataName]['value']}
-                        onChange={e => handleFormValueChange(e)}
-                    />
-                )
-            case 'date':
-                return (
-                    <Form.Control
-                        placeholder={'Date'}
-                        type={'date'}
                         name={'value'}
                         value={whereFilter[dataName]['value']}
                         onChange={e => handleFormValueChange(e)}

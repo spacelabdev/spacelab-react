@@ -3,13 +3,14 @@ import { Form } from "react-bootstrap";
 
 
 /**
- * Component "where" row filter component for all columns with data type "number"
+ * Filter data columns with data type 'number'
  * @param props
  * @return {JSX.Element}
  * @constructor
  */
-export default function DiscoveryRowDataFilterNumber(props) {
+export default function DiscoveryRowDataFilterNumberAndDate(props) {
     const {
+        dataType,
         dataName,
         whereFilter,
         setWhereFilter
@@ -26,6 +27,29 @@ export default function DiscoveryRowDataFilterNumber(props) {
         })
     }
 
+    const valueFilterJSX = () => {
+        switch (dataType) {
+            case 'number':
+                return (
+                    <Form.Control
+                        placeholder={'Number'}
+                        name={'value'}
+                        value={whereFilter[dataName]['value']}
+                        onChange={e => handleFormValueChange(e)}
+                    />
+                )
+            case 'date':
+                return (
+                    <Form.Control
+                        type={'date'}
+                        name={'value'}
+                        value={whereFilter[dataName]['value']}
+                        onChange={e => handleFormValueChange(e)}
+                    />
+                )
+        }
+    }
+
     return (
         <>
             {/* todo: [Sven Gerlach] styling */}
@@ -39,12 +63,7 @@ export default function DiscoveryRowDataFilterNumber(props) {
                 <option value={"="}>=</option>
                 <option value={">"}>&gt;</option>
             </Form.Control>
-            <Form.Control
-                placeholder={'Number'}
-                name={'value'}
-                value={whereFilter[dataName]['value']}
-                onChange={e => handleFormValueChange(e)}
-            />
+            {valueFilterJSX()}
         </>
     )
 }
