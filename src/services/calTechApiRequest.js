@@ -12,6 +12,7 @@
  * 		$select=default -> default columns (smaller subset of all available columns)
  * 		&select=colA,colT,colZ -> adds columns to default output
  * 		&select=distinct colA,colT,colZ -> replace default columns
+ * 		$select=distinct colA -> if colA is of data type enum this syntax returns set of possible enum attributes
  * 	3) count: return number of rows that fulfill query (see "where")
  * 		&select=count(*) -> returns number of rows in data table
  * 		&select:count(*)&where=koi_period>[x]
@@ -50,17 +51,28 @@ function getSelectQueryString(select) {
 	let queryString = "distinct "
 
 	// counter for checked checkboxes
-	let countChecked = 0
+	let isAtLeastOneCheckboxChecked = false
+	let checkedCounter = 0
 
-	for (const [columnName, checked] of Object.entries(select)) {
+	Object.entries(select).forEach(([columnName, checked]) =>  {
 		if (checked) {
-			countChecked += 1
-			queryString += `,${columnName}`
+			// set var to true if at least one column has been checked
+			isAtLeastOneCheckboxChecked = true
+
+			// append column name, with a pre-pended comma if the checkedCounter is greater than zero
+			checkedCounter === 0
+				? queryString += `${columnName}`
+				: queryString += `,${columnName}`
+
+			// increase checkedCounter by 1
+			checkedCounter += 1
 		}
-	}
+	})
+
+	console.log(queryString)
 
 	// if no checkboxes checked return empty query string otherwise return queryString
-	return countChecked ? queryString : ""
+	return isAtLeastOneCheckboxChecked ? queryString : ""
 }
 
 function getWhereQueryString(where) {
@@ -77,21 +89,29 @@ function getWhereQueryString(where) {
 	propertyKeysWithValue.forEach((columnName, index) => {
 		const value = where[columnName].value
 		const dataType = where[columnName].dataType
+		let operator
 
 		// add " and " string if at least one more filter criteria is added
 		if (index > 0) {
 			queryString += ' and '
 		}
-		if (dataType === 'number') {
-			const operator = where[columnName].operator
-			queryString += `${columnName}${operator}${value}`
-		}
-		else if (dataType === 'string') {
-			queryString += `${columnName} like '${value}'`
-		}
-		else if (dataType === 'date') {
-			const operator = where[columnName].operator
-			queryString += `${columnName}${operator}to_date('${value}','yyyy-mm-dd')`
+
+		// add string subject to data type
+		switch (dataType) {
+			case 'number':
+				operator = where[columnName].operator
+				queryString += `${columnName}${operator}${value}`
+				break
+			// enum and string have the same filter syntax which is why the enum case is allowed to fall-through to the
+			// string case
+			case 'enum':
+			case 'string':
+				queryString += `${columnName} like '${value}'`
+				break
+			case 'date':
+				operator = where[columnName].operator
+				queryString += `${columnName}${operator}to_date('${value}','yyyy-mm-dd')`
+				break
 		}
 	})
 
@@ -128,6 +148,8 @@ export const getExoplanets = async (
 		order: order,
 		format: format
 	}
+
+	console.log(params)
 
 	try {
 		return await api.get('', { params });
