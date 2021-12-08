@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 
 
 /**
- * Filter data columns with data type 'number'
+ * Display filter options to user for columns with data type 'number' and 'date'
  * @param props
  * @return {JSX.Element}
  * @constructor

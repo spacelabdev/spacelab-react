@@ -3,6 +3,12 @@ import DiscoveryRowDataFilterNumberAndDate from "./discoveryRowDataFilterNumberA
 import DiscoveryRowDataFilterStringAndEnum from "./discoveryRowDataFilterStringAndEnum";
 
 
+/**
+ * Depending on the checked / selected column's data type, this function renders the appropriate component
+ * @param props
+ * @return {JSX.Element}
+ * @constructor
+ */
 export default function DiscoveryRowDataFilter(props) {
     const {
         dataType,

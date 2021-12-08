@@ -4,6 +4,8 @@ import "../discovery.scss"
 
 /**
  * Maps over filtersArray and passes elements to DiscoveryColumnFilterListItem to be parsed and rendered.
+ * filtersArray contains all DiscoveryColumnFilterListItems which draw data for the filters from the filterArray source
+ * data (see discoveryHelper module)
  * @param props filterArray = an array with filter values from discoveryHelper. title = String title for the filter group
  * @returns {JSX.Element}
  * @constructor

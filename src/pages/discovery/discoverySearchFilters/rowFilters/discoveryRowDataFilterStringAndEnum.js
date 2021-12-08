@@ -4,7 +4,7 @@ import { getExoplanets } from "../../../../services/calTechApiRequest";
 
 
 /**
- * Filter data columns with data type 'string' and 'enum'
+ * Display filter options to users for columns with data type 'string' and 'enum'
  * @param props
  * @return {JSX.Element}
  * @constructor
@@ -19,8 +19,10 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
 
     const [enumAttributes, setEnumAttributes] = useState([])
 
-    // upon mounting the component with a dataType of enum, make API call to retrieve all possible enum attributes
-    // run effect only if dataName changes
+    /**
+     * Upon mounting the component with a dataType of enum, make API call to retrieve all possible enum attributes
+     * run effect only if dataName changes
+     */
     useEffect(() => {
         // make API call for enum data types only
         // todo: [Sven Gerlach] making an API call takes too long and hence leads to poor UX
@@ -45,11 +47,15 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
         }
     }, [dataName])
 
+    /**
+     * Update state with form values
+     * @param e
+     */
     const handleFormValueChange = (e) => {
         const key = e.target.name
         const value = e.target.value
 
-        // update operator and value state
+        // update value state
         setWhereFilter(prevState => {
             const newDataNameObj = Object.assign(prevState[dataName], { [key]: value })
             return { ...prevState, [dataName]: newDataNameObj}
@@ -79,6 +85,10 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
         }
     }
 
+    /**
+     * JSX returns form element that is tailored to either string or enum data type columns
+     * @return {JSX.Element}
+     */
     const filterJSX = () => {
         switch (dataType) {
             case 'string':
@@ -94,7 +104,6 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
                 return (
                     <Form.Control
                         as={'select'}
-                        placeholder={'Select'}
                         name={'value'}
                         value={whereFilter[dataName]['value']}
                         onChange={e => handleFormValueChange(e)}
