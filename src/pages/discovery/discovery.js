@@ -112,6 +112,7 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={exoplanetArchiveFiltersArray}
@@ -120,6 +121,7 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={projectDispositionFiltersArray}
@@ -128,6 +130,7 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={transitPropertiesFiltersArray}
@@ -136,6 +139,7 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={thresholdCrossingEventFiltersArray}
@@ -144,6 +148,7 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={stellarParametersFiltersArray}
@@ -152,6 +157,7 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={kicParametersFiltersArray}
@@ -160,6 +166,7 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={pixelBasedKoiVettingFiltersArray}
@@ -168,12 +175,8 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					{/* todo: [Sven Gerlach] button styling */}
-					<ReactBootStrap.Button
-						variant={"primary"}
-						onClick={queryExoplanetDatabase}
-					>Filter</ReactBootStrap.Button>
 				</div>
 			</div>
 			<Footer/>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Form } from "react-bootstrap";
 import { getExoplanets } from "../../../../services/calTechApiRequest";
+import { useEffectSkipFirstRender } from "../../../../services/utilityFunctions";
 
 
 /**
@@ -14,10 +15,15 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
         dataType,
         dataName,
         whereFilter,
-        setWhereFilter
+        setWhereFilter,
+        queryExoplanetDatabase,
     } = props;
 
     const [enumAttributes, setEnumAttributes] = useState([])
+
+    useEffectSkipFirstRender(() => {
+        queryExoplanetDatabase()
+    }, [whereFilter])
 
     /**
      * Upon mounting the component with a dataType of enum, make API call to retrieve all possible enum attributes
@@ -48,7 +54,7 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
                 })
                 .catch(e => console.error(e))
         }
-    }, [dataName])
+    }, [dataName, dataType])
 
     /**
      * Update state with form values

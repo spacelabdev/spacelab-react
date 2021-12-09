@@ -1,5 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import { useEffectSkipFirstRender } from "../../../../services/utilityFunctions";
 
 
 /**
@@ -13,7 +14,8 @@ export default function DiscoveryRowDataFilterNumberAndDate(props) {
         dataType,
         dataName,
         whereFilter,
-        setWhereFilter
+        setWhereFilter,
+        queryExoplanetDatabase,
     } = props;
 
     const handleFormValueChange = (e) => {
@@ -26,6 +28,12 @@ export default function DiscoveryRowDataFilterNumberAndDate(props) {
             return { ...prevState, [dataName]: newDataNameObj}
         })
     }
+
+    console.log(whereFilter[dataName])
+
+    useEffectSkipFirstRender(() => {
+        queryExoplanetDatabase()
+    }, [whereFilter])
 
     const valueFilterJSX = () => {
         switch (dataType) {

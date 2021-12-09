@@ -14,7 +14,8 @@ export default function DiscoveryRowDataFilter(props) {
         dataType,
         dataName,
         whereFilter,
-        setWhereFilter
+        setWhereFilter,
+        queryExoplanetDatabase,
     } = props
 
     // render the row data filter
@@ -28,6 +29,7 @@ export default function DiscoveryRowDataFilter(props) {
                         dataName={dataName}
                         whereFilter={whereFilter}
                         setWhereFilter={setWhereFilter}
+                        queryExoplanetDatabase={queryExoplanetDatabase}
                     />
                 )
             case 'string':
@@ -38,6 +40,7 @@ export default function DiscoveryRowDataFilter(props) {
                         dataName={dataName}
                         whereFilter={whereFilter}
                         setWhereFilter={setWhereFilter}
+                        queryExoplanetDatabase={queryExoplanetDatabase}
                     />
                 )
         }
