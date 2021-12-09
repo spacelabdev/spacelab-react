@@ -47,9 +47,16 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
                     // convert enumAttributes array into enumSet (non-overlapping, unique attributes)
                     const enumSet = new Set(enumAttributes)
 
+                    // convert set back to array
+                    const enumSetArray = Array.from(enumSet)
+                    console.log(enumSetArray)
+
+                    // remove 'null' values
+                    const enumSetExNullValues = enumSetArray.filter(attribute => attribute)
+
                     // store set in state such that it can be used by the input tag of type select
                     setEnumAttributes(prevState => {
-                        return [ ...prevState, ...enumSet ]
+                        return [ ...prevState, ...enumSetExNullValues ]
                     })
                 })
                 .catch(e => console.error(e))
