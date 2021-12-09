@@ -10,9 +10,8 @@
  * 	2) select: specify column names (case insensitive):
  * 		&select=* -> all available columns
  * 		$select=default -> default columns (smaller subset of all available columns)
- * 		&select=colA,colT,colZ -> adds columns to default output
- * 		&select=distinct colA,colT,colZ -> replace default columns
- * 		$select=distinct colA -> if colA is of data type enum this syntax returns set of possible enum attributes
+ * 		&select=colA,colT,colZ -> returns only specified columns
+ * 		$select=distinct colA -> returns set of possible enum attributes
  * 	3) count: return number of rows that fulfill query (see "where")
  * 		&select=count(*) -> returns number of rows in data table
  * 		&select:count(*)&where=koi_period>[x]
@@ -48,17 +47,13 @@ const api = axios.create({
  */
 function getSelectQueryString(select) {
 	// set prefix query string with distinct which makes sure that only selected columns are returned
-	let queryString = "distinct "
+	let queryString = ""
 
 	// counter for checked checkboxes
-	let isAtLeastOneCheckboxChecked = false
 	let checkedCounter = 0
 
 	Object.entries(select).forEach(([columnName, checked]) =>  {
 		if (checked) {
-			// set var to true if at least one column has been checked
-			isAtLeastOneCheckboxChecked = true
-
 			// append column name, with a pre-pended comma if the checkedCounter is greater than zero
 			checkedCounter === 0
 				? queryString += `${columnName}`
@@ -72,7 +67,7 @@ function getSelectQueryString(select) {
 	console.log(queryString)
 
 	// if no checkboxes checked return empty query string otherwise return queryString
-	return isAtLeastOneCheckboxChecked ? queryString : ""
+	return queryString
 }
 
 function getWhereQueryString(where) {

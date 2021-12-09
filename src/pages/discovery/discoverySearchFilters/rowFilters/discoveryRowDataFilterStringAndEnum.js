@@ -32,11 +32,14 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
                 select: { [dataName]: true }
             })
                 .then(res => {
-                    // extract enum attributes
-                    const enumSet = []
+                    // extract all enum attributes
+                    const enumAttributes = []
                     res.data.forEach(row => {
-                        enumSet.push(...Object.values(row))
+                        enumAttributes.push(...Object.values(row))
                     })
+
+                    // convert enumAttributes array into enumSet (non-overlapping, unique attributes)
+                    const enumSet = new Set(enumAttributes)
 
                     // store set in state such that it can be used by the input tag of type select
                     setEnumAttributes(prevState => {
