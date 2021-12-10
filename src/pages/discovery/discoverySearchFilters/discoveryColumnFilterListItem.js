@@ -3,6 +3,7 @@ import DiscoveryRowDataFilter from "./rowFilters/discoveryRowDataFilter";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { useEffectSkipFirstRender } from "../../../services/utilityFunctions";
 
+
 /**
  * Render check box, column label, and column label tooltip
  * @param props

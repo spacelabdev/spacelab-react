@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
@@ -22,8 +22,10 @@ import {
 	initialiseWhereFilterState,
 } from "./initialiseState";
 
+
 /**
- * @returns {JSX.Element}
+ *
+ * @return {JSX.Element}
  * @constructor
  */
 export default function Discovery() {
@@ -79,6 +81,10 @@ export default function Discovery() {
 			});
 		}
 	};
+
+	// make API call after selectedColumns and whereFilter states have been initialised but only once at component
+	// mount-time
+	useEffect(queryExoplanetDatabase, [])
 
 	return (
 		<>

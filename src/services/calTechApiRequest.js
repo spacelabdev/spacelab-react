@@ -68,6 +68,11 @@ function getSelectQueryString(select) {
 	return queryString
 }
 
+/**
+ * Return the appropriate where filter query string, subject to the four different data types
+ * @param where
+ * @return {string}
+ */
 function getWhereQueryString(where) {
 	let queryString = ''
 

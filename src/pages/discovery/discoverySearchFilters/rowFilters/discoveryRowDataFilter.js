@@ -4,7 +4,7 @@ import DiscoveryRowDataFilterStringAndEnum from "./discoveryRowDataFilterStringA
 
 
 /**
- * Depending on the checked / selected column's data type, this function renders the appropriate component
+ * Depending on the checked / selected column's data type, this function renders the appropriate filter component
  * @param props
  * @return {JSX.Element}
  * @constructor

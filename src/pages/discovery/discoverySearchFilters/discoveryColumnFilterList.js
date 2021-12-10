@@ -2,6 +2,7 @@ import React from "react";
 import DiscoveryColumnFilterListItem from "./discoveryColumnFilterListItem";
 import "../discovery.scss"
 
+
 /**
  * Maps over filtersArray and passes elements to DiscoveryColumnFilterListItem to be parsed and rendered.
  * filtersArray contains all DiscoveryColumnFilterListItems which draw data for the filters from the filterArray source
