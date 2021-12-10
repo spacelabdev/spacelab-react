@@ -1,0 +1,30 @@
+
+.subMenu {
+    width: 10rem;
+    position: absolute;
+    text-align: start;
+    top: 39px;
+    .nav-link {
+        font-size: 12px;
+        display: row;
+        margin: 0 auto;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+
+    }
+
+    .nav-link.clicked{
+        display: none;
+    }
+
+    .nav-link:hover {
+        color: #7000ff;
+    }
+
+ 
+
+}
+

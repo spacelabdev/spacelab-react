@@ -5,7 +5,7 @@ import './navigation.scss'
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
 import Dropdown from "../dropdown/dropdown";
-import Button from "../dropdown/button"
+import Button from "../searchButton/searchButton"
 
 export default function Navigation() {
 	const context = useContext(UniversalContext);
@@ -29,11 +29,18 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 							About
 						</Link>
+						<Dropdown/>
 						<Link className={'nav-link'} to={'/project'} style={{textDecoration: 'none'}}>
 							Project
 	
 						</Link>
-						<Link className={'nav-link'} to={'/discovery'} style={{textDecoration: 'none'}}>
+ 
+						<Link className={'nav-link'} to={'/donate'} style={{textDecoration: 'none'}}>
+							Donate
+	
+						</Link>
+ 
+					{	/*<Link className={'nav-link'} to={'/discovery'} style={{textDecoration: 'none'}}>
 							Discovery 
 							
 						</Link>
@@ -42,7 +49,7 @@ export default function Navigation() {
 						</Link>
 						<Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
 							Blog
-						</Link>
+						</Link>*/}
 						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
 							Contact
 						</Link>
@@ -51,8 +58,12 @@ export default function Navigation() {
 							<i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
 						</div>
 					</div>
+				    
+
 				</div>
 			</nav>
+			
 		</>
+		
 	);
 };

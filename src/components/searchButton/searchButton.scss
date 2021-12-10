@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn{
+
+  padding: 0;
+  margin: 0;
+  .searchBtn {
+    display:flex;
+    padding: 6px 16px;
+    border: none;
+    background: FFFFFF;
+    color: 020202;
+    transition: 0.3S all ease-out;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+
+  }
+  
+
+}
+
+
+

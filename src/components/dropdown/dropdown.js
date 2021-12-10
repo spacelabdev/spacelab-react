@@ -1,21 +1,19 @@
 import React from "react"; 
-import {Link} from 'react-router-dom'
-import Button from "./button"
-
+import {Link} from 'react-router-dom';
+import './dropdown.scss';
 
 class Dropdown extends React.Component {
     render() {
         return (
             <>
-                <nav>
+                <div className="subMenu">
                     <Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
-                    Blog
+                        Blog
                     </Link>
-                    <Link className={'nav-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
-                    Glossary
+                    <Link className={'nav-link glossary-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
+                        Glossary
                     </Link>
-                    <Button />
-                </nav>
+                </div>
             </>
         )
     }
