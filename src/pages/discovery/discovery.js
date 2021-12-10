@@ -17,7 +17,10 @@ import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 import { getExoplanets } from "../../services/calTechApiRequest";
 import { UniversalContext } from "../../App";
-import initialiseCheckedState from "./initialiseCheckedState";
+import {
+	initialiseSelectedColumnsState,
+	initialiseWhereFilterState,
+} from "./initialiseState";
 
 /**
  * @returns {JSX.Element}
@@ -26,8 +29,8 @@ import initialiseCheckedState from "./initialiseCheckedState";
 export default function Discovery() {
 	const context = useContext(UniversalContext);
 	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set state for the checkboxes in App instead
-	const [selectedColumns, setSelectedColumns] = useState(initialiseCheckedState())
-	const [whereFilter, setWhereFilter] = useState({})
+	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState())
+	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState())
 	const discTable = [
 		{
 			name: "",
@@ -51,29 +54,30 @@ export default function Discovery() {
 	}
 
 	console.log(context.exoplanetData)
-	console.log(selectedColumns)
-	console.log(whereFilter)
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var
 	 * @return {Promise<void>}
 	 */
 	const queryExoplanetDatabase = async () => {
-		await getExoplanets({
-			select: selectedColumns,
-			where: whereFilter,
-			order: ''
-		}).then(res => {
-			if (res.status === 200) {
-				context.setExoplanetData(res.data);
-				/*  todo: why store this in session storage at all? */
-				sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
-			} else {
-				console.error("error retrieving exoplanetData");
-			}
-		}).catch(e => {
-			console.error(e);
-		});
+		// only send an API request if at least one column has been checked
+		if (Object.values(selectedColumns).some(column => column)) {
+			await getExoplanets({
+				select: selectedColumns,
+				where: whereFilter,
+				order: ''
+			}).then(res => {
+				if (res.status === 200) {
+					context.setExoplanetData(res.data);
+					/*  todo: why store this in session storage at all? */
+					sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
+				} else {
+					console.error("error retrieving exoplanetData");
+				}
+			}).catch(e => {
+				console.error(e);
+			});
+		}
 	};
 
 	return (

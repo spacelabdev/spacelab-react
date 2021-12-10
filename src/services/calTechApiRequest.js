@@ -64,8 +64,6 @@ function getSelectQueryString(select) {
 		}
 	})
 
-	console.log(queryString)
-
 	// if no checkboxes checked return empty query string otherwise return queryString
 	return queryString
 }
@@ -107,10 +105,9 @@ function getWhereQueryString(where) {
 				operator = where[columnName].operator
 				queryString += `${columnName}${operator}to_date('${value}','yyyy-mm-dd')`
 				break
+			default:
 		}
 	})
-
-	console.log(queryString)
 
 	return queryString
 }
@@ -143,8 +140,6 @@ export const getExoplanets = async (
 		order: order,
 		format: format
 	}
-
-	console.log(params)
 
 	try {
 		return await api.get('', { params });

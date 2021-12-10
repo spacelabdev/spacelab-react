@@ -29,11 +29,12 @@ export default function DiscoveryRowDataFilterNumberAndDate(props) {
         })
     }
 
-    console.log(whereFilter[dataName])
-
+    /**
+     * Custom hook that executes useEffect hook, provided whereFilter has changed
+     */
     useEffectSkipFirstRender(() => {
         queryExoplanetDatabase()
-    }, [whereFilter])
+    }, [whereFilter[dataName].operator, whereFilter[dataName].value])
 
     const valueFilterJSX = () => {
         switch (dataType) {
@@ -55,6 +56,7 @@ export default function DiscoveryRowDataFilterNumberAndDate(props) {
                         onChange={e => handleFormValueChange(e)}
                     />
                 )
+            default:
         }
     }
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import DiscoveryRowDataFilterNumberAndDate from "./discoveryRowDataFilterNumberAndDate";
 import DiscoveryRowDataFilterStringAndEnum from "./discoveryRowDataFilterStringAndEnum";
 
@@ -43,6 +43,7 @@ export default function DiscoveryRowDataFilter(props) {
                         queryExoplanetDatabase={queryExoplanetDatabase}
                     />
                 )
+            default:
         }
     }
 

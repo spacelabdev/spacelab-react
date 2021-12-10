@@ -23,7 +23,7 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
 
     useEffectSkipFirstRender(() => {
         queryExoplanetDatabase()
-    }, [whereFilter])
+    }, [whereFilter[dataName].value])
 
     /**
      * Upon mounting the component with a dataType of enum, make API call to retrieve all possible enum attributes
@@ -49,7 +49,6 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
 
                     // convert set back to array
                     const enumSetArray = Array.from(enumSet)
-                    console.log(enumSetArray)
 
                     // remove 'null' values
                     const enumSetExNullValues = enumSetArray.filter(attribute => attribute)
@@ -127,6 +126,7 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
                         {optionJSX()}
                     </Form.Control>
                 )
+            default:
         }
     }
 

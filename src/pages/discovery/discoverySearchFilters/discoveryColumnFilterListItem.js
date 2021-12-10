@@ -31,7 +31,7 @@ export default function DiscoveryColumnFilterListItem(props) {
 	}, [isFilterListItemChecked])
 
 	function handleCheckboxClick(e) {
-		// if current state of checkbox is unchecked, create base state for number filter
+		// if current state of checkbox is unchecked, create base state for where filter
 		// this is necessary since the value of the controlled component must be declared before the initial render
 		if (!selectedColumns[filterColumn.name]) {
 			setWhereFilter(prevState => {
@@ -46,6 +46,7 @@ export default function DiscoveryColumnFilterListItem(props) {
 						return Object.assign(prevState, {
 							[filterColumn.name]: { 'value': '', 'dataType': filterColumn.dataType }
 						})
+					default:
 				}
 			})
 		}
