@@ -61,10 +61,10 @@ export default function Discovery() {
 	 * Query CalTech db and set exoplanetData in App state and store as session var
 	 * @return {Promise<void>}
 	 */
-	const queryExoplanetDatabase = async () => {
+	const queryExoplanetDatabase = () => {
 		// only send an API request if at least one column has been checked
 		if (Object.values(selectedColumns).some(column => column)) {
-			await getExoplanets({
+			getExoplanets({
 				select: selectedColumns,
 				where: whereFilter,
 				order: ''
@@ -76,9 +76,7 @@ export default function Discovery() {
 				} else {
 					console.error("error retrieving exoplanetData");
 				}
-			}).catch(e => {
-				console.error(e);
-			});
+			}).catch(e => console.error(e));
 		}
 	};
 
