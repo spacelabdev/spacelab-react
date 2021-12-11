@@ -1,3 +1,5 @@
+// TODO: Delete this file when done testing. Seems like you might be done testing?
+
 const emptyElements = [
   "<area",
   "<base",

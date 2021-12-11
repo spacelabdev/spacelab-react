@@ -12,8 +12,12 @@ export default function BlogArchives() {
 	const context = useContext(UniversalContext);
 	const blogs = context.blogArray.items;
 	let blogArray = [];
+
+	// TODO: Not sure what you are trying to do with this?
 	const [open, setOpen] = useState(false)
 	const [article, setArticle] = useState([])
+
+	// TODO: Remove this array. It lives in the helperFunction
 	const emptyElements = [
 	  "<area",
 	  "<base",
@@ -34,6 +38,10 @@ export default function BlogArchives() {
 
 	let strEnd = ""
 
+	// TODO: not sure what you are trying to do here. What you probably want to do, is have this function route
+	//  the user to a different page within Spacelab, and set the html string as state in App.js.
+	//  You could also potentially consider using session storage?
+	//  The new page would then call the parsing function from helperFunction and render the blog.
 	function handleClick(blog) {
 		setOpen(!open)
 		setArticle(blog)
@@ -71,6 +79,7 @@ export default function BlogArchives() {
 		}
 	}
 
+	// TODO: Remove these and call from the helper function where necessary.
 	/********************************************************************************
 	Fuction to search for emptyElement                                             */
 
