@@ -21,6 +21,7 @@ import {
 	initialiseSelectedColumnsState,
 	initialiseWhereFilterState,
 } from "./initialiseState";
+import DropdownButton from "../../components/button/dropdownButton";
 
 
 /**
@@ -112,7 +113,14 @@ export default function Discovery() {
 				<br/>
 
 				<div id={"filtersContainer"}>
-					<p>Filters</p>
+					<div id={"filtersHeader"}>
+						<p>Filters</p>
+						<DropdownButton
+							buttonLabel={'Download'}
+							item1={{ href: "#/action-1", label: "csv" }}
+							item2={{ href: "#/action-2", label: "json" }}
+						/>
+					</div>
 					<DiscoveryColumnFilterList
 						filterArray={identificationFiltersArray}
 						title={"Identifications"}

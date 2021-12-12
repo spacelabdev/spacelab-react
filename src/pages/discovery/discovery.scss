@@ -51,6 +51,15 @@
       padding-left: 2rem;
     }
 
+    #filtersHeader {
+      display: flex;
+      justify-content: space-between;
+
+      div {
+        margin: 10px 2rem 0 0;
+      }
+    }
+
     .filters {
       padding: 1rem 2rem 0 2rem;
 
