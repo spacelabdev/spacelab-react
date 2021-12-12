@@ -3,7 +3,6 @@ import { Form } from "react-bootstrap";
 import { getExoplanets } from "../../../../services/calTechApiRequest";
 import { useEffectSkipFirstRender } from "../../../../services/utilityFunctions";
 
-
 /**
  * Display filter options to users for columns with data type 'string' and 'enum'
  * @param props

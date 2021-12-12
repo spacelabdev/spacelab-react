@@ -32,7 +32,6 @@
  * Source: https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html
  */
 
-
 import axios from "axios";
 
 const api = axios.create({

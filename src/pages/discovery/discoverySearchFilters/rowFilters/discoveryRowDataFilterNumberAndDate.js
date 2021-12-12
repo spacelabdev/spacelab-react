@@ -2,7 +2,6 @@ import React from "react";
 import { Form } from "react-bootstrap";
 import { useEffectSkipFirstRender } from "../../../../services/utilityFunctions";
 
-
 /**
  * Display filter options to user for columns with data type 'number' and 'date'
  * @param props
