@@ -1,7 +1,7 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import * as ReactBootStrap from 'react-bootstrap'
-import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
+import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
 	projectDispositionFiltersArray,
 	identificationFiltersArray,
@@ -17,16 +17,18 @@ import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 import { getExoplanets } from "../../services/calTechApiRequest";
 import { UniversalContext } from "../../App";
-import initialiseCheckedState from "./initialiseCheckedState";
+import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
 
 /**
- * @returns {JSX.Element}
+ *
+ * @return {JSX.Element}
  * @constructor
  */
 export default function Discovery() {
 	const context = useContext(UniversalContext);
 	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set state for the checkboxes in App instead
-	const [checkedColumns, setCheckedColumns] = useState(initialiseCheckedState())
+	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState())
+	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState())
 	const discTable = [
 		{
 			name: "",
@@ -49,30 +51,34 @@ export default function Discovery() {
 		)
 	}
 
+	console.log(context.exoplanetData)
+
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var
 	 * @return {Promise<void>}
 	 */
-	const queryExoplanetDatabase = async () => {
-		await getExoplanets({
-			select: checkedColumns,
-			where: 'koi_score>0.999',
-			order: ''
-		}).then(res => {
-			if (res.status === 200) {
-				context.setExoplanetData(res.data);
-				/*  todo: why store this in session storage at all? */
-				sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
-			} else {
-				console.log("error retrieving exoplanetData");
-			}
-		}).catch(e => {
-			console.log(e);
-		});
+	const queryExoplanetDatabase = () => {
+		// only send an API request if at least one column has been checked
+		if (Object.values(selectedColumns).some(column => column)) {
+			getExoplanets({
+				select: selectedColumns,
+				where: whereFilter,
+				order: ''
+			}).then(res => {
+				if (res.status === 200) {
+					context.setExoplanetData(res.data);
+					/*  todo: why store this in session storage at all? */
+					sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
+				} else {
+					console.error("error retrieving exoplanetData");
+				}
+			}).catch(e => console.error(e));
+		}
 	};
 
-	console.log(checkedColumns)
-	console.log(context.exoplanetData)
+	// make API call after selectedColumns and whereFilter states have been initialised but only once at component
+	// mount-time
+	useEffect(queryExoplanetDatabase, [])
 
 	return (
 		<>
@@ -80,11 +86,9 @@ export default function Discovery() {
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 				<div id="discovery-table">
+					<UnderConstruction/>
 					<ReactBootStrap.Table striped bordered hover size="sm">
 						<thead>
-
-						<UnderConstruction/>
-
 						{/*<tr>*/}
 						{/*	<th>Name</th>*/}
 						{/*	<th>Light Years From Earth</th>*/}
@@ -105,59 +109,78 @@ export default function Discovery() {
 
 				<div id={"filtersContainer"}>
 					<p>Filters</p>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={identificationFiltersArray}
 						title={"Identifications"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={exoplanetArchiveFiltersArray}
 						title={"Exoplanets"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={projectDispositionFiltersArray}
 						title={"Dispositions"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={transitPropertiesFiltersArray}
 						title={"Transit Properties"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={thresholdCrossingEventFiltersArray}
 						title={"Threshold Crossing Events"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={stellarParametersFiltersArray}
 						title={"Stellar Parameters"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={kicParametersFiltersArray}
 						title={"KIC Parameters"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					<DiscoveryFilterList
+					<DiscoveryColumnFilterList
 						filterArray={pixelBasedKoiVettingFiltersArray}
 						title={"Pixel Based KOI Vetting"}
-						checked={checkedColumns}
-						setChecked={setCheckedColumns}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
-					{/* todo: [Sven Gerlach] button styling */}
-					<ReactBootStrap.Button
-						variant={"primary"}
-						onClick={queryExoplanetDatabase}
-					>Filter</ReactBootStrap.Button>
 				</div>
 			</div>
 			<Footer/>

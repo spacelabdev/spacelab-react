@@ -4,16 +4,26 @@
   padding: 2rem;
 }
 
+//
+.tooltip-inner {
+  color: white;
+  background-color: rgba(100,100,100,0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
 #database-search-wrapper {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
   @media (min-width: 767px) and (max-width: 1023px) {
     width: 90%;
+    flex-direction: column;
   }
-  @media (max-width: 766px) {
-    flex-direction: column-reverse;
+  @media (min-width: 1024px) {
+    flex-direction: row;
   }
 
   #discovery-table {
@@ -23,18 +33,17 @@
   }
 
   #filtersContainer {
-    width: 27vw;
+    width: 80vw;
+    margin: 0 auto 2rem;
     border-style: groove;
-    margin: 1rem;
     text-align: left;
     padding-bottom: 2rem;
     vertical-align: middle;
     @media (min-width: 767px) and (max-width: 1023px) {
-      width: 45vw;
-    }
-    @media (max-width: 766px) {
       width: 80vw;
-      margin: 0 auto;
+    }
+    @media (min-width: 1024px) {
+      width: 27vw;
     }
 
     p {
@@ -69,7 +78,9 @@
             .discovery-checkbox:checked {
               background-color: #e9ecee;
               border: 1px solid #adb8c0;
-              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+                inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05),
+                inset 15px 10px -12px rgba(255, 255, 255, 0.1);
               color: #99a1a7;
             }
 

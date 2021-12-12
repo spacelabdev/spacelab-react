@@ -10,8 +10,8 @@
  * 	2) select: specify column names (case insensitive):
  * 		&select=* -> all available columns
  * 		$select=default -> default columns (smaller subset of all available columns)
- * 		&select=colA,colT,colZ -> adds columns to default output
- * 		&select=distinct colA,colT,colZ -> replace default columns
+ * 		&select=colA,colT,colZ -> returns only specified columns
+ * 		$select=distinct colA -> returns set of possible enum attributes
  * 	3) count: return number of rows that fulfill query (see "where")
  * 		&select=count(*) -> returns number of rows in data table
  * 		&select:count(*)&where=koi_period>[x]
@@ -19,6 +19,7 @@
  * 		&where=validColName>value -> returns all rows where row value of validColName is greater than value
  * 		&where=kepler_name like 'Kepler-52 c' -> returns rows containing the specified string
  * 		&where=kepler_name is null -> use "is" if searching for null values
+ * 		&where=koi_vet_date>to_date('2013-02-10','yyyy-mm-dd') -> filter rows with dates after 2013-02-10
  * 		&where=discoverymethod like 'Microlensing' and st_nts > 0 -> use "and" for joined filters
  * 	5) order: controls order in which rows are returned
  * 		&order=colA,colB -> ascending order with "colA" as primary filter and "colB" as secondary filter
@@ -46,24 +47,72 @@ const api = axios.create({
  */
 function getSelectQueryString(select) {
 	// set prefix query string with distinct which makes sure that only selected columns are returned
-	let queryString = "distinct "
-
+	let queryString = ""
 	// counter for checked checkboxes
-	let countChecked = 0
+	let checkedCounter = 0
 
-	for (const [columnName, checked] of Object.entries(select)) {
+	Object.entries(select).forEach(([columnName, checked]) =>  {
 		if (checked) {
-			countChecked += 1
-			queryString += `,${columnName}`
+			// append column name, with a pre-pended comma if the checkedCounter is greater than zero
+			checkedCounter === 0
+				? queryString += `${columnName}`
+				: queryString += `,${columnName}`
+			// increase checkedCounter by 1
+			checkedCounter += 1
 		}
-	}
+	})
 
 	// if no checkboxes checked return empty query string otherwise return queryString
-	return countChecked ? queryString : ""
+	return queryString
 }
 
+/**
+ * Return the appropriate where filter query string, subject to the four different data types
+ * @param where
+ * @return {string}
+ */
 function getWhereQueryString(where) {
-	return where
+	let queryString = ''
+
+	// iterate over all column names and add their operators and values to the query string
+	// collect all own properties of object
+	const propertyKeys = Object.keys(where)
+
+	// filter keys for those that have a value other than an empty string
+	const propertyKeysWithValue = propertyKeys.filter(columnName => where[columnName].value !== '')
+
+	// iterate over all keys with a valid value and append to query string
+	propertyKeysWithValue.forEach((columnName, index) => {
+		const value = where[columnName].value
+		const dataType = where[columnName].dataType
+		let operator
+
+		// add " and " string if at least one more filter criteria is added
+		if (index > 0) {
+			queryString += ' and '
+		}
+
+		// add string subject to data type
+		switch (dataType) {
+			case 'number':
+				operator = where[columnName].operator
+				queryString += `${columnName}${operator}${value}`
+				break
+			// enum and string have the same filter syntax which is why the enum case is allowed to fall-through to the
+			// string case
+			case 'enum':
+			case 'string':
+				queryString += `${columnName} like '${value}'`
+				break
+			case 'date':
+				operator = where[columnName].operator
+				queryString += `${columnName}${operator}to_date('${value}','yyyy-mm-dd')`
+				break
+			default:
+		}
+	})
+
+	return queryString
 }
 
 /**
