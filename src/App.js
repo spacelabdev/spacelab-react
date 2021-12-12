@@ -1,6 +1,7 @@
 import {createContext, useEffect, useState} from "react";
 import RSSParser from "rss-parser";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
+import {searchForEmptyElement} from "./pages/blog/blogDetails/helperFunction";
 import './App.css';
 import Main from "./main";
 
@@ -22,6 +23,8 @@ function App() {
 	const [pageTitle, setPageTitle] = useState("");
 	/** Medium Blog RSS Feed State */
 	const [blogArray, setBlogArray] = useState([]);
+	/** Blog Details State */
+	const [blogDetails, setBlogDetails] = useState([])
 
 	// Get RSS feed from Medium for Blog page
 	useEffect(() => {
@@ -61,7 +64,10 @@ function App() {
 						setCurrentGlossaryTerm,
 						pageTitle,
 						setPageTitle,
-						blogArray
+						blogArray,
+						searchForEmptyElement,
+						blogDetails,
+						setBlogDetails
 					}
 				}>
 					<Main/>
