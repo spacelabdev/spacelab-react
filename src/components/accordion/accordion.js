@@ -30,13 +30,16 @@ export default function Accordion(props) {
 	}, [firstLoad]);
 
 	const openAccordion = open ? "accordion-open" : "";
+	const openContainer = open ? "container-open" : "";
 	let flipArrow = arrow ? "icon-flip" : "";
 	if (firstLoad) {
 		flipArrow = "icon-flip";
 	}
 
 	return (
-		<div className="accordion-container">
+		<div
+			className={`accordion-container ${openContainer}`}
+		>
 			<div className="accordion-container-heading">
 				<div className="accordion-container-heading-text-container">
 					{title}
