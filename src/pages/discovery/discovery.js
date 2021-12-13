@@ -26,7 +26,7 @@ import { downloadData } from "../../services/utilityFunctions";
 
 
 /**
- *
+ * View for the discovery page
  * @return {JSX.Element}
  * @constructor
  */
@@ -108,8 +108,7 @@ export default function Discovery() {
 	 * This function is passed as a prop to the dropdown item and is executed when the user clicks on the item
 	 */
 	const dropdownItemClick = (e) => {
-		// make API request with specified data type format (Note: empty string = csv) stores result in state
-		// and save data in state
+		// set format, dataType, and filename, subject to selected data type
 		let format
 		let dataType
 		let filename
@@ -126,6 +125,8 @@ export default function Discovery() {
 				filename = 'filtered_output.json'
 				break
 		}
+
+		// make API request with specified data type format (Note: empty string = csv)
 		queryExoplanetDatabase(format,false,false)
 			.then(res => {
 				// stringify data only if format is json

@@ -12,7 +12,6 @@ import "./dropdownButton.scss"
 export default function DropdownButton(props) {
     const {
         buttonLabel,
-        queryExoplanetDatabase,
         dropdownItemClick,
         ...dropdownItems
     } = props
@@ -23,7 +22,7 @@ export default function DropdownButton(props) {
     // convert the values of the dictionary into an array whose elements can be mapped over
     const dropdownItemsArray = Object.values(dropdownItems)
 
-    // retrieves width of dropdown button and sets the width of the dropdown menu to the same value
+    // retrieve width of dropdown button and set width of dropdown menu to the same value
     const handleDropdownToggleClick = (isOpen, e) => {
         if (isOpen) {
             // width of dropdown button
