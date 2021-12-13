@@ -37,9 +37,7 @@ export default function Accordion(props) {
 	}
 
 	return (
-		<div
-			className={`accordion-container ${openContainer}`}
-		>
+		<div className={`accordion-container ${openContainer}`}>
 			<div className="accordion-container-heading">
 				<div className="accordion-container-heading-text-container">
 					{title}

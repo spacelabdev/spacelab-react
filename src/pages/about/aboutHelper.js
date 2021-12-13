@@ -1,11 +1,42 @@
-///////////////////////
-//////Accordion Helpers
-///////////////////////
 /**
- * Objects containing title and members various space lab teams
- * @type {title:string, members:[{image: string, fullName: string, title: string}]}
+ * Array of Dates and descriptions for Spacelab History timeline
+ * @type {string[][]}
  */
+export const aboutHistoryArray = [
+	[
+		'SPACELAB 2021.01.27',
+		'Data Scientist Matt Paterson is introduced to Dr. Andrew Vanderburg by Cal Tech\'s Dr. Jessie Christiansen ' +
+		'in hopes that the former NASA Sagen Fellow can help with publishing a paper about machine learning and ' +
+		'exoplanets. The interaction with Dr. Vanderburg and Dr. Christiansen lead Matt to reconnect with former ' +
+		'classmates Ollie Jackson and Jon Zivku. The three are excited about space exploration and exoplanets and ' +
+		'want to build a web application that allows all three to contribute; thus, SpaceLab was born.'
+	],
+	[
+		'SPACELAB 2021.01.05',
+		'The founders of The SpaceLab meet aspiring UX designers who were fresh out of school and ready to take ' +
+		'the founders’ visions and designs towards a website for exoplanet discovery. The group recognizes that ' +
+		'experience with cross-functional collaboration towards the development of real-world applications is ' +
+		'something that early-career tech professionals often lack, specifically traditionally underrepresented ' +
+		'groups in the tech industry. Upon recognizing this, the team decides that finding exoplanets it’s not ' +
+		'just a one-time project. Instead, it will be the first of many projects built by the members and future ' +
+		'community of The SpaceLab. This led the team at The SpaceLab to become a non-profit organization to ' +
+		'help women, people of color, people from the LGBTQ+ community, and others currently underrepresented in ' +
+		'the tech industry to gain experience with cross-functional teams in outer-space-related sciences.'
+	],
+	[
+		'SPACELAB 2021.08.16',
+		'After building a team of front-end developers, SpaceLab launches its website, announcing its purpose and ' +
+		'mission to the world. While SpaceLab is working on becoming a nonprofit organization, the organization is ' +
+		'created upon a foundation of diversity and inclusion with the help of Meghan Slan, Director of DEIB. ' +
+		'SpaceLab is currently working with roughly 25 cross-functional members to build its first project, ' +
+		'Exoplanetarium, of which users will have the opportunity to explore exoplanets in our milky way system.'
+	],
+]
 
+/**
+ * Object containing details for the Board of Directors
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const boardOFDirectors = {
 	title: "board of directors",
 	members: [
@@ -32,6 +63,10 @@ export const boardOFDirectors = {
 	],
 };
 
+/**
+ * Object containing details for the Team Leads
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const teamLeads = {
 	title: "team leads",
 	members: [
@@ -58,6 +93,10 @@ export const teamLeads = {
 	],
 };
 
+/**
+ * Object containing details for the UX Designers
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const uxDesigners = {
 	title: "ux designers",
 	members: [
@@ -84,6 +123,10 @@ export const uxDesigners = {
 	],
 };
 
+/**
+ * Object containing details for the Front End Developers
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const frontEnd = {
 	title: "front end developers",
 	members: [
@@ -130,6 +173,10 @@ export const frontEnd = {
 	],
 };
 
+/**
+ * Object containing details for the Data Science Team
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const dataScience = {
 	title: "data scientists",
 	members: [
@@ -156,6 +203,10 @@ export const dataScience = {
 	],
 };
 
+/**
+ * Object containing details for the WebGL Team
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const webGL = {
 	title: "WebGL Developers",
 	members: [
@@ -177,6 +228,10 @@ export const webGL = {
 	],
 };
 
+/**
+ * Object containing details for the Staff Writers team
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const writers = {
 	title: "staff writers",
 	members: [
@@ -193,6 +248,10 @@ export const writers = {
 	],
 };
 
+/**
+ * Object containing details for additional contributors to the Spacelab project
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
 export const additionalContributors = {
 	title: "december 2021 cohort",
 	members: [
