@@ -1,4 +1,4 @@
-#dropdown-button {
+.dropdown-toggle {
   color: #fff;
   background-color: #a0a0aa;
 
@@ -39,7 +39,7 @@
   }
 }
 
-#dropdown-menu {
+.dropdown-menu {
   position: relative;
   padding: .5rem 0;
   font-size: 1rem;
@@ -53,7 +53,8 @@
   }
 }
 
-#dropdown-item {
+.dropdown-item {
+  cursor: pointer;
   display: block;
   width: 100%;
   padding: .25rem 1rem;

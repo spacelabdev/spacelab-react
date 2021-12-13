@@ -23,6 +23,8 @@ function App() {
 
 	/** Medium Blog RSS Feed State */
 	const [blogArray, setBlogArray] = useState([]);
+
+	/** Rehydrate exoplanet filter state with session data */
 	const [exoplanetData, setExoplanetData] = useState(() => {
 		const result = sessionStorage.getItem('exoplanetSearchResults');
 		return result ? JSON.parse(result) : {}
