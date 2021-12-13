@@ -4,19 +4,32 @@
  */
 export const aboutHistoryArray = [
 	[
-		'spacelab 2021.00.00',
-		'Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Adipiscing Sed Risus Neque Faucibus Tempus Et Ante. ' +
-		'Neque Aliquam Eleifend Donec Scelerisque Sagittis Risus Semper Faucibus.'
+		'SPACELAB 2021.01.27',
+		'Data Scientist Matt Paterson is introduced to Dr. Andrew Vanderburg by Cal Tech\'s Dr. Jessie Christiansen ' +
+		'in hopes that the former NASA Sagen Fellow can help with publishing a paper about machine learning and ' +
+		'exoplanets. The interaction with Dr. Vanderburg and Dr. Christiansen lead Matt to reconnect with former ' +
+		'classmates Ollie Jackson and Jon Zivku. The three are excited about space exploration and exoplanets and ' +
+		'want to build a web application that allows all three to contribute; thus, SpaceLab was born.'
 	],
 	[
-		'spacelab 2021.00.00',
-		'Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Adipiscing Sed Risus Neque Faucibus Tempus Et Ante. ' +
-		'Neque Aliquam Eleifend Donec Scelerisque Sagittis Risus Semper Faucibus.'
+		'SPACELAB 2021.01.05',
+		'The founders of The SpaceLab meet aspiring UX designers who were fresh out of school and ready to take ' +
+		'the founders’ visions and designs towards a website for exoplanet discovery. The group recognizes that ' +
+		'experience with cross-functional collaboration towards the development of real-world applications is ' +
+		'something that early-career tech professionals often lack, specifically traditionally underrepresented ' +
+		'groups in the tech industry. Upon recognizing this, the team decides that finding exoplanets it’s not ' +
+		'just a one-time project. Instead, it will be the first of many projects built by the members and future ' +
+		'community of The SpaceLab. This led the team at The SpaceLab to become a non-profit organization to ' +
+		'help women, people of color, people from the LGBTQ+ community, and others currently underrepresented in ' +
+		'the tech industry to gain experience with cross-functional teams in outer-space-related sciences.'
 	],
 	[
-		'spacelab 2021.00.00',
-		'Lerem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit Adipiscing Sed Risus Neque Faucibus Tempus Et Ante. ' +
-		'Neque Aliquam Eleifend Donec Scelerisque Sagittis Risus Semper Faucibus.'
+		'SPACELAB 2021.08.16',
+		'After building a team of front-end developers, SpaceLab launches its website, announcing its purpose and ' +
+		'mission to the world. While SpaceLab is working on becoming a nonprofit organization, the organization is ' +
+		'created upon a foundation of diversity and inclusion with the help of Meghan Slan, Director of DEIB. ' +
+		'SpaceLab is currently working with roughly 25 cross-functional members to build its first project, ' +
+		'Exoplanetarium, of which users will have the opportunity to explore exoplanets in our milky way system.'
 	],
 ]
 
