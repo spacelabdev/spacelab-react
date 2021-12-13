@@ -32,7 +32,6 @@
  * Source: https://exoplanetarchive.ipac.caltech.edu/docs/program_interfaces.html
  */
 
-
 import axios from "axios";
 
 const api = axios.create({
@@ -48,7 +47,6 @@ const api = axios.create({
 function getSelectQueryString(select) {
 	// set prefix query string with distinct which makes sure that only selected columns are returned
 	let queryString = ""
-
 	// counter for checked checkboxes
 	let checkedCounter = 0
 
@@ -58,7 +56,6 @@ function getSelectQueryString(select) {
 			checkedCounter === 0
 				? queryString += `${columnName}`
 				: queryString += `,${columnName}`
-
 			// increase checkedCounter by 1
 			checkedCounter += 1
 		}

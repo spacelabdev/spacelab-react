@@ -1,8 +1,8 @@
 import {createContext, useEffect, useState} from "react";
 import RSSParser from "rss-parser";
+import Main from "./main";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
-import Main from "./main";
 
 /**
  * @returns {JSX.Element}
@@ -20,11 +20,9 @@ function App() {
 	const [glossaryTermImg, setGlossaryTermImg] = useState(glossaryTermsArray[0][3]);
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
-
 	/** Medium Blog RSS Feed State */
 	const [blogArray, setBlogArray] = useState([]);
-
-	/** Rehydrate exoplanet filter state with session data */
+	/** Cal Tech API Initial Data */
 	const [exoplanetData, setExoplanetData] = useState(() => {
 		const result = sessionStorage.getItem('exoplanetSearchResults');
 		return result ? JSON.parse(result) : {}

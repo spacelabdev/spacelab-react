@@ -17,10 +17,7 @@ import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 import { getExoplanets } from "../../services/calTechApiRequest";
 import { UniversalContext } from "../../App";
-import {
-	initialiseSelectedColumnsState,
-	initialiseWhereFilterState,
-} from "./initialiseState";
+import { initialiseSelectedColumnsState, initialiseWhereFilterState } from "./initialiseState";
 import DropdownButton from "../../components/button/dropdownButton";
 import { downloadData } from "../../services/utilityFunctions";
 
