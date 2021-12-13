@@ -48,23 +48,24 @@ export default function Discovery() {
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 				<div id="discovery-table">
-					<ReactBootStrap.Table striped bordered hover size="sm">
-						<thead>
 
-						<UnderConstruction/>
+					<UnderConstruction/>
 
-						{/*<tr>*/}
-						{/*	<th>Name</th>*/}
-						{/*	<th>Light Years From Earth</th>*/}
-						{/*	<th>Planet Mass</th>*/}
-						{/*	<th>Stellar Magnitude</th>*/}
-						{/*	<th>Discovery Date</th>*/}
-						{/*</tr>*/}
-						</thead>
-						<tbody>
-						{discTable.map(renderDiscTable)}
-						</tbody>
-					</ReactBootStrap.Table>
+					{/*<ReactBootStrap.Table striped bordered hover size="sm">*/}
+					{/*	<thead>*/}
+					{/*	/!*<tr>*!/*/}
+					{/*	/!*	<th>Name</th>*!/*/}
+					{/*	/!*	<th>Light Years From Earth</th>*!/*/}
+					{/*	/!*	<th>Planet Mass</th>*!/*/}
+					{/*	/!*	<th>Stellar Magnitude</th>*!/*/}
+					{/*	/!*	<th>Discovery Date</th>*!/*/}
+					{/*	/!*</tr>*!/*/}
+					{/*	</thead>*/}
+					{/*	<tbody>*/}
+					{/*	{discTable.map(renderDiscTable)}*/}
+					{/*	</tbody>*/}
+					{/*</ReactBootStrap.Table>*/}
+
 					<br/>
 				</div>
 				<div id="searchBttn">
