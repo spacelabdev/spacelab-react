@@ -24,6 +24,11 @@ export const boardOFDirectors = {
 			fullName: "Meghan Slan",
 			title: "Director of DEIB",
 		},
+		{
+			image: "https://i.imgur.com/rddAX7C.png",
+			fullName: "Anna Bukareva",
+			title: "Officer, Board of Directors",
+		},
 	],
 };
 
@@ -164,6 +169,11 @@ export const webGL = {
 			fullName: "Nemi Gugssa",
 			title: "3D Graphics Developer",
 		},
+		{
+			image: "https://i.imgur.com/Zmy00N4.png",
+			fullName: "Ian Walls",
+			title: "3D Graphics Developer",
+		},
 	],
 };
 
@@ -184,6 +194,32 @@ export const writers = {
 };
 
 export const additionalContributors = {
-	title: "additional contributors",
-	members: [],
+	title: "december 2021 cohort",
+	members: [
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
+			fullName: "Alex Anand",
+			title: "Software Developer | Intern",
+		},
+		{
+			image: "https://media-exp1.licdn.com/dms/image/C4E03AQGHfQJtC1HIZg/profile-displayphoto-shrink_800_800/0/1517685303481?e=1645056000&v=beta&t=QCKr7FvI-osjN4xnthRoOnj6aNJkQgl9ab4awl97SwA",
+			fullName: "Cat Moran",
+			title: "Software Developer | Intern",
+		},
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02MHPLFH4H-0a5296950b94-512",
+			fullName: "Cory Rice",
+			title: "Software Developer | Intern",
+		},
+		{
+			image: "https://media-exp1.licdn.com/dms/image/C4E03AQHZI4bXTLMyDA/profile-displayphoto-shrink_800_800/0/1626031072251?e=1645056000&v=beta&t=ka94J_p2DZMk_6aIPa3P-CbiKnsdAAyAqMleXo33B98",
+			fullName: "Rohit Jacob",
+			title: "Software Developer | Intern",
+		},
+		{
+			image: "https://media-exp1.licdn.com/dms/image/C4D03AQF1l9bZLOA7kg/profile-displayphoto-shrink_800_800/0/1547235071876?e=1645056000&v=beta&t=ynZWmSo7WUppaDF9n4OBwmhXNR8mVJYkuacPt7GkAE0",
+			fullName: "Sven Gerlach",
+			title: "Software Developer | Intern",
+		},
+	],
 };
