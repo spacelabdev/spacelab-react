@@ -48,12 +48,12 @@ export const boardOFDirectors = {
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130990/team_pics/Ollie_pic_yabvpi.png",
 			fullName: "Ollie Jackson",
-			title: "Officer, Board of Directors | Software Engineer",
+			title: "Officer, Board of Directors | Physicist",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130971/team_pics/Megan_ncesok.png",
 			fullName: "Meghan Slan",
-			title: "Director of DEIB",
+			title: "Director of DEIB, Board Member at Large",
 		},
 		{
 			image: "https://i.imgur.com/rddAX7C.png",
@@ -73,7 +73,7 @@ export const teamLeads = {
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png",
 			fullName: "Phally Bell",
-			title: "Lead Project Manager | UX Designer",
+			title: "Lead Project Manager | Lead UX Designer & Researcher",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png",
@@ -138,7 +138,7 @@ export const frontEnd = {
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png",
 			fullName: "Angelines Yaport-Garcia",
-			title: "Software Engineer",
+			title: "Full Stack Software Engineer",
 		},
 		{
 			image: "https://i.imgur.com/UXz18XD.png",
@@ -168,7 +168,7 @@ export const frontEnd = {
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
 			fullName: "Deen Haque",
-			title: "Software Engineer",
+			title: "Full Stack Software Engineer",
 		},
 	],
 };
@@ -183,17 +183,17 @@ export const dataScience = {
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131368/team_pics/ricky_fdzb1y.png",
 			fullName: "Ricky Rong",
-			title: "Data Scientist",
+			title: "Data Scientist | Machine Learning Engineer",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/robert_oggyg8.png",
 			fullName: "Robert Sato",
-			title: "Data Scientist",
+			title: "Data Scientist | Machine Learning Engineer",
 		},
 		{
 			image: "https://i.imgur.com/vxMri4M.png",
 			fullName: "Cally Lin",
-			title: "Data Scientist",
+			title: "Data Scientist | Machine Learning Engineer",
 		},
 		{
 			image: "https://i.imgur.com/6QT53lE.png",
@@ -252,7 +252,7 @@ export const writers = {
  * Object containing details for additional contributors to the Spacelab project
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
-export const additionalContributors = {
+export const decemberCohort = {
 	title: "december 2021 cohort",
 	members: [
 		{

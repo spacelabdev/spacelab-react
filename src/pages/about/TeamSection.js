@@ -8,7 +8,7 @@ import {
 	dataScience,
 	webGL,
 	writers,
-	additionalContributors,
+	decemberCohort,
 } from "./aboutHelper";
 
 /**
@@ -24,8 +24,8 @@ export default function Team() {
 		dataScience;
 	const { title: webGLTitle, members: webGLMembers } = webGL;
 	const { title: writersTitle, members: writersMembers } = writers;
-	const { title: additionalTitle, members: additionalMembers } =
-		additionalContributors;
+	const { title: decemberTitle, members: decemberMembers } =
+		decemberCohort;
 
 	const [firstLoad, setFirstLoad] = useState(true);
 
@@ -45,7 +45,7 @@ export default function Team() {
 			<Accordion title={webGLTitle} members={webGLMembers} />
 			<Accordion title={uxTitle} members={uxMembers} />
 			<Accordion title={writersTitle} members={writersMembers} />
-			<Accordion title={additionalTitle} members={additionalMembers} />
+			<Accordion title={decemberTitle} members={decemberMembers} />
 		</section>
 	);
 }
