@@ -131,6 +131,11 @@ export const frontEnd = {
 	title: "front end developers",
 	members: [
 		{
+			image: "https://i.imgur.com/nDhtO48.png",
+			fullName: "Anna Chowattanakul",
+			title: "Summer 2021 Front End Project Manager",
+		},
+		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/kat_wzzzo3.png",
 			fullName: "Kat Hackethal",
 			title: "Software Engineer",
