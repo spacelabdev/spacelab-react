@@ -1,7 +1,6 @@
 import {createContext, useEffect, useState} from "react";
 import RSSParser from "rss-parser";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
-import {searchForEmptyElement} from "./pages/blog/blogDetails/helperFunction";
 import './App.css';
 import Main from "./main";
 
@@ -65,7 +64,6 @@ function App() {
 						pageTitle,
 						setPageTitle,
 						blogArray,
-						searchForEmptyElement,
 						blogDetails,
 						setBlogDetails
 					}
