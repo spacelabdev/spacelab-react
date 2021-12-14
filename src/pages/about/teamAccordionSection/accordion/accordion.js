@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
-import "./accordion.scss";
 import MemberCard from "../memberCard/memberCard";
+import "./accordion.scss";
 
 /**
- * Renders an accordion style drop down div containing cards displaying the info passed as props
+ * Creates a member card that displays team member's image, name and title
  * {title: (string), members: [{image: (string), fullName: (string), title: (string)}]}
  * @param props Object with Title of the team and its respective members
  * @returns {JSX.Element}
@@ -28,18 +28,20 @@ export default function Accordion(props) {
 	}, [firstLoad]);
 
 	const openAccordion = open ? "accordion-open" : "";
+	const openContainer = open ? "container-open" : "";
 	let flipArrow = arrow ? "icon-flip" : "";
 	if (firstLoad) {
 		flipArrow = "icon-flip";
 	}
 
 	return (
-		<div className="accordion-container">
+		<div className={`accordion-container ${openContainer}`}>
 			<div className="accordion-container-heading">
-				<div className="accordion-container-heading-text-container">
-					{title}
-				</div>
-				<div className={`accordion-container-heading-icon ${flipArrow}`} onClick={handleAccordion}>
+				<div className="accordion-container-heading-text-container">{title}</div>
+				<div
+					className={`accordion-container-heading-icon ${flipArrow}`}
+					onClick={handleAccordion}
+				>
 					▲
 				</div>
 			</div>
