@@ -88,7 +88,7 @@ export const teamLeads = {
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png",
 			fullName: "Brandon Cantello",
-			title: " Project Manager | Software Developer",
+			title: " Project Manager | Software Engineer",
 		},
 	],
 };
