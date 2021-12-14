@@ -1,8 +1,18 @@
 import React, {useState} from "react";
 import Accordion from "./teamAccordionSection/accordion/accordion";
-import {boardOFDirectors, teamLeads, uxDesigners, frontEnd, dataScience, webGL, writers} from "./aboutHelper";
+import {
+	boardOFDirectors,
+	teamLeads,
+	uxDesigners,
+	frontEnd,
+	dataScience,
+	webGL,
+	writers,
+	decemberCohort,
+} from "./aboutHelper";
 
 /**
+ * Renders Spacelab team section with accordion dropdown menus for each Spacelab team.
  * @returns {JSX.Element}
  * @constructor
  */
@@ -14,7 +24,7 @@ export default function Team() {
 	const {title: dataScienceTitle, members: dataScienceMembers} = dataScience;
 	const {title: webGLTitle, members: webGLMembers} = webGL;
 	const {title: writersTitle, members: writersMembers} = writers;
-
+	const {title: decemberTitle, members: decemberMembers} = decemberCohort;
 	const [firstLoad, setFirstLoad] = useState(true);
 
 	return (
@@ -28,6 +38,7 @@ export default function Team() {
 			<Accordion title={webGLTitle} members={webGLMembers}/>
 			<Accordion title={uxTitle} members={uxMembers}/>
 			<Accordion title={writersTitle} members={writersMembers}/>
+			<Accordion title={decemberTitle} members={decemberMembers}/>
 		</section>
 	);
 }

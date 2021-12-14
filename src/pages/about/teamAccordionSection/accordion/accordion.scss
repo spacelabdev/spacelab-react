@@ -1,7 +1,7 @@
 .accordion-container {
 	height: auto;
 	width: 90%;
-
+	transition: transform 0.4s ease-in-out;
 	&-heading {
 		font-family: "Poppins", sans-serif;
 		font-size: 24px;
@@ -51,7 +51,7 @@
 		color: #7000ff;
 		max-height: 0;
 		overflow: hidden;
-		transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -67,5 +67,13 @@
 	.accordion-open {
 		height: auto;
 		max-height: 2500px;
+		padding: 30px 0;
+		@media (min-width: 1024px) {
+			max-height: 1000px;
+		}
 	}
+}
+
+.container-open {
+	margin-bottom: 40px;
 }
