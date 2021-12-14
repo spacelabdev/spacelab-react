@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import {UniversalContext} from "../../App";
 import {Carousel} from "react-bootstrap";
+import {Link} from "react-router-dom";
 import "./blog.scss";
 
 /**
@@ -11,7 +12,12 @@ import "./blog.scss";
 export default function BlogCarousel() {
 	const context = useContext(UniversalContext);
 	const blogs = context.blogArray.items;
+	const setBlogDetails = context.setBlogDetails;
 	let blogArray = [];
+
+	function handleClick(blog) {
+		setBlogDetails(blog);
+	}
 
 	if (blogs !== undefined) {
 		let numberOfBlogs;
@@ -33,14 +39,14 @@ export default function BlogCarousel() {
 			blogArray.push(
 				<Carousel.Item>
 					<div className={"blog-carousel-image-wrapper"}>
-						<a
-							className={"blog-element-wrapper"}
-							href={blogs[i].link}
-							target="_blank"
-							rel="nofollow noopener noreferrer"
-						>
-							<img className={"d-block"} src={imageURL} alt={"carousel slide"}/>
-						</a>
+						<Link to={"/blogdetails"} className={"blog-element-wrapper"}>
+							<a
+								onClick={() => handleClick(content)}
+								rel="nofollow noopener noreferrer"
+							>
+								<img className={"d-block"} src={imageURL} alt={"carousel slide"}/>
+							</a>
+						</Link>
 						<Carousel.Caption>
 							<p className={"blog-title"}>{blogs[i].title}</p>
 						</Carousel.Caption>
