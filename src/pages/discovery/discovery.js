@@ -1,6 +1,6 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
-import * as ReactBootStrap from 'react-bootstrap'
+// import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryFilterList from "./discoverySearchFilters/discoveryFilterList";
 import {discoveryMethodFiltersArray, planetSystemsFiltersArray, planetTypeFiltersArray} from "./discoveryHelper";
 import "./discovery.scss";
@@ -12,27 +12,27 @@ import UnderConstruction from "../../components/underConstructionNotification/un
  * @constructor
  */
 export default function Discovery() {
-	const discTable = [
-		{
-			name: "",
-			lightYrs: "",
-			planetMass: "",
-			stellarMag: "",
-			discoveryDt: "",
-		},
-	]
+	// const discTable = [
+	// 	{
+	// 		name: "",
+	// 		lightYrs: "",
+	// 		planetMass: "",
+	// 		stellarMag: "",
+	// 		discoveryDt: "",
+	// 	},
+	// ]
 
-	const renderDiscTable = (discTable, index) => {
-		return (
-			<tr key={index}>
-				<td>{discTable.name}</td>
-				<td>{discTable.lightYrs}</td>
-				<td>{discTable.planetMass}</td>
-				<td>{discTable.stellarMag}</td>
-				<td>{discTable.discoveryDt}</td>
-			</tr>
-		)
-	}
+	// const renderDiscTable = (discTable, index) => {
+	// 	return (
+	// 		<tr key={index}>
+	// 			<td>{discTable.name}</td>
+	// 			<td>{discTable.lightYrs}</td>
+	// 			<td>{discTable.planetMass}</td>
+	// 			<td>{discTable.stellarMag}</td>
+	// 			<td>{discTable.discoveryDt}</td>
+	// 		</tr>
+	// 	)
+	// }
 
 	// const [isChecked, setIsChecked] = useState(
 	// 	new Array (filters.length).fill(false)
