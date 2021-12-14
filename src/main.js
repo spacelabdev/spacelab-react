@@ -8,6 +8,7 @@ import Home from "./pages/home/home";
 import Projects from "./pages/projects/projects";
 import Contact from "./pages/contact/contact";
 import BlogArchives from "./pages/blog/blogArchives/blogArchives";
+import BlogDetails from "./pages/blog/blogDetails/blogDetails";
 
 /**
  * Handles Routing
@@ -21,6 +22,7 @@ export default function Main() {
 			<Route exact path="/about" component={About}/>
 			<Route exact path="/archives" component={BlogArchives}/>
 			<Route exact path="/blog" component={Blog}/>
+			<Route exact path="/blogdetails" component={BlogDetails}/>
 			<Route exact path="/contact" component={Contact}/>
 			<Route exact path="/discovery" component={Discovery}/>
 			<Route exact path="/glossary" component={Glossary}/>
