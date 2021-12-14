@@ -26,6 +26,7 @@ export default function Main() {
 			<Route exact path="/glossary" component={Glossary}/>
 			<Route exact path="/home" component={Home}/>
 			<Route exact path="/projects" component={Projects}/>
+			<Route path="/" component={Home}/>
 			<Redirect to='/home'/>
 		</Switch>
 	);
