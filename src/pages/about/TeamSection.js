@@ -5,10 +5,12 @@ import {
 	teamLeads,
 	uxDesigners,
 	frontEnd,
+	backEnd,
 	dataScience,
 	webGL,
 	writers,
-	decemberCohort,
+	december2021Cohort,
+	additionalContributors,
 } from "./aboutHelper";
 
 /**
@@ -21,10 +23,12 @@ export default function Team() {
 	const {title: teamLeadTitle, members: teamLeadMembers} = teamLeads;
 	const {title: uxTitle, members: uxMembers} = uxDesigners;
 	const {title: frontEndTitle, members: frontEndMembers} = frontEnd;
+	const {title: backEndTitle, members: backEndMembers} = backEnd;
 	const {title: dataScienceTitle, members: dataScienceMembers} = dataScience;
 	const {title: webGLTitle, members: webGLMembers} = webGL;
 	const {title: writersTitle, members: writersMembers} = writers;
-	const {title: decemberTitle, members: decemberMembers} = decemberCohort;
+	const {title: december2021Title, members: december2021Members} = december2021Cohort;
+	const {title: additionalContributorTitle, members: additionalContributorMembers} = additionalContributors;
 	const [firstLoad, setFirstLoad] = useState(true);
 
 	return (
@@ -34,11 +38,13 @@ export default function Team() {
 			<Accordion title={boardTitle} members={boardMembers} firstLoad={firstLoad} setFirstLoad={setFirstLoad}/>
 			<Accordion title={teamLeadTitle} members={teamLeadMembers}/>
 			<Accordion title={frontEndTitle} members={frontEndMembers}/>
+			<Accordion title={backEndTitle} members={backEndMembers}/>
 			<Accordion title={dataScienceTitle} members={dataScienceMembers}/>
 			<Accordion title={webGLTitle} members={webGLMembers}/>
 			<Accordion title={uxTitle} members={uxMembers}/>
 			<Accordion title={writersTitle} members={writersMembers}/>
-			<Accordion title={decemberTitle} members={decemberMembers}/>
+			<Accordion title={december2021Title} members={december2021Members}/>
+			<Accordion title={additionalContributorTitle} members={additionalContributorMembers}/>
 		</section>
 	);
 }

@@ -141,21 +141,6 @@ export const frontEnd = {
 			title: "Full Stack Software Engineer",
 		},
 		{
-			image: "https://i.imgur.com/UXz18XD.png",
-			fullName: "Xu Xu",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
-			fullName: "Charlie Arboleda",
-			title: "Software Engineer",
-		},
-		{
-			image: "https://i.imgur.com/fPunQXz.png",
-			fullName: "Bach Le",
-			title: "Software Engineer",
-		},
-		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
 			fullName: "Kausar Akther",
 			title: "Software Engineer",
@@ -165,10 +150,25 @@ export const frontEnd = {
 			fullName: "Jon Zivku",
 			title: "Software Engineer",
 		},
+	],
+};
+
+/**
+ * Object containing details for the Back End Developers
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
+export const backEnd = {
+	title: "back end developers",
+	members: [
 		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
-			fullName: "Deen Haque",
-			title: "Full Stack Software Engineer",
+			image: "https://i.imgur.com/UXz18XD.png",
+			fullName: "Xu Xu",
+			title: "Software Engineer",
+		},
+		{
+			image: "https://i.imgur.com/fPunQXz.png",
+			fullName: "Bach Le",
+			title: "Software Engineer",
 		},
 	],
 };
@@ -249,10 +249,10 @@ export const writers = {
 };
 
 /**
- * Object containing details for additional contributors to the Spacelab project
+ * Object containing details for members of the Spacelab December 2021 cohort
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
-export const decemberCohort = {
+export const december2021Cohort = {
 	title: "december 2021 cohort",
 	members: [
 		{
@@ -282,3 +282,23 @@ export const decemberCohort = {
 		},
 	],
 };
+
+/**
+ * Object containing details for additional contributors to the Spacelab project
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
+export const additionalContributors = {
+	title: "additional contributors",
+	members: [
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
+			fullName: "Deen Haque",
+			title: "Full Stack Software Engineer",
+		},
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
+			fullName: "Charlie Arboleda",
+			title: "Software Engineer",
+		},
+	],
+}
