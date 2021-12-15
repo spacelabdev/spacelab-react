@@ -7,7 +7,7 @@
     text-align: left;
     position: fixed;
     width: 100vw;
-    background-color: #1C1A22;
+    background-color: #000000;
     z-index: 99;
     @media (max-width: 766px) {
         height: 3.5em;
@@ -42,7 +42,7 @@
         left: 0;
         height: 70px;
         width: 100%;
-        background: #1C1A22;
+        background: #000000;
         color: white;
         z-index: 99;
         text-transform: uppercase;
@@ -67,7 +67,7 @@
     .logo-container {
         position: relative;
         font-family: "Seymour One", sans-serif;
-        max-width: 20vw;
+        max-width: 300px;
     }
 
     .logo-nav {
@@ -75,7 +75,7 @@
     }
 
     .logo-nav img {
-        max-width: 15vw;
+        max-width: 290px;
         margin: auto auto;
     }
 

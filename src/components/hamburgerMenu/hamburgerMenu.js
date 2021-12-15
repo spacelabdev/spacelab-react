@@ -24,6 +24,11 @@ class HamburgerMenu extends React.Component {
 							</Link>
 						</div>
 						<div>
+							<Link className={'hamburger-nav-link'} to={'/projects'} style={{textDecoration: 'none'}}>
+								Projects
+							</Link>
+						</div>
+						<div>
 							<Link className={'hamburger-nav-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
 								Glossary
 							</Link>
@@ -31,6 +36,11 @@ class HamburgerMenu extends React.Component {
 						<div>
 							<Link className={'hamburger-nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
 								Blog
+							</Link>
+						</div>
+						<div>
+							<Link className={'hamburger-nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
+								Contact
 							</Link>
 						</div>
 					</div>

@@ -1,0 +1,25 @@
+.projects-main-container {
+    max-width: 90vw;
+    margin: 0 auto;
+
+    .projects-exoplanetarium-image {
+        width: 100%;
+        margin: 2em auto;
+        max-width: 1050px;
+
+        .exoplanetarium-image {
+            width: 100%;
+        }
+    }
+
+     .exoplanetarium-paragraphs {
+         text-align: left;
+         width: 80%;
+         max-width: 800px;
+         margin: 0 auto;
+
+         &:nth-of-type(2) {
+             padding-bottom: 3em;
+         }
+     }
+}

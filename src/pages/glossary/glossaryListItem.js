@@ -9,6 +9,7 @@ export default function OfficeListItem(props) {
 	const handleTermClick = () => {
 		context.setGlossaryTermDef(glossaryTerm[1]);
 		context.setCurrentGlossaryTerm(glossaryTerm[0]);
+		context.setGlossaryTermImg(glossaryTerm[3]);
 	};
 
 	return (
