@@ -1,9 +1,4 @@
-/**
- * Module for utility functions
- */
-
 import { useEffect, useRef } from "react";
-
 
 /**
  * Custom hook that executes the provided callback (fn) only if it is not the first
@@ -13,17 +8,16 @@ import { useEffect, useRef } from "react";
  */
 export function useEffectSkipFirstRender(fn, arr) {
     // keep track of whether the custom hook is executed for the first time
-    const isFirstRender = useRef(true)
+    const isFirstRender = useRef(true);
 
     useEffect(() => {
         if (isFirstRender.current) {
-            isFirstRender.current = false
-            return
+            isFirstRender.current = false;
+            return;
         }
-        return fn()
-    }, arr)
+        return fn();
+    }, arr);
 }
-
 
 /**
  * Open download prompt for selected data in the specified data type
@@ -37,14 +31,13 @@ export function useEffectSkipFirstRender(fn, arr) {
  */
 export function downloadData(data, dataType, filename) {
     // create a blob with the data and stipulate the data type / format
-    const blob = new Blob([data], { type: dataType })
-    // create a link element
-    const link = document.createElement('a')
+    const blob = new Blob([data], {type: dataType});
+    const link = document.createElement('a');
     // create a DOMString containing a URL representing the blob object given in the parameter
-    link.href = URL.createObjectURL(blob)
+    link.href = URL.createObjectURL(blob);
     // ensure the download prompt is opened
-    link.download = filename
-    link.target = '_blank'
+    link.download = filename;
+    link.target = '_blank';
     // some browser need the anchor to be in the DOM
     document.body.append(link);
     link.click();

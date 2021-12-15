@@ -449,7 +449,8 @@ export const transitPropertiesFiltersArray = [
 			'fit minimization. Note that the dependence of limb-darkening coefficients on stellar parameters implies ' +
 			'that planet radius does not scale linearly with stellar radius. If new stellar parameters are adopted, ' +
 			'the most-correct approach is to re-fit the transit with new limb-darkening coefficients in order to ' +
-			're-measure planet size.',	},
+			're-measure planet size.',
+	},
 	{
 		name: 'koi_parm_prov',
 		label: 'KOI Parameter Provenance',
@@ -458,7 +459,7 @@ export const transitPropertiesFiltersArray = [
 		dataType: 'string',
 		description: 'KOI Parameter Provenance',
 	},
-]
+];
 
 export const thresholdCrossingEventFiltersArray = [
 	{
@@ -583,7 +584,7 @@ export const thresholdCrossingEventFiltersArray = [
 		dataType: 'string',
 		description: 'This is the relative path for the data validation summary.',
 	},
-]
+];
 
 export const stellarParametersFiltersArray = [
 	{
@@ -662,7 +663,7 @@ export const stellarParametersFiltersArray = [
 			'\n' +
 			'Astero = Host star properties have been measured by comparison with astroseismologial models.',
 	},
-]
+];
 
 export const kicParametersFiltersArray = [
 	{
@@ -745,7 +746,7 @@ export const kicParametersFiltersArray = [
 		dataType: 'number',
 		description: 'K-band mag from 2MASS',
 	}
-]
+];
 
 export const pixelBasedKoiVettingFiltersArray = [
 	{
@@ -877,4 +878,4 @@ export const pixelBasedKoiVettingFiltersArray = [
 			'difference image and the Kepler Input Catalog position by averaging the weighted single-quarter ' +
 			'measurements. The KIC position is subtracted from the difference image centroids.',
 	},
-]
+];

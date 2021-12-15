@@ -15,9 +15,9 @@ export default function About() {
 	return (
 		<>
 			<HeroImage/>
-			<AboutHistorySection/>
-			<MissionStatement/>
 			<Team/>
+			<MissionStatement/>
+			<AboutHistorySection/>
 			<Footer/>
 		</>
 	);

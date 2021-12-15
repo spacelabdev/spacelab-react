@@ -1,6 +1,6 @@
-import React, {useContext} from "react";
-import {UniversalContext} from "../../App";
-import {Carousel} from "react-bootstrap";
+import React, { useContext } from "react";
+import { UniversalContext } from "../../App";
+import { Carousel } from "react-bootstrap";
 import "./blog.scss";
 
 /**
@@ -29,9 +29,8 @@ export default function BlogCarousel() {
 				content.indexOf("src=") + 5,
 				content.indexOf(">", content.indexOf("src=") + 5) - 3
 			);
-
 			blogArray.push(
-				<Carousel.Item>
+				<Carousel.Item key={blogs[i].title}>
 					<div className={"blog-carousel-image-wrapper"}>
 						<a
 							className={"blog-element-wrapper"}
@@ -39,7 +38,11 @@ export default function BlogCarousel() {
 							target="_blank"
 							rel="nofollow noopener noreferrer"
 						>
-							<img className={"d-block"} src={imageURL} alt={"carousel slide"}/>
+							<img
+								className={"d-block"}
+								src={imageURL}
+								alt={"carousel slide"}
+							/>
 						</a>
 						<Carousel.Caption>
 							<p className={"blog-title"}>{blogs[i].title}</p>

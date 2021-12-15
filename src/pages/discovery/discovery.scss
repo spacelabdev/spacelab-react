@@ -7,9 +7,11 @@
 //
 .tooltip-inner {
   color: white;
-  background-color: rgba(100,100,100,0.5);
+  background-color: black;
   padding: 10px;
   border-radius: 5px;
+  max-width: 400px;
+  text-align: left;
 }
 
 #database-search-wrapper {
@@ -27,7 +29,6 @@
   }
 
   #discovery-table {
-    align-self: center;
     margin: 0 auto;
     font-size: 2rem;
   }
@@ -72,7 +73,7 @@
       .planet-system {
         .filter-item {
           display: flex;
-          padding-bottom: .5rem;
+          padding: .5rem 0;
 
           .discovery-checkbox-wrapper {
             padding-right: 1em;

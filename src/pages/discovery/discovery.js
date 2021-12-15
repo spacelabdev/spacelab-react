@@ -1,6 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import HeroImage from "../../components/heroImage/heroImage";
-import * as ReactBootStrap from 'react-bootstrap'
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
 	projectDispositionFiltersArray,
@@ -12,15 +11,14 @@ import {
 	kicParametersFiltersArray,
 	pixelBasedKoiVettingFiltersArray,
 } from "./discoveryHelper";
-import "./discovery.scss";
 import Footer from "../../components/footer/footer";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
-import { getExoplanets } from "../../services/calTechApiRequest";
-import { UniversalContext } from "../../App";
-import { initialiseSelectedColumnsState, initialiseWhereFilterState } from "./initialiseState";
+import {getExoplanets} from "../../services/calTechApiRequest";
+import {UniversalContext} from "../../App";
+import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
 import DropdownButton from "../../components/button/dropdownButton";
-import { downloadData } from "../../services/utilityFunctions";
-
+import {downloadData} from "../../services/utilityFunctions";
+import "./discovery.scss";
 
 /**
  * View for the discovery page
@@ -29,48 +27,21 @@ import { downloadData } from "../../services/utilityFunctions";
  */
 export default function Discovery() {
 	const context = useContext(UniversalContext);
-	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set state for the checkboxes in App instead
-	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState())
-	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState())
-	const discTable = [
-		{
-			name: "",
-			lightYrs: "",
-			planetMass: "",
-			stellarMag: "",
-			discoveryDt: "",
-		},
-	]
-
-	const renderDiscTable = (discTable, index) => {
-		return (
-			<tr key={index}>
-				<td>{discTable.name}</td>
-				<td>{discTable.lightYrs}</td>
-				<td>{discTable.planetMass}</td>
-				<td>{discTable.stellarMag}</td>
-				<td>{discTable.discoveryDt}</td>
-			</tr>
-		)
-	}
-
-	console.log(context.exoplanetData)
+	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set
+	//  state for the checkboxes in App instead
+	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState());
+	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState());
 
 	/**
-	 * Query CalTech db and set exoplanetData in App state and store as session var
-	 * If a query is sent for the purpose of downloading the result, the signature of
-	 * this function allows the provision of an alternative setState function to ensure
-	 * that the state for the display of the filtered data (JSON) is not mixed with data
-	 * responses for the purpose of downloading filtered results (likely in csv format)
+	 * Query CalTech db and set exoplanetData in App state and store as session var. If a query is sent for the purpose
+	 * of downloading the result, the signature of this function allows the provision of an alternative setState
+	 * function to ensure that the state for the display of the filtered data (JSON) is not mixed with data responses
+	 * for the purpose of downloading filtered results (likely in csv format)
 	 * @param format: desired format of API response (empty string -> csv)
 	 * @param isStateful: if false, do not set state (needed for download feature)
 	 * @param isStorage: if false, API response not saved in storage (need for download feature)
 	 */
-	const queryExoplanetDatabase = (
-		format='json',
-		isStateful=true,
-		isStorage=true
-	) => {
+	const queryExoplanetDatabase = (format = 'json', isStateful = true, isStorage = true) => {
 		// only send an API request if at least one column has been checked
 		if (Object.values(selectedColumns).some(column => column)) {
 			return getExoplanets({
@@ -92,47 +63,45 @@ export default function Discovery() {
 				}
 				// return response such that it can be handled by the caller
 				// this is important for the data download function
-				return res
+				return res;
 			}).catch(e => console.error(e));
 		}
 	};
 
 	// make API call after selectedColumns and whereFilter states have been initialised but only once at component
 	// mount-time
-	useEffect(queryExoplanetDatabase, [])
+	useEffect(queryExoplanetDatabase, []);
 
 	/**
 	 * This function is passed as a prop to the dropdown item and is executed when the user clicks on the item
 	 */
 	const dropdownItemClick = (e) => {
 		// set format, dataType, and filename, subject to selected data type
-		let format
-		let dataType
-		let filename
+		let format;
+		let dataType;
+		let filename;
 		switch (e.target.innerHTML) {
 			case 'csv':
 				// as per API, empty string for format requires a csv data response
-				format = ''
-				dataType = 'text/csv'
-				filename = 'filtered_output.csv'
-				break
+				format = '';
+				dataType = 'text/csv';
+				filename = 'filtered_output.csv';
+				break;
 			case 'json':
-				format = 'json'
-				dataType = 'application/json'
-				filename = 'filtered_output.json'
-				break
+				format = 'json';
+				dataType = 'application/json';
+				filename = 'filtered_output.json';
+				break;
 		}
 
 		// make API request with specified data type format (Note: empty string = csv)
-		queryExoplanetDatabase(format,false,false)
+		queryExoplanetDatabase(format, false, false)
 			.then(res => {
 				// stringify data only if format is json
-				const data = format === 'json'
-					? JSON.stringify(res.data)
-					: res.data
-				downloadData(data, dataType, filename)
+				const data = format === 'json' ? JSON.stringify(res.data) : res.data;
+				downloadData(data, dataType, filename);
 			})
-			.catch(e => console.error(e))
+			.catch(e => console.error(e));
 	}
 
 	return (
@@ -141,21 +110,9 @@ export default function Discovery() {
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 				<div id="discovery-table">
+
 					<UnderConstruction/>
-					<ReactBootStrap.Table striped bordered hover size="sm">
-						<thead>
-						{/*<tr>*/}
-						{/*	<th>Name</th>*/}
-						{/*	<th>Light Years From Earth</th>*/}
-						{/*	<th>Planet Mass</th>*/}
-						{/*	<th>Stellar Magnitude</th>*/}
-						{/*	<th>Discovery Date</th>*/}
-						{/*</tr>*/}
-						</thead>
-						<tbody>
-						{discTable.map(renderDiscTable)}
-						</tbody>
-					</ReactBootStrap.Table>
+
 					<br/>
 				</div>
 				<div id="searchBttn">
@@ -169,8 +126,8 @@ export default function Discovery() {
 							buttonLabel={'Download'}
 							queryExoplanetDatabase={queryExoplanetDatabase}
 							dropdownItemClick={dropdownItemClick}
-							item1={{ href: "#/action-1", label: "csv" }}
-							item2={{ href: "#/action-2", label: "json" }}
+							item1={{href: "#/action-1", label: "csv"}}
+							item2={{href: "#/action-2", label: "json"}}
 						/>
 					</div>
 					<DiscoveryColumnFilterList
