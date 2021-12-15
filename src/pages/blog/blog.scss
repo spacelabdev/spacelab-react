@@ -1,8 +1,3 @@
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/carousel";
-
 #blog-container {
 	padding-top: 5em;
 
@@ -11,7 +6,7 @@
 		padding-bottom: 2rem;
 	}
 
-	.blog-title{
+	.blog-title {
 		padding: 1rem;
 	}
 
@@ -21,19 +16,14 @@
 		@media (min-width: 767px) and (max-width: 1023px) {
 			width: 625px;
 		}
-	}
 
-	.carousel .carousel-indicators li {
-		margin: 0 .5rem 5rem;
-		background-color: white;
-		opacity: 0.1;
-		height: 4px;
-		width: 50px;
-		cursor: pointer;
-	}
+		.carousel-indicators {
+			z-index: 15;
 
-	.carousel .carousel-indicators li.active {
-		opacity: 1 !important;
+			li {
+				margin: 0 0.5rem 4.5rem;
+			}
+		}
 	}
 
 	.carousel-inner {
