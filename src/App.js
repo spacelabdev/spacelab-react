@@ -1,8 +1,8 @@
 import {createContext, useEffect, useState} from "react";
 import RSSParser from "rss-parser";
-import Main from "./main";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
+import Main from "./main";
 
 /**
  * @returns {JSX.Element}
@@ -22,11 +22,6 @@ function App() {
 	const [pageTitle, setPageTitle] = useState("");
 	/** Medium Blog RSS Feed State */
 	const [blogArray, setBlogArray] = useState([]);
-	/** Cal Tech API Initial Data */
-	const [exoplanetData, setExoplanetData] = useState(() => {
-		const result = sessionStorage.getItem('exoplanetSearchResults');
-		return result ? JSON.parse(result) : {}
-	});
 
 	// Get RSS feed from Medium for Blog page
 	useEffect(() => {
@@ -66,9 +61,7 @@ function App() {
 						setCurrentGlossaryTerm,
 						pageTitle,
 						setPageTitle,
-						blogArray,
-						setExoplanetData,
-						exoplanetData
+						blogArray
 					}
 				}>
 					<Main/>
