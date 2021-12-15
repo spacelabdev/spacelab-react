@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useState} from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
@@ -70,7 +70,12 @@ export default function Discovery() {
 
 	// make API call after selectedColumns and whereFilter states have been initialised but only once at component
 	// mount-time
-	useEffect(queryExoplanetDatabase, []);
+	// useEffect(queryExoplanetDatabase, []);
+
+	// TODO: This is a quick fix for missing above dependencies. Review.
+	const filterSearch = () => {
+		queryExoplanetDatabase();
+	}
 
 	/**
 	 * This function is passed as a prop to the dropdown item and is executed when the user clicks on the item
@@ -81,16 +86,16 @@ export default function Discovery() {
 		let dataType;
 		let filename;
 		switch (e.target.innerHTML) {
-			case 'csv':
-				// as per API, empty string for format requires a csv data response
-				format = '';
-				dataType = 'text/csv';
-				filename = 'filtered_output.csv';
-				break;
 			case 'json':
 				format = 'json';
 				dataType = 'application/json';
 				filename = 'filtered_output.json';
+				break;
+			default:
+				// as per API, empty string for format requires a csv data response
+				format = '';
+				dataType = 'text/csv';
+				filename = 'filtered_output.csv';
 				break;
 		}
 
@@ -122,6 +127,7 @@ export default function Discovery() {
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>
 						<p>Filters</p>
+						<button className={'discovery-filter-button'} onClick={filterSearch}>Search</button>
 						<DropdownButton
 							buttonLabel={'Download'}
 							queryExoplanetDatabase={queryExoplanetDatabase}
