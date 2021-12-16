@@ -17,18 +17,15 @@ export default function IntroductionSection() {
                 <div className="about">
                     <h3>What is the Space Lab?</h3>
                     <p>
-                        SpaceLab is a project with the goal to explore
-                        NASA/CalTech data from the TESS, Kepler and K2 Missions
-                        using various degrees of Machine Learning and Deep
-                        Neural Networks in the pursuit of Earth-Like planets
-                        around nearby stars in the Milky Way Galaxy.
+                        Spacelab is a people-incubator drawing from diverse, underrepresented communities and with a
+                        goal of building the leaders of tomorrow through the creation of cross-functional
+                        outer-space-focused projects.
                     </p>
                     <p>
-                        Our short-term goal is to find objects of interest for
-                        professional Astronomers to explore, and to classify
-                        already-identified candidates that have not yet been
-                        classified as either exoplanets or false-positives by
-                        the astronomical community.
+                        Our first project uses Machine Learning and Deep Neural Networks to discover and classify
+                        exoplanets or planets that orbit stars other than our own sun. We are excited to be able to
+                        build on models that NASA Fellows and Scientists first created in prior programs with similar
+                        aims.
                     </p>
                 </div>
             </div>
