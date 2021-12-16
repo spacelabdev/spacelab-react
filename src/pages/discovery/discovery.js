@@ -68,8 +68,12 @@ export default function Discovery() {
 		}
 	};
 
-	// make API call after selectedColumns and whereFilter states have been initialised but only once at component
-	// mount-time
+	// Make API call after selectedColumns and whereFilter states have been initialised but only once at component
+	// mount-time. Disabling the eslint warning in the next line since providing an empty dependency array is done
+	// intentionally. The callback is only invoked once at component mount time. Providing the callback's
+	// dependencies would execute the callback function everytime the dependencies change - an effect that is not
+	// desired in this case. The next line disables the eslint alert.
+	// eslint-disable-next-line
 	useEffect(queryExoplanetDatabase, []);
 
 	/**
@@ -92,6 +96,8 @@ export default function Discovery() {
 				dataType = 'application/json';
 				filename = 'filtered_output.json';
 				break;
+			// Default case provided only to suffice eslint's requirement for a default case
+			default:
 		}
 
 		// make API request with specified data type format (Note: empty string = csv)

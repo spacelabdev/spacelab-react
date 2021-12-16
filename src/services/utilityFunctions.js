@@ -16,6 +16,9 @@ export function useEffectSkipFirstRender(fn, arr) {
             return;
         }
         return fn();
+        // the function never changes at run-time and the arr is already an array type
+        // hence, the disabling of the eslint warning
+        // eslint-disable-next-line
     }, arr);
 }
 
