@@ -85,19 +85,18 @@ export default function Discovery() {
 		let dataType;
 		let filename;
 		switch (e.target.innerHTML) {
-			case 'csv':
-				// as per API, empty string for format requires a csv data response
-				format = '';
-				dataType = 'text/csv';
-				filename = 'filtered_output.csv';
-				break;
 			case 'json':
 				format = 'json';
 				dataType = 'application/json';
 				filename = 'filtered_output.json';
 				break;
-			// Default case provided only to suffice eslint's requirement for a default case
+			// Default case is the csv file format
 			default:
+				// as per API, empty string for format requires a csv data response
+				format = '';
+				dataType = 'text/csv';
+				filename = 'filtered_output.csv';
+				break;
 		}
 
 		// make API request with specified data type format (Note: empty string = csv)
@@ -130,7 +129,6 @@ export default function Discovery() {
 						<p>Filters</p>
 						<DropdownButton
 							buttonLabel={'Download'}
-							queryExoplanetDatabase={queryExoplanetDatabase}
 							dropdownItemClick={dropdownItemClick}
 							item1={{href: "#/action-1", label: "csv"}}
 							item2={{href: "#/action-2", label: "json"}}
