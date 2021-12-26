@@ -201,7 +201,8 @@ export default function Discovery() {
 					/>
 					<SimpleButton
 						buttonName={"Update"}
-						buttonEffectAsync={queryExoplanetDatabase}
+						urlRedirect={"/about"}
+						// buttonEffectAsync={queryExoplanetDatabase}
 					/>
 				</div>
 			</div>
