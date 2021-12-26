@@ -19,6 +19,7 @@ import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./init
 import DropdownButton from "../../components/button/dropdownButton";
 import {downloadData} from "../../services/utilityFunctions";
 import "./discovery.scss";
+import SimpleButton from "../../components/button/simpleButton"
 
 /**
  * View for the discovery page
@@ -39,7 +40,7 @@ export default function Discovery() {
 	 * for the purpose of downloading filtered results (likely in csv format)
 	 * @param format: desired format of API response (empty string -> csv)
 	 * @param isStateful: if false, do not set state (needed for download feature)
-	 * @param isStorage: if false, API response not saved in storage (need for download feature)
+	 * @param isStorage: if false, API response not saved in storage (needed for download feature)
 	 */
 	const queryExoplanetDatabase = (format = 'json', isStateful = true, isStorage = true) => {
 		// only send an API request if at least one column has been checked
@@ -141,7 +142,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={exoplanetArchiveFiltersArray}
@@ -150,7 +150,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={projectDispositionFiltersArray}
@@ -159,7 +158,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={transitPropertiesFiltersArray}
@@ -168,7 +166,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={thresholdCrossingEventFiltersArray}
@@ -177,7 +174,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={stellarParametersFiltersArray}
@@ -186,7 +182,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={kicParametersFiltersArray}
@@ -195,7 +190,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
 					/>
 					<DiscoveryColumnFilterList
 						filterArray={pixelBasedKoiVettingFiltersArray}
@@ -204,7 +198,10 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-						queryExoplanetDatabse={queryExoplanetDatabase}
+					/>
+					<SimpleButton
+						buttonName={"Update"}
+						buttonEffectAsync={queryExoplanetDatabase}
 					/>
 				</div>
 			</div>
