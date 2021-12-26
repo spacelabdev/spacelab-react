@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./simpleButton.scss"
 import { Button } from "react-bootstrap";
-import { useHistory } from "react-router";
 
 
 /**
- * Returns a button component which either accepts a callback function (buttonEffectAsync) or a url string
- * (urlRedirect). Upon pressing the button either the callback is invoked or the user is redirected to the provided URL.
- * Provide either urlRedirect or buttonEffectAsync function, but not both.
+ * Returns a button component which either accepts a function that executes something or redirects the user to a page
+ * view. Ensure either urlRrdirect or buttonEffect function is provided but not both
  * @param props.buttonName {string} button name displayed
  * @param props.urlRedirect {string} click event redirects user to this url
  * @param props.buttonEffectAsync {function} function that is executed if button is clicked and returns a promise
@@ -19,11 +17,8 @@ export default function SimpleButton(props) {
     const {
         buttonName,
         urlRedirect=null,
-        buttonEffectAsync=null,
+        buttonEffectAsync=null
     } = props
-
-    // create history object from useHistory hook
-    const history = useHistory()
 
     // state variable that indicates whether the button's synchronous function is loading or not
     const [isLoading, setIsLoading] = useState(false)
@@ -33,12 +28,12 @@ export default function SimpleButton(props) {
         if (isLoading) {
             // execute if button is supposed to redirect
             if (urlRedirect) {
-                // push url onto history object
-                history.push(urlRedirect)
+                console.log(`Implement redirection to ${urlRedirect}`)
             }
 
             // execute if button is supposed to do something other than redirect
             if (buttonEffectAsync) {
+                console.log("button clicked: function")
                 buttonEffectAsync()
                     .then(res => {
                         console.log(res)
@@ -51,10 +46,7 @@ export default function SimpleButton(props) {
                     })
             }
         }
-        // This side effect needs to run only if the isLoading var changes. In particular, adding buttonEffectAsync
-        // causes the buttonEffectAsync callback to be executed twice and with it two API calls to the CalTech endpoint.
-        // eslint-disable-next-line
-    }, [isLoading])
+    }, [isLoading, urlRedirect, buttonEffectAsync])
 
     // set isLoading state to true if button is clicked
     const handleButtonClick = () => {
@@ -65,7 +57,7 @@ export default function SimpleButton(props) {
         <Button
             variant={"primary"}
             disabled={isLoading}
-            onClick={handleButtonClick}
+            onClick={!isLoading ? handleButtonClick : null}
         >
             {isLoading
                 ? "Loading..."
