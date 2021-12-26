@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./simpleButton.scss"
 import { Button } from "react-bootstrap";
+import { useHistory } from "react-router";
 
 
 /**
@@ -17,8 +18,11 @@ export default function SimpleButton(props) {
     const {
         buttonName,
         urlRedirect=null,
-        buttonEffectAsync=null
+        buttonEffectAsync=null,
     } = props
+
+    // create history object from useHistory hook
+    const history = useHistory()
 
     // state variable that indicates whether the button's synchronous function is loading or not
     const [isLoading, setIsLoading] = useState(false)
@@ -28,7 +32,7 @@ export default function SimpleButton(props) {
         if (isLoading) {
             // execute if button is supposed to redirect
             if (urlRedirect) {
-                console.log(`Implement redirection to ${urlRedirect}`)
+                history.push(urlRedirect)
             }
 
             // execute if button is supposed to do something other than redirect
