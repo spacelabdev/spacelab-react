@@ -18,7 +18,6 @@ export default function DiscoveryColumnFilterList(props) {
 		setSelectedColumns,
 		whereFilter,
 		setWhereFilter,
-		queryExoplanetDatabse,
 	} = props;
 
 	const filtersArray = filterArray.map((filterColumn, index) => {
@@ -30,7 +29,6 @@ export default function DiscoveryColumnFilterList(props) {
 				selectedColumns={selectedColumns}
 				whereFilter={whereFilter}
 				setWhereFilter={setWhereFilter}
-				queryExoplanetDatabase={queryExoplanetDatabse}
 			/>
 		);
 	});

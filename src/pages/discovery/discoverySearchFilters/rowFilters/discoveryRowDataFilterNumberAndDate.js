@@ -1,6 +1,6 @@
 import React from "react";
 import {Form} from "react-bootstrap";
-import {useEffectSkipFirstRender} from "../../../../services/utilityFunctions";
+
 
 /**
  * Display filter options to user for columns with data type 'number' and 'date'
@@ -14,7 +14,6 @@ export default function DiscoveryRowDataFilterNumberAndDate(props) {
 		dataName,
 		whereFilter,
 		setWhereFilter,
-		queryExoplanetDatabase,
 	} = props;
 
 	const handleFormValueChange = (e) => {
@@ -27,11 +26,6 @@ export default function DiscoveryRowDataFilterNumberAndDate(props) {
 			return {...prevState, [dataName]: newDataNameObj}
 		});
 	}
-
-	// Custom hook that executes useEffect hook, provided whereFilter has changed
-	useEffectSkipFirstRender(() => {
-		queryExoplanetDatabase()
-	}, [whereFilter[dataName].operator, whereFilter[dataName].value]);
 
 	const valueFilterJSX = () => {
 		switch (dataType) {

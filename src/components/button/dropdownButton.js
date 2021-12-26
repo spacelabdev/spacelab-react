@@ -4,7 +4,7 @@ import "./dropdownButton.scss"
 
 
 /**
- *
+ * Returns a dropdown button component
  * @param props
  * @return {JSX.Element}
  * @constructor

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Form} from "react-bootstrap";
 import {getExoplanets} from "../../../../services/calTechApiRequest";
-import {useEffectSkipFirstRender} from "../../../../services/utilityFunctions";
+
 
 /**
  * Display filter options to users for columns with data type 'string' and 'enum'
@@ -15,14 +15,9 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
 		dataName,
 		whereFilter,
 		setWhereFilter,
-		queryExoplanetDatabase,
 	} = props;
 
 	const [enumAttributes, setEnumAttributes] = useState([]);
-
-	useEffectSkipFirstRender(() => {
-		queryExoplanetDatabase()
-	}, [whereFilter[dataName].value]);
 
 	/**
 	 * Upon mounting the component with a dataType of enum, make API call to retrieve all possible enum attributes

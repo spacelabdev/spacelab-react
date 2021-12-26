@@ -1,7 +1,6 @@
 import React from "react";
 import DiscoveryRowDataFilter from "./rowFilters/discoveryRowDataFilter";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
-import {useEffectSkipFirstRender} from "../../../services/utilityFunctions";
 
 /**
  * Render check box, column label, and column label tooltip
@@ -16,14 +15,9 @@ export default function DiscoveryColumnFilterListItem(props) {
 		setSelectedColumns,
 		whereFilter,
 		setWhereFilter,
-		queryExoplanetDatabase,
 	} = props;
 	const isFilterListItemChecked = selectedColumns[filterColumn.name];
 	const checkbox_style = {width: "1.25rem", height: "1.25rem"};
-
-	useEffectSkipFirstRender(() => {
-		queryExoplanetDatabase();
-	}, [isFilterListItemChecked]);
 
 	function handleCheckboxClick(e) {
 		// if current state of checkbox is unchecked, create base state for where filter
@@ -87,7 +81,6 @@ export default function DiscoveryColumnFilterListItem(props) {
 			dataName={filterColumn.name}
 			whereFilter={whereFilter}
 			setWhereFilter={setWhereFilter}
-			queryExoplanetDatabase={queryExoplanetDatabase}
 		/>
 	)
 
