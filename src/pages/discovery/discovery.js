@@ -28,8 +28,6 @@ import SimpleButton from "../../components/button/simpleButton"
  */
 export default function Discovery() {
 	const context = useContext(UniversalContext);
-	// todo: [Sven Gerlach] given that API returns are saved in session storage it would make sense to store and set
-	//  state for the checkboxes in App instead
 	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState());
 	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState());
 
@@ -42,7 +40,7 @@ export default function Discovery() {
 	 * @param isStateful: if false, do not set state (needed for download feature)
 	 * @param isStorage: if false, API response not saved in storage (needed for download feature)
 	 */
-	const queryExoplanetDatabase = (format = 'json', isStateful = true, isStorage = true) => {
+	const queryExoplanetDatabase = (format = 'json', isStateful = true, isStorage = false) => {
 		// only send an API request if at least one column has been checked
 		if (Object.values(selectedColumns).some(column => column)) {
 			return getExoplanets({
@@ -55,14 +53,14 @@ export default function Discovery() {
 					if (isStateful) {
 						context.setExoplanetData(res.data);
 					}
-					/*  todo: why store this in session storage at all? */
 					if (isStorage) {
-						sessionStorage.setItem('exoplanetSearchResults', JSON.stringify(res.data));
+						sessionStorage.setItem('selectedColumns', JSON.stringify(selectedColumns));
+						sessionStorage.setItem('whereFilter', JSON.stringify(whereFilter));
 					}
 				} else {
 					console.error("error retrieving exoplanetData");
 				}
-				// return response such that it can be handled by the caller
+				// return response such that it can be handled by the caller of this promise
 				// this is important for the data download function
 				return res;
 			}).catch(e => console.error(e));
@@ -122,6 +120,10 @@ export default function Discovery() {
 					<br/>
 				</div>
 				<div id="searchBttn">
+					<SimpleButton
+						buttonName={"Update"}
+						buttonEffectAsync={() => queryExoplanetDatabase("json", true, true)}
+					/>
 				</div>
 				<br/>
 
@@ -198,11 +200,6 @@ export default function Discovery() {
 						setSelectedColumns={setSelectedColumns}
 						whereFilter={whereFilter}
 						setWhereFilter={setWhereFilter}
-					/>
-					<SimpleButton
-						buttonName={"Update"}
-						urlRedirect={"/about"}
-						// buttonEffectAsync={queryExoplanetDatabase}
 					/>
 				</div>
 			</div>
