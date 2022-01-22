@@ -64,9 +64,39 @@ export const highlightCurrentFilter = (currentSelection) => {
 export const glossaryTermsDictionary = {
 	"Astrometric solution": "An astrometric solution is an optical technique used in astronomical imaging, "
 		+ "where \"solving\" an image means finding a match between the imaged stars and a star catalogue. "
+		+ "Sometimes when we look at an image of a star, we don’t know where in the sky the image came from. "
+		+ "To get an astrometric solution, the positions of star(s) in an image are extracted and necessary angles "
+		+ "and distances between objects are determined, such that the information can be compared to an existing "
+		+ "catalog of information about the cosmos. If there is an astrometric solution, that means there is "
+		+ "sufficient data to match a known star (or star system) in a catalog to the image being analyzed. "
+		+ "Originally this process was done manually, where distances between stars in an image were carefully "
+		+ "measured by hand and visually compared to physical image records. "
+		+ "Now astrometric solving is done with programs and “solvers”. "
 		+ "Therefore an astrometric solution is a model describing the astronomical position of each image pixel.",
 	"Black Body": "A black body is an idealized body or object that absorbs all incident electromagnetic radiation "
-		+ "(light) at any frequency. It can also emit radiation in any frequency.",
+		+ "at any frequency. It can also emit radiation in any frequency. "
+		+ "You may already know that warm objects can be seen with infrared cameras. This is because warm objects "
+		+ "are emitting electromagnetic waves in the infrared spectrum. All objects emit electromagnetic waves, "
+		+ "and the kind of waves (frequency) emitted depend on the temperature of the object. A cold object will "
+		+ "emit radiation with low energy (such as radio waves or microwaves), while a hot object will emit radiation "
+		+ "with higher energy (like visible light). This may sound strange, but you actually know this phenomena "
+		+ "quite well; you know that a poker left in the fireplace is very very hot when it starts to glow! "
+		+ "The poker is emitting electromagnetic waves in the visible spectrum, which indicates that it is very hot "
+		+ "and has a lot of energy. Blackbody radiation is the term used to describe the relationship between an "
+		+ "object’s temperature and the wavelength of light that it emits. A “black body” is a model object that "
+		+ "would theoretically absorb all wavelengths of light and would emit a spectrum of light in all wavelengths. "
+		+ "Stars can be approximated as black bodies in many cases. The image below shows the radiation emission "
+		+ "spectra of different colored stars. The temperature of the star determines the color. A star like our "
+		+ "Sun has a temperature of around 6000 Kelvin or over 10,000 degrees Fahrenheit, and therefore the wavelength "
+		+ "at which the Sun emits the most radiation is around the wavelength that our eyes would perceive as green! "
+		+ "We don’t see the sun as green, however, because the sun also emits a lot of red and blue light. "
+		+ "We perceive this combination as white light, since red, green, and blue light forms pure white light. "
+		+ "One interesting thing this does explain though, is why the majority of plants are green. The color we see "
+		+ "is the wavelength of light being reflected from the plant toward our eyes. Other wavelengths are absorbed "
+		+ "by the plant. Wavelengths in the green spectrum are most abundant and would result in damage to the plant "
+		+ "if they were absorbed instead of reflected. Too much energy at the peak of the Suns emission spectrum! "
+		+ "To protect themselves plants reflect this wavelength and absorb the other less energetic wavelengths on "
+		+ "either side of the peak.",
 	"Disintegrating Planets": "A disintegrating planet is when a planet is losing dust and gas as it appears to "
 		+ "(or actually does) disintegrate, which can result in the light from a star behind an orbiting planet "
 		+ "becoming dimmed or blocked.",
@@ -161,21 +191,55 @@ export const glossaryTermsArray = [
 		"Astrometric solution",
 		"An astrometric solution is an optical technique used in astronomical imaging, "
 		+ "where \"solving\" an image means finding a match between the imaged stars and a star catalogue. "
+		+ "Sometimes when we look at an image of a star, we don’t know where in the sky the image came from. "
+		+ "To get an astrometric solution, the positions of star(s) in an image are extracted and necessary angles "
+		+ "and distances between objects are determined, such that the information can be compared to an existing "
+		+ "catalog of information about the cosmos. If there is an astrometric solution, that means there is "
+		+ "sufficient data to match a known star (or star system) in a catalog to the image being analyzed. "
+		+ "Originally this process was done manually, where distances between stars in an image were carefully "
+		+ "measured by hand and visually compared to physical image records. "
+		+ "Now astrometric solving is done with programs and “solvers”. "
 		+ "Therefore an astrometric solution is a model describing the astronomical position of each image pixel.",
-		1
+		1,
+		"https://res.cloudinary.com/spacelabdev/image/upload/v1642872384/Glossary%20Images/astrometric_izqmwt.jpg"
 	],
 	[
 		"Black Body",
 		"A black body is an idealized body or object that absorbs all incident electromagnetic radiation "
-		+ "(light) at any frequency. It can also emit radiation in any frequency.",
-		2
+		+ "at any frequency. It can also emit radiation in any frequency. "
+		+ "You may already know that warm objects can be seen with infrared cameras. This is because warm objects "
+		+ "are emitting electromagnetic waves in the infrared spectrum. All objects emit electromagnetic waves, "
+		+ "and the kind of waves (frequency) emitted depend on the temperature of the object. A cold object will "
+		+ "emit radiation with low energy (such as radio waves or microwaves), while a hot object will emit radiation "
+		+ "with higher energy (like visible light). This may sound strange, but you actually know this phenomena "
+		+ "quite well; you know that a poker left in the fireplace is very very hot when it starts to glow! "
+		+ "The poker is emitting electromagnetic waves in the visible spectrum, which indicates that it is very hot "
+		+ "and has a lot of energy. Blackbody radiation is the term used to describe the relationship between an "
+		+ "object’s temperature and the wavelength of light that it emits. A “black body” is a model object that "
+		+ "would theoretically absorb all wavelengths of light and would emit a spectrum of light in all wavelengths. "
+		+ "Stars can be approximated as black bodies in many cases. The image below shows the radiation emission "
+		+ "spectra of different colored stars. The temperature of the star determines the color. A star like our "
+		+ "Sun has a temperature of around 6000 Kelvin or over 10,000 degrees Fahrenheit, and therefore the wavelength "
+		+ "at which the Sun emits the most radiation is around the wavelength that our eyes would perceive as green! "
+		+ "We don’t see the sun as green, however, because the sun also emits a lot of red and blue light. "
+		+ "We perceive this combination as white light, since red, green, and blue light forms pure white light. "
+		+ "One interesting thing this does explain though, is why the majority of plants are green. The color we see "
+		+ "is the wavelength of light being reflected from the plant toward our eyes. Other wavelengths are absorbed "
+		+ "by the plant. Wavelengths in the green spectrum are most abundant and would result in damage to the plant "
+		+ "if they were absorbed instead of reflected. Too much energy at the peak of the Suns emission spectrum! "
+		+ "To protect themselves plants reflect this wavelength and absorb the other less energetic wavelengths on "
+		+ "either side of the peak.",
+		2,
+		"https://res.cloudinary.com/spacelabdev/image/upload/v1642880405/Glossary%20Images/blackbody_zwvwfh.jpg"
 	],
 	[
 		"Disintegrating Planets",
 		"A disintegrating planet is when a planet is losing dust and gas as it appears to "
 		+ "(or actually does) disintegrate, which can result in the light from a star behind an orbiting planet "
 		+ "becoming dimmed or blocked.",
-		4
+		4,
+		"https://res.cloudinary.com/spacelabdev/image/upload/v1642881354/Glossary%20Images/disintegrating_blcukg.jpg",
+		"https://www.smithsonianmag.com/science-nature/disintegrating-planets-could-key-discovering-what-worlds-exoplanets-made-of-180971245/"
 	],
 	[
 		"Eccentricity",

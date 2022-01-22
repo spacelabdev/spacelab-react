@@ -58,6 +58,16 @@
             margin: 2em auto;
         }
     }
+
+    #glossary-term-image-source-wrapper {
+        width: 600px;
+        text-align: left;
+        font-size: .75em;
+        margin: -2em auto 0;
+        #glossary-term-image-source {
+            color: black;
+        }
+    }
 }
 
 #glossary-button-container {
