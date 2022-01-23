@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useState, useMemo} from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
@@ -116,7 +116,7 @@ export default function Discovery() {
 				<div id="discovery-table">
 					<UnderConstruction/>
 					<p>
-						Please excuse our dust. While the database search and search result export functionality is
+						Please excuse our dust. While the database search, and search result export functionalities are
 						live, data display table is still under construction.
 					</p>
 				</div>
