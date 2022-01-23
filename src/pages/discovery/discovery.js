@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState, useMemo} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
