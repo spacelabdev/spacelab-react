@@ -23,6 +23,11 @@ function App() {
 	const [pageTitle, setPageTitle] = useState("");
 	/** Medium Blog RSS Feed State */
 	const [blogArray, setBlogArray] = useState([]);
+	/** Cal Tech API Initial Data */
+	const [exoplanetData, setExoplanetData] = useState(() => {
+		const result = sessionStorage.getItem('exoplanetSearchResults');
+		return result ? JSON.parse(result) : {}
+	});
 
 	// Get RSS feed from Medium for Blog page
 	useEffect(() => {
@@ -64,7 +69,9 @@ function App() {
 						setCurrentGlossaryTerm,
 						pageTitle,
 						setPageTitle,
-						blogArray
+						blogArray,
+						setExoplanetData,
+						exoplanetData
 					}
 				}>
 					<Main/>
