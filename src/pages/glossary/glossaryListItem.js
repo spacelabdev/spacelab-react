@@ -12,8 +12,7 @@ export default function OfficeListItem(props) {
 		context.setGlossaryTermImg(glossaryTerm[3]);
 		if (glossaryTerm[4] !== undefined) {
 			context.setGlossaryTermImgSource(glossaryTerm[4]);
-		}
-		else {
+		} else {
 			context.setGlossaryTermImgSource('');
 		}
 	};
