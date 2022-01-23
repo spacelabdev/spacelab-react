@@ -60,10 +60,12 @@
     }
 
     #glossary-term-image-source-wrapper {
-        width: 600px;
         text-align: left;
-        font-size: .75em;
-        margin: -2em auto 0;
+        font-size: .55em;
+        margin: -3em auto 0;
+        @media (min-width: 767px) {
+            width: 600px;
+        }
         #glossary-term-image-source {
             color: black;
         }
