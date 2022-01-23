@@ -39,6 +39,7 @@ export default function SimpleButton(props) {
 
             // execute if button is supposed to do something other than redirect
             if (buttonEffectAsync) {
+                // TODO: This does not fail gracefully when used in the discover filters, and no filters are checked
                 buttonEffectAsync()
                     .then(res => {
                         console.log(res)
