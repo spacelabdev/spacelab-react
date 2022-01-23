@@ -1,8 +1,8 @@
 import {createContext, useEffect, useState} from "react";
 import RSSParser from "rss-parser";
-import Main from "./main";
 import {glossaryTermsArray, returnFilteredTerms} from "./pages/glossary/glossaryhelper";
 import './App.css';
+import Main from "./main";
 
 /**
  * @returns {JSX.Element}
@@ -18,6 +18,7 @@ function App() {
 	const [currentGlossaryTerm, setCurrentGlossaryTerm] = useState(glossaryTermsArray[0][0]);
 	const [glossaryTermDef, setGlossaryTermDef] = useState(glossaryTermsArray[0][1]);
 	const [glossaryTermImg, setGlossaryTermImg] = useState(glossaryTermsArray[0][3]);
+	const [glossaryTermImgSource, setGlossaryTermImgSource] = useState(glossaryTermsArray[0][4]);
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
 	/** Medium Blog RSS Feed State */
@@ -62,6 +63,8 @@ function App() {
 						setGlossaryTermDef,
 						glossaryTermImg,
 						setGlossaryTermImg,
+						glossaryTermImgSource,
+						setGlossaryTermImgSource,
 						currentGlossaryTerm,
 						setCurrentGlossaryTerm,
 						pageTitle,

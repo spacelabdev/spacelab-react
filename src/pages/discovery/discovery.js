@@ -19,11 +19,10 @@ import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./init
 import DropdownButton from "../../components/button/dropdownButton";
 import {downloadData} from "../../services/utilityFunctions";
 import "./discovery.scss";
-import SimpleButton from "../../components/button/simpleButton"
+import SimpleButton from "../../components/button/simpleButton";
 
 /**
- * View for the discovery page
- * @return {JSX.Element}
+ * @returns {JSX.Element}
  * @constructor
  */
 export default function Discovery() {
@@ -113,29 +112,32 @@ export default function Discovery() {
 			<HeroImage/>
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
+
 				<div id="discovery-table">
-
 					<UnderConstruction/>
-
-					<br/>
+					<p>
+						Please excuse our dust. While the database search and search result export functionality is
+						live, data display table is still under construction.
+					</p>
 				</div>
-				<div id="searchBttn">
-					<SimpleButton
-						buttonName={"Update"}
-						buttonEffectAsync={() => queryExoplanetDatabase("json", true, true)}
-					/>
-				</div>
-				<br/>
 
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>
 						<p>Filters</p>
-						<DropdownButton
-							buttonLabel={'Download'}
-							dropdownItemClick={dropdownItemClick}
-							item1={{href: "#/action-1", label: "csv"}}
-							item2={{href: "#/action-2", label: "json"}}
-						/>
+						<div id={'discovery-filter-buttons-container'}>
+							<div id="searchBttn">
+								<SimpleButton
+									buttonName={"Update"}
+									buttonEffectAsync={() => queryExoplanetDatabase("json", true, true)}
+								/>
+							</div>
+							<DropdownButton
+								buttonLabel={'Download'}
+								dropdownItemClick={dropdownItemClick}
+								item1={{href: "#/action-1", label: "csv"}}
+								item2={{href: "#/action-2", label: "json"}}
+							/>
+						</div>
 					</div>
 					<DiscoveryColumnFilterList
 						filterArray={identificationFiltersArray}
