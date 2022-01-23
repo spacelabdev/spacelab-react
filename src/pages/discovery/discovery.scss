@@ -19,9 +19,20 @@
   }
 
   #discovery-table {
-    align-self: center;
     margin: 0 auto;
     font-size: 2rem;
+    p {
+      width: 300px;
+      font-size: .75em;
+      margin: 0 auto;
+      padding-bottom: 2em;
+      @media (min-width: 767px) and (max-width: 1023px) {
+        width: 600px;
+      }
+      @media (min-width: 1024px) {
+        width: 800px;
+      }
+    }
   }
 
   #filtersContainer {
@@ -41,6 +52,17 @@
     p {
       font-size: 2rem;
       padding-left: 2rem;
+    }
+
+    #discovery-filter-buttons-container {
+      display: flex;
+      padding-left: 2rem;
+      #searchBttn {
+        padding-right: 1em;
+        button {
+          width: 110px;
+        }
+      }
     }
 
     .filters {

@@ -8,15 +8,19 @@ import './glossary.scss';
 export default function GlossaryList() {
 	const context = useContext(UniversalContext);
 	let termImage;
+	let termImageSource;
 	let glossaryArray = [];
 
 	if (context.glossaryTermImg !== undefined) {
 		termImage = context.glossaryTermImg;
 		handleTermImage();
-	}
-	else {
+	} else {
 		termImage = placeholderImage;
 		handleMissingTermImage();
+	}
+
+	if (context.glossaryTermImgSource !== undefined) {
+		termImageSource = context.glossaryTermImgSource;
 	}
 
 	if (context.glossaryTerms !== undefined) {
@@ -48,19 +52,19 @@ export default function GlossaryList() {
 				<span
 					className={'glossary-filter-button'}
 					id={'glossary-filter-button-A-J'}
-					onClick={ () => handleFilterClick(1, 9, 'A-J')}>
+					onClick={() => handleFilterClick(1, 9, 'A-J')}>
 					A - J
 				</span>
 				<span
 					className={'glossary-filter-button'}
 					id={'glossary-filter-button-K-S'}
-					onClick={ () => handleFilterClick(10, 19, 'K-S')}>
+					onClick={() => handleFilterClick(10, 19, 'K-S')}>
 					K - S
 				</span>
 				<span
 					className={'glossary-filter-button'}
 					id={'glossary-filter-button-T-Z'}
-					onClick={ () => handleFilterClick(20, 26, 'T-Z')}>
+					onClick={() => handleFilterClick(20, 26, 'T-Z')}>
 					T - Z
 				</span>
 			</div>
@@ -70,6 +74,15 @@ export default function GlossaryList() {
 				{context.glossaryTermDef}
 				<div id={'glossary-term-image-wrapper'}>
 					<img id={'glossary-term-image'} src={termImage} alt={`${context.currentGlossaryTerm}`}/>
+				</div>
+				<div id={'glossary-term-image-source-wrapper'}>
+					<a id={'glossary-term-image-source'}
+					   href={termImageSource}
+					   target="_blank"
+					   rel="nofollow noopener noreferrer"
+					>
+						{termImageSource}
+					</a>
 				</div>
 			</div>
 		</div>
