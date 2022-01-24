@@ -116,8 +116,8 @@ export default function Discovery() {
 				<div id="discovery-table">
 					<UnderConstruction/>
 					<p>
-						Please excuse our dust. While the database search, and search result export functionalities are
-						live, data display table is still under construction.
+						Pardon our dust. While the database search, and search result export functionalities are
+						live, the data display table is still under construction.
 					</p>
 				</div>
 
@@ -127,7 +127,7 @@ export default function Discovery() {
 						<div id={'discovery-filter-buttons-container'}>
 							<div id="searchBttn">
 								<SimpleButton
-									buttonName={"Update"}
+									buttonName={"Filter"}
 									buttonEffectAsync={() => queryExoplanetDatabase("json", true, true)}
 								/>
 							</div>
