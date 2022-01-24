@@ -33,9 +33,11 @@
  */
 import axios from "axios";
 
-const api = axios.create({
-	baseURL: 'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI'
-});
+// Note: Previously this factory function was used to set the baseURL where the returned function would then be called
+// with an empty url string and the params object. For some unknown reason this has stopped working as axios seems to
+// not like an empty url string. Instead, the new factory function takes no arguments, with the baseURL string provided
+// to the returned function instead.
+const api = axios.create()
 
 /**
  * Return either an empty string if no checkboxes are checked or return a query string with all comma seperated column
@@ -136,8 +138,12 @@ export const getExoplanets = async (
 		format: format
 	};
 
+
 	try {
-		return await api.get('', {params});
+		return await api.get(
+			'https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI',
+			{params}
+		);
 	} catch (error) {
 		return error;
 	}
