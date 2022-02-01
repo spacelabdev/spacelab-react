@@ -4,7 +4,7 @@ import HeroImage from "../../components/heroImage/heroImage";
 import GlossaryList from "./glossaryList";
 import Footer from "../../components/footer/footer";
 import SearchBar from "./SearchBar";
-// import glossaryTermsArray from "./glossaryhelper";
+import { glossaryTermsArray } from "./glossaryhelper";
 
 /**
  * @returns {JSX.Element}
@@ -15,8 +15,8 @@ export default function Glossary() {
 		<div id={"glossary-wrapper"}>
 			<HeroImage />
 			<SearchBar
-				placeholder="Enter you search terms"
-				// data={glossaryTermsArray}
+				placeholder="Enter your search terms"
+				data={glossaryTermsArray}
 			/>
 			<GlossaryList />
 			<Footer />
