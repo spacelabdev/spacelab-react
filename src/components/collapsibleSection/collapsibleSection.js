@@ -1,23 +1,20 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import PropTypes from "prop-types";
 import collapseIcon from "../../assets/componentAssets/collapseIcon.svg";
 import expandIcon from "../../assets/componentAssets/expandIcon.svg";
 import './collapsibleSection.scss';
 
-// const barCN = cntl`
-//   flex
-//   justify-between
-//   items-center
-//   py-5
-//   select-none
-// `;
-//
-// const titleCN = cntl`
-//   truncate
-//   font-semibold
-// `;
-
-const CollapsibleSection = ({ title, defaultOpen, children, className }) => {
+/**
+ * Renders Collapsible Section. Children will be displayed when section is open.
+ * See component for detailed prop type descriptions.
+ * @param title
+ * @param defaultOpen
+ * @param children
+ * @param className
+ * @returns {JSX.Element}
+ * @constructor
+ */
+const CollapsibleSection = ({title, defaultOpen, children, className}) => {
 	const [isOpen, setIsOpen] = useState(defaultOpen);
 
 	const toggleOpen = () => setIsOpen(!isOpen);
