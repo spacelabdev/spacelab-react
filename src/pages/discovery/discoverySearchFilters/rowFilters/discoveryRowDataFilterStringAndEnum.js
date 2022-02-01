@@ -77,8 +77,8 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
 			return (
 				<>
 					<option value={''}></option>
-					{enumAttributes.map(attribute => {
-						return <option key={attribute} value={attribute}>{attribute}</option>
+					{enumAttributes.map((attribute, index) => {
+						return <option key={index} value={attribute}>{attribute}</option>
 					})}
 				</>
 			);
