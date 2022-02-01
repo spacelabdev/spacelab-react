@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-// import cntl from "cntl";
 import collapseIcon from "../../assets/componentAssets/collapseIcon.svg";
 import expandIcon from "../../assets/componentAssets/expandIcon.svg";
+import './collapsibleSection.scss';
 
 // const barCN = cntl`
 //   flex
@@ -31,15 +31,13 @@ const CollapsibleSection = ({ title, defaultOpen, children, className }) => {
 	return (
 		<div className={className}>
 			<div
-				// className={barCN}
+				className={"collapsible-container"}
 				onClick={() => setIsOpen(!isOpen)}
 				onKeyDown={onKeyDown}
 				role="button"
 				tabIndex={0}
 			>
-				<p
-					// className={titleCN}
-				>{title}</p>
+				<p className={"collapsible-title"}>{title}</p>
 				<img
 					src={isOpen ? collapseIcon : expandIcon}
 					alt={isOpen ? "collapse" : "expand"}

@@ -140,7 +140,11 @@ export default function Discovery() {
 							/>
 						</div>
 					</div>
-					<CollapsibleSection title={"Identifications"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"Identifications"}
+						defaultOpen={true}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={identificationFiltersArray}
 							selectedColumns={selectedColumns}
@@ -149,7 +153,11 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection title={"Exoplanets"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"Exoplanets"}
+						defaultOpen={true}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={exoplanetArchiveFiltersArray}
 							selectedColumns={selectedColumns}
@@ -158,7 +166,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection title={"Dispositions"}>
+					<CollapsibleSection className={"discover-filter-collapsible"} title={"Dispositions"}>
 						<DiscoveryColumnFilterList
 							filterArray={projectDispositionFiltersArray}
 							selectedColumns={selectedColumns}
@@ -167,7 +175,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection title={"Transit Properties"}>
+					<CollapsibleSection className={"discover-filter-collapsible"} title={"Transit Properties"}>
 						<DiscoveryColumnFilterList
 							filterArray={transitPropertiesFiltersArray}
 							selectedColumns={selectedColumns}
@@ -176,7 +184,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection title={"Threshold Crossing Events"}>
+					<CollapsibleSection className={"discover-filter-collapsible"} title={"Threshold Crossing Events"}>
 						<DiscoveryColumnFilterList
 							filterArray={thresholdCrossingEventFiltersArray}
 							selectedColumns={selectedColumns}
@@ -185,7 +193,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection title={"Stellar Parameters"}>
+					<CollapsibleSection className={"discover-filter-collapsible"} title={"Stellar Parameters"}>
 						<DiscoveryColumnFilterList
 							filterArray={stellarParametersFiltersArray}
 							selectedColumns={selectedColumns}
@@ -194,7 +202,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection title={"KIC Parameters"}>
+					<CollapsibleSection className={"discover-filter-collapsible"} title={"KIC Parameters"}>
 						<DiscoveryColumnFilterList
 							filterArray={kicParametersFiltersArray}
 							selectedColumns={selectedColumns}
@@ -203,7 +211,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection title={"Pixel Based KOI Vetting"}>
+					<CollapsibleSection className={"discover-filter-collapsible"} title={"Pixel Based KOI Vetting"}>
 						<DiscoveryColumnFilterList
 							filterArray={pixelBasedKoiVettingFiltersArray}
 							selectedColumns={selectedColumns}
