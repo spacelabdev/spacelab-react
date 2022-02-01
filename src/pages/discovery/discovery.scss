@@ -42,6 +42,7 @@
     text-align: left;
     padding-bottom: 2rem;
     vertical-align: middle;
+    height: fit-content;
     @media (min-width: 767px) and (max-width: 1023px) {
       width: 80vw;
     }
@@ -57,6 +58,7 @@
     #discovery-filter-buttons-container {
       display: flex;
       padding-left: 2rem;
+      margin-bottom: 2rem;
       #searchBttn {
         padding-right: 1em;
         button {
@@ -66,12 +68,12 @@
     }
 
     .filters {
-      padding: 1rem 2rem 0 2rem;
+      padding: 0 2rem 1rem 2rem;
+      border-bottom: 2px solid #a0a0aa;
 
       .title {
         padding: .5rem 0;
         font-size: 1.5rem;
-        border-top: 2px solid #a0a0aa;
       }
 
       .planet-system {
