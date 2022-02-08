@@ -29,33 +29,35 @@ function SearchBar({ placeholder, data }) {
 
 	return (
 		<div className="search-bar">
-			<div className="searchInputs">
-				<input
-					type="text"
-					placeholder={placeholder}
-					value={enteredWord}
-					onChange={handleFilter}
-				/>
-				<div className="searchIcon">
-					{filteredData.length === 0 ? (
-						<SearchIcon />
-					) : (
-						<CloseIcon id="clearBtn" onClick={clearInput} />
-					)}
+			<div className="search-bar-div">
+				<div className="searchInputs">
+					<input
+						type="text"
+						placeholder={placeholder}
+						value={enteredWord}
+						onChange={handleFilter}
+					/>
+					<div className="searchIcon">
+						{filteredData.length === 0 ? (
+							<SearchIcon />
+						) : (
+							<CloseIcon id="clearBtn" onClick={clearInput} />
+						)}
+					</div>
 				</div>
+				{filteredData.length !== 0 && (
+					<div className="dataResult">
+						{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
+						{filteredData.slice(0, 10).map((value, key) => {
+							return (
+								<div className="dataItem" key={key}>
+									<p>{value[0]}</p>
+								</div>
+							);
+						})}
+					</div>
+				)}
 			</div>
-			{filteredData.length !== 0 && (
-				<div className="dataResult">
-					{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
-					{filteredData.slice(0, 10).map((value, key) => {
-						return (
-							<div className="dataItem">
-								<p>{value[0]}</p>
-							</div>
-						);
-					})}
-				</div>
-			)}
 		</div>
 	);
 }
