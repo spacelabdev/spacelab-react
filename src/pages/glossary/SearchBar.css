@@ -50,14 +50,14 @@
 	color: black;
 }
 
-.dataItem p {
+.dataItem a {
 	margin-left: 10px;
 }
-p {
+a {
 	text-decoration: none;
 }
 
-p:hover {
+a:hover {
 	background-color: lightgrey;
 }
 

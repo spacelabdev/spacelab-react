@@ -48,10 +48,10 @@ function SearchBar({ placeholder, data }) {
 				{filteredData.length !== 0 && (
 					<div className="dataResult">
 						{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
-						{filteredData.slice(0, 10).map((value, key) => {
+						{filteredData.slice(0, 23).map((value, key) => {
 							return (
 								<div className="dataItem" key={key}>
-									<p>{value[0]}</p>
+									<a>{value[0]}</a>
 								</div>
 							);
 						})}
