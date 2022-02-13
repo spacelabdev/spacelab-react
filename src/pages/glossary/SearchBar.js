@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./SearchBar.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
+import { UniversalContext } from "../../App";
 
 function SearchBar({ placeholder, data }) {
+	const context = useContext(UniversalContext);
 	const [filteredData, setFilteredData] = useState([]);
 	const [enteredWord, setEnteredWord] = useState("");
 
@@ -26,6 +28,22 @@ function SearchBar({ placeholder, data }) {
 		setFilteredData([]);
 		setEnteredWord("");
 	};
+
+	/**
+	 * Upon clicking on a search result, inject values into the glossary items which are displayed at the bottom of the
+	 * page
+	 * @param value
+	 */
+	const handleSearchTermClick = (value) => {
+		context.setGlossaryTermDef(value[1]);
+		context.setCurrentGlossaryTerm(value[0]);
+		context.setGlossaryTermImg(value[3]);
+		if (value[4] !== undefined) {
+			context.setGlossaryTermImgSource(value[4]);
+		} else {
+			context.setGlossaryTermImgSource('');
+		}
+	}
 
 	return (
 		<div className="search-bar">
@@ -51,7 +69,7 @@ function SearchBar({ placeholder, data }) {
 						{filteredData.slice(0, 23).map((value, key) => {
 							return (
 								<div className="dataItem" key={key}>
-									<a>{value[0]}</a>
+									<a onClick={() => handleSearchTermClick(value)}>{value[0]}</a>
 								</div>
 							);
 						})}
