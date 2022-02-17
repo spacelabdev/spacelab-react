@@ -182,9 +182,9 @@ If you have a suggestion that would make this better, please fork the repo and c
 <!-- CONTACT -->
 ## Contact
 
-[Twitter](https://twitter.com/SpaceLab) \ 
-[LinkedIn](https://www.linkedin.com/company/spacelab-space/)\
-[Instagram](https://www.instagram.com/Spacelab)\
+[Twitter](https://twitter.com/SpaceLab)<br /> 
+[LinkedIn](https://www.linkedin.com/company/spacelab-space/)<br />
+[Instagram](https://www.instagram.com/Spacelab)<br />
 [Email](mailto:spacelabdev@gmail.com)
 
 Project Link: [Spacelab](https://github.com/spacelabdev/spacelab-react)
