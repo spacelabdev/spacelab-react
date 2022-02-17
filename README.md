@@ -182,7 +182,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 <!-- CONTACT -->
 ## Contact
 
-[Twitter](https://twitter.com/SpaceLab)\ 
+[Twitter](https://twitter.com/SpaceLab) \ 
 [LinkedIn](https://www.linkedin.com/company/spacelab-space/)\
 [Instagram](https://www.instagram.com/Spacelab)\
 [Email](mailto:spacelabdev@gmail.com)
