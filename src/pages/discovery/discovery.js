@@ -12,7 +12,6 @@ import {
 	pixelBasedKoiVettingFiltersArray,
 } from "./discoveryHelper";
 import Footer from "../../components/footer/footer";
-import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 import {getExoplanets} from "../../services/calTechApiRequest";
 import {UniversalContext} from "../../App";
 import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
@@ -21,6 +20,8 @@ import {downloadData} from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/button/simpleButton";
 import CollapsibleSection from "../../components/collapsibleSection/collapsibleSection";
+import DataTable from "./table/dataTable";
+
 
 /**
  * @returns {JSX.Element}
@@ -114,13 +115,7 @@ export default function Discovery() {
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 
-				<div id="discovery-table">
-					<UnderConstruction/>
-					<p>
-						Pardon our dust. While the database search, and search result export functionalities are
-						live, the data display table is still under construction.
-					</p>
-				</div>
+				<DataTable />
 
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>
