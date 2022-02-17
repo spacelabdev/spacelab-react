@@ -1,9 +1,9 @@
-[![Contributors][contributors-shield]][contributors-url]
+<!-- [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![LinkedIn][linkedin-shield]][linkedin-url] -->
 
 
 
@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/spacelabdev/spacelab-react">
-    <img src="images/logo.jpeg" alt="Logo" width="80" height="80">
+    <img src="Images/logo.jpeg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Spacelab</h3>
@@ -63,7 +63,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 <a href="https://github.com/spacelabdev/spacelab-react">
-    <img src="images/banner.png">
+    <img src="Images/banner.png">
   </a>
 
   ### What is Spacelab
@@ -140,7 +140,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ROADMAP -->
-## Roadmap
+<!-- ## Roadmap
 
 - [ ] Feature 1
 - [ ] Feature 2
@@ -149,7 +149,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 See the [open issues](https://github.com/spacelabdev/spacelab-react/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p> -->
 
 
 
