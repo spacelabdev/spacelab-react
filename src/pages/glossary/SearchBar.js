@@ -8,6 +8,7 @@ function SearchBar({ placeholder, data }) {
 	const context = useContext(UniversalContext);
 	const [filteredData, setFilteredData] = useState([]);
 	const [enteredWord, setEnteredWord] = useState("");
+	const noResults = ["No Results"];
 
 	/*Filtering the searches when something is typed in the input */
 	const handleFilter = (event) => {
@@ -17,8 +18,8 @@ function SearchBar({ placeholder, data }) {
 			return value[0].toLowerCase().includes(searchWord.toLowerCase());
 		});
 		/* if something is typed into the input, show the new filtered list */
-		if (searchWord === "") {
-			setFilteredData([]);
+		if (searchWord === "" || newFilter === "") {
+			setFilteredData([noResults]);
 		} else {
 			setFilteredData(newFilter);
 		}
