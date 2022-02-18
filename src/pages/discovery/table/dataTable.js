@@ -45,7 +45,7 @@ export default function DataTable(props) {
 		const scrollHeight = e.target.scrollHeight
 		const scrollTop = e.target.scrollTop
 		if (scrollTop + tableHeight === scrollHeight) {
-			setRowsScrolled(prevState => prevState + 1)
+			setRowsScrolled(prevState => prevState + tableHeightInRows)
 		}
 	}
 
