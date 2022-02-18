@@ -60,6 +60,7 @@ p {
 
 p:hover {
 	background-color: lightgrey;
+	width: 95%;
 }
 
 #clearBtn {
