@@ -10,7 +10,7 @@
 .search-bar input {
 	background-color: white;
 	border: 0;
-	border-radius: 2px;
+	border-radius: 5px;
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
 	font-size: 18px;
@@ -22,6 +22,8 @@
 .searchIcon {
 	height: 60px;
 	width: 50px;
+	margin: 1px;
+	border-radius: 5px;
 	background-color: white;
 	display: grid;
 	place-items: center;
@@ -50,14 +52,14 @@
 	color: black;
 }
 
-.dataItem a {
+.dataItem p {
 	margin-left: 10px;
 }
-a {
+p {
 	text-decoration: none;
 }
 
-a:hover {
+p:hover {
 	background-color: lightgrey;
 }
 

@@ -41,9 +41,9 @@ function SearchBar({ placeholder, data }) {
 		if (value[4] !== undefined) {
 			context.setGlossaryTermImgSource(value[4]);
 		} else {
-			context.setGlossaryTermImgSource('');
+			context.setGlossaryTermImgSource("");
 		}
-	}
+	};
 
 	return (
 		<div className="search-bar">
@@ -69,7 +69,13 @@ function SearchBar({ placeholder, data }) {
 						{filteredData.slice(0, 23).map((value, key) => {
 							return (
 								<div className="dataItem" key={key}>
-									<a onClick={() => handleSearchTermClick(value)}>{value[0]}</a>
+									<p
+										onClick={() =>
+											handleSearchTermClick(value)
+										}
+									>
+										{value[0]}
+									</p>
 								</div>
 							);
 						})}
