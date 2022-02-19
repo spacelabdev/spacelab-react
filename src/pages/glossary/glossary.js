@@ -15,7 +15,7 @@ export default function Glossary() {
 		<div id={"glossary-wrapper"}>
 			<HeroImage />
 			<SearchBar
-				placeholder="Enter your search terms"
+				placeholder="Enter search term..."
 				data={glossaryTermsArray}
 			/>
 			<GlossaryList />

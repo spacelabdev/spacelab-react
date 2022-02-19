@@ -6,28 +6,39 @@ import { UniversalContext } from "../../App";
 
 function SearchBar({ placeholder, data }) {
 	const context = useContext(UniversalContext);
+	const [searchTerm, setSearchTerm] = useState("");
 	const [filteredData, setFilteredData] = useState([]);
-	const [enteredWord, setEnteredWord] = useState("");
 	const noResults = ["No Results"];
 
-	/*Filtering the searches when something is typed in the input */
-	const handleFilter = (event) => {
-		const searchWord = event.target.value;
-		setEnteredWord(searchWord);
+	/**
+	 * Make input element a controlled element
+	 * @param e
+	 */
+	const handleChange = (e) => {
+		setSearchTerm(e.target.value)
+		handleFilter()
+	}
+
+	/**
+	 * Filter data for searchTerm and
+	 */
+	const handleFilter = () => {
 		const newFilter = data.filter((value) => {
-			return value[0].toLowerCase().includes(searchWord.toLowerCase());
+			return value[0].toLowerCase().includes(searchTerm.toLowerCase());
 		});
 		/* if something is typed into the input, show the new filtered list */
-		if (searchWord === "" || newFilter === "") {
+		if (searchTerm === "" || newFilter === "") {
 			setFilteredData([noResults]);
 		} else {
 			setFilteredData(newFilter);
 		}
 	};
+
+
 	/* Clearing the input when function is called onClick of the close icon */
 	const clearInput = () => {
 		setFilteredData([]);
-		setEnteredWord("");
+		setSearchTerm("");
 	};
 
 	/**
@@ -53,8 +64,8 @@ function SearchBar({ placeholder, data }) {
 					<input
 						type="text"
 						placeholder={placeholder}
-						value={enteredWord}
-						onChange={handleFilter}
+						value={searchTerm}
+						onChange={handleChange}
 					/>
 					<div className="searchIcon">
 						{filteredData.length === 0 ? (
@@ -67,19 +78,17 @@ function SearchBar({ placeholder, data }) {
 				{filteredData.length !== 0 && (
 					<div className="dataResult">
 						{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
-						{filteredData.map((value, key) => {
-							return (
-								<div className="dataItem" key={key}>
-									<p
-										onClick={() =>
-											handleSearchTermClick(value)
-										}
-									>
+						{console.log(filteredData.length)}
+						{filteredData.length > 0
+							? filteredData.map((value, key) => {
+								return (
+									<div className="dataItem" key={key} onClick={() => handleSearchTermClick(value)}>
 										{value[0]}
-									</p>
-								</div>
-							);
-						})}
+									</div>
+								);
+							})
+							: <div className="dataItem" >"no matches found"</div>
+						}
 					</div>
 				)}
 			</div>
