@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./SearchBar.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
@@ -8,6 +8,7 @@ function SearchBar({ placeholder, data }) {
 	const context = useContext(UniversalContext);
 	const [searchTerm, setSearchTerm] = useState("");
 	const [filteredData, setFilteredData] = useState([]);
+	const [isSearchBarActive, setIsSearchBarActive] = useState(false)
 
 	/**
 	 * Make input element a controlled element
@@ -21,17 +22,19 @@ function SearchBar({ placeholder, data }) {
 	 * Filter data for searchTerm and
 	 */
 	useEffect(() => {
-		// if more than one word is typed into the search box we want to make sure that all words match
-		// independently and jointly
-		const words = searchTerm.split(" ");
+		if (isSearchBarActive) {
+			// if more than one word is typed into the search box we want to make sure that all words match
+			// independently and jointly
+			const words = searchTerm.split(" ");
 
-		// check that all words are included in the filtered result
-		const newFilter = data.filter((value) => {
-			return words.every(word => value[0].toLowerCase().includes(word.toLowerCase()));
-		});
+			// check that all words are included in the filtered result
+			const newFilter = data.filter((value) => {
+				return words.every(word => value[0].toLowerCase().includes(word.toLowerCase()));
+			});
 
-		// set filtered result in state
-		setFilteredData(newFilter);
+			// set filtered result in state
+			setFilteredData(newFilter);
+		}
 		// eslint-disable-next-line
 	},[searchTerm]);
 
@@ -66,6 +69,9 @@ function SearchBar({ placeholder, data }) {
 						placeholder={placeholder}
 						value={searchTerm}
 						onChange={handleChange}
+						/*// ref={searchBar}*/
+						onFocus={() => setIsSearchBarActive(true)}
+						onBlur={() => setIsSearchBarActive(false)}
 					/>
 					<div className="searchIcon">
 						{filteredData.length === 0 ? (
@@ -75,19 +81,15 @@ function SearchBar({ placeholder, data }) {
 						)}
 					</div>
 				</div>
-				{filteredData.length !== 0 && (
+				{/* Display the results div only if search bar is in focus and if there is some filtered data */}
+				{isSearchBarActive && filteredData.length > 0 && (
 					<div className="dataResult">
 						{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
-						{filteredData.length > 0
-							? filteredData.map((value, key) => {
-								return (
-									<div className="dataItem" key={key} onClick={() => handleSearchTermClick(value)}>
-										{value[0]}
-									</div>
-								);
-							})
-							: <div className="dataItem" >"no matches found"</div>
-						}
+						{filteredData.map((value, key) => (
+							<div className="dataItem" key={key} onClick={() => handleSearchTermClick(value)}>
+								{value[0]}
+							</div>
+						))}
 					</div>
 				)}
 			</div>
