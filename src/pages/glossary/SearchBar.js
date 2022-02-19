@@ -9,6 +9,7 @@ function SearchBar({ placeholder, data }) {
 	const [searchTerm, setSearchTerm] = useState("");
 	const [filteredData, setFilteredData] = useState([]);
 	const [isSearchBarActive, setIsSearchBarActive] = useState(false)
+	const searchResultsDiv = useRef()
 
 	/**
 	 * Make input element a controlled element
@@ -50,6 +51,7 @@ function SearchBar({ placeholder, data }) {
 	 * @param value
 	 */
 	const handleSearchTermClick = (value) => {
+		console.log(value)
 		context.setGlossaryTermDef(value[1]);
 		context.setCurrentGlossaryTerm(value[0]);
 		context.setGlossaryTermImg(value[3]);
@@ -60,18 +62,28 @@ function SearchBar({ placeholder, data }) {
 		}
 	};
 
+	/**
+	 * Remove search results div from the DOM if the user clicks on anything else except the search results div
+	 * @param e
+	 */
+	const handleOnBlur = (e) => {
+		if (e.relatedTarget?.parentNode !== searchResultsDiv.current) {
+			setIsSearchBarActive(false)
+		}
+	}
+
 	return (
 		<div className="search-bar">
 			<div className="search-bar-div">
 				<div className="searchInputs">
 					<input
-						type="text"
+						type="search"
 						placeholder={placeholder}
 						value={searchTerm}
 						onChange={handleChange}
 						/*// ref={searchBar}*/
 						onFocus={() => setIsSearchBarActive(true)}
-						onBlur={() => setIsSearchBarActive(false)}
+						onBlur={handleOnBlur}
 					/>
 					<div className="searchIcon">
 						{filteredData.length === 0 ? (
@@ -83,10 +95,19 @@ function SearchBar({ placeholder, data }) {
 				</div>
 				{/* Display the results div only if search bar is in focus and if there is some filtered data */}
 				{isSearchBarActive && filteredData.length > 0 && (
-					<div className="dataResult">
+					<div
+						className="dataResult"
+						tabIndex={"0"}
+						ref={searchResultsDiv}
+					>
 						{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
 						{filteredData.map((value, key) => (
-							<div className="dataItem" key={key} onClick={() => handleSearchTermClick(value)}>
+							<div
+								className="dataItem"
+								key={key}
+								onClick={() => handleSearchTermClick(value)}
+								tabIndex={"0"}
+							>
 								{value[0]}
 							</div>
 						))}
