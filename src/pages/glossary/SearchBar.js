@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import "./SearchBar.css";
-import SearchIcon from "@mui/icons-material/Search";
-import CloseIcon from "@mui/icons-material/Close";
+import "./SearchBar.scss";
+import searchIcon from "../../assets/componentAssets/magnifying_glass@0.5x.png";
+import closeIcon from "../../assets/componentAssets/close-icon@0.5x.png";
 import { UniversalContext } from "../../App";
 
 function SearchBar({ placeholder, data }) {
@@ -24,17 +24,23 @@ function SearchBar({ placeholder, data }) {
 	 */
 	useEffect(() => {
 		if (isSearchBarActive) {
-			// if more than one word is typed into the search box we want to make sure that all words match
-			// independently and jointly
-			const words = searchTerm.split(" ");
+			if (searchTerm) {
+				// if more than one word is typed into the search box we want to make sure that all words match
+				// independently and jointly
+				const words = searchTerm.split(" ");
 
-			// check that all words are included in the filtered result
-			const newFilter = data.filter((value) => {
-				return words.every(word => value[0].toLowerCase().includes(word.toLowerCase()));
-			});
+				// check that all words are included in the filtered result
+				const newFilter = data.filter((value) => {
+					return words.every(word => value[0].toLowerCase().includes(word.toLowerCase()));
+				});
 
-			// set filtered result in state
-			setFilteredData(newFilter);
+				// set filtered result in state
+				setFilteredData(newFilter);
+			}
+			else {
+				// set filtered result in state to the empty string
+				setFilteredData("");
+			}
 		}
 		// eslint-disable-next-line
 	},[searchTerm]);
@@ -43,6 +49,7 @@ function SearchBar({ placeholder, data }) {
 	const clearInput = () => {
 		setFilteredData([]);
 		setSearchTerm("");
+		setIsSearchBarActive(false)
 	};
 
 	/**
@@ -51,7 +58,6 @@ function SearchBar({ placeholder, data }) {
 	 * @param value
 	 */
 	const handleSearchTermClick = (value) => {
-		console.log(value)
 		context.setGlossaryTermDef(value[1]);
 		context.setCurrentGlossaryTerm(value[0]);
 		context.setGlossaryTermImg(value[3]);
@@ -60,6 +66,7 @@ function SearchBar({ placeholder, data }) {
 		} else {
 			context.setGlossaryTermImgSource("");
 		}
+		clearInput()
 	};
 
 	/**
@@ -74,22 +81,21 @@ function SearchBar({ placeholder, data }) {
 
 	return (
 		<div className="search-bar">
-			<div className="search-bar-div">
-				<div className="searchInputs">
+			<div id={"search-bar-div"}>
+				<div id={"searchInputs"}>
 					<input
 						type="search"
 						placeholder={placeholder}
 						value={searchTerm}
 						onChange={handleChange}
-						/*// ref={searchBar}*/
 						onFocus={() => setIsSearchBarActive(true)}
 						onBlur={handleOnBlur}
 					/>
-					<div className="searchIcon">
-						{filteredData.length === 0 ? (
-							<SearchIcon />
+					<div id="searchIconDiv">
+						{searchTerm.length === 0 ? (
+							<img src={searchIcon} alt={"magnifying glass"} />
 						) : (
-							<CloseIcon id="clearBtn" onClick={clearInput} />
+							<img src={closeIcon} alt={"grey x"} id="clearBtn" onClick={clearInput} />
 						)}
 					</div>
 				</div>
