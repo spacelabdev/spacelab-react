@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./SearchBar.css";
 import SearchIcon from "@mui/icons-material/Search";
 import CloseIcon from "@mui/icons-material/Close";
@@ -8,7 +8,6 @@ function SearchBar({ placeholder, data }) {
 	const context = useContext(UniversalContext);
 	const [searchTerm, setSearchTerm] = useState("");
 	const [filteredData, setFilteredData] = useState([]);
-	const noResults = ["No Results"];
 
 	/**
 	 * Make input element a controlled element
@@ -16,24 +15,25 @@ function SearchBar({ placeholder, data }) {
 	 */
 	const handleChange = (e) => {
 		setSearchTerm(e.target.value)
-		handleFilter()
 	}
 
 	/**
 	 * Filter data for searchTerm and
 	 */
-	const handleFilter = () => {
-		const newFilter = data.filter((value) => {
-			return value[0].toLowerCase().includes(searchTerm.toLowerCase());
-		});
-		/* if something is typed into the input, show the new filtered list */
-		if (searchTerm === "" || newFilter === "") {
-			setFilteredData([noResults]);
-		} else {
-			setFilteredData(newFilter);
-		}
-	};
+	useEffect(() => {
+		// if more than one word is typed into the search box we want to make sure that all words match
+		// independently and jointly
+		const words = searchTerm.split(" ");
 
+		// check that all words are included in the filtered result
+		const newFilter = data.filter((value) => {
+			return words.every(word => value[0].toLowerCase().includes(word.toLowerCase()));
+		});
+
+		// set filtered result in state
+		setFilteredData(newFilter);
+		// eslint-disable-next-line
+	},[searchTerm]);
 
 	/* Clearing the input when function is called onClick of the close icon */
 	const clearInput = () => {
@@ -78,7 +78,6 @@ function SearchBar({ placeholder, data }) {
 				{filteredData.length !== 0 && (
 					<div className="dataResult">
 						{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
-						{console.log(filteredData.length)}
 						{filteredData.length > 0
 							? filteredData.map((value, key) => {
 								return (
