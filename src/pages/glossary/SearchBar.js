@@ -52,6 +52,48 @@ function SearchBar({ placeholder, data }) {
 		// eslint-disable-next-line
 	},[searchTerm]);
 
+	/**
+	 * Return the Levenshtein distance between the search string and the target string (data base)
+	 * @param searchString
+	 * @param targetString
+	 */
+	const levenshteinDistance = (searchString, targetString) => {
+		// edits matrix is a 2d matrix that will eventually contain the min number of operations (delete, add, or substitute char)
+		const editsMatrix = []
+
+		// define dimensions of matrix
+		const columns = searchString.length
+		const rows = targetString.length
+
+		//  create edits matrix; note that the first col and row are reserved for the empty-string, hence the need for
+		//  one more row and column
+		for (let row = 0; row < rows + 1; row++) {
+			const rowArray = []
+			for (let col = 0; col < columns + 1; col++) {
+				rowArray.push(col)
+			}
+			editsMatrix.push(rowArray)
+		}
+
+		// adjust edits table for targetString
+		for (let row = 0; row < rows + 1; row++) {
+			editsMatrix[row][0] = row
+		}
+
+		for (let row = 1; row < rows + 1; row++) {
+			for (let col = 1; col < columns + 1; col++) {
+				if (searchString[row] === targetString[col]) {
+					editsMatrix[row][col] = editsMatrix[row-1][col-1]
+				}
+				else {
+					editsMatrix[row][col] = 1 + Math.min(editsMatrix[row-1][col], editsMatrix[row][col-1], editsMatrix[row-1][col-1])
+				}
+			}
+		}
+
+		return editsMatrix[rows][columns]
+	}
+
 	/* Clearing the input when function is called onClick of the close icon */
 	const clearInput = () => {
 		setFilteredSearchResults([]);
