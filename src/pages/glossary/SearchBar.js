@@ -7,12 +7,13 @@ import { UniversalContext } from "../../App";
 function SearchBar({ placeholder, data }) {
 	const context = useContext(UniversalContext);
 	const [searchTerm, setSearchTerm] = useState("");
-	const [filteredData, setFilteredData] = useState([]);
+	const [filteredSearchResults, setFilteredSearchResults] = useState([]);
 	const [isSearchBarActive, setIsSearchBarActive] = useState(false)
+	const [filteredSearchResultIndex, setFilteredSearchResultIndex] = useState(null)
 	const searchResultsDiv = useRef()
 
 	/**
-	 * Make input element a controlled element
+	 * Make input element a controlled element - handle change inside the search bar input element
 	 * @param e
 	 */
 	const handleChange = (e) => {
@@ -20,7 +21,11 @@ function SearchBar({ placeholder, data }) {
 	}
 
 	/**
-	 * Filter data for searchTerm and
+	 * Filter data for searchTerm and store result in state. Note: at initial render time the state of the filtered data
+	 * is an empty array. If the user types a string into the search bar the filteredSearchResults array gets updated with the
+	 * filter result after every key stroke. If the user back-tracks, deleting all their inputs, the resulting
+	 * filteredSearchResults array would not be empty but rather include all data items. To control for this, the conditional
+	 * statement assigns an empty array to the filteredSearchResults if the searchTerm is an empty string.
 	 */
 	useEffect(() => {
 		if (isSearchBarActive) {
@@ -29,17 +34,19 @@ function SearchBar({ placeholder, data }) {
 				// independently and jointly
 				const words = searchTerm.split(" ");
 
+				// todo: implement Levenshtein function to control for simple spelling errors and use some sort of fuzzy search
 				// check that all words are included in the filtered result
 				const newFilter = data.filter((value) => {
 					return words.every(word => value[0].toLowerCase().includes(word.toLowerCase()));
 				});
 
 				// set filtered result in state
-				setFilteredData(newFilter);
+				setFilteredSearchResults(newFilter);
 			}
 			else {
 				// set filtered result in state to the empty string
-				setFilteredData("");
+				setFilteredSearchResults([]);
+				setFilteredSearchResultIndex(null)
 			}
 		}
 		// eslint-disable-next-line
@@ -47,9 +54,12 @@ function SearchBar({ placeholder, data }) {
 
 	/* Clearing the input when function is called onClick of the close icon */
 	const clearInput = () => {
-		setFilteredData([]);
+		setFilteredSearchResults([]);
 		setSearchTerm("");
 		setIsSearchBarActive(false)
+		setFilteredSearchResultIndex(null)
+		// if the user uses the enter key to select filtered search term, this line removes focus from the search box
+		document.activeElement.blur()
 	};
 
 	/**
@@ -70,13 +80,89 @@ function SearchBar({ placeholder, data }) {
 	};
 
 	/**
+	 * If the search bar is in focus set the associated state to true. This is necessary for two reasons. 1) search
+	 * function only needs to run if search bar is focused. 2) the search bar icon element is separate div which has
+	 * styling elements (e.g. border when in focus) that depend on the search bar div being in focus.
+	 * @param e
+	 */
+	const handleOnFocus = (e) => {
+		setIsSearchBarActive(true)
+	}
+
+	/**
 	 * Remove search results div from the DOM if the user clicks on anything else except the search results div
 	 * @param e
 	 */
 	const handleOnBlur = (e) => {
-		if (e.relatedTarget?.parentNode !== searchResultsDiv.current) {
+		if (!e.relatedTarget?.className.includes("search-result")) {
 			setIsSearchBarActive(false)
+			setFilteredSearchResultIndex(null)
 		}
+	}
+
+	/**
+	 * If the user presses the down or up key he can cycle through the results
+	 * @param e
+	 */
+	const handleSearchResultSelection = (e) => {
+		// if a search term has been entered give the user the ability to cycle through search results with up and down
+		// keys
+		if (searchTerm) {
+			if (e.key === "ArrowDown") {
+				changeSelectedSearchResult(1)
+			}
+			if (e.key === "ArrowUp") {
+				changeSelectedSearchResult(-1)
+			}
+			if (e.key === "Enter") {
+				const searchResult = filteredSearchResults[filteredSearchResultIndex]
+				handleSearchTermClick(searchResult)
+			}
+		}
+	}
+
+	/**
+	 * Calculate the new index position based on the users' up or down-key commands and store in
+	 * filteredSearchResultIndex state. The index position is bounded as follows: [0, filteredSearchResults.length - 1]
+	 * @param change
+	 */
+	const changeSelectedSearchResult = (change) => {
+		// initiate filteredSearchResultIndex is it is uninitiated
+		if (filteredSearchResultIndex === null) {
+			if (change === 1) {
+				setFilteredSearchResultIndex(0)
+			}
+			else {
+				setFilteredSearchResultIndex(filteredSearchResults.length - 1)
+				scrollToSearchResult(filteredSearchResults.length - 1)
+			}
+		}
+		else {
+			const newIndex = filteredSearchResultIndex + change
+			const modulatedNewIndex = newIndex % filteredSearchResults.length
+			if (modulatedNewIndex >= 0) {
+				setFilteredSearchResultIndex(modulatedNewIndex)
+				scrollToSearchResult(modulatedNewIndex)
+			}
+			else {
+				// invert index position since JS cannot deal with negative array index positions
+				const invertedModulatedNewIndex = filteredSearchResults.length + modulatedNewIndex
+				setFilteredSearchResultIndex(invertedModulatedNewIndex)
+				scrollToSearchResult(invertedModulatedNewIndex)
+			}
+		}
+	}
+
+	// todo: fix inadvertent scrolling of browser window
+	/**
+	 * Scroll to the selected search term, if selection is made with the arrow keys
+	 * @param nThChild
+	 */
+	const scrollToSearchResult = (nThChild) => {
+		// get search result element at nThChild position
+		const searchResultsContainer = document.getElementById("search-results-container")
+		const selectedChild = searchResultsContainer.children[nThChild]
+		selectedChild.scrollIntoView({behavior: "smooth", block: "center"})
 	}
 
 	return (
@@ -88,33 +174,33 @@ function SearchBar({ placeholder, data }) {
 						placeholder={placeholder}
 						value={searchTerm}
 						onChange={handleChange}
-						onFocus={() => setIsSearchBarActive(true)}
+						onFocus={handleOnFocus}
 						onBlur={handleOnBlur}
+						onKeyDown={handleSearchResultSelection}
 					/>
-					<div id="searchIconDiv">
+					<div id="search-icon-div" className={isSearchBarActive ? "focused" : ""}>
 						{searchTerm.length === 0 ? (
 							<img src={searchIcon} alt={"magnifying glass"} />
 						) : (
-							<img src={closeIcon} alt={"grey x"} id="clearBtn" onClick={clearInput} />
+							<img src={closeIcon} alt={"grey x"} id="clear-button" onClick={clearInput} />
 						)}
 					</div>
 				</div>
 				{/* Display the results div only if search bar is in focus and if there is some filtered data */}
-				{isSearchBarActive && filteredData.length > 0 && (
+				{isSearchBarActive && filteredSearchResults.length > 0 && (
 					<div
-						className="dataResult"
-						tabIndex={"0"}
+						id={"search-results-container"}
 						ref={searchResultsDiv}
 					>
-						{/* just the search term (idex position 0) is mapped, not the definition. Can change this to definitions as well eventually */}
-						{filteredData.map((value, key) => (
+						{/* mapping of dictionary words only; could extend search across dictionary definitions if needed */}
+						{filteredSearchResults.map((searchResult, key) => (
 							<div
-								className="dataItem"
+								className={`search-result ${filteredSearchResultIndex === key ? "selected-search-result" : ""}` }
 								key={key}
-								onClick={() => handleSearchTermClick(value)}
-								tabIndex={"0"}
+								onClick={() => handleSearchTermClick(searchResult)}
+								tabIndex={0}
 							>
-								{value[0]}
+								{searchResult[0]}
 							</div>
 						))}
 					</div>
