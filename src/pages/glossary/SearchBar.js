@@ -30,14 +30,20 @@ function SearchBar({ placeholder, data }) {
 	useEffect(() => {
 		if (isSearchBarActive) {
 			if (searchTerm) {
-				// if more than one word is typed into the search box we want to make sure that all words match
-				// independently and jointly
-				const words = searchTerm.split(" ");
-
-				// todo: implement Levenshtein function to control for simple spelling errors and use some sort of fuzzy search
-				// check that all words are included in the filtered result
+				// check the Levenshtein distance between the target and the search term
 				const newFilter = data.filter((value) => {
-					return words.every(word => value[0].toLowerCase().includes(word.toLowerCase()));
+					const target = value[0].toLowerCase()
+					const levenshteinDistance = getLevenshteinDistance(searchTerm, target)
+					const fuzzyChars = 1
+					// if the word is contained inside the target string, the Levenshtein distance will be exactly
+					// the delta between the length of the target string and the search term. If the Levenshtein
+					// distance is bigger than the delta between both lengths then that means that additional characters
+					// had to be either added, swapped, or deleted. Hence, if the Levenshtein distance + fuzzyChars is
+					// smaller-equal the difference in length between the target string and word then return true.
+					// e.g: word="long"  target="longer" => Levenshtein distance=2 => allowing for one fuzzy character
+					// implies that a Levishtein distance of 3 should still return "longer" as a search result even if
+					// the user has typed in "lone" instead of "long".
+					return levenshteinDistance - fuzzyChars <= target.length - searchTerm.length
 				});
 
 				// set filtered result in state
@@ -57,7 +63,7 @@ function SearchBar({ placeholder, data }) {
 	 * @param searchString
 	 * @param targetString
 	 */
-	const levenshteinDistance = (searchString, targetString) => {
+	const getLevenshteinDistance = (searchString, targetString) => {
 		// edits matrix is a 2d matrix that will eventually contain the min number of operations (delete, add, or substitute char)
 		const editsMatrix = []
 
@@ -72,17 +78,13 @@ function SearchBar({ placeholder, data }) {
 			for (let col = 0; col < columns + 1; col++) {
 				rowArray.push(col)
 			}
+			rowArray[0] = row
 			editsMatrix.push(rowArray)
-		}
-
-		// adjust edits table for targetString
-		for (let row = 0; row < rows + 1; row++) {
-			editsMatrix[row][0] = row
 		}
 
 		for (let row = 1; row < rows + 1; row++) {
 			for (let col = 1; col < columns + 1; col++) {
-				if (searchString[row] === targetString[col]) {
+				if (searchString[col-1] === targetString[row-1]) {
 					editsMatrix[row][col] = editsMatrix[row-1][col-1]
 				}
 				else {
