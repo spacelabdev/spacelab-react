@@ -47,7 +47,13 @@ function SearchBar({ placeholder, data }) {
 				});
 
 				// set filtered result in state
-				setFilteredSearchResults(newFilter);
+				if (newFilter.length === 0) {
+					// double array structure needed since the raw data is a collection of arrays inside an array
+					setFilteredSearchResults([["No matches found..."]])
+				}
+				else {
+					setFilteredSearchResults(newFilter);
+				}
 			}
 			else {
 				// set filtered result in state to the empty string
