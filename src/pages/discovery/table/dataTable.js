@@ -1,5 +1,5 @@
 // React imports
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { UniversalContext } from "../../../App";
 
 // Component imports
@@ -13,6 +13,8 @@ import {
 	kicParametersFiltersArray,
 	pixelBasedKoiVettingFiltersArray,
 } from "../discoveryHelper";
+import TableHeader from "./tableComponents/tableHeader";
+import TableBody from "./tableComponents/tableBody";
 
 // style imports
 import "./dataTable.scss"
@@ -26,8 +28,10 @@ export default function DataTable(props) {
 	// number of table rows scrolled
 	const [rowsScrolled, setRowsScrolled] = useState(0)
 	// number of table rows displayed in view
-	const [tableHeightInRows, setTableHeightInRows] = useState(30)
+	const [tableHeightInRows, ] = useState(30)
+	const [columnHeaders, setColumnHeaders] = useState(null)
 
+	// create on array that includes all filter arrays
 	const aggregateDataItems = [
 		...projectDispositionFiltersArray,
 		...identificationFiltersArray,
@@ -40,6 +44,25 @@ export default function DataTable(props) {
 	]
 	const exoPlanetData = context.exoplanetData
 
+	useEffect(() => {
+		if (exoPlanetData[0] && !columnHeaders) {
+			// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
+			setColumnHeaders(Object.keys(exoPlanetData[0]))
+		}
+		// eslint-disable-next-line
+	}, [exoPlanetData])
+
+	useEffect(() => {
+		console.log(columnHeaders)
+	}, [columnHeaders])
+
+	/**
+	 * Implement infinite scrolling. The first render of the table only displays as many rows as specified in the state
+	 * variable tableHeightInRows. If the user scrolls to the end of the table, add the tableHeightInRows to the
+	 * displayed rows. This incremental scrolling is necessary since the data set can comprise some 10,000 rows, making
+	 * the loading of the page very slow.
+	 * @param e
+	 */
 	const handleScrolling = (e) => {
 		const tableHeight = e.target.clientHeight
 		const scrollHeight = e.target.scrollHeight
@@ -56,31 +79,21 @@ export default function DataTable(props) {
 				<thead>
 					<tr>
 						{/* only create col headers if exoPlanetData has at least one object inside the returned array */}
-						{exoPlanetData[0] && (
-							<>
-								<th>#</th>
-								{Object.keys(exoPlanetData[0]).map((colName, key) => {
-									// find colLabel associated with colName
-									const colItem = aggregateDataItems.filter(item => item.name === colName)
-									const colLabel = colItem[0].label
-									return <th scope={"col"} key={key}>{colLabel}</th>
-								})}
-							</>
+						{columnHeaders && (
+							<TableHeader
+								aggregateDataItems={aggregateDataItems}
+								columnHeaders={columnHeaders}
+							/>
 						)}
 					</tr>
 				</thead>
 				<tbody>
-					{exoPlanetData[0] && (
-						exoPlanetData.slice(0, tableHeightInRows + rowsScrolled).map((row, rowIndex) => {
-							return (
-								<tr key={rowIndex}>
-									<td>{1 + rowIndex}</td>
-									{Object.values(row).map((colData, key) => {
-										return <td key={key}>{colData}</td>
-									})}
-								</tr>
-							)
-						})
+					{columnHeaders && (
+						<TableBody
+							exoPlanetData={exoPlanetData}
+							tableHeightInRows={tableHeightInRows}
+							rowsScrolled={rowsScrolled}
+						/>
 					)}
 				</tbody>
 			</table>
