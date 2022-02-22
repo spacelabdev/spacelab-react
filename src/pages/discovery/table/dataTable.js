@@ -44,6 +44,10 @@ export default function DataTable(props) {
 	]
 	const exoPlanetData = context.exoplanetData
 
+	/**
+	 * Create columnHeaders array and store in state. This is only necessary when columnHeaders is not yet defined which
+	 * will be the case afte rthe first render.
+	 */
 	useEffect(() => {
 		if (exoPlanetData[0] && !columnHeaders) {
 			// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
@@ -51,10 +55,6 @@ export default function DataTable(props) {
 		}
 		// eslint-disable-next-line
 	}, [exoPlanetData])
-
-	useEffect(() => {
-		console.log(columnHeaders)
-	}, [columnHeaders])
 
 	/**
 	 * Implement infinite scrolling. The first render of the table only displays as many rows as specified in the state
@@ -83,6 +83,7 @@ export default function DataTable(props) {
 							<TableHeader
 								aggregateDataItems={aggregateDataItems}
 								columnHeaders={columnHeaders}
+								setColumnHeaders={setColumnHeaders}
 							/>
 						)}
 					</tr>
@@ -93,6 +94,7 @@ export default function DataTable(props) {
 							exoPlanetData={exoPlanetData}
 							tableHeightInRows={tableHeightInRows}
 							rowsScrolled={rowsScrolled}
+							columnHeaders={columnHeaders}
 						/>
 					)}
 				</tbody>
