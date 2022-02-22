@@ -212,7 +212,12 @@ function SearchBar({ placeholder, data }) {
 		// get search result element at nThChild position
 		const searchResultsContainer = document.getElementById("search-results-container")
 		const selectedChild = searchResultsContainer.children[nThChild]
+		const rootScrollTop = document.documentElement.scrollTop
+
+		// scroll inside the search results
 		selectedChild.scrollIntoView({behavior: "smooth", block: "center"})
+		// whilst keeping the window scroll unchanged
+		document.documentElement.scrollTop = rootScrollTop
 	}
 
 	return (
