@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import dragIcon from "../../../../assets/componentAssets/drag_icon@0.5x.png"
+import sortIcon from "../../../../assets/componentAssets/sort_icon@0.5x.png"
+import sortDescIcon from "../../../../assets/componentAssets/sort_icon_desc@0.5x.png"
+import sortAscIcon from "../../../../assets/componentAssets/sort_icon_asc@0.5x.png"
 
 
 /**
@@ -6,6 +10,7 @@ import React, { useState } from "react";
  * order is subject to change based on the users' drag & drop operations exerted onto the column headers.
  * @param aggregateDataItems
  * @param columnHeaders
+ * @param setColumnHeaders
  * @return {JSX.Element}
  * @constructor
  */
@@ -20,13 +25,14 @@ export default function TableHeader({ aggregateDataItems, columnHeaders, setColu
 	const handleDrop = (e) => {
 		const dropZoneColumnHeaderIdx = e.target.id
 		const newColumnHeaders = [...columnHeaders]
-		newColumnHeaders.splice(dropZoneColumnHeaderIdx, 0, newColumnHeaders.splice(draggedColumnHeaderIdx, 1)[0])
+		const draggedColumnHeader = newColumnHeaders.splice(draggedColumnHeaderIdx, 1)[0]
+		newColumnHeaders.splice(dropZoneColumnHeaderIdx, 0, draggedColumnHeader)
 		setColumnHeaders(newColumnHeaders)
 	}
 
 	return (
 		<>
-			<th>#</th>
+			<th></th>
 			{columnHeaders.map((colName, key) => {
 				// find colLabel associated with colName
 				const colItem = aggregateDataItems.filter(item => item.name === colName)
@@ -35,12 +41,17 @@ export default function TableHeader({ aggregateDataItems, columnHeaders, setColu
 					<th
 						scope={"col"}
 						key={key}
-						id={key}
-						draggable={true}
-						onDragOver={(e) => e.preventDefault()}
-						onDragStart={handleDragStart}
-						onDrop={handleDrop}
 					>
+						<img
+							id={key}
+							src={dragIcon}
+							alt={"drag-icon"}
+							className={"drag-icon"}
+							draggable={true}
+							onDragOver={(e) => e.preventDefault()}
+							onDragStart={handleDragStart}
+							onDrop={handleDrop}
+						/>
 						{colLabel}
 					</th>
 				)

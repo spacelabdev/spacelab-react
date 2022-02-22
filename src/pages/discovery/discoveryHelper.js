@@ -159,7 +159,7 @@ export const projectDispositionFiltersArray = [
 	},
 	{
 		name: 'koi_fpflag_ec',
-		label: 'Ephemeris Match Indicates Contamination Flag',
+		label: 'Ephemeris Match Flag',
 		unit: '',
 		default: true,
 		dataType: 'number',

@@ -4,3 +4,43 @@
   height: 50rem;
   overflow: scroll;
 }
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+  font-size: 11px;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  color: black;
+  padding: 2px;
+  background-color: #9aa3aa;
+  border-bottom: 2px solid #9aa3aa;
+  border-radius: 2px;
+  vertical-align: bottom;
+
+  &:first-of-type {
+    background-color: #1C1A22;
+    border: none;
+  }
+
+  & .drag-icon {
+    width: 20px;
+    display: block;
+    margin: 0 auto;
+
+    &:hover {
+      cursor: grab;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
+
+td {
+  vertical-align: top;
+}
