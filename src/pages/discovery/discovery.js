@@ -52,7 +52,11 @@ export default function Discovery() {
 			}).then(res => {
 				if (res.status === 200) {
 					if (isStateful) {
-						context.setExoplanetData(res.data);
+						let data = res.data
+						if (typeof data === "string") {
+							data = parseBinaryDataIntoString(data)
+						}
+						context.setExoplanetData(data);
 					}
 					if (isStorage) {
 						sessionStorage.setItem('selectedColumns', JSON.stringify(selectedColumns));
@@ -67,6 +71,23 @@ export default function Discovery() {
 			}).catch(e => console.error(e));
 		}
 	};
+
+	/**
+	 * This method is only relevant for the data set associated with "koi_quarters" which seems to be the only data set
+	 * that returns string data, containing 4 byte binary string that is not wrapped in apostrophes. The data is in the
+	 * form of "[\n{\"koi_quarters\":01111111111111111000000000000000}\n]\n". The binary cannot be parsed unless it is
+	 * wrapped in apostrophes. This function returns the data with all binary data wrapped in apostrophes.
+	 * @param data
+	 * @return {any}
+	 */
+	const parseBinaryDataIntoString = (data) => {
+		const re = /[01]{32}/g
+		const dataWithBinaryConvertedToString = data.replaceAll(re, match => {
+			return `"${match}"`
+		})
+
+		return JSON.parse(dataWithBinaryConvertedToString)
+	}
 
 	// Make API call after selectedColumns and whereFilter states have been initialised but only once at component
 	// mount-time. Disabling the eslint warning in the next line since providing an empty dependency array is done

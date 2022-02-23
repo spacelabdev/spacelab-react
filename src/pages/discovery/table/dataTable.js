@@ -28,7 +28,7 @@ export default function DataTable(props) {
 	// number of table rows scrolled
 	const [rowsScrolled, setRowsScrolled] = useState(0)
 	// number of table rows displayed in view
-	const [tableHeightInRows, ] = useState(30)
+	const [tableHeightInRows, ] = useState(50)
 	const [columnHeaders, setColumnHeaders] = useState(null)
 
 	// create on array that includes all filter arrays
@@ -46,12 +46,35 @@ export default function DataTable(props) {
 
 	/**
 	 * Create columnHeaders array and store in state. This is only necessary when columnHeaders is not yet defined which
-	 * will be the case afte rthe first render.
+	 * will be the case after the first render.
 	 */
 	useEffect(() => {
-		if (exoPlanetData[0] && !columnHeaders) {
-			// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
-			setColumnHeaders(Object.keys(exoPlanetData[0]))
+		if (exoPlanetData[0]) {
+			if (!columnHeaders) {
+				// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
+				setColumnHeaders(Object.keys(exoPlanetData[0]))
+			}
+			else {
+				// iterate over data response and store column name and array index position in a dict
+				const hashTable = {}
+				Object.keys(exoPlanetData[0]).forEach((colName, idx) => hashTable[colName] = true)
+
+				// if the user has already used a custom column headers order, filter the columnHeaders array for those
+				// columns that are still in the exoPlanetData, and add any new columns to the end
+				const newColumnHeaders = columnHeaders.filter(colName => {
+					const isColNameInHashTable = hashTable.hasOwnProperty(colName);
+					if (isColNameInHashTable) {
+						delete hashTable[colName]
+					}
+					return isColNameInHashTable
+				})
+
+				// iterate over remaining hashKeys and add them to the end of the columnHeaders array
+				Object.keys(hashTable).forEach(colName => newColumnHeaders.push(colName))
+
+				// update state
+				setColumnHeaders(newColumnHeaders)
+			}
 		}
 		// eslint-disable-next-line
 	}, [exoPlanetData])
@@ -72,6 +95,20 @@ export default function DataTable(props) {
 		}
 	}
 
+	/**
+	 * Return whether a column is associated with left or right alignment. This depends on the data type.
+	 * @param dataType
+	 * @return {string}
+	 */
+	const getColumnAlignmentClassFrom = (dataType) => {
+		switch (dataType) {
+			case "number":
+				return "align-right"
+			default:
+				return "align-left"
+		}
+	}
+
 	return (
 		/* only create table if exoPlanetData exists */
 		exoPlanetData && (
@@ -83,6 +120,7 @@ export default function DataTable(props) {
 						columnHeaders={columnHeaders}
 						setColumnHeaders={setColumnHeaders}
 						exoPlanetData={exoPlanetData}
+						getColumnAlignmentFrom={getColumnAlignmentClassFrom}
 					/>
 				)}
 				{columnHeaders && (
@@ -91,6 +129,8 @@ export default function DataTable(props) {
 						tableHeightInRows={tableHeightInRows}
 						rowsScrolled={rowsScrolled}
 						columnHeaders={columnHeaders}
+						getColumnAlignmentFrom={getColumnAlignmentClassFrom}
+						aggregateDataItems={aggregateDataItems}
 					/>
 				)}
 			</section>

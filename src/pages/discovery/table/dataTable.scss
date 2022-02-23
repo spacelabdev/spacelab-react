@@ -24,7 +24,7 @@
     justify-content: space-between;
 
     &:first-of-type {
-      flex: 0 0 2rem;
+      flex: 0 0 3rem;
 
       & img {
         width: 20px;
@@ -36,11 +36,11 @@
       color: rgb(160, 160, 170);
       font-weight: bold;
 
-      &.right-align {
+      &.align-right {
         text-align: right;
       }
 
-      &.left-align {
+      &.align-left {
         text-align: left;
       }
     }
@@ -72,9 +72,19 @@
     flex: 0 0 6rem;
     color: rgb(160, 160, 170);
     padding: 3px;
+    word-break: break-all;
+    overflow-wrap: break-word;
 
     &.first-column {
-      flex: 0 0 2rem;
+      flex: 0 0 3rem;
+    }
+
+    &.align-left {
+      text-align: left;
+    }
+
+    &.align-right {
+      text-align: right;
     }
   }
 

@@ -22,7 +22,8 @@ export default function TableHeader(
 		aggregateDataItems,
 		columnHeaders,
 		setColumnHeaders,
-		exoPlanetData
+		exoPlanetData,
+		getColumnAlignmentFrom,
 	}) {
 	const [draggedColumnHeaderIdx, setDraggedColumnHeaderIdx] = useState(null)
 
@@ -55,6 +56,7 @@ export default function TableHeader(
 				// find colLabel associated with colName
 				const colItem = aggregateDataItems.filter(item => item.name === colName)
 				const colLabel = colItem[0].label
+				const columnAlignment = getColumnAlignmentFrom(colItem[0].dataType)
 				return (
 					<div
 						className={"column-header"}
@@ -70,7 +72,7 @@ export default function TableHeader(
 							className={"drag-icon"}
 							draggable={true}
 						/>
-						<p>{colLabel}</p>
+						<p className={columnAlignment}>{colLabel}</p>
 					</div>
 				)
 			})}
