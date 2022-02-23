@@ -75,30 +75,25 @@ export default function DataTable(props) {
 	return (
 		/* only create table if exoPlanetData exists */
 		exoPlanetData && (
-			<table id={"data-table"} onScroll={handleScrolling}>
-				<thead>
-					<tr>
-						{/* only create col headers if exoPlanetData has at least one object inside the returned array */}
-						{columnHeaders && (
-							<TableHeader
-								aggregateDataItems={aggregateDataItems}
-								columnHeaders={columnHeaders}
-								setColumnHeaders={setColumnHeaders}
-							/>
-						)}
-					</tr>
-				</thead>
-				<tbody>
-					{columnHeaders && (
-						<TableBody
-							exoPlanetData={exoPlanetData}
-							tableHeightInRows={tableHeightInRows}
-							rowsScrolled={rowsScrolled}
-							columnHeaders={columnHeaders}
-						/>
-					)}
-				</tbody>
-			</table>
+			<section id={"data-table"} onScroll={handleScrolling}>
+				{/* only create col headers if exoPlanetData has at least one object inside the returned array */}
+				{columnHeaders && (
+					<TableHeader
+						aggregateDataItems={aggregateDataItems}
+						columnHeaders={columnHeaders}
+						setColumnHeaders={setColumnHeaders}
+						exoPlanetData={exoPlanetData}
+					/>
+				)}
+				{columnHeaders && (
+					<TableBody
+						exoPlanetData={exoPlanetData}
+						tableHeightInRows={tableHeightInRows}
+						rowsScrolled={rowsScrolled}
+						columnHeaders={columnHeaders}
+					/>
+				)}
+			</section>
 		)
 	)
 }

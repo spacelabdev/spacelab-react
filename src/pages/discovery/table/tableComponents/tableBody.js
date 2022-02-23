@@ -5,12 +5,12 @@ export default function TableBody({ exoPlanetData, tableHeightInRows, rowsScroll
 	return (
 		exoPlanetData.slice(0, tableHeightInRows + rowsScrolled).map((row, rowIndex) => {
 			return (
-				<tr key={rowIndex}>
-					<td>{1 + rowIndex}</td>
+				<div className={"row"} key={rowIndex}>
+					<div className={"row-element first-column"}>{1 + rowIndex}</div>
 					{columnHeaders.map((colLabel, key) => {
-						return <td key={key}>{row[colLabel]}</td>
+						return <div className={"row-element"} key={key}>{row[colLabel]}</div>
 					})}
-				</tr>
+				</div>
 			)
 		})
 	)
