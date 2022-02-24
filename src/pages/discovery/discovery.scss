@@ -38,10 +38,23 @@
       padding-left: 2rem;
     }
 
+    & #filtersHeader {
+      max-height: 80px;
+      position: relative;
+      top: -34px;
+    }
+
+    & #filtersHeader > p {
+      display: inline-block;
+      padding: 10px;
+      margin-left: 20px;
+      background-color: #1C1A22;
+    }
+
     #discovery-filter-buttons-container {
       display: flex;
       padding-left: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
       #searchBttn {
         padding-right: 1em;
         button {
@@ -75,7 +88,7 @@
             }
 
             .discovery-checkbox:checked {
-              background-color: #e9ecee;
+              background: #e9ecee;
               border: 1px solid #adb8c0;
               box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
               color: #99a1a7;

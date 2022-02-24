@@ -1,0 +1,9 @@
+.pink-bg {
+  background-color: rgba(112, 0, 255);
+  border-color: rgba(112, 0, 255);
+
+  &:hover {
+    background-color: rgba(112, 0, 255, 0.8);
+    border-color: rgba(112, 0, 255, 0.8);
+  }
+}

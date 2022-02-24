@@ -67,6 +67,7 @@ export default function SimpleButton(props) {
             variant={"primary"}
             disabled={isLoading}
             onClick={handleButtonClick}
+            className={"pink-bg"}
         >
             {isLoading
                 ? "Loading..."
