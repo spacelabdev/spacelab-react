@@ -1,0 +1,13 @@
+.filter-item {
+  margin-top: 10px;
+}
+
+.form-control-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 3fr;
+}
+
+input[type=checkbox] {
+  accent-color: #7000ff;
+}
