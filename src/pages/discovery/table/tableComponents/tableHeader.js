@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import dragIcon from "../../../../assets/componentAssets/drag_icon@0.5x.png"
 import rightTriangleUp from "../../../../assets/componentAssets/right-triangle-up.png"
 import rightTriangleDown from "../../../../assets/componentAssets/right-triangle-down.png"

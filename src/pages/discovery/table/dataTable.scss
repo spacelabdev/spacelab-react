@@ -12,12 +12,12 @@
   position: sticky;
   top: 0;
   gap: 5px;
-  background-color: #1C1A22;
+  background-color: var(--background);
 
   & .column-header {
     flex: 0 0 6rem;
     padding: 3px;
-    background-color: #282c34;
+    background-color: var(--table-header);
     border-radius: 2px;
     display: flex;
     flex-direction: column;
