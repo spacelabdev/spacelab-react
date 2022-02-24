@@ -25,6 +25,9 @@ import "./dataTable.scss"
  */
 export default function DataTable(props) {
 	const context = useContext(UniversalContext);
+	const exoPlanetData = context.exoplanetData
+	const setExoPlanetData = context.setExoplanetData
+	const [unsortedExoPlanetData, setUnsortedExoPlanetData] = useState(null)
 	// number of table rows scrolled
 	const [rowsScrolled, setRowsScrolled] = useState(0)
 	// number of table rows displayed in view
@@ -46,7 +49,7 @@ export default function DataTable(props) {
 		...kicParametersFiltersArray,
 		...pixelBasedKoiVettingFiltersArray,
 	]
-	const exoPlanetData = context.exoplanetData
+
 
 	/**
 	 * Create columnHeaders array and store in state. This is only necessary when columnHeaders is not yet defined which
@@ -54,8 +57,8 @@ export default function DataTable(props) {
 	 */
 	useEffect(() => {
 		if (exoPlanetData[0]) {
+			// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
 			if (!columnHeaders) {
-				// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
 				setColumnHeaders(Object.keys(exoPlanetData[0]))
 			}
 			else {
@@ -88,8 +91,47 @@ export default function DataTable(props) {
 	 * column, 2) user chooses / changes sort-order, and 3) when the exoPlanetData set is updated.
 	 */
 	useEffect(() => {
+		if (exoPlanetData[0]) {
+			// save current unsorted state
+			if (!unsortedExoPlanetData) {
+				setUnsortedExoPlanetData([...exoPlanetData])
+			}
 
-	}, [exoPlanetData, sortColName, sortOrder])
+			// sort direction depends on sort state
+			setExoPlanetData(prevState => {
+				const newState = [...prevState]
+
+				// if neutral sort direction, return unsorted data array
+				if (!sortOrder) {
+					return unsortedExoPlanetData
+				}
+
+				else {
+					return newState.sort((firstRow, secondRow) => {
+						// if data type is date, string needs to be parsed first
+						const colDataItem = aggregateDataItems.filter(col => col.name === sortColName)
+
+						let firstRowVal = firstRow[sortColName]
+						let secondRowVal = secondRow[sortColName]
+
+						if (colDataItem.dataType === "date") {
+							firstRowVal = Date.parse(firstRowVal)
+							secondRowVal = Date.parse(secondRowVal)
+						}
+
+						if (firstRowVal > secondRowVal) {
+							return sortOrder === "ascending" ? 1 : -1
+						}
+						if (firstRowVal < secondRowVal) {
+							return sortOrder === "ascending" ? -1 : 1
+						}
+						return 0
+					})
+				}
+			})
+		}
+		// eslint-disable-next-line
+	}, [sortColName, sortOrder])
 
 
 	/**
