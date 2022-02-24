@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import sortNeutralIcon from "../../../../assets/componentAssets/sort_icon@0.5x.png";
 import sortDescIcon from "../../../../assets/componentAssets/sort_icon_desc@0.5x.png"
 import sortAscIcon from "../../../../assets/componentAssets/sort_icon_asc@0.5x.png"
@@ -12,6 +12,8 @@ import sortAscIcon from "../../../../assets/componentAssets/sort_icon_asc@0.5x.p
  * @param sortOrder
  * @param setSortOrder
  * @param colName
+ * @param isSortIconResetNeeded
+ * @param setIsSortIconResetNeeded
  * @return {JSX.Element}
  * @constructor
  */
@@ -23,10 +25,20 @@ export default function SortIcon(
 		sortOrder,
 		setSortOrder,
 		colName,
+		isSortIconResetNeeded,
+		setIsSortIconResetNeeded,
 	}) {
 
 	// used to dynamically set the sort img to be used for the sort icon, subject to the sorting direction
 	const [sortImg, setSortImg] = useState(sortNeutralIcon)
+
+	useEffect(() => {
+		if (isSortIconResetNeeded) {
+			setSortImg(sortNeutralIcon)
+			setIsSortIconResetNeeded(false)
+		}
+		// eslint-disable-next-line
+	}, [isSortIconResetNeeded])
 
 	/**
 	 * If the user clicks on the sort icon, it sets the sort direction as well as the column which is being sorted

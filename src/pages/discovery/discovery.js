@@ -31,6 +31,7 @@ export default function Discovery() {
 	const context = useContext(UniversalContext);
 	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState());
 	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState());
+	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false)
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var. If a query is sent for the purpose
@@ -62,6 +63,8 @@ export default function Discovery() {
 						sessionStorage.setItem('selectedColumns', JSON.stringify(selectedColumns));
 						sessionStorage.setItem('whereFilter', JSON.stringify(whereFilter));
 					}
+					// ensure that sort icons in data table columns are reset since the newly received data is unsorted
+					setIsSortIconResetNeeded(true)
 				} else {
 					console.error("error retrieving exoplanetData");
 				}
@@ -136,7 +139,10 @@ export default function Discovery() {
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 
-				<DataTable />
+				<DataTable
+					isSortIconResetNeeded={isSortIconResetNeeded}
+					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
+				/>
 
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>

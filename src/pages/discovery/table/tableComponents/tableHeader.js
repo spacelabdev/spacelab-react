@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import dragIcon from "../../../../assets/componentAssets/drag_icon@0.5x.png"
 import rightTriangleUp from "../../../../assets/componentAssets/right-triangle-up.png"
 import rightTriangleDown from "../../../../assets/componentAssets/right-triangle-down.png"
@@ -17,6 +17,8 @@ import SortIcon from "./sortIcon";
  * @param setSortColName
  * @param sortOrder
  * @param setSortOrder
+ * @param isSortIconResetNeeded
+ * @param setIsSortIconResetNeeded
  * @return {JSX.Element}
  * @constructor
  */
@@ -31,7 +33,10 @@ export default function TableHeader(
 		setSortColName,
 		sortColName,
 		setSortOrder,
+		isSortIconResetNeeded,
+		setIsSortIconResetNeeded,
 	}) {
+
 	const [draggedColumnHeaderIdx, setDraggedColumnHeaderIdx] = useState(null)
 
 	const handleDragStart = (e) => {
@@ -88,6 +93,8 @@ export default function TableHeader(
 								sortOrder={sortOrder}
 								setSortOrder={setSortOrder}
 								colName={colName}
+								isSortIconResetNeeded={isSortIconResetNeeded}
+								setIsSortIconResetNeeded={setIsSortIconResetNeeded}
 							/>
 						</div>
 					</div>

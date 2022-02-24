@@ -22,8 +22,12 @@ import "./dataTable.scss"
 
 /**
  * Table component that redraws the table automatically based on the filter options set by the user.
+ * @param isSortIconResetNeeded
+ * @param setIsSortIconResetNeeded
+ * @return {any|JSX.Element}
+ * @constructor
  */
-export default function DataTable(props) {
+export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNeeded }) {
 	const context = useContext(UniversalContext);
 	const exoPlanetData = context.exoplanetData
 	const setExoPlanetData = context.setExoplanetData
@@ -180,6 +184,8 @@ export default function DataTable(props) {
 						setSortColName={setSortColName}
 						sortOrder={sortOrder}
 						setSortOrder={setSortOrder}
+						isSortIconResetNeeded={isSortIconResetNeeded}
+						setIsSortIconResetNeeded={setIsSortIconResetNeeded}
 					/>
 				)}
 				{columnHeaders && (
