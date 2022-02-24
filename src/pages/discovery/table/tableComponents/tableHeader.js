@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import dragIcon from "../../../../assets/componentAssets/drag_icon@0.5x.png"
 import rightTriangleUp from "../../../../assets/componentAssets/right-triangle-up.png"
 import rightTriangleDown from "../../../../assets/componentAssets/right-triangle-down.png"
-import sortIcon from "../../../../assets/componentAssets/sort_icon@0.5x.png"
-import sortDescIcon from "../../../../assets/componentAssets/sort_icon_desc@0.5x.png"
-import sortAscIcon from "../../../../assets/componentAssets/sort_icon_asc@0.5x.png"
+import SortIcon from "./sortIcon";
 
 
 /**
@@ -14,6 +12,11 @@ import sortAscIcon from "../../../../assets/componentAssets/sort_icon_asc@0.5x.p
  * @param columnHeaders
  * @param setColumnHeaders
  * @param exoPlanetData
+ * @param getColumnAlignmentFrom
+ * @param sortColName
+ * @param setSortColName
+ * @param sortOrder
+ * @param setSortOrder
  * @return {JSX.Element}
  * @constructor
  */
@@ -24,6 +27,10 @@ export default function TableHeader(
 		setColumnHeaders,
 		exoPlanetData,
 		getColumnAlignmentFrom,
+		sortOrder,
+		setSortColName,
+		sortColName,
+		setSortOrder,
 	}) {
 	const [draggedColumnHeaderIdx, setDraggedColumnHeaderIdx] = useState(null)
 
@@ -72,7 +79,17 @@ export default function TableHeader(
 							className={"drag-icon"}
 							draggable={true}
 						/>
-						<p className={columnAlignment}>{colLabel}</p>
+						<div>
+							<p className={columnAlignment}>{colLabel}</p>
+							<SortIcon
+								columnAlignment={columnAlignment}
+								sortColName={sortColName}
+								setSortColName={setSortColName}
+								sortOrder={sortOrder}
+								setSortOrder={setSortOrder}
+								colName={colName}
+							/>
+						</div>
 					</div>
 				)
 			})}

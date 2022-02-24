@@ -29,7 +29,11 @@ export default function DataTable(props) {
 	const [rowsScrolled, setRowsScrolled] = useState(0)
 	// number of table rows displayed in view
 	const [tableHeightInRows, ] = useState(50)
+	// columnHeaders is an array that will be set with the first render and reflects the order of the column labels
 	const [columnHeaders, setColumnHeaders] = useState(null)
+	// name of the column which will be sorted
+	const [sortColName, setSortColName] = useState(null)
+	const [sortOrder, setSortOrder] = useState(null)
 
 	// create on array that includes all filter arrays
 	const aggregateDataItems = [
@@ -80,6 +84,15 @@ export default function DataTable(props) {
 	}, [exoPlanetData])
 
 	/**
+	 * Sort exoPlanetData based on column name and sort order. Sorting needs to happen when 1) user chooses / changes
+	 * column, 2) user chooses / changes sort-order, and 3) when the exoPlanetData set is updated.
+	 */
+	useEffect(() => {
+
+	}, [exoPlanetData, sortColName, sortOrder])
+
+
+	/**
 	 * Implement infinite scrolling. The first render of the table only displays as many rows as specified in the state
 	 * variable tableHeightInRows. If the user scrolls to the end of the table, add the tableHeightInRows to the
 	 * displayed rows. This incremental scrolling is necessary since the data set can comprise some 10,000 rows, making
@@ -121,6 +134,10 @@ export default function DataTable(props) {
 						setColumnHeaders={setColumnHeaders}
 						exoPlanetData={exoPlanetData}
 						getColumnAlignmentFrom={getColumnAlignmentClassFrom}
+						sortColName={sortColName}
+						setSortColName={setSortColName}
+						sortOrder={sortOrder}
+						setSortOrder={setSortOrder}
 					/>
 				)}
 				{columnHeaders && (
