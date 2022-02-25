@@ -15,7 +15,7 @@
 
   &:focus {
     outline: none;
-    box-shadow: 0 0 2px 2px var(--pink-alpha);
+    box-shadow: 0 0 0 .25rem var(--pink-alpha);
   }
 
   &:hover {
