@@ -3,6 +3,7 @@
   flex-direction: column;
 
   & > button {
+    position: relative;
     background-color: var(--pink);
     border: 1px solid transparent;
     color: white;
@@ -26,6 +27,23 @@
       background-color: var(--pink-alpha);
       border-color: var(--pink-alpha);
     }
+
+    & img {
+      width: 1rem;
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+    }
   }
 }
 
+.dropdown-items-container {
+  background-color: white;
+  position: relative;
+  top: 5px;
+  border-radius: 0.25rem;
+
+  & .dropdown-item:hover {
+    background-color: var(--highlight-hover);
+  }
+}

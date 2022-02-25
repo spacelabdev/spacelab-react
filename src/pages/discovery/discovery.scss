@@ -10,11 +10,10 @@
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
-  @media (min-width: 767px) and (max-width: 1023px) {
-    width: 90%;
-    flex-direction: column;
-  }
-  @media (min-width: 1024px) {
+  gap: 1rem;
+  height: 100%;
+
+  @media (min-width: 1360px) {
     flex-direction: row;
   }
 
@@ -26,11 +25,11 @@
     padding-bottom: 2rem;
     vertical-align: middle;
     height: fit-content;
-    @media (min-width: 767px) and (max-width: 1023px) {
-      width: 80vw;
-    }
-    @media (min-width: 1024px) {
-      width: 27vw;
+    //@media (min-width: 767px) and (max-width: 1023px) {
+    //  width: 80vw;
+    //}
+    @media (min-width: 1360px) {
+      width: 35vw;
     }
 
     p {
@@ -53,12 +52,29 @@
 
     #discovery-filter-buttons-container {
       display: flex;
-      padding-left: 2rem;
-      margin-bottom: 3rem;
-      #searchBttn {
-        padding-right: 1em;
-        button {
-          width: 110px;
+      padding: 0 2rem;
+      width: 100%;
+      justify-content: space-between;
+      gap: 1rem;
+
+      @media (min-width: 700px) {
+        //flex: 1 1 8rem;
+        width: 60%;
+      }
+
+      & > div {
+        flex: 1 0 8rem;
+
+        @media (max-width: 450px) {
+          flex: 1 1 9rem;
+
+          & > button {
+            padding-left: 0px;
+          }
+        }
+
+        & button {
+          width: 100%;
         }
       }
     }

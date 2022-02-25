@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./dropdownButton.scss"
+import rightTriangleDown from "../../assets/componentAssets/right-triangle-down.png"
 
 
 /**
@@ -26,7 +27,6 @@ export default function DropdownButton({ buttonLabel, dropdownItemClick, ...drop
 
     // convert the values of the dictionary into an array whose elements can be mapped over
     const dropdownItemsArray = Object.values(dropdownItems)
-    console.log(dropdownItemsArray)
 
     /**
      * set drop down button width in state and set isDropdownOpen to true or false
@@ -34,10 +34,10 @@ export default function DropdownButton({ buttonLabel, dropdownItemClick, ...drop
      */
     const handleDropdownToggleClick = (e) => {
         // get width of drop down button and set state
-        const dropdownButtonWidth = e.target.offsetWidth
+        const dropdownButtonWidth = e.currentTarget.offsetWidth
         setButtonWidth(dropdownButtonWidth)
 
-        // open drop down
+        // open / close drop down
         setIsDropdownOpen(prevState => {
             return !prevState
         })
@@ -51,11 +51,15 @@ export default function DropdownButton({ buttonLabel, dropdownItemClick, ...drop
 
     return (
         <div className={"dropdown-button-container"}>
-            <button onClick={handleDropdownToggleClick}>
+            <button
+                onClick={handleDropdownToggleClick}
+                onBlur={() => setIsDropdownOpen(false)}
+            >
                 {buttonLabel}
+                <img src={rightTriangleDown} alt={"right triangle pointing down"} />
             </button>
             {isDropdownOpen && (
-                <div ref={dropdownMenuRef}>
+                <div className={"dropdown-items-container"} ref={dropdownMenuRef}>
                     {dropdownItemsArray.map((dropdownItem, index) => {
                         return (
                             <button
