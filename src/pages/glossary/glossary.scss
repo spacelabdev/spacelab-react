@@ -74,12 +74,41 @@
 
 #glossary-button-container {
     display: flex;
+    flex-direction: column-reverse;
     justify-content: space-evenly;
+    padding-bottom: 2em;
+    .search-bar #searchInputs input {
+        width: 15rem;
+        height: 3rem;
+    }
+    .search-bar #searchInputs #search-icon-div {
+        height: 3rem;
+    }
+    #glossary-button-wrapper {
+        display: flex;
+    }
     @media (min-width: 767px) and (max-width: 1023px) {
-        padding-left: 2em;
+        flex-direction: row;
+        justify-content: space-between;
+        .search-bar #searchInputs input {
+            width: 15rem;
+            height: 4rem;
+        }
+        .search-bar #searchInputs #search-icon-div {
+            height: 4rem;
+        }
     }
     @media (min-width: 1024px) {
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 3em;
+        .search-bar #searchInputs input {
+            width: 20rem;
+            height: 4rem;
+        }
+        .search-bar #searchInputs #search-icon-div {
+            height: 4rem;
+        }
     }
 }
 

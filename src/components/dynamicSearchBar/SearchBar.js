@@ -4,7 +4,7 @@ import searchIcon from "../../assets/componentAssets/magnifying_glass@0.5x.png";
 import closeIcon from "../../assets/componentAssets/close-icon@0.5x.png";
 import { UniversalContext } from "../../App";
 
-function SearchBar({ placeholder, data }) {
+function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 	const context = useContext(UniversalContext);
 	const [searchTerm, setSearchTerm] = useState("");
 	const [filteredSearchResults, setFilteredSearchResults] = useState([]);
@@ -41,7 +41,7 @@ function SearchBar({ placeholder, data }) {
 					// had to be either added, swapped, or deleted. Hence, if the Levenshtein distance + fuzzyChars is
 					// smaller-equal the difference in length between the target string and word then return true.
 					// e.g: word="long"  target="longer" => Levenshtein distance=2 => allowing for one fuzzy character
-					// implies that a Levishtein distance of 3 should still return "longer" as a search result even if
+					// implies that a Levenshtein distance of 3 should still return "longer" as a search result even if
 					// the user has typed in "lone" instead of "long".
 					return levenshteinDistance - fuzzyChars <= target.length - searchTerm.length
 				});
@@ -113,23 +113,6 @@ function SearchBar({ placeholder, data }) {
 	};
 
 	/**
-	 * Upon clicking on a search result, inject values into the glossary items which are displayed at the bottom of the
-	 * page
-	 * @param value
-	 */
-	const handleSearchTermClick = (value) => {
-		context.setGlossaryTermDef(value[1]);
-		context.setCurrentGlossaryTerm(value[0]);
-		context.setGlossaryTermImg(value[3]);
-		if (value[4] !== undefined) {
-			context.setGlossaryTermImgSource(value[4]);
-		} else {
-			context.setGlossaryTermImgSource("");
-		}
-		clearInput()
-	};
-
-	/**
 	 * If the search bar is in focus set the associated state to true. This is necessary for two reasons. 1) search
 	 * function only needs to run if search bar is focused. 2) the search bar icon element is separate div which has
 	 * styling elements (e.g. border when in focus) that depend on the search bar div being in focus.
@@ -162,11 +145,12 @@ function SearchBar({ placeholder, data }) {
 				changeSelectedSearchResult(1)
 			}
 			if (e.key === "ArrowUp") {
-				changeSelectedSearchResult(-1)
+				changeSelectedSearchResult(-1);
 			}
 			if (e.key === "Enter") {
-				const searchResult = filteredSearchResults[filteredSearchResultIndex]
-				handleSearchTermClick(searchResult)
+				const searchResult = filteredSearchResults[filteredSearchResultIndex];
+				HandleSearchTermClick(searchResult, context);
+				clearInput();
 			}
 		}
 	}
@@ -220,6 +204,12 @@ function SearchBar({ placeholder, data }) {
 		document.documentElement.scrollTop = rootScrollTop
 	}
 
+	// Allows us to call multiple function back to back in onClick
+	const onClickMultiFunction = (searchResult, context) => {
+		HandleSearchTermClick(searchResult, context);
+		clearInput();
+	}
+
 	return (
 		<div className="search-bar">
 			<div id={"search-bar-div"}>
@@ -252,7 +242,7 @@ function SearchBar({ placeholder, data }) {
 							<div
 								className={`search-result ${filteredSearchResultIndex === key ? "selected-search-result" : ""}` }
 								key={key}
-								onClick={() => handleSearchTermClick(searchResult)}
+								onClick={() => onClickMultiFunction(searchResult, context)}
 								tabIndex={0}
 							>
 								{searchResult[0]}
