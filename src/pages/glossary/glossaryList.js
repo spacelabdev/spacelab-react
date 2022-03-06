@@ -27,7 +27,9 @@ export default function GlossaryList() {
 		glossaryArray = context.glossaryTerms;
 	}
 
-	if (context.glossaryTermImg !== undefined) {
+	// without the second condition, a page refresh yields the error "glossaryArray is undefined"
+	// Because glossary terms is only set after the first render (useEffect in App)
+	if (context.glossaryTermImg !== undefined && context.glossaryTerms !== undefined) {
 		glossaryArray = context.glossaryTerms;
 	}
 
