@@ -11,9 +11,10 @@ import './projects.scss';
  * @constructor
  */
 export default function Projects() {
+	const displayText = 'Projects';
 	return (
 		<>
-			<HeroImage/>
+			<HeroImage displayText={displayText}/>
             <ProjectsIntro/>
 			<UnderConstruction/>
 			<Footer/>

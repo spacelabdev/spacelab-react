@@ -10,9 +10,10 @@ import Footer from "../../components/footer/footer";
  * @constructor
  */
 export default function Donate() {
+    const displayText = 'Donate';
 	return (
 		<>
-			<HeroImage />
+			<HeroImage displayText={displayText}/>
             {/* <DonateDetails /> */}
             <button className="donate-button">Donate</button>
 			<Footer />

@@ -9,15 +9,11 @@ import {UniversalContext} from "../../App";
  * @returns {JSX.Element}
  * @constructor
  */
-export default function HeroImage() {
-	// Get title of page from url and capitalize. Must be set as state to trigger re render for home page.
+export default function HeroImage({displayText}) {
+	// Use displayText prop to define heroImage based on the component
 	const context = useContext(UniversalContext);
 	let pageTitle = context.pageTitle;
-	const url = window.location.href;
-	const urlArray = url.split("/");
-	const element = urlArray.length - 1;
-	let title = urlArray[element].toUpperCase();
-	context.setPageTitle(title);
+	context.setPageTitle(displayText);
 
 	// Determine if on home page for purposes of displaying Spacelab image
 	if (pageTitle === "" || pageTitle === "home") {

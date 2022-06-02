@@ -11,9 +11,10 @@ import './blog.scss';
  * @constructor
  */
 export default function Blog() {
+	const displayText = "Blog";
 	return (
 		<>
-			<HeroImage/>
+			<HeroImage displayText={displayText}/>
 			<div id={"blog-container"}>
 				<div id={"blog-header"}>Featured Blogs</div>
 				<BlogCarousel/>

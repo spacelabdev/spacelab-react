@@ -9,9 +9,10 @@ import Footer from "../../components/footer/footer";
  * @constructor
  */
 export default function Glossary() {
+	const displayText = 'Glossary';
 	return (
 		<div id={'glossary-wrapper'}>
-			<HeroImage/>
+			<HeroImage displayText={displayText}/>
 			<GlossaryList/>
 			<Footer/>
 		</div>

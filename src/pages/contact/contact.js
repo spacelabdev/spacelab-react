@@ -9,9 +9,10 @@ import Footer from "../../components/footer/footer";
  * @constructor
  */
 export default function Contact(){
+    const displayText = "Contact";
     return (
         <>
-            <HeroImage/>
+            <HeroImage displayText={displayText}/>
             <ContactForm/>
             <Footer/>
         </>

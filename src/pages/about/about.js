@@ -12,9 +12,10 @@ import Footer from "../../components/footer/footer";
  * @constructor
  */
 export default function About() {
+	const displayText = "About";
 	return (
 		<>
-			<HeroImage/>
+			<HeroImage displayText={displayText}/>
 			<Team/>
 			<MissionStatement/>
 			<AboutHistorySection/>

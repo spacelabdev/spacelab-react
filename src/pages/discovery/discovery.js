@@ -106,11 +106,13 @@ export default function Discovery() {
 				downloadData(data, dataType, filename);
 			})
 			.catch(e => console.error(e));
-	}
+		
+		}
+		const displayText = "Discovery";
 
 	return (
 		<>
-			<HeroImage/>
+			<HeroImage displayText={displayText}/>
 			<div id={'discovery-title'}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 
