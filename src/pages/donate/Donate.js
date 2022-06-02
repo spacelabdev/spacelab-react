@@ -13,7 +13,8 @@ export default function Donate() {
 	return (
 		<>
 			<HeroImage />
-            <DonateDetails />
+            {/* <DonateDetails /> */}
+            <button className="donate-button">Donate</button>
 			<Footer />
 		</>
 	);
