@@ -56,7 +56,7 @@ export default function Footer() {
 							</Link>
 						</li>
 						<li>
-							<Link to={"/contact"} style={link_style}>
+							<Link to={"/donate"} style={link_style}>
 								Donate
 							</Link>
 						</li>

@@ -39,6 +39,11 @@ class HamburgerMenu extends React.Component {
 							</Link>
 						</div>
 						<div>
+							<Link className={'hamburger-nav-link'} to={'/donate'} style={{textDecoration: 'none'}}>
+								Donate
+							</Link>
+						</div>
+						<div>
 							<Link className={'hamburger-nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
 								Contact
 							</Link>

@@ -26,8 +26,8 @@ export default function SupportTheCauseSection() {
 			</p>
 			<div id={"contact-us-button-container"}>
 				<NavigationButton
-					pathName={"/contact"}
-					buttonText={"CONTACT US"}
+					pathName={"/donate"}
+					buttonText={"Donate"}
 				/>
 			</div>
 		</div>
