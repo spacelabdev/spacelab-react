@@ -11,7 +11,7 @@ import Footer from "../../components/footer/footer";
 export default function Glossary() {
 	return (
 		<div id={"glossary-wrapper"}>
-			<HeroImage />
+			<HeroImage heroTitle="GLOSSARY" />
 			<GlossaryList />
 			<Footer />
 		</div>

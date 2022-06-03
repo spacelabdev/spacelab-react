@@ -18,7 +18,7 @@
 export const identificationFiltersArray = [
 	{
 		name: 'kepid',
-		label: 'Kepler Identification',
+		label: 'Kepler Id',
 		unit: '',
 		default: true,
 		dataType: "number",
@@ -159,7 +159,7 @@ export const projectDispositionFiltersArray = [
 	},
 	{
 		name: 'koi_fpflag_ec',
-		label: 'Ephemeris Match Indicates Contamination Flag',
+		label: 'Ephemeris Match Flag',
 		unit: '',
 		default: true,
 		dataType: 'number',
@@ -209,7 +209,7 @@ export const transitPropertiesFiltersArray = [
 	},
 	{
 		name: 'koi_time0bk',
-		label: 'Transit Epoch',
+		label: 'Transit Epoch Offset',
 		unit: 'Barycentric Julian Day - 2,454,833',
 		default: true,
 		dataType: 'number',
@@ -221,7 +221,7 @@ export const transitPropertiesFiltersArray = [
 		label: 'Transit Epoch',
 		unit: 'Barycentric Julian Day',
 		default: false,
-		dataType: 'string',
+		dataType: 'number',
 		description: 'The time corresponding to the center of the first detected transit in Barycentric Julian Day (BJD).',
 	},
 	{
@@ -536,7 +536,7 @@ export const thresholdCrossingEventFiltersArray = [
 		label: 'Quarters',
 		unit: '',
 		default: false,
-		dataType: 'string',
+		dataType: 'number',
 		description: 'A bit string indicating which quarters of Kepler data were searched for transit signatures. ' +
 			'Reading from left to right, the bits indicate the quarters, starting with quarter 1. A value of 1 for ' +
 			'any bit means the designated quarter was searched for transits; a value of 0 means that quarter was ' +

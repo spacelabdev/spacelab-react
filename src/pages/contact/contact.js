@@ -8,12 +8,12 @@ import Footer from "../../components/footer/footer";
  * @returns {JSX.Element}
  * @constructor
  */
-export default function Contact(){
-    return (
-        <>
-            <HeroImage/>
-            <ContactForm/>
-            <Footer/>
-        </>
-    );
+export default function Contact() {
+	return (
+		<>
+			<HeroImage heroTitle="CONTACT" />
+			<ContactForm />
+			<Footer />
+		</>
+	);
 }

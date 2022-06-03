@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import { Dropdown } from "react-bootstrap";
+import React, { useEffect, useRef, useState } from "react";
 import "./dropdownButton.scss"
+import rightTriangleDown from "../../assets/componentAssets/right-triangle-down.png"
 
 
 /**
@@ -9,73 +9,71 @@ import "./dropdownButton.scss"
  * @return {JSX.Element}
  * @constructor
  */
-export default function DropdownButton(props) {
-    const {
-        buttonLabel,
-        dropdownItemClick,
-        ...dropdownItems
-    } = props
+export default function DropdownButton({ buttonLabel, dropdownItemClick, ...dropdownItems }) {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+    const [buttonWidth, setButtonWidth] = useState()
+    const dropdownMenuRef = useRef()
 
-    // create a ref for the dropdown menu such that the width can be passed on to the dropdown items
-    const dropdownMenu = useRef(null)
+    /**
+     * Set the width of the drop down menu
+     */
+    useEffect(() => {
+        if (isDropdownOpen) {
+            // set width of dropdown menu
+            dropdownMenuRef.current.style.width = `${buttonWidth}px`
+        }
+        // eslint-disable-next-line
+    }, [isDropdownOpen])
 
     // convert the values of the dictionary into an array whose elements can be mapped over
     const dropdownItemsArray = Object.values(dropdownItems)
 
-    // retrieve width of dropdown button and set width of dropdown menu to the same value
-    const handleDropdownToggleClick = (isOpen, e) => {
-        if (isOpen) {
-            // width of dropdown button
-            const dropdownButtonWidth = e.currentTarget.offsetWidth
+    /**
+     * set drop down button width in state and set isDropdownOpen to true or false
+     * @param e
+     */
+    const handleDropdownToggleClick = (e) => {
+        // get width of drop down button and set state
+        const dropdownButtonWidth = e.currentTarget.offsetWidth
+        setButtonWidth(dropdownButtonWidth)
 
-            // set width of dropdown menu
-            dropdownMenu.current.style.width = `${dropdownButtonWidth}px`
-        }
+        // open / close drop down
+        setIsDropdownOpen(prevState => {
+            return !prevState
+        })
     }
 
     const handleDropdownItemClick = (e) => {
         e.preventDefault()
-
         // execute the provided function that governs the effects a click on the dropdown item has
         dropdownItemClick(e)
     }
 
-    const CustomDropdownItem = (props) => {
-        return (
-            <button
-                className={'dropdown-item'}
-                rel="noreferrer"
-                onClick={handleDropdownItemClick}
-            >
-                {props.children}
-            </button>
-        )
-    }
-
     return (
-        <>
-            <Dropdown onToggle={(isOpen, e) => handleDropdownToggleClick(isOpen, e)}>
-                <Dropdown.Toggle>
-                    {buttonLabel}
-                </Dropdown.Toggle>
-
-                {/* renderOnMount must be true or else handleDropdownToggleClick cannot set the style */}
-                <Dropdown.Menu
-                    ref={dropdownMenu}
-                    renderOnMount={true}
-                >
+        <div className={"dropdown-button-container"}>
+            <button
+                onClick={handleDropdownToggleClick}
+                onBlur={() => setIsDropdownOpen(false)}
+            >
+                {buttonLabel}
+                <img src={rightTriangleDown} alt={"right triangle pointing down"} />
+            </button>
+            {isDropdownOpen && (
+                <div className={"dropdown-items-container"} ref={dropdownMenuRef}>
                     {dropdownItemsArray.map((dropdownItem, index) => {
                         return (
-                            <Dropdown.Item
-                                as={CustomDropdownItem}
+                            <button
                                 key={index}
+                                className={'dropdown-item'}
+                                rel="noreferrer"
+                                onClick={handleDropdownItemClick}
                             >
                                 {dropdownItem.label}
-                            </Dropdown.Item>
+                            </button>
                         )
                     })}
-                </Dropdown.Menu>
-            </Dropdown>
-        </>
+                </div>
+            )}
+        </div>
     )
 }
