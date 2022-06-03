@@ -2,7 +2,7 @@ import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import BlogCarousel from "./blogCarousel";
 import Footer from "../../components/footer/footer";
-import NavigationButton from "../../components/navigationButton/navigationButton";
+import InternalNavButton from "../../components/internalNavButton/internalNavButton";
 import "./blog.scss";
 
 /**
@@ -19,7 +19,7 @@ export default function Blog() {
 				<BlogCarousel />
 			</div>
 			<div id={"archives-button-container"}>
-				<NavigationButton
+				<InternalNavButton
 					pathName={"/archives"}
 					buttonText={"View Full Blog Archives"}
 				/>
