@@ -1,6 +1,6 @@
 import React from "react";
 import "../home.scss";
-import NavigationButton from "../../../components/navigationButton/navigationButton";
+import InternalNavButton from "../../../components/navigationButtons/internalNavButton";
 import placeHolder from "../../../assets/generalAssets/img_placeholder.png";
 
 /**
@@ -31,7 +31,7 @@ export default function Explore() {
                         </div>
                     ))}
                 </div>
-                <NavigationButton pathName="/discovery" />
+                <InternalNavButton pathName="/discovery" />
             </div>
         </section>
     );

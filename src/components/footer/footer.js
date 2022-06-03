@@ -32,7 +32,10 @@ export default function Footer() {
 						Sign up to learn about the latest discoveries, news and
 						more! Delivered weekly.
 					</p>
-					<form className="subscription-form" onSubmit={handleSubscription}>
+					<form
+						className="subscription-form"
+						onSubmit={handleSubscription}
+					>
 						<input
 							type="email"
 							id="email"
@@ -55,10 +58,21 @@ export default function Footer() {
 								Projects
 							</Link>
 						</li>
-						<li>
-							<Link to={"/contact"} style={link_style}>
+						{/* <li>
+							<Link to={"/donate"} style={link_style}>
 								Donate
 							</Link>
+						</li> */}
+						<li>
+							<a
+								className="link_style"
+								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
+								target="_blank"
+								rel="noreferrer"
+								style={{ textDecoration: "none" }}
+							>
+								Donate
+							</a>
 						</li>
 						<li>
 							<Link to={"/contact"} style={link_style}>
@@ -82,17 +96,19 @@ export default function Footer() {
 			</div>
 			<div className="socialmedia-container">
 				<center>
-					<hr/>
+					<hr />
 					{/* TODO: fill in the usernames for the social media links below */}
-					<IconContext.Provider value={{color: "D9D9D9", size: "2rem"}}>
+					<IconContext.Provider
+						value={{ color: "D9D9D9", size: "2rem" }}
+					>
 						<a href="https://www.linkedin.com/company/spacelab-space/">
-							<AiOutlineLinkedin/>
+							<AiOutlineLinkedin />
 						</a>
 						{/* <a href="https://www.instagram.com/{Spacelab}"> */}
-						<AiOutlineInstagram/>
+						<AiOutlineInstagram />
 						{/* </a> */}
 						{/* <a href="https://twitter.com/{SpaceLab}"> */}
-						<AiOutlineTwitter/>
+						<AiOutlineTwitter />
 						{/* </a> */}
 					</IconContext.Provider>
 					<h5>@2021 by SpaceLab</h5>

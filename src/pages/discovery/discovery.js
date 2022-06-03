@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
@@ -12,14 +12,15 @@ import {
 	pixelBasedKoiVettingFiltersArray,
 } from "./discoveryHelper";
 import Footer from "../../components/footer/footer";
-import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 import {getExoplanets} from "../../services/calTechApiRequest";
 import {UniversalContext} from "../../App";
 import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
 import DropdownButton from "../../components/button/dropdownButton";
-import {downloadData} from "../../services/utilityFunctions";
+import { downloadData } from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/button/simpleButton";
+import CollapsibleSection from "../../components/collapsibleSection/collapsibleSection";
+import DataTable from "./table/dataTable";
 
 /**
  * @returns {JSX.Element}
@@ -29,6 +30,7 @@ export default function Discovery() {
 	const context = useContext(UniversalContext);
 	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState());
 	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState());
+	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false)
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var. If a query is sent for the purpose
@@ -39,23 +41,33 @@ export default function Discovery() {
 	 * @param isStateful: if false, do not set state (needed for download feature)
 	 * @param isStorage: if false, API response not saved in storage (needed for download feature)
 	 */
-	const queryExoplanetDatabase = (format = 'json', isStateful = true, isStorage = false) => {
+	const queryExoplanetDatabase = (
+		format = "json",
+		isStateful = true,
+		isStorage = false
+	) => {
 		// only send an API request if at least one column has been checked
-		if (Object.values(selectedColumns).some(column => column)) {
+		if (Object.values(selectedColumns).some((column) => column)) {
 			return getExoplanets({
 				select: selectedColumns,
 				where: whereFilter,
-				order: '',
+				order: "",
 				format: format,
 			}).then(res => {
 				if (res.status === 200) {
 					if (isStateful) {
-						context.setExoplanetData(res.data);
+						let data = res.data
+						if (typeof data === "string") {
+							data = parseBinaryDataIntoString(data)
+						}
+						context.setExoplanetData(data);
 					}
 					if (isStorage) {
 						sessionStorage.setItem('selectedColumns', JSON.stringify(selectedColumns));
 						sessionStorage.setItem('whereFilter', JSON.stringify(whereFilter));
 					}
+					// ensure that sort icons in data table columns are reset since the newly received data is unsorted
+					setIsSortIconResetNeeded(true)
 				} else {
 					console.error("error retrieving exoplanetData");
 				}
@@ -65,6 +77,23 @@ export default function Discovery() {
 			}).catch(e => console.error(e));
 		}
 	};
+
+	/**
+	 * This method is only relevant for the data set associated with "koi_quarters" which seems to be the only data set
+	 * that returns string data, containing 4 byte binary string that is not wrapped in apostrophes. The data is in the
+	 * form of "[\n{\"koi_quarters\":01111111111111111000000000000000}\n]\n". The binary cannot be parsed unless it is
+	 * wrapped in apostrophes. This function returns the data with all binary data wrapped in apostrophes.
+	 * @param data
+	 * @return {any}
+	 */
+	const parseBinaryDataIntoString = (data) => {
+		const re = /[01]{32}/g
+		const dataWithBinaryConvertedToString = data.replaceAll(re, match => {
+			return `"${match}"`
+		})
+
+		return JSON.parse(dataWithBinaryConvertedToString)
+	}
 
 	// Make API call after selectedColumns and whereFilter states have been initialised but only once at component
 	// mount-time. Disabling the eslint warning in the next line since providing an empty dependency array is done
@@ -83,129 +112,165 @@ export default function Discovery() {
 		let dataType;
 		let filename;
 		switch (e.target.innerHTML) {
-			case 'json':
-				format = 'json';
-				dataType = 'application/json';
-				filename = 'filtered_output.json';
+			case "json":
+				format = "json";
+				dataType = "application/json";
+				filename = "filtered_output.json";
 				break;
 			// Default case is the csv file format
 			default:
 				// as per API, empty string for format requires a csv data response
-				format = '';
-				dataType = 'text/csv';
-				filename = 'filtered_output.csv';
+				format = "";
+				dataType = "text/csv";
+				filename = "filtered_output.csv";
 				break;
 		}
 
 		// make API request with specified data type format (Note: empty string = csv)
 		queryExoplanetDatabase(format, false, false)
-			.then(res => {
+			.then((res) => {
 				// stringify data only if format is json
-				const data = format === 'json' ? JSON.stringify(res.data) : res.data;
+				const data =
+					format === "json" ? JSON.stringify(res.data) : res.data;
 				downloadData(data, dataType, filename);
 			})
-			.catch(e => console.error(e));
-	}
+			.catch((e) => console.error(e));
+	};
 
 	return (
 		<>
-			<HeroImage/>
-			<div id={'discovery-title'}>Current Discoveries</div>
+			<HeroImage heroTitle="DISCOVERY" />
+			<div id={"discovery-title"}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
-
-				<div id="discovery-table">
-					<UnderConstruction/>
-					<p>
-						Pardon our dust. While the database search, and search result export functionalities are
-						live, the data display table is still under construction.
-					</p>
-				</div>
-
+				<DataTable
+					isSortIconResetNeeded={isSortIconResetNeeded}
+					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
+				/>
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>
 						<p>Filters</p>
-						<div id={'discovery-filter-buttons-container'}>
+						<div id={"discovery-filter-buttons-container"}>
 							<div id="searchBttn">
 								<SimpleButton
 									buttonName={"Filter"}
-									buttonEffectAsync={() => queryExoplanetDatabase("json", true, true)}
+									buttonEffectAsync={() =>
+										queryExoplanetDatabase(
+											"json",
+											true,
+											true
+										)
+									}
 								/>
 							</div>
 							<DropdownButton
-								buttonLabel={'Download'}
+								buttonLabel={"Download"}
 								dropdownItemClick={dropdownItemClick}
-								item1={{href: "#/action-1", label: "csv"}}
-								item2={{href: "#/action-2", label: "json"}}
+								item1={{ href: "#/action-1", label: "csv" }}
+								item2={{ href: "#/action-2", label: "json" }}
 							/>
 						</div>
 					</div>
-					<DiscoveryColumnFilterList
-						filterArray={identificationFiltersArray}
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"Identifications"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
-					<DiscoveryColumnFilterList
-						filterArray={exoplanetArchiveFiltersArray}
+						defaultOpen={true}
+					>
+						<DiscoveryColumnFilterList
+							filterArray={identificationFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"Exoplanets"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
-					<DiscoveryColumnFilterList
-						filterArray={projectDispositionFiltersArray}
+						defaultOpen={true}
+					>
+						<DiscoveryColumnFilterList
+							filterArray={exoplanetArchiveFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"Dispositions"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
-					<DiscoveryColumnFilterList
-						filterArray={transitPropertiesFiltersArray}
+					>
+						<DiscoveryColumnFilterList
+							filterArray={projectDispositionFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"Transit Properties"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
-					<DiscoveryColumnFilterList
-						filterArray={thresholdCrossingEventFiltersArray}
+					>
+						<DiscoveryColumnFilterList
+							filterArray={transitPropertiesFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"Threshold Crossing Events"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
-					<DiscoveryColumnFilterList
-						filterArray={stellarParametersFiltersArray}
+					>
+						<DiscoveryColumnFilterList
+							filterArray={thresholdCrossingEventFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"Stellar Parameters"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
-					<DiscoveryColumnFilterList
-						filterArray={kicParametersFiltersArray}
+					>
+						<DiscoveryColumnFilterList
+							filterArray={stellarParametersFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"KIC Parameters"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
-					<DiscoveryColumnFilterList
-						filterArray={pixelBasedKoiVettingFiltersArray}
+					>
+						<DiscoveryColumnFilterList
+							filterArray={kicParametersFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
 						title={"Pixel Based KOI Vetting"}
-						selectedColumns={selectedColumns}
-						setSelectedColumns={setSelectedColumns}
-						whereFilter={whereFilter}
-						setWhereFilter={setWhereFilter}
-					/>
+					>
+						<DiscoveryColumnFilterList
+							filterArray={pixelBasedKoiVettingFiltersArray}
+							selectedColumns={selectedColumns}
+							setSelectedColumns={setSelectedColumns}
+							whereFilter={whereFilter}
+							setWhereFilter={setWhereFilter}
+						/>
+					</CollapsibleSection>
 				</div>
 			</div>
-			<Footer/>
+			<Footer />
 		</>
 	);
-};
+}
