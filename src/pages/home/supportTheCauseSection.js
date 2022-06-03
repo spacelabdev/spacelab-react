@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.scss";
-import NavigationButton from "../../components/navigationButton/navigationButton";
+import DonateButton from "../../components/donateButton/donateButton";
 
 /**
  * Renders Support the Cause section
@@ -24,21 +24,8 @@ export default function SupportTheCauseSection() {
 				To help us grow these opportunities, please consider making a
 				tax-deductible donation to SpaceLab today.
 			</p>
-			{/* <div id={"contact-us-button-container"}>
-				<NavigationButton
-					pathName={"/donate"}
-					buttonText={"Donate"}
-					href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
-				/>
-			</div> */}
-			<div id={"contact-us-button-container"}>
-				<a
-					href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
-					target="_blank"
-					rel="noreferrer"
-				>
-					<button className="donate-button">Donate</button>
-				</a>
+			<div id={"donate-button-container"}>
+				<DonateButton buttonText="Donate"/>
 			</div>
 		</div>
 	);
