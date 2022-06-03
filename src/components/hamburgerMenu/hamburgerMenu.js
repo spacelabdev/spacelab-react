@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import { slide as Menu } from 'react-burger-menu';
+import {slide as Menu} from 'react-burger-menu';
 import './hamburgerMenu.scss';
 
 /**
@@ -8,7 +8,7 @@ import './hamburgerMenu.scss';
  *  https://github.com/negomi/react-burger-menu
  */
 class HamburgerMenu extends React.Component {
-	render () {
+	render() {
 		return (
 			<>
 				<Menu right>
@@ -17,7 +17,7 @@ class HamburgerMenu extends React.Component {
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/about"}
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								About
 							</Link>
@@ -26,7 +26,7 @@ class HamburgerMenu extends React.Component {
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/discovery"}
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								Discovery
 							</Link>
@@ -35,7 +35,7 @@ class HamburgerMenu extends React.Component {
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/projects"}
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								Projects
 							</Link>
@@ -44,7 +44,7 @@ class HamburgerMenu extends React.Component {
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/glossary"}
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								Glossary
 							</Link>
@@ -53,7 +53,7 @@ class HamburgerMenu extends React.Component {
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/blog"}
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								Blog
 							</Link>
@@ -72,7 +72,7 @@ class HamburgerMenu extends React.Component {
 							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 							target="_blank"
 							rel="noreferrer"
-							style={{ textDecoration: "none" }}
+							style={{textDecoration: "none"}}
 						>
 							Donate
 						</a>
@@ -80,7 +80,7 @@ class HamburgerMenu extends React.Component {
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/contact"}
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								Contact
 							</Link>
