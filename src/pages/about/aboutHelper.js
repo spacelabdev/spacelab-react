@@ -155,6 +155,11 @@ export const frontEnd = {
 			fullName: "Jon Zivku",
 			title: "Software Engineer",
 		},
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
+			fullName: "Alex Anand",
+			title: "Full-Stack Software Engineer",
+		},
 	],
 };
 
@@ -263,7 +268,7 @@ export const december2021Cohort = {
 		{
 			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
 			fullName: "Alex Anand",
-			title: "Software Developer | Intern",
+			title: "Full-Stack Software Developer | Intern",
 		},
 		{
 			image: "https://media-exp1.licdn.com/dms/image/C4E03AQGHfQJtC1HIZg/profile-displayphoto-shrink_800_800/0/1517685303481?e=1645056000&v=beta&t=QCKr7FvI-osjN4xnthRoOnj6aNJkQgl9ab4awl97SwA",
