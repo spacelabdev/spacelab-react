@@ -34,7 +34,7 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 				const newFilter = data.filter((value) => {
 					const target = value[0].toLowerCase()
 					const levenshteinDistance = getLevenshteinDistance(searchTerm, target)
-					const fuzzyChars = 1
+					const fuzzyChars = 0
 					// if the word is contained inside the target string, the Levenshtein distance will be exactly
 					// the delta between the length of the target string and the search term. If the Levenshtein
 					// distance is bigger than the delta between both lengths then that means that additional characters
@@ -61,8 +61,7 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 				setFilteredSearchResultIndex(null)
 			}
 		}
-		// eslint-disable-next-line
-	},[searchTerm]);
+	},[searchTerm, data, isSearchBarActive]);
 
 	/**
 	 * Return the Levenshtein distance between the search string and the target string (data base)

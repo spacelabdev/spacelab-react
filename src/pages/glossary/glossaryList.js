@@ -1,7 +1,7 @@
 import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
-import {returnFilteredTerms, handleTermImage, highlightCurrentFilter} from "./glossaryhelper";
+import {returnFilteredTerms, handleTermImage, highlightCurrentFilter, glossaryTermsArray} from "./glossaryhelper";
 import './glossary.scss';
 import {handleGlossarySearchTermClick} from "../../components/dynamicSearchBar/SearchBarHelper";
 import SearchBar from "../../components/dynamicSearchBar/SearchBar";
