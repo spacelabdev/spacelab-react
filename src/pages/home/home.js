@@ -11,10 +11,9 @@ import "./home.scss";
  * @constructor
  */
 export default function Home() {
-    var displayText = 'Home'
     return (
         <>
-            <HeroImage displayText={displayText}/>
+            <HeroImage heroTitle="HOME"/>
             <Introduction />
             <HorizonSection/>
             <SupportTheCauseSection/>

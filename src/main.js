@@ -7,7 +7,6 @@ import Glossary from "./pages/glossary/glossary";
 import Home from "./pages/home/home";
 import Projects from "./pages/projects/projects";
 import Contact from "./pages/contact/contact";
-import Donate from "./pages/donate/Donate";
 import BlogArchives from "./pages/blog/blogArchives/blogArchives";
 
 /**

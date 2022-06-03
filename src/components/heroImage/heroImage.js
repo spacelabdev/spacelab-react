@@ -5,15 +5,15 @@ import Navigation from "../navigation/navigation";
 import {UniversalContext} from "../../App";
 
 /**
- * Renders Hero image at the top of each page and dynamically applies to appropriate page title.
+ * Renders Hero image at the top of each page based on the prop heroTitle.
  * @returns {JSX.Element}
  * @constructor
  */
-export default function HeroImage({displayText}) {
-	// Use displayText prop to define heroImage based on the component
+export default function HeroImage({heroTitle}) {
+	// Use heroTitle prop to define heroImage based on the component
 	const context = useContext(UniversalContext);
 	let pageTitle = context.pageTitle;
-	context.setPageTitle(displayText);
+	context.setPageTitle(heroTitle);
 
 	// Determine if on home page for purposes of displaying Spacelab image
 	if (pageTitle === "" || pageTitle === "home") {

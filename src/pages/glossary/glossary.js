@@ -1,5 +1,5 @@
 import React from "react";
-import './glossary.scss';
+import "./glossary.scss";
 import HeroImage from "../../components/heroImage/heroImage";
 import GlossaryList from "./glossaryList";
 import Footer from "../../components/footer/footer";
@@ -9,12 +9,11 @@ import Footer from "../../components/footer/footer";
  * @constructor
  */
 export default function Glossary() {
-	const displayText = 'Glossary';
 	return (
-		<div id={'glossary-wrapper'}>
-			<HeroImage displayText={displayText}/>
-			<GlossaryList/>
-			<Footer/>
+		<div id={"glossary-wrapper"}>
+			<HeroImage heroTitle="GLOSSARY" />
+			<GlossaryList />
+			<Footer />
 		</div>
 	);
-};
+}

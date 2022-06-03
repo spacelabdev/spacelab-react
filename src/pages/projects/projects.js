@@ -3,7 +3,7 @@ import HeroImage from "../../components/heroImage/heroImage";
 import ProjectsIntro from "./projectsIntro";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 import Footer from "../../components/footer/footer";
-import './projects.scss';
+import "./projects.scss";
 
 /**
  * Renders Projects Page
@@ -11,13 +11,12 @@ import './projects.scss';
  * @constructor
  */
 export default function Projects() {
-	const displayText = 'Projects';
 	return (
 		<>
-			<HeroImage displayText={displayText}/>
-            <ProjectsIntro/>
-			<UnderConstruction/>
-			<Footer/>
+			<HeroImage heroTitle="PROJECTS" />
+			<ProjectsIntro />
+			<UnderConstruction />
+			<Footer />
 		</>
 	);
-};
+}
