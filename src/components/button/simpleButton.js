@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./simpleButton.scss"
-import { Button } from "react-bootstrap";
 import { useHistory } from "react-router";
 
 
@@ -63,15 +62,15 @@ export default function SimpleButton(props) {
     }
 
     return (
-        <Button
-            variant={"primary"}
+        <button
             disabled={isLoading}
             onClick={handleButtonClick}
+            className={"standard-button"}
         >
             {isLoading
                 ? "Loading..."
                 : buttonName
             }
-        </Button>
+        </button>
     )
 }

@@ -24,7 +24,9 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
 	 * run effect only if dataName changes
 	 */
 	useEffect(() => {
-		// todo: [Sven Gerlach] making an API call takes too long and hence leads to poor UX
+		// Instead of making a data query when the website is called up to download all the data (5.3mb) and then find
+		// the enum sets for each type apriori, it is cheaper to make an API query for the specific dataName everytime
+		// the user requests to manipulate a particular dataName (240kb).
 		if (dataType === 'enum') {
 			// make API call to retrieve complete column data across all rows
 			getExoplanets({select: {[dataName]: true}})
@@ -77,8 +79,8 @@ export default function DiscoveryRowDataFilterStringAndEnum(props) {
 			return (
 				<>
 					<option value={''}></option>
-					{enumAttributes.map(attribute => {
-						return <option key={attribute} value={attribute}>{attribute}</option>
+					{enumAttributes.map((attribute, index) => {
+						return <option key={index} value={attribute}>{attribute}</option>
 					})}
 				</>
 			);
