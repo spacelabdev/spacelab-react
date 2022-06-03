@@ -95,7 +95,7 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 	 * column, 2) user chooses / changes sort-order, and 3) when the exoPlanetData set is updated.
 	 */
 	useEffect(() => {
-		if (exoPlanetData[0]) {
+		if (exoPlanetData && exoPlanetData[0]) {
 			// save current unsorted state
 			if (!unsortedExoPlanetData) {
 				setUnsortedExoPlanetData([...exoPlanetData])
