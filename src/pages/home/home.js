@@ -13,7 +13,7 @@ import "./home.scss";
 export default function Home() {
     return (
         <>
-            <HeroImage />
+            <HeroImage heroTitle="HOME"/>
             <Introduction />
             <HorizonSection/>
             <SupportTheCauseSection/>

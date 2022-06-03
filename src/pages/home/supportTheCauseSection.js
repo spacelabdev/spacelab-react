@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.scss";
-import NavigationButton from "../../components/navigationButton/navigationButton";
+import ExternalNavButton from "../../components/navigationButtons/externalNavButton";
 
 /**
  * Renders Support the Cause section
@@ -24,10 +24,10 @@ export default function SupportTheCauseSection() {
 				To help us grow these opportunities, please consider making a
 				tax-deductible donation to SpaceLab today.
 			</p>
-			<div id={"contact-us-button-container"}>
-				<NavigationButton
-					pathName={"/contact"}
-					buttonText={"CONTACT US"}
+			<div id={"donate-button-container"}>
+				<ExternalNavButton
+					buttonText="Donate"
+					href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 				/>
 			</div>
 		</div>

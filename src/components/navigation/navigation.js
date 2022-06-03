@@ -41,6 +41,10 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
 							Blog
 						</Link>
+						{/* <Link className={'nav-link'} to={'/donate'} style={{textDecoration: 'none'}}>
+							Donate
+						</Link> */}
+						<a className='nav-link' href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C" target="_blank" rel="noreferrer">Donate</a>
 						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
 							Contact
 						</Link>
