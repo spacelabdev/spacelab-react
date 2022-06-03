@@ -1,5 +1,5 @@
 import React from "react";
-import "./externalNavButton.scss";
+import "./navButton.scss";
 
 /**
  * Renders a button linking to the url passed in as the href prop and with the button text as

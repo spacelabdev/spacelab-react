@@ -2,7 +2,7 @@ import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import BlogCarousel from "./blogCarousel";
 import Footer from "../../components/footer/footer";
-import InternalNavButton from "../../components/internalNavButton/internalNavButton";
+import InternalNavButton from "../../components/navigationButtons/internalNavButton";
 import "./blog.scss";
 
 /**

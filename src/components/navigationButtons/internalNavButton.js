@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "./internalNavButton.scss";
+import "./navButton.scss";
 
 /**
  * Renders a button linking to the path passed in as the pathName prop and with the button text as

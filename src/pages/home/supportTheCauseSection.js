@@ -1,7 +1,6 @@
 import React from "react";
 import "./home.scss";
-import ExternalNavButton from "../../components/externalNavButton/externalNavButton";
-import InternalNavButton from "../../components/internalNavButton/internalNavButton";
+import ExternalNavButton from "../../components/navigationButtons/externalNavButton";
 
 /**
  * Renders Support the Cause section

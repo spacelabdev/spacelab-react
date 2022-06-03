@@ -1,7 +1,7 @@
 import React from "react";
 import "../home.scss";
 import placeHolder from "../../../assets/generalAssets/img_placeholder.png";
-import InternalNavButton from "../../../components/internalNavButton/internalNavButton";
+import InternalNavButton from "../../../components/navigationButtons/internalNavButton";
 /**
  * @returns {JSX.Element}
  * @constructor

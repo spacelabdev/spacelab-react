@@ -1,6 +1,6 @@
 import React from "react";
 import "../home.scss";
-import InternalNavButton from "../../../components/internalNavButton/internalNavButton";
+import InternalNavButton from "../../../components/navigationButtons/internalNavButton";
 import placeHolder from "../../../assets/generalAssets/img_placeholder.png";
 
 /**
