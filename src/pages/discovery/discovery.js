@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
@@ -16,12 +16,11 @@ import {getExoplanets} from "../../services/calTechApiRequest";
 import {UniversalContext} from "../../App";
 import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
 import DropdownButton from "../../components/button/dropdownButton";
-import {downloadData} from "../../services/utilityFunctions";
+import { downloadData } from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/button/simpleButton";
 import CollapsibleSection from "../../components/collapsibleSection/collapsibleSection";
 import DataTable from "./table/dataTable";
-
 
 /**
  * @returns {JSX.Element}
@@ -42,13 +41,17 @@ export default function Discovery() {
 	 * @param isStateful: if false, do not set state (needed for download feature)
 	 * @param isStorage: if false, API response not saved in storage (needed for download feature)
 	 */
-	const queryExoplanetDatabase = (format = 'json', isStateful = true, isStorage = false) => {
+	const queryExoplanetDatabase = (
+		format = "json",
+		isStateful = true,
+		isStorage = false
+	) => {
 		// only send an API request if at least one column has been checked
-		if (Object.values(selectedColumns).some(column => column)) {
+		if (Object.values(selectedColumns).some((column) => column)) {
 			return getExoplanets({
 				select: selectedColumns,
 				where: whereFilter,
-				order: '',
+				order: "",
 				format: format,
 			}).then(res => {
 				if (res.status === 200) {
@@ -109,56 +112,61 @@ export default function Discovery() {
 		let dataType;
 		let filename;
 		switch (e.target.innerHTML) {
-			case 'json':
-				format = 'json';
-				dataType = 'application/json';
-				filename = 'filtered_output.json';
+			case "json":
+				format = "json";
+				dataType = "application/json";
+				filename = "filtered_output.json";
 				break;
 			// Default case is the csv file format
 			default:
 				// as per API, empty string for format requires a csv data response
-				format = '';
-				dataType = 'text/csv';
-				filename = 'filtered_output.csv';
+				format = "";
+				dataType = "text/csv";
+				filename = "filtered_output.csv";
 				break;
 		}
 
 		// make API request with specified data type format (Note: empty string = csv)
 		queryExoplanetDatabase(format, false, false)
-			.then(res => {
+			.then((res) => {
 				// stringify data only if format is json
-				const data = format === 'json' ? JSON.stringify(res.data) : res.data;
+				const data =
+					format === "json" ? JSON.stringify(res.data) : res.data;
 				downloadData(data, dataType, filename);
 			})
-			.catch(e => console.error(e));
-	}
+			.catch((e) => console.error(e));
+	};
 
 	return (
 		<>
-			<HeroImage/>
-			<div id={'discovery-title'}>Current Discoveries</div>
+			<HeroImage heroTitle="DISCOVERY" />
+			<div id={"discovery-title"}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
-
 				<DataTable
 					isSortIconResetNeeded={isSortIconResetNeeded}
 					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
 				/>
-
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>
 						<p>Filters</p>
-						<div id={'discovery-filter-buttons-container'}>
+						<div id={"discovery-filter-buttons-container"}>
 							<div id="searchBttn">
 								<SimpleButton
 									buttonName={"Filter"}
-									buttonEffectAsync={() => queryExoplanetDatabase("json", true, true)}
+									buttonEffectAsync={() =>
+										queryExoplanetDatabase(
+											"json",
+											true,
+											true
+										)
+									}
 								/>
 							</div>
 							<DropdownButton
-								buttonLabel={'Download'}
+								buttonLabel={"Download"}
 								dropdownItemClick={dropdownItemClick}
-								item1={{href: "#/action-1", label: "csv"}}
-								item2={{href: "#/action-2", label: "json"}}
+								item1={{ href: "#/action-1", label: "csv" }}
+								item2={{ href: "#/action-2", label: "json" }}
 							/>
 						</div>
 					</div>
@@ -188,7 +196,10 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection className={"discover-filter-collapsible"} title={"Dispositions"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"Dispositions"}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={projectDispositionFiltersArray}
 							selectedColumns={selectedColumns}
@@ -197,7 +208,10 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection className={"discover-filter-collapsible"} title={"Transit Properties"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"Transit Properties"}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={transitPropertiesFiltersArray}
 							selectedColumns={selectedColumns}
@@ -206,7 +220,10 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection className={"discover-filter-collapsible"} title={"Threshold Crossing Events"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"Threshold Crossing Events"}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={thresholdCrossingEventFiltersArray}
 							selectedColumns={selectedColumns}
@@ -215,7 +232,10 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection className={"discover-filter-collapsible"} title={"Stellar Parameters"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"Stellar Parameters"}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={stellarParametersFiltersArray}
 							selectedColumns={selectedColumns}
@@ -224,7 +244,10 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection className={"discover-filter-collapsible"} title={"KIC Parameters"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"KIC Parameters"}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={kicParametersFiltersArray}
 							selectedColumns={selectedColumns}
@@ -233,7 +256,10 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-					<CollapsibleSection className={"discover-filter-collapsible"} title={"Pixel Based KOI Vetting"}>
+					<CollapsibleSection
+						className={"discover-filter-collapsible"}
+						title={"Pixel Based KOI Vetting"}
+					>
 						<DiscoveryColumnFilterList
 							filterArray={pixelBasedKoiVettingFiltersArray}
 							selectedColumns={selectedColumns}
@@ -244,7 +270,7 @@ export default function Discovery() {
 					</CollapsibleSection>
 				</div>
 			</div>
-			<Footer/>
+			<Footer />
 		</>
 	);
-};
+}

@@ -5,19 +5,15 @@ import Navigation from "../navigation/navigation";
 import {UniversalContext} from "../../App";
 
 /**
- * Renders Hero image at the top of each page and dynamically applies to appropriate page title.
+ * Renders Hero image at the top of each page based on the prop heroTitle.
  * @returns {JSX.Element}
  * @constructor
  */
-export default function HeroImage() {
-	// Get title of page from url and capitalize. Must be set as state to trigger re render for home page.
+export default function HeroImage({heroTitle}) {
+	// Use heroTitle prop to define heroImage based on the component
 	const context = useContext(UniversalContext);
 	let pageTitle = context.pageTitle;
-	const url = window.location.href;
-	const urlArray = url.split("/");
-	const element = urlArray.length - 1;
-	let title = urlArray[element].toUpperCase();
-	context.setPageTitle(title);
+	context.setPageTitle(heroTitle);
 
 	// Determine if on home page for purposes of displaying Spacelab image
 	if (pageTitle === "" || pageTitle === "home") {
