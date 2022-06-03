@@ -14,17 +14,8 @@ export const returnFilteredTerms = (beginningAlphabeticIndex, endingAlphabeticIn
 	return glossaryArray;
 };
 
-/**
- * Updates CSS for term images where an actual image is not present in the provided term array and thus the default
- * placeholder image is used.
- */
-export const handleMissingTermImage = () => {
-	const termImgs = document.querySelectorAll("#glossary-term-image");
-	termImgs.forEach(termImg => {
-		termImg.setAttribute('style', 'width: 300px; padding: 4.5em; background: white; border: 1px solid black;');
-	});
-};
-
+// TODO: Can this be moved to glossary.scss? If so, update and delete the below method.
+//  Also update glossaryList.js to no longer reference this method.
 /**
  * Updates CSS for term images where a unique image is present in the provided term array.
  */

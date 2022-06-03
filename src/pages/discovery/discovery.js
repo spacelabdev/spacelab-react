@@ -12,18 +12,15 @@ import {
 	pixelBasedKoiVettingFiltersArray,
 } from "./discoveryHelper";
 import Footer from "../../components/footer/footer";
-import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
-import { getExoplanets } from "../../services/calTechApiRequest";
-import { UniversalContext } from "../../App";
-import {
-	initialiseSelectedColumnsState,
-	initialiseWhereFilterState,
-} from "./initialiseState";
+import {getExoplanets} from "../../services/calTechApiRequest";
+import {UniversalContext} from "../../App";
+import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
 import DropdownButton from "../../components/button/dropdownButton";
 import { downloadData } from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/button/simpleButton";
 import CollapsibleSection from "../../components/collapsibleSection/collapsibleSection";
+import DataTable from "./table/dataTable";
 
 /**
  * @returns {JSX.Element}
@@ -31,12 +28,9 @@ import CollapsibleSection from "../../components/collapsibleSection/collapsibleS
  */
 export default function Discovery() {
 	const context = useContext(UniversalContext);
-	const [selectedColumns, setSelectedColumns] = useState(
-		initialiseSelectedColumnsState()
-	);
-	const [whereFilter, setWhereFilter] = useState(
-		initialiseWhereFilterState()
-	);
+	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState());
+	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState());
+	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false)
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var. If a query is sent for the purpose
@@ -59,32 +53,47 @@ export default function Discovery() {
 				where: whereFilter,
 				order: "",
 				format: format,
-			})
-				.then((res) => {
-					if (res.status === 200) {
-						if (isStateful) {
-							context.setExoplanetData(res.data);
+			}).then(res => {
+				if (res.status === 200) {
+					if (isStateful) {
+						let data = res.data
+						if (typeof data === "string") {
+							data = parseBinaryDataIntoString(data)
 						}
-						if (isStorage) {
-							sessionStorage.setItem(
-								"selectedColumns",
-								JSON.stringify(selectedColumns)
-							);
-							sessionStorage.setItem(
-								"whereFilter",
-								JSON.stringify(whereFilter)
-							);
-						}
-					} else {
-						console.error("error retrieving exoplanetData");
+						context.setExoplanetData(data);
 					}
-					// return response such that it can be handled by the caller of this promise
-					// this is important for the data download function
-					return res;
-				})
-				.catch((e) => console.error(e));
+					if (isStorage) {
+						sessionStorage.setItem('selectedColumns', JSON.stringify(selectedColumns));
+						sessionStorage.setItem('whereFilter', JSON.stringify(whereFilter));
+					}
+					// ensure that sort icons in data table columns are reset since the newly received data is unsorted
+					setIsSortIconResetNeeded(true)
+				} else {
+					console.error("error retrieving exoplanetData");
+				}
+				// return response such that it can be handled by the caller of this promise
+				// this is important for the data download function
+				return res;
+			}).catch(e => console.error(e));
 		}
 	};
+
+	/**
+	 * This method is only relevant for the data set associated with "koi_quarters" which seems to be the only data set
+	 * that returns string data, containing 4 byte binary string that is not wrapped in apostrophes. The data is in the
+	 * form of "[\n{\"koi_quarters\":01111111111111111000000000000000}\n]\n". The binary cannot be parsed unless it is
+	 * wrapped in apostrophes. This function returns the data with all binary data wrapped in apostrophes.
+	 * @param data
+	 * @return {any}
+	 */
+	const parseBinaryDataIntoString = (data) => {
+		const re = /[01]{32}/g
+		const dataWithBinaryConvertedToString = data.replaceAll(re, match => {
+			return `"${match}"`
+		})
+
+		return JSON.parse(dataWithBinaryConvertedToString)
+	}
 
 	// Make API call after selectedColumns and whereFilter states have been initialised but only once at component
 	// mount-time. Disabling the eslint warning in the next line since providing an empty dependency array is done
@@ -133,15 +142,10 @@ export default function Discovery() {
 			<HeroImage heroTitle="DISCOVERY" />
 			<div id={"discovery-title"}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
-				<div id="discovery-table">
-					<UnderConstruction />
-					<p>
-						Pardon our dust. While the database search, and search
-						result export functionalities are live, the data display
-						table is still under construction.
-					</p>
-				</div>
-
+				<DataTable
+					isSortIconResetNeeded={isSortIconResetNeeded}
+					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
+				/>
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>
 						<p>Filters</p>

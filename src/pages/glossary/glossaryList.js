@@ -1,8 +1,7 @@
 import React, {useContext} from "react";
 import GlossaryListItem from "./glossaryListItem";
 import {UniversalContext} from "../../App";
-import {returnFilteredTerms, handleTermImage, handleMissingTermImage, highlightCurrentFilter} from "./glossaryhelper";
-import placeholderImage from "../../assets/generalAssets/img_placeholder.png";
+import {returnFilteredTerms, handleTermImage, highlightCurrentFilter} from "./glossaryhelper";
 import './glossary.scss';
 
 export default function GlossaryList() {
@@ -10,13 +9,16 @@ export default function GlossaryList() {
 	let termImage;
 	let termImageSource;
 	let glossaryArray = [];
+	const imageDiv = [];
 
 	if (context.glossaryTermImg !== undefined) {
 		termImage = context.glossaryTermImg;
+		imageDiv.push(
+			<div id={'glossary-term-image-wrapper'}>
+				<img id={'glossary-term-image'} src={termImage} alt={`${context.currentGlossaryTerm}`}/>
+			</div>
+		);
 		handleTermImage();
-	} else {
-		termImage = placeholderImage;
-		handleMissingTermImage();
 	}
 
 	if (context.glossaryTermImgSource !== undefined) {
@@ -72,9 +74,7 @@ export default function GlossaryList() {
 			<div id={'glossary-term-name'}>{context.currentGlossaryTerm}</div>
 			<div id={'glossary-term-def'}>
 				{context.glossaryTermDef}
-				<div id={'glossary-term-image-wrapper'}>
-					<img id={'glossary-term-image'} src={termImage} alt={`${context.currentGlossaryTerm}`}/>
-				</div>
+				{imageDiv}
 				<div id={'glossary-term-image-source-wrapper'}>
 					<a id={'glossary-term-image-source'}
 					   href={termImageSource}

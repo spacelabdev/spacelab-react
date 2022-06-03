@@ -54,17 +54,19 @@ export default function DiscoveryRowDataFilterNumberAndDate(props) {
 	return (
 		<>
 			{/* todo: [Sven Gerlach] styling */}
-			<Form.Control
-				as="select"
-				name={'operator'}
-				value={whereFilter[dataName]['operator']}
-				onChange={e => handleFormValueChange(e)}
-			>
-				<option value={"<"}>&lt;</option>
-				<option value={"="}>=</option>
-				<option value={">"}>&gt;</option>
-			</Form.Control>
-			{valueFilterJSX()}
+			<div className={"form-control-container"}>
+				<Form.Control
+					as="select"
+					name={'operator'}
+					value={whereFilter[dataName]['operator']}
+					onChange={e => handleFormValueChange(e)}
+				>
+					<option value={"<"}>&lt;</option>
+					<option value={"="}>=</option>
+					<option value={">"}>&gt;</option>
+				</Form.Control>
+				{valueFilterJSX()}
+			</div>
 		</>
 	);
 }

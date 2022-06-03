@@ -1,6 +1,7 @@
 import React from "react";
 import DiscoveryRowDataFilter from "./rowFilters/discoveryRowDataFilter";
 import {OverlayTrigger, Tooltip} from "react-bootstrap";
+import "./discoveryColumnFilterListItem.scss"
 
 /**
  * Render check box, column label, and column label tooltip
