@@ -60,7 +60,7 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 	 * will be the case after the first render.
 	 */
 	useEffect(() => {
-		if (exoPlanetData[0]) {
+		if (exoPlanetData && exoPlanetData[0]) {
 			// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
 			if (!columnHeaders) {
 				setColumnHeaders(Object.keys(exoPlanetData[0]))
@@ -95,7 +95,7 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 	 * column, 2) user chooses / changes sort-order, and 3) when the exoPlanetData set is updated.
 	 */
 	useEffect(() => {
-		if (exoPlanetData[0]) {
+		if (exoPlanetData && exoPlanetData[0]) {
 			// save current unsorted state
 			if (!unsortedExoPlanetData) {
 				setUnsortedExoPlanetData([...exoPlanetData])
