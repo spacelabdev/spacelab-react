@@ -4,6 +4,7 @@ import Logo from "../../assets/spacelab.svg";
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
 import './navigation.scss'
+import ScrollToTop from "../scrollToTop/scrollToTop";
 
 /**
  * Renders Navigation Bar
@@ -20,6 +21,7 @@ export default function Navigation() {
 			</div>
 			<nav id={context.navToggle}>
 				<div className="nav-wrapper">
+					<ScrollToTop/>
 					<div className="logo-container">
 						<Link className={'logo-nav'} to={'/'} style={{textDecoration: 'none'}}>
 							<img src={Logo} alt="logo" />

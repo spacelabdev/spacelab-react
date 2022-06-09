@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import ScrollToTop from "../scrollToTop/scrollToTop";
 import "./navButton.scss";
 
 /**
@@ -17,6 +18,7 @@ export default function InternalNavButton({pathName, buttonText}) {
 			to={pathName}
 			style={{textDecoration: "none"}}
 		>
+			<ScrollToTop/>
 			{buttonText}
 		</Link>
 	);
