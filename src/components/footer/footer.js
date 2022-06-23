@@ -104,12 +104,12 @@ export default function Footer() {
 						<a href="https://www.linkedin.com/company/spacelab-space/">
 							<AiOutlineLinkedin />
 						</a>
-						{/* <a href="https://www.instagram.com/{Spacelab}"> */}
+						<a href="https://www.instagram.com/spacelab_space">
 						<AiOutlineInstagram />
-						{/* </a> */}
-						{/* <a href="https://twitter.com/{SpaceLab}"> */}
+						</a>
+						<a href="https://twitter.com/SpaceLab_social">
 						<AiOutlineTwitter />
-						{/* </a> */}
+						</a>
 					</IconContext.Provider>
 					<h5>@2021 by SpaceLab</h5>
 				</center>
