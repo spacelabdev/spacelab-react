@@ -31,15 +31,20 @@ export default function Navigation() {
 						<Link className={'nav-link'} to={'/about'} style={{textDecoration: 'none'}}>
 							About
 						</Link>
-						<Link className={'nav-link'} to={'/projects'} style={{textDecoration: 'none'}}>
-							Projects
-						</Link>
-						<Link className={'nav-link'} to={'/discovery'} style={{textDecoration: 'none'}}>
-							Discovery
-						</Link>
-						<Link className={'nav-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
-							Glossary
-						</Link>
+						<div className={'nav-dropdown'}>
+							<p className={'dropdown-nav-name'}>Resources</p>
+							<div className={'dropdown-content'}>
+								<Link className={'nav-link'} to={'/projects'} style={{textDecoration: 'none'}}>
+									Projects
+								</Link>
+								<Link className={'nav-link'} to={'/discovery'} style={{textDecoration: 'none'}}>
+									Discovery
+								</Link>
+								<Link className={'nav-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
+									Glossary
+								</Link>
+							</div>
+						</div>
 						<Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
 							Blog
 						</Link>
