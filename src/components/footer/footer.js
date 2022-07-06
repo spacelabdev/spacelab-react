@@ -3,6 +3,7 @@ import "./footer.scss";
 import {Link} from "react-router-dom";
 import {IconContext} from "react-icons";
 import {AiOutlineLinkedin, AiOutlineInstagram, AiOutlineTwitter} from "react-icons/ai";
+import AutoScroll from "../autoScroll/autoScroll";
 
 /**
  * @returns {JSX.Element}
@@ -47,6 +48,7 @@ export default function Footer() {
 					</form>
 				</div>
 				<div className="right-container">
+					<AutoScroll/>
 					<ul>
 						<li>
 							<Link to={"/about"} style={link_style}>
@@ -69,7 +71,7 @@ export default function Footer() {
 								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 								target="_blank"
 								rel="noreferrer"
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								Donate
 							</a>
@@ -96,20 +98,31 @@ export default function Footer() {
 			</div>
 			<div className="socialmedia-container">
 				<center>
-					<hr />
-					{/* TODO: fill in the usernames for the social media links below */}
+					<hr/>
 					<IconContext.Provider
-						value={{ color: "D9D9D9", size: "2rem" }}
+						value={{color: "D9D9D9", size: "2rem"}}
 					>
-						<a href="https://www.linkedin.com/company/spacelab-space/">
-							<AiOutlineLinkedin />
+						<a
+							href="https://www.linkedin.com/company/spacelab-space/"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<AiOutlineLinkedin/>
 						</a>
-						{/* <a href="https://www.instagram.com/{Spacelab}"> */}
-						<AiOutlineInstagram />
-						{/* </a> */}
-						{/* <a href="https://twitter.com/{SpaceLab}"> */}
-						<AiOutlineTwitter />
-						{/* </a> */}
+						<a
+							href="https://www.instagram.com/spacelab_space"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<AiOutlineInstagram/>
+						</a>
+						<a
+							href="https://twitter.com/SpaceLab_social"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<AiOutlineTwitter/>
+						</a>
 					</IconContext.Provider>
 					<h5>@2021 by SpaceLab</h5>
 				</center>
