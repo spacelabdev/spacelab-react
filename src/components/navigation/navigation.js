@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import Logo from "../../assets/spacelab.svg";
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
-import ScrollToTop from "../scrollToTop/scrollToTop";
+import AutoScroll from "../autoScroll/autoScroll";
 import './navigation.scss'
 
 /**
@@ -21,10 +21,10 @@ export default function Navigation() {
 			</div>
 			<nav id={context.navToggle}>
 				<div className="nav-wrapper">
-					<ScrollToTop/>
+					<AutoScroll/>
 					<div className="logo-container">
 						<Link className={'logo-nav'} to={'/'} style={{textDecoration: 'none'}}>
-							<img src={Logo} alt="logo" />
+							<img src={Logo} alt="logo"/>
 						</Link>
 					</div>
 					<div className="nav-links">
@@ -46,7 +46,13 @@ export default function Navigation() {
 						{/* <Link className={'nav-link'} to={'/donate'} style={{textDecoration: 'none'}}>
 							Donate
 						</Link> */}
-						<a className='nav-link' href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C" target="_blank" rel="noreferrer">Donate</a>
+						<a className='nav-link'
+						   href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
+						   target="_blank"
+						   rel="noreferrer"
+						>
+							Donate
+						</a>
 						<Link className={'nav-link'} to={'/contact'} style={{textDecoration: 'none'}}>
 							Contact
 						</Link>

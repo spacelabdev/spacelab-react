@@ -3,7 +3,7 @@ import "./footer.scss";
 import {Link} from "react-router-dom";
 import {IconContext} from "react-icons";
 import {AiOutlineLinkedin, AiOutlineInstagram, AiOutlineTwitter} from "react-icons/ai";
-import ScrollToTop from "../scrollToTop/scrollToTop";
+import AutoScroll from "../autoScroll/autoScroll";
 
 /**
  * @returns {JSX.Element}
@@ -48,7 +48,7 @@ export default function Footer() {
 					</form>
 				</div>
 				<div className="right-container">
-					<ScrollToTop/>
+					<AutoScroll/>
 					<ul>
 						<li>
 							<Link to={"/about"} style={link_style}>
@@ -71,7 +71,7 @@ export default function Footer() {
 								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 								target="_blank"
 								rel="noreferrer"
-								style={{ textDecoration: "none" }}
+								style={{textDecoration: "none"}}
 							>
 								Donate
 							</a>
@@ -98,19 +98,19 @@ export default function Footer() {
 			</div>
 			<div className="socialmedia-container">
 				<center>
-					<hr />
+					<hr/>
 					{/* TODO: fill in the usernames for the social media links below */}
 					<IconContext.Provider
-						value={{ color: "D9D9D9", size: "2rem" }}
+						value={{color: "D9D9D9", size: "2rem"}}
 					>
 						<a href="https://www.linkedin.com/company/spacelab-space/">
-							<AiOutlineLinkedin />
+							<AiOutlineLinkedin/>
 						</a>
 						{/* <a href="https://www.instagram.com/{Spacelab}"> */}
-						<AiOutlineInstagram />
+						<AiOutlineInstagram/>
 						{/* </a> */}
 						{/* <a href="https://twitter.com/{SpaceLab}"> */}
-						<AiOutlineTwitter />
+						<AiOutlineTwitter/>
 						{/* </a> */}
 					</IconContext.Provider>
 					<h5>@2021 by SpaceLab</h5>
