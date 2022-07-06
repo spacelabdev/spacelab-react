@@ -3,6 +3,7 @@ import "./footer.scss";
 import {Link} from "react-router-dom";
 import {IconContext} from "react-icons";
 import {AiOutlineLinkedin, AiOutlineInstagram, AiOutlineTwitter} from "react-icons/ai";
+import ScrollToTop from "../scrollToTop/scrollToTop";
 
 /**
  * @returns {JSX.Element}
@@ -47,6 +48,7 @@ export default function Footer() {
 					</form>
 				</div>
 				<div className="right-container">
+					<ScrollToTop/>
 					<ul>
 						<li>
 							<Link to={"/about"} style={link_style}>

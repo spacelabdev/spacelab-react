@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import Logo from "../../assets/spacelab.svg";
 import {UniversalContext} from "../../App";
 import HamburgerMenu from "../hamburgerMenu/hamburgerMenu";
-import './navigation.scss'
 import ScrollToTop from "../scrollToTop/scrollToTop";
+import './navigation.scss'
 
 /**
  * Renders Navigation Bar
