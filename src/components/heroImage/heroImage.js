@@ -16,7 +16,7 @@ export default function HeroImage({heroTitle}) {
 	context.setPageTitle(heroTitle);
 
 	// Determine if on home page for purposes of displaying Spacelab image
-	if (pageTitle === "" || pageTitle === "home") {
+	if (pageTitle === "" || pageTitle === "HOME") {
 		pageTitle = `SPACE LAB`;
 	}
 

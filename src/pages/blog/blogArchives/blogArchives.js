@@ -42,7 +42,7 @@ export default function BlogArchives() {
 
 	return (
 		<>
-			<HeroImage/>
+			<HeroImage heroTitle={'BLOG ARCHIVES'}/>
 			<div id={"blog-archive-container"}>
 				<div id={"blog-archive-header"}>Archived Blogs</div>
 				<div id={"blog-archives"}>{blogArray}</div>

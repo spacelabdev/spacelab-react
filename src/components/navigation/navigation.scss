@@ -1,5 +1,32 @@
 .nav-links {
     display: none;
+
+    .nav-dropdown {
+        position: relative;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        @media (min-width: 1024px) {
+          margin-right: 1rem;
+        }
+
+        .dropdown-nav-name {
+            font-size: 1.25rem;
+            color: #FFFFFF;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            background-color: #000000;
+            margin-left: -25px;
+            padding: 25px 0 15px 20px;
+        }
+    }
+
+    .nav-dropdown:hover .dropdown-content {
+        display: block;
+    }
 }
 
 .logo-container {
@@ -92,7 +119,7 @@
         color: #7000ff;
     }
 
-    .nav-links a:not(:last-of-type) {
-        margin-right: 2rem;
+    .nav-links a {
+        margin-right: 1rem;
     }
 }
