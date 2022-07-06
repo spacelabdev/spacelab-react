@@ -27,7 +27,7 @@ const AutoScroll = ({scroll, top, left, history}) => {
 		return () => {
 			unlisten();
 		};
-	}, [history]);
+	}, [scroll, top, left, history]);
 
 	return null;
 };
