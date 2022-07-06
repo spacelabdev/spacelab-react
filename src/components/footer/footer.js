@@ -99,19 +99,30 @@ export default function Footer() {
 			<div className="socialmedia-container">
 				<center>
 					<hr/>
-					{/* TODO: fill in the usernames for the social media links below */}
 					<IconContext.Provider
 						value={{color: "D9D9D9", size: "2rem"}}
 					>
-						<a href="https://www.linkedin.com/company/spacelab-space/">
+						<a
+							href="https://www.linkedin.com/company/spacelab-space/"
+							target="_blank"
+							rel="noreferrer"
+						>
 							<AiOutlineLinkedin/>
 						</a>
-						{/* <a href="https://www.instagram.com/{Spacelab}"> */}
-						<AiOutlineInstagram/>
-						{/* </a> */}
-						{/* <a href="https://twitter.com/{SpaceLab}"> */}
-						<AiOutlineTwitter/>
-						{/* </a> */}
+						<a
+							href="https://www.instagram.com/spacelab_space"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<AiOutlineInstagram/>
+						</a>
+						<a
+							href="https://twitter.com/SpaceLab_social"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<AiOutlineTwitter/>
+						</a>
 					</IconContext.Provider>
 					<h5>@2021 by SpaceLab</h5>
 				</center>
