@@ -4,10 +4,10 @@ import {homeSliderImages} from "./homepageHelper";
 import "./home.scss";
 
 /**
+ * Renders Introduction section
  * @returns {JSX.Element}
  * @constructor
  */
-
 export default function IntroductionSection() {
     return (
         <section className="introduction-section">
@@ -31,4 +31,4 @@ export default function IntroductionSection() {
             </div>
         </section>
     );
-}
+};
