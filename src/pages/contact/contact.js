@@ -11,9 +11,9 @@ import Footer from "../../components/footer/footer";
 export default function Contact() {
 	return (
 		<>
-			<HeroImage heroTitle="CONTACT" />
-			<ContactForm />
-			<Footer />
+			<HeroImage heroTitle="CONTACT"/>
+			<ContactForm/>
+			<Footer/>
 		</>
 	);
-}
+};
