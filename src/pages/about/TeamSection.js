@@ -29,13 +29,13 @@ export default function Team() {
 	const {title: writersTitle, members: writersMembers} = writers;
 	const {title: december2021Title, members: december2021Members} = december2021Cohort;
 	const {title: additionalContributorTitle, members: additionalContributorMembers} = additionalContributors;
-	const [firstLoad, setFirstLoad] = useState(true);
+	const [loadOpen, setLoadOpen] = useState(true);
 
 	return (
 		<section id="about-team-container">
 			<h1 id="main-header">We're Space Lab</h1>
 			<h4> Meet the team!</h4>
-			<Accordion title={boardTitle} members={boardMembers} firstLoad={firstLoad} setFirstLoad={setFirstLoad}/>
+			<Accordion title={boardTitle} members={boardMembers} loadOpen={loadOpen} setLoadOpen={setLoadOpen}/>
 			<Accordion title={teamLeadTitle} members={teamLeadMembers}/>
 			<Accordion title={frontEndTitle} members={frontEndMembers}/>
 			<Accordion title={backEndTitle} members={backEndMembers}/>

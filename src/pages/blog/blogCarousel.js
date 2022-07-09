@@ -58,4 +58,4 @@ export default function BlogCarousel() {
 			<Carousel>{blogArray}</Carousel>
 		</>
 	);
-}
+};

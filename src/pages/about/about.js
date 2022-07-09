@@ -14,11 +14,11 @@ import Footer from "../../components/footer/footer";
 export default function About() {
 	return (
 		<>
-			<HeroImage heroTitle="ABOUT" />
-			<Team />
-			<MissionStatement />
-			<AboutHistorySection />
-			<Footer />
+			<HeroImage heroTitle="ABOUT"/>
+			<Team/>
+			<MissionStatement/>
+			<AboutHistorySection/>
+			<Footer/>
 		</>
 	);
-}
+};

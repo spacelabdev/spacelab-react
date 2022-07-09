@@ -139,7 +139,7 @@ export default function Discovery() {
 
 	return (
 		<>
-			<HeroImage heroTitle="DISCOVERY" />
+			<HeroImage heroTitle="DISCOVERY"/>
 			<div id={"discovery-title"}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 				<DataTable
@@ -165,8 +165,8 @@ export default function Discovery() {
 							<DropdownButton
 								buttonLabel={"Download"}
 								dropdownItemClick={dropdownItemClick}
-								item1={{ href: "#/action-1", label: "csv" }}
-								item2={{ href: "#/action-2", label: "json" }}
+								item1={{href: "#/action-1", label: "csv"}}
+								item2={{href: "#/action-2", label: "json"}}
 							/>
 						</div>
 					</div>
@@ -270,7 +270,7 @@ export default function Discovery() {
 					</CollapsibleSection>
 				</div>
 			</div>
-			<Footer />
+			<Footer/>
 		</>
 	);
-}
+};
