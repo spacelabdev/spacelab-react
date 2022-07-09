@@ -13,7 +13,7 @@ export default function IntroductionSection() {
         <section className="introduction-section">
             <h2>Introduction</h2>
             <div className="content-container">
-                <ImageSlider images={homeSliderImages}/>
+                <ImageSlider sliderContent={homeSliderImages}/>
                 <div className="about">
                     <h3>What is the Space Lab?</h3>
                     <p>

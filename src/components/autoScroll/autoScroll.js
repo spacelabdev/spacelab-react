@@ -6,11 +6,12 @@ import PropTypes from "prop-types";
  * Scrolls page to top, used in links and buttons. Default scroll value is instant.
  * If the desired result is that the user will see the scroll action, then smooth should be passed as the first parameter.
  * Different values can also be passed as the top and left parameters to change where the page loads or scrolls to,
- * but this is not recommended.
- * @param scroll
- * @param top
- * @param left
- * @param history
+ * but this is not recommended. Nothing should ever be passed for the history param.
+ * Three parameters is the most that should ever be passed to this function.
+ * @param scroll {string}
+ * @param top {int}
+ * @param left {int}
+ * @param history DO NOT PASS ANYTHING FOR THIS PARAM.
  * @returns {null}
  * @constructor
  */
