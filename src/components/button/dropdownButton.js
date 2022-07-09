@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./dropdownButton.scss"
 import rightTriangleDown from "../../assets/componentAssets/right-triangle-down.png"
-
+import PropTypes from "prop-types";
 
 /**
  * Returns a dropdown button component
@@ -9,7 +9,7 @@ import rightTriangleDown from "../../assets/componentAssets/right-triangle-down.
  * @return {JSX.Element}
  * @constructor
  */
-export default function DropdownButton({ buttonLabel, dropdownItemClick, ...dropdownItems }) {
+const DropdownButton = ({buttonLabel, dropdownItemClick, ...dropdownItems}) => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const [buttonWidth, setButtonWidth] = useState()
     const dropdownMenuRef = useRef()
@@ -56,7 +56,7 @@ export default function DropdownButton({ buttonLabel, dropdownItemClick, ...drop
                 onBlur={() => setIsDropdownOpen(false)}
             >
                 {buttonLabel}
-                <img src={rightTriangleDown} alt={"right triangle pointing down"} />
+                <img src={rightTriangleDown} alt={"right triangle pointing down"}/>
             </button>
             {isDropdownOpen && (
                 <div className={"dropdown-items-container"} ref={dropdownMenuRef}>
@@ -76,4 +76,27 @@ export default function DropdownButton({ buttonLabel, dropdownItemClick, ...drop
             )}
         </div>
     )
+};
+
+DropdownButton.propTypes = {
+    /**
+     * The text to show on the dropdown button
+     */
+    buttonLabel: PropTypes.string,
+    /**
+     * The function to be called when dropdown option is clicked
+     */
+    dropdownItemClick: PropTypes.func,
+    /**
+     * The object containing the data used to populate the dropdown
+     */
+    dropdownItems: PropTypes.object,
 }
+
+DropdownButton.defaultProps = {
+    buttonLabel: null,
+    dropdownItemClick: null,
+    dropdownItems: {},
+}
+
+export default DropdownButton;

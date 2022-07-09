@@ -1,14 +1,16 @@
 import React from "react";
 import "./memberCard.scss";
+import PropTypes from "prop-types";
 
 /**
  * Renders a member card that displays team member's image, name and title
- * @param props Array of Objects of team members
  * @returns {JSX.Element}
  * @constructor
+ * @param memberObject {object}
  */
-export default function MemberCard(props) {
-	const {member} = props;
+const MemberCard = (memberObject) => {
+	const member = memberObject.member;
+
 	return (
 		<div className="member-card">
 			<img src={member.image} alt={`${member.fullName}.png`}/>
@@ -18,4 +20,17 @@ export default function MemberCard(props) {
 			</div>
 		</div>
 	);
+};
+
+MemberCard.propTypes = {
+	/**
+	 * Object containing member details to be rendered
+	 */
+	memberObject: PropTypes.object,
+};
+
+MemberCard.defaultProps = {
+	memberObject: {},
 }
+
+export default MemberCard;

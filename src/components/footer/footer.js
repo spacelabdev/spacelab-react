@@ -6,6 +6,7 @@ import {AiOutlineLinkedin, AiOutlineInstagram, AiOutlineTwitter} from "react-ico
 import AutoScroll from "../autoScroll/autoScroll";
 
 /**
+ * Renders the footer
  * @returns {JSX.Element}
  * @constructor
  */

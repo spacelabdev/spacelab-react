@@ -13,10 +13,10 @@ import "./projects.scss";
 export default function Projects() {
 	return (
 		<>
-			<HeroImage heroTitle="PROJECTS" />
-			<ProjectsIntro />
-			<UnderConstruction />
-			<Footer />
+			<HeroImage heroTitle="PROJECTS"/>
+			<ProjectsIntro/>
+			<UnderConstruction/>
+			<Footer/>
 		</>
 	);
-}
+};

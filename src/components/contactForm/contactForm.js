@@ -5,38 +5,21 @@ import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png";
 import "./contactForm.scss";
 
 /**
- * Creates Contact form
+ * Renders Contact form. If state.succeeded is true, renders a thanks for your submission message instead.
  * @returns {JSX.Element} Contact form
  * @constructor
  */
 export default function ContactForm() {
 	const [state, handleSubmit] = useForm("mrgrrlkv");
-	if (state.succeeded) {
-		return (
-			<div className={"submit-form-container"}>
-				<h2>CONTACT US</h2>
-				<img className={"party_popper-image"} src={PartyPopper} alt={"Hooray!"}/>
-				<p>
-					Thank you! Your submission has been received! We'll be in
-					touch with you shortly.
-				</p>
-				<div className={"contact-button-container"}>
-					<button className="submit-button-back_home">
-						<Link to="/">Home Page</Link>
-					</button>
-				</div>
-			</div>
-		);
-	}
 
-	return (
+	return (!state.succeeded ?
 		<section id={"contact-form-container"}>
 			<div className="contact-form-wrapper">
 				<div className="contact-form-title">
 					<p id="title-text">Contact us</p>
 				</div>
 				<div id={"contact-form-field-container"}>
-					<form onSubmit={handleSubmit}>
+					<form method={"POST"} onSubmit={handleSubmit}>
 						<div className="first-input-row">
 							<div className="contact-form-field">
 								<label className="contact-form-label">First Name*</label>
@@ -93,22 +76,35 @@ export default function ContactForm() {
 						<div className="contact-form-field">
 							<label className="contact-form-label">Message*</label>
 							<div>
-								<textarea
-									className="message-input"
-									id="message"
-									name="message"
-									type="message"
-									required
-								/>
+							<textarea
+								className="message-input"
+								id="message"
+								name="message"
+								type="message"
+								required
+							/>
 								<ValidationError prefix="Message" field="message" errors={state.errors}/>
 							</div>
 						</div>
 						<div className={"contact-button-container"}>
-							<button className="submit-button" type="submit" disabled={state.submitting}>Send</button>
+							<button className="submit-button" type="submit" disabled={state.submitting}>Send
+							</button>
 						</div>
 					</form>
 				</div>
 			</div>
-		</section>
+		</section> :
+		<div className={"submit-form-container"}>
+			<h2>Thank You!</h2>
+			<img className={"party_popper-image"} src={PartyPopper} alt={"Hooray!"}/>
+			<p>
+				Your submission has been received! We'll be in touch with you shortly.
+			</p>
+			<div className={"contact-button-container"}>
+				<button className="submit-button-back_home">
+					<Link to="/">Home Page</Link>
+				</button>
+			</div>
+		</div>
 	);
 }

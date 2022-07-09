@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 import "./imageSlider.scss";
+import PropTypes from "prop-types";
 
 /**
- * Creates image slider based on a dict of images with each entry of the form:
+ * Creates image slider based on an array of objects, with each entry of the form:
  * {id: (int), url: (string), alt: (string),}
- * @param props Dictionary of images
  * @returns {JSX.Element}
  * @constructor
+ * @param sliderContent {array}
  */
-export default function ImageSlider(props) {
-    const images = props.images;
+const ImageSlider = (sliderContent) => {
+    const content = sliderContent.sliderContent;
     const [currentImageID, setCurrentImageID] = useState(1);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            images.length > currentImageID
+            content.length > currentImageID
                 ? setCurrentImageID((prev) => prev + 1)
                 : setCurrentImageID(1);
         }, 5000);
@@ -27,7 +28,7 @@ export default function ImageSlider(props) {
 
     return (
         <div className="images">
-            {images.map((image) => (
+            {content.map((image) => (
                 <img
                     className={currentImageID === image.id ? "show-image" : ""}
                     src={image.url}
@@ -37,9 +38,9 @@ export default function ImageSlider(props) {
             ))}
 
             <div className="slider-dots">
-                {images.map((button) => (
+                {content.map((button) => (
                     <button
-                        style={currentImageID === button.id ? { background: "white" } : {}}
+                        style={currentImageID === button.id ? {background: "white"} : {}}
                         key={button.id}
                         onClick={() => sliderHandler(button.id)}
                     />
@@ -47,4 +48,18 @@ export default function ImageSlider(props) {
             </div>
         </div>
     );
+};
+
+ImageSlider.propTypes = {
+    /**
+     * Object with each entry of the form: {id: (int), url: (string), alt: (string),},
+     * where the url is the link to the image.
+     */
+    sliderContent: PropTypes.array,
 }
+
+ImageSlider.defaultProps = {
+    sliderContent: [],
+}
+
+export default ImageSlider;
