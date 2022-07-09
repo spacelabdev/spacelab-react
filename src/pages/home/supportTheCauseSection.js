@@ -26,8 +26,8 @@ export default function SupportTheCauseSection() {
 			</p>
 			<div id={"donate-button-container"}>
 				<ExternalNavButton
+					url="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 					buttonText="Donate"
-					href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 				/>
 			</div>
 		</div>
