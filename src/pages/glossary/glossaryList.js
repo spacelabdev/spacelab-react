@@ -4,6 +4,11 @@ import {UniversalContext} from "../../App";
 import {returnFilteredTerms, handleTermImage, highlightCurrentFilter} from "./glossaryhelper";
 import './glossary.scss';
 
+/**
+ * Renders Glossary terms
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function GlossaryList() {
 	const context = useContext(UniversalContext);
 	let termImage;
@@ -25,11 +30,7 @@ export default function GlossaryList() {
 		termImageSource = context.glossaryTermImgSource;
 	}
 
-	if (context.glossaryTerms !== undefined) {
-		glossaryArray = context.glossaryTerms;
-	}
-
-	if (context.glossaryTermImg !== undefined) {
+	if (context.glossaryTerms !== undefined && context.glossaryTermImg !== undefined) {
 		glossaryArray = context.glossaryTerms;
 	}
 
@@ -42,11 +43,14 @@ export default function GlossaryList() {
 	};
 
 	// map over each element in the glossaryTermsArray and pass them to the GlossaryListItem component as props
-	const glossaryTermArray = glossaryArray.map((e, index) => {
-		return (
-			<GlossaryListItem element={e} key={index}/>
-		);
-	});
+	let glossaryTermArray;
+	if (glossaryArray !== undefined) {
+		glossaryTermArray = glossaryArray.map((e, index) => {
+			return (
+				<GlossaryListItem element={e} key={index}/>
+			);
+		});
+	}
 
 	return (
 		<div className={'glossary-results-wrapper'}>
