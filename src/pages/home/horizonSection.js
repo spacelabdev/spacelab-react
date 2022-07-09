@@ -23,9 +23,9 @@ export default function HorizonSection() {
 				</div>
 				<div className="horizon-right-container">
 					<div>EXOPLANETARIUM</div>
-					<img src={planet} alt="planet" />
+					<img src={planet} alt="planet"/>
 				</div>
 			</div>
 		</section>
 	);
-}
+};

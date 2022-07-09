@@ -4,6 +4,8 @@ import { slide as Menu } from 'react-burger-menu';
 import './hamburgerMenu.scss';
 
 /**
+ * Renders the hamburger menu for smaller scree sizes.
+ *
  *  More information on react-burger-menu can be found here:
  *  https://github.com/negomi/react-burger-menu
  */

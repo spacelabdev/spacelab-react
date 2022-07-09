@@ -14,10 +14,10 @@ export default function Home() {
     return (
         <>
             <HeroImage heroTitle="HOME"/>
-            <Introduction />
+            <Introduction/>
             <HorizonSection/>
             <SupportTheCauseSection/>
-            <Footer />
+            <Footer/>
         </>
     );
-  };
+};

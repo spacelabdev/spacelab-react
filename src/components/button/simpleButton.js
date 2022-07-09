@@ -1,26 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "./simpleButton.scss"
 import { useHistory } from "react-router";
-
+import PropTypes from "prop-types";
 
 /**
  * Returns a button component which either accepts a callback function (buttonEffectAsync) or a url string
  * (urlRedirect). Upon pressing the button either the callback is invoked or the user is redirected to the provided URL.
  * Provide either urlRedirect or buttonEffectAsync function, but not both.
- * @param props.buttonName {string} button name displayed
- * @param props.urlRedirect {string} click event redirects user to this url
- * @param props.buttonEffectAsync {function} function that is executed if button is clicked and returns a promise
+ * @param buttonName {string} button name displayed
+ * @param urlRedirect {string} click event redirects user to this url
+ * @param buttonEffectAsync {function} function that is executed if button is clicked and returns a promise
  * @return {JSX.Element}
  * @constructor
  */
-export default function SimpleButton(props) {
-    // spread props
-    const {
-        buttonName,
-        urlRedirect=null,
-        buttonEffectAsync=null,
-    } = props
-
+const SimpleButton = ({buttonName, urlRedirect, buttonEffectAsync}) => {
     // create history object from useHistory hook
     const history = useHistory()
 
@@ -73,4 +66,27 @@ export default function SimpleButton(props) {
             }
         </button>
     )
+};
+
+SimpleButton.propTypes = {
+    /**
+     * the text to show on the button
+     */
+    buttonName: PropTypes.string,
+    /**
+     * URL to redirect the user to if applicable
+     */
+    urlRedirect: PropTypes.string,
+    /**
+     * Async function to call on click if applicable
+     */
+    buttonEffectAsync: PropTypes.func,
 }
+
+SimpleButton.defaultProps = {
+    buttonName: null,
+    urlRedirect: null,
+    buttonEffectAsync: null,
+}
+
+export default SimpleButton;

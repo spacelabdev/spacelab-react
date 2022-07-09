@@ -4,16 +4,16 @@ import {homeSliderImages} from "./homepageHelper";
 import "./home.scss";
 
 /**
+ * Renders Introduction section
  * @returns {JSX.Element}
  * @constructor
  */
-
 export default function IntroductionSection() {
     return (
         <section className="introduction-section">
             <h2>Introduction</h2>
             <div className="content-container">
-                <ImageSlider images={homeSliderImages}/>
+                <ImageSlider sliderContent={homeSliderImages}/>
                 <div className="about">
                     <h3>What is the Space Lab?</h3>
                     <p>
@@ -31,4 +31,4 @@ export default function IntroductionSection() {
             </div>
         </section>
     );
-}
+};

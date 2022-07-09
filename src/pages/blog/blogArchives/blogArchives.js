@@ -15,7 +15,7 @@ export default function BlogArchives() {
 	let blogArray = [];
 
 	if (blogs !== undefined) {
-		for (let i = 0; i < blogs.length; i++) {
+		for (let i in blogs) {
 			let content = blogs[i]['content:encoded'];
 			content = content.toString();
 			let imageURL = content.substring(content.indexOf("src=") + 5,
