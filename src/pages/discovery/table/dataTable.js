@@ -1,5 +1,6 @@
 // React imports
 import React, { useContext, useEffect, useState } from "react";
+import LoadingAnimation from "../loadingAnimation/loadingAnimation";
 import { UniversalContext } from "../../../App";
 
 // Component imports
@@ -27,7 +28,7 @@ import "./dataTable.scss"
  * @return {any|JSX.Element}
  * @constructor
  */
-export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNeeded }) {
+export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNeeded, dataLoaded }) {
 	const context = useContext(UniversalContext);
 	const exoPlanetData = context.exoplanetData
 	const setExoPlanetData = context.setExoplanetData
@@ -172,6 +173,7 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 		/* only create table if exoPlanetData exists */
 		exoPlanetData && (
 			<section id={"data-table"} onScroll={handleScrolling}>
+				<LoadingAnimation dataLoaded={dataLoaded}/>
 				{/* only create col headers if exoPlanetData has at least one object inside the returned array */}
 				{columnHeaders && (
 					<TableHeader

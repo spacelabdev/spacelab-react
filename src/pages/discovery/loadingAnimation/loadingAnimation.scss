@@ -1,0 +1,15 @@
+#discovery-loader{
+    position: absolute;
+    margin-top: 15%;
+    align-self: center;
+    z-index: 1;
+    
+}
+
+.discovery-loading{
+    display: visible;
+}
+
+.discovery-not-loading{
+    display: none;
+}
