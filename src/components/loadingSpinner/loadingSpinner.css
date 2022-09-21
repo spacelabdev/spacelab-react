@@ -1,4 +1,4 @@
-#discovery-loader{
+#loading-spinner{
     position: absolute;
     margin-top: 15%;
     align-self: center;
@@ -6,10 +6,10 @@
     
 }
 
-.discovery-loading{
+.show-spinner{
     display: visible;
 }
 
-.discovery-not-loading{
+.hide-spinner{
     display: none;
 }
