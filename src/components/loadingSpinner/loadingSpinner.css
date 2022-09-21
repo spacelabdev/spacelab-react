@@ -3,13 +3,12 @@
     margin-top: 15%;
     align-self: center;
     z-index: 1;
-    
 }
 
 .show-spinner{
-    display: visible;
+    visibility: visible;
 }
 
 .hide-spinner{
-    display: none;
+    visibility: hidden;
 }

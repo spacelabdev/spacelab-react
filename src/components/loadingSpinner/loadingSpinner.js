@@ -15,25 +15,27 @@ import LoadingAnimation from "../../assets/loadingAnimationAssets/loadingAnimati
  * stop showing spinner.
  */
 const LoadingSpinner = ({showLoadingSpinner}) => {
-    return(
+    return (
         <img
             src={LoadingAnimation}
-            id="loading-spinner"
-            className={(showLoadingSpinner) ? "show-spinner" : "hide-spinner" }
+        	id="loading-spinner"
+        	className={(showLoadingSpinner) ? "show-spinner" : "hide-spinner" }
             alt="loading..."
             height="120"
-            weight="120"
+            width="120"
         />
-    )
-}
+    );
+};
 
 LoadingSpinner.propTypes = {
-    // True or false depending on when loader should be visible. Controlled in parent element
+	/**
+	 * True or false depending on when loader should be visible. Controlled in parent element.
+	 */
 	showLoadingSpinner: PropTypes.bool
 };
 
 LoadingSpinner.defaultProps = {
     showLoadingSpinner: true
-}
+};
 
 export default LoadingSpinner;
