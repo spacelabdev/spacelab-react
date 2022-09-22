@@ -9,22 +9,22 @@ import LoadingAnimation from "../../assets/loadingAnimationAssets/loadingAnimati
  * @returns {JSX.Element}
  * @constructor
  * @param showLoadingSpinner {Boolean}
- * 
- * To use, initialize a state variable in the element, equal to true. Pass that variable into this 
+ *
+ * To use, initialize a state variable in the element, equal to true. Pass that variable into this
  * element as showLoadingSpinner. Once data is finished loading, set that state variable to false to
  * stop showing spinner.
  */
 const LoadingSpinner = ({showLoadingSpinner}) => {
-    return (
-        <img
-            src={LoadingAnimation}
-        	id="loading-spinner"
-        	className={(showLoadingSpinner) ? "show-spinner" : "hide-spinner" }
-            alt="loading..."
-            height="120"
-            width="120"
-        />
-    );
+	return (
+		<img
+			src={LoadingAnimation}
+			id="loading-spinner"
+			className={(showLoadingSpinner) ? "show-spinner" : "hide-spinner"}
+			alt="loading..."
+			height="120"
+			width="120"
+		/>
+	);
 };
 
 LoadingSpinner.propTypes = {
@@ -35,7 +35,7 @@ LoadingSpinner.propTypes = {
 };
 
 LoadingSpinner.defaultProps = {
-    showLoadingSpinner: true
+	showLoadingSpinner: true
 };
 
 export default LoadingSpinner;
