@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./loadingSpinner.css";
+import "./loadingSpinner.scss";
 import LoadingAnimation from "../../assets/loadingAnimationAssets/loadingAnimation.svg";
 
 /**

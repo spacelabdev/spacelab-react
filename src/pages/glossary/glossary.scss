@@ -1,103 +1,104 @@
 #glossary-wrapper {
-    background-color: #F2F7FC;
+	background-color: #F2F7FC;
 }
 
 .glossary-results-wrapper {
-    max-width: 1400px;
-    margin: 0 auto auto auto;
-    width: 90%;
-    font-family: Roboto, serif;
-    overflow-wrap: break-word;
-    color: black;
+	max-width: 1400px;
+	margin: 0 auto auto auto;
+	width: 90%;
+	font-family: Roboto, serif;
+	overflow-wrap: break-word;
+	color: black;
 }
 
 #glossary-term-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 #glossary-term-name {
-    padding: 1em;
-    font-size: 1.75em;
-    @media (min-width: 766px) {
-        font-size: 2.5em;
-    }
+	padding: 1em;
+	font-size: 1.75em;
+	@media (min-width: 766px) {
+		font-size: 2.5em;
+	}
 }
 
 .glossary-term {
-    margin: .4em;
-    text-align: center;
-    padding: .5em;
-    font-size: 1em;
-    color: white;
-    background: black;
-    @media (min-width: 766px) {
-        font-size: 1.5em;
-    }
+	margin: .4em;
+	text-align: center;
+	padding: .5em;
+	font-size: 1em;
+	color: white;
+	background: black;
+	@media (min-width: 766px) {
+		font-size: 1.5em;
+	}
 }
 
 .glossary-term:hover {
-    background: #7000FF;
-    cursor: pointer;
+	background: #7000FF;
+	cursor: pointer;
 }
 
 #glossary-term-def {
-    text-align: center;
-    font-size: 1em;
-    padding-bottom: 3em;
-    max-width: 60vw;
-    height: 100%;
-    margin: auto;
-    @media (min-width: 767px) {
-        font-size: 1.5em;
-    }
+	text-align: center;
+	font-size: 1em;
+	padding-bottom: 3em;
+	max-width: 60vw;
+	height: 100%;
+	margin: auto;
+	@media (min-width: 767px) {
+		font-size: 1.5em;
+	}
 
-    #glossary-term-image-wrapper {
-        img {
-            margin: 2em auto;
-        }
-    }
+	#glossary-term-image-wrapper {
+		img {
+			margin: 2em auto;
+		}
+	}
 
-    #glossary-term-image-source-wrapper {
-        text-align: left;
-        font-size: .55em;
-        margin: -3em auto 0;
-        @media (min-width: 767px) {
-            width: 600px;
-        }
-        #glossary-term-image-source {
-            color: black;
-        }
-    }
+	#glossary-term-image-source-wrapper {
+		text-align: left;
+		font-size: .55em;
+		margin: -3em auto 0;
+		@media (min-width: 767px) {
+			width: 600px;
+		}
+
+		#glossary-term-image-source {
+			color: black;
+		}
+	}
 }
 
 #glossary-button-container {
-    display: flex;
-    justify-content: space-evenly;
-    @media (min-width: 767px) and (max-width: 1023px) {
-        padding-left: 2em;
-    }
-    @media (min-width: 1024px) {
-        justify-content: flex-start;
-    }
+	display: flex;
+	justify-content: space-evenly;
+	@media (min-width: 767px) and (max-width: 1023px) {
+		padding-left: 2em;
+	}
+	@media (min-width: 1024px) {
+		justify-content: flex-start;
+	}
 }
 
 #glossary-filter-button-A-J {
-    color: #7000FF;
-    border-bottom: 2px solid #7000FF;
+	color: #7000FF;
+	border-bottom: 2px solid #7000FF;
 }
 
 .glossary-filter-button {
-    color: black;
-    margin: .5em;
-    font-size: 1.75em;
-    border-bottom: 2px solid black;
-    @media (min-width: 766px) {
-        font-size: 2.5em;
-    }
+	color: black;
+	margin: .5em;
+	font-size: 1.75em;
+	border-bottom: 2px solid black;
+	@media (min-width: 766px) {
+		font-size: 2.5em;
+	}
 }
 
 .glossary-filter-button:hover {
-    cursor: pointer;
+	cursor: pointer;
 }
