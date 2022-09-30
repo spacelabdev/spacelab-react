@@ -32,6 +32,29 @@
     opacity: 1;
 }
 
+// Left and Right Buttons
+.btn-slide {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    // position of buttons
+    margin-top: 70px;
+    background: #f1f1f1;
+    border: 1px solid rgba(34, 34, 34, 0.287);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+// Left and right svg's
+.btn-slide img {
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+}
+
 .prev {
     top: 50%;
     left: 20px;
@@ -60,4 +83,25 @@
     padding-left: 2px;
 
     color: #FFFFFF;
+}
+
+.container-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    margin: 0 5px;
+    background: #f1f1f1;
+}
+
+.dot.active {
+    background: rgb(32, 32, 32);
 }
