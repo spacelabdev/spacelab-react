@@ -1,12 +1,13 @@
 import React from "react";
 import "./Menu.scss";
+import SimpleButton from "../../../components/button/simpleButton";
 
 export default function Menu({ setSlideIndex }) {
 	return (
 		<div className="menu">
 			<div className="cohorts">
-				<button>Current Cohort</button>
-				<button>Past Cohort</button>
+                <SimpleButton buttonName='Current Cohort'/>
+                <SimpleButton buttonName='Past Cohorts'/>
 			</div>
 			<div className="rows">
 				<div

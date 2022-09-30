@@ -25,6 +25,7 @@
 .slide img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .active-anim {
@@ -44,6 +45,10 @@
 }
 
 .header {
+    text-align: left !important;
+}
+
+.meet-our-team {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -53,4 +58,6 @@
     text-transform: uppercase;
     padding-top: 2px;
     padding-left: 2px;
+
+    color: #FFFFFF;
 }

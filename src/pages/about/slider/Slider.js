@@ -8,7 +8,11 @@ export default function Slider() {
 
 	return (
 		<div className="container-slider">
-			<div className="header">Meet Our Team</div>
+			<div className="header">
+                <div className="meet-our-team">
+                    Meet Our Team
+                </div>
+            </div>
 			<Menu setSlideIndex={setSlideIndex} />
 			{dataSlider.map((obj, index) => {
 				return (
