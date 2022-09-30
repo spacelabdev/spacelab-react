@@ -1,0 +1,40 @@
+.menu {
+    align-items: center;
+}
+
+.cohorts {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+
+.cohorts>button {
+    border-radius: 5px;
+    padding: 8px 16px;
+    width: 189px;
+}
+
+.rows {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.rows>div {
+    flex: content;
+    text-align: center;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+
+}
+
+.rows>div:hover {
+    text-decoration: underline;
+}
