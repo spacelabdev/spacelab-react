@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./imageSlider.scss";
+import "./carousel.scss";
 import PropTypes from "prop-types";
 import rightArrow from "../../assets/right-arrow.svg";
 import leftArrow from "../../assets/left-arrow.svg";
@@ -13,7 +13,7 @@ import leftArrow from "../../assets/left-arrow.svg";
  * @param transitionDelay
  * @param showDots
  */
-const ImageSlider = ({sliderContent, transitionDelay, showDots, showNavButtons}) => {
+const Carousel = ({sliderContent, transitionDelay, showDots, showNavButtons}) => {
     const content = sliderContent;
     const [currentImageID, setCurrentImageID] = useState(1);
 
@@ -67,7 +67,7 @@ const ImageSlider = ({sliderContent, transitionDelay, showDots, showNavButtons})
     );
 };
 
-ImageSlider.propTypes = {
+Carousel.propTypes = {
     /**
      * Object with each entry of the form: {id: (int), url: (string), alt: (string),},
      * where the url is the link to the image.
@@ -89,11 +89,11 @@ ImageSlider.propTypes = {
     showNavButtons: PropTypes.bool,
 }
 
-ImageSlider.defaultProps = {
+Carousel.defaultProps = {
     sliderContent: [],
     transitionDelay: 5000,
     showDots: true,
     showNavButtons: true,
 }
 
-export default ImageSlider;
+export default Carousel;
