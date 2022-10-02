@@ -8,19 +8,11 @@ export default function Slider() {
 	const [slideIndex, setSlideIndex] = useState(1);
 
     const nextSlide = () => {
-		if (slideIndex !== dataSlider.length) {
-			setSlideIndex(slideIndex + 1);
-		} else if (slideIndex === dataSlider.length) {
-			setSlideIndex(1);
-		}
+	    setSlideIndex(slideIndex !== dataSlider.length ? slideIndex + 1 : 1);
 	};
 
 	const prevSlide = () => {
-		if (slideIndex !== 1) {
-			setSlideIndex(slideIndex - 1);
-		} else if (slideIndex === 1) {
-			setSlideIndex(dataSlider.length);
-		}
+		setSlideIndex(slideIndex !== 1 ? slideIndex - 1 : dataSlider.length);
 	};
 
 	const moveDot = (index) => {
@@ -36,7 +28,7 @@ export default function Slider() {
 			{dataSlider.map((obj, index) => {
 				return (
 					<div
-						// refernce to dataSlider and the different IDs
+						// reference to dataSlider and the different IDs
 						key={obj.id}
 						// map function starting from 0, add 1 to move
 						className={
@@ -67,7 +59,7 @@ export default function Slider() {
 						className={
 							slideIndex === index + 1 ? "dot active" : "dot"
 						}
-					></div>
+					/>
 				))}
 			</div>
 		</div>
