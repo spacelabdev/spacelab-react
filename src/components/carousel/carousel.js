@@ -10,12 +10,19 @@ import leftArrow from "../../assets/left-arrow.svg";
  * @returns {JSX.Element}
  * @constructor
  * @param sliderContent {array}
- * @param transitionDelay
- * @param showDots
+ * @param autoTransition
+ * @param transitionDelay Int value determining the milliseconds between auto transitions
+ * @param showDots Boolean value determining if the nav dots at the bottom of the carousel should be displayed
+ * @param showNavButtons Boolean value determining if the nav arrows to the sides of the carousel should be displayed
  */
-const Carousel = ({sliderContent, transitionDelay, showDots, showNavButtons}) => {
+const Carousel = ({sliderContent, autoTransition, transitionDelay, showDots, showNavButtons}) => {
     const content = sliderContent;
     const [currentImageID, setCurrentImageID] = useState(1);
+
+    // set transition delay to 5 days 19 hours if autoTransition is set to false
+    if (!autoTransition) {
+        transitionDelay = 500000000;
+    }
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -74,6 +81,13 @@ Carousel.propTypes = {
      */
     sliderContent: PropTypes.array,
     /**
+     * Boolean value that determines if the carousel should automatically transition to the next slide.
+     * Default value is true.
+     * If set to false, image will still technically transition after nearly 6 days,
+     * however for all intents and purposes the user will need to navigate to the next slide manually.
+     */
+    autoTransition: PropTypes.bool,
+    /**
      * Integer representing the number of milliseconds of delay between image transitions.
      * Default set to 5000, which is 5 seconds.
      */
@@ -91,6 +105,7 @@ Carousel.propTypes = {
 
 Carousel.defaultProps = {
     sliderContent: [],
+    autoTransition: true,
     transitionDelay: 5000,
     showDots: true,
     showNavButtons: true,
