@@ -13,20 +13,6 @@ export default function MissionStatement() {
             <div className="inner-section-two">
                 <div className="about-mission-segment-container">
                     <div className={"about-mission-image-wrapper"}>
-                        <img className={"about-mission-image"} src={Rocket} alt={"Space Shuttle"}/>
-                    </div>
-                    <div className={"about-mission-content"}>
-                        <h1 className="about-mission-header">Our Mission</h1>
-                        <p>
-                            Spacelab is building the next generation of leaders in outer-space-focused science and
-                            technology, drawing from diverse, underrepresented communities, including women, members of
-                            the LGBTQ+ community, and people of color, and creating paid fellowships, internships, and
-                            scholarship opportunities, as well as debt relief.
-                        </p>
-                    </div>
-                </div>
-                <div className="about-mission-segment-container">
-                    <div className={"about-mission-image-wrapper"}>
                         <img className={"about-mission-image"} src={Planet} alt={"Planet"}/>
                     </div>
                     <div className={"about-mission-content"}>
@@ -36,6 +22,20 @@ export default function MissionStatement() {
                             believe that a diverse group of people approaching a problem will arrive at a more creative
                             and unique solution; a solution that incorporates each individual's perspectives, values,
                             and needs. We aim to operate from a starting point of equity, inclusion and belonging.
+                        </p>
+                    </div>
+                </div>
+                <div className="about-mission-segment-container">
+                    <div className={"about-mission-image-wrapper"}>
+                        <img className={"about-mission-image"} src={Rocket} alt={"Space Shuttle"}/>
+                    </div>
+                    <div className={"about-mission-content"}>
+                        <h1 className="about-mission-header">Our Mission</h1>
+                        <p>
+                            Spacelab is building the next generation of leaders in outer-space-focused science and
+                            technology, drawing from diverse, underrepresented communities, including women, members of
+                            the LGBTQ+ community, and people of color, and creating paid fellowships, internships, and
+                            scholarship opportunities, as well as debt relief.
                         </p>
                     </div>
                 </div>
