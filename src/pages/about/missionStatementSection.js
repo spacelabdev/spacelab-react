@@ -1,7 +1,7 @@
 import React from "react";
-import Rocket from "../../assets/aboutAssets/rocket.svg"
-import Planet from "../../assets/aboutAssets/planet.svg"
-import Planet_Rings from "../../assets/aboutAssets/planet_rings.svg"
+import Rocket from "../../assets/aboutAssets/ridingRocket.png"
+import Planet from "../../assets/aboutAssets/bro.png"
+import Explorer from "../../assets/aboutAssets/Top.png"
 
 /**
  * @returns {JSX.Element}
@@ -41,7 +41,7 @@ export default function MissionStatement() {
                 </div>
                 <div className="about-mission-segment-container">
                     <div className={"about-mission-image-wrapper"}>
-                        <img className={"about-mission-image"} src={Planet_Rings} alt={"Planet"}/>
+                        <img className={"about-mission-image"} src={Explorer} alt={"Planet"}/>
                     </div>
                     <div className={"about-mission-content"}>
                         <h1 className="about-mission-header">Our Vision</h1>
