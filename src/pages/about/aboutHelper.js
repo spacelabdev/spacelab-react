@@ -88,7 +88,12 @@ export const teamLeads = {
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png",
 			fullName: "Brandon Cantello",
-			title: " Project Manager | Software Engineer",
+			title: "Project Manager | Software Engineer",
+			bioQuote: 'With a BS in Physics from UCSB and years of experience as a software engineer, Brandon brings ' +
+				'a unique perspective, leadership, and a passion for space to the front end team.',
+			gitHub: 'https://github.com/bcantello',
+			portfolio: 'https://www.brandoncantello.com/',
+			linkedIn: 'https://www.linkedin.com/in/brandon-cantello/',
 		},
 	],
 };
