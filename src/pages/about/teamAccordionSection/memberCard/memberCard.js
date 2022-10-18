@@ -5,7 +5,8 @@ import {IconContext} from "react-icons";
 import {AiOutlineGithub, AiOutlineGlobal, AiOutlineLinkedin} from "react-icons/ai";
 
 /**
- * Renders a member card that displays team member's image, name and title
+ * Renders a member card that displays team member's image, name and title, as well as a hover card with short
+ * bio/quote, and links to github, portfolio site, and linkedIn if they so choose.
  * @returns {JSX.Element}
  * @constructor
  * @param memberObject {object}
