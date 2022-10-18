@@ -71,14 +71,18 @@
 
 		.member-card-link-container {
 			position: absolute;
+			width: 100%;
 			bottom: 0;
 			margin-bottom: 2rem;
-			margin-left: 1.75rem;
 			a {
 				height: 2rem;
 				width: 2rem;
 				margin: 1rem;
 			}
 		}
+	}
+
+	.hidden {
+		display: none;
 	}
 }

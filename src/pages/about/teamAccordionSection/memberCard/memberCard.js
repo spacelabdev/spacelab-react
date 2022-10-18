@@ -12,6 +12,20 @@ import {AiOutlineGithub, AiOutlineGlobal, AiOutlineLinkedin} from "react-icons/a
  */
 const MemberCard = (memberObject) => {
 	const member = memberObject.member;
+	let hasGitHub = false;
+	let hasPortfolio = false;
+	let hasLinkedIn = false;
+
+	// Show links if present
+	if (member.gitHub) {
+		hasGitHub = true;
+	}
+	if (member.portfolio) {
+		hasPortfolio = true;
+	}
+	if (member.linkedIn) {
+		hasLinkedIn = true;
+	}
 
 	return (
 		<div className="member-card">
@@ -29,6 +43,7 @@ const MemberCard = (memberObject) => {
 						value={{color: "D9D9D9", size: "2rem"}}
 					>
 						<a
+							className={`member-card-github ${hasGitHub ? "" : "hidden"}`}
 							href={member.gitHub}
 							target="_blank"
 							rel="noreferrer"
@@ -36,6 +51,7 @@ const MemberCard = (memberObject) => {
 							<AiOutlineGithub/>
 						</a>
 						<a
+							className={`member-card-github ${hasPortfolio ? "" : "hidden"}`}
 							href={member.portfolio}
 							target="_blank"
 							rel="noreferrer"
@@ -43,6 +59,7 @@ const MemberCard = (memberObject) => {
 							<AiOutlineGlobal/>
 						</a>
 						<a
+							className={`member-card-github ${hasLinkedIn ? "" : "hidden"}`}
 							href={member.linkedIn}
 							target="_blank"
 							rel="noreferrer"
