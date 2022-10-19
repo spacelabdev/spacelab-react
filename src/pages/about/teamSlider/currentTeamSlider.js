@@ -12,7 +12,7 @@ import {
 } from "../aboutHelper";
 import CurrentTeamSliderNav from "./currentTeamSliderNav/currentTeamSliderNav";
 
-export default function CurrentTeamSlider() {
+export default function CurrentTeamSlider({toggle}) {
 	const {title: boardTitle, members: boardMembers} = boardOfDirectors;
 	const {title: teamLeadTitle, members: teamLeadMembers} = teamLeads;
 	const {title: uxTitle, members: uxMembers} = uxDesigners;
@@ -23,9 +23,16 @@ export default function CurrentTeamSlider() {
 	const {title: writersTitle, members: writersMembers} = writers;
 
 	return (
-		<div className={"team-slider-component-container"}>
+		<div className={`team-slider-component-container ${toggle}`}>
 			<CurrentTeamSliderNav />
 			<SliderComponent title={boardTitle} members={boardMembers}/>
+			<SliderComponent title={teamLeadTitle} members={teamLeadMembers}/>
+			<SliderComponent title={uxTitle} members={uxMembers}/>
+			<SliderComponent title={frontEndTitle} members={frontEndMembers}/>
+			<SliderComponent title={backEndTitle} members={backEndMembers}/>
+			<SliderComponent title={dataScienceTitle} members={dataScienceMembers}/>
+			<SliderComponent title={webGLTitle} members={webGLMembers}/>
+			<SliderComponent title={writersTitle} members={writersMembers}/>
 		</div>
 	);
 };

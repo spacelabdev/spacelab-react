@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function CohortTeamSlider() {
+export default function CohortTeamSlider({toggle}) {
 
 	return (
-		<div>
-
+		<div className={toggle}>
+			<p>HELLO!!!</p>
 		</div>
 	);
 };

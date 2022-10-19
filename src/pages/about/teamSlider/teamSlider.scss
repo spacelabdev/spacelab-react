@@ -1,9 +1,17 @@
 #about-team-slider-container {
-	max-width: 1500px;
+	max-width: 1450px;
 	margin: 0 auto;
 
 	.team-slider-header {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.show {
+		display: block;
 	}
 }
