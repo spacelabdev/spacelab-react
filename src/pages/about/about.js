@@ -6,6 +6,7 @@ import MissionStatement from "./missionStatementSection";
 import Team from "./TeamSection";
 import Footer from "../../components/footer/footer";
 import Slider from "./slider/Slider"
+import TeamSlider from "./teamSlider/teamSlider";
 
 /**
  * Renders About Page
@@ -17,6 +18,7 @@ export default function About() {
 		<>
 			<HeroImage heroTitle="ABOUT"/>
 			<MissionStatement/>
+			<TeamSlider />
 			<Slider />
 			<Team/>
 			<AboutHistorySection/>

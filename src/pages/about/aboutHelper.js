@@ -37,7 +37,7 @@ export const aboutHistoryArray = [
  * Object containing details for the Board of Directors
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
-export const boardOFDirectors = {
+export const boardOfDirectors = {
 	title: "board of directors",
 	members: [
 		{

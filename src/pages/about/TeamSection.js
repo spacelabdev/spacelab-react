@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Accordion from "./teamAccordionSection/accordion/accordion";
 import {
-	boardOFDirectors,
+	boardOfDirectors,
 	teamLeads,
 	uxDesigners,
 	frontEnd,
@@ -19,7 +19,7 @@ import {
  * @constructor
  */
 export default function Team() {
-	const {title: boardTitle, members: boardMembers} = boardOFDirectors;
+	const {title: boardTitle, members: boardMembers} = boardOfDirectors;
 	const {title: teamLeadTitle, members: teamLeadMembers} = teamLeads;
 	const {title: uxTitle, members: uxMembers} = uxDesigners;
 	const {title: frontEndTitle, members: frontEndMembers} = frontEnd;
