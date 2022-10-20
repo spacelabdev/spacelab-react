@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import CurrentTeamSlider from "./currentTeamSlider";
+import CurrentTeamSlider from "./currentTeamSlider/currentTeamSlider";
 import CohortTeamSlider from "./cohortSlider";
 import "./teamSlider.scss";
 

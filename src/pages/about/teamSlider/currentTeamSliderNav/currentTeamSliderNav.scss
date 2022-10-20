@@ -1,0 +1,22 @@
+.menu {
+	max-width: 1300px;
+	margin: 2rem auto;
+
+	.rows {
+		display: flex;
+		padding-top: 5px;
+		padding-bottom: 10px;
+
+		div {
+			flex: content;
+			text-align: center;
+			font-family: 'Poppins', sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			letter-spacing: -0.015em;
+			text-transform: uppercase;
+			color: #FFFFFF;
+		}
+	}
+}

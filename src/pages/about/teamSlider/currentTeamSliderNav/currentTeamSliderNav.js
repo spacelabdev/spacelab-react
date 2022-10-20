@@ -1,43 +1,32 @@
 import React from "react";
 import "./currentTeamSliderNav.scss";
 
-export default function CurrentTeamSliderNav({ setSlideIndex }) {
+export default function CurrentTeamSliderNav({ setState }) {
 	return (
 		<div className="menu">
 			<div className="rows">
-				<div
-					onClick={() => {
-						setSlideIndex(1);
-					}}
-				>
-					Developers
+				<div onClick={() => setState('frontend')}>
+					Frontend Developers
 				</div>
-				<div
-					onClick={() => {
-						setSlideIndex(2);
-					}}
-				>
+				<div onClick={() => setState('backend')}>
+					Backend Developers
+				</div>
+				<div onClick={() => setState('webgl')}>
+					WebGL Developers
+				</div>
+				<div onClick={() => setState('designers')}>
 					Designers
 				</div>
-				<div
-					onClick={() => {
-						setSlideIndex(3);
-					}}
-				>
+				<div onClick={() => setState('datascience')}>
 					Data Scientist
 				</div>
-				<div
-					onClick={() => {
-						setSlideIndex(4);
-					}}
-				>
+				<div onClick={() => setState('writers')}>
+					Writers
+				</div>
+				<div onClick={() => setState('leads')}>
 					Leads
 				</div>
-				<div
-					onClick={() => {
-						setSlideIndex(5);
-					}}
-				>
+				<div onClick={() => setState('board')}>
 					Board
 				</div>
 			</div>

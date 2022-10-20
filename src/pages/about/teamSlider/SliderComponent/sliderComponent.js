@@ -3,10 +3,10 @@ import MemberCard from "../../teamAccordionSection/memberCard/memberCard";
 import PropTypes from "prop-types";
 import './sliderComponent.scss';
 
-const SliderComponent = ({title, members}) => {
+const SliderComponent = ({title, members, active}) => {
 
 	return (
-		<div className={"team-slider-container"}>
+		<div className={`team-slider-container ${active}`}>
 			{members.map((member) => (
 				<MemberCard key={`${title}-${member.fullName}`} member={member}/>
 			))}
