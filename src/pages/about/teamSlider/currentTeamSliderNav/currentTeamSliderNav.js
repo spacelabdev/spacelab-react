@@ -4,7 +4,7 @@ import "./currentTeamSliderNav.scss";
 export default function CurrentTeamSliderNav({ setState }) {
 	return (
 		<div className="menu">
-			<div className="rows">
+			<div className="team-slider-nav-button-container">
 				<div onClick={() => setState('frontend')}>
 					Frontend Developers
 				</div>
