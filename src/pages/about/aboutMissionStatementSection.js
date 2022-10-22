@@ -7,7 +7,7 @@ import Explorer from "../../assets/aboutAssets/Top.png"
  * @returns {JSX.Element}
  * @constructor
  */
-export default function MissionStatement() {
+export default function AboutMissionStatementSection() {
 	return (
 		<section id="about-mission-statement-container">
 			<div className="inner-section-two">

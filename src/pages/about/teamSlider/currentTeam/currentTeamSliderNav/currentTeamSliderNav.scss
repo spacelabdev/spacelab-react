@@ -9,6 +9,7 @@
 
 		div {
 			flex: content;
+			margin: 0 1.5rem;
 			font-family: 'Poppins', sans-serif;
 			font-style: normal;
 			font-weight: 400;
@@ -16,6 +17,16 @@
 			letter-spacing: -0.015em;
 			text-transform: uppercase;
 			color: #FFFFFF;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				cursor: pointer;
+				border-bottom: 1px solid #7000FF;
+			}
+		}
+
+		.active {
+			border-bottom: 1px solid #7000FF;
 		}
 	}
 }

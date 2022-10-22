@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import CurrentTeamSliderNav from "../currentTeamSliderNav/currentTeamSliderNav";
-import SliderComponent from "../SliderComponent/sliderComponent";
+import SliderComponent from "../../SliderComponent/sliderComponent";
 import './currentTeamSlider.scss';
 import {
 	boardOfDirectors,
@@ -11,11 +11,10 @@ import {
 	dataScience,
 	webGL,
 	writers,
-} from "../../aboutHelper";
+} from "../../../aboutHelper";
 
 export default function CurrentTeamSlider({toggle}) {
 	const [activeTeam, setActiveTeam] = useState('frontend');
-	console.log(activeTeam);
 
 	const {title: boardTitle, members: boardMembers} = boardOfDirectors;
 	const {title: teamLeadTitle, members: teamLeadMembers} = teamLeads;
@@ -28,7 +27,7 @@ export default function CurrentTeamSlider({toggle}) {
 
 	return (
 		<div className={`team-slider-component-container ${toggle}`}>
-			<CurrentTeamSliderNav setState={setActiveTeam}/>
+			<CurrentTeamSliderNav activeSlide={activeTeam} setActive={setActiveTeam}/>
 			<SliderComponent active={`${activeTeam === 'frontend' ? '' : 'hidden'}`}
 			                 title={frontEndTitle}
 			                 members={frontEndMembers}

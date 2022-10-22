@@ -1,8 +1,8 @@
 import React from "react";
 import "./about.scss";
 import HeroImage from "../../components/heroImage/heroImage";
-import MissionStatement from "./missionStatementSection";
-import TeamSlider from "./teamSlider/teamSlider";
+import AboutMissionStatementSection from "./aboutMissionStatementSection";
+import AboutTeamSliderSection from "./aboutTeamSliderSection";
 import AboutHistorySection from "./aboutHistorySection";
 import Footer from "../../components/footer/footer";
 
@@ -15,8 +15,8 @@ export default function About() {
 	return (
 		<>
 			<HeroImage heroTitle="ABOUT"/>
-			<MissionStatement/>
-			<TeamSlider />
+			<AboutMissionStatementSection/>
+			<AboutTeamSliderSection />
 			<AboutHistorySection/>
 			<Footer/>
 		</>
