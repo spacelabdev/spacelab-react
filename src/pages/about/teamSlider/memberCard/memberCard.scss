@@ -10,6 +10,7 @@
 		.member-card-text-container {
 			display: none;
 		}
+
 		.member-card-details-container {
 			display: block;
 		}
@@ -27,7 +28,6 @@
 	.member-card-text-container {
 		width: 17.5rem;
 		height: 5rem;
-		//background-color: #7000FF;
 		background-image: linear-gradient(#9c58f1, #2b015f);
 		border-radius: 0 0 3% 3%;
 		position: absolute;
@@ -74,6 +74,7 @@
 			width: 100%;
 			bottom: 0;
 			margin-bottom: 2rem;
+
 			a {
 				height: 2rem;
 				width: 2rem;
