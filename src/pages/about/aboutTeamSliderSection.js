@@ -19,17 +19,19 @@ export default function AboutTeamSliderSection() {
 				<button id={'currentTeam'}
 				        className={`toggle-button ${activeComponents[0] === 'currentTeam' ? 'active' : 'inactive'}`}
 				        onClick={() => teamToggle('currentTeam')}
-				>Current Team</button>
+				>Current Team
+				</button>
 				<button id={'pastCohorts'}
 				        className={`toggle-button ${activeComponents[0] === 'pastCohorts' ? 'active' : 'inactive'}`}
 				        onClick={() => teamToggle('pastCohorts')}
-				>Past Cohorts</button>
+				>Past Cohorts
+				</button>
 			</div>
 			<CurrentTeamSlider id={'currentTeamSlider'}
 			                   toggle={`${activeComponents[1] === 'currentTeamSlider' ? '' : 'hidden'}`}
 			/>
 			<CohortsSlider id={'pastCohortsSlider'}
-			                  toggle={`${activeComponents[1] === 'pastCohortsSlider' ? '' : 'hidden'}`}
+			               toggle={`${activeComponents[1] === 'pastCohortsSlider' ? '' : 'hidden'}`}
 			/>
 		</section>
 	);

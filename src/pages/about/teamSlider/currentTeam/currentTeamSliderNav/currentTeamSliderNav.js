@@ -1,7 +1,7 @@
 import React from "react";
 import "./currentTeamSliderNav.scss";
 
-export default function CurrentTeamSliderNav({ activeSlide, setActive }) {
+export default function CurrentTeamSliderNav({activeSlide, setActive}) {
 	return (
 		<div className="menu">
 			<div className="team-slider-nav-button-container">
