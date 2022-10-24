@@ -1,0 +1,14 @@
+#loading-spinner {
+	position: absolute;
+	margin-top: 15%;
+	align-self: center;
+	z-index: 1;
+}
+
+.show-spinner {
+	visibility: visible;
+}
+
+.hide-spinner {
+	visibility: hidden;
+}
