@@ -2,7 +2,7 @@
  * Array of Dates and descriptions for Spacelab History timeline
  * @type {string[][]}
  */
- export const aboutHistoryArray = [
+export const aboutHistoryArray = [
 	[
 		'SPACELAB 2021.01.27',
 		'Data Scientist Matt Paterson is introduced to Dr. Andrew Vanderburg by Cal Tech\'s Dr. Jessie Christiansen ' +
@@ -168,7 +168,6 @@ export const teamLeads = {
 			portfolio: '',
 			linkedIn: '',
 		},
-		
 	],
 };
 
@@ -792,65 +791,10 @@ export const writers = {
 };
 
 /**
- * Object containing details for members of the Spacelab December 2021 cohort
- * @type {{members: [{image: string, fullName: string, title: string}, ]}}
- */
-export const december2021Cohort = {
-	title: "december 2021 cohort",
-	members: [
-		{
-			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
-			fullName: "Alex Anand",
-			title: "Full-Stack Software Developer | Intern",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://media-exp1.licdn.com/dms/image/C4E03AQGHfQJtC1HIZg/profile-displayphoto-shrink_800_800/0/1517685303481?e=1645056000&v=beta&t=QCKr7FvI-osjN4xnthRoOnj6aNJkQgl9ab4awl97SwA",
-			fullName: "Cat Moran",
-			title: "Software Developer | Intern",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://ca.slack-edge.com/T01NXS517FE-U02MHPLFH4H-0a5296950b94-512",
-			fullName: "Cory Rice",
-			title: "Software Developer | Intern",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://media-exp1.licdn.com/dms/image/C4E03AQHZI4bXTLMyDA/profile-displayphoto-shrink_800_800/0/1626031072251?e=1645056000&v=beta&t=ka94J_p2DZMk_6aIPa3P-CbiKnsdAAyAqMleXo33B98",
-			fullName: "Rohit Jacob",
-			title: "Software Developer | Intern",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://media-exp1.licdn.com/dms/image/C4D03AQF1l9bZLOA7kg/profile-displayphoto-shrink_800_800/0/1547235071876?e=1645056000&v=beta&t=ynZWmSo7WUppaDF9n4OBwmhXNR8mVJYkuacPt7GkAE0",
-			fullName: "Sven Gerlach",
-			title: "Software Developer | Intern",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-	],
-};
-
-/**
  * Object containing details for administration to the Spacelab project
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
- export const administration = {
+export const administration = {
 	title: "administration",
 	members: [
 		{
@@ -938,6 +882,61 @@ export const december2021Cohort = {
 };
 
 /**
+ * Object containing details for members of the Spacelab December 2021 cohort
+ * @type {{members: [{image: string, fullName: string, title: string}, ]}}
+ */
+export const december2021Cohort = {
+	title: "december 2021 cohort",
+	members: [
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
+			fullName: "Alex Anand",
+			title: "Full-Stack Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://media-exp1.licdn.com/dms/image/C4E03AQGHfQJtC1HIZg/profile-displayphoto-shrink_800_800/0/1517685303481?e=1645056000&v=beta&t=QCKr7FvI-osjN4xnthRoOnj6aNJkQgl9ab4awl97SwA",
+			fullName: "Cat Moran",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02MHPLFH4H-0a5296950b94-512",
+			fullName: "Cory Rice",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://media-exp1.licdn.com/dms/image/C4E03AQHZI4bXTLMyDA/profile-displayphoto-shrink_800_800/0/1626031072251?e=1645056000&v=beta&t=ka94J_p2DZMk_6aIPa3P-CbiKnsdAAyAqMleXo33B98",
+			fullName: "Rohit Jacob",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://media-exp1.licdn.com/dms/image/C4D03AQF1l9bZLOA7kg/profile-displayphoto-shrink_800_800/0/1547235071876?e=1645056000&v=beta&t=ynZWmSo7WUppaDF9n4OBwmhXNR8mVJYkuacPt7GkAE0",
+			fullName: "Sven Gerlach",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+	],
+};
+
+/**
  * Object containing details for additional contributors to the Spacelab project
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
@@ -967,7 +966,7 @@ export const additionalContributors = {
 
 /**
  * Object containing the data to populate the nav bar for the Current Teams slider
- * @type {title: string, activeFlag: string}
+ * @type {{currentTeams: [{title: string, activeFlag: string}]}}
  */
 export const teamSliderNavLinks = {
 	currentTeams: [
@@ -1007,7 +1006,7 @@ export const teamSliderNavLinks = {
 			title: "Administration",
 			activeFlag: "administration",
 		},
-	]
+	],
 }
 
 /**
