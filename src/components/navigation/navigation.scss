@@ -104,10 +104,6 @@
 nav {
 	height: 60px;
 
-	@media (min-width: 767px) and (max-width: 1023px) {
-		height: 70px;
-	}
-
 	@media (min-width: 1024px) {
 		top: 0;
 		left: 0;
