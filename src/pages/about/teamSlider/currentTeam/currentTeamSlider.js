@@ -11,6 +11,7 @@ import {
 	dataScience,
 	webGL,
 	writers,
+	administration,
 	teamSliderNavLinks,
 } from "../../aboutHelper";
 
@@ -34,6 +35,7 @@ export default function CurrentTeamSlider({toggle}) {
 	const {title: dataScienceTitle, members: dataScienceMembers} = dataScience;
 	const {title: webGLTitle, members: webGLMembers} = webGL;
 	const {title: writersTitle, members: writersMembers} = writers;
+	const {title: administrationTitle, members: administrationMembers} = administration;
 
 	return (
 		<div className={`team-slider-component-container ${toggle}`}>
@@ -69,6 +71,10 @@ export default function CurrentTeamSlider({toggle}) {
 			<SliderComponent active={`${activeTeam === 'board' ? '' : 'hidden'}`}
 			                 title={boardTitle}
 			                 members={boardMembers}
+			/>
+			<SliderComponent active={`${activeTeam === 'administration' ? '' : 'hidden'}`}
+			                 title={administrationTitle}
+			                 members={administrationMembers}
 			/>
 		</div>
 	);
