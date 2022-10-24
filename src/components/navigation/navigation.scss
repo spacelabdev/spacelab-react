@@ -82,10 +82,13 @@
 	}
 }
 
-@media (min-width: 1024px) {
-	.hamburger-wrapper {
+.hamburger-wrapper {
+	@media (min-width: 1024px) {
 		display: none;
 	}
+}
+
+@media (min-width: 1024px) {
 
 	nav {
 		top: 0;
