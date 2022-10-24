@@ -88,9 +88,10 @@
 	}
 }
 
-@media (min-width: 1024px) {
+nav {
+	height: 60px;
 
-	nav {
+	@media (min-width: 1024px) {
 		top: 0;
 		left: 0;
 		height: 70px;
@@ -102,10 +103,10 @@
 		font-family: "Lato", sans-serif;
 		font-size: 0.8em;
 		position: fixed;
-		@media (max-width: 766px) {
-			height: 60px;
-		}
 	}
+}
+
+@media (min-width: 1024px) {
 
 	.nav-wrapper {
 		width: 100%;
