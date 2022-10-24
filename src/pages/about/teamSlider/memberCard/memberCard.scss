@@ -32,7 +32,7 @@
 		border-radius: 0 0 3% 3%;
 		position: absolute;
 		bottom: .5rem;
-		opacity: 90%;
+		opacity: .9;
 	}
 
 	&-text {
@@ -81,9 +81,5 @@
 				margin: 1rem;
 			}
 		}
-	}
-
-	.hidden {
-		display: none;
 	}
 }
