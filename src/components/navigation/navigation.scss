@@ -67,11 +67,12 @@
 	margin-left: .5em;
 	position: fixed;
 	z-index: 98;
-}
-
-@media (min-width: 767px) and (max-width: 1023px) {
-	.logo-nav img {
+	@media (min-width: 767px) and (max-width: 1023px) {
 		max-width: 30vw;
+	}
+	@media (min-width: 1024px) {
+		max-width: 290px;
+		margin: auto auto;
 	}
 }
 
@@ -109,11 +110,6 @@
 
 	.logo-nav {
 		font-size: 2.2em;
-	}
-
-	.logo-nav img {
-		max-width: 290px;
-		margin: auto auto;
 	}
 
 	a {
