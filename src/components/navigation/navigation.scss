@@ -1,6 +1,11 @@
 .nav-links {
 	display: none;
 
+	@media (min-width: 1024px) {
+		display: flex;
+		font-size: 1.5em;
+	}
+
 	.nav-dropdown {
 		position: relative;
 		display: inline-block;
@@ -26,6 +31,12 @@
 
 	.nav-dropdown:hover .dropdown-content {
 		display: block;
+	}
+
+	a {
+		@media (min-width: 1024px) {
+			margin-right: 1rem;
+		}
 	}
 }
 
@@ -106,20 +117,11 @@
 		margin: auto auto;
 	}
 
-	.nav-links {
-		display: flex;
-		font-size: 1.5em;
-	}
-
 	a {
 		color: white;
 	}
 
 	a:hover {
 		color: #7000ff;
-	}
-
-	.nav-links a {
-		margin-right: 1rem;
 	}
 }
