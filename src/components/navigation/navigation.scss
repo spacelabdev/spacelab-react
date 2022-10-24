@@ -41,19 +41,24 @@
 }
 
 .logo-container {
-	height: 5.25em;
+	height: 3.5em;
+	padding-top: .25em;
 	text-align: left;
 	position: fixed;
 	width: 100vw;
 	background-color: #000000;
 	z-index: 99;
-	@media (max-width: 766px) {
-		height: 3.5em;
-		padding-top: .25em;
-	}
+
 	@media (min-width: 767px) and (max-width: 1023px) {
 		height: 4.0em;
 		padding-top: .5em;
+	}
+
+	@media (min-width: 1024px) {
+		height: 5.25em;
+		position: relative;
+		font-family: "Seymour One", sans-serif;
+		max-width: 300px;
 	}
 }
 
@@ -100,12 +105,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-	}
-
-	.logo-container {
-		position: relative;
-		font-family: "Seymour One", sans-serif;
-		max-width: 300px;
 	}
 
 	.logo-nav {
