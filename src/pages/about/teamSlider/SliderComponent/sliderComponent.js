@@ -3,6 +3,14 @@ import MemberCard from "../memberCard/memberCard";
 import PropTypes from "prop-types";
 import './sliderComponent.scss';
 
+/**
+ * Builds slider component. Passes data to MemberCard component and renders what is returned.
+ * @param title
+ * @param members
+ * @param active
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const SliderComponent = ({title, members, active}) => {
 
 	return (

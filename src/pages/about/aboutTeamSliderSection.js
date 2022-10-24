@@ -1,8 +1,13 @@
 import React, {useState} from "react";
-import CurrentTeamSlider from "./teamSlider/currentTeam/currentTeamSlider/currentTeamSlider";
-import CohortsSlider from "./teamSlider/cohorts/cohortsSlider/cohortsSlider";
+import CurrentTeamSlider from "./teamSlider/currentTeam/currentTeamSlider";
+import CohortsSlider from "./teamSlider/cohorts/cohortsSlider";
 import "./about.scss";
 
+/**
+ * Renders the Teams section on the About page
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function AboutTeamSliderSection() {
 	const [activeComponents, setActiveComponents] = useState(['currentTeam', 'currentTeamSlider']);
 

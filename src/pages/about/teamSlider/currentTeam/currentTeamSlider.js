@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import CurrentTeamSliderNav from "../currentTeamSliderNav/currentTeamSliderNav";
-import SliderComponent from "../../SliderComponent/sliderComponent";
+import SliderNav from "../sliderNav/sliderNav";
+import SliderComponent from "../SliderComponent/sliderComponent";
 import './currentTeamSlider.scss';
 import {
 	boardOfDirectors,
@@ -11,11 +11,21 @@ import {
 	dataScience,
 	webGL,
 	writers,
-} from "../../../aboutHelper";
+	teamSliderNavLinks,
+} from "../../aboutHelper";
 
+/**
+ * Renders current team slider
+ * @param toggle
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function CurrentTeamSlider({toggle}) {
 	const [activeTeam, setActiveTeam] = useState('frontend');
 
+	// Nav link data
+	const {currentTeams: teamLinks} = teamSliderNavLinks;
+	// Member card data
 	const {title: boardTitle, members: boardMembers} = boardOfDirectors;
 	const {title: teamLeadTitle, members: teamLeadMembers} = teamLeads;
 	const {title: uxTitle, members: uxMembers} = uxDesigners;
@@ -27,7 +37,7 @@ export default function CurrentTeamSlider({toggle}) {
 
 	return (
 		<div className={`team-slider-component-container ${toggle}`}>
-			<CurrentTeamSliderNav activeSlide={activeTeam} setActive={setActiveTeam}/>
+			<SliderNav navObjects={teamLinks} activeSlide={activeTeam} setActive={setActiveTeam}/>
 			<SliderComponent active={`${activeTeam === 'frontend' ? '' : 'hidden'}`}
 			                 title={frontEndTitle}
 			                 members={frontEndMembers}

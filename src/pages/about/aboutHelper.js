@@ -494,3 +494,61 @@ export const additionalContributors = {
 		},
 	],
 }
+
+/**
+ * Object containing the data to populate the nav bar for the Current Teams slider
+ * @type {title: string, activeFlag: string}
+ */
+export const teamSliderNavLinks = {
+	currentTeams: [
+		{
+			title: "Frontend Developers",
+			activeFlag: "frontend",
+		},
+		{
+			title: "Backend Developers",
+			activeFlag: "backend",
+		},
+		{
+			title: "WebGL Developers",
+			activeFlag: "webgl",
+		},
+		{
+			title: "Designers",
+			activeFlag: "designers",
+		},
+		{
+			title: "Data Scientist",
+			activeFlag: "datascience",
+		},
+		{
+			title: "Writers",
+			activeFlag: "writers",
+		},
+		{
+			title: "Leads",
+			activeFlag: "leads",
+		},
+		{
+			title: "Board",
+			activeFlag: "board",
+		},
+	]
+}
+
+/**
+ * Object containing the data to populate the nav bar for the Past Cohorts slider
+ * @type {title: string, activeFlag: string}
+ */
+export const cohortSliderNavLinks = {
+	pastCohorts: [
+		{
+			title: "Dec 2021",
+			activeFlag: "december2021",
+		},
+		{
+			title: "Additional Contributors",
+			activeFlag: "additionalContributors",
+		},
+	],
+}
