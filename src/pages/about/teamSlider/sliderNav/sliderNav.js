@@ -28,8 +28,18 @@ const SliderNav = ({navObjects, activeSlide, setActive}) => {
 }
 
 SliderNav.propTypes = {
+	/**
+	 * Array of nav objects which include the title to be displayed as the nav link,
+	 * and the flag that is check to see if the nav link should be underlined as active.
+	 */
 	navObjects: PropTypes.array,
+	/**
+	 * State which is set to the current active slide
+	 */
 	activeSlide: PropTypes.string,
+	/**
+	 * Function to update the activeSlide state variable to a new activeSlide
+	 */
 	setActive: PropTypes.func,
 }
 

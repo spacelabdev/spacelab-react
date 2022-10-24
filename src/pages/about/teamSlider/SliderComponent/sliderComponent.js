@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import './sliderComponent.scss';
 
 /**
- *
+ * Builds slider component. Passes data to MemberCard component and renders what is returned.
  * @param title
  * @param members
  * @param active

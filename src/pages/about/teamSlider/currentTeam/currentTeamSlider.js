@@ -14,6 +14,12 @@ import {
 	teamSliderNavLinks,
 } from "../../aboutHelper";
 
+/**
+ * Renders current team slider
+ * @param toggle
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function CurrentTeamSlider({toggle}) {
 	const [activeTeam, setActiveTeam] = useState('frontend');
 

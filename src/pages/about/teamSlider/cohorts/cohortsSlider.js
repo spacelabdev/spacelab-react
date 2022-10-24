@@ -8,6 +8,12 @@ import {
 	cohortSliderNavLinks,
 } from "../../aboutHelper";
 
+/**
+ * Renders cohort slider
+ * @param toggle
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function CohortsSlider({toggle}) {
 	const [activeCohort, setActiveCohort] = useState('december2021');
 
