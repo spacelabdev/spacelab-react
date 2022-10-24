@@ -709,10 +709,11 @@ export const webGL = {
 			image: "",
 			fullName: "Laura Hiller",
 			title: "Lead 3D Graphics Developer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
+			bioQuote: 'Laura is a Web Developer and aspiring Software Engineer with a BS in Computer Science ' +
+				'from UC Santa Cruz and an interest in Front-end work.',
+			gitHub: 'https://github.com/lauraehiller',
+			portfolio: 'https://lauraehiller.com/',
+			linkedIn: 'https://www.linkedin.com/in/laura-e-hiller/',
 		},
 		{
 			image: "",
