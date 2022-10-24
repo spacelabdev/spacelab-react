@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import CurrentTeamSlider from "./teamSlider/currentTeam/currentTeamSlider/currentTeamSlider";
-import CohortsSlider from "./teamSlider/cohorts/cohortsSlider/cohortsSlider";
+import CurrentTeamSlider from "./teamSlider/currentTeam/currentTeamSlider";
+import CohortsSlider from "./teamSlider/cohorts/cohortsSlider";
 import "./about.scss";
 
 export default function AboutTeamSliderSection() {

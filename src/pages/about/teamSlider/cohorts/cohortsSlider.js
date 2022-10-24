@@ -1,18 +1,25 @@
 import React, {useState} from "react";
-import CohortSliderNav from "../cohortSliderNav/cohortSliderNav";
-import SliderComponent from "../../SliderComponent/sliderComponent";
+import SliderNav from "../sliderNav/sliderNav";
+import SliderComponent from "../SliderComponent/sliderComponent";
 import "./cohortsSlider.scss";
-import {december2021Cohort, additionalContributors} from "../../../aboutHelper";
+import {
+	december2021Cohort,
+	additionalContributors,
+	cohortSliderNavLinks,
+} from "../../aboutHelper";
 
 export default function CohortsSlider({toggle}) {
 	const [activeCohort, setActiveCohort] = useState('december2021');
 
+	// Nav link data
+	const {pastCohorts: teamLinks} = cohortSliderNavLinks;
+	// Member card data
 	const {title: december2021Title, members: december2021Members} = december2021Cohort;
 	const {title: additionalContributorsTitle, members: additionalContributorMembers} = additionalContributors;
 
 	return (
 		<div id={'cohort-component-container'} className={toggle}>
-			<CohortSliderNav activeCohort={activeCohort} setActive={setActiveCohort}/>
+			<SliderNav navObjects={teamLinks} activeSlide={activeCohort} setActive={setActiveCohort}/>
 			<SliderComponent active={`${activeCohort === 'december2021' ? '' : 'hidden'}`}
 			                 title={december2021Title}
 			                 members={december2021Members}
