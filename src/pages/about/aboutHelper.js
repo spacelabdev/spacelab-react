@@ -756,10 +756,10 @@ export const writers = {
 			image: "https://imgur.com/hpdfwjo.png",
 			fullName: "Diana Alvarenga",
 			title: "Staff Writer",
-			bioQuote: '',
+			bioQuote: 'Diani is a student at North Central College and is obtaining her B.A in writing.',
 			gitHub: '',
 			portfolio: '',
-			linkedIn: '',
+			linkedIn: 'https://www.linkedin.com/in/diana-alvarenga-52b8a4206',
 		},
 		{
 			image: "https://imgur.com/AtAebvj.png",
