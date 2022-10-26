@@ -1,70 +1,12 @@
-.nav-links {
-	display: none;
-
-	.nav-dropdown {
-		position: relative;
-		display: inline-block;
-		padding: 0.5rem 1rem;
-		@media (min-width: 1024px) {
-			margin-right: 1rem;
-		}
-
-		.dropdown-nav-name {
-			font-size: 1.25rem;
-			color: #FFFFFF;
-		}
-
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			z-index: 1;
-			background-color: #000000;
-			margin-left: -25px;
-			padding: 25px 0 15px 20px;
-		}
-	}
-
-	.nav-dropdown:hover .dropdown-content {
-		display: block;
-	}
-}
-
-.logo-container {
-	height: 5.25em;
-	text-align: left;
-	position: fixed;
-	width: 100vw;
-	background-color: #000000;
-	z-index: 99;
-	@media (max-width: 766px) {
-		height: 3.5em;
-		padding-top: .25em;
-	}
-	@media (min-width: 767px) and (max-width: 1023px) {
-		height: 4.0em;
-		padding-top: .5em;
-	}
-}
-
-.logo-nav img {
-	max-width: 50vw;
-	margin-left: .5em;
-	position: fixed;
-	z-index: 98;
-}
-
-@media (min-width: 767px) and (max-width: 1023px) {
-	.logo-nav img {
-		max-width: 30vw;
-	}
-}
-
-@media (min-width: 1024px) {
-	.hamburger-wrapper {
+.hamburger-wrapper {
+	@media (min-width: 1024px) {
 		display: none;
 	}
+}
 
-	nav {
+nav {
+	height: 55px;
+	@media (min-width: 1024px) {
 		top: 0;
 		left: 0;
 		height: 70px;
@@ -76,50 +18,106 @@
 		font-family: "Lato", sans-serif;
 		font-size: 0.8em;
 		position: fixed;
-		@media (max-width: 766px) {
-			height: 60px;
+
+		a {
+			color: white;
+
+			&:hover {
+				color: #7000ff;
+			}
 		}
 	}
 
 	.nav-wrapper {
-		width: 100%;
-		height: 100%;
-		margin: 0 auto;
-		padding: 0 2rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+		@media (min-width: 1024px) {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			padding: 0 2rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 
-	.logo-container {
-		position: relative;
-		font-family: "Seymour One", sans-serif;
-		max-width: 300px;
-	}
+		.logo-container {
+			height: 3.5em;
+			padding-top: .25em;
+			text-align: left;
+			position: fixed;
+			width: 100vw;
+			background-color: #000000;
+			z-index: 99;
+			@media (min-width: 767px) and (max-width: 1023px) {
+				height: 4.0em;
+				padding-top: .5em;
+			}
+			@media (min-width: 1024px) {
+				height: 5.25em;
+				position: relative;
+				font-family: "Seymour One", sans-serif;
+				max-width: 300px;
+			}
 
-	.logo-nav {
-		font-size: 2.2em;
-	}
+			.logo-nav {
+				@media (min-width: 1024px) {
+					font-size: 2.2em;
+				}
 
-	.logo-nav img {
-		max-width: 290px;
-		margin: auto auto;
-	}
+				img {
+					max-width: 50vw;
+					margin-left: .5em;
+					position: fixed;
+					z-index: 98;
+					@media (min-width: 767px) and (max-width: 1023px) {
+						max-width: 30vw;
+					}
+					@media (min-width: 1024px) {
+						max-width: 290px;
+						margin: auto auto;
+					}
+				}
+			}
+		}
 
-	.nav-links {
-		display: flex;
-		font-size: 1.5em;
-	}
+		.nav-links {
+			display: none;
+			@media (min-width: 1024px) {
+				display: flex;
+				font-size: 1.5em;
+			}
 
-	a {
-		color: white;
-	}
+			.nav-dropdown {
+				position: relative;
+				display: inline-block;
+				padding: 0.5rem 1rem;
+				@media (min-width: 1024px) {
+					margin-right: 1rem;
+				}
 
-	a:hover {
-		color: #7000ff;
-	}
+				.dropdown-nav-name {
+					font-size: 1.25rem;
+					color: #FFFFFF;
+				}
 
-	.nav-links a {
-		margin-right: 1rem;
+				.dropdown-content {
+					display: none;
+					position: absolute;
+					z-index: 1;
+					background-color: #000000;
+					margin-left: -25px;
+					padding: 25px 0 15px 20px;
+				}
+			}
+
+			.nav-dropdown:hover .dropdown-content {
+				display: block;
+			}
+
+			a {
+				@media (min-width: 1024px) {
+					margin-right: 1rem;
+				}
+			}
+		}
 	}
 }
