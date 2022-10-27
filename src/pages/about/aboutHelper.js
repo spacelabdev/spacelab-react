@@ -79,14 +79,14 @@ export const boardOfDirectors = {
 		{
 			image: "https://imgur.com/vSQFMQh.png",
 			fullName: "Jennifer Harrold",
-			title: "Secretary",
+			title: "Secretary, Board of Directors",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/6KnXf6X.png",
 			fullName: "Bernadette Cruz",
 			title: "Advisory Board Member",
 			bioQuote: '',
@@ -95,7 +95,7 @@ export const boardOfDirectors = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/JtNw1qE.png",
 			fullName: "Mike Matera",
 			title: "Advisory Board Member",
 			bioQuote: '',
@@ -151,7 +151,7 @@ export const teamLeads = {
 			linkedIn: 'https://www.linkedin.com/in/brandon-cantello/',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/0Qd8hVW.png",
 			fullName: "Mayah Collins",
 			title: "Director of Creative Content",
 			bioQuote: '',
@@ -160,7 +160,7 @@ export const teamLeads = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/6YPKVbH.png",
 			fullName: "Myesha Dunn",
 			title: "Program Director",
 			bioQuote: '',
@@ -233,8 +233,8 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
-			fullName: "Dani Freedman",
+			image: "https://imgur.com/rarcG7w.png",
+			fullName: "Danni Freedman",
 			title: "UI/UX Designer",
 			bioQuote: '',
 			gitHub: '',
@@ -242,7 +242,7 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/gN6hybH.png",
 			fullName: "May Wu",
 			title: "UI/UX Designer",
 			bioQuote: '',
@@ -251,7 +251,7 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/Ovfpeog.png",
 			fullName: "Bhavani Sree Mahendrakar",
 			title: "UI/UX Design Team Lead",
 			bioQuote: '',
@@ -260,8 +260,8 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
-			fullName: "Meenakshi",
+			image: "https://imgur.com/JfMphhG.png",
+			fullName: "Meenakshi Limbachiya",
 			title: "UI/UX Designer",
 			bioQuote: '',
 			gitHub: '',
@@ -269,7 +269,7 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/yqSt1NS.png",
 			fullName: "Joanne Li",
 			title: "UI/UX Designer",
 			bioQuote: '',
@@ -287,7 +287,7 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/AExJLUf.png",
 			fullName: "Victoria Gonzalez",
 			title: "UI/UX Designer",
 			bioQuote: '',
@@ -305,7 +305,7 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/OnDOWG8.png",
 			fullName: "Venus Lumayag",
 			title: "UI/UX Designer",
 			bioQuote: '',
@@ -314,7 +314,7 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/hlg0qD5.png",
 			fullName: "Shanti Betts",
 			title: "UI/UX Designer",
 			bioQuote: '',
@@ -433,13 +433,22 @@ export const frontEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/LAAT4Ac.png",
 			fullName: "Brian De La Cruz",
 			title: "Software Engineer",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
 			linkedIn: '',
+		},
+		{
+			image: "https://imgur.com/cAqeobu.png",
+			fullName: "Lindsey Dukles",
+			title: "Software Engineer",
+			bioQuote: '',
+			gitHub: 'https://github.com/ldukles',
+			portfolio: 'https://lindsey-dukles-portfolio.netlify.app/',
+			linkedIn: 'https://www.linkedin.com/in/lindsey-dukles/',
 		},
 	],
 };
@@ -471,7 +480,7 @@ export const backEnd = {
 		},
 		{
 			image: "https://imgur.com/EsUof5b.png",
-			fullName: "Denis Oliver",
+			fullName: "Dennis Oliver",
 			title: "Backend Engineer",
 			bioQuote: '',
 			gitHub: '',
@@ -479,7 +488,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/6S7qSh5.png",
 			fullName: "Derek Deidrich",
 			title: "Software Engineer",
 			bioQuote: '',
@@ -488,7 +497,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/yV7uEjh.png",
 			fullName: "Zachary Monea",
 			title: "Software Engineer",
 			bioQuote: '',
@@ -497,7 +506,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/gEbk8B1.png",
 			fullName: "Glen Oliff",
 			title: "Software Engineering Mentor",
 			bioQuote: '',
@@ -515,7 +524,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/qsJ2bg4.png",
 			fullName: "Andrew Cabezudo",
 			title: "Software Engineer",
 			bioQuote: '',
@@ -579,7 +588,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/gZ2WUml.png",
 			fullName: "Arwa Daqqaq",
 			title: "Data Scientist",
 			bioQuote: '',
@@ -588,7 +597,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/oUuPU8w.png",
 			fullName: "Sean Atkinson",
 			title: "Data Scientist",
 			bioQuote: '',
@@ -597,7 +606,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/IyxqjJc.png",
 			fullName: "Alex M",
 			title: "Machine Learning Engineering Intern",
 			bioQuote: '',
@@ -606,7 +615,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/Wcrm1AI.png",
 			fullName: "Daniel Mao",
 			title: "Machine Learning Engineering Intern",
 			bioQuote: '',
@@ -615,7 +624,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/UWe1RAo.png",
 			fullName: "Breanna Chi",
 			title: "Machine Learning Engineering Intern",
 			bioQuote: '',
@@ -624,7 +633,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/418ED2U.png",
 			fullName: "William Luo",
 			title: "Machine Learning Engineering Intern",
 			bioQuote: '',
@@ -633,7 +642,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/FrSOSL3.png",
 			fullName: "Zacharia Rupp",
 			title: "Machine Learning Engineering Intern",
 			bioQuote: '',
@@ -642,7 +651,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/VKT4GAl.png",
 			fullName: "Bella Arenas",
 			title: "Machine Learning Engineering Intern",
 			bioQuote: '',
@@ -651,7 +660,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/C6PdpAK.png",
 			fullName: "Joel Silverman",
 			title: "Data Scientist",
 			bioQuote: '',
@@ -660,7 +669,7 @@ export const dataScience = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/99Ecdd9.png",
 			fullName: "Benjamin Nagle",
 			title: "Data Scientist",
 			bioQuote: '',
@@ -706,7 +715,7 @@ export const webGL = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/HVUZ6bf.png",
 			fullName: "Laura Hiller",
 			title: "Lead 3D Graphics Developer",
 			bioQuote: 'Laura is a Web Developer and aspiring Software Engineer with a BS in Computer Science ' +
@@ -754,7 +763,7 @@ export const writers = {
 		},
 		{
 			image: "https://imgur.com/hpdfwjo.png",
-			fullName: "Diani Alvarenga",
+			fullName: "Diani Alvarenga", // Yes her preferred name is Diani
 			title: "Staff Writer",
 			bioQuote: 'Diani is a student at North Central College and is obtaining her B.A in writing.',
 			gitHub: '',
@@ -799,7 +808,7 @@ export const administration = {
 	title: "administration",
 	members: [
 		{
-			image: "",
+			image: "https://imgur.com/IZOE2tp.png",
 			fullName: "Blair Feinstein",
 			title: "Director of Finance",
 			bioQuote: '',
@@ -808,7 +817,7 @@ export const administration = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/hCTKu88.png",
 			fullName: "Scott Allison",
 			title: "Fundraiser",
 			bioQuote: '',
@@ -817,7 +826,7 @@ export const administration = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/zn2CSzP.png",
 			fullName: "David Lindgren",
 			title: "Grant Writer",
 			bioQuote: '',
@@ -835,7 +844,7 @@ export const administration = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/k0OYag4.png",
 			fullName: "Chris Miller",
 			title: "Mentor",
 			bioQuote: '',
@@ -862,7 +871,7 @@ export const administration = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/nIwMI5E.png",
 			fullName: "Prachi Priya",
 			title: "Recruiter",
 			bioQuote: '',
@@ -871,9 +880,18 @@ export const administration = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://imgur.com/PxBOUHA.png",
 			fullName: "T'Keyah Nichols",
 			title: "Cyber Security Analyst",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "",
+			fullName: "Lauren Redwood",
+			title: "Digital Data Analyst",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
