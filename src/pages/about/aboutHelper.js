@@ -2,7 +2,7 @@
  * Array of Dates and descriptions for Spacelab History timeline
  * @type {string[][]}
  */
- export const aboutHistoryArray = [
+export const aboutHistoryArray = [
 	[
 		'SPACELAB 2021.01.27',
 		'Data Scientist Matt Paterson is introduced to Dr. Andrew Vanderburg by Cal Tech\'s Dr. Jessie Christiansen ' +
@@ -763,7 +763,7 @@ export const writers = {
 		},
 		{
 			image: "https://imgur.com/hpdfwjo.png",
-			fullName: "Diana Alvarenga",
+			fullName: "Diani Alvarenga", // Yes her preferred name is Diani
 			title: "Staff Writer",
 			bioQuote: 'Diani is a student at North Central College and is obtaining her B.A in writing.',
 			gitHub: '',
