@@ -1,115 +1,115 @@
 #data-table {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-height: 143vh;
-  overflow: scroll;
-  font-size: 11px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-height: 143vh;
+	overflow: scroll;
+	font-size: 11px;
 }
 
 #column-header-container {
-  display: flex;
-  position: sticky;
-  top: 0;
-  gap: 5px;
-  background-color: var(--background);
+	display: flex;
+	position: sticky;
+	top: 0;
+	gap: 5px;
+	background-color: var(--background);
 
-  & .column-header {
-    flex: 0 0 6rem;
-    padding: 3px;
-    background-color: var(--table-header);
-    border-radius: 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	& .column-header {
+		flex: 0 0 6rem;
+		padding: 3px;
+		background-color: var(--table-header);
+		border-radius: 2px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-wrap: wrap;
 
-    &:first-of-type {
-      flex: 0 0 3rem;
+		&:first-of-type {
+			flex: 0 0 3rem;
 
-      & img {
-        width: 20px;
-        align-self: center;
-      }
-    }
+			& img {
+				width: 20px;
+				align-self: center;
+			}
+		}
 
-    & .drag-icon {
-      width: 20px;
-      align-self: center;
+		& .drag-icon {
+			width: 20px;
+			align-self: center;
 
-      &:hover {
-        cursor: move;
-      }
+			&:hover {
+				cursor: move;
+			}
 
-      &:active {
-        cursor: grabbing;
-      }
-    }
+			&:active {
+				cursor: grabbing;
+			}
+		}
 
-    & div {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
+		& div {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
 
-      & p {
-        color: rgb(160, 160, 170);
-        font-weight: bold;
-        vertical-align: bottom;
+			& p {
+				color: rgb(160, 160, 170);
+				font-weight: bold;
+				vertical-align: bottom;
 
-        &.align-right {
-          text-align: right;
-        }
+				&.align-right {
+					text-align: right;
+				}
 
-        &.align-left {
-          text-align: left;
-        }
-      }
+				&.align-left {
+					text-align: left;
+				}
+			}
 
-      & .sort-icon {
-        width: 12px;
-        height: 16px;
-        cursor: pointer;
+			& .sort-icon {
+				width: 12px;
+				height: 16px;
+				cursor: pointer;
 
-        // if the column is right-aligned, the sort icon needs to be left-aligned
-        &.align-left {
-          order: 1
-        }
+				// if the column is right-aligned, the sort icon needs to be left-aligned
+				&.align-left {
+					order: 1
+				}
 
-        // if the column is left-aligned, the sort icon needs to be right-aligned
-        &.align-right {
-          order: -1
-        }
-      }
-    }
-  }
+				// if the column is left-aligned, the sort icon needs to be right-aligned
+				&.align-right {
+					order: -1
+				}
+			}
+		}
+	}
 }
 
 .row {
-  flex: 0 0 0;
-  display: flex;
-  gap: 5px;
-  flex-wrap: nowrap;
-  // for some reason the object inherits a margin of -15px which is being unset with this 0
-  margin: 0;
+	flex: 0 0 0;
+	display: flex;
+	gap: 5px;
+	flex-wrap: nowrap;
+	// for some reason the object inherits a margin of -15px which is being unset with this 0
+	margin: 0;
 
-  & .row-element {
-    flex: 0 0 6rem;
-    color: rgb(160, 160, 170);
-    padding: 3px;
-    word-break: break-all;
-    overflow-wrap: break-word;
+	& .row-element {
+		flex: 0 0 6rem;
+		color: rgb(160, 160, 170);
+		padding: 3px;
+		word-break: break-all;
+		overflow-wrap: break-word;
 
-    &.first-column {
-      flex: 0 0 3rem;
-    }
+		&.first-column {
+			flex: 0 0 3rem;
+		}
 
-    &.align-left {
-      text-align: left;
-    }
+		&.align-left {
+			text-align: left;
+		}
 
-    &.align-right {
-      text-align: right;
-    }
-  }
+		&.align-right {
+			text-align: right;
+		}
+	}
 
 }

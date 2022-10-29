@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
@@ -16,7 +16,7 @@ import {getExoplanets} from "../../services/calTechApiRequest";
 import {UniversalContext} from "../../App";
 import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
 import DropdownButton from "../../components/button/dropdownButton";
-import { downloadData } from "../../services/utilityFunctions";
+import {downloadData} from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/button/simpleButton";
 import CollapsibleSection from "../../components/collapsibleSection/collapsibleSection";
@@ -30,7 +30,8 @@ export default function Discovery() {
 	const context = useContext(UniversalContext);
 	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState());
 	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState());
-	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false)
+	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false);
+	const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var. If a query is sent for the purpose
@@ -58,7 +59,7 @@ export default function Discovery() {
 					if (isStateful) {
 						let data = res.data
 						if (typeof data === "string") {
-							data = parseBinaryDataIntoString(data)
+							data = parseBinaryDataIntoString(data);
 						}
 						context.setExoplanetData(data);
 					}
@@ -67,7 +68,10 @@ export default function Discovery() {
 						sessionStorage.setItem('whereFilter', JSON.stringify(whereFilter));
 					}
 					// ensure that sort icons in data table columns are reset since the newly received data is unsorted
-					setIsSortIconResetNeeded(true)
+					setIsSortIconResetNeeded(true);
+					// Controls loading animation in dataTable.js. Setting to false here hides the loadingSpinner
+					// element in dataTable.js 
+					setShowLoadingSpinner(false);
 				} else {
 					console.error("error retrieving exoplanetData");
 				}
@@ -87,12 +91,12 @@ export default function Discovery() {
 	 * @return {any}
 	 */
 	const parseBinaryDataIntoString = (data) => {
-		const re = /[01]{32}/g
+		const re = /[01]{32}/g;
 		const dataWithBinaryConvertedToString = data.replaceAll(re, match => {
-			return `"${match}"`
-		})
+			return `"${match}"`;
+		});
 
-		return JSON.parse(dataWithBinaryConvertedToString)
+		return JSON.parse(dataWithBinaryConvertedToString);
 	}
 
 	// Make API call after selectedColumns and whereFilter states have been initialised but only once at component
@@ -130,8 +134,7 @@ export default function Discovery() {
 		queryExoplanetDatabase(format, false, false)
 			.then((res) => {
 				// stringify data only if format is json
-				const data =
-					format === "json" ? JSON.stringify(res.data) : res.data;
+				const data = format === "json" ? JSON.stringify(res.data) : res.data;
 				downloadData(data, dataType, filename);
 			})
 			.catch((e) => console.error(e));
@@ -145,6 +148,7 @@ export default function Discovery() {
 				<DataTable
 					isSortIconResetNeeded={isSortIconResetNeeded}
 					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
+					showLoadingSpinner={showLoadingSpinner}
 				/>
 				<div id={"filtersContainer"}>
 					<div id={"filtersHeader"}>
