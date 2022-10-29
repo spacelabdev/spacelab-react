@@ -1,8 +1,9 @@
 import React from "react";
-import "./memberCard.scss";
 import PropTypes from "prop-types";
 import {IconContext} from "react-icons";
 import {AiOutlineGithub, AiOutlineGlobal, AiOutlineLinkedin} from "react-icons/ai";
+import Astronauts from "../../../../assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
+import "./memberCard.scss";
 
 /**
  * Renders a member card that displays team member's image, name and title, as well as a hover card with short
@@ -13,9 +14,14 @@ import {AiOutlineGithub, AiOutlineGlobal, AiOutlineLinkedin} from "react-icons/a
  */
 const MemberCard = (memberObject) => {
 	const member = memberObject.member;
+	let image = member.image;
 	let hasGitHub = false;
 	let hasPortfolio = false;
 	let hasLinkedIn = false;
+
+	if (!member.image) {
+		image = Astronauts;
+	}
 
 	// Show links if present
 	if (member.gitHub) {
@@ -30,7 +36,7 @@ const MemberCard = (memberObject) => {
 
 	return (
 		<div className="member-card">
-			<img src={member.image} alt={`${member.fullName}.png`}/>
+			<img src={image} alt={`${member.fullName}.png`}/>
 			<div className="member-card-text-container">
 				<p className="member-card-text-name">{member.fullName}</p>
 				<p className="member-card-text-title">{member.title}</p>
