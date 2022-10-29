@@ -4,7 +4,6 @@ import SliderComponent from "../SliderComponent/sliderComponent";
 import './currentTeamSlider.scss';
 import {
 	boardOfDirectors,
-	teamLeads,
 	uxDesigners,
 	frontEnd,
 	backEnd,
@@ -28,7 +27,6 @@ export default function CurrentTeamSlider({toggle}) {
 	const {currentTeams: teamLinks} = teamSliderNavLinks;
 	// Member card data
 	const {title: boardTitle, members: boardMembers} = boardOfDirectors;
-	const {title: teamLeadTitle, members: teamLeadMembers} = teamLeads;
 	const {title: uxTitle, members: uxMembers} = uxDesigners;
 	const {title: frontEndTitle, members: frontEndMembers} = frontEnd;
 	const {title: backEndTitle, members: backEndMembers} = backEnd;
@@ -63,10 +61,6 @@ export default function CurrentTeamSlider({toggle}) {
 			<SliderComponent active={`${activeTeam === 'writers' ? '' : 'hidden'}`}
 			                 title={writersTitle}
 			                 members={writersMembers}
-			/>
-			<SliderComponent active={`${activeTeam === 'leads' ? '' : 'hidden'}`}
-			                 title={teamLeadTitle}
-			                 members={teamLeadMembers}
 			/>
 			<SliderComponent active={`${activeTeam === 'board' ? '' : 'hidden'}`}
 			                 title={boardTitle}

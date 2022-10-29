@@ -107,11 +107,11 @@ export const boardOfDirectors = {
 };
 
 /**
- * Object containing details for the Team Leads
+ * Object containing details for the UX Designers
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
-export const teamLeads = {
-	title: "team leads",
+export const uxDesigners = {
+	title: "ux designers",
 	members: [
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png",
@@ -122,62 +122,6 @@ export const teamLeads = {
 			portfolio: '',
 			linkedIn: '',
 		},
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png",
-			fullName: "Raysean Williams",
-			title: "Project Manager | 3D Graphics Developer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://i.imgur.com/Ag0eTFb.png",
-			fullName: "Hannah Sailar",
-			title: "Data Science Project Manager",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png",
-			fullName: "Brandon Cantello",
-			title: "Project Manager | Software Engineer",
-			bioQuote: 'With a BS in Physics from UCSB and years of experience as a software engineer, Brandon brings ' +
-				'a unique perspective, leadership, and a passion for space to the front end team.',
-			gitHub: 'https://github.com/bcantello',
-			portfolio: 'https://www.brandoncantello.com/',
-			linkedIn: 'https://www.linkedin.com/in/brandon-cantello/',
-		},
-		{
-			image: "https://imgur.com/0Qd8hVW.png",
-			fullName: "Mayah Collins",
-			title: "Director of Creative Content",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://imgur.com/6YPKVbH.png",
-			fullName: "Myesha Dunn",
-			title: "Program Director",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-	],
-};
-
-/**
- * Object containing details for the UX Designers
- * @type {{members: [{image: string, fullName: string, title: string}, ]}}
- */
-export const uxDesigners = {
-	title: "ux designers",
-	members: [
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/subin_p8gjt5.png",
 			fullName: "Subin Shin",
@@ -314,15 +258,6 @@ export const uxDesigners = {
 			linkedIn: '',
 		},
 		{
-			image: "https://imgur.com/hlg0qD5.png",
-			fullName: "Shanti Betts",
-			title: "UI/UX Designer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
 			image: "",
 			fullName: "Richard Garagliano",
 			title: "UI/UX Designer",
@@ -388,15 +323,6 @@ export const frontEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
-			fullName: "Jon Zivku",
-			title: "Software Engineer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
 			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
 			fullName: "Alex Anand",
 			title: "Full-Stack Software Engineer",
@@ -449,6 +375,15 @@ export const frontEnd = {
 			gitHub: 'https://github.com/ldukles',
 			portfolio: 'https://lindsey-dukles-portfolio.netlify.app/',
 			linkedIn: 'https://www.linkedin.com/in/lindsey-dukles/',
+		},
+		{
+			image: "https://imgur.com/hlg0qD5.png",
+			fullName: "Shanti Betts",
+			title: "Software Engineer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
 		},
 	],
 };
@@ -551,6 +486,15 @@ export const backEnd = {
 export const dataScience = {
 	title: "data scientists",
 	members: [
+		{
+			image: "https://i.imgur.com/Ag0eTFb.png",
+			fullName: "Hannah Sailar",
+			title: "Data Science Project Manager",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131368/team_pics/ricky_fdzb1y.png",
 			fullName: "Ricky Rong",
@@ -688,6 +632,15 @@ export const webGL = {
 	title: "WebGL Developers",
 	members: [
 		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png",
+			fullName: "Raysean Williams",
+			title: "Project Manager | 3D Graphics Developer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/mamadou_mtnlfc.png",
 			fullName: "Mamadou Diallo",
 			title: "3D Graphics Developer",
@@ -808,6 +761,24 @@ export const administration = {
 	title: "administration",
 	members: [
 		{
+			image: "https://imgur.com/0Qd8hVW.png",
+			fullName: "Mayah Collins",
+			title: "Director of Creative Content",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://imgur.com/6YPKVbH.png",
+			fullName: "Myesha Dunn",
+			title: "Program Director",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
 			image: "https://imgur.com/IZOE2tp.png",
 			fullName: "Blair Feinstein",
 			title: "Director of Finance",
@@ -917,7 +888,7 @@ export const december2021Cohort = {
 			linkedIn: '',
 		},
 		{
-			image: "https://media-exp1.licdn.com/dms/image/C4E03AQGHfQJtC1HIZg/profile-displayphoto-shrink_800_800/0/1517685303481?e=1645056000&v=beta&t=QCKr7FvI-osjN4xnthRoOnj6aNJkQgl9ab4awl97SwA",
+			image: "",
 			fullName: "Cat Moran",
 			title: "Software Developer | Intern",
 			bioQuote: '',
@@ -935,7 +906,7 @@ export const december2021Cohort = {
 			linkedIn: '',
 		},
 		{
-			image: "https://media-exp1.licdn.com/dms/image/C4E03AQHZI4bXTLMyDA/profile-displayphoto-shrink_800_800/0/1626031072251?e=1645056000&v=beta&t=ka94J_p2DZMk_6aIPa3P-CbiKnsdAAyAqMleXo33B98",
+			image: "",
 			fullName: "Rohit Jacob",
 			title: "Software Developer | Intern",
 			bioQuote: '',
@@ -944,7 +915,7 @@ export const december2021Cohort = {
 			linkedIn: '',
 		},
 		{
-			image: "https://media-exp1.licdn.com/dms/image/C4D03AQF1l9bZLOA7kg/profile-displayphoto-shrink_800_800/0/1547235071876?e=1645056000&v=beta&t=ynZWmSo7WUppaDF9n4OBwmhXNR8mVJYkuacPt7GkAE0",
+			image: "",
 			fullName: "Sven Gerlach",
 			title: "Software Developer | Intern",
 			bioQuote: '',
@@ -962,6 +933,15 @@ export const december2021Cohort = {
 export const additionalContributors = {
 	title: "additional contributors",
 	members: [
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
+			fullName: "Jon Zivku",
+			title: "Software Engineer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
 			fullName: "Deen Haque",
@@ -1012,10 +992,6 @@ export const teamSliderNavLinks = {
 		{
 			title: "Writers",
 			activeFlag: "writers",
-		},
-		{
-			title: "Leads",
-			activeFlag: "leads",
 		},
 		{
 			title: "Board",
