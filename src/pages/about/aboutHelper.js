@@ -943,15 +943,7 @@ export const administration = {
 export const december2021Cohort = {
 	title: "december 2021 cohort",
 	members: [
-		{
-			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
-			fullName: "Alex Anand",
-			title: "Full-Stack Software Developer | Intern",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
+		{},
 	],
 };
 
