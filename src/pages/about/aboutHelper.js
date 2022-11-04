@@ -425,7 +425,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "https://imgur.com/6S7qSh5.png",
+			image: "https://i.imgur.com/b86C11a.jpg",
 			fullName: "Derek Deidrich",
 			title: "Software Engineer",
 			bioQuote: '',
@@ -452,7 +452,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/9Fd7Qwo.png",
 			fullName: "Yunao Guo",
 			title: "Software Engineer",
 			bioQuote: '',
@@ -862,7 +862,7 @@ export const administration = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/6Zq0ldv.png",
 			fullName: "Lauren Redwood",
 			title: "Digital Data Analyst",
 			bioQuote: '',
