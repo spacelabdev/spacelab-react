@@ -943,7 +943,7 @@ export const administration = {
 export const december2021Cohort = {
 	title: "december 2021 cohort",
 	members: [
-		{},
+		
 	],
 };
 
@@ -953,7 +953,7 @@ export const december2021Cohort = {
  */
 export const additionalContributors = {
 	title: "additional contributors",
-	members: [ {},
+	members: [
 
 	],
 }
