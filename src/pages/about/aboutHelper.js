@@ -947,7 +947,18 @@ export const administration = {
  */
 export const december2021Cohort = {
 	title: "december 2021 cohort",
-	members: [
+	members: [		
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
+			fullName: "Alex Anand",
+			title: "Full-Stack Software Engineer",
+			bioQuote:
+				"Frontend Developer @ SpaceLab | Graphic Designer/Owner @ TSL Printing Co. | Freelance Software Developer | General Assembly Alumni |" +
+				"Currently studying for a bachelor's degree in Software Development & Security (class of 2024) at University of Maryland Global Campus",
+			gitHub: "https://github.com/aanand93",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/alexanderanand/",
+		},
 		{
 			image: "",
 			fullName: "Cat Moran",
