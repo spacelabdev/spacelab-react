@@ -328,7 +328,8 @@ export const frontEnd = {
 			fullName: "Alex Anand",
 			title: "Full-Stack Software Engineer",
 			bioQuote:
-				"Frontend Developer @ SpaceLab | Graphic Designer/Owner @ TSL Printing Co. | Freelance Software Developer | General Assembly Alumni | Currently studying for a bachelor's degree in Software Development & Security (class of 2024) at University of Maryland Global Campus",
+				"Frontend Developer @ SpaceLab | Graphic Designer/Owner @ TSL Printing Co. | Freelance Software Developer | General Assembly Alumni |" +
+				"Currently studying for a bachelor's degree in Software Development & Security (class of 2024) at University of Maryland Global Campus",
 			gitHub: "https://github.com/aanand93",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/alexanderanand/",
@@ -346,7 +347,7 @@ export const frontEnd = {
 			image: "",
 			fullName: "Mark Sturman",
 			title: "Software Engineer",
-			bioQuote: "",
+			bioQuote: "SWE @ Chief | Frontend @ SpaceLab ",
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
@@ -387,7 +388,11 @@ export const frontEnd = {
 			portfolio: "",
 			linkedIn: "",
 		},
-				{
+		
+		/* TODO: The following members listed BELOW can be deleted upon the full implementation of Cohorts*/
+
+		{
+			
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
 			fullName: "Jon Zivku",
 			title: "Software Engineer",
@@ -943,6 +948,42 @@ export const administration = {
 export const december2021Cohort = {
 	title: "december 2021 cohort",
 	members: [
+		{
+			image: "",
+			fullName: "Cat Moran",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02MHPLFH4H-0a5296950b94-512",
+			fullName: "Cory Rice",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "",
+			fullName: "Rohit Jacob",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "",
+			fullName: "Sven Gerlach",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 
 	],
 };
@@ -954,7 +995,34 @@ export const december2021Cohort = {
 export const additionalContributors = {
 	title: "additional contributors",
 	members: [
-
+		{
+			
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
+			fullName: "Jon Zivku",
+			title: "Software Engineer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
+			fullName: "Deen Haque",
+			title: "Full Stack Software Engineer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
+			fullName: "Charlie Arboleda",
+			title: "Software Engineer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 	],
 }
 
