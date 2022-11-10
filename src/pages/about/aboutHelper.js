@@ -115,7 +115,7 @@ export const uxDesigners = {
 	members: [
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png",
-			fullName: "Phally Bell",
+			fullName: "Phaly Bell",
 			title: "Lead Project Manager | Lead UX Designer & Researcher",
 			bioQuote: '',
 			gitHub: '',
@@ -266,6 +266,15 @@ export const uxDesigners = {
 			portfolio: '',
 			linkedIn: '',
 		},
+		{
+			image: "",
+			fullName: "Eliza Gonzales",
+			title: "UI/UX Lead",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 	],
 };
 
@@ -352,15 +361,6 @@ export const frontEnd = {
 			linkedIn: "",
 		},
 		{
-			image: "",
-			fullName: "Elle Thompson",
-			title: "Software Engineer",
-			bioQuote: "",
-			gitHub: "",
-			portfolio: "",
-			linkedIn: "",
-		},
-		{
 			image: "https://imgur.com/LAAT4Ac.png",
 			fullName: "Brian De La Cruz",
 			title: "Software Engineer",
@@ -426,7 +426,7 @@ export const backEnd = {
 		},
 		{
 			image: "https://imgur.com/6S7qSh5.png",
-			fullName: "Derek Deidrich",
+			fullName: "Derek Diedrich",
 			title: "Software Engineer",
 			bioQuote: '',
 			gitHub: '',
@@ -688,6 +688,15 @@ export const webGL = {
 			portfolio: '',
 			linkedIn: '',
 		},
+		{
+			image: "https://imgur.com/aJgDqQw.png",
+			fullName: "Adream Thompson",
+			title: "3D Graphics Developer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 	],
 };
 
@@ -782,7 +791,7 @@ export const administration = {
 		},
 		{
 			image: "https://imgur.com/IZOE2tp.png",
-			fullName: "Blair Feinstein",
+			fullName: "Blair Feldman",
 			title: "Director of Finance",
 			bioQuote: '',
 			gitHub: '',
@@ -802,15 +811,6 @@ export const administration = {
 			image: "https://imgur.com/zn2CSzP.png",
 			fullName: "David Lindgren",
 			title: "Grant Writer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "",
-			fullName: "Simeonhaup",
-			title: "Fundraiser",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
@@ -863,7 +863,7 @@ export const administration = {
 		},
 		{
 			image: "",
-			fullName: "Lauren Redwood",
+			fullName: "Lauren Owen",
 			title: "Digital Data Analyst",
 			bioQuote: '',
 			gitHub: '',
