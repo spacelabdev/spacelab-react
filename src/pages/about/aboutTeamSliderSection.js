@@ -21,7 +21,8 @@ export default function AboutTeamSliderSection() {
 				<h2 className="meet-our-team">Meet Our Team</h2>
 			</div>
 			<div className="about-team-toggle">
-			{/* # TODO: Following button will be disabled until further notice from Matt. */
+			{/*  TODO: The code should be uncommented once we are ready to implement the cohorts tab
+			and move team members from the active team to their respective cohorts. */
 			/* <button id={'currentTeam'}	
 				        className={`toggle-button ${activeComponents[0] === 'currentTeam' ? 'active' : 'inactive'}`}	
 				        onClick={() => teamToggle('currentTeam')}	
