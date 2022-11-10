@@ -20,8 +20,8 @@ export default function AboutTeamSliderSection() {
 			<div className="team-slider-header">
 				<h2 className="meet-our-team">Meet Our Team</h2>
 			</div>
-			<div className="about-team-toggle">
-			{/*  TODO: The code should be uncommented once we are ready to implement the cohorts tab
+			{/*<div className="about-team-toggle">
+			{  TODO: The code should be uncommented once we are ready to implement the cohorts tab
 			and move team members from the active team to their respective cohorts. */
 			/* <button id={'currentTeam'}	
 				        className={`toggle-button ${activeComponents[0] === 'currentTeam' ? 'active' : 'inactive'}`}	
@@ -32,8 +32,8 @@ export default function AboutTeamSliderSection() {
 				        className={`toggle-button ${activeComponents[0] === 'pastCohorts' ? 'active' : 'inactive'}`}	
 				        onClick={() => teamToggle('pastCohorts')}	
 				>Past Cohorts	
-				</button> */}
-			</div>
+				</button>
+			</div> */}
 			<CurrentTeamSlider id={'currentTeamSlider'}
 			                   toggle={`${activeComponents[1] === 'currentTeamSlider' ? '' : 'hidden'}`}
 			/>
