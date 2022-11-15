@@ -115,7 +115,7 @@ export const uxDesigners = {
 	members: [
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png",
-			fullName: "Phally Bell",
+			fullName: "Phaly Bell",
 			title: "Lead Project Manager | Lead UX Designer & Researcher",
 			bioQuote: '',
 			gitHub: '',
@@ -266,6 +266,15 @@ export const uxDesigners = {
 			portfolio: '',
 			linkedIn: '',
 		},
+		{
+			image: "",
+			fullName: "Eliza Gonzales",
+			title: "UI/UX Lead",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 	],
 };
 
@@ -280,24 +289,112 @@ export const frontEnd = {
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png",
 			fullName: "Brandon Cantello",
 			title: "Project Manager | Software Engineer",
-			bioQuote: 'With a BS in Physics from UCSB and years of experience as a software engineer, Brandon brings ' +
-				'a unique perspective, leadership, and a passion for space to the front end team.',
-			gitHub: 'https://github.com/bcantello',
-			portfolio: 'https://www.brandoncantello.com/',
-			linkedIn: 'https://www.linkedin.com/in/brandon-cantello/',
+			bioQuote:
+				"With a BS in Physics from UCSB and years of experience as a software engineer, Brandon brings " +
+				"a unique perspective, leadership, and a passion for space to the front end team.",
+			gitHub: "https://github.com/bcantello",
+			portfolio: "https://www.brandoncantello.com/",
+			linkedIn: "https://www.linkedin.com/in/brandon-cantello/",
 		},
 		{
 			image: "https://i.imgur.com/nDhtO48.png",
 			fullName: "Anna Chowattanakul",
 			title: "Summer 2021 Front End Project Manager",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/kat_wzzzo3.png",
 			fullName: "Kat Hackethal",
+			title: "Software Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png",
+			fullName: "Angelines Yaport-Garcia",
+			title: "Full Stack Software Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
+			fullName: "Kausar Akther",
+			title: "Software Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
+			fullName: "Alex Anand",
+			title: "Full-Stack Software Engineer",
+			bioQuote:
+				"Frontend Developer @ SpaceLab | Graphic Designer/Owner @ TSL Printing Co. | Freelance Software Developer | General Assembly Alumni |" +
+				"Currently studying for a bachelor's degree in Software Development & Security (class of 2024) at University of Maryland Global Campus",
+			gitHub: "https://github.com/aanand93",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/alexanderanand/",
+		},
+		{
+			image: "",
+			fullName: "S. Kyle Deleon",
+			title: "Software Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
+			image: "",
+			fullName: "Mark Sturman",
+			title: "Software Engineer",
+			bioQuote: "SWE @ Chief | Frontend @ SpaceLab ",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
+			image: "https://imgur.com/LAAT4Ac.png",
+			fullName: "Brian De La Cruz",
+			title: "Software Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
+			image: "https://imgur.com/cAqeobu.png",
+			fullName: "Lindsey Dukles",
+			title: "Software Engineer",
+			bioQuote: "",
+			gitHub: "https://github.com/ldukles",
+			portfolio: "https://lindsey-dukles-portfolio.netlify.app/",
+			linkedIn: "https://www.linkedin.com/in/lindsey-dukles/",
+		},
+		{
+			image: "https://imgur.com/hlg0qD5.png",
+			fullName: "Shanti Betts",
+			title: "Software Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		
+		/* TODO: The following members listed BELOW can be deleted upon the full implementation of Cohorts*/
+
+		{
+			
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
+			fullName: "Jon Zivku",
 			title: "Software Engineer",
 			bioQuote: '',
 			gitHub: '',
@@ -305,8 +402,8 @@ export const frontEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png",
-			fullName: "Angelines Yaport-Garcia",
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
+			fullName: "Deen Haque",
 			title: "Full Stack Software Engineer",
 			bioQuote: '',
 			gitHub: '',
@@ -314,18 +411,27 @@ export const frontEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
-			fullName: "Kausar Akther",
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
+			fullName: "Charlie Arboleda",
 			title: "Software Engineer",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
 			linkedIn: '',
 		},
+				{
+			image: "",
+			fullName: "Cat Moran",
+			title: "Software Developer | Intern",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 		{
-			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
-			fullName: "Alex Anand",
-			title: "Full-Stack Software Engineer",
+			image: "https://ca.slack-edge.com/T01NXS517FE-U02MHPLFH4H-0a5296950b94-512",
+			fullName: "Cory Rice",
+			title: "Software Developer | Intern",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
@@ -333,8 +439,8 @@ export const frontEnd = {
 		},
 		{
 			image: "",
-			fullName: "S. Kyle Deleon",
-			title: "Software Engineer",
+			fullName: "Rohit Jacob",
+			title: "Software Developer | Intern",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
@@ -342,44 +448,8 @@ export const frontEnd = {
 		},
 		{
 			image: "",
-			fullName: "Mark Sturman",
-			title: "Software Engineer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "",
-			fullName: "Elle Thompson",
-			title: "Software Engineer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://imgur.com/LAAT4Ac.png",
-			fullName: "Brian De La Cruz",
-			title: "Software Engineer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "https://imgur.com/cAqeobu.png",
-			fullName: "Lindsey Dukles",
-			title: "Software Engineer",
-			bioQuote: '',
-			gitHub: 'https://github.com/ldukles',
-			portfolio: 'https://lindsey-dukles-portfolio.netlify.app/',
-			linkedIn: 'https://www.linkedin.com/in/lindsey-dukles/',
-		},
-		{
-			image: "https://imgur.com/hlg0qD5.png",
-			fullName: "Shanti Betts",
-			title: "Software Engineer",
+			fullName: "Sven Gerlach",
+			title: "Software Developer | Intern",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
@@ -423,7 +493,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "https://imgur.com/6S7qSh5.png",
+			image: "https://i.imgur.com/b86C11a.jpg",
 			fullName: "Derek Deidrich",
 			title: "Software Engineer",
 			bioQuote: '',
@@ -450,7 +520,7 @@ export const backEnd = {
 			linkedIn: '',
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/9Fd7Qwo.png",
 			fullName: "Yunao Guo",
 			title: "Software Engineer",
 			bioQuote: '',
@@ -686,6 +756,15 @@ export const webGL = {
 			portfolio: '',
 			linkedIn: '',
 		},
+		{
+			image: "https://imgur.com/aJgDqQw.png",
+			fullName: "Adream Thompson",
+			title: "3D Graphics Developer",
+			bioQuote: '',
+			gitHub: '',
+			portfolio: '',
+			linkedIn: '',
+		},
 	],
 };
 
@@ -780,7 +859,7 @@ export const administration = {
 		},
 		{
 			image: "https://imgur.com/IZOE2tp.png",
-			fullName: "Blair Feinstein",
+			fullName: "Blair Feldman",
 			title: "Director of Finance",
 			bioQuote: '',
 			gitHub: '',
@@ -800,15 +879,6 @@ export const administration = {
 			image: "https://imgur.com/zn2CSzP.png",
 			fullName: "David Lindgren",
 			title: "Grant Writer",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
-		},
-		{
-			image: "",
-			fullName: "Simeonhaup",
-			title: "Fundraiser",
 			bioQuote: '',
 			gitHub: '',
 			portfolio: '',
@@ -861,7 +931,7 @@ export const administration = {
 		},
 		{
 			image: "",
-			fullName: "Lauren Redwood",
+			fullName: "Lauren Owen",
 			title: "Digital Data Analyst",
 			bioQuote: '',
 			gitHub: '',
@@ -877,15 +947,17 @@ export const administration = {
  */
 export const december2021Cohort = {
 	title: "december 2021 cohort",
-	members: [
+	members: [		
 		{
 			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
 			fullName: "Alex Anand",
-			title: "Full-Stack Software Developer | Intern",
-			bioQuote: '',
-			gitHub: '',
-			portfolio: '',
-			linkedIn: '',
+			title: "Full-Stack Software Engineer",
+			bioQuote:
+				"Frontend Developer @ SpaceLab | Graphic Designer/Owner @ TSL Printing Co. | Freelance Software Developer | General Assembly Alumni |" +
+				"Currently studying for a bachelor's degree in Software Development & Security (class of 2024) at University of Maryland Global Campus",
+			gitHub: "https://github.com/aanand93",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/alexanderanand/",
 		},
 		{
 			image: "",
@@ -923,6 +995,7 @@ export const december2021Cohort = {
 			portfolio: '',
 			linkedIn: '',
 		},
+
 	],
 };
 
@@ -934,6 +1007,7 @@ export const additionalContributors = {
 	title: "additional contributors",
 	members: [
 		{
+			
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
 			fullName: "Jon Zivku",
 			title: "Software Engineer",
