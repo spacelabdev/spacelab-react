@@ -1,0 +1,17 @@
+#solar-system-image-wrapper {
+	padding: 1rem;
+    display: block;
+
+	img {
+		margin: 0 auto;
+	}
+
+	@media (min-width: 767px) and (max-width: 1023px) {
+		padding: 2rem;
+        display: none;
+	}
+	@media (min-width: 1024px) {
+		padding: 6rem;
+        display: none;
+	}
+}
