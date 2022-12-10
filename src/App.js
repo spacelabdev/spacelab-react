@@ -33,7 +33,7 @@ function App() {
 	useEffect(() => {
 		const parser = new RSSParser();
 		const fetchPosts = async () => {
-			const proxyUrl = 'https://spacelab-cors-anywhere.herokuapp.com/';
+			const proxyUrl = 'https://lit-headland-79401.herokuapp.com/';
 			const url = `${proxyUrl}https://medium.com/feed/@spacelabdev/`;
 			const feed = await parser.parseURL(url);
 			setBlogArray(feed);

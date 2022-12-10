@@ -3,6 +3,7 @@ import {UniversalContext} from "../../../App";
 import HeroImage from "../../../components/heroImage/heroImage";
 import Footer from "../../../components/footer/footer";
 import "./blogArchives.scss";
+import placeholder from "../../../assets/generalAssets/img_placeholder.png";
 
 /**
  * Returns gallery of all blog posts
@@ -38,6 +39,18 @@ export default function BlogArchives() {
 				</a>
 			);
 		}
+	}else{
+		blogArray.push(
+			 <div className={"blog-tile-image-wrapper"}>
+				 <img className={"blog-tile-image"}
+					  src={placeholder}
+					  alt={"blog tile"}
+				 />
+				 <div>
+					 <p className={"blog-title"}>Unable to load Archive</p>
+				 </div>
+			 </div>
+		);
 	}
 
 	return (
