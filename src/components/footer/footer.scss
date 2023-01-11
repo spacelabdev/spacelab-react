@@ -65,12 +65,15 @@ on tablets. Can be updated per UX team as necessary.
 			padding: 0.75rem 1.5rem;
 
 			&::placeholder {
-				letter-spacing: 3px;
+				letter-spacing: 1px;
 			}
 
 			@media (min-width: 766px) {
 				width: 50%;
 				font-size: 18px;
+				&::placeholder {
+					letter-spacing: 3px;
+				}
 			}
 		}
 
