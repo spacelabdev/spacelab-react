@@ -31,8 +31,7 @@ on tablets. Can be updated per UX team as necessary.
 	}
 
 	p {
-		margin-bottom: 2rem;
-		display: none;
+		padding-bottom: 1rem;
 		@media (min-width: 766px) {
 			display: inline-block;
 		}
@@ -45,7 +44,7 @@ on tablets. Can be updated per UX team as necessary.
 		width: auto;
 		max-width: 1189px;
 		margin: auto;
-		padding: 3rem 4rem 1rem 4rem;
+		padding: 2rem;
 		@media (min-width: 766px) {
 			flex-direction: row;
 			padding: 4rem;
@@ -54,13 +53,16 @@ on tablets. Can be updated per UX team as necessary.
 
 	.subscription-form {
 		border-radius: 3px;
-		height: 3rem;
+		height: 5rem;
+		width: 100%;
+		margin-bottom: 5rem;
 
 		input {
-			height: 100%;
+			height: auto;
 			max-width: 502px;
-			width: 59%;
-			padding: 0.5rem 1.5rem;
+			width: 30%;
+			font-size: 12px;
+			padding: 0.75rem 1.5rem;
 
 			&::placeholder {
 				letter-spacing: 3px;
@@ -68,28 +70,37 @@ on tablets. Can be updated per UX team as necessary.
 
 			@media (min-width: 766px) {
 				width: 50%;
+				font-size: 18px;
 			}
 		}
 
 		button {
-			padding: 0.65rem 1.5rem;
+			padding: 0.75rem .25rem;
 			color: var(--pink);
 			letter-spacing: 2px;
 			text-transform: uppercase;
+			font-size: 12px;
 			border-radius: 3px;
 			border: 2px solid var(--pink);
-			margin: 4rem 1rem;
-		}
-		button:hover {
+			width: 90px;
+			margin: 4rem 0rem;	
 			color: white;
-			background: #7000ff;		
+			background: #7000ff;
+
+			@media (min-width: 766px) {
+				width: 150px;
+				font-size: 18px;
+			}
 		}
+		// button:hover {
+			
+		// }
 	}
 
 	.left-container {
 		flex: 4;
 		padding-bottom: 1rem;
-		width: 19.5rem;
+		width: 100%;
 		@media (min-width: 766px) {
 			padding-bottom: 0;
 		}
