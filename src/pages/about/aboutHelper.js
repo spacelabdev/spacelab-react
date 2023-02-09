@@ -123,9 +123,19 @@ export const uxDesigners = {
 			linkedIn: "",
 		},
 		{
+			image: "",
+			fullName: "Nina Ulaganathan",
+			title: "UI/UX Designer",
+			bioQuote: "Hi everyone! My name is Nina Ulaganathan, and I am a second-year Cognitive Science major at UCSC. My focuses in my major include AI, and Human Computer Interaction. I am extremely passionate about UX Design, and I hope to be able to contribute those skills to Spacelab!",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+
+		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png",
 			fullName: "Phaly Bell",
-			title: "Lead Project Manager | Lead UX Designer & Researcher",
+			title: "Lead Project Manager | UX Designer & Researcher",
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
@@ -243,9 +253,11 @@ export const uxDesigners = {
 			image: "https://imgur.com/AExJLUf.png",
 			fullName: "Victoria Gonzalez",
 			title: "UI/UX Designer",
-			bioQuote: "",
+			bioQuote: "I’m a Mexican UX/UI Designer based in LA, in beautiful and sunny Southern California." + 
+			"I was a former bartender, and I’ve always enjoyed giving people great experiences and helping them in whatever their needs are. If I’m able to contribute for someone to feel good, it makes me feel twice as good."
+			+ "That’s why I choose to be in the UX field, because is not only delivering to your clients, is to deliver to all the users a great experience which will result in me feeling extremely satisfied because I was able to help!",
 			gitHub: "",
-			portfolio: "",
+			portfolio: "https://victoriagonzalezux.squarespace.com/",
 			linkedIn: "",
 		},
 		{
@@ -260,12 +272,13 @@ export const uxDesigners = {
 		{
 			image: "https://imgur.com/OnDOWG8.png",
 			fullName: "Venus Lumayag",
-			title: "UI/UX Designer",
-			bioQuote: "",
+			title: "UX Designer",
+			bioQuote: "Venus is a designer based in Southern California with a background in graphic design and illustration. In her professional work, she enjoys using creativity to solve design problems and puzzles. In her spare time, she enjoys video games, baking, and visiting local independent coffee shops.",
 			gitHub: "",
-			portfolio: "",
+			portfolio: "https://www.venuslumayag.com/",
 			linkedIn: "",
 		},
+
 		{
 			image: "",
 			fullName: "Richard Garagliano",
@@ -621,10 +634,32 @@ export const dataScience = {
 		{
 			image: "https://i.imgur.com/Th806tx.png",
 			fullName: "Julian Ornelas",
+			title: "Data Scientist | Machine Learning Engineer",
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",			
+		},
+		{
+			image: "https://i.imgur.com/aLwVaRl.png",
+			fullName: "Dustin Creech",
+			title: "Data Scientist | Machine Learning Engineer",
+
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedin: "",
+		},
+		{
+			image: "https://i.imgur.com/aVfBvaL.png",
+			fullName: "Pramit Bhatia",
+			title: "Data Scientist | Machine Learning Engineer",
+			bioQuote: "Hello! I'm Pramit, a Computer Science Major @Georgia State University. I have a background in Data Science, and am interested in working on full stack development and machine learning." +
+			"I'm keen on engaging in various projects throughout my engineering journey and excited to contribute to SpaceLab!",
+			gitHub: "https://github.com/pramitbhatia25",
+			portfolio: "pramitbhatia25.github.io/Portfolio",
+			linkedIn: "",
+
 		},
 		{
 			image: "https://i.imgur.com/Ag0eTFb.png",
@@ -1008,12 +1043,13 @@ export const administration = {
 			linkedIn: "",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/6Zq0ldv.png",
 			fullName: "Lauren Owen",
-			title: "Digital Data Analyst",
-			bioQuote: "",
+			title: "Marketing and Digital Analytics Manager",
+			bioQuote: "I create optimization reports for websites, mobile, and software. My data comes from Google/Adobe Analytics, user interviews, 1000's of research studies, and more."
+			+ "I also install and manage analytics software.",
 			gitHub: "",
-			portfolio: "",
+			portfolio: "https://www.laurenmarieowen.com/",
 			linkedIn: "",
 		},
 	],
