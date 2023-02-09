@@ -662,6 +662,26 @@ export const dataScience = {
 
 		},
 		{
+			image: "https://i.imgur.com/nRhfo0Q.png",
+			fullName: "Alexandra Borriello",
+			title: "Data Science Intern",
+			bioQuote: "Hi! I am Alex Borriello, an Applied Math and Stats major at Stony Brook University, working at SpaceLab as a Data Science Intern."
+			+"I am passionate about using data science and machine learning to understand and improve the world using technology.",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
+			image: "https://i.imgur.com/PbwKBSo.png",
+			fullName: "Shraddha Sonawane",
+			title: "Data Science Intern",
+			bioQuote: "I'm Shraddha; I'm a student and am currently pursuing a master's degree in data science. When I was applying for this internship, I was impressed with the organization's future goals and mission."
+			+"It's a pleasure to work with SpceLab's data science team. I'm looking forward to contributing to the Explonatarium Project.",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+		},
+		{
 			image: "https://i.imgur.com/Ag0eTFb.png",
 			fullName: "Hannah Sailar",
 			title: "Data Science Project Manager",
