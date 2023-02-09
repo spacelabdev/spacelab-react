@@ -43,6 +43,9 @@ export default function Navigation() {
 								<Link className={'nav-link'} to={'/glossary'} style={{textDecoration: 'none'}}>
 									Glossary
 								</Link>
+								<Link className={'nav-link'} to={'/podcast'} style={{textDecoration: 'none'}}>
+									Podcast
+								</Link>
 							</div>
 						</div>
 						<Link className={'nav-link'} to={'/blog'} style={{textDecoration: 'none'}}>
