@@ -41,7 +41,7 @@ export const boardOfDirectors = {
 	title: "board of directors",
 	members: [
 		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131440/team_pics/matt_ksbosg.jpg",
+			image: "https://i.imgur.com/Fi9AEMY.jpg",
 			fullName: "Matt Paterson",
 			title: "Executive Director | Machine Learning Engineer",
 			bioQuote: "",
