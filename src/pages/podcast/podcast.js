@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import Footer from "../../components/footer/footer";
+import {podcastArray} from "./podcastHelper";
 import "./podcast.scss";
 
 /**
