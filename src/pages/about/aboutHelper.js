@@ -361,7 +361,15 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-		},		
+		},
+		{
+			image: "https://i.imgur.com/pBo2sNX.png",
+			fullName: "Amanda Stern",
+			title: "Full Stack Engineer",
+			bioQuote: "My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
+			gitHub: "",
+			portfolio: "https://www.amandastern.dev",
+		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png",
 			fullName: "Brandon Cantello",
@@ -934,14 +942,6 @@ export const webGL = {
 			portfolio: "https://terminal.turing.edu/alumni/1329-eric-matlock",
 			linkedIn: "",
 		},		
-		{
-			image: "https://i.imgur.com/pBo2sNX.png",
-			fullName: "Amanda Stern",
-			title: "Full Stack Engineer",
-			bioQuote: "My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
-			gitHub: "",
-			portfolio: "https://www.amandastern.dev",
-		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png",
 			fullName: "Raysean Williams",
