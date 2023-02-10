@@ -1,15 +1,10 @@
-import React, { useEffect, useRef, useState } from "react"
-import Chip from "@material-ui/core/Chip"
+import React from "react"
 import "./chip.scss"
 
 const Chip = () => {
   return (  
     <div className={"chip-container"}>
-      <Chip
-        label=""
-        onClick={handleClick}
-        className={"chip-style"}
-      />
+      <p>"Chip Test"</p>
     </div>
   )
 }

@@ -1,7 +1,16 @@
 .chip-container {
+  display: inline-flex;
+  flex-direction: row;
+  background-color: #7000FF;
+  border: none;
+  border-radius: 16px;
+  width: 4rem;
+  height: 1.5rem;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.375rem 0.75rem;
+  color: white;
   margin: 10px;
-}
-
-.chip-style {
-  background: #7000FF;
+  align-items: center;
+  justify-content: center;
 }
