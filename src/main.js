@@ -8,6 +8,8 @@ import Home from "./pages/home/home";
 import Projects from "./pages/projects/projects";
 import Contact from "./pages/contact/contact";
 import Podcast from "./pages/podcast/podcast";
+import CookiePolicy from "./pages/cookiepolicy/cookiepolicy";
+import PrivacyPolicy from "./pages/privacypolicy/privacypolicy"; 
 import BlogArchives from "./pages/blog/blogArchives/blogArchives";
 
 /**
@@ -27,6 +29,8 @@ export default function Main() {
 			<Route exact path="/home" component={Home}/>
 			<Route exact path="/projects" component={Projects}/>
 			<Route exact path="/podcast" component={Podcast}/>
+			<Route exact path="/cookie-policy" component={CookiePolicy}/>
+			<Route exact path="/privacy-policy" component={PrivacyPolicy}/>
 			<Route path="/" component={Home}/>
 			<Redirect to='/home'/>
 		</Switch>
