@@ -48,10 +48,13 @@ export default function CookiePolicy() {
 
                 <br/>
                 <h5>Types of Cookies we use</h5>
+
+                <div className="cky-audit-table-element"></div>
                 
                 <br/>
                 <h5>Manage cookie preferences</h5>
-                <p><a href="/cookie-policy">Cookie Settings</a></p>
+                <br/>
+                <p><a className="cky-banner-element">Cookie Settings</a></p>
                 <br/>
 
                 <p>You can change your cookie preferences any time by clicking the above 
@@ -64,15 +67,15 @@ export default function CookiePolicy() {
                     to the support documents on how to manage and delete cookies from the 
                     major web browsers.
                 </p> 
-                <p>Chrome: <a href="https://support.google.com/accounts/answer/32050">https://support.google.com/accounts/answer/32050</a></p>
-                <p>Safari: <a href="https://support.apple.com/en-in/guide/safari/sfri11471/mac">https://support.apple.com/en-in/guide/safari/sfri11471/mac</a></p>
-                <p>Firefox: <a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US">https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US</a></p>
-                <p>Internet Explorer: <a href="https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc">https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc</a></p>
+                <p><a href="https://support.google.com/accounts/answer/32050">Chrome</a></p>
+                <p><a href="https://support.apple.com/en-in/guide/safari/sfri11471/mac">Safari</a></p>
+                <p><a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US">Firefox</a></p>
+                <p><a href="https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc">Internet Explorer</a></p>
                 <p>If you are using any other web browser, please visit your browser's official support documents.</p>
                 
                 <br/>
                 <p>
-                    NOTE: We are using Google Analytics Advertising cookies. We and third-party vendors use 
+                    <span style={{fontWeight: 'bold'}}>NOTE:</span> We are using Google Analytics Advertising cookies. We and third-party vendors use 
                     first-party cookies (such as the Google Analytics cookie) or other first-party identifiers, 
                     and third-party cookies (such as Google advertising cookies) or other third-party identifiers 
                     in order to inform how we should advertise SpaceLab, and so we can make SpaceLab better when 
