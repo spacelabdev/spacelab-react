@@ -14,6 +14,7 @@ export default function Podcast() {
 		<>
 			<HeroImage heroTitle="PODCAST" />
 			<PodcastCard/>
+			<PodcastCard/>
 			<Footer />
 		</>
 	);
