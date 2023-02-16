@@ -1,8 +1,10 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import Footer from "../../components/footer/footer";
+import {podcastArray} from "./podcastHelper";
 import "./podcast.scss";
 import PodcastCard from "./podcastCard";
+import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 
 /**
  * Renders Blog page
@@ -13,7 +15,7 @@ export default function Podcast() {
 	return (
 		<>
 			<HeroImage heroTitle="PODCAST" />
-			<PodcastCard/>
+			<UnderConstruction/>
 			<PodcastCard/>
 			<Footer />
 		</>

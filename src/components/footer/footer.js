@@ -92,6 +92,19 @@ export default function Footer() {
 								Blog
 							</Link>
 						</li>
+						<li>
+							<Link to={"/cookie-policy"} style={link_style}>
+								Cookie Policy
+							</Link>
+						</li>
+						<li>
+							<Link to={"/privacy-policy"} style={link_style}>
+								Privacy Policy
+							</Link>
+						</li>
+						<li>
+							<a href = "https://app.termly.io/notify/84244fc8-3ee5-4874-a964-b5102a61463c" style={link_style}>Do Not Sell My Info</a>
+						</li>
 						{/*Hidden until terms of use page is created*/}
 						{/*<li>Terms of Use</li>*/}
 					</ul>
