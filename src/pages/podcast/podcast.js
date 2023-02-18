@@ -16,22 +16,11 @@ export default function Podcast() {
 	return (
 		<>
 			<HeroImage heroTitle="PODCAST" />
-			{/* <UnderConstruction /> */}
-			{podcastArray.map((item) => {
-				console.log("image", item.image);
+			{podcastArray.map((podcast) => {
 				return (
 					<PodcastCard
-						key={`ep${item.episodeNumber}`}
-						image={item.image}
-						title={item.title}
-						episodeNumber={item.episodeNumber}
-						seasonNumber={item.seasonNumber}
-						tags={item.tags}
-						description={item.description}
-						datePosted={item.datePosted}
-						duration={item.duration}
-						youtubeLink={item.youtubeLink}
-						spotifyLink={item.spotifyLink}
+						key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
+						card={podcast}
 					/>
 				);
 			})}
