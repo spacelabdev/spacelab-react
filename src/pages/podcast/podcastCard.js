@@ -105,7 +105,7 @@ export default function podcastCard({ card }) {
 							style={{ display: "flex", flexDirection: "column" }}
 						>
 							<p style={{ fontSize: ".8rem" }}>Listen on</p>
-							<p style={{ fontSize: "1rem" }}>YouTube</p>
+							<p style={{ fontSize: "1.2rem" }}>YouTube</p>
 						</div>
 					</a>
 					<a
