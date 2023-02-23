@@ -8,6 +8,22 @@
 	padding: 1rem;
 }
 
+.info-box {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin: 2rem;
+	align-items: flex-start;
+}
+
+.info-box p h2 h4 {
+	text-align: start;
+}
+
+.description {
+	text-align: left;
+}
+
 .chip {
 	border-radius: 10rem;
 	border: 2px solid #a0a0a9;
@@ -31,33 +47,21 @@
 	width: 177px;
 	height: 38px;
 	margin-right: 0.5rem;
-
 	background: #000000;
 	border: 1px solid #a6a6a6;
 	border-radius: 8px;
 	font-size: x-small;
 }
 
-.stream-button p {
-	color: white;
-	margin: auto;
-	padding: 0;
-}
-
-.info-box {
+.stream-button div {
+	line-height: .5rem;
 	display: flex;
 	flex-direction: column;
-	width: 60%;
-	margin: 2rem;
 	align-items: flex-start;
 }
 
-.info-box p h2 h4 {
-	text-align: start;
-	// margin: 0;
-	// padding: 0;
-}
-
-.description {
-	text-align: left;
+.stream-button p {
+	color: white;
+	margin: 0;
+	padding: 0;
 }

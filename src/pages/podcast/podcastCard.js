@@ -18,18 +18,43 @@ export default function podcastCard({ card }) {
 		spotifyLink,
 	} = card;
 
-	const getTagColor = (tag) => {
-		console.log("🚀 ~ file: podcastCard.js:18 ~ getTagColor ~ tag", tag);
-		if (tag === "Planets") {
-			return "#0B7D24";
-		} else if (tag === "Space") {
-			return "#0B317D";
-		} else {
-			return "#6610F5";
-		}
+	const chipColors = {
+		orange: "#F05223",
+		gold: "#F3AA1E",
+		green: "#349F65",
+		purple: "#5041AA",
+		lightPurple: "#8923FF",
+		pink: "#F37D7E",
 	};
 
-	const getChips = (tags) => {};
+	const getTagColor = (tag) => {
+		const {orange, gold, green, purple, lightPurple, pink} = chipColors
+		let color;
+		switch (tag.toLowerCase()) {
+			case "planets": {
+				color = orange;
+				break;
+			}
+			case "space": {
+				color = gold;
+				break;
+			}
+			case "stars": {
+				color = green;
+				break;
+			}
+			case "asteroids": {
+				color = pink;
+				break;
+			}
+			default: {
+				color = lightPurple;
+			}
+		}
+		return color;
+	};
+
+	// const getChips = (tags) => {};
 
 	return (
 		<div className="podcast-card">
@@ -69,13 +94,31 @@ export default function podcastCard({ card }) {
 				<p style={{ marginTop: "1rem" }}>{duration}</p>
 				<p>{datePosted}</p>
 				<div style={{ display: "flex" }}>
-					<a className="stream-button" href={youtubeLink} target="_blank" rel="noreferrer">
-						<img src={youtube} />
-						<p>Listen on YouTube</p>
+					<a
+						className="stream-button"
+						href={youtubeLink}
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img src={youtube} alt="youtube logo" />
+						<div
+							style={{ display: "flex", flexDirection: "column" }}
+						>
+							<p style={{ fontSize: ".8rem" }}>Listen on</p>
+							<p style={{ fontSize: "1rem" }}>YouTube</p>
+						</div>
 					</a>
-					<a className="stream-button" href={spotifyLink} target="_blank" rel="noreferrer">
-						<img src={spotify} />
-						<p>Listen on Spotify</p>
+					<a
+						className="stream-button"
+						href={spotifyLink}
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img src={spotify} alt="spotify logo" />
+						<div className="stream-button-text">
+							<p style={{ fontSize: ".8rem" }}>Listen on</p>
+							<p style={{ fontSize: "1rem" }}>Spotify</p>
+						</div>
 					</a>
 				</div>
 			</div>
