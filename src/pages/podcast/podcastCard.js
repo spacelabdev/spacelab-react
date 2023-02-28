@@ -4,6 +4,13 @@ import spotify from "../../assets/podcastAssets/spotify.svg";
 import youtube from "../../assets/podcastAssets/youtube.svg";
 import "./podcast.scss";
 
+/**
+ * Renders Podcast Cards
+ * Receives card prop which includes all relevant information of each podcast
+ * @param card {object}`
+ * @returns {JSX.Element}
+ * @constructor
+ */
 export default function podcastCard({ card }) {
 	const {
 		image,
@@ -28,7 +35,7 @@ export default function podcastCard({ card }) {
 	};
 
 	const getTagColor = (tag) => {
-		const {orange, gold, green, purple, lightPurple, pink} = chipColors
+		const { orange, gold, green, purple, lightPurple, pink } = chipColors;
 		let color;
 		switch (tag.toLowerCase()) {
 			case "planets": {
@@ -45,6 +52,10 @@ export default function podcastCard({ card }) {
 			}
 			case "asteroids": {
 				color = pink;
+				break;
+			}
+			case "astronaut": {
+				color = purple;
 				break;
 			}
 			default: {

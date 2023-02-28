@@ -7,7 +7,7 @@ import PodcastCard from "./podcastCard";
 import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 
 /**
- * Renders Blog page
+ * Renders Podcast page
  * @returns {JSX.Element}
  * @constructor
  */
