@@ -7,7 +7,7 @@ import "./podcast.scss";
 /**
  * Renders Podcast Cards
  * Receives card prop which includes all relevant information of each podcast
- * @param card {object}`
+ * @param card {object}
  * @returns {JSX.Element}
  * @constructor
  */
