@@ -20,7 +20,7 @@ export default function Blog() {
 			</div>
 			<div id={"archives-button-container"}>
 				<InternalNavButton
-					pathName={"/archives"}
+					path={"/archives"}
 					buttonText={"View Full Blog Archives"}
 				/>
 			</div>

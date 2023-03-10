@@ -4,6 +4,8 @@ import { slide as Menu } from 'react-burger-menu';
 import './hamburgerMenu.scss';
 
 /**
+ * Renders the hamburger menu for smaller scree sizes.
+ *
  *  More information on react-burger-menu can be found here:
  *  https://github.com/negomi/react-burger-menu
  */
@@ -67,15 +69,17 @@ class HamburgerMenu extends React.Component {
 								Donate
 							</Link>
 						</div> */}
-						<a
-							className="hamburger-nav-link"
-							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
-							target="_blank"
-							rel="noreferrer"
-							style={{ textDecoration: "none" }}
-						>
-							Donate
-						</a>
+						<div>
+							<a
+								className="hamburger-nav-link"
+								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
+								target="_blank"
+								rel="noreferrer"
+								style={{ textDecoration: "none" }}
+							>
+								Donate
+							</a>
+						</div>
 						<div>
 							<Link
 								className={"hamburger-nav-link"}

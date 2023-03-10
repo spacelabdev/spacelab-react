@@ -3,120 +3,150 @@ Note: No media queries were added for tablet layouts. Desktop footer looks fine
 on tablets. Can be updated per UX team as necessary.
  */
 .footer-section {
-    background: black;
-    text-align: center;
-    width: auto;
-    @media (min-width: 766px) {
-        text-align: left;
-    }
+	background: black;
+	text-align: center;
+	width: auto;
+	@media (min-width: 766px) {
+		text-align: left;
+	}
 
-    a {
-        color: #a0a0aa;
-    }
+	a {
+		color: #a0a0aa;
+	}
 
-    a:hover {
-        color: #7000ff;
-    }
+	a:hover {
+		color: #7000ff;
+	}
 
-    h2 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 200;
-        font-style: italic;
-        font-size: 21px;
-        margin-bottom: 1.25rem;
-        color: white;
-        @media (min-width: 766px) {
-            font-size: 30px;
-        }
-    }
+	h2 {
+		font-family: "Poppins", sans-serif;
+		font-weight: 200;
+		font-style: italic;
+		font-size: 21px;
+		margin-bottom: 1.25rem;
+		color: white;
+		@media (min-width: 766px) {
+			font-size: 30px;
+		}
+	}
 
-    p {
-        margin-bottom: 2rem;
-        display: none;
-        @media (min-width: 766px) {
-            display: inline-block;
-        }
-    }
+	p {
+		padding-bottom: 1rem;
+		@media (min-width: 766px) {
+			display: inline-block;
+		}
+	}
 
-    .content-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-        max-width: 1189px;
-        margin: auto;
-        padding: 3rem 4rem 1rem 4rem;
-        @media (min-width: 766px) {
-            flex-direction: row;
-            padding: 4rem;
-        }
-    }
+	.content-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: auto;
+		max-width: 1189px;
+		margin: auto;
+		padding: 2rem;
+		@media (min-width: 766px) {
+			flex-direction: row;
+			padding: 4rem;
+		}
+	}
 
-    .subscription-form {
-        border-radius: 3px;
-        height: 2.5rem;
-        input {
-            height: 100%;
-            max-width: 502px;
-            width: 59%;
-            padding: 0.5rem 1.5rem;
-            &::placeholder {
-                letter-spacing: 3px;
-            }
-            @media (min-width: 766px) {
-                width: 50%;
-            }
-        }
-        button {
-            padding: 2.5px 5px;
-            border: solid 1px white;
-            background: #7000ff;
-            color: white;
-            height: 100%;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 3px;
-        }
-    }
+	.subscription-form {
+		border-radius: 3px;
+		height: 5rem;
+		width: 100%;
+		margin-bottom: 5rem;
 
-    .left-container {
-        flex: 4;
-        padding-bottom: 1rem;
-        width: 19.5rem;
-        @media (min-width: 766px) {
-            padding-bottom: 0;
-        }
-    }
-    .right-container {
-        flex: 1;
-        text-align: left;
-        ul {
-            list-style: none;
-            text-transform: uppercase;
-            text-align: center;
-            @media (min-width: 766px) {
-                text-align: left;
-                padding-left: 3.1rem;
-            }
-            li {
-                line-height: 2rem;
-            }
-        }
-    }
-    .socialmedia-container {
-        text-align: center;
-        padding-bottom: 2rem;
-        color: #d9d9d9;
-        font-family: Lato, sans-serif;
-        letter-spacing: 1px;
-    }
-    hr {
-        width: 70%;
-        color: #d9d9d9;
-        max-width: 1100px;
-        margin-bottom: 2rem;
-        @media (min-width: 766px) {
-            width: 90%;
-        }
-    }
+		input {
+			height: auto;
+			max-width: 502px;
+			width: 30%;
+			font-size: 12px;
+			padding: 0.75rem 1.5rem;
+
+			&::placeholder {
+				letter-spacing: 1px;
+			}
+
+			@media (min-width: 766px) {
+				width: 50%;
+				font-size: 18px;
+				&::placeholder {
+					letter-spacing: 3px;
+				}
+			}
+		}
+
+		button {
+			padding: 0.75rem .25rem;
+			color: var(--pink);
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			font-size: 12px;
+			border-radius: 3px;
+			border: 2px solid var(--pink);
+			width: 90px;
+			margin: 4rem 0rem;	
+			color: white;
+			background: #7000ff;
+
+			@media (min-width: 766px) {
+				width: 150px;
+				font-size: 18px;
+			}
+		}
+		// button:hover {
+			
+		// }
+	}
+
+	.left-container {
+		flex: 4;
+		padding-bottom: 1rem;
+		width: 100%;
+		@media (min-width: 766px) {
+			padding-bottom: 0;
+		}
+	}
+
+	.right-container {
+		flex: 1;
+		text-align: left;
+
+		ul {
+			list-style: none;
+			text-transform: uppercase;
+			text-align: center;
+			@media (min-width: 766px) {
+				text-align: left;
+				padding-left: 3.1rem;
+			}
+
+			li {
+				line-height: 2rem;
+			}
+		}
+	}
+
+	.socialmedia-container {
+		text-align: center;
+		padding-bottom: 2rem;
+		color: #d9d9d9;
+		font-family: Lato, sans-serif;
+		letter-spacing: 1px;
+
+		a {
+			margin: 0 10px;
+		}
+
+		h5 {
+			width: 70%;
+			color: #d9d9d9;
+			max-width: 1100px;
+			margin: 10px 0 .5rem 0;
+			@media (min-width: 766px) {
+				width: 90%;
+			}
+		}
+	}
 }

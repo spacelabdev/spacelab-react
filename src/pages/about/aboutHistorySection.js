@@ -33,7 +33,7 @@ export default function AboutHistorySection() {
 	}
 
 	return (
-		<section className="history-section">
+		<section id="about-history-section">
 			<h2 className="about-history-header">History</h2>
 			<div className="history-container">
 				<div id={"planet-image-container"}>
@@ -45,4 +45,4 @@ export default function AboutHistorySection() {
 			</div>
 		</section>
 	);
-}
+};

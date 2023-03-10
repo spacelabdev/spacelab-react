@@ -1,9 +1,9 @@
 import React from "react";
 import "./about.scss";
 import HeroImage from "../../components/heroImage/heroImage";
+import AboutMissionStatementSection from "./aboutMissionStatementSection";
+import AboutTeamSliderSection from "./aboutTeamSliderSection";
 import AboutHistorySection from "./aboutHistorySection";
-import MissionStatement from "./missionStatementSection";
-import Team from "./TeamSection";
 import Footer from "../../components/footer/footer";
 
 /**
@@ -14,11 +14,11 @@ import Footer from "../../components/footer/footer";
 export default function About() {
 	return (
 		<>
-			<HeroImage heroTitle="ABOUT" />
-			<Team />
-			<MissionStatement />
-			<AboutHistorySection />
-			<Footer />
+			<HeroImage heroTitle="ABOUT"/>
+			<AboutMissionStatementSection/>
+			<AboutTeamSliderSection/>
+			<AboutHistorySection/>
+			<Footer/>
 		</>
 	);
-}
+};

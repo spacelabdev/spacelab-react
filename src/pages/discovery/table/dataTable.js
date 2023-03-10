@@ -1,6 +1,7 @@
 // React imports
-import React, { useContext, useEffect, useState } from "react";
-import { UniversalContext } from "../../../App";
+import React, {useContext, useEffect, useState} from "react";
+import LoadingSpinner from "../../../components/loadingSpinner/loadingSpinner";
+import {UniversalContext} from "../../../App";
 
 // Component imports
 import {
@@ -27,20 +28,20 @@ import "./dataTable.scss"
  * @return {any|JSX.Element}
  * @constructor
  */
-export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNeeded }) {
+export default function DataTable({isSortIconResetNeeded, setIsSortIconResetNeeded, showLoadingSpinner}) {
 	const context = useContext(UniversalContext);
-	const exoPlanetData = context.exoplanetData
-	const setExoPlanetData = context.setExoplanetData
-	const [unsortedExoPlanetData, setUnsortedExoPlanetData] = useState(null)
+	const exoPlanetData = context.exoplanetData;
+	const setExoPlanetData = context.setExoplanetData;
+	const [unsortedExoPlanetData, setUnsortedExoPlanetData] = useState(null);
 	// number of table rows scrolled
-	const [rowsScrolled, setRowsScrolled] = useState(0)
+	const [rowsScrolled, setRowsScrolled] = useState(0);
 	// number of table rows displayed in view
-	const [tableHeightInRows, ] = useState(50)
+	const [tableHeightInRows,] = useState(50);
 	// columnHeaders is an array that will be set with the first render and reflects the order of the column labels
-	const [columnHeaders, setColumnHeaders] = useState(null)
+	const [columnHeaders, setColumnHeaders] = useState(null);
 	// name of the column which will be sorted
-	const [sortColName, setSortColName] = useState(null)
-	const [sortOrder, setSortOrder] = useState(null)
+	const [sortColName, setSortColName] = useState(null);
+	const [sortOrder, setSortOrder] = useState(null);
 
 	// create on array that includes all filter arrays
 	const aggregateDataItems = [
@@ -52,7 +53,7 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 		...stellarParametersFiltersArray,
 		...kicParametersFiltersArray,
 		...pixelBasedKoiVettingFiltersArray,
-	]
+	];
 
 
 	/**
@@ -64,31 +65,30 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 			// initiate the columnHeaders array as per the keys in the first row object inside the exoPlanetData array
 			if (!columnHeaders) {
 				setColumnHeaders(Object.keys(exoPlanetData[0]))
-			}
-			else {
+			} else {
 				// iterate over data response and store column name and array index position in a dict
-				const hashTable = {}
-				Object.keys(exoPlanetData[0]).forEach((colName, idx) => hashTable[colName] = true)
+				const hashTable = {};
+				Object.keys(exoPlanetData[0]).forEach((colName, idx) => hashTable[colName] = true);
 
 				// if the user has already used a custom column headers order, filter the columnHeaders array for those
 				// columns that are still in the exoPlanetData, and add any new columns to the end
 				const newColumnHeaders = columnHeaders.filter(colName => {
 					const isColNameInHashTable = hashTable.hasOwnProperty(colName);
 					if (isColNameInHashTable) {
-						delete hashTable[colName]
+						delete hashTable[colName];
 					}
-					return isColNameInHashTable
-				})
+					return isColNameInHashTable;
+				});
 
 				// iterate over remaining hashKeys and add them to the end of the columnHeaders array
-				Object.keys(hashTable).forEach(colName => newColumnHeaders.push(colName))
+				Object.keys(hashTable).forEach(colName => newColumnHeaders.push(colName));
 
 				// update state
-				setColumnHeaders(newColumnHeaders)
+				setColumnHeaders(newColumnHeaders);
 			}
 		}
 		// eslint-disable-next-line
-	}, [exoPlanetData])
+	}, [exoPlanetData]);
 
 	/**
 	 * Sort exoPlanetData based on column name and sort order. Sorting needs to happen when 1) user chooses / changes
@@ -103,40 +103,37 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 
 			// sort direction depends on sort state
 			setExoPlanetData(prevState => {
-				const newState = [...prevState]
+				const newState = [...prevState];
 
 				// if neutral sort direction, return unsorted data array
 				if (!sortOrder) {
-					return unsortedExoPlanetData
-				}
-
-				else {
+					return unsortedExoPlanetData;
+				} else {
 					return newState.sort((firstRow, secondRow) => {
 						// if data type is date, string needs to be parsed first
-						const colDataItem = aggregateDataItems.filter(col => col.name === sortColName)
+						const colDataItem = aggregateDataItems.filter(col => col.name === sortColName);
 
-						let firstRowVal = firstRow[sortColName]
-						let secondRowVal = secondRow[sortColName]
+						let firstRowVal = firstRow[sortColName];
+						let secondRowVal = secondRow[sortColName];
 
 						if (colDataItem.dataType === "date") {
-							firstRowVal = Date.parse(firstRowVal)
-							secondRowVal = Date.parse(secondRowVal)
+							firstRowVal = Date.parse(firstRowVal);
+							secondRowVal = Date.parse(secondRowVal);
 						}
 
 						if (firstRowVal > secondRowVal) {
-							return sortOrder === "ascending" ? 1 : -1
+							return sortOrder === "ascending" ? 1 : -1;
 						}
 						if (firstRowVal < secondRowVal) {
-							return sortOrder === "ascending" ? -1 : 1
+							return sortOrder === "ascending" ? -1 : 1;
 						}
-						return 0
-					})
+						return 0;
+					});
 				}
-			})
+			});
 		}
 		// eslint-disable-next-line
-	}, [sortColName, sortOrder])
-
+	}, [sortColName, sortOrder]);
 
 	/**
 	 * Implement infinite scrolling. The first render of the table only displays as many rows as specified in the state
@@ -146,11 +143,11 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 	 * @param e
 	 */
 	const handleScrolling = (e) => {
-		const tableHeight = e.target.clientHeight
-		const scrollHeight = e.target.scrollHeight
-		const scrollTop = e.target.scrollTop
+		const tableHeight = e.target.clientHeight;
+		const scrollHeight = e.target.scrollHeight;
+		const scrollTop = e.target.scrollTop;
 		if (scrollTop + tableHeight === scrollHeight) {
-			setRowsScrolled(prevState => prevState + tableHeightInRows)
+			setRowsScrolled(prevState => prevState + tableHeightInRows);
 		}
 	}
 
@@ -162,9 +159,9 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 	const getColumnAlignmentClassFrom = (dataType) => {
 		switch (dataType) {
 			case "number":
-				return "align-right"
+				return "align-right";
 			default:
-				return "align-left"
+				return "align-left";
 		}
 	}
 
@@ -172,6 +169,7 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 		/* only create table if exoPlanetData exists */
 		exoPlanetData && (
 			<section id={"data-table"} onScroll={handleScrolling}>
+				<LoadingSpinner showLoadingSpinner={showLoadingSpinner}/>
 				{/* only create col headers if exoPlanetData has at least one object inside the returned array */}
 				{columnHeaders && (
 					<TableHeader
@@ -200,5 +198,5 @@ export default function DataTable({ isSortIconResetNeeded, setIsSortIconResetNee
 				)}
 			</section>
 		)
-	)
+	);
 }

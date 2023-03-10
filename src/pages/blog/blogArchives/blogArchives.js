@@ -3,6 +3,7 @@ import {UniversalContext} from "../../../App";
 import HeroImage from "../../../components/heroImage/heroImage";
 import Footer from "../../../components/footer/footer";
 import "./blogArchives.scss";
+import placeholder from "../../../assets/generalAssets/img_placeholder.png";
 
 /**
  * Returns gallery of all blog posts
@@ -15,7 +16,7 @@ export default function BlogArchives() {
 	let blogArray = [];
 
 	if (blogs !== undefined) {
-		for (let i = 0; i < blogs.length; i++) {
+		for (let i in blogs) {
 			let content = blogs[i]['content:encoded'];
 			content = content.toString();
 			let imageURL = content.substring(content.indexOf("src=") + 5,
@@ -38,11 +39,23 @@ export default function BlogArchives() {
 				</a>
 			);
 		}
+	}else{
+		blogArray.push(
+			 <div className={"blog-tile-image-wrapper"}>
+				 <img className={"blog-tile-image"}
+					  src={placeholder}
+					  alt={"blog tile"}
+				 />
+				 <div>
+					 <p className={"blog-title"}>Unable to load Archive</p>
+				 </div>
+			 </div>
+		);
 	}
 
 	return (
 		<>
-			<HeroImage/>
+			<HeroImage heroTitle={'BLOG ARCHIVES'}/>
 			<div id={"blog-archive-container"}>
 				<div id={"blog-archive-header"}>Archived Blogs</div>
 				<div id={"blog-archives"}>{blogArray}</div>

@@ -1,126 +1,127 @@
 #discovery-title {
-  font-size: 3rem;
-  margin: 0 auto;
-  padding: 2rem;
+	font-size: 3rem;
+	margin: 0 auto;
+	padding: 2rem;
 }
 
 #database-search-wrapper {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
-  gap: 1rem;
-  height: 100%;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: space-between;
+	width: 80%;
+	margin: 0 auto;
+	gap: 1rem;
+	height: 100%;
 
-  @media (min-width: 1360px) {
-    flex-direction: row;
-  }
+	@media (min-width: 1360px) {
+		flex-direction: row;
+	}
 
-  #filtersContainer {
-    width: 80vw;
-    margin: 0 auto 2rem;
-    border-style: groove;
-    text-align: left;
-    padding-bottom: 2rem;
-    vertical-align: middle;
-    height: fit-content;
-    //@media (min-width: 767px) and (max-width: 1023px) {
-    //  width: 80vw;
-    //}
-    @media (min-width: 1360px) {
-      width: 35vw;
-    }
+	#filtersContainer {
+		width: 80vw;
+		margin: 0 auto 2rem;
+		border-style: groove;
+		text-align: left;
+		padding-bottom: 2rem;
+		vertical-align: middle;
+		height: fit-content;
+		//@media (min-width: 767px) and (max-width: 1023px) {
+		//  width: 80vw;
+		//}
+		@media (min-width: 1360px) {
+			width: 35vw;
+		}
 
-    p {
-      font-size: 2rem;
-      padding-left: 2rem;
-    }
+		p {
+			font-size: 2rem;
+			padding-left: 2rem;
+		}
 
-    & #filtersHeader {
-      max-height: 80px;
-      position: relative;
-      top: -34px;
-    }
+		& #filtersHeader {
+			max-height: 80px;
+			position: relative;
+			top: -34px;
+		}
 
-    & #filtersHeader > p {
-      display: inline-block;
-      padding: 10px;
-      margin-left: 20px;
-      background-color: #1C1A22;
-    }
+		& #filtersHeader > p {
+			display: inline-block;
+			padding: 10px;
+			margin-left: 20px;
+			background-color: #1C1A22;
+		}
 
-    #discovery-filter-buttons-container {
-      display: flex;
-      padding: 0 2rem;
-      width: 100%;
-      justify-content: space-between;
-      gap: 1rem;
+		#discovery-filter-buttons-container {
+			display: flex;
+			padding: 0 2rem;
+			width: 100%;
+			justify-content: space-between;
+			gap: 1rem;
 
-      @media (min-width: 700px) {
-        //flex: 1 1 8rem;
-        width: 60%;
-      }
+			@media (min-width: 700px) {
+				//flex: 1 1 8rem;
+				width: 60%;
+			}
 
-      & > div {
-        flex: 1 0 8rem;
+			& > div {
+				flex: 1 0 8rem;
 
-        @media (max-width: 450px) {
-          flex: 1 1 9rem;
+				@media (max-width: 450px) {
+					flex: 1 1 9rem;
 
-          & > button {
-            padding-left: 0px;
-          }
-        }
+					& > button {
+						padding-left: 0px;
+					}
+				}
 
-        & button {
-          width: 100%;
-        }
-      }
-    }
+				& button {
+					width: 100%;
+				}
+			}
+		}
 
-    .filters {
-      padding: 0 2rem 1rem 2rem;
-      border-bottom: 2px solid #a0a0aa;
+		.filters {
+			padding: 0 2rem 1rem 2rem;
+			border-bottom: 2px solid #a0a0aa;
 
-      .title {
-        padding: .5rem 0;
-        font-size: 1.5rem;
-      }
+			.title {
+				padding: .5rem 0;
+				font-size: 1.5rem;
+			}
 
-      .planet-system {
-        .filter-item {
-          display: flex;
-          padding-bottom: .5rem;
+			.planet-system {
+				.filter-item {
+					display: flex;
+					padding-bottom: .5rem;
 
-          .discovery-checkbox-wrapper {
-            padding-right: 1em;
-            .discovery-checkbox:hover {
-              cursor: pointer;
-            }
+					.discovery-checkbox-wrapper {
+						padding-right: 1em;
 
-            .discovery-checkbox:active, .discovery-checkbox:checked:active {
-              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1);
-            }
+						.discovery-checkbox:hover {
+							cursor: pointer;
+						}
 
-            .discovery-checkbox:checked {
-              background: #e9ecee;
-              border: 1px solid #adb8c0;
-              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-              color: var(--text);
-            }
+						.discovery-checkbox:active, .discovery-checkbox:checked:active {
+							box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 1px 3px rgba(0, 0, 0, 0.1);
+						}
 
-            .discovery-checkbox:checked:after {
-              content: '\2714';
-              font-size: 14px;
-              position: absolute;
-              top: 0;
-              left: 3px;
-              color: var(--text);
-            }
-          }
-        }
-      }
-    }
-  }
+						.discovery-checkbox:checked {
+							background: #e9ecee;
+							border: 1px solid #adb8c0;
+							box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+							color: var(--text);
+						}
+
+						.discovery-checkbox:checked:after {
+							content: '\2714';
+							font-size: 14px;
+							position: absolute;
+							top: 0;
+							left: 3px;
+							color: var(--text);
+						}
+					}
+				}
+			}
+		}
+	}
 }
