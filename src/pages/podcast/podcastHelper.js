@@ -6,8 +6,8 @@ import tempImage from "../../../src/assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
  */
 export const podcastArray = [
 	{
-		image: tempImage,
 		title: "Title Episode",
+		image: tempImage,
 		episodeNumber: 1,
 		seasonNumber: 1,
 		tags: ["Planets", "Space", "Stars"],
@@ -22,8 +22,8 @@ export const podcastArray = [
 		spotifyLink: "https://open.spotify.com/",
 	},
 	{
+		title: "Other Episode",
 		image: tempImage,
-		title: "Title Episode",
 		episodeNumber: 2,
 		seasonNumber: 1,
 		tags: ["Asteroids", "Moon", "Earth"],
@@ -38,8 +38,8 @@ export const podcastArray = [
 		spotifyLink: "https://open.spotify.com/",
 	},
 	{
-		image: tempImage,
 		title: "Title Episode",
+		image: tempImage,
 		episodeNumber: 3,
 		seasonNumber: 1,
 		tags: ["Supernova", "Jupiter", "Astronaut"],
