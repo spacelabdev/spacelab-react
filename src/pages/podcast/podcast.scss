@@ -1,11 +1,35 @@
-.podcast-card {
+.page-wrap {
+	margin: 0 30vmin 0 30vmin;
+}
+
+.page-description {
+	text-align: left;
+	margin: 3rem 0 3rem 0;
+}
+
+.bold-text {
+	font-weight: bold;
+	font-size: 26px;
+}
+
+.search-bar {
 	display: flex;
-	justify-content: center;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+.podcast-card {
+	padding: 0;
+	margin-bottom: 2rem;
+	display: flex;
+	//justify-content: center;
 	align-items: center;
 	flex-wrap: nowrap;
-	width: 80%;
-	margin: auto;
-	padding: 1rem;
+}
+
+.podcast-image {
+	margin: 0;
+	padding: 0;
 }
 
 .info-box {
@@ -26,14 +50,14 @@
 
 .chip-container {
 	display: flex;
-	margin-bottom: .8rem;
+	margin-bottom: 0.8rem;
 }
 
 .stream-button {
 	box-sizing: border-box;
 	display: flex;
 	align-items: center;
-	padding-left: .5rem;
+	padding-left: 0.5rem;
 	width: 11rem;
 	height: 2.5rem;
 	margin-right: 0.5rem;
@@ -44,7 +68,7 @@
 }
 
 .stream-button div {
-	line-height: .5rem;
+	line-height: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;

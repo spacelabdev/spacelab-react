@@ -31,18 +31,32 @@ export default function Podcast() {
 	return (
 		<>
 			<HeroImage heroTitle="PODCAST" />
-			<SearchBar
-				data={podcastArray}
-				HandleSearchTermClick={displayPodcasts}
-			/>
-			{podcasts.map((podcast) => {
-				return (
-					<PodcastCard
-						key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
-						card={podcast}
+			<div className="page-wrap">
+				<div className="page-description">
+					<p>
+						<span className="bold-text">About:</span> ipsum dolor
+						sit amet, consectetur adipiscing elit. Urna, imperdiet
+						adipiscing libero commodo egestas ac pretium, at.
+						Viverra viverra quam non aliquet. Nec volutpat in morbi
+						molestie sem porttitor massa. Massa ac viverra montes,
+						maecenas tempus, lorem ultrices.{" "}
+					</p>
+				</div>
+				<div className="search-bar">
+					<SearchBar
+						data={podcastArray}
+						HandleSearchTermClick={displayPodcasts}
 					/>
-				);
-			})}
+				</div>
+				{podcasts.map((podcast) => {
+					return (
+						<PodcastCard
+							key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
+							card={podcast}
+						/>
+					);
+				})}
+			</div>
 			<Footer />
 		</>
 	);

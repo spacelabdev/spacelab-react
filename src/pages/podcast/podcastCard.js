@@ -32,7 +32,7 @@ export default function podcastCard({ card }) {
 
 	return (
 		<div className="podcast-card">
-			<div>
+			<div className="podcast-image">
 				<img
 					src={image}
 					alt="cute astronauts"
