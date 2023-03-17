@@ -5,6 +5,17 @@
 .page-description {
 	text-align: left;
 	margin: 3rem 0 3rem 0;
+	align-content: center;
+	justify-content: center;
+	text-align: center;
+
+	h3 {
+		margin: 1rem;
+	}
+
+	p {
+		margin: 1rem;
+	}
 }
 
 .bold-text {
@@ -16,66 +27,5 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-}
-
-.podcast-card {
-	padding: 0;
-	margin-bottom: 2rem;
-	display: flex;
-	//justify-content: center;
-	align-items: center;
-	flex-wrap: nowrap;
-}
-
-.podcast-image {
-	margin: 0;
-	padding: 0;
-}
-
-.info-box {
-	display: flex;
-	flex-direction: column;
-	width: 60%;
-	margin: 2rem;
-	align-items: flex-start;
-}
-
-.info-box p h2 h4 {
-	text-align: start;
-}
-
-.description {
-	text-align: left;
-}
-
-.chip-container {
-	display: flex;
-	margin-bottom: 0.8rem;
-}
-
-.stream-button {
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	padding-left: 0.5rem;
-	width: 11rem;
-	height: 2.5rem;
-	margin-right: 0.5rem;
-	background: #000000;
-	border: 2px solid #a6a6a6;
-	border-radius: 8px;
-	font-size: x-small;
-}
-
-.stream-button div {
-	line-height: 0.5rem;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
-
-.stream-button p {
-	color: white;
-	line-height: 1;
-	margin-left: 1rem;
+	margin-bottom: 1rem;
 }

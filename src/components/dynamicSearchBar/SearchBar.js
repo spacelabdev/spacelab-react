@@ -226,8 +226,26 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 
 	return (
 		<div className="search-bar">
-			<div id={"search-bar-div"}>
-				<div id={"searchInputs"}>
+			<div className={"search-bar-div"}>
+				<div
+					className={
+						isSearchBarActive
+							? "searchInputs highlighted"
+							: "searchInputs"
+					}
+				>
+					<div className="search-icon-div">
+						{searchTerm.length === 0 ? (
+							<img src={searchIcon} alt={"magnifying glass"} />
+						) : (
+							<img
+								src={closeIcon}
+								alt={"grey x"}
+								className="clear-button"
+								onClick={clearInput}
+							/>
+						)}
+					</div>
 					<input
 						type="search"
 						placeholder={placeholder}
@@ -237,25 +255,13 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 						onBlur={handleOnBlur}
 						onKeyDown={handleSearchResultSelection}
 					/>
-					<div
-						id="search-icon-div"
-						className={isSearchBarActive ? "focused" : ""}
-					>
-						{searchTerm.length === 0 ? (
-							<img src={searchIcon} alt={"magnifying glass"} />
-						) : (
-							<img
-								src={closeIcon}
-								alt={"grey x"}
-								id="clear-button"
-								onClick={clearInput}
-							/>
-						)}
-					</div>
 				</div>
 				{/* Display the results div only if search bar is in focus and if there is some filtered data */}
 				{isSearchBarActive && filteredSearchResults.length > 0 && (
-					<div id={"search-results-container"} ref={searchResultsDiv}>
+					<div
+						className={"search-results-container"}
+						ref={searchResultsDiv}
+					>
 						{/* mapping of dictionary words only; could extend search across dictionary definitions if needed */}
 						{filteredSearchResults.map((searchResult, key) => (
 							<div

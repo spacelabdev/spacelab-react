@@ -4,7 +4,7 @@ import Footer from "../../components/footer/footer";
 import SearchBar from "../../components/dynamicSearchBar/SearchBar";
 import { podcastArray } from "./podcastHelper";
 import "./podcast.scss";
-import PodcastCard from "./podcastCard";
+import PodcastCard from "./podcastCard/podcastCard";
 
 /**
  * Renders Podcast page
@@ -33,17 +33,12 @@ export default function Podcast() {
 			<HeroImage heroTitle="PODCAST" />
 			<div className="page-wrap">
 				<div className="page-description">
-					<p>
-						<span className="bold-text">About:</span> ipsum dolor
-						sit amet, consectetur adipiscing elit. Urna, imperdiet
-						adipiscing libero commodo egestas ac pretium, at.
-						Viverra viverra quam non aliquet. Nec volutpat in morbi
-						molestie sem porttitor massa. Massa ac viverra montes,
-						maecenas tempus, lorem ultrices.{" "}
-					</p>
+					<h3>There's so much to learn about Space!</h3>
+					<p>New episodes released every Monday!</p>
 				</div>
 				<div className="search-bar">
 					<SearchBar
+						placeholder={"Search"}
 						data={podcastArray}
 						HandleSearchTermClick={displayPodcasts}
 					/>

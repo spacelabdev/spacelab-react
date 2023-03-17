@@ -1,88 +1,83 @@
-#search-bar-div {
-  display: inline-block;
+.search-bar-div {
+	display: inline-block;
 }
 
-#searchInputs {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-
-  & input {
-    background-color: white;
-    font-size: 1rem;
-    padding: 15px;
-    height: 4rem;
-    width: 20rem;
-    // without borders the input text would shift when clicking on box / in focus
-    border: 2px solid white;
-    border-right: none;
-    border-radius: 5px 0 0 5px;
-
-    // pseudo class focus creates a border around the search box except for the right border
-    &:focus {
-      outline: none;
-      border: 2px solid #7000ff;
-      border-right: none;
-    }
-  }
-
-  & #search-icon-div {
-    display: grid;
-    place-content: center;
-    height: 4rem;
-    width: 4rem;
-    background-color: white;
-    outline: none;
-    border: 2px solid white;
-    border-left: none;
-    border-radius: 0 5px 5px 0;
-
-    // if if it has a class of focused, then create a border except for the left border
-    &.focused {
-      border: 2px solid #7000ff;
-      border-left: none;
-    }
-
-    & img {
-      width: 2rem;
-      height: 2rem;
-    }
-
-    & #clear-button {
-      cursor: pointer;
-      height: 1rem;
-      width: 1rem;
-    }
-  }
+.highlighted {
+	border: 2px solid #7000ff !important;
+	border-radius: 50px;
 }
 
-#search-results-container {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: absolute;
-  margin-top: 5px;
-  width: 24rem;
-  height: 12rem;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-  overflow: hidden;
-  overflow-y: auto;
-  border-radius: 5px;
+.searchInputs {
+	display: flex;
+	height: 2.5rem;
+	width: 100%;
+	border: 1px solid lightgray;
+	border-radius: 50px;
 
-  & .search-result {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-left: 1rem;
-    min-height: 2rem;
-    color: black;
-  }
+	& input {
+		color: lightgray;
+		background-color: transparent;
+		font-size: 1rem;
+		height: 2.5rem;
+		width: 70rem;
+		border: none;
+		// // without borders the input text would shift when clicking on box / in focus
 
-  & .search-result:hover,
-    .search-result.selected-search-result{
-    background-color: rgb(241, 241, 241);
-    cursor: pointer;
-    font-style: italic;
-  }
+		&:focus {
+			outline: none;
+			border: none;
+		}
+	}
+
+	& .search-icon-div {
+		display: grid;
+		place-content: center;
+		height: 2.5rem;
+		width: 4rem;
+		outline: none;
+		cursor: pointer;
+
+		& img {
+			width: 1.5rem;
+			height: 1.5rem;
+		}
+
+		& .clear-button {
+			cursor: pointer;
+			height: 0.8rem;
+			width: 0.8rem;
+		}
+	}
+}
+
+.search-results-container {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 25px;
+	width: 75%;
+	height: 12rem;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+	overflow: hidden;
+	overflow-y: auto;
+	border-radius: 5px;
+
+	& .search-result {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		padding-left: 1rem;
+		min-height: 2rem;
+		color: black;
+	}
+
+	& .search-result:hover,
+	.search-result.selected-search-result {
+		background-color: rgb(241, 241, 241);
+		cursor: pointer;
+		font-style: italic;
+	}
 }
