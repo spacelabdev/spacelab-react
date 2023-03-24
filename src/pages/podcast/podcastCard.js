@@ -3,6 +3,7 @@ import applePodcast from "../../assets/podcastAssets/apple-podcasts.svg";
 import spotify from "../../assets/podcastAssets/spotify.svg";
 import youtube from "../../assets/podcastAssets/youtube.svg";
 import "./podcast.scss";
+import Chip from "../../components/chip/Chip";
 
 /**
  * Renders Podcast Cards
@@ -25,47 +26,9 @@ export default function podcastCard({ card }) {
 		spotifyLink,
 	} = card;
 
-	const chipColors = {
-		orange: "#F05223",
-		gold: "#F3AA1E",
-		green: "#349F65",
-		purple: "#5041AA",
-		lightPurple: "#8923FF",
-		pink: "#F37D7E",
-	};
-
-	const getTagColor = (tag) => {
-		const { orange, gold, green, purple, lightPurple, pink } = chipColors;
-		let color;
-		switch (tag.toLowerCase()) {
-			case "planets": {
-				color = orange;
-				break;
-			}
-			case "space": {
-				color = gold;
-				break;
-			}
-			case "stars": {
-				color = green;
-				break;
-			}
-			case "asteroids": {
-				color = pink;
-				break;
-			}
-			case "astronaut": {
-				color = purple;
-				break;
-			}
-			default: {
-				color = lightPurple;
-			}
-		}
-		return color;
-	};
-
-	// const getChips = (tags) => {};
+	const chips = tags.map((tag) => {
+		return <Chip tag={tag} />;
+	});
 
 	return (
 		<div className="podcast-card">
@@ -85,21 +48,7 @@ export default function podcastCard({ card }) {
 				<h2
 					style={{ margin: 0, padding: "0rem 0rem .5rem 0rem" }}
 				>{`${title}: (S${seasonNumber}E${episodeNumber})`}</h2>
-				<div style={{ display: "flex" }}>
-					{tags.map((tag) => {
-						return (
-							<div
-								className="chip"
-								id={`chip-${tag}`}
-								style={{
-									backgroundColor: `${getTagColor(tag)}`,
-								}}
-							>
-								<p>{tag}</p>
-							</div>
-						);
-					})}
-				</div>
+				<div className="chip-container" style={{ display: "flex", marginBottom: ".8rem" }}>{chips ? chips : null}</div>
 				<h4>About:</h4>
 				<p className="description">{description}</p>
 				<p style={{ marginTop: "1rem" }}>{duration}</p>

@@ -4,7 +4,6 @@ import Footer from "../../components/footer/footer";
 import { podcastArray } from "./podcastHelper";
 import "./podcast.scss";
 import PodcastCard from "./podcastCard";
-import UnderConstruction from "../../components/underConstructionNotification/underConstruction";
 
 /**
  * Renders Podcast page
@@ -12,7 +11,6 @@ import UnderConstruction from "../../components/underConstructionNotification/un
  * @constructor
  */
 export default function Podcast() {
-	console.log("🚀 ~ file: podcast.js:5 ~ podcastArray", podcastArray);
 	return (
 		<>
 			<HeroImage heroTitle="PODCAST" />

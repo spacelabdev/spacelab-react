@@ -24,19 +24,9 @@
 	text-align: left;
 }
 
-.chip {
-	border-radius: 10rem;
-	border: 2px solid #a0a0a9;
-	margin-right: 1rem;
-	margin-bottom: .5rem;
-	padding: 0rem 1rem 0rem 1rem;
-}
-
-.chip p {
-	color: #ffff;
-	padding: 0;
-	margin: 0;
-	font-size: smaller;
+.chip-container {
+	display: flex;
+	margin-bottom: .8rem;
 }
 
 .stream-button {
