@@ -48,7 +48,7 @@ export default function podcastCard({ card }) {
 				<h2
 					style={{ margin: 0, padding: "0rem 0rem .5rem 0rem" }}
 				>{`${title}: (S${seasonNumber}E${episodeNumber})`}</h2>
-				<div style={{ display: "flex" }}>{chips ? chips : null}</div>
+				<div className="chip-container" style={{ display: "flex", marginBottom: ".8rem" }}>{chips ? chips : null}</div>
 				<h4>About:</h4>
 				<p className="description">{description}</p>
 				<p style={{ marginTop: "1rem" }}>{duration}</p>
