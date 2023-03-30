@@ -1,0 +1,87 @@
+.podcast-card {
+	//background: purple;
+	padding: 0;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	//flex-wrap: nowrap;
+}
+
+.podcast-image {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	border-left: 10px solid #7000ff;
+}
+
+.info-box {
+	//background: red;
+	display: flex;
+	flex-direction: column;
+	margin: 2rem;
+	align-items: flex-start;
+}
+
+.info-box h2 {
+	margin: 0;
+	padding: 0rem 0rem 0.5rem 0rem;
+	font-size: 25px;
+}
+
+.info-box h4 {
+	text-align: start;
+	font-size: 20px;
+}
+
+.info-box p {
+	font-size: 16px;
+}
+
+.description {
+	text-align: left;
+}
+
+.chip {
+	border-radius: 10rem;
+	border: none;
+	padding: 5px 15px;
+	margin-right: 1rem;
+	margin-bottom: 0.5rem;
+}
+
+.chip p {
+	color: #ffff;
+	padding: 0;
+	margin: 0;
+	font-size: smaller;
+}
+
+.stream-button {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	padding-left: 0.5rem;
+	width: 8.5rem;
+	height: 2.5rem;
+	margin-right: 0.5rem;
+	background: white;
+	border: 1px solid #a6a6a6;
+	border-radius: 8px;
+	font-size: x-small;
+}
+
+.stream-button div {
+	line-height: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.stream-button p {
+	color: black;
+	line-height: 1;
+	margin-left: 1rem;
+}

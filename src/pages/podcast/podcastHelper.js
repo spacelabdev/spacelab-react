@@ -1,4 +1,7 @@
 import tempImage from "../../../src/assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
+import galaxy from "../../assets/podcastAssets/Galaxy.png";
+import planet from "../../assets/podcastAssets/Planet.png";
+import planets from "../../assets/podcastAssets/Planets.png";
 
 /**
  * Array of Dates and descriptions for Spacelab History timeline
@@ -6,8 +9,8 @@ import tempImage from "../../../src/assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
  */
 export const podcastArray = [
 	{
-		image: tempImage,
-		title: "Title Episode",
+		title: "Our Solar System",
+		image: galaxy,
 		episodeNumber: 1,
 		seasonNumber: 1,
 		tags: ["Planets", "Space", "Stars"],
@@ -16,14 +19,14 @@ export const podcastArray = [
             Viverra viverra quam non aliquet. Nec volutpat in morbi
             molestie sem porttitor massa. Massa ac viverra montes,
             maecenas tempus, lorem ultrices.`,
-		datePosted: "02/08/2023",
-		duration: "1 hour and 3 min",
+		datePosted: "Oct 2, 2022",
+		duration: "54 Minutes",
 		youtubeLink: "https://www.youtube.com/",
 		spotifyLink: "https://open.spotify.com/",
 	},
 	{
-		image: tempImage,
-		title: "Title Episode",
+		title: "The Next Earth",
+		image: planet,
 		episodeNumber: 2,
 		seasonNumber: 1,
 		tags: ["Asteroids", "Moon", "Earth"],
@@ -32,14 +35,14 @@ export const podcastArray = [
             Viverra viverra quam non aliquet. Nec volutpat in morbi
             molestie sem porttitor massa. Massa ac viverra montes,
             maecenas tempus, lorem ultrices.`,
-		datePosted: "02/08/2023",
-		duration: "1 hour and 3 min",
+		datePosted: "Oct 9, 2022",
+		duration: "55 Minutes",
 		youtubeLink: "https://www.youtube.com/",
 		spotifyLink: "https://open.spotify.com/",
 	},
 	{
-		image: tempImage,
-		title: "Title Episode",
+		title: "5000 Exoplanets",
+		image: planets,
 		episodeNumber: 3,
 		seasonNumber: 1,
 		tags: ["Supernova", "Jupiter", "Astronaut"],
@@ -48,8 +51,8 @@ export const podcastArray = [
             Viverra viverra quam non aliquet. Nec volutpat in morbi
             molestie sem porttitor massa. Massa ac viverra montes,
             maecenas tempus, lorem ultrices.`,
-		datePosted: "02/08/2023",
-		duration: "1 hour and 3 min",
+		datePosted: "Oct 16, 2022",
+		duration: "50 Minutes",
 		youtubeLink: "https://www.youtube.com/",
 		spotifyLink: "https://open.spotify.com/",
 	},
