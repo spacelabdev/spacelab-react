@@ -16,16 +16,17 @@ export default function Podcast() {
 	const [podcasts, setPodcasts] = useState(podcastArray);
 
 	const displayPodcasts = (searchResult, context) => {
-		console.log(searchResult);
-		const podcastList = [];
-		podcastArray
-			.filter((e) => e.title === searchResult.title)
-			.map((pod) => {
-				return podcastList.push(pod);
-			});
-		console.log("List");
-		console.log(podcastList);
-		setPodcasts(podcastList);
+		if (searchResult !== "") {
+			const podcastList = [];
+			podcastArray
+				.filter((e) => e.title === searchResult.title)
+				.map((pod) => {
+					return podcastList.push(pod);
+				});
+			setPodcasts(podcastList);
+		} else {
+			setPodcasts(podcastArray);
+		}
 	};
 
 	return (
