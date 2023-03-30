@@ -1,5 +1,6 @@
 import React from "react";
-import applePodcast from "../../../assets/podcastAssets/apple-podcasts.svg";
+import tempImage from "../../../../src/assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
+//import applePodcast from "../../../assets/podcastAssets/apple-podcasts.svg";
 import spotify from "../../../assets/podcastAssets/spotify.svg";
 import youtube from "../../../assets/podcastAssets/youtube.svg";
 import "./podcastCard.scss";
@@ -14,6 +15,7 @@ import "./podcastCard.scss";
 export default function podcastCard({ card }) {
 	const {
 		image,
+		alt,
 		title,
 		episodeNumber,
 		seasonNumber,
@@ -25,85 +27,26 @@ export default function podcastCard({ card }) {
 		spotifyLink,
 	} = card;
 
-	const chipColors = {
-		orange: "#F05223",
-		gold: "#F3AA1E",
-		green: "#349F65",
-		purple: "#5041AA",
-		lightPurple: "#8923FF",
-		pink: "#F37D7E",
-	};
-
-	const getTagColor = (tag) => {
-		const { orange, gold, green, purple, lightPurple, pink } = chipColors;
-		let color;
-		switch (tag.toLowerCase()) {
-			case "planets": {
-				color = orange;
-				break;
-			}
-			case "space": {
-				color = gold;
-				break;
-			}
-			case "stars": {
-				color = green;
-				break;
-			}
-			case "asteroids": {
-				color = pink;
-				break;
-			}
-			case "astronaut": {
-				color = purple;
-				break;
-			}
-			default: {
-				color = lightPurple;
-			}
-		}
-		return color;
-	};
-
-	// const getChips = (tags) => {};
-
 	return (
 		<div className="podcast-card">
 			<div className="podcast-image">
 				<img
-					src={image}
-					alt="cute astronauts"
+					src={image ? image : tempImage}
+					alt={alt}
 					style={{
-						height: 350,
-						width: 350,
 						display: "block",
 						objectFit: "cover",
 					}}
 				/>
 			</div>
 			<div className="info-box">
-				<h2>{`${title}: (S${seasonNumber}E${episodeNumber})`}</h2>
-				<div style={{ display: "flex" }}>
-					{tags.map((tag, i) => {
-						return (
-							<div
-								className="chip"
-								key={i}
-								id={`chip-${tag}`}
-								style={{
-									backgroundColor: `${getTagColor(tag)}`,
-								}}
-							>
-								<p>{tag}</p>
-							</div>
-						);
-					})}
+				<div className="card-header">
+					<h2>{`${title}: (S${seasonNumber}E${episodeNumber})`}</h2>
+					<p className="description">{`About: ${description}`}</p>
+					<p style={{ margin: "1rem 0" }}>
+						{datePosted} · {duration}
+					</p>
 				</div>
-				<h4>About:</h4>
-				<p className="description">{description}</p>
-				<p style={{ margin: "1rem 0" }}>
-					{datePosted} · {duration}
-				</p>
 				<div style={{ display: "flex" }}>
 					<a
 						className="stream-button"
@@ -111,15 +54,31 @@ export default function podcastCard({ card }) {
 						target="_blank"
 						rel="noreferrer"
 					>
-						<img src={youtube} alt="youtube logo" />
+						<img
+							style={{
+								margin: 0,
+								padding: 0,
+							}}
+							src={youtube}
+							alt="youtube logo"
+						/>
 						<div
 							style={{
+								margin: 0,
+								padding: 0,
 								display: "flex",
 								flexDirection: "column",
 								textAlign: "center",
 							}}
 						>
-							<p style={{ fontSize: ".8rem" }}>Listen on</p>
+							<p
+								style={{
+									fontSize: ".6rem",
+									color: "gray",
+								}}
+							>
+								Listen on
+							</p>
 							<p style={{ fontSize: "1.2rem" }}>YouTube</p>
 						</div>
 					</a>
@@ -131,7 +90,14 @@ export default function podcastCard({ card }) {
 					>
 						<img src={spotify} alt="spotify logo" />
 						<div className="stream-button-text">
-							<p style={{ fontSize: ".8rem" }}>Listen on</p>
+							<p
+								style={{
+									fontSize: ".6rem",
+									color: "gray",
+								}}
+							>
+								Listen on
+							</p>
 							<p style={{ fontSize: "1rem" }}>Spotify</p>
 						</div>
 					</a>
