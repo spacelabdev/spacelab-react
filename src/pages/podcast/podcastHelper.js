@@ -1,7 +1,15 @@
-import tempImage from "../../../src/assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
 import galaxy from "../../assets/podcastAssets/Galaxy.png";
 import planet from "../../assets/podcastAssets/Planet.png";
 import planets from "../../assets/podcastAssets/Planets.png";
+
+export const termsArray = [
+	"Our Solar System",
+	"Planets",
+	"Exoplanets",
+	"Stars",
+	"Space",
+	"Earth",
+];
 
 /**
  * Array of Dates and descriptions for Spacelab History timeline
@@ -10,6 +18,7 @@ import planets from "../../assets/podcastAssets/Planets.png";
 export const podcastArray = [
 	{
 		title: "Our Solar System",
+		alt: "Galaxy",
 		image: galaxy,
 		episodeNumber: 1,
 		seasonNumber: 1,
@@ -27,6 +36,7 @@ export const podcastArray = [
 	{
 		title: "The Next Earth",
 		image: planet,
+		alt: "Purple planet with rings",
 		episodeNumber: 2,
 		seasonNumber: 1,
 		tags: ["Asteroids", "Moon", "Earth"],
@@ -43,6 +53,7 @@ export const podcastArray = [
 	{
 		title: "5000 Exoplanets",
 		image: planets,
+		alt: "Ring of multicolored planets",
 		episodeNumber: 3,
 		seasonNumber: 1,
 		tags: ["Supernova", "Jupiter", "Astronaut"],

@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import Footer from "../../components/footer/footer";
 import SearchBar from "../../components/dynamicSearchBar/SearchBar";
-import { podcastArray } from "./podcastHelper";
+import { termsArray, podcastArray } from "./podcastHelper";
 import "./podcast.scss";
 import PodcastCard from "./podcastCard/podcastCard";
+import Chip from "../../components/chip/Chip";
 
 /**
  * Renders Podcast page
@@ -16,17 +17,15 @@ export default function Podcast() {
 	const [podcasts, setPodcasts] = useState(podcastArray);
 
 	const displayPodcasts = (searchResult, context) => {
-		if (searchResult !== "") {
-			const podcastList = [];
-			podcastArray
-				.filter((e) => e.title === searchResult.title)
-				.map((pod) => {
-					return podcastList.push(pod);
-				});
-			setPodcasts(podcastList);
-		} else {
-			setPodcasts(podcastArray);
-		}
+		const podcastList = [];
+		podcastArray
+			.filter((e) =>
+				e.title.toLowerCase().includes(searchResult.title.toLowerCase())
+			)
+			.map((pod) => {
+				return podcastList.push(pod);
+			});
+		setPodcasts(podcastList);
 	};
 
 	return (
@@ -44,14 +43,31 @@ export default function Podcast() {
 						HandleSearchTermClick={displayPodcasts}
 					/>
 				</div>
-				{podcasts.map((podcast) => {
-					return (
-						<PodcastCard
-							key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
-							card={podcast}
-						/>
-					);
-				})}
+				<div className="chip-container">
+					{termsArray.map((term, index) => {
+						return (
+							<Chip
+								tag={term}
+								key={index}
+								onClick={() => displayPodcasts({ title: term })}
+							/>
+						);
+					})}
+				</div>
+				{podcasts.length > 0 ? (
+					podcasts.map((podcast) => {
+						return (
+							<PodcastCard
+								key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
+								card={podcast}
+							/>
+						);
+					})
+				) : (
+					<p style={{ fontSize: "1.2rem", padding: "2rem" }}>
+						No Podcasts Found
+					</p>
+				)}
 			</div>
 			<Footer />
 		</>

@@ -1,11 +1,17 @@
 .podcast-card {
-	//background: purple;
 	padding: 0;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
-	//flex-wrap: nowrap;
+	align-items: top;
+}
+
+.card-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: left;
+	padding: 0;
 }
 
 .podcast-image {
@@ -13,15 +19,18 @@
 	padding: 0;
 	height: 100%;
 	width: 100%;
+	max-width: 300px;
+	max-height: 300px;
 	display: flex;
 	border-left: 10px solid #7000ff;
 }
 
 .info-box {
-	//background: red;
+	padding: 0.5rem;
+	margin-left: 2rem;
 	display: flex;
 	flex-direction: column;
-	margin: 2rem;
+	justify-content: space-between;
 	align-items: flex-start;
 }
 
@@ -71,6 +80,10 @@
 	border: 1px solid #a6a6a6;
 	border-radius: 8px;
 	font-size: x-small;
+}
+
+.stream-button:hover {
+	text-decoration: none;
 }
 
 .stream-button div {

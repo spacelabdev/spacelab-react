@@ -226,66 +226,64 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 
 	return (
 		<div className="search-bar">
-			<div className={"search-bar-div"}>
-				<div
-					className={
-						isSearchBarActive
-							? "searchInputs highlighted"
-							: "searchInputs"
-					}
-				>
-					<div className="search-icon-div">
-						{searchTerm.length === 0 ? (
-							<img src={searchIcon} alt={"magnifying glass"} />
-						) : (
-							<img
-								src={closeIcon}
-								alt={"grey x"}
-								className="clear-button"
-								onClick={clearInput}
-							/>
-						)}
-					</div>
-					<input
-						type="search"
-						placeholder={placeholder}
-						value={searchTerm}
-						onChange={handleChange}
-						onFocus={handleOnFocus}
-						onBlur={handleOnBlur}
-						onKeyDown={handleSearchResultSelection}
-					/>
+			<div
+				className={
+					isSearchBarActive
+						? "searchInputs highlighted"
+						: "searchInputs"
+				}
+			>
+				<div className="search-icon-div">
+					{searchTerm.length === 0 ? (
+						<img src={searchIcon} alt={"magnifying glass"} />
+					) : (
+						<img
+							src={closeIcon}
+							alt={"grey x"}
+							className="clear-button"
+							onClick={clearInput}
+						/>
+					)}
 				</div>
-				{/* Display the results div only if search bar is in focus and if there is some filtered data */}
-				{isSearchBarActive && filteredSearchResults.length > 0 && (
-					<div
-						className={"search-results-container"}
-						ref={searchResultsDiv}
-					>
-						{/* mapping of dictionary words only; could extend search across dictionary definitions if needed */}
-						{filteredSearchResults.map((searchResult, key) => (
-							<div
-								className={`search-result ${
-									filteredSearchResultIndex === key
-										? "selected-search-result"
-										: ""
-								}`}
-								key={key}
-								onClick={() =>
-									onClickMultiFunction(searchResult, context)
-								}
-								tabIndex={0}
-							>
-								{searchResult[0]
-									? searchResult[0]
-									: searchResult.title
-									? searchResult.title
-									: "Not Found"}
-							</div>
-						))}
-					</div>
-				)}
+				<input
+					type="search"
+					placeholder={placeholder}
+					value={searchTerm}
+					onChange={handleChange}
+					onFocus={handleOnFocus}
+					onBlur={handleOnBlur}
+					onKeyDown={handleSearchResultSelection}
+				/>
 			</div>
+			{/* Display the results div only if search bar is in focus and if there is some filtered data */}
+			{isSearchBarActive && filteredSearchResults.length > 0 && (
+				<div
+					className={"search-results-container"}
+					ref={searchResultsDiv}
+				>
+					{/* mapping of dictionary words only; could extend search across dictionary definitions if needed */}
+					{filteredSearchResults.map((searchResult, key) => (
+						<div
+							className={`search-result ${
+								filteredSearchResultIndex === key
+									? "selected-search-result"
+									: ""
+							}`}
+							key={key}
+							onClick={() =>
+								onClickMultiFunction(searchResult, context)
+							}
+							tabIndex={0}
+						>
+							{searchResult[0]
+								? searchResult[0]
+								: searchResult.title
+								? searchResult.title
+								: "Not Found"}
+						</div>
+					))}
+				</div>
+			)}
 		</div>
 	);
 }

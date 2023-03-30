@@ -9,13 +9,9 @@ import "./Chip.scss";
  * @constructor
  */
 
-export default function chip({ tag }) {
-
+export default function Chip({ tag, onClick }) {
 	return (
-		<div
-			className="chip"
-			id={`chip-${tag}`}
-		>
+		<div className="chip" id={`chip-${tag}`} onClick={onClick}>
 			<p>{tag}</p>
 		</div>
 	);
