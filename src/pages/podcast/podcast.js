@@ -6,6 +6,8 @@ import { termsArray, podcastArray } from "./podcastHelper";
 import "./podcast.scss";
 import PodcastCard from "./podcastCard/podcastCard";
 import Chip from "../../components/chip/Chip";
+import NewsletterSubscribe from "../../components/newsletterSubscribe/newsletterSubscribe";
+import Astronaut from "../../assets/podcastAssets/Astronaut.jpg";
 
 /**
  * Renders Podcast page
@@ -54,20 +56,50 @@ export default function Podcast() {
 						);
 					})}
 				</div>
-				{podcasts.length > 0 ? (
-					podcasts.map((podcast) => {
-						return (
-							<PodcastCard
-								key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
-								card={podcast}
+				<div className="dropdown-container"></div>
+				<div className="podcast-container">
+					{podcasts.length > 0 ? (
+						podcasts.map((podcast) => {
+							return (
+								<PodcastCard
+									key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
+									card={podcast}
+								/>
+							);
+						})
+					) : (
+						<div>
+							<p
+								style={{
+									fontSize: "40px",
+									paddingTop: "2rem",
+									paddingBottom: "2rem",
+								}}
+							>
+								New Episodes Coming Soon, Stay Tuned!
+							</p>
+							<img
+								src={Astronaut}
+								alt="Astronaut floating in space"
+								style={{
+									width: "30%",
+									height: "auto",
+									margin: "auto",
+									paddingBottom: "8rem",
+								}}
 							/>
-						);
-					})
-				) : (
-					<p style={{ fontSize: "1.2rem", padding: "2rem" }}>
-						No Podcasts Found
-					</p>
-				)}
+							<p
+								style={{
+									fontSize: "30px",
+									paddingBottom: "2rem",
+								}}
+							>
+								Want To Stay Updated?
+							</p>
+							<NewsletterSubscribe />
+						</div>
+					)}
+				</div>
 			</div>
 			<Footer />
 		</>
