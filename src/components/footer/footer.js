@@ -1,9 +1,14 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./footer.scss";
-import {Link} from "react-router-dom";
-import {IconContext} from "react-icons";
-import {AiOutlineLinkedin, AiOutlineInstagram, AiOutlineTwitter} from "react-icons/ai";
+import { Link } from "react-router-dom";
+import { IconContext } from "react-icons";
+import {
+	AiOutlineLinkedin,
+	AiOutlineInstagram,
+	AiOutlineTwitter,
+} from "react-icons/ai";
 import AutoScroll from "../autoScroll/autoScroll";
+import NewsletterSubscribe from "../newsletterSubscribe/newsletterSubscribe";
 
 /**
  * Renders the footer
@@ -29,7 +34,7 @@ export default function Footer() {
 		<section className="footer-section">
 			<div className="content-container">
 				<div className="left-container">
-					<h2>Subscribe to our newsletter</h2>
+					{/* <h2>Subscribe to our newsletter</h2>
 					<p>
 						Sign up to learn about the latest discoveries, news and
 						more! Delivered weekly.
@@ -46,10 +51,11 @@ export default function Footer() {
 							onChange={handleChange}
 						/>
 						<button type="submit">Subscribe</button>
-					</form>
+					</form> */}
+					<NewsletterSubscribe />
 				</div>
 				<div className="right-container">
-					<AutoScroll/>
+					<AutoScroll />
 					<ul>
 						<li>
 							<Link to={"/about"} style={link_style}>
@@ -61,18 +67,13 @@ export default function Footer() {
 								Projects
 							</Link>
 						</li>
-						{/* <li>
-							<Link to={"/donate"} style={link_style}>
-								Donate
-							</Link>
-						</li> */}
 						<li>
 							<a
 								className="link_style"
 								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 								target="_blank"
 								rel="noreferrer"
-								style={{textDecoration: "none"}}
+								style={{ textDecoration: "none" }}
 							>
 								Donate
 							</a>
@@ -103,39 +104,42 @@ export default function Footer() {
 							</Link>
 						</li>
 						<li>
-							<a href = "https://app.termly.io/notify/84244fc8-3ee5-4874-a964-b5102a61463c" style={link_style}>Do Not Sell My Info</a>
+							<a
+								href="https://app.termly.io/notify/84244fc8-3ee5-4874-a964-b5102a61463c"
+								style={link_style}
+							>
+								Do Not Sell My Info
+							</a>
 						</li>
-						{/*Hidden until terms of use page is created*/}
-						{/*<li>Terms of Use</li>*/}
 					</ul>
 				</div>
 			</div>
 			<div className="socialmedia-container">
 				<center>
-					<hr/>
+					<hr />
 					<IconContext.Provider
-						value={{color: "D9D9D9", size: "2rem"}}
+						value={{ color: "D9D9D9", size: "2rem" }}
 					>
 						<a
 							href="https://www.linkedin.com/company/spacelab-space/"
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineLinkedin/>
+							<AiOutlineLinkedin />
 						</a>
 						<a
 							href="https://www.instagram.com/spacelab_space"
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineInstagram/>
+							<AiOutlineInstagram />
 						</a>
 						<a
 							href="https://twitter.com/SpaceLab_social"
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineTwitter/>
+							<AiOutlineTwitter />
 						</a>
 					</IconContext.Provider>
 					<h5>@2021 by SpaceLab</h5>

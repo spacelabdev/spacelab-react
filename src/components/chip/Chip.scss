@@ -10,6 +10,11 @@
 	cursor: pointer;
 }
 
+.chip:hover {
+	transform: scale(1.1);
+	transition: all 0.2s ease-in-out;
+}
+
 .chip p {
 	color: #ffff;
 	padding: 0;
