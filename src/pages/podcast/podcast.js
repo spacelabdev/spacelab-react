@@ -15,7 +15,6 @@ import Astronaut from "../../assets/podcastAssets/Astronaut.jpg";
  * @constructor
  */
 export default function Podcast() {
-	console.log("🚀 ~ file: podcast.js:5 ~ podcastArray", podcastArray);
 	const [podcasts, setPodcasts] = useState(podcastArray);
 
 	const displayPodcasts = (searchResult, context) => {
@@ -30,6 +29,11 @@ export default function Podcast() {
 		setPodcasts(podcastList);
 	};
 
+	const clearData = () => {
+		console.log("clearData");
+		setPodcasts(podcastArray);
+	};
+
 	return (
 		<>
 			<HeroImage heroTitle="PODCAST" />
@@ -40,9 +44,9 @@ export default function Podcast() {
 				</div>
 				<div className="search-bar">
 					<SearchBar
-						placeholder={"Search"}
 						data={podcastArray}
 						HandleSearchTermClick={displayPodcasts}
+						clearData={clearData}
 					/>
 				</div>
 				<div className="chip-container">

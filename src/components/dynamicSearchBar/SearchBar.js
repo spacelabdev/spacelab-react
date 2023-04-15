@@ -4,14 +4,16 @@ import searchIcon from "../../assets/componentAssets/magnifying_glass@0.5x.png";
 import closeIcon from "../../assets/componentAssets/close-icon@0.5x.png";
 import { UniversalContext } from "../../App";
 
-function SearchBar({ placeholder, data, HandleSearchTermClick }) {
+function SearchBar({ data, HandleSearchTermClick, clearData }) {
 	const context = useContext(UniversalContext);
 	const [searchTerm, setSearchTerm] = useState("");
+	const [placeHolder, setPlaceHolder] = useState("Search");
 	const [filteredSearchResults, setFilteredSearchResults] = useState([]);
 	const [isSearchBarActive, setIsSearchBarActive] = useState(false);
 	const [filteredSearchResultIndex, setFilteredSearchResultIndex] =
 		useState(null);
 	const searchResultsDiv = useRef();
+	const [clearButton, setClearButton] = useState(false);
 
 	/**
 	 * Make input element a controlled element - handle change inside the search bar input element
@@ -19,6 +21,8 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 	 */
 	const handleChange = (e) => {
 		setSearchTerm(e.target.value);
+		setPlaceHolder(e.target.value);
+		setClearButton(true);
 	};
 
 	/**
@@ -117,12 +121,24 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 
 	/* Clearing the input when function is called onClick of the close icon */
 	const clearInput = () => {
-		setFilteredSearchResults([]);
-		setSearchTerm("");
 		setIsSearchBarActive(false);
 		setFilteredSearchResultIndex(null);
 		// if the user uses the enter key to select filtered search term, this line removes focus from the search box
 		document.activeElement.blur();
+		setClearButton(false);
+	};
+
+	/* Clearing the input when function is called onClick of the close icon */
+	const reset = () => {
+		setFilteredSearchResults([]);
+		setSearchTerm("");
+		setPlaceHolder("Search");
+		setIsSearchBarActive(false);
+		clearData();
+		setFilteredSearchResultIndex(null);
+		// if the user uses the enter key to select filtered search term, this line removes focus from the search box
+		document.activeElement.blur();
+		setClearButton(false);
 	};
 
 	/**
@@ -133,6 +149,7 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 	 */
 	const handleOnFocus = (e) => {
 		setIsSearchBarActive(true);
+		setClearButton(true);
 	};
 
 	/**
@@ -234,20 +251,20 @@ function SearchBar({ placeholder, data, HandleSearchTermClick }) {
 				}
 			>
 				<div className="search-icon-div">
-					{searchTerm.length === 0 ? (
+					{!clearButton ? (
 						<img src={searchIcon} alt={"magnifying glass"} />
 					) : (
 						<img
 							src={closeIcon}
 							alt={"grey x"}
 							className="clear-button"
-							onClick={clearInput}
+							onClick={reset}
 						/>
 					)}
 				</div>
 				<input
 					type="search"
-					placeholder={placeholder}
+					placeholder={placeHolder}
 					value={searchTerm}
 					onChange={handleChange}
 					onFocus={handleOnFocus}
