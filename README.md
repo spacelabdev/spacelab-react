@@ -123,6 +123,11 @@ Make sure you have the latest `npm` package installed.
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
+5. To Run locally, you will need to use any node version >= 14 <= 16. Any other version you may receive an error. If you are using a mac you can install nvm to manage your node versions. (I suggest getting this if on Mac or Linux). For windows, there may be other node version managers, but I am not sure, so you may have to do some research. 
+   ```sh
+   nvm install 14
+   nvm use 14
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
