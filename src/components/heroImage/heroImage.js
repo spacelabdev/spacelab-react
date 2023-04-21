@@ -1,8 +1,8 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import "./heroImage.scss";
 import heroImage from "../../assets/componentAssets/felix-mittermeier-Knwea-mLGAg-unsplash.jpg";
-import Navigation from "../navigation/navigation";
-import {UniversalContext} from "../../App";
+import Navigation from "../navigation/mainNavMenu/navigation";
+import { UniversalContext } from "../../App";
 import PropTypes from "prop-types";
 
 /**
@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element}
  * @constructor
  */
-const HeroImage = ({heroTitle}) => {
+const HeroImage = ({ heroTitle }) => {
 	// Use heroTitle prop to define heroImage based on the component
 	const context = useContext(UniversalContext);
 	let pageTitle = context.pageTitle;
@@ -23,11 +23,25 @@ const HeroImage = ({heroTitle}) => {
 
 	return (
 		<>
-			<Navigation/>
+			<Navigation />
 			<div id={"hero-image-container"}>
-				<img id={"hero-image"} src={heroImage} alt={"milky way at night"}/>
+				<img
+					id={"hero-image"}
+					src={heroImage}
+					alt={"milky way at night"}
+				/>
 				{/* Logo for home page is an image. Id must be different so that different SCSS styling will apply. */}
-				<h1 id={pageTitle === "SPACE LAB" ? "home-page" : "hero-page"}><span>{pageTitle}</span></h1>
+				{pageTitle === "SPACE LAB" ? (
+					<div className="spacelab-container">
+						<h1 id="home-page">
+							<span>{pageTitle}</span>
+						</h1>
+					</div>
+				) : (
+					<h1 id="hero-page">
+						<span>{pageTitle}</span>
+					</h1>
+				)}
 			</div>
 		</>
 	);
@@ -42,6 +56,6 @@ HeroImage.propTypes = {
 
 HeroImage.defaultProps = {
 	heroTitle: "SPACELAB",
-}
+};
 
 export default HeroImage;

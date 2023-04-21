@@ -19,14 +19,28 @@
 
 	.subscription-form {
 		border-radius: 3px;
-		height: 5rem;
+		height: 4rem;
 		width: 100%;
 		margin-bottom: 5rem;
+		display: flex;
 
-		input {
+		.inner-wrap-left {
+			width: 100%;
+			display: flex;
+			justify-content: left;
+		}
+
+		.inner-wrap-center {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
+		.newsletter-subscribe-input {
 			height: auto;
+			margin-right: 10px;
 			max-width: 502px;
-			width: 30%;
+			width: 100%;
 			font-size: 12px;
 			padding: 0.75rem 1.5rem;
 
@@ -40,25 +54,6 @@
 				&::placeholder {
 					letter-spacing: 3px;
 				}
-			}
-		}
-
-		button {
-			padding: 0.75rem 0.25rem;
-			color: var(--pink);
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			font-size: 12px;
-			border-radius: 3px;
-			border: 2px solid var(--pink);
-			width: 90px;
-			margin: 4rem 0rem;
-			color: white;
-			background: #7000ff;
-
-			@media (min-width: 766px) {
-				width: 150px;
-				font-size: 18px;
 			}
 		}
 	}

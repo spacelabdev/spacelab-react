@@ -1,9 +1,10 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
-import Introduction from "./introductionSection";
-import HorizonSection from "./horizonSection";
-import SupportTheCauseSection from "./supportTheCauseSection";
+import DiversityInTechSection from "./homePageComponents/DiversityInTech/diversityInTech";
+import HorizonSection from "./homePageComponents/OnTheHorizon/horizonSection";
+import SupportTheCauseSection from "./homePageComponents/SupportTheCause/supportTheCauseSection";
 import Footer from "../../components/footer/footer";
+import BlogCarousel from "../../components/carouselComponents/blogCarousel/blogCarousel";
 import "./home.scss";
 
 /**
@@ -11,13 +12,14 @@ import "./home.scss";
  * @constructor
  */
 export default function Home() {
-    return (
-        <>
-            <HeroImage heroTitle="HOME"/>
-            <Introduction/>
-            <HorizonSection/>
-            <SupportTheCauseSection/>
-            <Footer/>
-        </>
-    );
-};
+	return (
+		<div className={"homepage-container"}>
+			<HeroImage heroTitle="HOME" />
+			<DiversityInTechSection />
+			<HorizonSection />
+			<SupportTheCauseSection />
+			<BlogCarousel />
+			<Footer />
+		</div>
+	);
+}

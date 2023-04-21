@@ -1,7 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import AutoScroll from "../autoScroll/autoScroll";
-import "./navButton.scss";
 import PropTypes from "prop-types";
 
 /**
@@ -12,16 +9,11 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element}
  * @constructor
  */
-const InternalNavButton = ({path, buttonText}) => {
+const InternalNavButton = ({ path, buttonText }) => {
 	return (
-		<Link
-			className="navigation-button"
-			to={path}
-			style={{textDecoration: "none"}}
-		>
-			<AutoScroll/>
-			{buttonText}
-		</Link>
+		<button>
+			<a href={path}>{buttonText}</a>
+		</button>
 	);
 };
 
@@ -34,11 +26,11 @@ InternalNavButton.propTypes = {
 	 * The text to be displayed on the button
 	 */
 	buttonText: PropTypes.string,
-}
+};
 
 InternalNavButton.defaultProps = {
 	path: null,
-	buttonText: "I need buttonText"
-}
+	buttonText: "I need buttonText",
+};
 
 export default InternalNavButton;

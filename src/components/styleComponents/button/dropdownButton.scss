@@ -3,34 +3,23 @@
 	flex-direction: column;
 
 	& > button {
-		position: relative;
-		background-color: var(--pink);
-		border: 1px solid transparent;
-		color: white;
-		display: inline-block;
-		font-weight: 400;
-		-webkit-user-select: none;
+		display: flex;
+		flex-direction: row;
 		user-select: none;
-		padding: 0.375rem 0.75rem;
+		padding: 10px 20px;
 		font-size: 1rem;
-		border-radius: 0.25rem;
-		transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-		margin: 0;
-		white-space: nowrap;
 
 		&:focus {
 			outline: none;
-			box-shadow: 0 0 0 .25rem var(--pink-alpha);
 		}
 
 		&:hover {
 			background-color: var(--pink-alpha);
-			border-color: var(--pink-alpha);
 		}
 
 		& img {
+			margin-left: 10px;
 			width: 1rem;
-			position: absolute;
 			bottom: 5px;
 			right: 5px;
 		}

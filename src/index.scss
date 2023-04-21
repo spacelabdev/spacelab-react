@@ -1,0 +1,123 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--pink: rgba(112, 0, 255);
+	--pink-alpha: rgba(112, 0, 255, 0.8);
+	--background: #1c1a22;
+	--text: #a0a0aa;
+	--table-header: #282c34;
+	--highlight-hover: rgb(241, 241, 241);
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+		"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/*Default Styles*/
+h2 {
+	font-size: 2.8em;
+	font-family: "Poppins", sans-serif;
+	color: white;
+	margin-bottom: 3rem;
+	@media (max-width: 766px) {
+		font-size: 2.5em;
+	}
+}
+
+h3 {
+	font-family: "Poppins", sans-serif;
+	font-weight: 100;
+	font-size: 1.5em;
+	color: white;
+	margin-bottom: 3rem;
+}
+
+p {
+	font-family: "Lato", sans-serif;
+	font-size: 1.4em;
+	line-height: 1.5;
+	color: #ffffff;
+}
+
+button {
+	cursor: pointer;
+	display: flex;
+	padding: 15px 30px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-size: 18px;
+	border-radius: 3px;
+	border: 2px solid #7000ff;
+	background-color: #1c1a22;
+	color: white;
+	a {
+		color: white;
+		text-decoration: none;
+	}
+	a:hover {
+		color: white;
+		text-decoration: none;
+	}
+}
+
+button:hover {
+	background: #7000ff;
+	border: 2px solid #7000ff;
+}

@@ -1,0 +1,79 @@
+.horizon-section {
+	color: #ffffff;
+	text-align: left;
+	margin-bottom: 6rem;
+
+	p {
+		color: #ffffff;
+	}
+
+	.bold {
+		font-weight: 700;
+	}
+
+	.line-break {
+		display: block;
+	}
+
+	.button-wrap {
+		margin: 4rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	.horizon-content-container {
+		display: flex;
+		height: 100%;
+		align-items: center;
+		justify-content: space-between;
+		max-width: var(--content-container);
+		padding: 80px 3rem;
+		margin: 4rem auto;
+		@media screen and (max-width: 800px) {
+			flex-direction: column;
+		}
+	}
+
+	.horizon-left-container {
+		width: 50%;
+		color: #ffffff;
+
+		div {
+			font-size: 30px;
+			padding-bottom: 1em;
+		}
+		@media screen and (max-width: 800px) {
+			width: 100%;
+		}
+		@media (min-width: 1024px) {
+			div {
+				font-size: 40px;
+			}
+		}
+	}
+
+	.horizon-right-container {
+		padding: 4rem;
+		margin: 0;
+		background-image: url("../../../../assets/exo-bg.png");
+		background-size: cover;
+		@media screen and (max-width: 800px) {
+			padding-top: 2.5em;
+			margin-top: 2rem;
+
+			div {
+				display: none;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			align-items: center;
+			color: #ffffff;
+
+			div {
+				font-family: "Seymour One", sans-serif;
+				font-size: 25px;
+			}
+		}
+	}
+}
