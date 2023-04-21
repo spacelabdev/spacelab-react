@@ -1,8 +1,9 @@
 import React, { useContext } from "react";
-import { UniversalContext } from "../../App";
+import { UniversalContext } from "../../../App";
 import { Carousel } from "react-bootstrap";
-import "./blog.scss";
-import placeholder from "../../assets/generalAssets/img_placeholder.png";
+import "./blogCarousel.scss";
+import placeholder from "../../../assets/generalAssets/img_placeholder.png";
+import InternalNavButton from "../../styleComponents/navigationButtons/internalNavButton";
 
 /**
  * Renders blog carousel items
@@ -52,26 +53,37 @@ export default function BlogCarousel() {
 				</Carousel.Item>
 			);
 		}
-	}else{
+	} else {
 		blogArray.push(
 			<Carousel.Item key={"Placeholder"}>
-					<div className={"blog-carousel-image-wrapper"}>
-							<img
-								className={"d-block"}
-								src={placeholder}
-								alt={"Unable to load Blog"}
-							/>
-						<Carousel.Caption>
-							<p className={"blog-title"}>Unable to load Blog Posts.</p>
-						</Carousel.Caption>
-					</div>
-				</Carousel.Item>
+				<div className={"blog-carousel-image-wrapper"}>
+					<img
+						className={"d-block"}
+						src={placeholder}
+						alt={"Unable to load Blog"}
+					/>
+					<Carousel.Caption>
+						<p className={"blog-title"}>
+							Unable to load Blog Posts.
+						</p>
+					</Carousel.Caption>
+				</div>
+			</Carousel.Item>
 		);
 	}
 
 	return (
 		<>
-			<Carousel>{blogArray}</Carousel>
+			<div id={"blog-container"}>
+				<div id={"blog-header"}>Featured Blogs</div>
+				<Carousel>{blogArray}</Carousel>
+			</div>
+			<div className={"archives-button-container"}>
+				<InternalNavButton
+					path={"/archives"}
+					buttonText={"View Full Blog Archives"}
+				/>
+			</div>
 		</>
 	);
-};
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import "./navButton.scss";
 import PropTypes from "prop-types";
 
 /**
@@ -10,17 +9,13 @@ import PropTypes from "prop-types";
  * @returns {JSX.Element}
  * @constructor
  */
-const ExternalNavButton = ({url, buttonText}) => {
+const ExternalNavButton = ({ url, buttonText }) => {
 	return (
-		<a
-			className="navigation-button"
-			href={url}
-			target="_blank"
-			rel="noreferrer"
-			style={{textDecoration: "none"}}
-		>
-			{buttonText}
-		</a>
+		<button>
+			<a href={url} target="_blank" rel="noreferrer">
+				{buttonText}
+			</a>
+		</button>
 	);
 };
 
@@ -33,6 +28,6 @@ ExternalNavButton.propTypes = {
 	 * Text to be displayed on the button
 	 */
 	buttonText: PropTypes.string,
-}
+};
 
 export default ExternalNavButton;

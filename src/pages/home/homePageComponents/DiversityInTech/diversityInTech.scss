@@ -1,0 +1,47 @@
+.diversity-in-tech-section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 6rem;
+
+	h2 {
+		margin-top: 2rem;
+	}
+
+	.button-wrap {
+		margin: 4rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	.content-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 550px;
+
+		.images-container {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			img {
+				width: 33.3%;
+				height: 300px;
+				object-fit: cover;
+			}
+		}
+		.about {
+			margin-top: 2rem;
+			display: flex;
+			flex-direction: column;
+			width: 40%;
+			justify-content: center;
+		}
+
+		@media screen and (max-width: 1150px) {
+			flex-direction: column;
+		}
+	}
+}

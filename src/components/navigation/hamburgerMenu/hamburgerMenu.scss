@@ -41,7 +41,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-	background: #7000FF;
+	background: #7000ff;
 }
 
 /* Sidebar wrapper styles */
@@ -80,11 +80,11 @@
 
 .hamburger-nav-links {
 	text-align: left;
-	padding-left: .5em;
+	padding-left: 0.5em;
 	padding-top: 2em;
 
 	div {
-		padding: .5em 0 !important;
+		padding: 0.5em 0 !important;
 	}
 }
 
@@ -94,7 +94,7 @@
 	text-align: left;
 	font-family: "Lato", sans-serif;
 	text-transform: uppercase;
-	letter-spacing: .25em;
+	letter-spacing: 0.25em;
 	@media (min-width: 767px) and (max-width: 1023px) {
 		font-size: 1.25em;
 	}

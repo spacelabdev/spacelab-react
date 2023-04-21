@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import "./heroImage.scss";
 import heroImage from "../../assets/componentAssets/felix-mittermeier-Knwea-mLGAg-unsplash.jpg";
-import Navigation from "../navigation/navigation";
+import Navigation from "../navigation/mainNavMenu/navigation";
 import { UniversalContext } from "../../App";
 import PropTypes from "prop-types";
 

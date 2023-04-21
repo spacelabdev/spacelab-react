@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
-import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png";
+import PartyPopper from "../../../assets/contactAssets/emojione_party-popper.png";
 import "./contactForm.scss";
 
 /**

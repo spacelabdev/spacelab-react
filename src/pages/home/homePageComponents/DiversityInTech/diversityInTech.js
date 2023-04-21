@@ -1,8 +1,9 @@
 import React from "react";
-import image1 from "../../assets/homeAssets/image1.jpg";
-import image2 from "../../assets/homeAssets/image2.jpg";
-import image3 from "../../assets/homeAssets/image3.jpg";
-import "./home.scss";
+import image1 from "../../../../assets/homeAssets/image1.jpg";
+import image2 from "../../../../assets/homeAssets/image2.jpg";
+import image3 from "../../../../assets/homeAssets/image3.jpg";
+import InternalNavButton from "../../../../components/styleComponents/navigationButtons/internalNavButton";
+import "./diversityInTech.scss";
 
 /**
  * Renders Introduction section
@@ -12,7 +13,6 @@ import "./home.scss";
 export default function DiversityInTechSection() {
 	return (
 		<section className="diversity-in-tech-section">
-			<h2>We Support Diversity In Tech</h2>
 			<div className="content-container">
 				<div className="images-container">
 					<img
@@ -36,9 +36,10 @@ export default function DiversityInTechSection() {
 						help diversify the tech space!
 					</p>
 					<div className="button-wrap">
-						<button>
-							<a href="/about">About Us</a>
-						</button>
+						<InternalNavButton
+							path="/about"
+							buttonText="About Us"
+						></InternalNavButton>
 					</div>
 				</div>
 			</div>

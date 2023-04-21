@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import PartyPopper from "../../assets/contactAssets/emojione_party-popper.png";
+import PartyPopper from "../../../assets/contactAssets/emojione_party-popper.png";
 import "./newsletterSubscribe.scss";
 
 /**
@@ -11,7 +11,7 @@ import "./newsletterSubscribe.scss";
  * @constructor
  */
 
-export default function NewsletterSubscribe() {
+export default function NewsletterSubscribe({ justifyContent = "left" }) {
 	const [state, handleSubmit] = useForm("xoqzkgve");
 	if (state.succeeded) {
 		return (
@@ -39,21 +39,34 @@ export default function NewsletterSubscribe() {
 				Delivered weekly.
 			</p>
 			<form className="subscription-form" onSubmit={handleSubmit}>
-				<input
-					type="email"
-					id="email"
-					placeholder="EMAIL"
-					name="email"
-					required
-				/>
-				<ValidationError
-					prefix="Email"
-					field="email"
-					errors={state.errors}
-				/>
-				<button type="submit" disabled={state.submitting}>
-					Subscribe
-				</button>
+				<div
+					className={
+						justifyContent === "center"
+							? `inner-wrap-center`
+							: "inner-wrap-left"
+					}
+				>
+					<input
+						className="newsletter-subscribe-input"
+						type="email"
+						id="email"
+						placeholder="EMAIL"
+						name="email"
+						required
+					/>
+					<ValidationError
+						prefix="Email"
+						field="email"
+						errors={state.errors}
+					/>
+					<button
+						className="newsletter-subscribe-button"
+						type="submit"
+						disabled={state.submitting}
+					>
+						Subscribe
+					</button>
+				</div>
 			</form>
 		</div>
 	);

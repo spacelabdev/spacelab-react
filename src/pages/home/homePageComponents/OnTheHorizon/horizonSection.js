@@ -1,6 +1,7 @@
 import React from "react";
-import planet from "../../assets/planet.svg";
-import "./home.scss";
+import planet from "../../../../assets/planet.svg";
+import InternalNavButton from "../../../../components/styleComponents/navigationButtons/internalNavButton";
+import "./horizon.scss";
 
 /**
  * Renders What's on the Horizon Section
@@ -31,9 +32,10 @@ export default function HorizonSection() {
 				</div>
 			</div>
 			<div className="button-wrap">
-				<button>
-					<a href="/about">Our Projects</a>
-				</button>
+				<InternalNavButton
+					path="/projects"
+					buttonText="Our Projects"
+				></InternalNavButton>
 			</div>
 		</section>
 	);

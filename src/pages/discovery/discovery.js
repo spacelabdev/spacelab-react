@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, { useContext, useEffect, useState } from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
 import {
@@ -12,13 +12,16 @@ import {
 	pixelBasedKoiVettingFiltersArray,
 } from "./discoveryHelper";
 import Footer from "../../components/footer/footer";
-import {getExoplanets} from "../../services/calTechApiRequest";
-import {UniversalContext} from "../../App";
-import {initialiseSelectedColumnsState, initialiseWhereFilterState} from "./initialiseState";
-import DropdownButton from "../../components/button/dropdownButton";
-import {downloadData} from "../../services/utilityFunctions";
+import { getExoplanets } from "../../services/calTechApiRequest";
+import { UniversalContext } from "../../App";
+import {
+	initialiseSelectedColumnsState,
+	initialiseWhereFilterState,
+} from "./initialiseState";
+import DropdownButton from "../../components/styleComponents/button/dropdownButton";
+import { downloadData } from "../../services/utilityFunctions";
 import "./discovery.scss";
-import SimpleButton from "../../components/button/simpleButton";
+import SimpleButton from "../../components/styleComponents/button/simpleButton";
 import CollapsibleSection from "../../components/collapsibleSection/collapsibleSection";
 import DataTable from "./table/dataTable";
 
@@ -28,8 +31,12 @@ import DataTable from "./table/dataTable";
  */
 export default function Discovery() {
 	const context = useContext(UniversalContext);
-	const [selectedColumns, setSelectedColumns] = useState(initialiseSelectedColumnsState());
-	const [whereFilter, setWhereFilter] = useState(initialiseWhereFilterState());
+	const [selectedColumns, setSelectedColumns] = useState(
+		initialiseSelectedColumnsState()
+	);
+	const [whereFilter, setWhereFilter] = useState(
+		initialiseWhereFilterState()
+	);
 	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false);
 	const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
 
@@ -54,31 +61,39 @@ export default function Discovery() {
 				where: whereFilter,
 				order: "",
 				format: format,
-			}).then(res => {
-				if (res.status === 200) {
-					if (isStateful) {
-						let data = res.data
-						if (typeof data === "string") {
-							data = parseBinaryDataIntoString(data);
+			})
+				.then((res) => {
+					if (res.status === 200) {
+						if (isStateful) {
+							let data = res.data;
+							if (typeof data === "string") {
+								data = parseBinaryDataIntoString(data);
+							}
+							context.setExoplanetData(data);
 						}
-						context.setExoplanetData(data);
+						if (isStorage) {
+							sessionStorage.setItem(
+								"selectedColumns",
+								JSON.stringify(selectedColumns)
+							);
+							sessionStorage.setItem(
+								"whereFilter",
+								JSON.stringify(whereFilter)
+							);
+						}
+						// ensure that sort icons in data table columns are reset since the newly received data is unsorted
+						setIsSortIconResetNeeded(true);
+						// Controls loading animation in dataTable.js. Setting to false here hides the loadingSpinner
+						// element in dataTable.js
+						setShowLoadingSpinner(false);
+					} else {
+						console.error("error retrieving exoplanetData");
 					}
-					if (isStorage) {
-						sessionStorage.setItem('selectedColumns', JSON.stringify(selectedColumns));
-						sessionStorage.setItem('whereFilter', JSON.stringify(whereFilter));
-					}
-					// ensure that sort icons in data table columns are reset since the newly received data is unsorted
-					setIsSortIconResetNeeded(true);
-					// Controls loading animation in dataTable.js. Setting to false here hides the loadingSpinner
-					// element in dataTable.js 
-					setShowLoadingSpinner(false);
-				} else {
-					console.error("error retrieving exoplanetData");
-				}
-				// return response such that it can be handled by the caller of this promise
-				// this is important for the data download function
-				return res;
-			}).catch(e => console.error(e));
+					// return response such that it can be handled by the caller of this promise
+					// this is important for the data download function
+					return res;
+				})
+				.catch((e) => console.error(e));
 		}
 	};
 
@@ -92,12 +107,12 @@ export default function Discovery() {
 	 */
 	const parseBinaryDataIntoString = (data) => {
 		const re = /[01]{32}/g;
-		const dataWithBinaryConvertedToString = data.replaceAll(re, match => {
+		const dataWithBinaryConvertedToString = data.replaceAll(re, (match) => {
 			return `"${match}"`;
 		});
 
 		return JSON.parse(dataWithBinaryConvertedToString);
-	}
+	};
 
 	// Make API call after selectedColumns and whereFilter states have been initialised but only once at component
 	// mount-time. Disabling the eslint warning in the next line since providing an empty dependency array is done
@@ -134,7 +149,8 @@ export default function Discovery() {
 		queryExoplanetDatabase(format, false, false)
 			.then((res) => {
 				// stringify data only if format is json
-				const data = format === "json" ? JSON.stringify(res.data) : res.data;
+				const data =
+					format === "json" ? JSON.stringify(res.data) : res.data;
 				downloadData(data, dataType, filename);
 			})
 			.catch((e) => console.error(e));
@@ -142,7 +158,7 @@ export default function Discovery() {
 
 	return (
 		<>
-			<HeroImage heroTitle="DISCOVERY"/>
+			<HeroImage heroTitle="DISCOVERY" />
 			<div id={"discovery-title"}>Current Discoveries</div>
 			<div id={"database-search-wrapper"}>
 				<DataTable
@@ -169,8 +185,8 @@ export default function Discovery() {
 							<DropdownButton
 								buttonLabel={"Download"}
 								dropdownItemClick={dropdownItemClick}
-								item1={{href: "#/action-1", label: "csv"}}
-								item2={{href: "#/action-2", label: "json"}}
+								item1={{ href: "#/action-1", label: "csv" }}
+								item2={{ href: "#/action-2", label: "json" }}
 							/>
 						</div>
 					</div>
@@ -274,7 +290,7 @@ export default function Discovery() {
 					</CollapsibleSection>
 				</div>
 			</div>
-			<Footer/>
+			<Footer />
 		</>
 	);
-};
+}

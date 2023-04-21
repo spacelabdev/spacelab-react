@@ -8,7 +8,7 @@ import {
 	AiOutlineTwitter,
 } from "react-icons/ai";
 import AutoScroll from "../autoScroll/autoScroll";
-import NewsletterSubscribe from "../newsletterSubscribe/newsletterSubscribe";
+import NewsletterSubscribe from "../forms/newsletterSubscribe/newsletterSubscribe";
 
 /**
  * Renders the footer
@@ -34,24 +34,6 @@ export default function Footer() {
 		<section className="footer-section">
 			<div className="content-container">
 				<div className="left-container">
-					{/* <h2>Subscribe to our newsletter</h2>
-					<p>
-						Sign up to learn about the latest discoveries, news and
-						more! Delivered weekly.
-					</p>
-					<form
-						className="subscription-form"
-						onSubmit={handleSubscription}
-					>
-						<input
-							type="email"
-							id="email"
-							placeholder="EMAIL"
-							value={email}
-							onChange={handleChange}
-						/>
-						<button type="submit">Subscribe</button>
-					</form> */}
 					<NewsletterSubscribe />
 				</div>
 				<div className="right-container">
