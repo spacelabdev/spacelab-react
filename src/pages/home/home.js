@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import DiversityInTechSection from "./homePageComponents/DiversityInTech/diversityInTech";
+import DiversityInTechStatisticsSection from "./homePageComponents/DiversityInTechStatistics/diversityInTechStatistics";
 import HorizonSection from "./homePageComponents/OnTheHorizon/horizonSection";
 import SupportTheCauseSection from "./homePageComponents/SupportTheCause/supportTheCauseSection";
 import Footer from "../../components/footer/footer";
@@ -16,6 +17,7 @@ export default function Home() {
 		<div className={"homepage-container"}>
 			<HeroImage heroTitle="HOME" />
 			<DiversityInTechSection />
+			<DiversityInTechStatisticsSection />
 			<HorizonSection />
 			<SupportTheCauseSection />
 			<BlogCarousel />
