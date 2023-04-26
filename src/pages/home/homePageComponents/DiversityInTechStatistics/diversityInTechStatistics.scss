@@ -31,6 +31,8 @@
 .stats-column {
 	flex-direction: column;
 	align-items: stretch;
+	width: 50%;
+	min-width: 40rem;
 
 	h3 {
 		font-size: 2rem;
