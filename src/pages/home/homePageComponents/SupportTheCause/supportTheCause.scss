@@ -4,6 +4,10 @@
 	text-align: left;
 	color: white;
 	max-width: var(--content-container);
+	background-image: radial-gradient(
+		rgba(112, 0, 255, 0.8) 0%,
+		transparent 75%
+	);
 
 	.support-the-cause-header {
 		font-size: 28px;
