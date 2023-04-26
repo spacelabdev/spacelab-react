@@ -20,6 +20,7 @@ export default function Home() {
 			<DiversityInTechStatisticsSection />
 			<HorizonSection />
 			<SupportTheCauseSection />
+			{/* <ContactUsSection /> */}
 			<BlogCarousel />
 			<Footer />
 		</div>
