@@ -103,16 +103,18 @@ export default function GlossaryList() {
 						T - Z
 					</span>
 				</div>
-				<SearchBar
-					placeholder="Enter search term..."
-					data={glossaryTermsArray}
-					HandleSearchTermClick={handleGlossarySearchTermClick}
-				/>
+				<div className="searchbar-container">
+					<SearchBar
+						placeholder="Enter search term..."
+						data={glossaryTermsArray}
+						HandleSearchTermClick={handleGlossarySearchTermClick}
+					/>
+				</div>
 			</div>
 			<div id={"glossary-term-wrapper"}>{glossaryTermArray}</div>
 			<div id={"glossary-term-name"}>{context.currentGlossaryTerm}</div>
 			<div id={"glossary-term-def"}>
-				{context.glossaryTermDef}
+				<p>{context.glossaryTermDef}</p>
 				{imageDiv}
 				<div id={"glossary-term-image-source-wrapper"}>
 					<a
