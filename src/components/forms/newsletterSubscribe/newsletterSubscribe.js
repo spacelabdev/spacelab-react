@@ -33,41 +33,67 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 
 	return (
 		<div className="newsletter-subscribe">
-			<h2>Subscribe to our newsletter</h2>
-			<p>
-				Sign up to learn about the latest discoveries, news and more!
-				Delivered weekly.
-			</p>
-			<form className="subscription-form" onSubmit={handleSubmit}>
-				<div
-					className={
-						justifyContent === "center"
-							? `inner-wrap-center`
-							: "inner-wrap-left"
-					}
-				>
-					<input
-						className="newsletter-subscribe-input"
-						type="email"
-						id="email"
-						placeholder="EMAIL"
-						name="email"
-						required
-					/>
-					<ValidationError
-						prefix="Email"
-						field="email"
-						errors={state.errors}
-					/>
-					<button
-						className="newsletter-subscribe-button"
-						type="submit"
-						disabled={state.submitting}
+			<div className="inner-wrap">
+				<h2>Subscribe to our newsletter</h2>
+				<p>
+					Sign up to learn about the latest discoveries, news and
+					more! Delivered weekly.
+				</p>
+				<form className="subscription-form" onSubmit={handleSubmit}>
+					<div
+						className={
+							justifyContent === "center"
+								? `inner-wrap-center`
+								: "inner-wrap-left"
+						}
 					>
-						Subscribe
-					</button>
-				</div>
-			</form>
+						<div
+							className={
+								justifyContent === "center"
+									? `name-wrap-center`
+									: "name-wrap-left"
+							}
+						>
+							<input
+								className="newsletter-subscribe-name-input"
+								type="firstName"
+								id="firstName"
+								placeholder="FIRST NAME"
+								name="firstName"
+								required
+							/>
+							<input
+								className="newsletter-subscribe-name-input"
+								type="lastName"
+								id="lastName"
+								placeholder="LAST NAME"
+								name="lastName"
+								required
+							/>
+						</div>
+						<input
+							className="newsletter-subscribe-input"
+							type="email"
+							id="email"
+							placeholder="EMAIL"
+							name="email"
+							required
+						/>
+						<ValidationError
+							prefix="Email"
+							field="email"
+							errors={state.errors}
+						/>
+						<button
+							className="newsletter-subscribe-button"
+							type="submit"
+							disabled={state.submitting}
+						>
+							Subscribe
+						</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	);
 }
