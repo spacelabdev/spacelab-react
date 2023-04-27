@@ -3,9 +3,9 @@
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	height: calc(550px); //70px is the nav bar
+	height: calc(600px);
 	background: #160d39;
-	margin-top: 70px;
+	margin-top: 70px; //70px is the nav bar
 
 	@media only screen and (max-width: 1024px) {
 		margin-top: 0;
@@ -13,9 +13,10 @@
 }
 
 #hero-image {
-	height: 550px;
+	height: 600px;
 	width: 100%;
 	object-fit: cover;
+	object-position: bottom;
 }
 
 #hero-page {

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./heroImage.scss";
-import heroImage from "../../assets/componentAssets/pawel-nolbert-unsplash.jpg";
+import heroImage from "../../assets/componentAssets/purple-sky-unsplash.jpg";
 import Navigation from "../navigation/mainNavMenu/navigation";
 import { UniversalContext } from "../../App";
 import PropTypes from "prop-types";
