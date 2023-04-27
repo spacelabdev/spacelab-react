@@ -4,6 +4,7 @@ import DiversityInTechSection from "./homePageComponents/DiversityInTech/diversi
 import DiversityInTechStatisticsSection from "./homePageComponents/DiversityInTechStatistics/diversityInTechStatistics";
 import HorizonSection from "./homePageComponents/OnTheHorizon/horizonSection";
 import SupportTheCauseSection from "./homePageComponents/SupportTheCause/supportTheCauseSection";
+import ContactUsSection from "./homePageComponents/ContactUs/contactUsSection";
 import Footer from "../../components/footer/footer";
 import BlogCarousel from "../../components/carouselComponents/blogCarousel/blogCarousel";
 import "./home.scss";
@@ -20,6 +21,7 @@ export default function Home() {
 			<DiversityInTechStatisticsSection />
 			<HorizonSection />
 			<SupportTheCauseSection />
+			<ContactUsSection />
 			<BlogCarousel />
 			<Footer />
 		</div>
