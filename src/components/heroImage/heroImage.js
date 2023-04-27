@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./heroImage.scss";
-import heroImage from "../../assets/componentAssets/felix-mittermeier-Knwea-mLGAg-unsplash.jpg";
+import heroImage from "../../assets/componentAssets/pawel-nolbert-unsplash.jpg";
 import Navigation from "../navigation/mainNavMenu/navigation";
 import { UniversalContext } from "../../App";
 import PropTypes from "prop-types";
@@ -18,7 +18,7 @@ const HeroImage = ({ heroTitle }) => {
 
 	// Determine if on home page for purposes of displaying Spacelab image
 	if (pageTitle === "" || pageTitle === "HOME") {
-		pageTitle = `SPACE LAB`;
+		pageTitle = `SPACELAB SUPPORTS DIVERSITY IN TECH`;
 	}
 
 	return (
@@ -30,18 +30,7 @@ const HeroImage = ({ heroTitle }) => {
 					src={heroImage}
 					alt={"milky way at night"}
 				/>
-				{/* Logo for home page is an image. Id must be different so that different SCSS styling will apply. */}
-				{pageTitle === "SPACE LAB" ? (
-					<div className="spacelab-container">
-						<h1 id="home-page">
-							<span>{pageTitle}</span>
-						</h1>
-					</div>
-				) : (
-					<h1 id="hero-page">
-						<span>{pageTitle}</span>
-					</h1>
-				)}
+				<h1 id="hero-page">{pageTitle}</h1>
 			</div>
 		</>
 	);
