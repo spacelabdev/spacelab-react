@@ -1,7 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {IconContext} from "react-icons";
-import {AiOutlineGithub, AiOutlineGlobal, AiOutlineLinkedin} from "react-icons/ai";
+import { IconContext } from "react-icons";
+import {
+	AiOutlineGithub,
+	AiOutlineGlobal,
+	AiOutlineLinkedin,
+} from "react-icons/ai";
 import Astronauts from "../../../../assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
 import "./memberCard.scss";
 
@@ -36,7 +40,7 @@ const MemberCard = (memberObject) => {
 
 	return (
 		<div className="member-card">
-			<img src={image} alt={`${member.fullName}.png`}/>
+			<img src={image} alt={`${member.fullName}.png`} />
 			<div className="member-card-text-container">
 				<p className="member-card-text-name">{member.fullName}</p>
 				<p className="member-card-text-title">{member.title}</p>
@@ -47,31 +51,37 @@ const MemberCard = (memberObject) => {
 				<p className="member-card-text-quote">{member.bioQuote}</p>
 				<div className={"member-card-link-container"}>
 					<IconContext.Provider
-						value={{color: "D9D9D9", size: "2rem"}}
+						value={{ color: "var(--text)", size: "2rem" }}
 					>
 						<a
-							className={`member-card-github ${hasGitHub ? "" : "hidden"}`}
+							className={`member-card-github ${
+								hasGitHub ? "" : "hidden"
+							}`}
 							href={member.gitHub}
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineGithub/>
+							<AiOutlineGithub />
 						</a>
 						<a
-							className={`member-card-github ${hasPortfolio ? "" : "hidden"}`}
+							className={`member-card-github ${
+								hasPortfolio ? "" : "hidden"
+							}`}
 							href={member.portfolio}
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineGlobal/>
+							<AiOutlineGlobal />
 						</a>
 						<a
-							className={`member-card-github ${hasLinkedIn ? "" : "hidden"}`}
+							className={`member-card-github ${
+								hasLinkedIn ? "" : "hidden"
+							}`}
 							href={member.linkedIn}
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineLinkedin/>
+							<AiOutlineLinkedin />
 						</a>
 					</IconContext.Provider>
 				</div>
@@ -89,6 +99,6 @@ MemberCard.propTypes = {
 
 MemberCard.defaultProps = {
 	memberObject: {},
-}
+};
 
 export default MemberCard;

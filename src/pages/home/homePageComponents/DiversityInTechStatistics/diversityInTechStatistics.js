@@ -30,6 +30,7 @@ export default function DiversityInTechStatistics() {
 						</p>
 					</div>
 				</div>
+				<h3>VS.</h3>
 				<div className="stats-column spacelab">
 					<h3>SpaceLab</h3>
 					<div className="stat-card">

@@ -3,7 +3,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: .5rem;
+	padding: 0.5rem;
 	position: relative;
 
 	.member-card-text-container {
@@ -12,23 +12,23 @@
 		background-image: linear-gradient(#9c58f1, #2b015f);
 		border-radius: 0 0 3% 3%;
 		position: absolute;
-		bottom: .5rem;
-		opacity: .9;
+		bottom: 0.5rem;
+		opacity: 0.9;
 	}
 
 	.member-card-details-container {
 		display: none;
 		background-image: linear-gradient(#9c58f1, #2b015f);
-		color: #FFFFFF;
-		opacity: .8;
+		color: #ffffff;
+		opacity: 0.8;
 		position: absolute;
 		height: 21rem;
 		width: 17.5rem;
 		border-radius: 3%;
 
 		.member-card-text-quote {
-			font-size: .75rem;
-			color: #FFFFFF;
+			font-size: 0.75rem;
+			color: #ffffff;
 			margin: 1.5rem;
 			text-align: left;
 		}
@@ -62,7 +62,6 @@
 		width: 17.5rem;
 		border-radius: 3%;
 		object-fit: cover;
-		//background-image: url("../../../../assets/planet.svg"); //fallback image
 		background-size: auto;
 	}
 
@@ -78,8 +77,8 @@
 
 		&-title {
 			color: #ffffff;
-			margin-top: .25rem;
-			font-size: .75rem;
+			margin-top: 0.25rem;
+			font-size: 0.75rem;
 		}
 	}
 }

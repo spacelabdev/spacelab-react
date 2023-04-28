@@ -5,12 +5,7 @@
 	justify-content: center;
 	margin-bottom: 6rem;
 
-	h2 {
-		margin-top: 2rem;
-	}
-
 	.button-wrap {
-		margin: 4rem;
 		display: flex;
 		justify-content: center;
 	}
@@ -20,15 +15,14 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		min-height: 550px;
 
 		.images-container {
 			display: flex;
 			flex-direction: row;
 			width: 100%;
+			height: auto;
 			img {
 				width: 33.3%;
-				height: 300px;
 				object-fit: cover;
 			}
 		}
@@ -36,8 +30,11 @@
 			margin-top: 2rem;
 			display: flex;
 			flex-direction: column;
-			width: 40%;
+			width: 70%;
 			justify-content: center;
+			@media screen and (min-width: 1150px) {
+				width: 50%;
+			}
 		}
 
 		@media screen and (max-width: 1150px) {

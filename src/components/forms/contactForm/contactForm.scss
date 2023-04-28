@@ -12,7 +12,7 @@
 	.contact-form-wrapper {
 		display: flex;
 		flex-direction: column;
-		background-color: #1c1a22;
+		background-color: var(--background);
 		color: white;
 		width: 100%;
 		text-align: left;
@@ -145,16 +145,16 @@
 
 	.submit-button-back_home {
 		border-radius: 10px;
-		border: 2px solid #7000ff;
+		border: 2px solid var(--neon-purple);
 		font-size: 36px;
 		font-family: "Poppins", sans-serif;
-		background-color: #1c1a22;
+		background-color: var(--background);
 		margin: 1em auto;
 
 		a {
 			text-decoration: none;
 			padding: 0 0.5em;
-			color: #7000ff;
+			color: var(--neon-purple);
 		}
 	}
 
@@ -163,6 +163,6 @@
 			color: white;
 		}
 
-		background-color: #7000ff;
+		background-color: var(--neon-purple);
 	}
 }

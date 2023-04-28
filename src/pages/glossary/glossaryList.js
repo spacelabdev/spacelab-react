@@ -69,14 +69,6 @@ export default function GlossaryList() {
 		highlightCurrentFilter(currentSelection);
 	};
 
-	// map over each element in the glossaryTermsArray and pass them to the GlossaryListItem component as props
-	let glossaryTermArray;
-	if (glossaryArray !== undefined) {
-		glossaryTermArray = glossaryArray.map((e, index) => {
-			return <GlossaryListItem element={e} key={index} />;
-		});
-	}
-
 	return (
 		<div className={"glossary-results-wrapper"}>
 			<div id={"glossary-button-container"}>
@@ -111,7 +103,13 @@ export default function GlossaryList() {
 					/>
 				</div>
 			</div>
-			<div id={"glossary-term-wrapper"}>{glossaryTermArray}</div>
+			{glossaryArray ? (
+				<div id={"glossary-term-wrapper"}>
+					{glossaryArray.map((e, index) => {
+						return <GlossaryListItem element={e} key={index} />;
+					})}
+				</div>
+			) : null}
 			<div id={"glossary-term-name"}>{context.currentGlossaryTerm}</div>
 			<div id={"glossary-term-def"}>
 				<p>{context.glossaryTermDef}</p>

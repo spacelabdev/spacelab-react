@@ -21,11 +21,11 @@ export default function DiversityInTechSection() {
 					/>
 					<img
 						src={image2}
-						alt="A person in a jean shirt sitting behind a computer"
+						alt="A person putting post-it notes on a wall"
 					/>
 					<img
 						src={image3}
-						alt="A group of team members putting post-it notes on a wall"
+						alt="A group of team members sitting at a table with their computers"
 					/>
 				</div>
 				<div className="about">

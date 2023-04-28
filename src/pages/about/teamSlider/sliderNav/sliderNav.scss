@@ -10,23 +10,23 @@
 
 		div {
 			margin: 0 auto;
-			font-family: 'Poppins', sans-serif;
+			font-family: "Poppins", sans-serif;
 			font-style: normal;
 			font-weight: 400;
 			font-size: 15px;
 			letter-spacing: -0.015em;
 			text-transform: uppercase;
-			color: #FFFFFF;
+			color: #ffffff;
 
 			&:hover {
 				cursor: pointer;
-				border-bottom: 1px solid #7000FF;
+				border-bottom: 1px solid var(--neon-purple);
 			}
 		}
 	}
 
 	.active {
-		border-bottom: 1px solid #7000FF;
+		border-bottom: 1px solid var(--neon-purple);
 	}
 
 	.inactive {

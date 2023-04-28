@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router } from "react-router";
-import "./index.scss";
+import "./globalStyles.scss";
 import App from "./App";
 import history from "./history";
 import reportWebVitals from "./reportWebVitals";

@@ -100,7 +100,7 @@ export default function Footer() {
 				<center>
 					<hr />
 					<IconContext.Provider
-						value={{ color: "D9D9D9", size: "2rem" }}
+						value={{ color: "var(--text)", size: "2rem" }}
 					>
 						<a
 							href="https://www.linkedin.com/company/spacelab-space/"

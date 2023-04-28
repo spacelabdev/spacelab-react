@@ -332,9 +332,9 @@ export const frontEnd = {
 		{
 			image: "https://imgur.com/HVUZ6bf.png",
 			fullName: "Laura Hiller",
-			title: "Lead Frontend & 3D Graphics Developer",
+			title: "Lead Front-End Developer",
 			bioQuote:
-				"Laura is a Software Developer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of experience in Web Development.",
+				"Laura is a Software Engineer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of development experience.",
 			gitHub: "https://github.com/lauraehiller",
 			portfolio: "https://lauraehiller.com/",
 			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",

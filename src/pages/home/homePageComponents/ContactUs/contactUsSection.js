@@ -6,7 +6,13 @@ import ContactUsImage from "../../../../assets/homeAssets/image5.png";
 export default function ContactUsSection() {
 	return (
 		<section id="contact-us-section">
-			<img src={ContactUsImage} className="contact-us-img" />
+			<div className="image-wrap">
+				<img
+					src={ContactUsImage}
+					alt="Three hooded figures staring up at the starry sky"
+					className="contact-us-img"
+				/>
+			</div>
 			<div className="text-content">
 				<h2>Want to be a part of the team?</h2>
 				<p>

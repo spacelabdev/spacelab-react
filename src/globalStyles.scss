@@ -6,13 +6,21 @@
 }
 
 :root {
-	--pink: rgba(112, 0, 255);
-	--pink-alpha: rgba(112, 0, 255, 0.8);
-	--background: #1c1a22;
-	--text: #a0a0aa;
-	--table-header: #282c34;
-	--highlight-hover: rgb(241, 241, 241);
-	margin: 0;
+	/*Color Palette*/
+	--neon-purple: #7000ff;
+	--black: black;
+	--dark-gray: #1c1a22;
+	--medium-gray: #282c34;
+	--light-gray: #d9d9d9;
+	--white: white;
+
+	/*Site Styles*/
+	--background: var(--dark-gray);
+	--highlight: var(--neon-purple);
+	--heading: var(--white);
+	--text: var(--light-gray);
+	--table-header: var(--medium-gray);
+	--highlight-hover: var(--neon-purple);
 }
 
 body {
@@ -69,7 +77,7 @@ select {
 
 /*Default Styles*/
 h2 {
-	font-size: 2.8em;
+	font-size: 2.4em;
 	font-family: "Poppins", sans-serif;
 	color: white;
 	margin-bottom: 3rem;
@@ -90,7 +98,7 @@ p {
 	font-family: "Lato", sans-serif;
 	font-size: 1.4em;
 	line-height: 1.5;
-	color: #ffffff;
+	color: var(--text);
 }
 
 button {
@@ -104,8 +112,8 @@ button {
 	text-transform: uppercase;
 	font-size: 18px;
 	border-radius: 3px;
-	border: 2px solid #7000ff;
-	background-color: #1c1a22;
+	border: 2px solid var(--neon-purple);
+	background-color: var(--background);
 	color: white;
 	a {
 		color: white;
@@ -118,6 +126,5 @@ button {
 }
 
 button:hover {
-	background: #7000ff;
-	border: 2px solid #7000ff;
+	background: var(--neon-purple);
 }

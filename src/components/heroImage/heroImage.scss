@@ -3,7 +3,7 @@
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	height: calc(600px);
+	height: calc(450px);
 	background: #160d39;
 	margin-top: 70px; //70px is the nav bar
 
@@ -13,10 +13,10 @@
 }
 
 #hero-image {
-	height: 600px;
+	height: 450px;
 	width: 100%;
 	object-fit: cover;
-	object-position: bottom;
+	object-position: 50% 85%;
 }
 
 #hero-page {

@@ -23,7 +23,7 @@ nav {
 			color: white;
 
 			&:hover {
-				color: #7000ff;
+				color: var(--neon-purple);
 			}
 		}
 	}
@@ -45,7 +45,7 @@ nav {
 			text-align: left;
 			position: fixed;
 			width: 100vw;
-			background-color: #000000;
+			background-color: black;
 			z-index: 99;
 			@media (min-width: 767px) and (max-width: 1023px) {
 				height: 4em;
@@ -108,7 +108,7 @@ nav {
 					display: none;
 					position: absolute;
 					z-index: 1;
-					background-color: #000000;
+					background-color: black;
 					margin-left: -25px;
 					padding: 25px 0 15px 20px;
 				}

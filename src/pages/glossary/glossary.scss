@@ -4,8 +4,8 @@
 
 .glossary-results-wrapper {
 	max-width: 1400px;
-	margin: 0 auto auto auto;
-	width: 90%;
+	margin: 0 auto;
+	width: 80%;
 	overflow-wrap: break-word;
 	color: white;
 	@media (max-width: 766px) {
@@ -14,9 +14,10 @@
 }
 
 #glossary-term-wrapper {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .searchbar-container {
@@ -59,7 +60,7 @@
 }
 
 .glossary-term:hover {
-	background: #7000ff;
+	background: var(--neon-purple);
 	cursor: pointer;
 }
 
@@ -106,9 +107,10 @@
 }
 
 #glossary-button-container {
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	padding: 2em;
 
@@ -123,15 +125,15 @@
 }
 
 #glossary-filter-button-A-J {
-	color: #7000ff;
-	border-bottom: 2px solid #7000ff;
+	color: var(--neon-purple);
+	border-bottom: 2px solid var(--neon-purple);
 }
 
 .glossary-filter-button {
-	color: black;
+	color: var(--text);
 	margin: 0 0.5em;
 	font-size: 1.75em;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid lightgray;
 	@media (min-width: 766px) {
 		font-size: 2.5em;
 	}
