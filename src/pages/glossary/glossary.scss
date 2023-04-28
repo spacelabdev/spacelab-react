@@ -1,23 +1,44 @@
 #glossary-wrapper {
-	background-color: #f2f7fc;
+	background-color: #1c1a22;
 }
 
 .glossary-results-wrapper {
 	max-width: 1400px;
-	margin: 0 auto auto auto;
-	width: 90%;
-	font-family: Roboto, serif;
+	margin: 0 auto;
+	width: 80%;
 	overflow-wrap: break-word;
-	color: black;
+	color: white;
+	@media (max-width: 766px) {
+		max-width: 95vw;
+	}
 }
 
 #glossary-term-wrapper {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
+}
+
+.searchbar-container {
+	width: 50%;
+	margin: 1em 0 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.search-icon-div img {
+		width: 1.5em;
+		margin: 0 30px;
+	}
+
+	@media (max-width: 800px) {
+		width: 100%;
+	}
 }
 
 #glossary-term-name {
+	font-family: "Poppins";
 	padding: 1em;
 	font-size: 1.75em;
 	@media (min-width: 766px) {
@@ -32,25 +53,37 @@
 	font-size: 1em;
 	color: white;
 	background: black;
+	border-radius: 6px;
 	@media (min-width: 766px) {
 		font-size: 1.5em;
 	}
 }
 
 .glossary-term:hover {
-	background: #7000ff;
+	background: var(--neon-purple);
 	cursor: pointer;
 }
 
 #glossary-term-def {
-	text-align: center;
-	font-size: 1em;
+	color: white;
 	padding-bottom: 3em;
 	max-width: 60vw;
 	height: 100%;
 	margin: auto;
+
 	@media (min-width: 767px) {
 		font-size: 1.5em;
+	}
+
+	@media (max-width: 820px) {
+		max-width: 80vw;
+	}
+
+	p {
+		color: rgb(224, 224, 224);
+		text-align: center;
+		font-size: 0.9em;
+		line-height: 2;
 	}
 
 	#glossary-term-image-wrapper {
@@ -74,55 +107,33 @@
 }
 
 #glossary-button-container {
+	width: 100%;
 	display: flex;
-	flex-direction: column-reverse;
-	justify-content: space-evenly;
-	padding-bottom: 2em;
-	.search-bar #searchInputs input {
-		width: 15rem;
-		height: 3rem;
-	}
-	.search-bar #searchInputs #search-icon-div {
-		height: 3rem;
-	}
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em;
+
 	#glossary-button-wrapper {
-		display: flex;
+		display: inline-block;
 	}
-	@media (min-width: 767px) and (max-width: 1023px) {
-		flex-direction: row;
+
+	@media (max-width: 900px) {
+		flex-direction: column;
 		justify-content: space-between;
-		.search-bar #searchInputs input {
-			width: 15rem;
-			height: 4rem;
-		}
-		.search-bar #searchInputs #search-icon-div {
-			height: 4rem;
-		}
-	}
-	@media (min-width: 1024px) {
-		flex-direction: row;
-		justify-content: space-between;
-		padding-bottom: 3em;
-		.search-bar #searchInputs input {
-			width: 20rem;
-			height: 4rem;
-		}
-		.search-bar #searchInputs #search-icon-div {
-			height: 4rem;
-		}
 	}
 }
 
 #glossary-filter-button-A-J {
-	color: #7000ff;
-	border-bottom: 2px solid #7000ff;
+	color: var(--neon-purple);
+	border-bottom: 2px solid var(--neon-purple);
 }
 
 .glossary-filter-button {
-	color: black;
-	margin: 0.5em;
+	color: var(--text);
+	margin: 0 0.5em;
 	font-size: 1.75em;
-	border-bottom: 2px solid black;
+	border-bottom: 2px solid lightgray;
 	@media (min-width: 766px) {
 		font-size: 2.5em;
 	}

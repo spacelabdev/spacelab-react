@@ -1,6 +1,7 @@
-import React, {useContext} from "react";
-import {UniversalContext} from "../../App";
-import './glossary.scss';
+import React, { useContext } from "react";
+import { UniversalContext } from "../../App";
+import Chip from "../../components/styleComponents/chip/Chip";
+import "./glossary.scss";
 
 /**
  * Renders individual glossary terms
@@ -19,17 +20,17 @@ export default function GlossaryListItem(props) {
 		if (glossaryTerm[4] !== undefined) {
 			context.setGlossaryTermImgSource(glossaryTerm[4]);
 		} else {
-			context.setGlossaryTermImgSource('');
+			context.setGlossaryTermImgSource("");
 		}
 	};
 
 	return (
-		<div className={'glossary-term-container'}>
-			<div
-				className={'glossary-term'}
+		<div className={"glossary-term-container"}>
+			<Chip
 				id={`glossary-term- ${glossaryTerm[0]}`}
-				onClick={handleTermClick}>{glossaryTerm[0]}
-			</div>
+				tag={glossaryTerm[0]}
+				onClick={handleTermClick}
+			/>
 		</div>
 	);
-};
+}

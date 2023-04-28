@@ -1,0 +1,38 @@
+.dropdown-button-container {
+	display: flex;
+	flex-direction: column;
+
+	& > button {
+		display: flex;
+		flex-direction: row;
+		user-select: none;
+		padding: 10px 20px;
+		font-size: 1rem;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			background-color: var(--neon-purple);
+		}
+
+		& img {
+			margin-left: 10px;
+			width: 1rem;
+			bottom: 5px;
+			right: 5px;
+		}
+	}
+}
+
+.dropdown-items-container {
+	background-color: white;
+	position: relative;
+	top: 5px;
+	border-radius: 0.25rem;
+
+	& .dropdown-item:hover {
+		background-color: var(--highlight-hover);
+	}
+}

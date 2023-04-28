@@ -47,11 +47,11 @@ export const highlightCurrentFilter = (currentSelection) => {
 		alphabetFilter.id === currentSelection
 			? alphabetFilter.setAttribute(
 					"style",
-					"color: #7000FF; border-bottom: 2px solid #7000FF;"
+					"color: var(--neon-purple); border-bottom: 2px solid var(--neon-purple);"
 			  )
 			: alphabetFilter.setAttribute(
 					"style",
-					"color: black; border-bottom: 2px solid black;"
+					"color: lightgray; border-bottom: 2px solid lightgray;"
 			  );
 	});
 };

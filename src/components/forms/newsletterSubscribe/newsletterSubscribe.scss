@@ -1,0 +1,130 @@
+.newsletter-subscribe {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
+	.inner-wrap {
+		width: 70%;
+	}
+
+	h2 {
+		font-family: "Poppins", sans-serif;
+		font-weight: 200;
+		font-style: italic;
+		font-size: 21px;
+		margin-bottom: 1.25rem;
+		color: white;
+		@media (min-width: 766px) {
+			font-size: 30px;
+		}
+		p {
+			padding-bottom: 1rem;
+			@media (min-width: 766px) {
+				display: inline-block;
+			}
+		}
+	}
+
+	.subscription-form {
+		height: auto;
+		width: 100%;
+		margin-bottom: 5rem;
+		display: flex;
+		flex-direction: column;
+
+		.inner-wrap-left {
+			width: 100%;
+			display: flex;
+			justify-content: left;
+			flex-direction: column;
+		}
+
+		.inner-wrap-center {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		.name-wrap-center {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.name-wrap-left {
+			display: flex;
+			flex-direction: row;
+			align-items: left;
+			margin-bottom: 15px;
+		}
+
+		input:focus {
+			border: none;
+			box-shadow: none;
+		}
+
+		.newsletter-subscribe-input {
+			display: flex;
+			width: 100%;
+			font-size: 12px;
+			border: none;
+			box-shadow: none;
+			padding: 0.75rem 0rem;
+			border-bottom: solid white 2px;
+			background-color: transparent;
+			margin-bottom: 20px;
+
+			&::placeholder {
+				letter-spacing: 1px;
+			}
+
+			@media (min-width: 766px) {
+				width: 100%;
+				font-size: 18px;
+				&::placeholder {
+					letter-spacing: 3px;
+				}
+			}
+		}
+
+		.newsletter-subscribe-name-input {
+			margin-right: 10px;
+			display: flex;
+			width: 50%;
+			font-size: 12px;
+			padding: 0.75rem 0rem;
+			border: none;
+			border-bottom: solid white 2px;
+			background-color: transparent;
+
+			&::placeholder {
+				letter-spacing: 1px;
+			}
+
+			@media (min-width: 766px) {
+				width: 50%;
+				font-size: 18px;
+				&::placeholder {
+					letter-spacing: 3px;
+				}
+			}
+		}
+	}
+}
+
+.submit-form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-width: 0;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	@media (min-width: 767px) and (max-width: 1023px) {
+		min-width: 280px;
+	}
+	@media (min-width: 1024px) {
+		width: 100%;
+	}
+}

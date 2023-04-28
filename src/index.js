@@ -1,19 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {Router} from 'react-router';
-import './index.css';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Router } from "react-router";
+import "./globalStyles.scss";
+import App from "./App";
 import history from "./history";
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from "./reportWebVitals";
 
 // .env to be used for dev environmental variables such as api keys. Should NOT be committed.
-require('dotenv').config();
+require("dotenv").config();
 
 ReactDOM.render(
-    <Router history={history}>
-        <App />
-    </Router>,
-    document.getElementById('root')
+	<Router history={history}>
+		<App />
+	</Router>,
+	document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

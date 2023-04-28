@@ -23,7 +23,7 @@
 	max-width: 300px;
 	max-height: 300px;
 	display: flex;
-	border-left: 10px solid #7000ff;
+	border-left: 10px solid var(--neon-purple);
 }
 
 .info-box {
@@ -52,21 +52,6 @@
 
 .description {
 	text-align: left;
-}
-
-.chip {
-	border-radius: 10rem;
-	border: none;
-	padding: 5px 15px;
-	margin-right: 1rem;
-	margin-bottom: 0.5rem;
-}
-
-.chip p {
-	color: #ffff;
-	padding: 0;
-	margin: 0;
-	font-size: smaller;
 }
 
 .stream-button {

@@ -5,8 +5,8 @@ import SearchBar from "../../components/dynamicSearchBar/SearchBar";
 import { termsArray, podcastArray } from "./podcastHelper";
 import "./podcast.scss";
 import PodcastCard from "./podcastCard/podcastCard";
-import Chip from "../../components/chip/Chip";
-import NewsletterSubscribe from "../../components/newsletterSubscribe/newsletterSubscribe";
+import Chip from "../../components/styleComponents/chip/Chip";
+import NewsletterSubscribe from "../../components/forms/newsletterSubscribe/newsletterSubscribe";
 import Astronaut from "../../assets/podcastAssets/Astronaut.jpg";
 
 /**
@@ -30,7 +30,6 @@ export default function Podcast() {
 	};
 
 	const clearData = () => {
-		console.log("clearData");
 		setPodcasts(podcastArray);
 	};
 
@@ -100,7 +99,7 @@ export default function Podcast() {
 							>
 								Want To Stay Updated?
 							</p>
-							<NewsletterSubscribe />
+							<NewsletterSubscribe justifyContent="center" />
 						</div>
 					)}
 				</div>

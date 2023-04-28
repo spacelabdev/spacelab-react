@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+	position: fixed;
+	width: 28px;
+	height: 22px;
+	right: 36px;
+	top: 15px;
+	@media (min-width: 767px) and (max-width: 1023px) {
+		height: 25px;
+		width: 30px;
+		top: 17px;
+		right: 40px;
+	}
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+	background: white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+	opacity: 90%;
+}
+
+.bm-burger-bars-click {
+	opacity: 90%;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+	height: 24px;
+	width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+	background: var(--neon-purple);
+}
+
+/* Sidebar wrapper styles */
+.bm-menu-wrap {
+	position: fixed;
+	height: 50vh !important;
+	width: 60vw !important;
+	@media (min-width: 767px) and (max-width: 1023px) {
+		height: 50vh !important;
+		width: 40vw !important;
+	}
+}
+
+/* General sidebar styles */
+.bm-menu {
+	background: #ffffff;
+	padding: 7px 27.6px 0;
+	font-size: 1.15em;
+	height: 60vh !important;
+	@media (min-width: 767px) and (max-width: 1023px) {
+		height: 45vh !important;
+		width: 50vw !important;
+	}
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+	color: var(--text);
+	padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.hamburger-nav-links {
+	text-align: left;
+	padding-left: 0.5em;
+	padding-top: 2em;
+
+	div {
+		padding: 0.5em 0 !important;
+	}
+}
+
+.hamburger-nav-link {
+	font-size: 1em;
+	color: black !important;
+	text-align: left;
+	font-family: "Lato", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	@media (min-width: 767px) and (max-width: 1023px) {
+		font-size: 1.25em;
+	}
+}

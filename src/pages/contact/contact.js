@@ -1,6 +1,6 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
-import ContactForm from "../../components/contactForm/contactForm";
+import ContactForm from "../../components/forms/contactForm/contactForm";
 import Footer from "../../components/footer/footer";
 
 /**
@@ -11,9 +11,9 @@ import Footer from "../../components/footer/footer";
 export default function Contact() {
 	return (
 		<>
-			<HeroImage heroTitle="CONTACT"/>
-			<ContactForm/>
-			<Footer/>
+			<HeroImage heroTitle="CONTACT" />
+			<ContactForm />
+			<Footer />
 		</>
 	);
-};
+}

@@ -1,0 +1,15 @@
+.standard-button {
+	display: flex;
+	flex-direction: row;
+	padding: 10px 20px;
+	font-size: 1rem;
+	user-select: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	&:hover {
+		background-color: var(--neon-purple);
+	}
+}

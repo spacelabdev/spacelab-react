@@ -12,7 +12,7 @@
 	position: sticky;
 	top: 0;
 	gap: 5px;
-	background-color: var(--background);
+	background-color: var(--background-color);
 
 	& .column-header {
 		flex: 0 0 6rem;
@@ -52,7 +52,7 @@
 			justify-content: space-between;
 
 			& p {
-				color: rgb(160, 160, 170);
+				color: var(--text);
 				font-weight: bold;
 				vertical-align: bottom;
 
@@ -72,12 +72,12 @@
 
 				// if the column is right-aligned, the sort icon needs to be left-aligned
 				&.align-left {
-					order: 1
+					order: 1;
 				}
 
 				// if the column is left-aligned, the sort icon needs to be right-aligned
 				&.align-right {
-					order: -1
+					order: -1;
 				}
 			}
 		}
@@ -94,7 +94,7 @@
 
 	& .row-element {
 		flex: 0 0 6rem;
-		color: rgb(160, 160, 170);
+		color: var(text);
 		padding: 3px;
 		word-break: break-all;
 		overflow-wrap: break-word;
@@ -111,5 +111,4 @@
 			text-align: right;
 		}
 	}
-
 }

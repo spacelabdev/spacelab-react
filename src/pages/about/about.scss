@@ -90,8 +90,8 @@
 
 		h2 {
 			font-size: 2.5rem;
-			color: #FFFFFF;
-			margin-bottom: .5rem;
+			color: white;
+			margin-bottom: 0.5rem;
 		}
 	}
 
@@ -101,19 +101,19 @@
 
 			&:focus {
 				outline: none;
-				box-shadow: 0 0 0 .25rem var(--pink-alpha);
+				box-shadow: 0 0 0 0.25rem var(--neon-purple);
 			}
 
 			&:hover {
-				background-color: var(--pink-alpha);
-				border-color: var(--pink-alpha);
+				background-color: var(--neon-purple);
+				border-color: var(--neon-purple);
 				cursor: pointer;
-				color: #FFFFFF;
+				color: #ffffff;
 			}
 		}
 
 		.active {
-			background-color: var(--pink);
+			background-color: var(--neon-purple);
 			border: 1px solid transparent;
 			color: white;
 			display: inline-block;
@@ -123,13 +123,14 @@
 			padding: 0.375rem 0.75rem;
 			font-size: 1rem;
 			border-radius: 0.25rem;
-			transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+			transition: background-color 0.15s ease-in-out,
+				box-shadow 0.15s ease-in-out;
 			white-space: nowrap;
 		}
 
 		.inactive {
-			background-color: #FFFFFF;
-			color: #1C1A22;
+			background-color: #ffffff;
+			color: var(--background-color);
 			display: inline-block;
 			font-weight: 400;
 			-webkit-user-select: none;
@@ -137,7 +138,8 @@
 			padding: 0.375rem 0.75rem;
 			font-size: 1rem;
 			border-radius: 0.25rem;
-			transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+			transition: background-color 0.15s ease-in-out,
+				box-shadow 0.15s ease-in-out;
 			white-space: nowrap;
 		}
 	}
@@ -160,7 +162,7 @@
 	}
 
 	.about-history-header {
-		color: #FFFFFF;
+		color: #ffffff;
 		font-size: 3rem;
 		margin: 0 auto;
 		padding: 5rem;
@@ -218,7 +220,7 @@
 			h3 {
 				margin-bottom: 0;
 				padding-left: 23px;
-				color: #FFFFFF;
+				color: white;
 				@media (max-width: 766px) {
 					font-size: 1.25em;
 					padding-left: 10px;
@@ -246,7 +248,7 @@
 				img {
 					height: 222px;
 					width: 2px;
-					background-color: #FFFFFF;
+					background-color: white;
 					margin-right: 20px;
 					@media (max-width: 766px) {
 						height: 280px;
@@ -264,7 +266,7 @@
 			}
 
 			p {
-				color: #FFFFFF;
+				color: white;
 				text-align: left;
 				padding: 1em 0 3em 0;
 				width: 85%;
@@ -275,7 +277,7 @@
 			}
 
 			.history-paragraph-last {
-				padding-bottom: .5em !important;
+				padding-bottom: 0.5em !important;
 			}
 		}
 	}

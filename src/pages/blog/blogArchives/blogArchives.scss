@@ -24,12 +24,12 @@
 		min-height: 250px;
 		margin: 1em auto;
 		text-decoration: none;
-		background-color: #9aa3aa;
+		background-color: white;
 		border-radius: 10px;
 		box-shadow: 25px 25px 13px -20px rgba(0, 0, 0, 0.95);
 
 		.blog-tile-image-wrapper {
-			padding-top: .5em;
+			padding-top: 0.5em;
 
 			img {
 				width: 280px;
@@ -38,7 +38,7 @@
 			}
 
 			.blog-title {
-				padding-top: .5em;
+				padding-top: 0.5em;
 				color: black;
 				width: 280px;
 			}

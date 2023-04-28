@@ -11,11 +11,11 @@ on tablets. Can be updated per UX team as necessary.
 	}
 
 	a {
-		color: #a0a0aa;
+		color: var(--text);
 	}
 
 	a:hover {
-		color: #7000ff;
+		color: var(--neon-purple);
 	}
 
 	h2 {
@@ -51,55 +51,6 @@ on tablets. Can be updated per UX team as necessary.
 		}
 	}
 
-	.subscription-form {
-		border-radius: 3px;
-		height: 5rem;
-		width: 100%;
-		margin-bottom: 5rem;
-
-		input {
-			height: auto;
-			max-width: 502px;
-			width: 30%;
-			font-size: 12px;
-			padding: 0.75rem 1.5rem;
-
-			&::placeholder {
-				letter-spacing: 1px;
-			}
-
-			@media (min-width: 766px) {
-				width: 50%;
-				font-size: 18px;
-				&::placeholder {
-					letter-spacing: 3px;
-				}
-			}
-		}
-
-		button {
-			padding: 0.75rem .25rem;
-			color: var(--pink);
-			letter-spacing: 2px;
-			text-transform: uppercase;
-			font-size: 12px;
-			border-radius: 3px;
-			border: 2px solid var(--pink);
-			width: 90px;
-			margin: 4rem 0rem;	
-			color: white;
-			background: #7000ff;
-
-			@media (min-width: 766px) {
-				width: 150px;
-				font-size: 18px;
-			}
-		}
-		// button:hover {
-			
-		// }
-	}
-
 	.left-container {
 		flex: 4;
 		padding-bottom: 1rem;
@@ -131,7 +82,7 @@ on tablets. Can be updated per UX team as necessary.
 	.socialmedia-container {
 		text-align: center;
 		padding-bottom: 2rem;
-		color: #d9d9d9;
+		color: var(--text);
 		font-family: Lato, sans-serif;
 		letter-spacing: 1px;
 
@@ -141,9 +92,9 @@ on tablets. Can be updated per UX team as necessary.
 
 		h5 {
 			width: 70%;
-			color: #d9d9d9;
+			color: var(--text);
 			max-width: 1100px;
-			margin: 10px 0 .5rem 0;
+			margin: 10px 0 0.5rem 0;
 			@media (min-width: 766px) {
 				width: 90%;
 			}

@@ -69,14 +69,6 @@ export default function GlossaryList() {
 		highlightCurrentFilter(currentSelection);
 	};
 
-	// map over each element in the glossaryTermsArray and pass them to the GlossaryListItem component as props
-	let glossaryTermArray;
-	if (glossaryArray !== undefined) {
-		glossaryTermArray = glossaryArray.map((e, index) => {
-			return <GlossaryListItem element={e} key={index} />;
-		});
-	}
-
 	return (
 		<div className={"glossary-results-wrapper"}>
 			<div id={"glossary-button-container"}>
@@ -103,16 +95,23 @@ export default function GlossaryList() {
 						T - Z
 					</span>
 				</div>
-				<SearchBar
-					placeholder="Enter search term..."
-					data={glossaryTermsArray}
-					HandleSearchTermClick={handleGlossarySearchTermClick}
-				/>
+				<div className="searchbar-container">
+					<SearchBar
+						data={glossaryTermsArray}
+						HandleSearchTermClick={handleGlossarySearchTermClick}
+					/>
+				</div>
 			</div>
-			<div id={"glossary-term-wrapper"}>{glossaryTermArray}</div>
+			{glossaryArray ? (
+				<div id={"glossary-term-wrapper"}>
+					{glossaryArray.map((e, index) => {
+						return <GlossaryListItem element={e} key={index} />;
+					})}
+				</div>
+			) : null}
 			<div id={"glossary-term-name"}>{context.currentGlossaryTerm}</div>
 			<div id={"glossary-term-def"}>
-				{context.glossaryTermDef}
+				<p>{context.glossaryTermDef}</p>
 				{imageDiv}
 				<div id={"glossary-term-image-source-wrapper"}>
 					<a
