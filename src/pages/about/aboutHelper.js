@@ -5,33 +5,33 @@
 export const aboutHistoryArray = [
 	[
 		"SPACELAB 2021.01.27",
-		"Data Scientist Matt Paterson is introduced to Dr. Andrew Vanderburg by Cal Tech\"s Dr. Jessie Christiansen " +
-		"in hopes that the former NASA Sagen Fellow can help with publishing a paper about machine learning and " +
-		"exoplanets. The interaction with Dr. Vanderburg and Dr. Christiansen lead Matt to reconnect with former " +
-		"classmates Ollie Jackson and Jon Zivku. The three are excited about space exploration and exoplanets and " +
-		"want to build a web application that allows all three to contribute; thus, SpaceLab was born."
+		'Data Scientist Matt Paterson is introduced to Dr. Andrew Vanderburg by Cal Tech"s Dr. Jessie Christiansen ' +
+			"in hopes that the former NASA Sagen Fellow can help with publishing a paper about machine learning and " +
+			"exoplanets. The interaction with Dr. Vanderburg and Dr. Christiansen lead Matt to reconnect with former " +
+			"classmates Ollie Jackson and Jon Zivku. The three are excited about space exploration and exoplanets and " +
+			"want to build a web application that allows all three to contribute; thus, SpaceLab was born.",
 	],
 	[
 		"SPACELAB 2021.01.05",
 		"The founders of The SpaceLab meet aspiring UX designers who were fresh out of school and ready to take " +
-		"the founders’ visions and designs towards a website for exoplanet discovery. The group recognizes that " +
-		"experience with cross-functional collaboration towards the development of real-world applications is " +
-		"something that early-career tech professionals often lack, specifically traditionally underrepresented " +
-		"groups in the tech industry. Upon recognizing this, the team decides that finding exoplanets it’s not " +
-		"just a one-time project. Instead, it will be the first of many projects built by the members and future " +
-		"community of The SpaceLab. This led the team at The SpaceLab to become a non-profit organization to " +
-		"help women, people of color, people from the LGBTQ+ community, and others currently underrepresented in " +
-		"the tech industry to gain experience with cross-functional teams in outer-space-related sciences."
+			"the founders’ visions and designs towards a website for exoplanet discovery. The group recognizes that " +
+			"experience with cross-functional collaboration towards the development of real-world applications is " +
+			"something that early-career tech professionals often lack, specifically traditionally underrepresented " +
+			"groups in the tech industry. Upon recognizing this, the team decides that finding exoplanets it’s not " +
+			"just a one-time project. Instead, it will be the first of many projects built by the members and future " +
+			"community of The SpaceLab. This led the team at The SpaceLab to become a non-profit organization to " +
+			"help women, people of color, people from the LGBTQ+ community, and others currently underrepresented in " +
+			"the tech industry to gain experience with cross-functional teams in outer-space-related sciences.",
 	],
 	[
 		"SPACELAB 2021.08.16",
 		"After building a team of front-end developers, SpaceLab launches its website, announcing its purpose and " +
-		"mission to the world. While SpaceLab is working on becoming a nonprofit organization, the organization is " +
-		"created upon a foundation of diversity and inclusion with the help of Meghan Slan, Director of DEIB. " +
-		"SpaceLab is currently working with roughly 25 cross-functional members to build its first project, " +
-		"Exoplanetarium, of which users will have the opportunity to explore exoplanets in our milky way system."
+			"mission to the world. While SpaceLab is working on becoming a nonprofit organization, the organization is " +
+			"created upon a foundation of diversity and inclusion with the help of Meghan Slan, Director of DEIB. " +
+			"SpaceLab is currently working with roughly 25 cross-functional members to build its first project, " +
+			"Exoplanetarium, of which users will have the opportunity to explore exoplanets in our milky way system.",
 	],
-]
+];
 
 /**
  * Object containing details for the Board of Directors
@@ -117,7 +117,8 @@ export const uxDesigners = {
 			image: "https://imgur.com/OnDOWG8.png",
 			fullName: "Venus Lumayag",
 			title: "UX Designer",
-			bioQuote: "Venus is a designer based in Southern California with a background in graphic design and illustration. In her professional work, she enjoys using creativity to solve design problems and puzzles. In her spare time, she enjoys video games, baking, and visiting local independent coffee shops.",
+			bioQuote:
+				"Venus is a designer based in Southern California with a background in graphic design and illustration. In her professional work, she enjoys using creativity to solve design problems and puzzles. In her spare time, she enjoys video games, baking, and visiting local independent coffee shops.",
 			gitHub: "",
 			portfolio: "https://www.venuslumayag.com/",
 			linkedIn: "",
@@ -135,7 +136,8 @@ export const uxDesigners = {
 			image: "https://imgur.com/paoGCSJ.png",
 			fullName: "Amarachi Nwachukwu",
 			title: "UI/UX (Podcaster)",
-			bioQuote: "I'm a Amarachi Nwachukw, a product designer who believes in solving problems through designs. I'm a critical thinker and possess a strong skill in UX design.",
+			bioQuote:
+				"I'm a Amarachi Nwachukw, a product designer who believes in solving problems through designs. I'm a critical thinker and possess a strong skill in UX design.",
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
@@ -153,7 +155,8 @@ export const uxDesigners = {
 			image: "",
 			fullName: "Nina Ulaganathan",
 			title: "UI/UX Designer",
-			bioQuote: "Hi everyone! My name is Nina Ulaganathan, and I am a second-year Cognitive Science major at UCSC. My focuses in my major include AI, and Human Computer Interaction. I am extremely passionate about UX Design, and I hope to be able to contribute those skills to Spacelab!",
+			bioQuote:
+				"Hi everyone! My name is Nina Ulaganathan, and I am a second-year Cognitive Science major at UCSC. My focuses in my major include AI, and Human Computer Interaction. I am extremely passionate about UX Design, and I hope to be able to contribute those skills to Spacelab!",
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
@@ -162,7 +165,8 @@ export const uxDesigners = {
 			image: "https://i.imgur.com/a8kkFwV.png",
 			fullName: "Eliza Gonzales",
 			title: "UX Designer",
-			bioQuote: "Hey! I am a UX Designer that recently graduated from University of California, Santa Cruz. I absolutely love design, and have been doing this for quite some time. ",
+			bioQuote:
+				"Hey! I am a UX Designer that recently graduated from University of California, Santa Cruz. I absolutely love design, and have been doing this for quite some time. ",
 			gitHub: "",
 			portfolio: "elizagonzales.com",
 			linkedIn: "",
@@ -288,9 +292,10 @@ export const uxDesigners = {
 			image: "https://imgur.com/AExJLUf.png",
 			fullName: "Victoria Gonzalez",
 			title: "UI/UX Designer",
-			bioQuote: "I’m a Mexican UX/UI Designer based in LA, in beautiful and sunny Southern California." + 
-			"I was a former bartender, and I’ve always enjoyed giving people great experiences and helping them in whatever their needs are. If I’m able to contribute for someone to feel good, it makes me feel twice as good."
-			+ "That’s why I choose to be in the UX field, because is not only delivering to your clients, is to deliver to all the users a great experience which will result in me feeling extremely satisfied because I was able to help!",
+			bioQuote:
+				"I’m a Mexican UX/UI Designer based in LA, in beautiful and sunny Southern California." +
+				"I was a former bartender, and I’ve always enjoyed giving people great experiences and helping them in whatever their needs are. If I’m able to contribute for someone to feel good, it makes me feel twice as good." +
+				"That’s why I choose to be in the UX field, because is not only delivering to your clients, is to deliver to all the users a great experience which will result in me feeling extremely satisfied because I was able to help!",
 			gitHub: "",
 			portfolio: "https://victoriagonzalezux.squarespace.com/",
 			linkedIn: "",
@@ -328,7 +333,8 @@ export const frontEnd = {
 			image: "https://imgur.com/HVUZ6bf.png",
 			fullName: "Laura Hiller",
 			title: "Lead Frontend & 3D Graphics Developer",
-			bioQuote: "Laura is a Software Developer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of experience in Web Development.",
+			bioQuote:
+				"Laura is a Software Developer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of experience in Web Development.",
 			gitHub: "https://github.com/lauraehiller",
 			portfolio: "https://lauraehiller.com/",
 			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
@@ -337,7 +343,8 @@ export const frontEnd = {
 			image: "",
 			fullName: "Joey Kozak",
 			title: "3D Developer/Full-stack Engineer",
-			bioQuote: "Exoplanetarium Lead @ SpaceLab | Solutions Engineer @ Orchestra | Trinity University & General Assembly Alum | Always excited to expand and refine my skills while building something awesome!",
+			bioQuote:
+				"Exoplanetarium Lead @ SpaceLab | Solutions Engineer @ Orchestra | Trinity University & General Assembly Alum | Always excited to expand and refine my skills while building something awesome!",
 			gitHub: "https://github.com/jrkozak92",
 			portfolio: "http://joeykozak.com/",
 			linkedIn: "",
@@ -346,16 +353,29 @@ export const frontEnd = {
 			image: "https://i.imgur.com/vutLmqW.png",
 			fullName: "Eric Matlock",
 			title: "Frontend Developer",
-			bioQuote: "I am a software developer. My mission is to create highly intuitive products with a keen eye for detail, functionality, and a cohesive user experience. Aside from my professional work, I am an avid science and sci-fi nerd, and I play a talkbox. Let's chat science and music!",
+			bioQuote:
+				"I am a software developer. My mission is to create highly intuitive products with a keen eye for detail, functionality, and a cohesive user experience. Aside from my professional work, I am an avid science and sci-fi nerd, and I play a talkbox. Let's chat science and music!",
 			gitHub: "",
 			portfolio: "https://terminal.turing.edu/alumni/1329-eric-matlock",
 			linkedIn: "",
 		},
 		{
+			image: "https://i.imgur.com/bOmCTkN.png",
+			fullName: "Meghan Bucher",
+			title: "Software Engineer",
+			bioQuote:
+				"I'm a full stack developer based in the San Francisco Bay Area. My passion is delivering engaging, memorable, and meaningful user experiences. Thriving in the front end, I enjoy working at the intersection of art and functionality.",
+			gitHub: "https://github.com/megbuch",
+			portfolio: "https://meghanbucher.work",
+			linkedIn: "https://linkedin.com/in/meghanbucher",
+		},
+		{
 			image: "",
 			fullName: "Mark Sturman",
 			title: "Software Engineer",
-			bioQuote: "Mark has a BS in Computer Science. He is currently volunteering at SpaceLab" + "SWE @ Chief | Full-Stack Eng @ SpaceLab ",
+			bioQuote:
+				"Mark has a BS in Computer Science. He is currently volunteering at SpaceLab" +
+				"SWE @ Chief | Full-Stack Eng @ SpaceLab ",
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
@@ -364,7 +384,8 @@ export const frontEnd = {
 			image: "https://i.imgur.com/pBo2sNX.png",
 			fullName: "Amanda Stern",
 			title: "Full Stack Engineer",
-			bioQuote: "My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
+			bioQuote:
+				"My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
 			gitHub: "",
 			portfolio: "https://www.amandastern.dev",
 		},
@@ -462,11 +483,10 @@ export const frontEnd = {
 			portfolio: "",
 			linkedIn: "",
 		},
-		
+
 		/* TODO: The following members listed BELOW can be deleted upon the full implementation of Cohorts*/
 
 		{
-			
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
 			fullName: "Jon Zivku",
 			title: "Software Engineer",
@@ -493,7 +513,7 @@ export const frontEnd = {
 			portfolio: "",
 			linkedIn: "",
 		},
-				{
+		{
 			image: "",
 			fullName: "Cat Moran",
 			title: "Software Developer | Intern",
@@ -543,7 +563,8 @@ export const backEnd = {
 			image: "https://i.imgur.com/pBo2sNX.png",
 			fullName: "Amanda Stern",
 			title: "Full Stack Engineer",
-			bioQuote: "My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
+			bioQuote:
+				"My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
 			gitHub: "",
 			portfolio: "https://www.amandastern.dev",
 		},
@@ -564,12 +585,13 @@ export const backEnd = {
 			gitHub: "https://github.com/ldukles",
 			portfolio: "https://lindsey-dukles-portfolio.netlify.app/",
 			linkedIn: "https://www.linkedin.com/in/lindsey-dukles/",
-		},		
+		},
 		{
 			image: "https://i.imgur.com/zuLfuhP.png",
 			fullName: "Kheffy Cervantez",
 			title: "Backend Engineer",
-			bioQuote: "I am a graduate of General Assembly\"s Full Stack Software Engineer Bootcamp, currently acting as a mentor for underrepresented communities in web development, with a focus on Node.js and Express.js.",
+			bioQuote:
+				'I am a graduate of General Assembly"s Full Stack Software Engineer Bootcamp, currently acting as a mentor for underrepresented communities in web development, with a focus on Node.js and Express.js.',
 			gitHub: "",
 			portfolio: "https://kheffycervantez.surge.sh",
 		},
@@ -580,7 +602,6 @@ export const backEnd = {
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "https://portfolio-site-seven-swart.vercel.app/",
-
 		},
 		{
 			image: "",
@@ -670,7 +691,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-		}
+		},
 	],
 };
 
@@ -689,7 +710,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",
-		},		
+		},
 		{
 			image: "https://i.imgur.com/FitwR6t.png",
 			fullName: "Lily Obeng",
@@ -706,7 +727,7 @@ export const dataScience = {
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
-			linkedin: "",			
+			linkedin: "",
 		},
 		{
 			image: "https://i.imgur.com/aLwVaRl.png",
@@ -722,19 +743,20 @@ export const dataScience = {
 			image: "https://i.imgur.com/aVfBvaL.png",
 			fullName: "Pramit Bhatia",
 			title: "Data Scientist | Machine Learning Engineer",
-			bioQuote: "Hello! I'm Pramit, a Computer Science Major @Georgia State University. I have a background in Data Science, and am interested in working on full stack development and machine learning." +
-			"I'm keen on engaging in various projects throughout my engineering journey and excited to contribute to SpaceLab!",
+			bioQuote:
+				"Hello! I'm Pramit, a Computer Science Major @Georgia State University. I have a background in Data Science, and am interested in working on full stack development and machine learning." +
+				"I'm keen on engaging in various projects throughout my engineering journey and excited to contribute to SpaceLab!",
 			gitHub: "https://github.com/pramitbhatia25",
 			portfolio: "pramitbhatia25.github.io/Portfolio",
 			linkedIn: "",
-
 		},
 		{
 			image: "https://i.imgur.com/nRhfo0Q.png",
 			fullName: "Alexandra Borriello",
 			title: "Data Science Intern",
-			bioQuote: "Hi! I am Alex Borriello, an Applied Math and Stats major at Stony Brook University, working at SpaceLab as a Data Science Intern."
-			+"I am passionate about using data science and machine learning to understand and improve the world using technology.",
+			bioQuote:
+				"Hi! I am Alex Borriello, an Applied Math and Stats major at Stony Brook University, working at SpaceLab as a Data Science Intern." +
+				"I am passionate about using data science and machine learning to understand and improve the world using technology.",
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
@@ -743,8 +765,9 @@ export const dataScience = {
 			image: "https://i.imgur.com/PbwKBSo.png",
 			fullName: "Shraddha Sonawane",
 			title: "Data Science Intern",
-			bioQuote: "I'm Shraddha; I'm a student and am currently pursuing a master's degree in data science. When I was applying for this internship, I was impressed with the organization's future goals and mission."
-			+"It's a pleasure to work with SpceLab's data science team. I'm looking forward to contributing to the Explonatarium Project.",
+			bioQuote:
+				"I'm Shraddha; I'm a student and am currently pursuing a master's degree in data science. When I was applying for this internship, I was impressed with the organization's future goals and mission." +
+				"It's a pleasure to work with SpceLab's data science team. I'm looking forward to contributing to the Explonatarium Project.",
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
@@ -916,7 +939,8 @@ export const webGL = {
 			image: "https://imgur.com/HVUZ6bf.png",
 			fullName: "Laura Hiller",
 			title: "Lead 3D Graphics Developer",
-			bioQuote: "Laura is a Software Developer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of experience in Web Development.",
+			bioQuote:
+				"Laura is a Software Developer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of experience in Web Development.",
 			gitHub: "https://github.com/lauraehiller",
 			portfolio: "https://lauraehiller.com/",
 			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
@@ -925,7 +949,8 @@ export const webGL = {
 			image: "",
 			fullName: "Joey Kozak",
 			title: "3D Developer/Full-stack Engineer",
-			bioQuote: "Exoplanetarium Lead @ SpaceLab | Solutions Engineer @ Orchestra | Trinity University & General Assembly Alum | Always excited to expand and refine my skills while building something awesome!",
+			bioQuote:
+				"Exoplanetarium Lead @ SpaceLab | Solutions Engineer @ Orchestra | Trinity University & General Assembly Alum | Always excited to expand and refine my skills while building something awesome!",
 			gitHub: "https://github.com/jrkozak92",
 			portfolio: "http://joeykozak.com/",
 			linkedIn: "",
@@ -934,11 +959,12 @@ export const webGL = {
 			image: "https://i.imgur.com/vutLmqW.png",
 			fullName: "Eric Matlock",
 			title: "Frontend Developer",
-			bioQuote: "I am a software developer. My mission is to create highly intuitive products with a keen eye for detail, functionality, and a cohesive user experience. Aside from my professional work, I am an avid science and sci-fi nerd, and I play a talkbox. Let's chat science and music!",
+			bioQuote:
+				"I am a software developer. My mission is to create highly intuitive products with a keen eye for detail, functionality, and a cohesive user experience. Aside from my professional work, I am an avid science and sci-fi nerd, and I play a talkbox. Let's chat science and music!",
 			gitHub: "",
 			portfolio: "https://terminal.turing.edu/alumni/1329-eric-matlock",
 			linkedIn: "",
-		},		
+		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png",
 			fullName: "Raysean Williams",
@@ -1016,7 +1042,8 @@ export const writers = {
 			image: "https://imgur.com/hpdfwjo.png",
 			fullName: "Diani Alvarenga", // Yes her preferred name is Diani
 			title: "Staff Writer",
-			bioQuote: "Diani is a student at North Central College and is obtaining her B.A in writing.",
+			bioQuote:
+				"Diani is a student at North Central College and is obtaining her B.A in writing.",
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/diana-alvarenga-52b8a4206",
@@ -1152,8 +1179,9 @@ export const administration = {
 			image: "https://i.imgur.com/6Zq0ldv.png",
 			fullName: "Lauren Owen",
 			title: "Marketing and Digital Analytics Manager",
-			bioQuote: "I create optimization reports for websites, mobile, and software. My data comes from Google/Adobe Analytics, user interviews, 1000's of research studies, and more."
-			+ "I also install and manage analytics software.",
+			bioQuote:
+				"I create optimization reports for websites, mobile, and software. My data comes from Google/Adobe Analytics, user interviews, 1000's of research studies, and more." +
+				"I also install and manage analytics software.",
 			gitHub: "",
 			portfolio: "https://www.laurenmarieowen.com/",
 			linkedIn: "",
@@ -1167,7 +1195,7 @@ export const administration = {
  */
 export const december2021Cohort = {
 	title: "december 2021 cohort",
-	members: [		
+	members: [
 		{
 			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
 			fullName: "Alex Anand",
@@ -1215,7 +1243,6 @@ export const december2021Cohort = {
 			portfolio: "",
 			linkedIn: "",
 		},
-
 	],
 };
 
@@ -1227,7 +1254,6 @@ export const additionalContributors = {
 	title: "additional contributors",
 	members: [
 		{
-			
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/jon_cxasx9.png",
 			fullName: "Jon Zivku",
 			title: "Software Engineer",
@@ -1255,7 +1281,7 @@ export const additionalContributors = {
 			linkedIn: "",
 		},
 	],
-}
+};
 
 /**
  * Object containing the data to populate the nav bar for the Current Teams slider
@@ -1296,7 +1322,7 @@ export const teamSliderNavLinks = {
 			activeFlag: "administration",
 		},
 	],
-}
+};
 
 /**
  * Object containing the data to populate the nav bar for the Past Cohorts slider
@@ -1313,4 +1339,4 @@ export const cohortSliderNavLinks = {
 			activeFlag: "additionalContributors",
 		},
 	],
-}
+};
