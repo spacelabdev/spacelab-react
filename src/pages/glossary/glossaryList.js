@@ -97,7 +97,6 @@ export default function GlossaryList() {
 				</div>
 				<div className="searchbar-container">
 					<SearchBar
-						placeholder="Enter search term..."
 						data={glossaryTermsArray}
 						HandleSearchTermClick={handleGlossarySearchTermClick}
 					/>

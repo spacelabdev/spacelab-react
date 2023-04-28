@@ -1,6 +1,7 @@
 .search-bar {
 	display: inline-block;
 	width: 100%;
+	position: relative;
 }
 
 .highlighted {
@@ -58,13 +59,14 @@
 	position: absolute;
 	margin-top: 40px;
 	margin-left: 25px;
-	width: 68%;
+	width: 90%;
 	height: 12rem;
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 	overflow: hidden;
 	overflow-y: auto;
 	border-radius: 5px;
+	z-index: 99;
 
 	& .search-result {
 		display: flex;

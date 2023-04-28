@@ -30,7 +30,6 @@ export default function Podcast() {
 	};
 
 	const clearData = () => {
-		console.log("clearData");
 		setPodcasts(podcastArray);
 	};
 
