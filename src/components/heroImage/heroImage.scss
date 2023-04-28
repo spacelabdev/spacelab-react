@@ -3,31 +3,39 @@
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	height: calc(348px); //70px is the nav bar
+	height: calc(600px);
 	background: #160d39;
+	margin-top: 70px; //70px is the nav bar
+
+	@media only screen and (max-width: 1024px) {
+		margin-top: 0;
+	}
 }
 
 #hero-image {
-	height: 348px;
+	height: 600px;
 	width: 100%;
 	object-fit: cover;
+	object-position: bottom;
 }
 
 #hero-page {
 	position: absolute;
-	width: 90%;
+	width: 80%;
 	color: white;
-	font-family: "Seymour One", sans-serif;
+	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 8vw;
 	letter-spacing: 3px;
-	top: 50%;
+	top: calc(50%);
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 98;
+
 	@media screen and (min-width: 766px) {
 		font-size: 6.25rem;
 	}
+
 	@media (min-width: 767px) and (max-width: 1023px) {
 		font-size: 4.25rem;
 	}
@@ -45,7 +53,7 @@
 
 #home-page {
 	margin: auto;
-	width: 100%;
+	width: 50%;
 	height: 50%;
 	z-index: 98;
 
@@ -54,8 +62,4 @@
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position-x: 50%;
-
-	span {
-		display: none; //adding span for screen reader accessibility
-	}
 }
