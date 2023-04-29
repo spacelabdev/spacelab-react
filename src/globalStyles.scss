@@ -128,3 +128,22 @@ button {
 button:hover {
 	background: var(--neon-purple);
 }
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--medium-gray);
+	border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--neon-purple);
+}
