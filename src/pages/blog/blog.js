@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../../components/heroImage/heroImage";
 import BlogCarousel from "../../components/carouselComponents/blogCarousel/blogCarousel";
+import BlogArchives from "../../components/blogArchives/blogArchives";
 import Footer from "../../components/footer/footer";
 
 /**
@@ -13,6 +14,7 @@ export default function Blog() {
 		<>
 			<HeroImage heroTitle="BLOG" />
 			<BlogCarousel />
+			<BlogArchives />
 			<Footer />
 		</>
 	);
