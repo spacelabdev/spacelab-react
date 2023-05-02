@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import CurrentTeamSlider from "./teamSlider/currentTeam/currentTeamSlider";
 import CohortsSlider from "./teamSlider/cohorts/cohortsSlider";
 import "./about.scss";
@@ -9,37 +9,16 @@ import "./about.scss";
  * @constructor
  */
 export default function AboutTeamSliderSection() {
-	const [activeComponents, setActiveComponents] = useState(['currentTeam', 'currentTeamSlider']);
-
-	const teamToggle = (buttonId) => {
-		setActiveComponents([buttonId, `${buttonId}Slider`]);
-	};
-
 	return (
-		<section id={'about-team-slider-section'}>
+		<section id={"about-team-slider-section"}>
 			<div className="team-slider-header">
 				<h2 className="meet-our-team">Meet Our Team</h2>
 			</div>
-			{/*<div className="about-team-toggle">
-			{  TODO: The code should be uncommented once we are ready to implement the cohorts tab
-			and move team members from the active team to their respective cohorts. */
-			/* <button id={'currentTeam'}	
-				        className={`toggle-button ${activeComponents[0] === 'currentTeam' ? 'active' : 'inactive'}`}	
-				        onClick={() => teamToggle('currentTeam')}	
-				>Current Team	
-				</button>	
-				<button id={'pastCohorts'}	
-				        className={`toggle-button ${activeComponents[0] === 'pastCohorts' ? 'active' : 'inactive'}`}	
-				        onClick={() => teamToggle('pastCohorts')}	
-				>Past Cohorts	
-				</button>
-			</div> */}
-			<CurrentTeamSlider id={'currentTeamSlider'}
-			                   toggle={`${activeComponents[1] === 'currentTeamSlider' ? '' : 'hidden'}`}
+			<CurrentTeamSlider
+				id={"currentTeamSlider"}
+				toggle="currentTeamSlider"
 			/>
-			<CohortsSlider id={'pastCohortsSlider'}
-			               toggle={`${activeComponents[1] === 'pastCohortsSlider' ? '' : 'hidden'}`}
-			/>
+			<CohortsSlider id={"pastCohortsSlider"} toggle="hidden" />
 		</section>
 	);
-};
+}

@@ -19,7 +19,6 @@ export default function podcastCard({ card }) {
 		title,
 		episodeNumber,
 		seasonNumber,
-		tags,
 		description,
 		datePosted,
 		duration,
