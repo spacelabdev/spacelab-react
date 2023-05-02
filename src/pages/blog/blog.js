@@ -13,7 +13,6 @@ export default function Blog() {
 	return (
 		<>
 			<HeroImage heroTitle="BLOG" />
-			<BlogCarousel />
 			<BlogArchives />
 			<Footer />
 		</>

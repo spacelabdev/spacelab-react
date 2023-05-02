@@ -28,11 +28,6 @@ export default function BlogArchives() {
 	return (
 		<div id={"blog-archive-container"}>
 			<div id={"blog-archive-header"}>Archived Blogs</div>
-			{blogs.length > 6 && (
-				<button onClick={toggleShowAll}>
-					{showAll ? "Show Less" : "View Full Blog Archives"}
-				</button>
-			)}
 			<div id={"blog-archives"}>
 				{blogs ? (
 					blogs
@@ -53,6 +48,15 @@ export default function BlogArchives() {
 							</p>
 						</div>
 					</div>
+				)}
+			</div>
+			<div className="button-container">
+				{blogs.length > 6 && (
+					<button onClick={toggleShowAll}>
+						{showAll
+							? "Hide Full Blog Archives"
+							: "View Full Blog Archives"}
+					</button>
 				)}
 			</div>
 		</div>
