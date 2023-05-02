@@ -703,18 +703,9 @@ export const dataScience = {
 	title: "data scientists",
 	members: [
 		{
-			image: "https://i.imgur.com/8WhKOFH.png",
-			fullName: "Krittika Krishnan",
-			title: "Lead Data Scientist",
-			bioQuote: "",
-			gitHub: "",
-			portfolio: "",
-			linkedin: "",
-		},
-		{
 			image: "https://i.imgur.com/FitwR6t.png",
 			fullName: "Lily Obeng",
-			title: "Software developer",
+			title: "Software Developer",
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
