@@ -22,15 +22,13 @@ export default function BlogArchivesCard(props) {
 			target="_blank"
 			rel="nofollow noopener noreferrer"
 		>
-			<div className={"blog-tile-image-wrapper"}>
-				<img
-					className={"blog-tile-image"}
-					src={imageURL}
-					alt={"blog tile"}
-				/>
-				<div>
-					<p className={"blog-title"}>{props.blog.title}</p>
-				</div>
+			<img
+				className={"blog-tile-image"}
+				src={imageURL}
+				alt={"blog tile"}
+			/>
+			<div>
+				<p className={"blog-title"}>{props.blog.title}</p>
 			</div>
 		</a>
 	);

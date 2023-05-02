@@ -36,17 +36,13 @@ export default function BlogArchives() {
 							<BlogArchivesCard blog={blog} key={blog.link} />
 						))
 				) : (
-					<div className={"blog-tile-image-wrapper"}>
+					<div>
 						<img
 							className={"blog-tile-image"}
 							src={placeholder}
 							alt={"blog tile"}
 						/>
-						<div>
-							<p className={"blog-title"}>
-								Unable to load Archive
-							</p>
-						</div>
+						<p className={"blog-title"}>Unable to load Archive</p>
 					</div>
 				)}
 			</div>
