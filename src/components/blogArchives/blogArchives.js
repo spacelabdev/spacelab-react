@@ -27,7 +27,6 @@ export default function BlogArchives() {
 
 	return (
 		<div id={"blog-archive-container"}>
-			<div id={"blog-archive-header"}>Archived Blogs</div>
 			<div id={"blog-archives"}>
 				{blogs ? (
 					blogs

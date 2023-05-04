@@ -3,7 +3,6 @@ import { UniversalContext } from "../../../App";
 import { Carousel } from "react-bootstrap";
 import "./blogCarousel.scss";
 import placeholder from "../../../assets/generalAssets/img_placeholder.png";
-import InternalNavButton from "../../styleComponents/navigationButtons/internalNavButton";
 import { Link } from "react-router-dom";
 
 /**
