@@ -74,8 +74,8 @@ export default function BlogCarousel({ isHomePage }) {
 
 	return (
 		<>
-			<div id={"blog-container"}>
-				<div id={"blog-header"}>Featured Blogs</div>
+			<div className={"blog-container"}>
+				<h4 className={"blog-header"}>Featured Blogs</h4>
 				<Carousel>{blogArray}</Carousel>
 			</div>
 			{isHomePage ? (

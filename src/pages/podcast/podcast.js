@@ -38,7 +38,7 @@ export default function Podcast() {
 			<HeroImage heroTitle="PODCAST" />
 			<div className="page-wrap">
 				<div className="page-description">
-					<h3>There's so much to learn about Space!</h3>
+					<p>There's so much to learn about Space!</p>
 					<p>New episodes released every Monday!</p>
 				</div>
 				<div className="search-bar">

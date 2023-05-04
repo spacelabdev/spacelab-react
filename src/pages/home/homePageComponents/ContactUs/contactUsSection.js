@@ -14,7 +14,7 @@ export default function ContactUsSection() {
 				/>
 			</div>
 			<div className="text-content">
-				<h2>Want to be a part of the team?</h2>
+				<h2>Want To Be A Part Of The Team?</h2>
 				<p>
 					Are you fascinated by the mysteries of outer space? Do you
 					dream of being a part of the exploration and discovery of
