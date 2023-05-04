@@ -40,7 +40,7 @@ export default function podcastCard({ card }) {
 			</div>
 			<div className="info-box">
 				<div className="card-header">
-					<h2>{`${title}: (S${seasonNumber}E${episodeNumber})`}</h2>
+					<h4>{`${title}: (S${seasonNumber}E${episodeNumber})`}</h4>
 					<p className="description">{`About: ${description}`}</p>
 					<p style={{ margin: "1rem 0" }}>
 						{datePosted} · {duration}

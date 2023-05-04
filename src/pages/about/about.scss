@@ -23,17 +23,27 @@
 			display: flex;
 		}
 
+		.about-mission-header {
+			font-size: 3rem;
+			padding-top: 1rem;
+			color: white;
+			text-align: center;
+		}
+
 		.about-mission-segment-container {
 			margin: 1em;
 			border: solid 1px white;
 			width: 50%;
+			display: flex;
+			flex-direction: column;
 
 			.about-mission-image-wrapper {
 				width: 85%;
 				height: 35%;
-				margin: auto;
-				padding-top: 1em;
-				padding-bottom: 2em;
+				max-height: 30vmin;
+				margin: 0 auto;
+				padding: 2em 0;
+				justify-content: flex-start;
 
 				.about-mission-image {
 					margin: 0 auto;
@@ -47,6 +57,7 @@
 				margin: 1em auto;
 				.about-mission-image-wrapper {
 					padding-bottom: 0;
+					max-height: 100%;
 				}
 			}
 
@@ -55,12 +66,7 @@
 				text-align: left;
 				margin: auto;
 				padding-top: 2em;
-
-				.about-mission-header {
-					padding-bottom: 1rem;
-					color: white;
-					text-align: center;
-				}
+				justify-content: flex-end;
 
 				p {
 					color: white;

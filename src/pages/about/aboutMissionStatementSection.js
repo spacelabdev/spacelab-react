@@ -19,8 +19,8 @@ export default function AboutMissionStatementSection() {
 							alt={"Planet"}
 						/>
 					</div>
+					<h4 className="about-mission-header">Our Values</h4>
 					<div className={"about-mission-content"}>
-						<h1 className="about-mission-header">Our Values</h1>
 						<p>
 							We value the voices of those too often talked over
 							and under appreciated, because we firmly believe
@@ -41,8 +41,8 @@ export default function AboutMissionStatementSection() {
 							alt={"Space Shuttle"}
 						/>
 					</div>
+					<h4 className="about-mission-header">Our Mission</h4>
 					<div className={"about-mission-content"}>
-						<h1 className="about-mission-header">Our Mission</h1>
 						<p>
 							Spacelab is building the next generation of leaders
 							in outer-space-focused science and technology,
@@ -62,8 +62,8 @@ export default function AboutMissionStatementSection() {
 							alt={"Planet"}
 						/>
 					</div>
+					<h4 className="about-mission-header">Our Vision</h4>
 					<div className={"about-mission-content"}>
-						<h1 className="about-mission-header">Our Vision</h1>
 						<p>
 							Our vision of success includes a continuous stream
 							of space-related projects built by aspiring tech

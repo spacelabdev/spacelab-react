@@ -17,7 +17,7 @@ export default function CookiePolicy() {
 				<p>Last Updated: 30-Jan-2023</p>
 
 				<br />
-				<h5>What are cookies?</h5>
+				<h2>What are cookies?</h2>
 				<p>
 					This Cookie Policy explains what cookies are and how we use
 					them, the types of cookies we use i.e, the information we
@@ -35,7 +35,7 @@ export default function CookiePolicy() {
 				</p>
 
 				<br />
-				<h5>How do we use cookies?</h5>
+				<h2>How do we use cookies?</h2>
 				<p>
 					As most of the online services, our website uses first-party
 					and third-party cookies for several purposes. First-party
@@ -53,12 +53,12 @@ export default function CookiePolicy() {
 				</p>
 
 				<br />
-				<h5>Types of Cookies we use</h5>
+				<h2>Types of Cookies we use</h2>
 
 				<div className="cky-audit-table-element"></div>
 
 				<br />
-				<h5>Manage cookie preferences</h5>
+				<h2>Manage cookie preferences</h2>
 				<br />
 				<p>
 					<button className="cky-banner-element">

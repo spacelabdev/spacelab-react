@@ -34,7 +34,7 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 	return (
 		<div className="newsletter-subscribe">
 			<div className="inner-wrap">
-				<h2>Subscribe to our newsletter</h2>
+				<h4>Subscribe to our newsletter</h4>
 				<p>
 					Sign up to learn about the latest discoveries, news and
 					more! Delivered weekly.
@@ -55,7 +55,6 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 							}
 						>
 							<input
-								className="newsletter-subscribe-name-input"
 								type="firstName"
 								id="firstName"
 								placeholder="FIRST NAME"
@@ -63,7 +62,6 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 								required
 							/>
 							<input
-								className="newsletter-subscribe-name-input"
 								type="lastName"
 								id="lastName"
 								placeholder="LAST NAME"
@@ -72,7 +70,6 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 							/>
 						</div>
 						<input
-							className="newsletter-subscribe-input"
 							type="email"
 							id="email"
 							placeholder="EMAIL"
