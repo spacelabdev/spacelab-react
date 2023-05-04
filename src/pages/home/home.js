@@ -22,7 +22,7 @@ export default function Home() {
 			<HorizonSection />
 			<SupportTheCauseSection />
 			<ContactUsSection />
-			<BlogCarousel />
+			<BlogCarousel isHomePage={true} />
 			<Footer />
 		</div>
 	);
