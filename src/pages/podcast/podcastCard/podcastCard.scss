@@ -4,72 +4,88 @@
 	display: flex;
 	flex-direction: row;
 	align-items: top;
-}
 
-.card-header {
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	text-align: left;
-	padding: 0;
-	background: transparent;
-}
+	.podcast-image {
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+		max-width: 300px;
+		max-height: 300px;
+		display: flex;
+		border-left: 10px solid var(--neon-purple);
 
-.podcast-image {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	max-width: 300px;
-	max-height: 300px;
-	display: flex;
-	border-left: 10px solid var(--neon-purple);
-}
+		img {
+			display: block;
+			object-fit: cover;
+		}
+	}
 
-.info-box {
-	padding: 0.5rem;
-	margin-left: 2rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: flex-start;
-}
+	.info-box {
+		padding: 0.5rem;
+		margin-left: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
 
-.info-box p {
-	font-size: 16px;
-}
+		.card-header {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			text-align: left;
+			padding: 0;
+			background: transparent;
 
-.description {
-	text-align: left;
-}
+			.description {
+				text-align: left;
+			}
+		}
 
-.stream-button {
-	box-sizing: border-box;
-	display: flex;
-	align-items: center;
-	padding-left: 0.5rem;
-	width: 8.5rem;
-	height: 2.5rem;
-	margin-right: 0.5rem;
-	background: white;
-	border: 1px solid #a6a6a6;
-	border-radius: 8px;
-	font-size: x-small;
-}
+		.card-footer {
+			display: flex;
+			padding: 0;
 
-.stream-button:hover {
-	text-decoration: none;
-}
+			.button-wrap {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+			}
 
-.stream-button div {
-	line-height: 0.5rem;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-}
+			.listen {
+				margin: 0;
+				padding: 0;
+			}
 
-.stream-button p {
-	color: black;
-	line-height: 1;
-	margin-left: 1rem;
+			.stream-button {
+				display: flex;
+				align-items: center;
+				align-content: center;
+				justify-content: flex-start;
+				padding-left: 0.5rem;
+				width: 8.3rem;
+				height: 2.5rem;
+				margin-right: 0.5rem;
+				background: white;
+				border: 1px solid #a6a6a6;
+				border-radius: 8px;
+				cursor: pointer;
+			}
+
+			img {
+				margin: auto 0;
+			}
+
+			.stream-button:hover {
+				text-decoration: none;
+			}
+
+			.stream-button p {
+				color: black;
+				margin: auto 0 auto 1rem;
+			}
+		}
+	}
 }

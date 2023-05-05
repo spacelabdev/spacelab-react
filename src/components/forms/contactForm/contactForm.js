@@ -41,7 +41,7 @@ export default function ContactForm() {
 					<form method={"POST"} onSubmit={handleSubmit}>
 						<div className="first-input-row">
 							<input
-								// className="small-input"
+								className="small-input"
 								id="firstName"
 								name="firstName"
 								placeholder="FIRST NAME"
@@ -53,21 +53,19 @@ export default function ContactForm() {
 								field="firstName"
 								errors={state.errors}
 							/>
-							<div>
-								<input
-									// className="small-input"
-									id="lastName"
-									placeholder="LAST NAME"
-									name="lastName"
-									type="lastName"
-									required
-								/>
-								<ValidationError
-									prefix="LastName"
-									field="lastName"
-									errors={state.errors}
-								/>
-							</div>
+							<input
+								className="small-input"
+								id="lastName"
+								placeholder="LAST NAME"
+								name="lastName"
+								type="lastName"
+								required
+							/>
+							<ValidationError
+								prefix="LastName"
+								field="lastName"
+								errors={state.errors}
+							/>
 						</div>
 						<div>
 							<input

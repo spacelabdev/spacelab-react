@@ -29,14 +29,7 @@ export default function podcastCard({ card }) {
 	return (
 		<div className="podcast-card">
 			<div className="podcast-image">
-				<img
-					src={image ? image : tempImage}
-					alt={alt}
-					style={{
-						display: "block",
-						objectFit: "cover",
-					}}
-				/>
+				<img src={image ? image : tempImage} alt={alt} />
 			</div>
 			<div className="info-box">
 				<div className="card-header">
@@ -46,60 +39,32 @@ export default function podcastCard({ card }) {
 						{datePosted} · {duration}
 					</p>
 				</div>
-				<div style={{ display: "flex" }}>
-					<a
-						className="stream-button"
-						href={youtubeLink}
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img
-							style={{
-								margin: 0,
-								padding: 0,
-							}}
-							src={youtube}
-							alt="youtube logo"
-						/>
-						<div
-							style={{
-								margin: 0,
-								padding: 0,
-								display: "flex",
-								flexDirection: "column",
-								textAlign: "center",
-							}}
+				<div className="card-footer">
+					<div className="button-wrap">
+						<p className="listen">Listen on</p>
+						<a
+							className="stream-button"
+							href={youtubeLink}
+							target="_blank"
+							rel="noreferrer"
 						>
-							<p
-								style={{
-									fontSize: ".6rem",
-									color: "gray",
-								}}
-							>
-								Listen on
-							</p>
-							<p style={{ fontSize: "1.2rem" }}>YouTube</p>
-						</div>
-					</a>
-					<a
-						className="stream-button"
-						href={spotifyLink}
-						target="_blank"
-						rel="noreferrer"
-					>
-						<img src={spotify} alt="spotify logo" />
-						<div className="stream-button-text">
-							<p
-								style={{
-									fontSize: ".6rem",
-									color: "gray",
-								}}
-							>
-								Listen on
-							</p>
-							<p style={{ fontSize: "1rem" }}>Spotify</p>
-						</div>
-					</a>
+							<img src={youtube} alt="youtube logo" />
+							<p>YouTube</p>
+						</a>
+					</div>
+
+					<div className="button-wrap">
+						<p className="listen">Listen on</p>
+						<a
+							className="stream-button"
+							href={spotifyLink}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<img src={spotify} alt="spotify logo" />
+							<p>Spotify</p>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
