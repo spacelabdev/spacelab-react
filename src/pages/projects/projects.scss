@@ -2,12 +2,12 @@
 	max-width: 90vw;
 	margin: 0 auto;
 
-	.projects-exoplanetarium-image {
+	.projects-exoplanetarium-logo {
 		width: 100%;
 		margin: 2em auto;
 		max-width: 1050px;
 
-		.exoplanetarium-image {
+		.exoplanetarium-logo {
 			width: 100%;
 		}
 	}
@@ -22,4 +22,20 @@
 			padding-bottom: 3em;
 		}
 	}
+}
+
+.exoplanetarium-image {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	img {
+		width: 50%;
+	}
+}
+
+.button-wrap {
+	margin: 2rem 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }

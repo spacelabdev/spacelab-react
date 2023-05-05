@@ -12,24 +12,22 @@ import { UniversalContext } from "../../App";
 const HeroImage = ({ heroTitle = "SPACELAB" }) => {
 	// Use heroTitle prop to define heroImage based on the component
 	const context = useContext(UniversalContext);
-	let pageTitle = context.pageTitle;
+	const pageTitle =
+		context.pageTitle === "" || context.pageTitle === "HOME"
+			? "SPACELAB SUPPORTS DIVERSITY IN TECH"
+			: context.pageTitle;
 	context.setPageTitle(heroTitle);
-
-	// Determine if on home page for purposes of displaying Spacelab image
-	if (pageTitle === "" || pageTitle === "HOME") {
-		pageTitle = `SPACELAB SUPPORTS DIVERSITY IN TECH`;
-	}
 
 	return (
 		<>
 			<Navigation />
-			<div id={"hero-image-container"}>
+			<div className={"hero-image-container"}>
 				<img
-					id={"hero-image"}
+					className={"hero-image"}
 					src={heroImage}
 					alt={"milky way at night"}
 				/>
-				<h1 id="hero-page">{pageTitle}</h1>
+				<h1>{pageTitle}</h1>
 			</div>
 		</>
 	);

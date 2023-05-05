@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
@@ -16,19 +16,9 @@ import NewsletterSubscribe from "../forms/newsletterSubscribe/newsletterSubscrib
  * @constructor
  */
 export default function Footer() {
-	const [email, setEmail] = useState("");
 	const link_style = {
 		textDecoration: "none",
 	};
-
-	function handleChange(e) {
-		setEmail(e.target.value);
-	}
-
-	function handleSubscription(e) {
-		e.preventDefault();
-		alert("Subscription Coming Soon!");
-	}
 
 	return (
 		<section className="footer-section">
@@ -124,7 +114,7 @@ export default function Footer() {
 							<AiOutlineTwitter />
 						</a>
 					</IconContext.Provider>
-					<h5>@2021 by SpaceLab</h5>
+					<p>@2022 by SpaceLab</p>
 				</center>
 			</div>
 		</section>

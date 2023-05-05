@@ -1,5 +1,4 @@
 #contact-us-section {
-	min-height: 80vh;
 	max-width: 90vw;
 	text-align: center;
 	display: flex;
@@ -8,6 +7,7 @@
 	align-items: center;
 	margin: 0 auto;
 	flex-wrap: wrap;
+	margin-bottom: 80px;
 
 	@media only screen and (min-width: 1200px) {
 		flex-wrap: nowrap;
@@ -30,6 +30,7 @@
 		width: 100%;
 		height: auto;
 		margin-left: 0;
+		text-align: left;
 
 		@media only screen and (min-width: 1200px) {
 			width: 50%;

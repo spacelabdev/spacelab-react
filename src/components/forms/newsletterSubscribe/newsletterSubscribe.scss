@@ -7,7 +7,7 @@
 		width: 70%;
 	}
 
-	h2 {
+	h4 {
 		font-family: "Poppins", sans-serif;
 		font-weight: 200;
 		font-style: italic;
@@ -58,58 +58,6 @@
 			flex-direction: row;
 			align-items: left;
 			margin-bottom: 15px;
-		}
-
-		input:focus {
-			border: none;
-			box-shadow: none;
-		}
-
-		.newsletter-subscribe-input {
-			display: flex;
-			width: 100%;
-			font-size: 12px;
-			border: none;
-			box-shadow: none;
-			padding: 0.75rem 0rem;
-			border-bottom: solid white 2px;
-			background-color: transparent;
-			margin-bottom: 20px;
-
-			&::placeholder {
-				letter-spacing: 1px;
-			}
-
-			@media (min-width: 766px) {
-				width: 100%;
-				font-size: 18px;
-				&::placeholder {
-					letter-spacing: 3px;
-				}
-			}
-		}
-
-		.newsletter-subscribe-name-input {
-			margin-right: 10px;
-			display: flex;
-			width: 50%;
-			font-size: 12px;
-			padding: 0.75rem 0rem;
-			border: none;
-			border-bottom: solid white 2px;
-			background-color: transparent;
-
-			&::placeholder {
-				letter-spacing: 1px;
-			}
-
-			@media (min-width: 766px) {
-				width: 50%;
-				font-size: 18px;
-				&::placeholder {
-					letter-spacing: 3px;
-				}
-			}
 		}
 	}
 }

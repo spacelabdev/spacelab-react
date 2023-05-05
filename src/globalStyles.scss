@@ -1,3 +1,10 @@
+/*--------------------GUIDELINES ------------------------
+In general, these global styles should not be modified 
+except if there is a site-wide redesign. If you need to 
+overwrite the default styles, use css selectors and a 
+custom class.
+--------------------------------------------------------*/
+
 /* Box sizing rules */
 *,
 *::before,
@@ -75,7 +82,37 @@ select {
 	font: inherit;
 }
 
-/*Default Styles*/
+/*------Default Headings-----------------------------------------------------------------*/
+/*      - h1: Used for page titles only in the Hero image component                      */
+/*      - h2: Used for page section titles                                               */
+/*      - h3: Used for page sub-section titles                                           */
+/*      - h4: Used for component titles                                                  */
+/*      - h5: Used for component sub-titles                                              */
+/*      NOTE: All other text should use a p element with custom styling.                 */
+/*---------------------------------------------------------------------------------------*/
+
+h1 {
+	position: absolute;
+	width: 80%;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 8vw;
+	letter-spacing: 3px;
+	top: calc(50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 98;
+
+	@media screen and (min-width: 766px) {
+		font-size: 6.25rem;
+	}
+
+	@media (min-width: 767px) and (max-width: 1023px) {
+		font-size: 4.25rem;
+	}
+}
+
 h2 {
 	font-size: 2.4em;
 	font-family: "Poppins", sans-serif;
@@ -94,12 +131,26 @@ h3 {
 	margin-bottom: 3rem;
 }
 
+h4 {
+	color: white;
+	font-size: 1.5em;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 0.5rem;
+}
+
+h5 {
+	color: white;
+	font-size: 1rem;
+}
+
 p {
 	font-family: "Lato", sans-serif;
-	font-size: 1.4em;
-	line-height: 1.5;
+	font-size: 1.1rem;
+	line-height: 1.3;
 	color: var(--text);
 }
+
+/*Buttons*/
 
 button {
 	cursor: pointer;
@@ -127,4 +178,37 @@ button {
 
 button:hover {
 	background: var(--neon-purple);
+}
+
+/*Inputs*/
+
+input {
+	display: flex;
+	width: 100%;
+	font-size: 12px;
+	border: none;
+	box-shadow: none;
+	padding: 0.75rem 0rem;
+	border-bottom: solid white 2px;
+	background-color: transparent;
+	margin-bottom: 20px;
+	margin-right: 10px;
+	color: white;
+
+	&::placeholder {
+		letter-spacing: 1px;
+	}
+
+	@media (min-width: 766px) {
+		width: 100%;
+		font-size: 18px;
+		&::placeholder {
+			letter-spacing: 3px;
+		}
+	}
+}
+
+input:focus {
+	outline: none;
+	border-bottom: 2px solid var(--highlight);
 }

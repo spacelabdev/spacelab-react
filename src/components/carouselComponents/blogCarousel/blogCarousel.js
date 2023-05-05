@@ -3,14 +3,14 @@ import { UniversalContext } from "../../../App";
 import { Carousel } from "react-bootstrap";
 import "./blogCarousel.scss";
 import placeholder from "../../../assets/generalAssets/img_placeholder.png";
-import InternalNavButton from "../../styleComponents/navigationButtons/internalNavButton";
+import { Link } from "react-router-dom";
 
 /**
  * Renders blog carousel items
  * @returns {JSX.Element}
  * @constructor
  */
-export default function BlogCarousel() {
+export default function BlogCarousel({ isHomePage }) {
 	const context = useContext(UniversalContext);
 	const blogs = context.blogArray.items;
 	let blogArray = [];
@@ -74,16 +74,20 @@ export default function BlogCarousel() {
 
 	return (
 		<>
-			<div id={"blog-container"}>
-				<div id={"blog-header"}>Featured Blogs</div>
+			<div className={"blog-container"}>
+				<h4 className={"blog-header"}>Featured Blogs</h4>
 				<Carousel>{blogArray}</Carousel>
 			</div>
-			<div className={"archives-button-container"}>
-				<InternalNavButton
-					path={"/archives"}
-					buttonText={"View Full Blog Archives"}
-				/>
-			</div>
+			{isHomePage ? (
+				<div className="archives-button-container">
+					{/* InternalNavButton causes a bug rendering the blog page */}
+					<button>
+						<Link to={"/blog"} style={{ textDecoration: "none" }}>
+							View Full Blog
+						</Link>
+					</button>
+				</div>
+			) : null}
 		</>
 	);
 }

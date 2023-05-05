@@ -34,94 +34,72 @@ export default function ContactForm() {
 	}
 
 	return (
-		<section id={"contact-form-container"}>
+		<div id={"contact-form-container"}>
 			<div className="contact-form-wrapper">
-				<div className="contact-form-title">
-					<p id="title-text">Contact us</p>
-				</div>
-				<div id={"contact-form-field-container"}>
+				<h2>Contact Us</h2>
+				<div className={"contact-form-field-container"}>
 					<form method={"POST"} onSubmit={handleSubmit}>
 						<div className="first-input-row">
-							<div className="contact-form-field">
-								<label className="contact-form-label">
-									First Name*
-								</label>
-								<div>
-									<input
-										className="small-input"
-										id="firstName"
-										name="firstName"
-										type="firstName"
-										required
-									/>
-									<ValidationError
-										prefix="FirstName"
-										field="firstName"
-										errors={state.errors}
-									/>
-								</div>
-							</div>
-							<div className="contact-form-field">
-								<label className="contact-form-label">
-									Last Name*
-								</label>
-								<div>
-									<input
-										className="small-input"
-										id="lastName"
-										name="lastName"
-										type="lastName"
-										required
-									/>
-									<ValidationError
-										prefix="LastName"
-										field="firstName"
-										errors={state.errors}
-									/>
-								</div>
-							</div>
+							<input
+								className="small-input"
+								id="firstName"
+								name="firstName"
+								placeholder="FIRST NAME"
+								type="firstName"
+								required
+							/>
+							<ValidationError
+								prefix="FirstName"
+								field="firstName"
+								errors={state.errors}
+							/>
+							<input
+								className="small-input"
+								id="lastName"
+								placeholder="LAST NAME"
+								name="lastName"
+								type="lastName"
+								required
+							/>
+							<ValidationError
+								prefix="LastName"
+								field="lastName"
+								errors={state.errors}
+							/>
+						</div>
+						<div>
+							<input
+								id="email"
+								placeholder="EMAIL"
+								name="email"
+								type="email"
+								required
+							/>
+							<ValidationError
+								prefix="Email"
+								field="email"
+								errors={state.errors}
+							/>
+						</div>
+						<div>
+							<input
+								id="phone"
+								placeholder="PHONE"
+								name="phone"
+								type="phone"
+							/>
+							<ValidationError
+								prefix="Phone"
+								field="phone"
+								errors={state.errors}
+							/>
 						</div>
 						<div className="contact-form-field">
-							<label className="contact-form-label">Email*</label>
-							<div>
-								<input
-									className="large-input"
-									id="email"
-									name="email"
-									type="email"
-									required
-								/>
-								<ValidationError
-									prefix="Email"
-									field="email"
-									errors={state.errors}
-								/>
-							</div>
-						</div>
-						<div className="contact-form-field">
-							<label className="contact-form-label">Phone</label>
-							<div>
-								<input
-									className="large-input"
-									id="phone"
-									name="phone"
-									type="phone"
-								/>
-								<ValidationError
-									prefix="Phone"
-									field="phone"
-									errors={state.errors}
-								/>
-							</div>
-						</div>
-						<div className="contact-form-field">
-							<label className="contact-form-label">
-								Message*
-							</label>
 							<div>
 								<textarea
 									className="message-input"
 									id="message"
+									placeholder="MESSAGE"
 									name="message"
 									type="message"
 									required
@@ -145,6 +123,6 @@ export default function ContactForm() {
 					</form>
 				</div>
 			</div>
-		</section>
+		</div>
 	);
 }

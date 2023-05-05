@@ -1,5 +1,6 @@
 import React from "react";
-import planet from "../../../../assets/planet.svg";
+import Exoplanetarium from "../../../../assets/homeAssets/Exoplanetarium.png";
+// import planet from "../../../../assets/planet.svg";
 import InternalNavButton from "../../../../components/styleComponents/navigationButtons/internalNavButton";
 import "./horizon.scss";
 
@@ -13,7 +14,7 @@ export default function HorizonSection() {
 		<section className="horizon-section">
 			<div className="horizon-content-container">
 				<div className="horizon-left-container">
-					<h2>What's on the horizon</h2>
+					<h2>What's On The Horizon</h2>
 					<p>
 						Our current project, the Exoplanetarium, focuses on
 						using data from previous and current NASA satellite
@@ -27,8 +28,7 @@ export default function HorizonSection() {
 					</p>
 				</div>
 				<div className="horizon-right-container">
-					<div>EXOPLANETARIUM</div>
-					<img src={planet} alt="planet" />
+					<img src={Exoplanetarium} alt="planet" />
 				</div>
 			</div>
 			<div className="button-wrap">
