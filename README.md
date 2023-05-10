@@ -15,7 +15,6 @@
 <h3 align="center">Spacelab</h3>
 
   <p align="center">
-    project_description
     <br />
     <a href="https://github.com/spacelabdev/spacelab-react/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -92,13 +91,12 @@ To get a local copy, follow these steps.
 
 ### Prerequisites
 
-To Run locally, you will need to use any node version >= 14 <= 16. Any other version you may receive an error. If you are using a mac you can install nvm to manage your node versions. (I suggest getting this if on Mac or Linux). For windows, you can use nvm for Windows: https://github.com/coreybutler/nvm-windows
+To Run locally, you will need to use any node version >= 14 <= 16. Any other version you may receive an error. If you are using a mac you can install nvm to manage your node versions. (I suggest getting this if on Mac or Linux). For windows, you can use [nvm for Windows](https://github.com/coreybutler/nvm-windows)
 
--   nvm
-    ```sh
-    nvm install 14
-    nvm use 14
-    ```
+```sh
+  nvm install 14
+  nvm use 14
+```
 
 ### Installation
 
@@ -111,12 +109,9 @@ To Run locally, you will need to use any node version >= 14 <= 16. Any other ver
     npm install
     ```
 3. Spin up the Project
-
-```
-npm start
-```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+    ```
+    npm start
+    ```
 
 <!-- CONTRIBUTING -->
 
@@ -131,18 +126,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## License
-
-<!-- Distributed under the MIT License. See `LICENSE.txt` for more information. -->
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTACT -->
+ <!-- CONTACT -->
 
 ## Contact
 
