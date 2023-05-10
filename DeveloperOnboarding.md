@@ -179,6 +179,13 @@ In your feature branch
 git rebase origin/main
 ```
 
+Alternatively, if someone else rebased your branch say -- github
+You would want to run
+
+```
+git reset --hard origin/"Your branch"
+```
+
 **At a minimum, you should rebase every time a change or update is pushed to main.**
 
 ## Style Guide
