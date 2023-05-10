@@ -159,20 +159,24 @@ To avoid merge conflicts, it's good practice to consistently "rebase" (or update
 
 In main:
 
-```git pull
-    git fetch --
+```
+git pull
+```
+
+```
+git fetch --all
 ```
 
 Then switch to your feature branch:
 
-```git checkout nameOfFeatureBranch
-
+```
+git checkout nameOfFeatureBranch
 ```
 
 In your feature branch
 
-```git rebase origin/main (in feature branch)
-
+```
+git rebase origin/main
 ```
 
 **At a minimum, you should rebase every time a change or update is pushed to main.**
