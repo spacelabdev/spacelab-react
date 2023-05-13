@@ -11,6 +11,8 @@ import Podcast from "./pages/podcast/podcast";
 import CookiePolicy from "./pages/cookiepolicy/cookiepolicy";
 import PrivacyPolicy from "./pages/privacypolicy/privacypolicy";
 import BlogArchives from "./components/blogArchives/blogArchives";
+/* landing pages */
+import Participate from "./pages/landingPages/participate/Participate";
 
 /**
  * Handles Routing
@@ -31,6 +33,12 @@ export default function Main() {
 			<Route exact path="/podcast" component={Podcast} />
 			<Route exact path="/cookie-policy" component={CookiePolicy} />
 			<Route exact path="/privacy-policy" component={PrivacyPolicy} />
+			{/* landing page routing must go BEFORE the catch all '/' route*/}
+			<Route
+				exact
+				path="/campaigns/participate"
+				component={Participate}
+			/>
 			<Route path="/" component={Home} />
 			<Redirect to="/home" />
 		</Switch>
