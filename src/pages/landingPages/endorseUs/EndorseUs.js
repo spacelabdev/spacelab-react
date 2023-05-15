@@ -1,7 +1,7 @@
 import React from "react";
-import HeroImage from "../../components/heroImage/heroImage";
-import Footer from "../../components/footer/footer";
-import "./endorseUs.css";
+import HeroImage from "../../../components/heroImage/heroImage";
+import Footer from "../../../components/footer/footer";
+import "./endorseUs.scss";
 
 /**
  * Renders EndorseUs Landing page
