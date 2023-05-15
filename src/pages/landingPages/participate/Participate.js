@@ -1,7 +1,7 @@
 import React from "react";
-import HeroImage from "../../components/heroImage/heroImage";
-import Footer from "../../components/footer/footer";
-import "./participate.css";
+import Navigation from "../../../components/navigation/mainNavMenu/navigation";
+import Hero from "./Hero/Hero";
+import Footer from "../../../components/footer/footer";
 
 /**
  * Renders Participate Landing page
@@ -11,7 +11,8 @@ import "./participate.css";
 export default function Participate() {
 	return (
 		<>
-			<HeroImage heroTitle="Participate" />
+			<Navigation />
+			<Hero />
 			<Footer />
 		</>
 	);
