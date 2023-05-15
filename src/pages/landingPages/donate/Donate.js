@@ -12,6 +12,7 @@ export default function Donate() {
 	return (
 		<>
 			<HeroImage heroTitle="DONATE" />
+			{/* Code for Donate Landing page goes here */}
 			<Footer />
 		</>
 	);

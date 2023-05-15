@@ -12,6 +12,7 @@ export default function EndorseUs() {
 	return (
 		<>
 			<HeroImage heroTitle="ENDORSE US" />
+			{/* Code for Endorse Us Landing page goes here */}
 			<Footer />
 		</>
 	);

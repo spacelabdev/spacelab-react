@@ -12,6 +12,7 @@ export default function SignUp() {
 	return (
 		<>
 			<HeroImage heroTitle="SIGN UP" />
+			{/* Code for Sign Up Landing page goes here */}
 			<Footer />
 		</>
 	);
