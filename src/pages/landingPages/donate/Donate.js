@@ -1,7 +1,7 @@
 import React from "react";
-import HeroImage from "../../components/heroImage/heroImage";
-import Footer from "../../components/footer/footer";
-import "./donate.css";
+import HeroImage from "../../../components/heroImage/heroImage";
+import Footer from "../../../components/footer/footer";
+import "./donate.scss";
 
 /**
  * Renders Donate Landing page
@@ -12,6 +12,7 @@ export default function Donate() {
 	return (
 		<>
 			<HeroImage heroTitle="DONATE" />
+			{/* Code for Donate Landing page goes here */}
 			<Footer />
 		</>
 	);

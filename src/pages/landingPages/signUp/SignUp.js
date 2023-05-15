@@ -1,7 +1,7 @@
 import React from "react";
-import HeroImage from "../../components/heroImage/heroImage";
-import Footer from "../../components/footer/footer";
-import "./signUp.css";
+import HeroImage from "../../../components/heroImage/heroImage";
+import Footer from "../../../components/footer/footer";
+import "./signUp.scss";
 
 /**
  * Renders Sign Up Landing page
@@ -12,6 +12,7 @@ export default function SignUp() {
 	return (
 		<>
 			<HeroImage heroTitle="SIGN UP" />
+			{/* Code for Sign Up Landing page goes here */}
 			<Footer />
 		</>
 	);
