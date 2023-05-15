@@ -1,35 +1,106 @@
 .participate-hero {
-	height: 90vh;
-	background-repeat: no-repeat;
-	background-position: center;
-
-	.hero-container {
-		height: 100vh;
-		width: 99vw;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 2rem;
-	}
+	height: 100vh;
+	padding-top: 8rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2.5rem;
+	overflow: hidden;
+	position: relative;
 
 	h1 {
-		transform: translate(-50%, -200%);
+		transform: translate(-50%, -225%);
+		z-index: 3;
 	}
 
 	p {
 		font-size: 2rem;
-		margin-top: 25rem;
 		width: 55%;
+		z-index: 3;
 	}
 
 	button {
 		border-radius: 90px;
 		background-color: var(--neon-purple);
 		transition: 300ms ease-in-out;
+		z-index: 3;
 
 		&:hover {
 			background-color: #4f00b6;
+			cursor: pointer;
 		}
+	}
+
+	.spacelab-image {
+		margin-left: -120px;
+		transform: scale(1.2);
+	}
+
+	.overlay {
+		position: absolute;
+		z-index: 0;
+	}
+
+	.galaxy-overlay {
+		width: 100%;
+		transform: scale(1.1);
+	}
+
+	.stars-overlay {
+		width: 100%;
+		opacity: 70%;
+		transform: scale(1.3);
+	}
+
+	.green-planet {
+		bottom: 12%;
+		right: 12%;
+		width: 22rem;
+	}
+
+	/* top left stars */
+	.star1 {
+		top: 23%;
+		left: 20%;
+		width: 2.6rem;
+	}
+
+	.star2 {
+		top: 20%;
+		left: 15%;
+		width: 1.9rem;
+	}
+
+	/* top right star */
+	.star3 {
+		top: 18%;
+		right: 20%;
+	}
+
+	/* bottom left stars */
+	.star4 {
+		bottom: 20%;
+		left: 15%;
+		width: 2.4rem;
+	}
+
+	.star5 {
+		bottom: 14%;
+		left: 23%;
+		width: 1.9rem;
+	}
+
+	/* bottom right stars */
+	.star6 {
+		bottom: 22%;
+		right: 33%;
+		width: 2.3rem;
+	}
+
+	.star7 {
+		bottom: 10%;
+		right: 10%;
+		width: 1.9rem;
 	}
 }
