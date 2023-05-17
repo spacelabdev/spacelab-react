@@ -1,4 +1,18 @@
 .signup-modal {
-    background-color: red;
+    background-color: blue;
     height: 95vh;
+    // position: absolute
+}
+
+.closeBtn {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+}
+
+.CTA-small-text {
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translateX(-50%)
 }
