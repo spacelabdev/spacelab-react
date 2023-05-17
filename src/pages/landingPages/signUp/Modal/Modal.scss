@@ -1,16 +1,20 @@
-.signup-modal {
+.modal-container {
     background-color: blue;
-    height: 95vh;
-    // position: absolute
+    position: fixed;
+    width: 90vw;
+    height: 90vh;
+    top: 55px; // <= height of nav
+    left: 0;
+    z-index: 100;
 }
 
-.closeBtn {
+.close-modal {
     position: absolute;
     top: 15%;
     right: 5%;
 }
 
-.CTA-small-text {
+.modal-subheading {
     position: absolute;
     bottom: 30%;
     left: 50%;
