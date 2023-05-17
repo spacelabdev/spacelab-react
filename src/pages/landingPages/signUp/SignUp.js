@@ -12,14 +12,18 @@ import Home from "../../home/home"
  */
 export default function SignUp() {
 	const [openModal, setOpenModal] = useState(true)
+	const onClose = () => { 
+		setOpenModal(false)
+	}
 
 	return (
 		<>
 			<Navigation className="modal-nav"/>
-			<div className="overlay">
-				<Modal open={openModal} onClose={() => setOpenModal(false)} />
-				<Home/>
+			{/* I didn't need to use stopPropagation() because the modal is outside of the overlay div */}
+			<div onClick={onClose} className="overlay">
 			</div>
+			<Modal open={openModal} onClose={onClose} />
+			<Home className="modal-home"/>
 		</>
 	);
 }

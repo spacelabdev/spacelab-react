@@ -1,9 +1,18 @@
-.modal-nav{}
+.modal-nav{
+    z-index: 250;
+}
 
 .overlay {
-    // background-color: red;
-    // height: 100%;
-    // z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    // height: fit-content;
+    z-index: 100;
+}
+
+.modal-home{
+    z-index: -500;
 }
 
 .modal-footer{}
