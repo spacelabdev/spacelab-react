@@ -1,0 +1,266 @@
+.modal-container {
+    position: absolute;
+    top: 54.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90vw;
+    height: 90vh;
+    z-index: 200;
+    border-radius: 50px;
+    background-image: url("../../../../assets/componentAssets/paul-volkmer-R5bkvjGHZig-unsplash.jpg");
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+.modal-planet-image-wrapper {
+    z-index: 300;
+    position: relative;
+    width: 120%;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, 50%);
+    border-radius: 0 0 50px 50px;
+}
+
+.modal-planet-image {
+    z-index: 400;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.modal-bg-glow {
+    z-index: 300;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 25%);
+    height: 1000px;
+    width: 85%;
+    box-shadow: 0 0 100px 10px #50AFED;
+    border-radius: 100%;
+}
+
+.close-modal {
+    position: fixed;
+    left: 94.85%;
+    right: 3.26%;
+    top: 2.5%;
+    bottom: 94.94%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25.53px;
+}
+
+.close-modal:hover {
+    transform: translateY(2px);
+    color: rgba(255, 255, 255, .75);
+}
+
+.close-modal:active {
+    transform: translateY(-1px);
+    color: rgba(255, 255, 255, .75);
+}
+
+.modal-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 50;
+    transform: translate(-50%, 50%);
+    text-align: center;
+}
+
+.modal-heading {
+    display: block;
+    font-weight: 600;
+    font-size: 85.0847px;
+    color: #FFFFFF;
+    padding-bottom: 14px;
+    
+}
+
+.modal-subheading {
+    display: block;
+    font-weight: 400;
+    font-size: 25.53px;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+
+.modal-button-container {
+    z-index: 600;
+    position: absolute;
+    width: 561.56px;
+    height: 71.47px;
+    left: 50%;
+    top: 42%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 30.6305px;
+    border-top: .5px solid rgba(255, 255, 255, 1);
+    border-right: .5px solid rgba(255, 255, 255, 0.5);
+    border-bottom: .5px solid rgba(103, 0, 255, 1);
+    border-left: .5px solid rgba(103, 0, 255, 0.5);
+    box-shadow: 0px 13.6135px 54.4542px rgba(104, 1, 255, 0.12);
+    background: linear-gradient(.25turn, rgb(0, 0, 0, 1), 60%, rgba(112, 0, 255, 1));
+    // background: conic-gradient(from 61.25deg at 52.47% 52.87%, #6804FD 0deg, #08F969 76.88deg, #100BF7 129.37deg, #F70ED2 232.5deg, #0BA2F7 360deg);
+}
+
+.modal-subscription-form {
+    position: absolute;
+    z-index: 800;
+    width: 100%;
+    height: 100%;
+    border-radius: 30.6305px;
+    display: flex;
+    flex-direction: row;
+    // background: linear-gradient(.25turn, rgb(0, 0, 0, 1), 60%, rgba(112, 0, 255, 1));
+    backdrop-filter: blur(20px);
+}
+
+.modal-email-input {
+    z-index: 900;
+    border-bottom: none;
+    width: 70%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 6.82%;
+    right: 38.18%;
+    top: 25%;
+    bottom: 24.63%;
+    font-family: 'Poppins';
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-email-submit {
+    z-index: 900;
+    width: 30%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    position: absolute;
+    left: 76%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background: linear-gradient(.25turn, rgba(69, 8, 164, 0), 50%, rgba(112, 0, 255, 1));
+    mix-blend-mode: normal;
+    border-radius: 0px 41.6915px 41.6915px 0px;
+}
+
+.modal-email-submit:hover, .modal-email-submit:active {
+    z-index: 900;
+    background: linear-gradient(.25turn, rgba(69, 8, 164, 0), 50%, rgba(112, 0, 255, 1));
+}
+
+.modal-arrow-image:hover {
+    transform: translateX(2px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.modal-arrow-image:active {
+    transform: translateX(-1px);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+}
+
+/* Styles for 576px breakpoint (portrait phones) and below */
+@media (max-width: 576px) {
+    .modal-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 350px;
+    }
+    
+    .modal-planet-image-wrapper {
+        top: 65%;
+    }
+    
+    .modal-bg-glow {
+        transform: translate(-50%, 50%);
+        height: 200px;
+    }
+    
+    .modal-text {
+        transform: translate(-50%, 60%);
+    }
+    
+    .modal-heading {
+        font-size: 40px;
+        padding-bottom: 14px;
+    }
+    
+    .modal-subheading {
+        font-size: 15px;   
+    }
+    
+    .modal-button-container {
+        width: 280px;
+        height: 71.47px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+/* Styles for 768px breakpoint (tablets) and below */
+@media (max-width: 768px) {
+    .modal-container {
+        height: 80vh;
+    }
+    
+    // .modal-planet-image-wrapper {
+    //     top: 60%;
+    // }
+    
+    // .modal-bg-glow {
+    //     transform: translate(-50%, 50%);
+    //     height: 275px;
+    //     width: 65%;
+    // }
+    
+    // .modal-text {
+    //     transform: translate(-50%, 50%);
+    // }
+    
+    // .modal-heading {
+    //     font-size: 40px;
+    //     padding-bottom: 14px;
+    // }
+    
+    // .modal-subheading {
+    //     font-size: 15px;   
+    // }
+    
+    // .modal-button-container {
+    //     width: 280px;
+    //     height: 71.47px;
+    //     left: 50%;
+    //     top: 50%;
+    //     transform: translate(-50%, 50%);
+    // }
+}
+
+/* Styles for 992px breakpoint (laptops) and below */
+@media (max-width: 992px) {
+    /* Adjust the styles here for laptops */
+    
+}
+
+/* Styles for 1200px breakpoint (large devices) and below */
+@media (max-width: 1200px) {
+    /* Adjust the styles here for large devices */
+}
+
+
