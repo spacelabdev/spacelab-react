@@ -1,7 +1,8 @@
 import React from "react";
-import HeroImage from "../../../components/heroImage/heroImage";
 import Footer from "../../../components/footer/footer";
 import "./signUp.scss";
+import Navigation from '../../../components/navigation/mainNavMenu/navigation'
+import Modal from './Modal/Modal'
 
 /**
  * Renders Sign Up Landing page
@@ -11,8 +12,8 @@ import "./signUp.scss";
 export default function SignUp() {
 	return (
 		<>
-			<HeroImage heroTitle="SIGN UP" />
-			{/* Code for Sign Up Landing page goes here */}
+			<Navigation/>
+			<Modal />
 			<Footer />
 		</>
 	);
