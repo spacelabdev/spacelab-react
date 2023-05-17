@@ -9,7 +9,11 @@ export default function Hero() {
 	return (
 		<section className="participate-hero">
 			<h1>Join Us At</h1>
-			<img src={spacelabImage} className="spacelab-image" />
+			<img
+				src={spacelabImage}
+				alt="SpaceLab logo"
+				className="spacelab-image"
+			/>
 			<p>
 				SpaceLab is a people-incubator focusing on outer-space tech
 				initiatives. We support and help underrepresented communities
@@ -17,19 +21,32 @@ export default function Hero() {
 				tech space!
 			</p>
 			<button>
-				{/* add link */}
-				<a href="https://google.com">Apply Now</a>
+				{/* change this link */}
+				<a href="https://spacelab.space">Apply Now</a>
 			</button>
-			<img src={galaxyOverlay} className="galaxy-overlay overlay" />
-			<img src={starsOverlay} className="stars-overlay overlay" />
-			<img src={star} className="star1 overlay" />
-			<img src={star} className="star2 overlay" />
-			<img src={star} className="star3 overlay" />
-			<img src={star} className="star4 overlay" />
-			<img src={star} className="star5 overlay" />
-			<img src={star} className="star6 overlay" />
-			<img src={star} className="star7 overlay" />
-			<img src={greenPlanet} className="green-planet overlay" />
+			{/* add "read more" which scrolls to next section */}
+			<img
+				src={galaxyOverlay}
+				alt="Overlay of Galaxy"
+				className="galaxy-overlay overlay"
+			/>
+			<img
+				src={starsOverlay}
+				alt="Overlay of Stars"
+				className="stars-overlay overlay"
+			/>
+			<img src={star} alt="Star" className="star1 overlay" />
+			<img src={star} alt="Star" className="star2 overlay" />
+			<img src={star} alt="Star" className="star3 overlay" />
+			<img src={star} alt="Star" className="star4 overlay" />
+			<img src={star} alt="Star" className="star5 overlay" />
+			<img src={star} alt="Star" className="star6 overlay" />
+			<img src={star} alt="Star" className="star7 overlay" />
+			<img
+				src={greenPlanet}
+				alt="Green Planet"
+				className="green-planet overlay"
+			/>
 		</section>
 	);
 }

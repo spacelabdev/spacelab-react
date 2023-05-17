@@ -1,16 +1,16 @@
 .participate-hero {
 	height: 100vh;
-	padding-top: 8rem;
+	padding-top: 12rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 2.5rem;
+	gap: 4rem;
 	overflow: hidden;
 	position: relative;
 
 	h1 {
-		transform: translate(-50%, -225%);
+		transform: translate(-50%, -240%);
 		z-index: 3;
 	}
 
