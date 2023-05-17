@@ -20,7 +20,8 @@ export default function SignUp() {
 		<>
 			<Navigation className="modal-nav"/>
 			{/* I didn't need to use stopPropagation() because the modal is outside of the overlay div */}
-			<div onClick={onClose} className="overlay">
+			{/* also the overlay now disappears when you close the modal! Thanks to the conditional class below */}
+			<div onClick={onClose} className={`${openModal ? "overlay" : ""}`}>
 			</div>
 			<Modal open={openModal} onClose={onClose} />
 			<Home className="modal-home"/>
