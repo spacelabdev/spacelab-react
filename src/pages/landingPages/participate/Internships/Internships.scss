@@ -1,0 +1,42 @@
+.participate-internships {
+	padding: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	background-color: #241738;
+
+	/* 
+
+    When pull request goes through, delete h2 and h3 styles from here.
+    Move them to Participate.scss 
+    
+    */
+
+	h2,
+	h3 {
+		margin: 0;
+	}
+
+	.internships-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.internship-element {
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+
+			img {
+				max-width: 15rem;
+			}
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
