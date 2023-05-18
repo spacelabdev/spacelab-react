@@ -1,7 +1,11 @@
 .participate-landing-page {
+	h2,
+	h3 {
+		margin: 0;
+	}
+
 	h2 {
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		margin: 0;
 	}
 }
