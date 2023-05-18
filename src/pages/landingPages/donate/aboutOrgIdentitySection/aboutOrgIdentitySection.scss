@@ -1,0 +1,41 @@
+:root {
+	--content-container: 1577px;
+}
+
+#about-org-identity-container {
+	max-width: var(--content-container);
+	width: 100%;
+	padding: 1rem 2rem;
+	display: flex;	
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	margin-top: 70px; // remove before PR
+
+	.card-section {
+		font-family: "Lato", sans-serif;
+		font-weight: 400;
+        border: 1px white solid;
+		margin-right: 0 - 1px; //prevent overlap boder
+		align-self: stretch;
+		flex: 1 1 0;
+		padding: 2rem;
+
+		.about-org-identity-header {
+			font-size: 3rem;
+			padding-top: 1rem;
+			color: white;
+		}
+		
+		.about-mission-content {
+			width: 90%;
+			margin: auto;
+			padding-top: 2em;
+			font-size: 2rem;
+		
+			p {
+				color: white;
+			}
+		}
+	}
+}
