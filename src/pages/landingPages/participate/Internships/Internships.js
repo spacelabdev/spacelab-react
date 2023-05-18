@@ -7,7 +7,7 @@ import uxDesignImage from "../assets/internships-ux-design.png";
 
 export default function Internships() {
 	return (
-		<section className="participate-internships">
+		<section className="participate-section internships">
 			<h2>Our Internships</h2>
 			<div className="internships-container">
 				<div className="internship-element">

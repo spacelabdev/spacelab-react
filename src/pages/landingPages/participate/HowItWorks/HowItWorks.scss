@@ -1,0 +1,39 @@
+.how-it-works {
+	background-color: #fff;
+
+	h2,
+	h3,
+	p {
+		color: black;
+	}
+
+	.how-it-works-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		width: 100%;
+
+		.how-it-works-element {
+			width: 30%;
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
+			img {
+				width: 30rem;
+			}
+
+			h3,
+			p {
+				text-align: left;
+			}
+
+			p {
+				width: 100%;
+				color: #4b4b4b;
+				font-size: 1.2rem;
+				line-height: 1.5;
+			}
+		}
+	}
+}
