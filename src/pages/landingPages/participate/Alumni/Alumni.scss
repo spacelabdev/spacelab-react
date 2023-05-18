@@ -1,0 +1,75 @@
+.alumni {
+	background-color: #fff;
+
+	h2,
+	p {
+		color: black;
+	}
+
+	.alumni-carousel {
+		position: relative;
+		// margin: 0 25rem;
+		width: 60vw;
+
+		.alumni-carousel-slides {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow: hidden;
+
+			.alumni-carousel-slide {
+				width: 100%;
+				opacity: 0;
+				transition: opacity 0.5s ease-in-out;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 6rem;
+
+				img {
+					width: 18rem;
+					height: auto;
+				}
+
+				&.active {
+					opacity: 1;
+					position: absolute;
+				}
+
+				.text-content {
+					display: flex;
+					flex-direction: column;
+					gap: 3rem;
+
+					p {
+						text-align: left;
+						font-size: 1.4rem;
+					}
+
+					.quote {
+						color: #7c7c7c;
+					}
+				}
+			}
+		}
+
+		.alumni-carousel-indicators {
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+
+			.alumni-carousel-indicator {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background-color: gray;
+				margin: 0 5px;
+				cursor: pointer;
+
+				&.active {
+					background-color: var(--neon-purple);
+				}
+			}
+		}
+	}
+}

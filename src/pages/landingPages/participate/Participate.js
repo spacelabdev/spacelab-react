@@ -4,6 +4,7 @@ import Hero from "./Hero/Hero";
 import HowItWorks from "./HowItWorks/HowItWorks";
 import WhatWereWorkingOn from "./WhatWereWorkingOn/WhatWereWorkingOn";
 import Internships from "./Internships/Internships";
+import Alumni from "./Alumni/Alumni";
 import Footer from "../../../components/footer/footer";
 import "./Participate.scss";
 
@@ -20,6 +21,7 @@ export default function Participate() {
 			<HowItWorks />
 			<WhatWereWorkingOn />
 			<Internships />
+			<Alumni />
 			<Footer />
 		</div>
 	);
