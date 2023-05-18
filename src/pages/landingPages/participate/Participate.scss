@@ -6,8 +6,11 @@
 	}
 
 	h2 {
-		text-transform: uppercase;
 		letter-spacing: 2px;
+
+		&:not(:last-child) {
+			text-transform: uppercase;
+		}
 	}
 
 	h3 {
