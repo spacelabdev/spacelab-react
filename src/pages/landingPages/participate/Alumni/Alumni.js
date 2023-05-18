@@ -1,7 +1,7 @@
 import "./Alumni.scss";
 import lauraPhoto from "../assets/alumni-laura.png";
 import angeliniesPhoto from "../assets/alumni-angelinies.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Alumni() {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -22,6 +22,18 @@ export default function Alumni() {
 			photo: angeliniesPhoto,
 		},
 	};
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setActiveIndex((prevIndex) =>
+				prevIndex === Object.keys(alumni).length - 1 ? 0 : prevIndex + 1
+			);
+		}, 6000);
+
+		return () => {
+			clearInterval(interval);
+		};
+	}, []);
 
 	const handleClick = (index) => {
 		setActiveIndex(index);
