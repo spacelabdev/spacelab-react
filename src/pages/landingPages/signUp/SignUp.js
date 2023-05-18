@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./signUp.scss";
 import Navigation from "../../../components/navigation/mainNavMenu/navigation"
-import Modal from "../../../components/forms/newsletterSubscribe/signUpModal/Modal"
+import Modal from "../../../components/forms/signUpModal/Modal"
 import Home from "../../home/home"
 
 /**
