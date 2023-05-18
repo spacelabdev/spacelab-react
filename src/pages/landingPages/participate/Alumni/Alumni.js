@@ -33,7 +33,7 @@ export default function Alumni() {
 		return () => {
 			clearInterval(interval);
 		};
-	}, []);
+	});
 
 	const handleClick = (index) => {
 		setActiveIndex(index);

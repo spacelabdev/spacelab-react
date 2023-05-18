@@ -1,4 +1,7 @@
 import "./CallToAction.scss";
+import starsOverlay from "../assets/stars-overlay.png";
+import star from "../assets/star.png";
+import greenPlanet from "../assets/green-planet.png";
 import { Link } from "react-router-dom";
 
 export default function CallToAction() {
@@ -14,6 +17,19 @@ export default function CallToAction() {
 			<button>
 				<Link to={"/contact"}>Apply Now</Link>
 			</button>
+			<img
+				src={starsOverlay}
+				alt="Overlay of Stars"
+				className="stars-overlay overlay"
+			/>
+			<img
+				src={greenPlanet}
+				alt="Green Planet"
+				className="green-planet overlay"
+			/>
+			<img src={star} alt="Star" className="star1 overlay" />
+			<img src={star} alt="Star" className="star2 overlay" />
+			<img src={star} alt="Star" className="star3 overlay" />
 		</section>
 	);
 }

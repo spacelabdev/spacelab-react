@@ -1,7 +1,11 @@
 .call-to-action {
+	position: relative;
+	overflow: hidden;
+
 	h2 {
 		font-family: "Poppins";
 		font-size: 3rem;
+		z-index: 3;
 	}
 
 	button {
@@ -14,5 +18,38 @@
 			background-color: #4f00b6;
 			cursor: pointer;
 		}
+	}
+
+	.overlay {
+		position: absolute;
+		z-index: 0;
+	}
+
+	.stars-overlay {
+		width: 100%;
+		transform: scale(0.9);
+	}
+
+	.green-planet {
+		width: 14rem;
+		left: 5%;
+		top: 40%;
+		transform: rotateY(180deg);
+	}
+
+	.star1 {
+		bottom: 10%;
+		right: 10%;
+	}
+
+	.star2 {
+		bottom: 55%;
+		right: 12%;
+		width: 1.4rem;
+	}
+	.star3 {
+		bottom: 40%;
+		right: 18%;
+		width: 1.7rem;
 	}
 }
