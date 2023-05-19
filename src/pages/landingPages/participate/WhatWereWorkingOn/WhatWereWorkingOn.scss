@@ -5,5 +5,10 @@
 		text-align: left;
 		font-size: 1.4rem;
 		width: 60vw;
+
+		@media only screen and (max-width: 800px) {
+			width: 95%;
+			font-size: 1.2rem;
+		}
 	}
 }
