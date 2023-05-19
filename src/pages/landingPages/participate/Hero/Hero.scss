@@ -9,11 +9,24 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	overflow: hidden;
 	position: relative;
 
-	h1 {
-		transform: translate(-50%, -245%);
+	@media only screen and (max-width: 1400px) {
+		height: 96vh;
+	}
+
+	.spacelab-header {
+		margin-top: -250px;
 		z-index: 3;
+
+		@media only screen and (max-width: 1400px) {
+			transform: scale(1.1);
+		}
+
+		@media only screen and (max-width: 800px) {
+			transform: scale(1.5);
+		}
 	}
 
 	p {
@@ -21,6 +34,15 @@
 		width: 55%;
 		z-index: 3;
 		padding: 0 0 3rem 0;
+
+		@media only screen and (max-width: 1400px) {
+			font-size: 1.6rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 90%;
+			padding: 2rem 0;
+		}
 	}
 
 	button {
@@ -42,16 +64,16 @@
 		position: absolute;
 		bottom: 50px;
 		text-transform: capitalize;
+		font-weight: 600;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 100px;
+		}
 
 		&:hover {
 			background: none;
 			border-bottom: 2px solid var(--neon-purple);
 		}
-	}
-
-	.spacelab-header {
-		margin-top: -250px;
-		z-index: 3;
 	}
 
 	.overlay {
@@ -63,25 +85,65 @@
 		bottom: 12%;
 		right: 10%;
 		width: 20rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 7rem;
+			bottom: 20%;
+			right: 5%;
+		}
 	}
 
 	/* top left stars */
 	.star1 {
 		top: 23%;
-		left: 20%;
+		left: 15%;
 		width: 2.6rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.4rem;
+			top: 12%;
+			left: 15%;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
 	}
 
 	.star2 {
-		top: 20%;
-		left: 15%;
+		top: 18%;
+		left: 10%;
 		width: 1.9rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.4rem;
+			top: 17%;
+			left: 12%;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1rem;
+		}
 	}
 
 	/* top right star */
 	.star3 {
 		top: 18%;
 		right: 20%;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.5rem;
+			top: 15%;
+			right: 12%;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
 	}
 
 	/* bottom left stars */
@@ -89,12 +151,30 @@
 		bottom: 20%;
 		left: 15%;
 		width: 2.4rem;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 20%;
+			left: 15%;
+			width: 1.8rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
 	}
 
 	.star5 {
 		bottom: 14%;
 		left: 23%;
 		width: 1.9rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.5rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1rem;
+		}
 	}
 
 	/* bottom right stars */
@@ -102,11 +182,31 @@
 		bottom: 22%;
 		right: 33%;
 		width: 2.3rem;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 30%;
+			right: 20%;
+			width: 1.2rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1rem;
+		}
 	}
 
 	.star7 {
 		bottom: 10%;
 		right: 10%;
 		width: 1.9rem;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 10%;
+			right: 8%;
+			width: 1.5rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
 	}
 }
