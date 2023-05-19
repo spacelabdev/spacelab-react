@@ -1,8 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./signUp.scss";
-import Navigation from "../../../components/navigation/mainNavMenu/navigation"
-import Modal from "../../../components/forms/newsletterSubscribe/signUpModal/Modal"
-import Home from "../../home/home"
+import Modal from "../../../components/forms/newsletterSubscribe/signUpModal/Modal";
+import Home from "../../home/home";
 
 /**
  * Renders Sign Up Landing page
@@ -10,22 +9,25 @@ import Home from "../../home/home"
  * @constructor
  */
 export default function SignUp() {
-	const [openModal, setOpenModal] = useState(false)
-	const onClose = () => { 
-		setOpenModal(false)
-	}
+	const [openModal, setOpenModal] = useState(true);
+	const onClose = () => {
+		setOpenModal(false);
+	};
 
 	React.useEffect(() => {
-        setTimeout(() => {
-            setOpenModal(true)
-        }, 1000)
-    }, [setOpenModal])
+		setTimeout(() => {
+			setOpenModal(true);
+		}, 1000);
+	}, [setOpenModal]);
 
 	return (
 		<>
-			<div onClick={onClose} className={`${openModal ? "overlay" : ""}`}></div>
+			<div
+				onClick={onClose}
+				className={`${openModal ? "overlay" : ""}`}
+			></div>
 			<Modal open={openModal} onClose={onClose} />
-			<Home className="modal-home"/>
+			<Home className="modal-home" />
 		</>
 	);
 }
