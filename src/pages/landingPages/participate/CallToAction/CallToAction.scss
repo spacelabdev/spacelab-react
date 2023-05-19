@@ -32,24 +32,53 @@
 		left: 10%;
 		top: 40%;
 		transform: rotateY(180deg);
+
+		@media only screen and (max-width: 1400px) {
+			width: 8rem;
+			top: 50%;
+		}
+
+		@media only screen and (max-width: 500px) {
+			top: 50%;
+			left: 5%;
+			width: 5rem;
+		}
 	}
 
 	/* right stars */
 	.star1 {
 		bottom: 10%;
 		right: 10%;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 15%;
+			right: 10%;
+			width: 2.5rem;
+		}
 	}
 
 	.star2 {
 		bottom: 55%;
 		right: 12%;
 		width: 1.4rem;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 50%;
+			right: 10%;
+			width: 1rem;
+		}
 	}
 
 	.star3 {
 		bottom: 40%;
 		right: 18%;
 		width: 1.7rem;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 40%;
+			right: 18%;
+			width: 1rem;
+		}
 	}
 
 	/* left star */
@@ -57,5 +86,16 @@
 		top: 20%;
 		left: 10%;
 		width: 1.5rem;
+
+		@media only screen and (max-width: 1400px) {
+			top: 15%;
+			left: 8%;
+			width: 1.2rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			top: 10%;
+			left: 8%;
+		}
 	}
 }
