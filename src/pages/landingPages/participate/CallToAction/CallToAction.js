@@ -1,12 +1,15 @@
 import "./CallToAction.scss";
-import starsOverlay from "../assets/stars-overlay.png";
+import ctaBackground from "../assets/cta-background.png";
 import star from "../assets/star.png";
 import greenPlanet from "../assets/green-planet.png";
 import { Link } from "react-router-dom";
 
 export default function CallToAction() {
 	return (
-		<section className="participate-section call-to-action">
+		<section
+			className="participate-section call-to-action"
+			style={{ backgroundImage: `url(${ctaBackground})` }}
+		>
 			{/*
             h2 needs to be in div for text to 
             not transform, unsure of why
@@ -18,11 +21,6 @@ export default function CallToAction() {
 				<Link to={"/contact"}>Apply Now</Link>
 			</button>
 			<img
-				src={starsOverlay}
-				alt="Overlay of Stars"
-				className="stars-overlay overlay"
-			/>
-			<img
 				src={greenPlanet}
 				alt="Green Planet"
 				className="green-planet overlay"
@@ -30,6 +28,7 @@ export default function CallToAction() {
 			<img src={star} alt="Star" className="star1 overlay" />
 			<img src={star} alt="Star" className="star2 overlay" />
 			<img src={star} alt="Star" className="star3 overlay" />
+			<img src={star} alt="Star" className="star4 overlay" />
 		</section>
 	);
 }
