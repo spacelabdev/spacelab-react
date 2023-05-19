@@ -5,11 +5,13 @@
 	h2,
 	p {
 		color: black;
+		z-index: 3;
 	}
 
 	.alumni-carousel {
 		position: relative;
 		width: 60vw;
+		z-index: 3;
 
 		@media only screen and (max-width: 750px) {
 			width: 85vw;
@@ -42,6 +44,10 @@
 				img {
 					width: 20rem;
 					height: auto;
+
+					@media only screen and (max-width: 800px) {
+						width: 18rem;
+					}
 				}
 
 				&.active {
@@ -59,7 +65,7 @@
 						font-size: 1.4rem;
 
 						@media only screen and (max-width: 800px) {
-							font-size: 1rem;
+							font-size: 1.2rem;
 						}
 					}
 
@@ -89,56 +95,71 @@
 			}
 		}
 	}
+
 	.overlay {
 		position: absolute;
 		z-index: 0;
 	}
 
 	.purple-planet1 {
-		top: 12%;
-		right: 10%;
-		width: 10rem;
+		top: 20%;
+		left: 15%;
+		width: 5rem;
 
 		@media only screen and (max-width: 1400px) {
-			width: 12rem;
+			top: 15%;
+			left: 32%;
 		}
 
-		@media only screen and (max-width: 800px) {
-			width: 7rem;
-			bottom: 20%;
-			right: 5%;
+		@media only screen and (max-width: 1000px) {
+			left: 25%;
+		}
+
+		@media only screen and (max-width: 500px) {
+			left: 14%;
+			width: 4rem;
 		}
 	}
 
 	.purple-planet2 {
-		bottom: 12%;
-		right: 10%;
-		width: 10rem;
+		top: 14%;
+		left: 30%;
+		width: 9rem;
 
 		@media only screen and (max-width: 1400px) {
-			width: 12rem;
+			top: 15%;
+			left: 58%;
 		}
 
-		@media only screen and (max-width: 800px) {
+		@media only screen and (max-width: 1000px) {
+			left: 70%;
+		}
+
+		@media only screen and (max-width: 500px) {
 			width: 7rem;
-			bottom: 20%;
-			right: 5%;
+			left: 65%;
 		}
 	}
 
 	.purple-planet3 {
 		bottom: 12%;
-		right: 10%;
-		width: 10rem;
+		left: 16%;
+		width: 8rem;
 
 		@media only screen and (max-width: 1400px) {
 			width: 12rem;
+			top: 32%;
+			left: 28%;
 		}
 
-		@media only screen and (max-width: 800px) {
+		@media only screen and (max-width: 1000px) {
+			left: 7%;
+		}
+
+		@media only screen and (max-width: 500px) {
+			left: 3%;
+			top: 40%;
 			width: 7rem;
-			bottom: 20%;
-			right: 5%;
 		}
 	}
 }
