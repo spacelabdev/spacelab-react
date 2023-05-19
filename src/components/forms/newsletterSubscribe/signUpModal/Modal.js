@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./Modal.scss";
 import SignUpForm from "./SignUpForm";
 import planetImage from "../../../../assets/componentAssets/solen-feyissa-54xmXW7tJzo-unsplash.png";
+export default function Modal({open, onClose}){
 
-export default function Modal({ open, onClose }) {
-	if (!open) return null;
+    if (!open) return null
 
 	return (
 		<>

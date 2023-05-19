@@ -1,11 +1,23 @@
-.overlay {
-    background: rgba(0, 0, 0, 0.85);
-    height: 100%;
-    width: 100vw;
-    position: fixed;
-    z-index: 100;
+.sign-up-landing-page {
+
+/* Styles for 576px breakpoint (portrait phones) and below */
+@media (max-width: 576px) {
+
 }
 
-.modal-home{
-    z-index: -500;
+/* Styles for 768px breakpoint (tablets) and below */
+@media (max-width: 768px) {
+
+}
+
+/* Styles for 992px breakpoint (laptops) and below */
+@media (max-width: 992px) {
+    
+}
+
+/* Styles for 1200px breakpoint (large devices) and below */
+@media (max-width: 1200px) {
+    
+}
+    
 }

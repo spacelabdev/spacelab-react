@@ -1,9 +1,8 @@
-import React, {useState} from "react";
-import arrowForward from "../../../../assets/componentAssets/arrow_forward_ios.png";
+import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import "./Modal.scss"
+import arrowForward from "../../assets/arrow_forward_ios.png";
 
-export default function SignUpForm(){
+export default function SignUpForm() {
     const [state, handleSubmit] = useForm("xoqzbogj");
 
     let [mousePosition, setMousePosition] = useState({x:0, y:0});
@@ -29,9 +28,10 @@ export default function SignUpForm(){
 	}
 
     return (
-        <>
+        <div className="sign-up-button-container">
+            
             <form 
-                className="modal-subscription-form"
+                className="sign-up-subscription-form"
                 onSubmit={handleSubmit}
                 onMouseMove={handleMouseMove}
                 style={{
@@ -41,10 +41,9 @@ export default function SignUpForm(){
                         rgba(255, 255, 255, 0.15) 40%,
                         rgba(255, 255, 255, 0.25) 100%`
                     }}
-            
             >
                 <input
-                    className="modal-email-input"
+                    className="sign-up-email-input"
                     type="email"
                     placeholder="ENTER EMAIL TO SUBSCRIBE"
                     name="email"
@@ -56,13 +55,14 @@ export default function SignUpForm(){
                     errors={state.errors}
                 />
                 <button
-                    className="modal-email-submit"
+                    className="sign-up-email-submit"
                     type="submit"
                     disabled={state.submitting}
                 >
-                    <img src={arrowForward} className="modal-arrow-image"></img>
+                    <img src={arrowForward} className="submit-arrow-image"></img>
                 </button>
-            </form> 
-        </>
+            </form>
+                    
+		</div>
     )
 }
