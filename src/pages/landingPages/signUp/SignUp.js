@@ -1,7 +1,8 @@
-import React from "react";
-import HeroImage from "../../../components/heroImage/heroImage";
-import Footer from "../../../components/footer/footer";
+import React, {useState} from "react";
 import "./signUp.scss";
+import Navigation from "../../../components/navigation/mainNavMenu/navigation"
+import Modal from "../../../components/forms/newsletterSubscribe/signUpModal/Modal"
+import Home from "../../home/home"
 
 /**
  * Renders Sign Up Landing page
@@ -9,11 +10,22 @@ import "./signUp.scss";
  * @constructor
  */
 export default function SignUp() {
+	const [openModal, setOpenModal] = useState(false)
+	const onClose = () => { 
+		setOpenModal(false)
+	}
+
+	React.useEffect(() => {
+        setTimeout(() => {
+            setOpenModal(true)
+        }, 1000)
+    }, [setOpenModal])
+
 	return (
 		<>
-			<HeroImage heroTitle="SIGN UP" />
-			{/* Code for Sign Up Landing page goes here */}
-			<Footer />
+			<div onClick={onClose} className={`${openModal ? "overlay" : ""}`}></div>
+			<Modal open={openModal} onClose={onClose} />
+			<Home className="modal-home"/>
 		</>
 	);
 }

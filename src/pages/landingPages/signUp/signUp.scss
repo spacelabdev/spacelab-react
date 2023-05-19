@@ -1,0 +1,11 @@
+.overlay {
+    background: rgba(0, 0, 0, 0.85);
+    height: 100%;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+}
+
+.modal-home{
+    z-index: -500;
+}
