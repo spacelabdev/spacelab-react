@@ -91,11 +91,20 @@ To get a local copy, follow these steps.
 
 ### Prerequisites
 
-To Run locally, you will need to use any node version >= 14 <= 16. Any other version you may receive an error. If you are using a mac you can install nvm to manage your node versions. (I suggest getting this if on Mac or Linux). For windows, you can use [nvm for Windows](https://github.com/coreybutler/nvm-windows)
+Make sure you have the latest npm package installed
+
+```npm install npm@latest -g
+
+```
+
+We recommend using a node manager to switch between node versions.  
+If you are on Mac or Linux you can install [nvm](https://github.com/nvm-sh/nvm) to manage your node versions. For windows, you can use [nvm for Windows](https://github.com/coreybutler/nvm-windows)
+
+Make sure you have the latest version of node installed.
 
 ```sh
-  nvm install 14
-  nvm use 14
+  nvm install 18.16.0
+  nvm use 18.16.0
 ```
 
 ### Installation
