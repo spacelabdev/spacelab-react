@@ -87,7 +87,7 @@ Spacelab is building the next generation of leaders in outer-space-focused scien
 
 ## Getting Started
 
-To get a local copy, follow these steps.
+To get a local copy, follow these steps:
 
 ### Prerequisites
 
