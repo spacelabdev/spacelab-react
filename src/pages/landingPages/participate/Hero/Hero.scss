@@ -22,14 +22,12 @@
 	}
 
 	button {
-		font-size: 1.3rem;
-		border-radius: 90px;
-		background-color: var(--neon-purple);
+		background-color: #4f00b6bb;
 		transition: 300ms ease-in-out;
 		z-index: 3;
 
 		&:hover {
-			background-color: #4f00b6;
+			background-color: var(--neon-purple);
 			cursor: pointer;
 		}
 	}
