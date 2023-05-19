@@ -46,4 +46,34 @@
 			padding: 3rem 1rem;
 		}
 	}
+
+	/* animations */
+
+	@keyframes twinkle {
+		0% {
+			opacity: 0.3;
+		}
+
+		50% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0.3;
+		}
+	}
+
+	@keyframes jiggle {
+		0% {
+			transform: scale(1);
+		}
+
+		50% {
+			transform: scale(1.05);
+		}
+
+		100% {
+			transform: scale(1);
+		}
+	}
 }

@@ -49,6 +49,8 @@
 	.star1 {
 		bottom: 10%;
 		right: 10%;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.1s;
 
 		@media only screen and (max-width: 1400px) {
 			bottom: 15%;
@@ -61,6 +63,7 @@
 		bottom: 55%;
 		right: 12%;
 		width: 1.4rem;
+		animation: twinkle 2s infinite;
 
 		@media only screen and (max-width: 1400px) {
 			bottom: 50%;
@@ -73,6 +76,8 @@
 		bottom: 40%;
 		right: 18%;
 		width: 1.7rem;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.4s;
 
 		@media only screen and (max-width: 1400px) {
 			bottom: 40%;
@@ -86,6 +91,7 @@
 		top: 20%;
 		left: 10%;
 		width: 1.5rem;
+		animation: twinkle 2s infinite;
 
 		@media only screen and (max-width: 1400px) {
 			top: 15%;
