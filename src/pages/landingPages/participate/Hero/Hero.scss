@@ -65,6 +65,7 @@
 		bottom: 50px;
 		text-transform: capitalize;
 		font-weight: 600;
+		animation: jiggle 3s infinite;
 
 		@media only screen and (max-width: 1400px) {
 			bottom: 100px;
@@ -102,6 +103,7 @@
 		top: 23%;
 		left: 15%;
 		width: 2.6rem;
+		animation: twinkle 2s infinite;
 
 		@media only screen and (max-width: 1400px) {
 			width: 1.4rem;
@@ -118,6 +120,8 @@
 		top: 18%;
 		left: 10%;
 		width: 1.9rem;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.2s;
 
 		@media only screen and (max-width: 1400px) {
 			width: 1.4rem;
@@ -134,6 +138,8 @@
 	.star3 {
 		top: 18%;
 		right: 20%;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.4s;
 
 		@media only screen and (max-width: 1400px) {
 			width: 1.5rem;
@@ -151,6 +157,7 @@
 		bottom: 20%;
 		left: 15%;
 		width: 2.4rem;
+		animation: twinkle 2s infinite;
 
 		@media only screen and (max-width: 1400px) {
 			bottom: 20%;
@@ -167,6 +174,8 @@
 		bottom: 14%;
 		left: 23%;
 		width: 1.9rem;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.2s;
 
 		@media only screen and (max-width: 1400px) {
 			width: 1.5rem;
@@ -182,6 +191,7 @@
 		bottom: 22%;
 		right: 33%;
 		width: 2.3rem;
+		animation: twinkle 2s infinite;
 
 		@media only screen and (max-width: 1400px) {
 			bottom: 30%;
@@ -198,6 +208,8 @@
 		bottom: 10%;
 		right: 10%;
 		width: 1.9rem;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.1s;
 
 		@media only screen and (max-width: 1400px) {
 			bottom: 10%;

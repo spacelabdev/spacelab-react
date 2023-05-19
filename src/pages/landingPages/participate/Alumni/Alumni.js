@@ -1,6 +1,7 @@
 import "./Alumni.scss";
 import lauraPhoto from "../assets/alumni-laura.png";
 import angeliniesPhoto from "../assets/alumni-angelinies.png";
+import purplePlanet from "../assets/purple-planet.png";
 import { useEffect, useState } from "react";
 
 export default function Alumni() {
@@ -9,7 +10,7 @@ export default function Alumni() {
 	const alumni = {
 		laura: {
 			name: "Laura Hiller",
-			position: "Software Development Intern",
+			position: "Software Developer",
 			company: "Position",
 			quote: '"Since joining, the organization has helped me become a better leader, collaborator, and engineer and it even contributed to my getting an internship as a Software Developer!”',
 			photo: lauraPhoto,
@@ -78,6 +79,21 @@ export default function Alumni() {
 					))}
 				</div>
 			</div>
+			<img
+				src={purplePlanet}
+				alt="Purple Planet"
+				className="purple-planet1 overlay"
+			/>
+			<img
+				src={purplePlanet}
+				alt="Purple Planet"
+				className="purple-planet2 overlay"
+			/>
+			<img
+				src={purplePlanet}
+				alt="Purple Planet"
+				className="purple-planet3 overlay"
+			/>
 		</section>
 	);
 }
