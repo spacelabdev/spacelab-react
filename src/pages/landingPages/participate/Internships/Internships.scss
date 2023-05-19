@@ -1,0 +1,28 @@
+.internships {
+	background-color: #241738;
+
+	.internships-container {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		.internship-element {
+			padding: 2rem;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+
+			@media only screen and (max-width: 700px) {
+				width: 50%;
+			}
+
+			img {
+				width: 15rem;
+			}
+
+			p {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
