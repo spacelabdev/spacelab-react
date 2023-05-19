@@ -1,5 +1,6 @@
 .alumni {
 	background-color: #fff;
+	position: relative;
 
 	h2,
 	p {
@@ -39,7 +40,7 @@
 				}
 
 				img {
-					width: 18rem;
+					width: 20rem;
 					height: auto;
 				}
 
@@ -56,6 +57,10 @@
 					p {
 						text-align: left;
 						font-size: 1.4rem;
+
+						@media only screen and (max-width: 800px) {
+							font-size: 1rem;
+						}
 					}
 
 					.quote {
@@ -82,6 +87,58 @@
 					background-color: var(--neon-purple);
 				}
 			}
+		}
+	}
+	.overlay {
+		position: absolute;
+		z-index: 0;
+	}
+
+	.purple-planet1 {
+		top: 12%;
+		right: 10%;
+		width: 10rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 7rem;
+			bottom: 20%;
+			right: 5%;
+		}
+	}
+
+	.purple-planet2 {
+		bottom: 12%;
+		right: 10%;
+		width: 10rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 7rem;
+			bottom: 20%;
+			right: 5%;
+		}
+	}
+
+	.purple-planet3 {
+		bottom: 12%;
+		right: 10%;
+		width: 10rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 7rem;
+			bottom: 20%;
+			right: 5%;
 		}
 	}
 }
