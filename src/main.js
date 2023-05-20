@@ -25,7 +25,7 @@ import Donate from "./pages/landingPages/donate/Donate";
 export default function Main() {
 	return (
 		<Switch>
-			<Route exact path="/about" component={Donate} />
+			<Route exact path="/about" component={About} />
 			<Route exact path="/archives" component={BlogArchives} />
 			<Route exact path="/blog" component={Blog} />
 			<Route exact path="/contact" component={Contact} />

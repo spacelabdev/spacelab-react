@@ -1,9 +1,97 @@
-.progress-container {
-    padding: 2rem;
+:root {
+	--text-color: #449495;
+    --content-width: 1400px;
+}
 
-    .people-of-color{        
-        .progress-percentage-container{
-            color: #449495;
-        }
+#progress-container {
+    max-width: var(--content-width);
+    margin: 0 auto;
+
+    .company-progress-header {
+        font-size: 3rem;
+        color: white;
+        margin: 2rem auto;
     }
+
+    .progress-image-wrapper {
+        position: relative;
+        font-family: "Lato", sans-serif;
+        
+        .progress-image {
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .progress-card {
+            font-family: "Lato", sans-serif;
+            position: absolute;   
+            
+            @media (max-width: 1024px) {
+                transform: scale(0.7);
+            }
+
+            .progress-percentage-container{
+                color: var(--text-color);
+                display: flex;
+                margin-bottom: 0;
+
+                .progress-percentage{
+                    align-self: flex-end;
+                    font-size: 2rem;
+
+                    @media (max-width: 767px) {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+
+            p {
+                text-align: left;
+
+                @media (max-width: 767px) {
+                    font-size: 1rem;
+                }
+            }
+
+            .percentage-up-arrow {
+                max-height: 44px;
+                max-width: 44px;
+                
+                @media (max-width: 1024px) {
+                    max-width: 24px;
+                    min-height: 24px;
+                }
+            }
+        }
+
+        .people-of-color {
+            top: 34%;
+            right: 11%;
+
+            @media (max-width: 1024px) {
+                right: 6%;
+                top: 30%;
+            }
+        }
+
+        .women-non-binary {
+            top: 15%;
+            left: 15%;
+
+            @media (max-width: 1024px) {
+                top: 10%;
+                left: 8%;
+            }
+        }
+
+        .people-disablity {
+            bottom: 5%;
+            left: 50%;
+
+            @media (max-width: 1024px) {
+                bottom: 0%;
+                left: 46%;
+            }
+        }
+    }   
 }

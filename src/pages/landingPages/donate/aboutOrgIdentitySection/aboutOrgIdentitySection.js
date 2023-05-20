@@ -1,4 +1,4 @@
-import { SPACELAB_ORG_INDENTITY } from "../constant";
+import { SPACELAB_ORG_INDENTITY } from "./data";
 import "./aboutOrgIdentitySection.scss";
 
 const AboutOrgIdentitySection = () => {
