@@ -1,17 +1,15 @@
-:root {
-	--content-container: 1577px;
-}
-
 #about-org-identity-container {
 	max-width: var(--content-width);
 	width: 100%;
-	padding: 1rem 2rem;
 	display: flex;	
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	margin-top: 70px; // remove before PR
-
+	
+	@media (max-width: 1024px) {
+        max-width: calc(.8 * var(--content-width));
+    }
+	
 	.card-section {
 		font-weight: 400;
         border: 3px white solid;

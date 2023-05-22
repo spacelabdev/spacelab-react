@@ -1,53 +1,61 @@
 :root {
-	--content-container: 1400px;
     --image-size: 225px;
     --card-size: 300px;
 }
 
 #testimonial-container {
-    max-width: var(--content-container);
-	width: 100%;
-	padding: 1rem 2rem;
-	margin: 5rem auto;
-    
-    .testimonial-form-content {
-        p {
-            padding: 1rem 2rem;
-        }
-    }
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/testimonial_background.png");
+	background-repeat: no-repeat;
+    background-size: cover;
 
-    .testimonial-testimonial-content {
-        margin-top: 15rem;
-        display: flex;
-        align-items: center;
-        border: 3px solid var(--white);
-        position: relative;
-
-        .testimonial-card {
-            padding: 2rem 4rem;
-            min-width: var(--card-size);
-
-            .testimonial-feedback {
-                font-style: italic;
-                margin-top: calc(-1 * var(--image-size)/2);
-            }
-
-            .testimonial-name {
-                padding-top: 1rem;
-                font-weight: 600;
-            }
-
+    .testimonial-content{
+        max-width: var(--content-width);
+        width: 100%;
+        padding: 5rem 2rem;
+        margin: 0 auto;
+        
+        .testimonial-form-content {
             p {
-                margin-bottom: 0;
-                padding: 1rem 0;
+                padding: 1rem 2rem;
             }
+        }
 
-            .testimonial-image {
-                width: var(--image-size);
-                height: var(--image-size);
-                margin: 0 auto;
-                object-fit: cover;
-                transform: translateY(-60%);
+        .testimonial-data {
+            margin-top: 15rem;
+            display: flex;
+            align-items: center;
+            border: 3px solid var(--white);
+            position: relative;
+            margin: 300px auto; //need to verify
+
+            .testimonial-card {
+                padding: 2rem 4rem;
+                min-width: var(--card-size);
+
+                .testimonial-feedback {
+                    font-style: italic;
+                    margin-top: calc(-1 * var(--image-size)/2);
+                }
+
+                .testimonial-name {
+                    padding-top: 1rem;
+                    font-weight: 600;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    padding: 1rem 0;
+                }
+
+                .testimonial-image {
+                    width: var(--image-size);
+                    height: var(--image-size);
+                    margin: 0 auto;
+                    object-fit: cover;
+                    transform: translateY(-60%);
+                }
             }
         }
     }
