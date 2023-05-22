@@ -1,0 +1,35 @@
+:root {
+	--content-container: 1577px;
+}
+
+#about-org-identity-container {
+	max-width: var(--content-width);
+	width: 100%;
+	padding: 1rem 2rem;
+	display: flex;	
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	margin-top: 70px; // remove before PR
+
+	.card-section {
+		font-weight: 400;
+        border: 3px white solid;
+		margin-right: 0 - 1px; //prevent overlap boder
+		align-self: stretch;
+		flex: 1 1 0;
+		padding: 2rem;
+
+		.about-mission-content {
+			font-family: "Lato", sans-serif;
+			width: 90%;
+			margin: auto;
+			padding-top: 1rem;
+			font-size: 2rem;
+		
+			p {
+				color: white;
+			}
+		}
+	}
+}

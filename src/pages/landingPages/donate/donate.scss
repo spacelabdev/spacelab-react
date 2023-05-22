@@ -1,0 +1,22 @@
+:root {
+    --btn-background: #370080;
+    --btn-border: #7000FF;
+}
+
+.donate-title {
+    font-size: 3rem;
+	color: white;
+}
+
+.donate-button {
+    cursor: pointer;
+    background-color: var(--btn-background);
+    border: 4px solid var(--btn-border);
+    margin: 0 auto;
+    padding: 0.5rem 4rem;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.5rem;
+}

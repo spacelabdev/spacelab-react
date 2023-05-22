@@ -1,6 +1,9 @@
 import React from "react";
-import HeroImage from "../../../components/heroImage/heroImage";
 import Footer from "../../../components/footer/footer";
+import AboutOrgIdentitySection from "./aboutOrgIdentitySection/aboutOrgIdentitySection";
+import Hero from "./Hero/hero";
+import CompanyProgress from "./companyProgress/companyProgress";
+import TestimonialSection from "./testimonialSection/testimonialSection";
 import "./donate.scss";
 
 /**
@@ -11,8 +14,13 @@ import "./donate.scss";
 export default function Donate() {
 	return (
 		<>
-			<HeroImage heroTitle="DONATE" />
+			<Hero />
 			{/* Code for Donate Landing page goes here */}
+			<div className="donate-container">
+				<AboutOrgIdentitySection />
+				<CompanyProgress />
+				<TestimonialSection />
+			</div>
 			<Footer />
 		</>
 	);
