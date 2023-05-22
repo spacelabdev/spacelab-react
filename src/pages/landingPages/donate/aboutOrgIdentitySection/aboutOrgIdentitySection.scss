@@ -3,7 +3,7 @@
 }
 
 #about-org-identity-container {
-	max-width: var(--content-container);
+	max-width: var(--content-width);
 	width: 100%;
 	padding: 1rem 2rem;
 	display: flex;	
@@ -13,20 +13,15 @@
 	margin-top: 70px; // remove before PR
 
 	.card-section {
-		font-family: "Lato", sans-serif;
 		font-weight: 400;
-        border: 1px white solid;
+        border: 3px white solid;
 		margin-right: 0 - 1px; //prevent overlap boder
 		align-self: stretch;
 		flex: 1 1 0;
 		padding: 2rem;
 
-		.about-org-identity-header {
-			font-size: 3rem;
-			color: white;
-		}
-		
 		.about-mission-content {
+			font-family: "Lato", sans-serif;
 			width: 90%;
 			margin: auto;
 			padding-top: 1rem;
