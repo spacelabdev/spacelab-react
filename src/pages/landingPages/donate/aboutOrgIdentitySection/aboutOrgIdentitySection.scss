@@ -1,32 +1,35 @@
 #about-org-identity-container {
-	max-width: var(--content-width);
-	width: 100%;
-	display: flex;	
-	align-items: center;
-	justify-content: center;
-	margin: 0 auto;
-	
-	@media (max-width: 1024px) {
-        max-width: calc(.8 * var(--content-width));
-    }
-	
-	.card-section {
-		font-weight: 400;
-        border: 3px white solid;
-		margin-right: 0 - 1px; //prevent overlap boder
-		align-self: stretch;
-		flex: 1 1 0;
-		padding: 2rem;
+	.about-org-content {
+		max-width: var(--content-width);
+		width: 100%;
+		display: flex;	
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+		padding: 0 4rem;
 
-		.about-mission-content {
-			font-family: "Lato", sans-serif;
-			width: 90%;
-			margin: auto;
-			padding-top: 1rem;
-			font-size: 2rem;
+		@media (max-width: 1024px) {
+			max-width: calc(.8 * var(--content-width));
+		}
 		
-			p {
-				color: white;
+		.card-section {
+			font-weight: 400;
+			border: 3px white solid;
+			margin-right: -3px; //prevent overlap boder
+			align-self: stretch;
+			flex: 1 1 0;
+			padding: 2rem;
+
+			.about-mission-content {
+				font-family: "Lato", sans-serif;
+				width: 90%;
+				margin: auto;
+				padding-top: 1rem;
+				font-size: 2rem;
+			
+				p {
+					color: white;
+				}
 			}
 		}
 	}

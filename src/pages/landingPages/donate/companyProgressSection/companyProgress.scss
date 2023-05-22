@@ -6,6 +6,7 @@
     .progress-content{
         max-width: var(--content-width);
         margin: 5rem auto;
+        padding: 0 4rem;
         font-family: "Lato", sans-serif;
 
         @media (max-width: 1024px) {
@@ -36,7 +37,7 @@
                         align-self: flex-end;
                         font-size: 2rem;
 
-                        @media (max-width: 767px) {
+                        @media (max-width: 1024px) {
                             font-size: 1.2rem;
                         }
                     }
