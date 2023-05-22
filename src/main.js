@@ -12,10 +12,10 @@ import CookiePolicy from "./pages/cookiepolicy/cookiepolicy";
 import PrivacyPolicy from "./pages/privacypolicy/privacypolicy";
 import BlogArchives from "./components/blogArchives/blogArchives";
 /* landing pages */
+import Donate from "./pages/landingPages/donate/Donate";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
 import SignUp from "./pages/landingPages/signUp/SignUp";
-import Donate from "./pages/landingPages/donate/Donate";
 
 /**
  * Handles Routing
