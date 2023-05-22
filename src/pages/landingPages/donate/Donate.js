@@ -3,6 +3,8 @@ import Footer from "../../../components/footer/footer";
 import AboutOrgIdentitySection from "./aboutOrgIdentitySection/aboutOrgIdentitySection";
 import Hero from "./Hero/hero";
 import CompanyProgress from "./companyProgress/companyProgress";
+import TestimonialSection from "./testimonialSection/testimonialSection";
+import "./donate.scss";
 
 /**
  * Renders Donate Landing page
@@ -17,6 +19,7 @@ export default function Donate() {
 			<div className="donate-container">
 				<AboutOrgIdentitySection />
 				<CompanyProgress />
+				<TestimonialSection />
 			</div>
 			<Footer />
 		</>

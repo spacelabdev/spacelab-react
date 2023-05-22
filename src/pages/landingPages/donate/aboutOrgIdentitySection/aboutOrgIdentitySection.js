@@ -6,7 +6,7 @@ const AboutOrgIdentitySection = () => {
 		<section id="about-org-identity-container">
 			{SPACELAB_ORG_INDENTITY.map(({ title, description }) => (
 				<div className="card-section" key={title}>
-					<h4 className="about-org-identity-header">{title}</h4>
+					<h4 className="donate-title">{title}</h4>
 					<div className="about-mission-content">
 						<p>{description}</p>
 					</div>

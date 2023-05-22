@@ -6,9 +6,7 @@ import "./companyProgress.scss";
 const CompanyProgress = () => {
 	return (
 		<section id="progress-container">
-			<h4 className="company-progress-header">
-				SpaceLab vs Tech Industry Average
-			</h4>
+			<h4 className="donate-title">SpaceLab vs Tech Industry Average</h4>
 			<div className="progress-image-wrapper">
 				<img
 					src={GroupImage}

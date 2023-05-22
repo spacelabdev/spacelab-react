@@ -5,17 +5,11 @@
 
 #progress-container {
     max-width: var(--content-width);
-    margin: 0 auto;
-
-    .company-progress-header {
-        font-size: 3rem;
-        color: white;
-        margin: 2rem auto;
-    }
+    margin: 5rem auto;
+    font-family: "Lato", sans-serif;
 
     .progress-image-wrapper {
         position: relative;
-        font-family: "Lato", sans-serif;
         
         .progress-image {
             margin: 0 auto;
@@ -23,7 +17,6 @@
         }
 
         .progress-card {
-            font-family: "Lato", sans-serif;
             position: absolute;   
             
             @media (max-width: 1024px) {
