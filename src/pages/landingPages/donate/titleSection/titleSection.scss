@@ -65,15 +65,16 @@
         z-index: 2;
         position: absolute;
         bottom: 0;
-        left: 34.4%;
+        padding-left: 4rem;
+        left: 31.5%;
 
-        @media screen and (max-width: 2000px) {
-            left: 29%;
+        @media screen and (max-width: 2100px) {
+            left: 30%;
         }
 
-        @media screen and (max-width: 766px) {
-            left: 20%;
-        }
+        // @media screen and (max-width: 766px) {
+        //     left: 20%;
+        // }
     }
     
 }
