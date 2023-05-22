@@ -1,4 +1,9 @@
 import React from "react";
+import Hero from "./Hero/hero";
+import TitleSection from "./titleSection/titleSection";
+import AboutOrgIdentitySection from "./aboutOrgIdentitySection/aboutOrgIdentitySection";
+import CompanyProgress from "./companyProgressSection/companyProgress";
+import TestimonialSection from "./testimonialSection/testimonialSection";
 import Footer from "../../../components/footer/footer";
 import AboutOrgIdentitySection from "./aboutOrgIdentitySection/aboutOrgIdentitySection";
 import Hero from "./Hero/hero";
@@ -15,12 +20,12 @@ export default function Donate() {
 	return (
 		<>
 			<Hero />
+			<Hero />
 			{/* Code for Donate Landing page goes here */}
-			<div className="donate-container">
-				<AboutOrgIdentitySection />
-				<CompanyProgress />
-				<TestimonialSection />
-			</div>
+			<TitleSection />
+			<AboutOrgIdentitySection />
+			<CompanyProgress />
+			<TestimonialSection />
 			<Footer />
 		</>
 	);

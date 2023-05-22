@@ -1,6 +1,8 @@
 :root {
+    --content-width: 1600px;
     --btn-background: #370080;
     --btn-border: #7000FF;
+    --padding: 4rem;
 }
 
 .donate-title {
@@ -13,10 +15,13 @@
     background-color: var(--btn-background);
     border: 4px solid var(--btn-border);
     margin: 0 auto;
-    padding: 0.5rem 4rem;
+    padding: 1rem 6rem;
     font-size: 1.5rem;
 }
 
+p {
+    font-size: 1.5rem;
+}
 p {
     font-size: 1.5rem;
 }
