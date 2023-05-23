@@ -133,7 +133,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## Contact
 
-[Website] (https://github.com/spacelabdev/spacelab-react)<br />
+[Website](https://github.com/spacelabdev/spacelab-react)<br />
 [Twitter](https://twitter.com/SpaceLab)<br />
 [LinkedIn](https://www.linkedin.com/company/spacelab-space/)<br />
 [Instagram](https://www.instagram.com/Spacelab)<br />
