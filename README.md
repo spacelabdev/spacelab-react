@@ -1,10 +1,3 @@
-<!-- [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url] -->
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -93,14 +86,15 @@ To get a local copy, follow these steps.
 
 Make sure you have the latest npm package installed
 
-```npm install npm@latest -g
+```sh
+npm install npm@latest -g
 
 ```
 
+Make sure you have the latest version of node installed.
+
 We recommend using a node manager to switch between node versions.  
 If you are on Mac or Linux you can install [nvm](https://github.com/nvm-sh/nvm) to manage your node versions. For windows, you can use [nvm for Windows](https://github.com/coreybutler/nvm-windows)
-
-Make sure you have the latest version of node installed.
 
 ```sh
   nvm install 18.16.0
@@ -139,11 +133,10 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## Contact
 
+[Website] (https://github.com/spacelabdev/spacelab-react)<br />
 [Twitter](https://twitter.com/SpaceLab)<br />
 [LinkedIn](https://www.linkedin.com/company/spacelab-space/)<br />
 [Instagram](https://www.instagram.com/Spacelab)<br />
 [Email](mailto:spacelabdev@gmail.com)
-
-Project Link: [Spacelab](https://github.com/spacelabdev/spacelab-react)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
