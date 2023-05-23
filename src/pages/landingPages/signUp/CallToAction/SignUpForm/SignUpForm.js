@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import arrowForward from "../../assets/arrow_forward_ios.png";
+import "./SignUpForm.scss"
 
 export default function SignUpForm() {
     const [state, handleSubmit] = useForm("xoqzbogj");
@@ -28,10 +29,9 @@ export default function SignUpForm() {
 	}
 
     return (
-        <div className="sign-up-button-container">
-            
+        <div className="sign-up-subscription-form">
             <form 
-                className="sign-up-subscription-form"
+                className="sign-up-button-container"
                 onSubmit={handleSubmit}
                 onMouseMove={handleMouseMove}
                 style={{
