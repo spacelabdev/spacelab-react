@@ -44,6 +44,7 @@
         <ul>
             <li><a href="#creatingAFeatureBranch">Creating A Feature Branch</a></li>
             <li><a href="#rebasingAFeatureBranch">Rebasing A Feature Branch</a></li>
+            <li><a href="#submittingAPullRequest">Submitting A Pull Request</a></li>
         </ul>
     </li>
     <li><a href="#styleGuide">Style Guide</a></li>
