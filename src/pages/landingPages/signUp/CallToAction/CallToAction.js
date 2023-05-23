@@ -10,10 +10,12 @@ export default function CallToAction() {
                 <span className="cta-subheading">Subscribe now, and join our community of space enthusiasts.</span>
             </div>
 
+            <SignUpForm/>
+
             <div className="planet-image-wrapper">
-                <img src={planetImage} className="planet-image"></img>
+                <img src={planetImage} className="planet-image" alt="blue planet art by Solen Feyissa"></img>
                 <div className="planet-bg-glow"></div>
-                <SignUpForm/>
+                
             </div>
         </div>
         

@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./signUp.scss";
 import Navigation from "../../../components/navigation/mainNavMenu/navigation";
 import CallToAction from "./CallToAction/CallToAction";

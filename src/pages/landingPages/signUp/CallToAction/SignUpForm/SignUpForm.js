@@ -9,11 +9,10 @@ export default function SignUpForm() {
     let [mousePosition, setMousePosition] = useState({x:0, y:0});
 
     function handleMouseMove({clientX, clientY, currentTarget}) {
-		let { left, top } = currentTarget.getBoundingClientRect();
-		let xPosition = clientX - left;
-		let yPosition = clientY - top;
+		const { left, top } = currentTarget.getBoundingClientRect();
+		const xPosition = clientX - left;
+		const yPosition = clientY - top;
 		setMousePosition({ x: xPosition, y: yPosition });
-        console.log("x: ", mousePosition.x, "y: ", mousePosition.y )
 	}
 
     if (state.succeeded) {
@@ -29,9 +28,9 @@ export default function SignUpForm() {
 	}
 
     return (
-        <div className="sign-up-subscription-form">
+        <div className="sign-up-button-container">
             <form 
-                className="sign-up-button-container"
+                className="sign-up-subscription-form"
                 onSubmit={handleSubmit}
                 onMouseMove={handleMouseMove}
                 style={{
@@ -59,7 +58,7 @@ export default function SignUpForm() {
                     type="submit"
                     disabled={state.submitting}
                 >
-                    <img src={arrowForward} className="submit-arrow-image"></img>
+                    <img src={arrowForward} className="submit-arrow-image" alt="arrow icon"></img>
                 </button>
             </form>
                     

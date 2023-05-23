@@ -4,20 +4,19 @@
     background-image: url("../assets/paul-volkmer-R5bkvjGHZig-unsplash.jpg");
     background-size: cover;
     background-position: top;
-    //height: 1091.52px;
     overflow: hidden;
 
     .cta-text {
-        position: absolute;
+        position: relative;
         font-family: 'Poppins';
         font-style: normal;
-        position: absolute;
         width: 100%;
         left: 50%;
-        top: 5%;
+        top: 7%;
         transform: translate(-50%, 50%);
         text-align: center;
         color: #FFFFFF;
+        
     }
 
     .cta-heading {
@@ -25,7 +24,7 @@
         font-weight: 600;
         font-size: 85.0847px;
         line-height: 128px;
-        padding-bottom: 14px;
+        padding-bottom: 3%;
     }
 
     .cta-subheading {
@@ -33,6 +32,7 @@
         font-weight: 400;
         font-size: 25.53px;
         line-height: 38px;
+        padding-bottom: 3%;
     }
     
     .planet-image-wrapper {
@@ -43,19 +43,21 @@
         top: 12%;
         transform: translate(-50%, 50%);
     }
+
     .planet-image {
         z-index: 400;
         position: absolute;
         width: 100%;
-        height: 1540px;
+        height: 1150px;
     }
+
     .planet-bg-glow {
         z-index: 300;
         position: absolute;
-        top: 100%;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, 16%);
-        height: 1800px;
+        height: 1750px;
         width: 90%;
         box-shadow: 0 0 100px 10px #50AFED;
         border-radius: 100%;
