@@ -43,6 +43,7 @@ export default function SignUpForm() {
             >
                 <input
                     className="sign-up-email-input"
+                    id="email"
                     type="email"
                     placeholder="ENTER EMAIL TO SUBSCRIBE"
                     name="email"

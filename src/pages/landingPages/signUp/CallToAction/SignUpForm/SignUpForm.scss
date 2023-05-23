@@ -68,6 +68,16 @@
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
     }
 
+    .submit-form-container {
+        position: relative;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, 50%);
+        background-color: rgba(255, 255, 255, .1);
+        border-radius: 30.6305px;
+        width: 561.56px;
+    }
+
     /* Styles for 576px breakpoint (portrait phones) and below */
     @media (max-width: 576px) {
 
