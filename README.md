@@ -37,6 +37,13 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
+        <li>
+      <a href="#getting-started">Contributing</a>
+      <ul>
+        <li><a href="#open-source">Open Source</a></li>
+        <li><a href="#new-developers">New Developers</a></li>
+      </ul>
+    </li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -118,7 +125,9 @@ If you are on Mac or Linux you can install [nvm](https://github.com/nvm-sh/nvm) 
 
 <!-- CONTRIBUTING -->
 
-## Open Source Contributors
+## Contributing
+
+### Open Source
 
 If you wish to become a contributor to the project, please [contact us](mailto:spacelabdev@gmail.com). Any contributions you make are **greatly appreciated**.
 
@@ -129,6 +138,11 @@ If you have a suggestion that would make this better, please fork the repo and c
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+### New Developers
+
+If you've just joined the Spacelab as a new Developer, please read through the [Dev Docs](https://github.com/spacelabdev/spacelab-react/blob/main/DeveloperOnboarding.md) to get started contributing!
+
  <!-- CONTACT -->
 
 ## Contact
