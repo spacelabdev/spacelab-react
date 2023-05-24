@@ -1,38 +1,44 @@
 .cta-container {
     position: relative;
-    height: 1150px;
+    height: 1100px;
     background-image: url("../assets/paul-volkmer-R5bkvjGHZig-unsplash.jpg");
     background-size: cover;
     background-position: top;
     overflow: hidden;
 
+    @media only screen and (max-width: 750px) {
+        height: min(800px, 95vh);
+    }
+
     .cta-text {
         position: relative;
         font-family: 'Poppins';
         font-style: normal;
-        width: 100%;
+        width: 90%;
         left: 50%;
         top: 7%;
         transform: translate(-50%, 50%);
         text-align: center;
         color: #FFFFFF;
-        
+        line-height: 1;
+
+        @media only screen and (max-width: 750px) {
+            top: -10%;
+        }
     }
 
     .cta-heading {
         display: block;
         font-weight: 600;
         font-size: 85.0847px;
-        line-height: 128px;
-        padding-bottom: 3%;
+        padding-bottom: 4%;
     }
 
     .cta-subheading {
         display: block;
         font-weight: 400;
         font-size: 25.53px;
-        line-height: 38px;
-        padding-bottom: 3%;
+        padding-bottom: 5%;
     }
     
     .planet-image-wrapper {
@@ -40,8 +46,13 @@
         position: relative;
         width: 120%; 
         left: 50%;
-        top: 12%;
+        top: 7%;
         transform: translate(-50%, 50%);
+
+        @media only screen and (max-width: 750px) {
+            width: 200%;
+            top: -10%;
+        }
     }
 
     .planet-image {
@@ -63,27 +74,8 @@
         border-radius: 100%;
     }
 
-/* Styles for 576px breakpoint (portrait phones) and below */
-@media (max-width: 576px) {
-
 }
 
-/* Styles for 768px breakpoint (tablets) and below */
-@media (max-width: 768px) {
-
-}
-
-/* Styles for 992px breakpoint (laptops) and below */
-@media (max-width: 992px) {
-    
-}
-
-/* Styles for 1200px breakpoint (large devices) and below */
-@media (max-width: 1200px) {
-    
-}
-
-}
 
 
 

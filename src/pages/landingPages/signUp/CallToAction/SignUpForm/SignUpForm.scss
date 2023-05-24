@@ -5,7 +5,7 @@
         width: 561.56px;
         height: 71.47px;
         left: 50%;
-        top: 20%;
+        top: 17%;
         transform: translate(-50%, 50%);
         text-align: center;
         overflow: hidden;
@@ -16,6 +16,12 @@
         border-left: .25px solid rgba(103, 0, 255, 0.5);
         box-shadow: 0px 13.6135px 54.4542px rgba(104, 1, 255, 0.12);
         background: conic-gradient(#08F969 75deg, #100BF7 90deg, #0BA2F7 100deg, #08F969 110deg, #F70ED2 200deg, #6804FD 330deg);
+
+        @media only screen and (max-width: 750px) {
+            width: min(90%, 325px);
+            background: none;
+            top: 10%;
+        }
     }
 
     .radial-gradient-container{
@@ -74,34 +80,14 @@
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
     }
 
-    .submit-form-container {
+    .submission-successful-text {
         position: relative;
         left: 50%;
-        top: 10%;
+        top: 20%;
         transform: translate(-50%, 50%);
         background-color: rgba(255, 255, 255, .1);
         border-radius: 30.6305px;
         width: 561.56px;
-    }
-
-    /* Styles for 576px breakpoint (portrait phones) and below */
-    @media (max-width: 576px) {
-
-    }
-
-    /* Styles for 768px breakpoint (tablets) and below */
-    @media (max-width: 768px) {
-
-    }
-
-    /* Styles for 992px breakpoint (laptops) and below */
-    @media (max-width: 992px) {
-        
-    }
-
-    /* Styles for 1200px breakpoint (large devices) and below */
-    @media (max-width: 1200px) {
-        
     }
 
 }

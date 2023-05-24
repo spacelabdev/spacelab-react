@@ -17,12 +17,10 @@ export default function SignUpForm() {
 
     if (state.succeeded) {
         return (
-            <div className={"submit-form-container"}>
-                <h2>Thank You!</h2>
-                <p>
-                    Your submission has been received! We'll be in touch with
-                    you shortly.
-                </p>
+            <div className={"submission-successful-text"}>
+                <span className="submission-successful-heading"> Ad Astra!</span>
+                <br/>
+                <span className="submission-successful-subheading">Thank you for subscribing to our email newsletter. You should receive a confirmation email soon.</span>
             </div>
         );
     }
