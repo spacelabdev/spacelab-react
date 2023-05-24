@@ -6,63 +6,65 @@ import "./SignUpForm.scss"
 export default function SignUpForm() {
     const [state, handleSubmit] = useForm("xoqzbogj");
 
-    let [mousePosition, setMousePosition] = useState({x:0, y:0});
+    let [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
-    function handleMouseMove({clientX, clientY, currentTarget}) {
-		const { left, top } = currentTarget.getBoundingClientRect();
-		const xPosition = clientX - left;
-		const yPosition = clientY - top;
-		setMousePosition({ x: xPosition, y: yPosition });
-	}
+    function handleMouseMove({ clientX, clientY, currentTarget }) {
+        const { left, top } = currentTarget.getBoundingClientRect();
+        const xPosition = clientX - left;
+        const yPosition = clientY - top;
+        setMousePosition({ x: xPosition, y: yPosition });
+    }
 
     if (state.succeeded) {
-		return (
-			<div className={"submit-form-container"}>
-				<h2>Thank You!</h2>
-				<p>
-					Your submission has been received! We'll be in touch with
-					you shortly.
-				</p>
-			</div>
-		);
-	}
+        return (
+            <div className={"submit-form-container"}>
+                <h2>Thank You!</h2>
+                <p>
+                    Your submission has been received! We'll be in touch with
+                    you shortly.
+                </p>
+            </div>
+        );
+    }
 
     return (
         <div className="sign-up-button-container">
-            <form 
-                className="sign-up-subscription-form"
-                onSubmit={handleSubmit}
+            <div className="radial-gradient-container"
                 onMouseMove={handleMouseMove}
                 style={{
                     background: `radial-gradient(
                         circle at ${mousePosition.x}px ${mousePosition.y}px, 
                         rgba(255, 255, 255, 0) 0%,
-                        rgba(255, 255, 255, 0.15) 40%,
-                        rgba(255, 255, 255, 0.25) 100%`
+                        rgba(8,22,51,255) 15%,
+                        rgba(8,22,51,255) 100%`
                     }}
             >
-                <input
-                    className="sign-up-email-input"
-                    id="email"
-                    type="email"
-                    placeholder="ENTER EMAIL TO SUBSCRIBE"
-                    name="email"
-                    required
-                />
-                <ValidationError
-                    prefix="Email"
-                    field="email"
-                    errors={state.errors}
-                />
-                <button
-                    className="sign-up-email-submit"
-                    type="submit"
-                    disabled={state.submitting}
+                <form
+                    className="sign-up-subscription-form"
+                    onSubmit={handleSubmit}
                 >
-                    <img src={arrowForward} className="submit-arrow-image" alt="arrow icon"></img>
-                </button>
-            </form>
-                    
-		</div>
+                    <input
+                        className="sign-up-email-input"
+                        type="email"
+                        placeholder="ENTER EMAIL TO SUBSCRIBE"
+                        name="email"
+                        required
+                    />
+                    <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                    />
+                    <button
+                        className="sign-up-email-submit"
+                        type="submit"
+                        disabled={state.submitting}
+                    >
+                        <img src={arrowForward} className="submit-arrow-image" alt="arrow icon"></img>
+                    </button>
+                </form>
+
+            </div>
+        </div>
     )
 }
