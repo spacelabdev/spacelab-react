@@ -20,7 +20,7 @@ export default function Projects() {
 			</div>
 			<div className="button-wrap">
 				<a href="https://spacelabdev.github.io/Exoplanetarium-3D/">
-				<button style={{ textDecoration: 'none' }}>Explore Exoplanetarium</button>
+				<button style={{ textDecoration: 'none !important' }}>Explore Exoplanetarium</button>
 				</a>
 			</div>
 			<Footer />
