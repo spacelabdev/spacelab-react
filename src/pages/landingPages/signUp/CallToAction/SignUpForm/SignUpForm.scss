@@ -29,6 +29,7 @@
         height: 100%;
     }
 
+
     .sign-up-subscription-form {
         position: absolute;
         z-index: 800;
@@ -38,6 +39,8 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        backdrop-filter: blur(15px);
+        background: linear-gradient(to right, transparent 70%, rgba(112, 0, 255, 0.8));
         backdrop-filter: blur(15px);
         background: linear-gradient(to right, transparent 70%, rgba(112, 0, 255, 0.8));
     }
