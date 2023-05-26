@@ -39,8 +39,8 @@ export default function Navigation() {
 						>
 							About
 						</Link>
-						<div className={"nav-dropdown"}>
-							<p className={"dropdown-nav-name"}>Resources</p>
+						<Link to={"#"} className={"nav-dropdown nav-link"}>
+							Resources
 							<div className={"dropdown-content"}>
 								<Link
 									className={"nav-link"}
@@ -71,7 +71,7 @@ export default function Navigation() {
 									Podcast
 								</Link>
 							</div>
-						</div>
+						</Link>
 						<Link
 							className={"nav-link"}
 							to={"/blog"}
