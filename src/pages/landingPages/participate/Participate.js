@@ -1,11 +1,11 @@
 import React from "react";
 import Navigation from "../../../components/navigation/mainNavMenu/navigation";
-import Hero from "./Hero/Hero";
-import HowItWorks from "./HowItWorks/HowItWorks";
-import WhatWereWorkingOn from "./WhatWereWorkingOn/WhatWereWorkingOn";
-import Internships from "./Internships/Internships";
-import Alumni from "./Alumni/Alumni";
-import CallToAction from "./CallToAction/CallToAction";
+import Hero from "./components/Hero/Hero";
+import HowItWorks from "./components/HowItWorks/HowItWorks";
+import WhatWereWorkingOn from "./components/WhatWereWorkingOn/WhatWereWorkingOn";
+import Internships from "./components/Internships/Internships";
+import Alumni from "./components/Alumni/Alumni";
+import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "../../../components/footer/footer";
 import "./Participate.scss";
 

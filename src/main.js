@@ -15,6 +15,8 @@ import BlogArchives from "./components/blogArchives/blogArchives";
 import Donate from "./pages/landingPages/donate/Donate";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
+import Apply from "./pages/landingPages/participate/Apply/Apply";
+import ThankYou from "./pages/landingPages/participate/ThankYou";
 import SignUp from "./pages/landingPages/signUp/SignUp";
 
 /**
@@ -43,6 +45,16 @@ export default function Main() {
 				exact
 				path="/campaigns/participate"
 				component={Participate}
+			/>
+			<Route
+				exact
+				path="/campaigns/participate/apply"
+				component={Apply}
+			/>
+			<Route
+				exact
+				path="/campaigns/participate/thankyou"
+				component={ThankYou}
 			/>
 			<Route exact path="/campaigns/signUp" component={SignUp} />
 			<Route path="/" component={Home} />

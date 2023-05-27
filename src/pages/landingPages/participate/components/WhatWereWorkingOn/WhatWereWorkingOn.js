@@ -1,9 +1,9 @@
 import "./WhatWereWorkingOn.scss";
-import exoplanetariumImage from "../assets/exoplanetarium.png";
+import exoplanetariumImage from "../../assets/exoplanetarium.png";
 
 export default function WhatWereWorkingOn() {
 	return (
-		<section className="participate-section what-were-working-on">
+		<section className="participate-section p-what-were-working-on">
 			<h2>What We're Working On</h2>
 			<img src={exoplanetariumImage} alt="Exoplanetarium" />
 			<p>

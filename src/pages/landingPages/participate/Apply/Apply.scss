@@ -1,100 +1,91 @@
-.participate-hero {
-	height: 100vh;
-	padding-top: 12rem;
+.p-apply {
+	position: relative;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 1rem;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	overflow: hidden;
-	position: relative;
+	gap: 5rem;
+	z-index: 10;
+	min-height: 62vh;
 
-	@media only screen and (max-width: 1400px) {
-		height: 96vh;
-	}
-
-	.spacelab-header {
-		margin-top: -250px;
-		z-index: 3;
-
-		@media only screen and (max-width: 1400px) {
-			transform: scale(1.1);
-		}
+	h2 {
+		margin-top: 3rem;
 
 		@media only screen and (max-width: 800px) {
-			transform: scale(1.5);
+			margin-top: 0;
+			font-size: 1.4rem;
 		}
 	}
 
-	p {
-		font-size: 2rem;
-		width: 55%;
-		z-index: 3;
-		padding: 0 0 3rem 0;
-
-		@media only screen and (max-width: 1400px) {
-			font-size: 1.6rem;
-		}
+	h3 {
+		font-size: 1.5rem;
 
 		@media only screen and (max-width: 800px) {
-			width: 90%;
-			padding: 2rem 0;
+			font-size: 1rem;
+			line-height: 1.3;
 		}
 	}
 
-	button {
-		background-color: #4f1699;
-		transition: 300ms ease-in-out;
+	.app-img-container {
+		display: flex;
+		gap: 4rem;
+		align-items: center;
+		justify-content: center;
 		z-index: 3;
 
-		&:hover {
-			background-color: var(--neon-purple);
-			cursor: pointer;
+		@media only screen and (max-width: 800px) {
+			flex-direction: column;
+			margin: 0 auto;
+		}
+
+		img {
+			width: 28rem;
+			height: 28rem;
+			object-fit: cover;
+			object-position: 100%;
+			margin-top: 28px;
+
+			@media only screen and (max-width: 800px) {
+				display: none;
+			}
 		}
 	}
 
-	.read-more {
-		background: none;
-		border: transparent;
-		border-bottom: 2px solid transparent;
-		border-radius: 0;
-		position: absolute;
-		bottom: 50px;
-		text-transform: capitalize;
-		font-weight: 600;
-		animation: jiggle 3s infinite;
+	.buttons-container {
+		display: flex;
+		gap: 5rem;
 
-		@media only screen and (max-width: 1400px) {
-			bottom: 100px;
+		@media only screen and (max-width: 800px) {
+			gap: 2rem;
 		}
 
-		&:hover {
-			background: none;
-			border-bottom: 2px solid var(--neon-purple);
+		button {
+			width: 180px;
+
+			@media only screen and (max-width: 800px) {
+				width: 140px;
+				height: 55px;
+				margin-top: -55px;
+			}
 		}
 	}
 
+	/* image overlays */
 	.overlay {
 		position: absolute;
 		z-index: 0;
 	}
 
 	.green-planet {
-		bottom: 12%;
-		right: 10%;
+		bottom: 5%;
+		right: 5%;
 		width: 20rem;
+		transform: rotateY(180deg);
 
 		@media only screen and (max-width: 1400px) {
 			width: 12rem;
 		}
 
 		@media only screen and (max-width: 800px) {
-			width: 7rem;
-			bottom: 20%;
-			right: 5%;
+			display: none;
 		}
 	}
 
@@ -136,8 +127,8 @@
 
 	/* top right star */
 	.star3 {
-		top: 18%;
-		right: 20%;
+		top: 14%;
+		right: 10%;
 		animation: twinkle 2s infinite;
 		animation-delay: 0.4s;
 
@@ -188,8 +179,8 @@
 
 	/* bottom right stars */
 	.star6 {
-		bottom: 22%;
-		right: 33%;
+		bottom: 50%;
+		right: 5%;
 		width: 2.3rem;
 		animation: twinkle 2s infinite;
 
@@ -205,8 +196,8 @@
 	}
 
 	.star7 {
-		bottom: 10%;
-		right: 10%;
+		bottom: 7%;
+		right: 20%;
 		width: 1.9rem;
 		animation: twinkle 2s infinite;
 		animation-delay: 0.1s;

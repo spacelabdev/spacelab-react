@@ -1,0 +1,214 @@
+.participate-hero {
+	height: 100vh;
+	padding-top: 12rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	position: relative;
+
+	@media only screen and (max-width: 1400px) {
+		height: 96vh;
+	}
+
+	.spacelab-header {
+		margin-top: -250px;
+		z-index: 3;
+
+		@media only screen and (max-width: 1400px) {
+			transform: scale(1.1);
+		}
+
+		@media only screen and (max-width: 800px) {
+			transform: scale(1.5);
+		}
+	}
+
+	p {
+		font-size: 2rem;
+		width: 55%;
+		z-index: 3;
+		padding: 0 0 3rem 0;
+
+		@media only screen and (max-width: 1400px) {
+			font-size: 1.6rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 90%;
+			padding: 2rem 0;
+		}
+	}
+
+	.read-more {
+		background: none;
+		border: transparent;
+		border-bottom: 2px solid transparent;
+		border-radius: 0;
+		position: absolute;
+		bottom: 50px;
+		text-transform: capitalize;
+		font-weight: 600;
+		animation: jiggle 3s infinite;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 100px;
+		}
+
+		&:hover {
+			background: none;
+			border-bottom: 2px solid var(--neon-purple);
+		}
+	}
+
+	/* image overlays */
+	.overlay {
+		position: absolute;
+		z-index: 0;
+	}
+
+	.green-planet {
+		bottom: 12%;
+		right: 10%;
+		width: 20rem;
+
+		@media only screen and (max-width: 1400px) {
+			width: 12rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 7rem;
+			bottom: 20%;
+			right: 5%;
+		}
+	}
+
+	/* top left stars */
+	.star1 {
+		top: 23%;
+		left: 15%;
+		width: 2.6rem;
+		animation: twinkle 2s infinite;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.4rem;
+			top: 12%;
+			left: 15%;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
+	}
+
+	.star2 {
+		top: 18%;
+		left: 10%;
+		width: 1.9rem;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.2s;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.4rem;
+			top: 17%;
+			left: 12%;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1rem;
+		}
+	}
+
+	/* top right star */
+	.star3 {
+		top: 18%;
+		right: 20%;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.4s;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.5rem;
+			top: 15%;
+			right: 12%;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
+	}
+
+	/* bottom left stars */
+	.star4 {
+		bottom: 20%;
+		left: 15%;
+		width: 2.4rem;
+		animation: twinkle 2s infinite;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 20%;
+			left: 15%;
+			width: 1.8rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
+	}
+
+	.star5 {
+		bottom: 14%;
+		left: 23%;
+		width: 1.9rem;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.2s;
+
+		@media only screen and (max-width: 1400px) {
+			width: 1.5rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1rem;
+		}
+	}
+
+	/* bottom right stars */
+	.star6 {
+		bottom: 22%;
+		right: 33%;
+		width: 2.3rem;
+		animation: twinkle 2s infinite;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 30%;
+			right: 20%;
+			width: 1.2rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1rem;
+		}
+	}
+
+	.star7 {
+		bottom: 10%;
+		right: 10%;
+		width: 1.9rem;
+		animation: twinkle 2s infinite;
+		animation-delay: 0.1s;
+
+		@media only screen and (max-width: 1400px) {
+			bottom: 10%;
+			right: 8%;
+			width: 1.5rem;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 1.3rem;
+		}
+	}
+}

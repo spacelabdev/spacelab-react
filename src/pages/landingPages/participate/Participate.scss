@@ -30,6 +30,17 @@
 		line-height: 1.4;
 	}
 
+	button {
+		background-color: #4f1699c2;
+		transition: 300ms ease-in-out;
+		z-index: 3;
+
+		&:hover {
+			background-color: var(--neon-purple);
+			cursor: pointer;
+		}
+	}
+
 	.participate-section {
 		padding: 5rem;
 		display: flex;
@@ -44,6 +55,7 @@
 
 		@media only screen and (max-width: 800px) {
 			padding: 3rem 1rem;
+			gap: 1.2rem;
 		}
 	}
 
