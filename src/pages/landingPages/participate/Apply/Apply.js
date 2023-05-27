@@ -9,6 +9,12 @@ import greenPlanet from "../assets/green-planet.png";
 import { Link } from "react-router-dom";
 
 export default function Apply() {
+	const handleFormSubmit = () => {
+		document
+			.getElementById("application-form")
+			.dispatchEvent(new Event("submit"));
+	};
+
 	return (
 		<div className="participate-landing-page">
 			<Navigation />
@@ -33,7 +39,11 @@ export default function Apply() {
 					<button>
 						<Link to={"/campaigns/participate"}>Back</Link>
 					</button>
-					<button type="submit" form="application-form">
+					<button
+						onClick={handleFormSubmit}
+						type="submit"
+						form="application-form"
+					>
 						Submit
 					</button>
 				</div>

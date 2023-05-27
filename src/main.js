@@ -16,7 +16,7 @@ import Donate from "./pages/landingPages/donate/Donate";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
 import Apply from "./pages/landingPages/participate/Apply/Apply";
-import ThankYou from "./pages/landingPages/participate/ThankYou";
+import ThankYou from "./pages/landingPages/participate/ThankYou/ThankYou";
 import SignUp from "./pages/landingPages/signUp/SignUp";
 
 /**
