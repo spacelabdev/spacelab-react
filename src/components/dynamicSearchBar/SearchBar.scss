@@ -1,6 +1,7 @@
 .search-bar {
 	display: inline-block;
 	width: 100%;
+	min-width: 300px;
 	position: relative;
 }
 
@@ -11,9 +12,9 @@
 
 .searchInputs {
 	display: flex;
-	height: 2.5rem;
+	height: 44px;
 	width: 100%;
-	border: 1px solid lightgray;
+	border: 2px solid lightgray;
 	border-radius: 50px;
 
 	& input {
@@ -21,7 +22,8 @@
 		background-color: transparent;
 		font-size: 1rem;
 		height: 2.5rem;
-		width: 70rem;
+		width: 60rem;
+		padding: 0 15px;
 		border: none;
 		// // without borders the input text would shift when clicking on box / in focus
 
@@ -29,13 +31,21 @@
 			outline: none;
 			border: none;
 		}
+
+		// Removes blue x icon.
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
 	}
 
 	& .search-icon-div {
 		display: grid;
 		place-content: center;
 		height: 2.5rem;
+		min-height: 40px;
 		width: 4rem;
+		min-width: 40px;
+		padding: 0 10px;
 		outline: none;
 		cursor: pointer;
 
