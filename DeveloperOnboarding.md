@@ -44,6 +44,7 @@
         <ul>
             <li><a href="#creatingAFeatureBranch">Creating A Feature Branch</a></li>
             <li><a href="#rebasingAFeatureBranch">Rebasing A Feature Branch</a></li>
+            <li><a href="#submittingAPullRequest">Submitting A Pull Request</a></li>
         </ul>
     </li>
     <li><a href="#styleGuide">Style Guide</a></li>
@@ -84,14 +85,15 @@ To get a local copy of the project, follow these steps.
 
 Make sure you have the latest npm package installed
 
-```npm install npm@latest -g
+```sh
+npm install npm@latest -g
 
 ```
 
+Make sure you have the latest version of node installed.
+
 We recommend using a node manager to switch between node versions.  
 If you are on Mac or Linux you can install [nvm](https://github.com/nvm-sh/nvm) to manage your node versions. For windows, you can use [nvm for Windows](https://github.com/coreybutler/nvm-windows)
-
-Make sure you have the latest version of node installed.
 
 ```sh
   nvm install 18.16.0
@@ -197,6 +199,18 @@ git reset --hard origin/"Your branch"
 
 **At a minimum, you should rebase every time a change or update is pushed to main.**
 
+### Submitting a Pull Request
+
+PR's should be submitted when your feature/bug-fix is complete and has been tested.
+
+Before submitting a PR, run through this checklist:
+
+1. Rebase your branch and check that it is up to date with main
+2. Make sure Webpack compiles without warnings
+3. Remove any console.logs and unnecessary comments in your code
+
+Once you complete the checklist, open a PR and include a short description of what you accomplished. If you built a new feature, include a screenshot of the UI.
+
 ## Style Guide
 
 Please refer to [globalStyles](https://github.com/spacelabdev/spacelab-react/blob/main/src/globalStyles.scss) as it contains color pallettes for the website as well as default styles for headings, buttons, inputs, etc.
@@ -224,7 +238,8 @@ Naming Conventions:
 
 Coding Conventions:
 
-1. Components should be designed mobile first and tested thoroughly. Breakpoints are set at:
+1. Responsiveness:
+   Components should be designed mobile first and tested thoroughly. Breakpoints are set at:
 
     - 576px for portrait phones
     - 768px for tablets
@@ -239,9 +254,14 @@ Coding Conventions:
       }
     ```
 
-2. Do not use let or var to declare your variables, instead use const.
+2. Accessibility:
 
-3. In general, code should be modular and reusable!
+    - Write semantic html
+    - include alt attributes on all images
+
+3. Performance:
+    - Keep your code modular and resuable
+    - Do not use let or var to declare your variables, instead use const
 
 ## Thank You For Reading and Welcome to Spacelab!
 
