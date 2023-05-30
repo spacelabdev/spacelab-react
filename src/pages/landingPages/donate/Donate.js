@@ -17,10 +17,12 @@ export default function Donate() {
 		<>
 			<Hero />
 			{/* Code for Donate Landing page goes here */}
-			<TitleSection />
-			<AboutOrgIdentitySection />
-			<CompanyProgress />
-			<TestimonialSection />
+			<div className="section-background">
+				<TitleSection />
+				<AboutOrgIdentitySection />
+				<CompanyProgress />
+				<TestimonialSection />
+			</div>
 			<Footer />
 		</>
 	);

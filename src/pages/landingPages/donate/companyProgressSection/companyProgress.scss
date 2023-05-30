@@ -5,12 +5,17 @@
 #progress-container {
     .progress-content{
         max-width: var(--content-width);
-        margin: 5rem auto;
+        min-width: 850px;
+        margin: 5rem auto 0 auto;
         padding: 0 4rem;
         font-family: "Lato", sans-serif;
 
-        @media (max-width: 1024px) {
+        @media (max-width: 1400px) {
             max-width: calc(.8 * var(--content-width));
+        }
+
+        .donate-title {
+            letter-spacing: .2rem;
         }
 
         .progress-image-wrapper {
@@ -24,8 +29,8 @@
             .progress-card {
                 position: absolute;   
                 
-                @media (max-width: 1024px) {
-                    transform: scale(0.7);
+                @media (max-width: 1400px) {
+                    transform: scale(0.8);
                 }
 
                 .progress-percentage-container{
@@ -37,7 +42,7 @@
                         align-self: flex-end;
                         font-size: 2rem;
 
-                        @media (max-width: 1024px) {
+                        @media (max-width: 1400px) {
                             font-size: 1.2rem;
                         }
                     }
@@ -55,16 +60,16 @@
                     max-height: 44px;
                     max-width: 44px;
                     
-                    @media (max-width: 1024px) {
-                        max-width: 24px;
-                        min-height: 24px;
+                    @media (max-width: 1400px) {
+                        max-width: 30px;
+                        min-height: 30px;
                     }
                 }
             }
 
             .people-of-color {
                 top: 34%;
-                right: 10%;
+                right: 8%;
 
                 @media (max-width: 1024px) {
                     right: 5%;
@@ -76,8 +81,8 @@
                 top: 15%;
                 left: 15%;
 
-                @media (max-width: 1024px) {
-                    top: 10%;
+                @media (max-width: 1400px) {
+                    top: 11%;
                     left: 8%;
                 }
             }
@@ -86,9 +91,9 @@
                 bottom: 5%;
                 left: 50%;
 
-                @media (max-width: 1024px) {
+                @media (max-width: 1400px) {
                     bottom: 0%;
-                    left: 46%;
+                    left: 42%;
                 }
             }
         }
