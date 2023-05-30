@@ -115,8 +115,8 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 				}
 			}
 		}
-
-		return editsMatrix[rows][columns];
+		const result = editsMatrix[rows][columns];
+		return result;
 	};
 
 	/* Clearing the input when function is called onClick of the close icon */
@@ -153,13 +153,15 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 	};
 
 	/**
-	 * Remove search results div from the DOM if the user clicks on anything else except the search results div
+	 * Remove search results div from the DOM if the user clicks on anything else except the search results div,
+	 * and also changed search-icon-div to magnifying glass again, when clicking outside search results div.
 	 * @param e
 	 */
 	const handleOnBlur = (e) => {
 		if (!e.relatedTarget?.className.includes("search-result")) {
 			setIsSearchBarActive(false);
 			setFilteredSearchResultIndex(null);
+			setClearButton(false);
 		}
 	};
 
