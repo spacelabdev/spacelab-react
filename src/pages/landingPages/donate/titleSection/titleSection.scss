@@ -50,9 +50,9 @@
 
         .title-image-container {
             flex: 40%;
-
+            
             img {
-                min-height: calc(var(--conatiner-height) - var(--navbar-height));
+                min-height: calc(var(--conatiner-height) - var(--navbar-height) - 5rem);
                 object-fit: cover;
             }
         }
