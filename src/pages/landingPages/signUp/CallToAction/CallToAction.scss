@@ -73,5 +73,20 @@
         box-shadow: 0 0 100px 10px #50AFED;
         border-radius: 100%;
     }
+    .submission-successful-text {
+        position: relative;
+        left: 50%;
+        top: 20%;
+        transform: translate(-50%, 50%);
+    }
 
+    .submission-successful-heading {
+        font-weight: 600;
+        font-size:162.23px;
+    }
+
+    .submission-successful-subheading {
+        font-weight: 400;
+        font-size: 28.84px;
+    }
 }
