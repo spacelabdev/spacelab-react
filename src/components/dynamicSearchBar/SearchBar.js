@@ -182,6 +182,9 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 			if (e.key === "Enter") {
 				const searchResult =
 					filteredSearchResults[filteredSearchResultIndex];
+
+				setPlaceHolder(searchResult.title || searchResult[0]);
+				setSearchTerm("");
 				HandleSearchTermClick(searchResult, context);
 				clearInput();
 			}
@@ -239,6 +242,8 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 
 	// Allows us to call multiple function back to back in onClick
 	const onClickMultiFunction = (searchResult, context) => {
+		setPlaceHolder(searchResult.title || searchResult[0]);
+		setSearchTerm("");
 		HandleSearchTermClick(searchResult, context);
 		clearInput();
 	};
@@ -266,7 +271,7 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 				</div>
 				<input
 					type="search"
-					placeholder={placeHolder}
+					placeholder={`${placeHolder}...`}
 					value={searchTerm}
 					onChange={handleChange}
 					onFocus={handleOnFocus}
