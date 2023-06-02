@@ -22,6 +22,15 @@
 p {
     font-size: 1.5rem;
 }
-p {
-    font-size: 1.5rem;
+
+// section {
+//     min-height: 100vh;
+// }
+
+.section-background {
+    width: 100%;
+    background-image: url("./assets/spacelab-donate-background.png");
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
 }
