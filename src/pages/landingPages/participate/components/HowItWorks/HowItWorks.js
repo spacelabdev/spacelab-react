@@ -1,11 +1,14 @@
 import "./HowItWorks.scss";
-import workInTeams from "../assets/how-it-works-teams.png";
-import crossCollab from "../assets/how-it-works-cross-collab.png";
-import gainReal from "../assets/how-it-works-gain-real.png";
+import workInTeams from "../../assets/how-it-works-teams.png";
+import crossCollab from "../../assets/how-it-works-cross-collab.png";
+import gainReal from "../../assets/how-it-works-gain-real.png";
 
 export default function HowItWorks() {
 	return (
-		<section id="how-it-works" className="participate-section how-it-works">
+		<section
+			id="how-it-works"
+			className="participate-section p-how-it-works"
+		>
 			<h2>How It Works</h2>
 			<div className="how-it-works-container">
 				<div className="how-it-works-element">

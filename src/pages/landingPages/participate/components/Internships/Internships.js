@@ -1,13 +1,13 @@
 import "./Internships.scss";
-import contentCreationImage from "../assets/internships-content-creation.png";
-import dataScienceImage from "../assets/internships-data-science.png";
-import marketingImage from "../assets/internships-marketing.png";
-import softwareEngineeringImage from "../assets/internships-software-engineering.png";
-import uxDesignImage from "../assets/internships-ux-design.png";
+import contentCreationImage from "../../assets/internships-content-creation.png";
+import dataScienceImage from "../../assets/internships-data-science.png";
+import marketingImage from "../../assets/internships-marketing.png";
+import softwareEngineeringImage from "../../assets/internships-software-engineering.png";
+import uxDesignImage from "../../assets/internships-ux-design.png";
 
 export default function Internships() {
 	return (
-		<section className="participate-section internships">
+		<section className="participate-section p-internships">
 			<h2>Our Internships</h2>
 			<div className="internships-container">
 				<div className="internship-element">

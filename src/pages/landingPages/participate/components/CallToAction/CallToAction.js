@@ -1,13 +1,13 @@
 import "./CallToAction.scss";
-import ctaBackground from "../assets/cta-background.png";
-import star from "../assets/star.png";
-import greenPlanet from "../assets/green-planet.png";
+import ctaBackground from "../../assets/cta-background.png";
+import star from "../../assets/star.png";
+import greenPlanet from "../../assets/green-planet.png";
 import { Link } from "react-router-dom";
 
 export default function CallToAction() {
 	return (
 		<section
-			className="participate-section call-to-action"
+			className="participate-section p-call-to-action"
 			style={{ backgroundImage: `url(${ctaBackground})` }}
 		>
 			{/*
@@ -18,7 +18,7 @@ export default function CallToAction() {
 				<h2>Ready to Join SpaceLab?</h2>
 			</div>
 			<button>
-				<Link to={"/contact"}>Apply Now</Link>
+				<Link to={"/campaigns/participate/apply"}>Apply Now</Link>
 			</button>
 			<img
 				src={greenPlanet}
