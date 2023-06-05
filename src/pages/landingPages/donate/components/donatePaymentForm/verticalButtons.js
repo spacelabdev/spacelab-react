@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PaymentCardInfo from "../paymentContactInfo/paymentCardInfo";
 
 const VerticalButtons = () => {
 	return (
