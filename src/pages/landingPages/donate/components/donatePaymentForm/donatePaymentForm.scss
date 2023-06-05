@@ -9,11 +9,14 @@
 #donate-payment-wrapper {
     width: 100%;
     min-height: 90vh;
-    margin-top: var(--navbar-height); // need to be removed
     background-image: url("../../assets/spacelab-donate-background.png");
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
+}
+
+.donate-payment-header-container {
+    margin-top: 70px;
 }
 
 .donate-payment-form {
