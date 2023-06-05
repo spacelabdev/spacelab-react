@@ -28,7 +28,7 @@ const PaymentCardInfo = () => {
           type='text'
           id='selectCountry'
           value={selectCountry}
-          onChange={(e) => selectCountry(e.target.value)}
+          onChange={(e) => setSelectCountry(e.target.value)}
         />
       </div>
       <div>
@@ -37,7 +37,7 @@ const PaymentCardInfo = () => {
           type='text'
           id='cardNumber'
           value={cardNumber}
-          onChange={(e) => cardNumber(e.target.value)}
+          onChange={(e) => setCardNumber(e.target.value)}
         />
       </div>
       <div>
@@ -46,7 +46,7 @@ const PaymentCardInfo = () => {
           type='text'
           id='expiration'
           value={expiration}
-          onChange={(e) => expiration(e.target.value)}
+          onChange={(e) => setExpiration(e.target.value)}
         />
       </div>
       <div>
@@ -55,7 +55,7 @@ const PaymentCardInfo = () => {
           type='text'
           id='securityCode'
           value={securityCode}
-          onChange={(e) => securityCode(e.target.value)}
+          onChange={(e) => setSecurityCode(e.target.value)}
         />
       </div>
       <div>
@@ -64,7 +64,7 @@ const PaymentCardInfo = () => {
           type='text'
           id='nameOnCard'
           value={nameOnCard}
-          onChange={(e) => nameOnCard(e.target.value)}
+          onChange={(e) => setNameOnCard(e.target.value)}
         />
       </div>
     </form>

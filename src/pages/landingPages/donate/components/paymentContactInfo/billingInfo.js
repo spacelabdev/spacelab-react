@@ -29,7 +29,7 @@ const BillingInfo = () => {
           type='text'
           id='streetAddress'
           value={streetAddress}
-          onChange={(e) => streetAddress(e.target.value)}
+          onChange={(e) => setStreetAddress(e.target.value)}
         />
       </div>
       <div>
@@ -38,7 +38,7 @@ const BillingInfo = () => {
           type='text'
           id='addressNumber'
           value={addressNumber}
-          onChange={(e) => addressNumber(e.target.value)}
+          onChange={(e) => setAddressNumber(e.target.value)}
         />
       </div>
       <div>
@@ -47,7 +47,7 @@ const BillingInfo = () => {
           type='text'
           id='city'
           value={city}
-          onChange={(e) => city(e.target.value)}
+          onChange={(e) => setCity(e.target.value)}
         />
       </div>
       <div>
@@ -56,7 +56,7 @@ const BillingInfo = () => {
           type='text'
           id='stateLocation'
           value={stateLocation}
-          onChange={(e) => stateLocation(e.target.value)}
+          onChange={(e) => setStateLocation(e.target.value)}
         />
       </div>
       <div>
@@ -65,7 +65,7 @@ const BillingInfo = () => {
           type='text'
           id='zipCode'
           value={zipCode}
-          onChange={(e) => zipCode(e.target.value)}
+          onChange={(e) => setZipCode(e.target.value)}
         />
       </div>
     </form>
