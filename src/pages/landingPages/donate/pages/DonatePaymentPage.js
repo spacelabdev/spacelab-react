@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero/hero";
 import Footer from "../../../../components/footer/footer";
-import RadioButtonGroup from "../components/radioButtonGroup/radioButtonGroup";
+import DonatePaymentForm from "../components/donatePaymentForm/donatePaymentForm";
 import "../donate.scss";
 
 /**
@@ -13,7 +13,7 @@ export default function DonatePaymentPage() {
 	return (
 		<>
 			<Hero />
-			<RadioButtonGroup />
+			<DonatePaymentForm />
 			<Footer />
 		</>
 	);

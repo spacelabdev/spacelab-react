@@ -41,6 +41,7 @@ const TitleSection = () => {
 								"Women of color and non-binary, talking to each other in a group"
 							}
 							className="women-of-color"
+							loading="lazy"
 						/>
 					</div>
 				</div>
