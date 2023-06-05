@@ -16,8 +16,13 @@
 }
 
 .donate-payment-header-container {
+    width:100%;
     margin-top: 70px;
     background: black;
+
+    img{
+        width: 100%;
+    }
 }
 
 .donate-payment-form {
