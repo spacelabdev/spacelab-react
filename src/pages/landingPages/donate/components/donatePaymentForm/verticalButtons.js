@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
-import PaymentCardInfo from "../paymentContactInfo/paymentCardInfo";
+import { useState } from 'react'
+import PaymentContactInfo from "../paymentContactInfo/paymentContactInfo";
+import { ToggleButton } from "react-bootstrap";
 
 const VerticalButtons = () => {
+	const [isDropdownOpen, setIsDropdownOpen] = useState('')
+
+	const toggleDropdown = () => {
+		setIsDropdownOpen(!isDropdownOpen)
+	}
+
 	return (
 		<>
 			<div className="btn-container">
@@ -17,17 +25,14 @@ const VerticalButtons = () => {
 					</button>
 				</Link>
 			</div>
-			<Link
-				to={"/campaigns/donate/donate-payment"}
-				style={{ textDecoration: "none" }}
-			>
 				<button
 					className="text-btn btn-large outline-btn"
-					component={Link}
+					onClick={toggleDropdown}
 				>
 					Donate with Debit or Credit Card
 				</button>
-			</Link>
+				{isDropdownOpen && <PaymentContactInfo />}
+			
 		</>
 	);
 };

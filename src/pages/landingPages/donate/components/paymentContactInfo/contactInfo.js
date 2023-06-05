@@ -4,7 +4,7 @@ const ContactInfo = () => {
   const [email, setEmail] = useState('')
   const [phoneNumber, setPhoneNumber] = useState('')
 
-
+  
   const handleSubmit = (e) => {
     e.preventDefault()
 
@@ -31,7 +31,7 @@ const ContactInfo = () => {
           type='text'
           id='phoneNumber'
           value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </div>
     </form>

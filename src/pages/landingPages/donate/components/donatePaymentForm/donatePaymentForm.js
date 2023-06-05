@@ -41,7 +41,6 @@ const DonatePaymentForm = () => {
 						setDescription={setDescription}
 					/>
 					<VerticalButtons />
-					<PaymentContactInfo />
 				</div>
 			</div>
 		</section>

@@ -20,7 +20,7 @@ const PaymentContactInfo = () => {
         }}
         target='_blank'
       >
-      <button className="text-btn btn-large" component={Link}>
+      <button className="text-btn btn-large donate-now-btn" component={Link}>
         Donate Now
       </button>
     </Link>
