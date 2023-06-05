@@ -1,7 +1,7 @@
 import "./Alumni.scss";
-import lauraPhoto from "../assets/alumni-laura.png";
-import angeliniesPhoto from "../assets/alumni-angelinies.png";
-import purplePlanet from "../assets/purple-planet.png";
+import lauraPhoto from "../../assets/alumni-laura.png";
+import angeliniesPhoto from "../../assets/alumni-angelinies.png";
+import purplePlanet from "../../assets/purple-planet.png";
 import { useEffect, useState } from "react";
 
 export default function Alumni() {
@@ -41,7 +41,7 @@ export default function Alumni() {
 	};
 
 	return (
-		<section className="participate-section alumni">
+		<section className="participate-section p-alumni">
 			<h2>SpaceLab Alumni</h2>
 			<div className="alumni-carousel">
 				<div className="alumni-carousel-slides">

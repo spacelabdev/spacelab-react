@@ -45,17 +45,6 @@
 		}
 	}
 
-	button {
-		background-color: #4f1699;
-		transition: 300ms ease-in-out;
-		z-index: 3;
-
-		&:hover {
-			background-color: var(--neon-purple);
-			cursor: pointer;
-		}
-	}
-
 	.read-more {
 		background: none;
 		border: transparent;
@@ -77,6 +66,7 @@
 		}
 	}
 
+	/* image overlays */
 	.overlay {
 		position: absolute;
 		z-index: 0;
