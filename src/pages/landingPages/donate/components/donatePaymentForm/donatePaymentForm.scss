@@ -1,8 +1,9 @@
 :root {
     --background-color: #5700C6;
-    --radio-label-text: #0A0B0D;
+    --primary-text-color: #0A0B0D;
     --secondary-background-color: #D9D9D9;
-    --radio-label-span: #6B7888;
+    --secondary-text-color: #6B7888;
+    --large-btn-radius: 30px;
 }
 
 #donate-payment-wrapper {
@@ -31,7 +32,7 @@
     justify-content: stretch;
     align-items: center;
     flex-wrap: wrap;
-    margin: 2rem auto 0;
+    margin: 1rem auto 0;
 }
 
 .radio-btn-input {
@@ -45,7 +46,7 @@
 .radio-input-label {
     font-family: "Lato", sans-serif;
     font-weight: 600;
-    color: var(--radio-label-text);
+    color: var(--primary-text-color);
     background-color: var(--secondary-background-color);
     max-width: 30%;
     min-width: 153px;
@@ -76,7 +77,7 @@ input:checked + .radio-input-label {
 }
 
 .radio-input-span {
-    color: var(--radio-label-span);
+    color: var(--secondary-text-color);
     font-size: 0.875rem;
     line-height: 1.25rem;
     font-weight: 200;
@@ -84,13 +85,6 @@ input:checked + .radio-input-label {
 
 input:checked + .radio-input-label .radio-input-span {
     color: white;
-}
-
-// custom-input-field
-.custom-input-field {
-    margin-top: 1rem;
-    text-align: left;
-    font-family: "Lato", sans-serif;
 }
 
 //checkBox
@@ -124,7 +118,7 @@ input:checked + .radio-input-label .radio-input-span {
 
 //big buttons
 .btn-container {
-    margin: 1rem auto;
+    margin: 2rem auto 1rem;
 }
 
 .text-btn {
@@ -139,7 +133,7 @@ input:checked + .radio-input-label .radio-input-span {
 .btn-large {
     width: 100%;
     font-weight: 500;
-    border-radius: 30px;
+    border-radius: var(--large-btn-radius);
     font-size: 1.125rem;
     line-height: 1.5rem;
     padding: 0.625rem 1.875rem;
@@ -166,24 +160,79 @@ input:checked + .radio-input-label .radio-input-span {
     align-items: stretch;
     justify-content: flex-start;
     flex-wrap: wrap;
-    border-radius: 30px;
+    border-radius: var(--large-btn-radius);
     background-color: var(--secondary-background-color);
 }
 
 .text-caption-tab {
     flex-grow: 1;
     border-radius: inherit;
-    color: #6B7888;
+    color: var(--secondary-text-color);
     background-color: var(--secondary-background-color);
     border: none;
-    animation: 0.2s cubic-bezier(0, 0.9, 0.3, 1) 0s 1 normal none running animation-14;
-}
+    transition: background-color 1s ease-out;
+    text-transform: none;
+    font-weight: 500;
 
-button:focus {
-    outline: none;
+    &:hover {
+        background-color: var(--secondary-background-color);
+    }
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .active {
     background-color:#5700C6; 
     color: #E2E2E2;
+
+    &:hover {
+        background-color: #5700C6;
+    }
+}
+
+/* Input style */
+.input-container {
+    margin-top: 1rem;
+
+    input {
+        text-align: left;
+        font-family: "Lato", sans-serif;
+        padding-left: 2rem;
+    }
+}
+
+/* Accordion Btn*/
+.accordion-btn {
+    margin: 1rem auto;
+    width: 100%;
+    border-radius: var(--large-btn-radius);
+    justify-content: flex-start;
+    font-family: "Lato", sans-serif;
+
+    input {
+        border-bottom: none;
+        padding: 0;
+        margin: 0; 
+        
+        &:disabled {
+            color: var(--secondary-text-color);
+        }
+    }
+
+    .multiline-input {
+        width: 100%;
+        height: 5rem;
+        border: none;
+        background-color: transparent;
+        outline: none;
+        color: var(--secondary-text-color);
+    }
+}
+
+.add_icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
 }

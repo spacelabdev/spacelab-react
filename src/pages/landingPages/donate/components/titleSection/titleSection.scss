@@ -1,6 +1,5 @@
 :root {
     --conatiner-height: 1048px;
-    --navbar-height: 70px;
 }
 
 #title-container {
@@ -51,7 +50,7 @@
             flex: 40%;
             
             img {
-                min-height: calc(var(--conatiner-height) - var(--navbar-height) - 5rem);
+                min-height: calc(90vh - var(--navbar-height));
                 object-fit: cover;
             }
         }
@@ -61,10 +60,10 @@
         z-index: 2;
         position: absolute;
         bottom: 0;
-        left: calc(100vw/3);
+        left: 20vw;
 
-        @media screen and (max-width: 1400px) {
-            left: 20vw;
+        @media (min-width: 1400px) {
+            left: calc(100vw/3);
         }
     }
     
