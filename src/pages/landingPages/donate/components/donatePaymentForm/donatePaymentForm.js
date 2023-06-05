@@ -5,6 +5,7 @@ import VerticalButtons from "./verticalButtons";
 import CheckBox from "./checkBox";
 import "./donatePaymentForm.scss";
 import AccordionText from "./accordionText";
+import PaymentContactInfo from "../paymentContactInfo/paymentContactInfo";
 
 const DonatePaymentForm = () => {
 	const [paymentFrequency, setFrequency] = useState("One Time");

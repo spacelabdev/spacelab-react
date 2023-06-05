@@ -9,11 +9,20 @@
 #donate-payment-wrapper {
     width: 100%;
     min-height: 90vh;
-    margin-top: var(--navbar-height); // need to be removed
     background-image: url("../../assets/spacelab-donate-background.png");
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
+}
+
+.donate-payment-header-container {
+    width:100%;
+    margin-top: 70px;
+    background: black;
+
+    img{
+        width: 100%;
+    }
 }
 
 .donate-payment-form {
@@ -235,4 +244,66 @@ input:checked + .radio-input-label .radio-input-span {
     width: 1rem;
     height: 1rem;
     margin-right: 1rem;
+}
+
+.contact-info-container {
+    margin-top: 100px;
+
+    h3 {
+    text-align:left;
+    }
+}
+
+.payment-card-info-container {
+    margin-top: 70px;
+
+    h3 {
+        text-align: left;
+    }
+}
+
+.billing-info-container {
+    margin-top: 70px;
+
+    h3 {
+        text-align: left;
+    }
+
+    input {
+        color: var(--secondary-text-color)
+    }
+}
+
+// form {
+//     margin-top: 1rem;
+
+//     // input {
+//     //     text-align: left;
+//     //     font-family: "Lato", sans-serif;
+//     //     padding-left: 2rem;
+//     // }
+
+//     margin: 1rem auto;
+//     width: 100%;
+//     border-radius: var(--large-btn-radius);
+//     justify-content: flex-start;
+//     font-family: "Lato", sans-serif;
+
+
+//     input {
+//         text-align: left;
+//         border-bottom: none;
+//         padding: 0;
+//         margin: 0; 
+        
+//         &:disabled {
+//             color: var(--secondary-text-color);
+//         }
+//     }
+
+
+// }
+
+.donate-now-btn {
+    margin-top: 3rem;
 }
