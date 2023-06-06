@@ -1,4 +1,5 @@
 import React from "react";
+import'./donatePaymentHeader.scss'
 import group_of_two_men from '../../assets/group_of_two_men.png'
 import three_women_chatting from '../../assets/three_women_chatting.png'
 import one_woman_talking_and_one_laughing from '../../assets/one_woman_talking_and_one_laughing.png'
