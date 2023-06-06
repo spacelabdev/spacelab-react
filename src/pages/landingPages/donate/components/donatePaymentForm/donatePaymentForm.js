@@ -4,6 +4,7 @@ import RadioButtonGroup from "./radioButtonGroup";
 import VerticalButtons from "./verticalButtons";
 import CheckBox from "./checkBox";
 import AccordionText from "./accordionText";
+import STAR_ICON from "../../assets/small_star.svg";
 import "./donatePaymentForm.scss";
 
 const DonatePaymentForm = () => {
@@ -44,9 +45,9 @@ const DonatePaymentForm = () => {
 					<VerticalButtons />
 				</div>
 			</div>
-			{/* <img src={ADD_ICON} alt="add_icon" className="plus1 plus_icon" />
-			<img src={ADD_ICON} alt="add_icon" className="plus2 plus_icon" />
-			<img src={ADD_ICON} alt="add_icon" className="plus3 plus_icon" /> */}
+			<img src={STAR_ICON} alt="star_icon" className="star1 star_icon" />
+			<img src={STAR_ICON} alt="star_icon" className="star2 star_icon" />
+			<img src={STAR_ICON} alt="star_icon" className="star3 star_icon" />
 		</section>
 	);
 };

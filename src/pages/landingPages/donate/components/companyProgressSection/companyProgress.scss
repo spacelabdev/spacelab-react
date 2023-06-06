@@ -5,7 +5,6 @@
 #progress-container {
     max-width: var(--content-width);
     margin: 5rem auto;
-    font-family: "Lato", sans-serif;
 
     .progress-image-wrapper {
         position: relative;
@@ -19,19 +18,16 @@
             position: absolute;   
             
             @media (max-width: 1400px) {
-                transform: scale(0.7);
+                transform: scale(0.8);
             }
 
             .progress-percentage-container{
                 color: var(--text-color);
                 display: flex;
                 margin-bottom: 0;
+                font-weight: 500;
 
-                .progress-percentage{
-                    font-family: "Lato", sans-serif;
-                    font-size: 2.18rem;
-                    line-height: 1.2;
-                    letter-spacing: -1px;                
+                .progress-percentage{               
                     align-self: flex-end;
                 }
             }
@@ -43,41 +39,34 @@
             .percentage-up-arrow {
                 max-height: 44px;
                 max-width: 44px;
-                
-                @media (max-width: 1024px) {
-                    max-width: 24px;
-                    min-height: 24px;
-                }
             }
         }
 
-        .people-of-color {
-            top: 34%;
-            right: 10%;
+        .progress-card-1 {
+            top: 32%;
+            right: 7%;
 
-            @media (max-width: 1024px) {
-                right: 6%;
-                top: 30%;
+            @media (min-width: 1400px) {
+                right: 8%;
             }
         }
 
-        .women-non-binary {
-            top: 15%;
-            left: 15%;
+        .progress-card-2 {
+            top: 12%;
+            left: 8%;
 
-            @media (max-width: 1024px) {
-                top: 10%;
-                left: 8%;
+            @media (min-width: 1400px) {
+                left: 14%;
             }
         }
 
-        .people-disablity {
-            bottom: 5%;
-            left: 50%;
+        .progress-card-3 {
+            white-space: pre-line;
+            bottom: 2%;
+            left: 46%;
 
-            @media (max-width: 1024px) {
-                bottom: 0%;
-                left: 46%;
+            @media (min-width: 1400px) {
+                bottom: 5%;
             }
         }
     }   

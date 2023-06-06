@@ -1,12 +1,14 @@
 #about-org-identity-container {
+	margin: 0 auto 5rem;
+
 	.about-org-content {
 		max-width: var(--content-width);
 		width: 100%;
 		display: flex;	
 		align-items: center;
 		justify-content: center;
-		margin: 0 auto;
 		padding: 0 4rem;
+		margin: 0 auto;
 
 		@media (max-width: 1024px) {
 			max-width: calc(.8 * var(--content-width));

@@ -13,7 +13,6 @@
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
-    margin-bottom: -23rem; // this for fixing icon image gap
     position: relative;
 }
 
@@ -44,6 +43,10 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
+
+    @media (min-width: 1600px) {
+        margin-bottom: -23rem; // this for fixing icon image gap
+    }
 
     input {
         margin: 0;
@@ -300,25 +303,26 @@ input:checked + .radio-input-label .radio-input-span {
 }
 
 // placing plus icons
-.plus_icon{
+.star_icon{
     position: absolute;
     display: none;
+
     @media (min-width: 1600px) {
         display: block;
     }
 }
 
-.plus1 {
+.star1 {
     top: 8rem;
-    left: 20rem;
+    left: 20vw;
 }
 
-.plus2 {
+.star2 {
     top: 3rem;
-    right: 20rem;
+    right: 20vw;
 }
 
-.plus3 {
+.star3 {
     top: 13rem;
-    right: 20rem;
+    right: 20vw;
 }

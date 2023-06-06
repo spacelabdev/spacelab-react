@@ -13,7 +13,7 @@ const TitleSection = () => {
 						<h2 className="form-title">
 							DONATE TO SUPPORT DIVERSITY IN TECH
 						</h2>
-						<h4 className="form-sub-title">
+						<h4 className="custom-text--larger">
 							With your support, we can create equal opportunities
 							for underrepresented groups through paid programs
 							and financial assistance.
