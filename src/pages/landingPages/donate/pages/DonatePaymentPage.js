@@ -2,8 +2,8 @@ import React from "react";
 import Hero from "../components/Hero/hero";
 import Footer from "../../../../components/footer/footer";
 import DonatePaymentForm from "../components/donatePaymentForm/donatePaymentForm";
-import "../donate.scss";
 import DonatePaymentHeader from "../components/donatePaymentHeader/donatePaymentHeader";
+import "../donate.scss";
 
 /**
  * Renders Donate Landing page

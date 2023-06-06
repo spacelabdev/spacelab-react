@@ -1,9 +1,10 @@
 nav {
-	height: 55px;
+	height: var(--navbar-height-mobile);
+
 	@media (min-width: 1024px) {
 		top: 0;
 		left: 0;
-		height: 70px;
+		height: var(--navbar-height-desktop);
 		width: 100%;
 		background: #000000;
 		color: white;

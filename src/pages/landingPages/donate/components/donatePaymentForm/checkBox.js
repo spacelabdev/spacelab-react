@@ -1,4 +1,6 @@
-const CheckBox = ({ checked = false, setChecked }) => {
+const CheckBox = ({ checked = false, setChecked, amount }) => {
+	const fee = (amount * 0.08).toFixed(2);
+
 	return (
 		<>
 			<div
@@ -13,10 +15,10 @@ const CheckBox = ({ checked = false, setChecked }) => {
 					readOnly
 				/>
 				<label
-					className="cover-fee"
+					className="cover-fee custom-text"
 					onClick={() => setChecked(!checked)}
 				>
-					Add <span className="cover-fee-bold">$0.00 USD</span> to
+					Add <span className="cover-fee-bold">${fee} USD</span> to
 					help cover the fees.
 				</label>
 			</div>

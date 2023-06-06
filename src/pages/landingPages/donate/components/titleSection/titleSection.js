@@ -11,14 +11,11 @@ const TitleSection = () => {
 				<div className="title-content">
 					<div className="title-section-form">
 						<h2 className="form-title">
-							DONATE TO SUPPORT <br />
-							DIVERSITY IN TECH
+							DONATE TO SUPPORT DIVERSITY IN TECH
 						</h2>
 						<h4 className="form-sub-title">
 							With your support, we can create equal opportunities
-							<br />
 							for underrepresented groups through paid programs
-							<br />
 							and financial assistance.
 						</h4>
 						<Link
@@ -45,7 +42,7 @@ const TitleSection = () => {
 						/>
 					</div>
 				</div>
-				<div className="icon-container">
+				<div className="icon-container-1">
 					<img
 						src={ROCKET_ICON_IMAGE}
 						alt={"rocket ship icon"}

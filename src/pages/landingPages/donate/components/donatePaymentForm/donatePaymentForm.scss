@@ -4,36 +4,50 @@
     --secondary-background-color: #D9D9D9;
     --secondary-text-color: #6B7888;
     --large-btn-radius: 30px;
+    --spacing: 2rem;
 }
 
 #donate-payment-wrapper {
     width: 100%;
-    min-height: 90vh;
     background-image: url("../../assets/spacelab-donate-background.png");
     background-size: cover;
     background-position: center;  
     background-repeat: no-repeat;
+    margin-bottom: -23rem; // this for fixing icon image gap
+    position: relative;
 }
 
 .donate-payment-header-container {
     width:100%;
-    margin-top: 70px;
     background: black;
 
     img{
         width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: var(--navbar-height-desktop);
     }
 }
 
 .donate-payment-form {
-    max-width: 900px;
-    padding: 2rem;
+    max-width: 970px;
+    padding: 2rem 0;
     margin: 0 auto;
 }
 
 .donate-payment-content {
-    margin-top: 2rem;
-    padding: 0 5rem;
+    margin-top: 4rem;
+    padding: 0 8.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing);
+
+    input {
+        margin: 0;
+    }
 }
 
 .preset-amount-wrapper {
@@ -41,7 +55,6 @@
     justify-content: stretch;
     align-items: center;
     flex-wrap: wrap;
-    margin: 1rem auto 0;
 }
 
 .radio-btn-input {
@@ -53,21 +66,18 @@
 }
 
 .radio-input-label {
-    font-family: "Lato", sans-serif;
-    font-weight: 600;
+    font-weight: bold;
     color: var(--primary-text-color);
     background-color: var(--secondary-background-color);
     max-width: 30%;
-    min-width: 153px;
-    min-height: 3.75rem;
-    font-size: 1.4rem;
-    line-height: 1.5rem;
+    min-width: 156px;
+    min-height: 3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-right: 1.25rem;
-    margin-top: .75rem;
+    margin-top: 0.5rem;
+    margin-right: 1.5rem;
     margin-bottom: 0;
     position: relative;
     border-radius: 15px;
@@ -75,7 +85,7 @@
 
     @media (min-width: 600px) {
         &:last-child {
-            margin-right: -1.25rem;
+            margin-right: -1.5rem;
         }
     }
 }
@@ -87,9 +97,10 @@ input:checked + .radio-input-label {
 
 .radio-input-span {
     color: var(--secondary-text-color);
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 200;
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 100;
+    margin-top: .5rem;
 }
 
 input:checked + .radio-input-label .radio-input-span {
@@ -113,55 +124,53 @@ input:checked + .radio-input-label .radio-input-span {
     .cover-fee {
         display: inline-block;
         padding-inline-start: 2.375rem;
-        font-size: 1.125rem;
-        line-height: 1.5rem;
         position: relative;
         text-align: start;
         margin: 0;
     
         .cover-fee-bold {
-            font-weight: 600;
+            font-weight: bold;
         }
     }
 }
 
 //big buttons
 .btn-container {
-    margin: 2rem auto 1rem;
+    margin-top: 2rem;
 }
 
-.text-btn {
+.btn-large {
     background-color: var(--background-color);
     border: 5px solid var(--background-color);
+
+    a {
+        text-decoration: none;
+    }
 
     &:hover {
         background-color: var(--background-color);
     }
-}
 
-.btn-large {
     width: 100%;
-    font-weight: 500;
     border-radius: var(--large-btn-radius);
-    font-size: 1.125rem;
-    line-height: 1.5rem;
-    padding: 0.625rem 1.875rem;
+    padding: 1.25rem 0;
     min-width: 6rem;
+    text-transform: capitalize;
 }
 
 .outline-btn {
     background-color: transparent;
     color: white;
     
-    &:hover {
+    &:hover, &:focus {
         background-color: transparent;
+        outline: none;
     }
 }
 
 // toggle group buttons
 .tab-group-container {
     width: 100%;
-    margin-top: 1rem;
 }
 
 .tab-group {
@@ -181,7 +190,7 @@ input:checked + .radio-input-label .radio-input-span {
     border: none;
     transition: background-color 1s ease-out;
     text-transform: none;
-    font-weight: 500;
+    padding: 1.25rem 3rem;
 
     &:hover {
         background-color: var(--secondary-background-color);
@@ -203,8 +212,6 @@ input:checked + .radio-input-label .radio-input-span {
 
 /* Input style */
 .input-container {
-    margin-top: 1rem;
-
     input {
         text-align: left;
         font-family: "Lato", sans-serif;
@@ -214,7 +221,6 @@ input:checked + .radio-input-label .radio-input-span {
 
 /* Accordion Btn*/
 .accordion-btn {
-    margin: 1rem auto;
     width: 100%;
     border-radius: var(--large-btn-radius);
     justify-content: flex-start;
@@ -241,69 +247,78 @@ input:checked + .radio-input-label .radio-input-span {
 }
 
 .add_icon {
-    width: 1rem;
-    height: 1rem;
+    width: 1.5rem;
+    height: 1.5rem;
     margin-right: 1rem;
 }
 
-.contact-info-container {
-    margin-top: 100px;
-
-    h3 {
-    text-align:left;
-    }
-}
-
-.payment-card-info-container {
-    margin-top: 70px;
-
-    h3 {
-        text-align: left;
-    }
-}
-
-.billing-info-container {
-    margin-top: 70px;
-
-    h3 {
-        text-align: left;
-    }
+// card payment info
+.form-container {
+    margin-top: 2rem;
+    text-align: left;
 
     input {
-        color: var(--secondary-text-color)
+        border: 2px solid var(--secondary-background-color);
+        color: var(--secondary-text-color);
+        border-radius: 10px;
+        padding: 1.25rem 3rem;
+        background-color: var(--secondary-background-color);
+    }
+
+    .form-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
+    }
+    
+    .small-input {
+        width: 100%;
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 1rem; 
     }
 }
 
-// form {
-//     margin-top: 1rem;
+.form-sub-container, .margin-top {
+    margin-top: var(--spacing);
+}
 
-//     // input {
-//     //     text-align: left;
-//     //     font-family: "Lato", sans-serif;
-//     //     padding-left: 2rem;
-//     // }
+// logo placement
+.icon-container {
+    img {
+        height: 23rem;
+        width: 19rem;
+    }
+    display: none;
 
-//     margin: 1rem auto;
-//     width: 100%;
-//     border-radius: var(--large-btn-radius);
-//     justify-content: flex-start;
-//     font-family: "Lato", sans-serif;
+    @media (min-width: 1600px) {
+        display: flex;
+        align-self: flex-start;
+        transform: translate(-22rem, -25rem);
+    }
+}
 
+// placing plus icons
+.plus_icon{
+    position: absolute;
+    display: none;
+    @media (min-width: 1600px) {
+        display: block;
+    }
+}
 
-//     input {
-//         text-align: left;
-//         border-bottom: none;
-//         padding: 0;
-//         margin: 0; 
-        
-//         &:disabled {
-//             color: var(--secondary-text-color);
-//         }
-//     }
+.plus1 {
+    top: 8rem;
+    left: 20rem;
+}
 
+.plus2 {
+    top: 3rem;
+    right: 20rem;
+}
 
-// }
-
-.donate-now-btn {
-    margin-top: 3rem;
+.plus3 {
+    top: 13rem;
+    right: 20rem;
 }

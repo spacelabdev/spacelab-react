@@ -1,27 +1,48 @@
 :root {
-    --content-width: 1600px;
+    --content-width: 1602px;
     --btn-background: #370080;
     --btn-border: #7000FF;
     --padding: 4rem;
-    --navbar-height: 70px;
+    --navbar-height-desktop: 135px;
+    --navbar-height-mobile: 70px;
+}
+
+.custom-text {
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.custom-text--large {
+    font-family: "Lato", sans-serif;
+    font-size: 1.95rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
 }
 
 .donate-title {
     font-size: 3.75rem;
+    line-height: 1.5;
+    letter-spacing: 2px;
 	color: white;
+    font-weight: 600;
 }
 
 .donate-button {
     cursor: pointer;
     background-color: var(--btn-background);
-    border: 4px solid var(--btn-border);
-    margin: 0 auto;
-    padding: 1rem 6rem;
-    font-size: 1.5rem;
+    border: 8px solid var(--btn-border);
+    margin: 2rem auto;
+    padding: 1.5rem 8rem;
+    font-family: "Lato", sans-serif;
+    font-size: 2.18rem;
+    line-height: 1.2;
+    letter-spacing: -1px;
 }
 
-p {
-    font-size: 1.75rem;
+.font-semibold {
+    font-weight: 500;
 }
 
 .section-background {

@@ -1,38 +1,44 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useState } from 'react'
-import PaymentContactInfo from "../paymentContactInfo/paymentContactInfo";
-import { ToggleButton } from "react-bootstrap";
+import PaymentContactInfo from "../cardPaymentInfo/paymentContactInfo";
+import ROCKET_ICON_IMAGE from "../../assets/icon _rocket.png";
 
 const VerticalButtons = () => {
-	const [isDropdownOpen, setIsDropdownOpen] = useState('')
+	const [isDropdownOpen, setIsDropdownOpen] = useState("");
 
 	const toggleDropdown = () => {
-		setIsDropdownOpen(!isDropdownOpen)
-	}
+		setIsDropdownOpen(!isDropdownOpen);
+	};
 
 	return (
 		<>
 			<div className="btn-container">
-				<Link
-					to={{
-						pathname:
-							"http://www.paypal.com/donhttpsate/?hosted_button_id=PK9D4A3HEWV8C",
-					}}
-					target="_blank"
-				>
-					<button className="text-btn btn-large" component={Link}>
+				<button className="custom-text btn-large" component={Link}>
+					<Link
+						to={{
+							pathname:
+								"http://www.paypal.com/donhttpsate/?hosted_button_id=PK9D4A3HEWV8C",
+						}}
+						target="_blank"
+					>
 						Donate with PayPal
-					</button>
-				</Link>
-			</div>
-				<button
-					className="text-btn btn-large outline-btn"
-					onClick={toggleDropdown}
-				>
-					Donate with Debit or Credit Card
+					</Link>
 				</button>
-				{isDropdownOpen && <PaymentContactInfo />}
-			
+			</div>
+			<button
+				className="custom-text btn-large outline-btn"
+				onClick={toggleDropdown}
+			>
+				Donate with Debit or Credit Card
+			</button>
+			{isDropdownOpen && <PaymentContactInfo />}
+			<div className="icon-container">
+				<img
+					src={ROCKET_ICON_IMAGE}
+					alt={"rocket ship icon"}
+					className="rocket-ship-icon"
+				/>
+			</div>
 		</>
 	);
 };

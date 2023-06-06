@@ -13,7 +13,7 @@ const ToggleGroup = ({ selected = options[0], setFrequency }) => {
 					key={option}
 					onClick={() => setFrequency(option)}
 				>
-					<span className="tab-title">{option}</span>
+					<span className="custom-text">{option}</span>
 				</button>
 			))}
 		</>

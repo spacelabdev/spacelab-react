@@ -21,6 +21,7 @@ const AccordionText = ({ description = "", setDescription }) => {
 						)}
 						<input
 							type="text"
+							className="custom-text"
 							placeholder="Write a note (Optional)"
 							value={description}
 							disabled={!accordionOn}
@@ -30,7 +31,7 @@ const AccordionText = ({ description = "", setDescription }) => {
 					<textarea
 						type="text"
 						value={description}
-						className="multiline-input"
+						className="multiline-input custom-text"
 						autoFocus="autofocus"
 						onChange={(e) => setDescription(e.target.value)}
 						placeholder="Write a note (Optional)"

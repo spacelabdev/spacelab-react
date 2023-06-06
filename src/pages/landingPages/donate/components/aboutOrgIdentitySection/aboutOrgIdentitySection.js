@@ -1,5 +1,4 @@
 import { SPACELAB_ORG_INDENTITY } from "./data";
-import CompanyProgressSection from "../companyProgressSection/companyProgressSection";
 import "./aboutOrgIdentitySection.scss";
 
 const AboutOrgIdentitySection = () => {
@@ -10,12 +9,11 @@ const AboutOrgIdentitySection = () => {
 					<div className="card-section" key={title}>
 						<h4 className="donate-title">{title}</h4>
 						<div className="about-mission-content">
-							<p>{description}</p>
+							<p className="custom-text--large">{description}</p>
 						</div>
 					</div>
 				))}
 			</div>
-			<CompanyProgressSection />
 		</section>
 	);
 };

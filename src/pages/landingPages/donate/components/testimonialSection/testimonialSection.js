@@ -9,7 +9,7 @@ const TestimonialSection = () => {
 				<div className="testimonial-content">
 					<div className="testimonial-form-content">
 						<h4 className="donate-title">Make An Impact</h4>
-						<p>
+						<p className="custom-text--large font-semibold">
 							To help us grow these opportunities, please consider
 							making <br />a tax-deductible donation to SpaceLab
 							today.
@@ -44,10 +44,10 @@ const TestimonialSection = () => {
 											className="testimonial-image"
 											loading="lazy"
 										/>
-										<p className="testimonial-feedback">
+										<p className="feedback-text testimonial-feedback">
 											{feedback}
 										</p>
-										<p className="testimonial-name">
+										<p className="feedback-text testimonial-name">
 											{name}
 										</p>
 									</div>

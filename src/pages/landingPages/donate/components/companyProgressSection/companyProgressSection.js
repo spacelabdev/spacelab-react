@@ -16,7 +16,7 @@ const CompanyProgressSection = () => {
 					className="progress-image"
 				/>
 				<div className="progress-card people-of-color">
-					<p className="progress-percentage-container">
+					<div className="progress-percentage-container">
 						<span className="progress-percentage">25%&nbsp;</span>
 						<div className="arrow-container">
 							<img
@@ -24,13 +24,13 @@ const CompanyProgressSection = () => {
 								alt={"shows the percentage difference"}
 								className="percentage-up-arrow"
 							/>
-							<span>more</span>
+							<span className="custom-text--large">more</span>
 						</div>
-					</p>
-					<p>People of color</p>
+					</div>
+					<p className="custom-text--large">People of color</p>
 				</div>
 				<div className="progress-card women-non-binary">
-					<p className="progress-percentage-container">
+					<div className="progress-percentage-container">
 						<span className="progress-percentage">39%&nbsp;</span>
 						<div className="arrow-container">
 							<img
@@ -38,13 +38,13 @@ const CompanyProgressSection = () => {
 								alt={"shows the percentage difference"}
 								className="percentage-up-arrow"
 							/>
-							<span>more</span>
+							<span className="custom-text--large">more</span>
 						</div>
-					</p>
-					<p>Women/non-binary</p>
+					</div>
+					<p className="custom-text--large">Women/non-binary</p>
 				</div>
 				<div className="progress-card people-disablity">
-					<p className="progress-percentage-container">
+					<div className="progress-percentage-container">
 						<span className="progress-percentage">5%&nbsp;</span>
 						<div className="arrow-container">
 							<img
@@ -52,10 +52,10 @@ const CompanyProgressSection = () => {
 								alt={"shows the percentage difference"}
 								className="percentage-up-arrow"
 							/>
-							<span>more</span>
+							<span className="custom-text--large">more</span>
 						</div>
-					</p>
-					<p>
+					</div>
+					<p className="custom-text--large">
 						People who identify
 						<br /> as having a disability
 					</p>

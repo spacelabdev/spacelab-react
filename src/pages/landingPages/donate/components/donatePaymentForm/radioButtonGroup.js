@@ -34,7 +34,7 @@ const RadioButtonGroup = ({ setAmount }) => {
 							onChange={handleChange}
 						/>
 						<label
-							className="radio-input-label"
+							className="radio-input-label custom-text"
 							htmlFor={`selection_preset-amounts_${val}`}
 						>
 							{val === "Custom" ? (
@@ -54,6 +54,7 @@ const RadioButtonGroup = ({ setAmount }) => {
 			<div className="input-container">
 				<input
 					value={inputVal}
+					className="custom-text"
 					disabled={selected !== "Custom"}
 					onChange={handleInputChange}
 					placeholder={

@@ -17,7 +17,7 @@
         }
 
         .testimonial-data {
-            margin-top: 15rem;
+            margin-top: -15rem;
             display: flex;
             align-items: center;
             border: 3px solid var(--white);
@@ -27,6 +27,12 @@
             .testimonial-card {
                 padding: 2rem 4rem;
                 min-width: var(--card-size);
+
+                .feedback-text {
+                    font-family: "Lato", sans-serif;
+                    font-size: 1.56rem;
+                    line-height: 1.2;
+                }
 
                 .testimonial-feedback {
                     font-style: italic;
