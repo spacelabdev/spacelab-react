@@ -21,9 +21,16 @@
     margin-top: 70px;
     background: black;
     column-gap: 1rem;
-    
+
     img{
         min-width: 33%
+    }
+
+}
+
+@media (max-width:767px) {
+    .donate-payment-header-container {
+        display:none
     }
 }
 
