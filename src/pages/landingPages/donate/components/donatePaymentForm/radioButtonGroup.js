@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-const options = [10, 25, 100, "Custom"];
-
-const RadioButtonGroup = ({ setAmount }) => {
+const RadioButtonGroup = ({ setAmount, name, options }) => {
 	const [selected, setSelected] = useState("");
 	const [inputVal, setInputVal] = useState("");
 
@@ -11,13 +9,17 @@ const RadioButtonGroup = ({ setAmount }) => {
 		setSelected(value);
 
 		value === "Custom" ? setInputVal("") : setInputVal(`$ ${value}`);
-		value !== "Custom" && setAmount(value);
+		value !== "Custom" && setAmount({ name, value: +value });
 	};
 
 	const handleInputChange = (e) => {
 		const { value } = e.target;
+		console.log(value);
 		value.includes("$") ? setInputVal(value) : setInputVal(`$ ${value}`);
-		setAmount(value.slice(1));
+		setAmount({
+			name,
+			value: +value.slice(2),
+		});
 	};
 
 	return (
@@ -27,7 +29,7 @@ const RadioButtonGroup = ({ setAmount }) => {
 					<React.Fragment key={val}>
 						<input
 							type="radio"
-							name="preset-amounts"
+							name={name}
 							id={`selection_preset-amounts_${val}`}
 							className="radio-btn-input"
 							value={val}

@@ -16,7 +16,7 @@ const initData = {
 	zipCode: "",
 };
 
-const PaymentContactInfo = () => {
+const PaymentCardInfo = () => {
 	const [input, setInput] = useState(initData);
 
 	const handleChange = (e) => {
@@ -30,7 +30,6 @@ const PaymentContactInfo = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		console.log(input);
 		//after validating the data
 		//submit the data to backend
 		setInput(initData);
@@ -199,4 +198,4 @@ const PaymentContactInfo = () => {
 	);
 };
 
-export default PaymentContactInfo;
+export default PaymentCardInfo;

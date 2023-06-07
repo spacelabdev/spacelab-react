@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ADD_ICON from "../../assets/add_icon.svg";
 
-const AccordionText = ({ description = "", setDescription }) => {
+const AccordionText = ({ description = "", handleChange, name }) => {
 	const [accordionOn, setAccordion] = useState(false);
 
 	return (
@@ -33,7 +33,13 @@ const AccordionText = ({ description = "", setDescription }) => {
 						value={description}
 						className="multiline-input custom-text"
 						autoFocus="autofocus"
-						onChange={(e) => setDescription(e.target.value)}
+						name={name}
+						onChange={(e) =>
+							handleChange({
+								name: e.target.name,
+								value: e.target.value,
+							})
+						}
 						placeholder="Write a note (Optional)"
 						onKeyDown={(e) => {
 							if (e.code === "Enter" || e.code === "Escape") {

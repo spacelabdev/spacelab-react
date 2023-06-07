@@ -1,22 +1,19 @@
-const CheckBox = ({ checked = false, setChecked, amount }) => {
+const CheckBox = ({ checked = false, setChecked, amount, name }) => {
 	const fee = (amount * 0.08).toFixed(2);
 
 	return (
 		<>
-			<div
-				className={"donate-checkbox-wrapper"}
-				onClick={() => setChecked(!checked)}
-			>
+			<div className={"donate-checkbox-wrapper"}>
 				<input
 					type={"checkbox"}
 					className="donate-checkbox"
-					name="cover-fee"
+					name={name}
 					checked={checked}
 					readOnly
 				/>
 				<label
 					className="cover-fee custom-text"
-					onClick={() => setChecked(!checked)}
+					onClick={() => setChecked({ name, value: !checked })}
 				>
 					Add <span className="cover-fee-bold">${fee} USD</span> to
 					help cover the fees.

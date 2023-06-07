@@ -14,6 +14,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
+	min-width: 400px;
 }
 
 .donate-payment-form {
@@ -24,13 +25,14 @@
 
 .donate-payment-content {
 	margin-top: 4rem;
-	padding: 0 8.5rem;
+	padding: 0 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing);
 
 	@media (min-width: 1600px) {
 		margin-bottom: -23rem; // this for fixing icon image gap
+		padding: 0 8.5rem;
 	}
 
 	input {
@@ -135,8 +137,10 @@ input:checked + .radio-input-label .radio-input-span {
 		text-decoration: none;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: var(--background-color);
+		outline: none;
 	}
 
 	width: 100%;

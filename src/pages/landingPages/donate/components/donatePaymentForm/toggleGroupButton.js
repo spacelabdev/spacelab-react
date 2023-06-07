@@ -1,19 +1,18 @@
-const options = ["One Time", "Monthly"];
-
-const ToggleGroup = ({ selected = options[0], setFrequency }) => {
+const ToggleGroup = ({ selected, handleChange, options, name }) => {
 	return (
 		<>
 			{options.map((option) => (
 				<button
-					className={`text-caption-tab ${
+					className={`text-caption-tab custom-text ${
 						selected === option ? "active" : ""
 					}`}
 					type="button"
 					role="tab"
+					name={name}
 					key={option}
-					onClick={() => setFrequency(option)}
+					onClick={(e) => handleChange({ name, value: option })}
 				>
-					<span className="custom-text">{option}</span>
+					{option}
 				</button>
 			))}
 		</>
