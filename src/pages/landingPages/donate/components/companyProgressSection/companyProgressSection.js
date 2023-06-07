@@ -15,6 +15,7 @@ const CompanyProgressSection = () => {
 						"Women non binary,People of color and people with disability"
 					}
 					className="progress-image"
+					loading="lazy"
 				/>
 				{PROGRESS_DATA.map((item) => (
 					<div

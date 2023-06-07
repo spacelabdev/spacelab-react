@@ -1,78 +1,78 @@
 :root {
-    --conatiner-height: 1048px;
+	--conatiner-height: 1048px;
 }
 
 #title-container {
-    padding-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
+	padding-bottom: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0;
 
-    @media (min-width: 1048px) {
-        margin-top: var(--navbar-height-desktop);
-    }
+	@media (min-width: 1048px) {
+		margin-top: var(--navbar-height-desktop);
+	}
 
-    .title-content {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
-        text-align: left;
-        
-        @media (min-width: 1048px) {
-            flex-direction: row;
-        }
+	.title-content {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		text-align: left;
 
-        .title-section-form {
-            flex-basis: 60%;
-            padding: 0 1rem;
-            margin-top: 1rem;
-            word-wrap: break-word;
-            white-space: normal;
+		@media (min-width: 1048px) {
+			flex-direction: row;
+		}
 
-            @media (min-width: 1048px) {
-                padding: 0 5rem;
-                margin-top: 5rem;
-            }
+		.title-section-form {
+			flex-basis: 60%;
+			padding: 0 1rem;
+			margin-top: 1rem;
+			word-wrap: break-word;
+			white-space: normal;
 
-            .form-title {
-                font-size: 5.125rem;
-                line-height: 1.4;
-                letter-spacing: 2px;
-            }
+			@media (min-width: 1048px) {
+				padding: 0 5rem;
+				margin-top: 5rem;
+			}
 
-            h4 {
-                margin-bottom: 3rem;
-            }
+			.form-title {
+				font-size: 5.125rem;
+				line-height: 1.4;
+				letter-spacing: 2px;
+			}
 
-            .donate-button{
-                margin: 0;
-            }
-        }
+			h4 {
+				margin-bottom: 3rem;
+			}
 
-        .title-image-container {
-            width: 100%;
-            
-            @media (min-width: 1024px) {
-                flex: 40%;
-        
-                img {
-                    height: calc(90vh - var(--navbar-height-desktop));
-                    object-fit: cover;
-                    object-position: center;
-                }
-            }
-        }
-    }
+			.donate-button {
+				margin: 0;
+			}
+		}
 
-    .icon-container-1{
-        display: none;
+		.title-image-container {
+			width: 100%;
 
-        @media (min-width: 1600px) {
-            display: flex;
-            transform: translate(-10rem, -25rem);
-            margin-bottom: -30rem;
-        }
-    }
+			@media (min-width: 1024px) {
+				flex: 40%;
+
+				img {
+					height: calc(90vh - var(--navbar-height-desktop));
+					object-fit: cover;
+					object-position: center;
+				}
+			}
+		}
+	}
+
+	.icon-container-1 {
+		display: none;
+
+		@media (min-width: 1600px) {
+			display: flex;
+			transform: translate(-10rem, -25rem);
+			margin-bottom: -30rem;
+		}
+	}
 }
