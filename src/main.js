@@ -47,6 +47,11 @@ export default function Main() {
 			/>
 			<Route
 				exact
+				path="/campaigns/participatev2"
+				component={ParticipateV2}
+			/>
+			<Route
+				exact
 				path="/campaigns/participate/apply"
 				component={Apply}
 			/>
