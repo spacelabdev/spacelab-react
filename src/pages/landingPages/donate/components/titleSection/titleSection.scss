@@ -52,12 +52,13 @@
 		}
 
 		.title-image-container {
-			width: 100%;
-
+			max-width: 100%;
+			flex: 1;
 			@media (min-width: 1024px) {
 				flex: 40%;
 
 				img {
+					width: 100%;
 					height: calc(90vh - var(--navbar-height-desktop));
 					object-fit: cover;
 					object-position: center;

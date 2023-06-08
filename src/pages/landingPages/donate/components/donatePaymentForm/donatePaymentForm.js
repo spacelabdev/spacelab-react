@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import ToggleGroupButton from "./toggleGroupButton";
-import RadioButtonGroup from "./radioButtonGroup";
-import VerticalButtons from "./verticalButtons";
-import CheckBox from "./checkBox";
-import AccordionText from "./accordionText";
+import ToggleGroupButton from "../toggleGroupButton/toggleGroupButton";
+import RadioButtonGroup from "../radioButtonGroup/radioButtonGroup";
+import CheckBox from "../checkBox/checkBox";
+import AccordionText from "../accordionText/accordionText";
+import PaymentCardInfo from "../cardPaymentInfo/PaymentCardInfo";
 import STAR_ICON from "../../assets/small_star.svg";
+import ROCKET_ICON_IMAGE from "../../assets/icon _rocket.png";
 import "./donatePaymentForm.scss";
 
 const options = ["One Time", "Monthly"];
@@ -19,9 +20,9 @@ const initData = {
 
 const DonatePaymentForm = () => {
 	const [data, setData] = useState(initData);
+	const [isDropdownOpen, setIsDropdownOpen] = useState("");
 
 	const handleChange = ({ name, value }) => {
-		console.log(data, name, value);
 		setData((prevState) => ({
 			...prevState,
 			[name]: value,
@@ -86,7 +87,20 @@ const DonatePaymentForm = () => {
 							Donate with PayPal
 						</a>
 					</button>
-					<VerticalButtons />
+					<button
+						className="custom-text btn-large outline-btn"
+						onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+					>
+						Donate with Debit or Credit Card
+					</button>
+					{isDropdownOpen && <PaymentCardInfo />}
+					<div className="icon-container">
+						<img
+							src={ROCKET_ICON_IMAGE}
+							alt={"rocket ship icon"}
+							className="rocket-ship-icon"
+						/>
+					</div>
 				</div>
 				<img
 					src={STAR_ICON}

@@ -1,0 +1,31 @@
+.accordion-btn {
+	width: 100%;
+	border-radius: var(--large-btn-radius);
+	justify-content: flex-start;
+	font-family: "Lato", sans-serif;
+
+	input {
+		border-bottom: none;
+		padding: 0;
+		margin: 0;
+
+		&:disabled {
+			color: var(--secondary-text-color);
+		}
+	}
+
+	.multiline-input {
+		width: 100%;
+		height: 5rem;
+		border: none;
+		background-color: transparent;
+		outline: none;
+		color: var(--secondary-text-color);
+	}
+}
+
+.add_icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: 1rem;
+}

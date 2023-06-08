@@ -4,16 +4,16 @@
 	.about-org-content {
 		max-width: var(--content-width);
 		width: 100%;
-		display: flex;	
+		display: flex;
 		align-items: center;
 		justify-content: center;
 		padding: 0 4rem;
 		margin: 0 auto;
 
 		@media (max-width: 1024px) {
-			max-width: calc(.8 * var(--content-width));
+			max-width: calc(0.8 * var(--content-width));
 		}
-		
+
 		.card-section {
 			font-weight: 400;
 			border: 3px white solid;
@@ -26,7 +26,7 @@
 				width: 90%;
 				margin: auto;
 				padding-top: 1rem;
-			
+
 				p {
 					color: white;
 				}

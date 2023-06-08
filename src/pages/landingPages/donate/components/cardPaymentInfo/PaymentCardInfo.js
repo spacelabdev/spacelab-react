@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FormInput from "./formInput";
+import "./paymentCardInfo.scss";
 
 const initData = {
 	email: "",
