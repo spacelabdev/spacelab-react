@@ -1,5 +1,4 @@
 .cta-container {
-    position: relative;
     height: 1100px;
     background-image: url("../assets/paul-volkmer-R5bkvjGHZig-unsplash.jpg");
     background-size: cover;
@@ -11,47 +10,55 @@
     }
 
     .cta-text {
-        position: relative;
+        position: absolute;
+        width: 100%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-family: 'Poppins';
         font-style: normal;
-        width: 90%;
-        left: 50%;
-        top: 7%;
-        transform: translate(-50%, 50%);
         text-align: center;
         color: #FFFFFF;
-        line-height: 1;
-
-        @media only screen and (max-width: 750px) {
-            top: -10%;
-        }
     }
 
     .cta-heading {
-        display: block;
+        width: max(1420px, 90%);
         font-weight: 600;
-        font-size: 85.0847px;
-        padding-bottom: 4%;
+        font-size: 80px;
+
+        @media only screen and (max-width: 750px) {
+            width: 90%;
+            font-size: 50px;
+            line-height: 1;
+        }
     }
 
     .cta-subheading {
-        display: block;
+        width: min(1420px, 90%);
         font-weight: 400;
-        font-size: 25.53px;
-        padding-bottom: 5%;
+        font-size: 25px;
+        line-height: 45px;
+
+        @media only screen and (max-width: 750px) {
+            width: 90%;
+            font-size: 20px;
+            line-height: 1;
+        }
     }
     
     .planet-image-wrapper {
         z-index: 300;
         position: relative;
-        width: 120%; 
-        left: 50%;
-        top: 7%;
-        transform: translate(-50%, 50%);
+        width: 2000px;
+        top: 35%;
+        left: calc(50% - 2000px/2);
 
         @media only screen and (max-width: 750px) {
-            width: 200%;
-            top: -10%;
+            width: 1000px;
+            top: 40%;
+            left: calc(50% - 1000px/2);
         }
     }
 
@@ -75,20 +82,17 @@
     }
 
     .success-state {
-        height: 298px;
-
         .bounding-box {
             z-index: 400;
-            position: fixed;
-            top: -125px;
-            right: 0;
-            display: flex;
-            flex-direction: row-reverse;
+            position: absolute;
+            top: 100px;
+            right: 5%;
 
             @media only screen and (max-width: 750px) {
-                top: -100px;
+                top: 5%;
+                right: 40px;
             }
-            
+
             .close-png {
                 width: 40px;
 
@@ -104,10 +108,6 @@
                 transform: translateY(-1px);
             }
 
-        }
-
-        @media only screen and (max-width: 750px) {
-            height: 434px;
         }
     }
 
