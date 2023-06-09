@@ -18,6 +18,7 @@ import {
 } from "./pages/landingPages/donate/Donate";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
+import ParticipateV2 from "./pages/landingPages/participate/participatev2/ParticipateV2";
 import Apply from "./pages/landingPages/participate/components/Apply/Apply";
 import SignUp from "./pages/landingPages/signUp/SignUp";
 
@@ -56,6 +57,11 @@ export default function Main() {
 				exact
 				path="/campaigns/participate"
 				component={Participate}
+			/>
+			<Route
+				exact
+				path="/campaigns/participatev2"
+				component={ParticipateV2}
 			/>
 			<Route
 				exact
