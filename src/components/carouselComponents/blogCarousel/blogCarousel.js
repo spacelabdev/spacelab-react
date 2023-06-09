@@ -3,7 +3,7 @@ import { UniversalContext } from "../../../App";
 import { Carousel } from "react-bootstrap";
 import "./blogCarousel.scss";
 import placeholder from "../../../assets/generalAssets/img_placeholder.png";
-import { Link } from "react-router-dom";
+import InternalNavButton from "../../../components/styleComponents/navigationButtons/internalNavButton";
 
 /**
  * Renders blog carousel items
@@ -80,12 +80,10 @@ export default function BlogCarousel({ isHomePage }) {
 			</div>
 			{isHomePage ? (
 				<div className="archives-button-container">
-					{/* InternalNavButton causes a bug rendering the blog page */}
-					<button>
-						<Link to={"/blog"} style={{ textDecoration: "none" }}>
-							View Full Blog
-						</Link>
-					</button>
+					<InternalNavButton
+						path="/blog"
+						buttonText="View Full Blog"
+					></InternalNavButton>
 				</div>
 			) : null}
 		</>
