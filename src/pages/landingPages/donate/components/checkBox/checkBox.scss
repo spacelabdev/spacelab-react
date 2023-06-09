@@ -1,0 +1,25 @@
+.donate-checkbox-wrapper {
+	margin: 1rem 0;
+	position: relative;
+	text-align: start;
+
+	.donate-checkbox {
+		width: 1.5rem;
+		height: 1.5rem;
+		margin: 0;
+		position: absolute;
+		border: 2px solid #d9d9d9;
+	}
+
+	.cover-fee {
+		display: inline-block;
+		padding-inline-start: 2.375rem;
+		position: relative;
+		text-align: start;
+		margin: 0;
+
+		.cover-fee-bold {
+			font-weight: bold;
+		}
+	}
+}

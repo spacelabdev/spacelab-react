@@ -1,0 +1,86 @@
+:root {
+	--conatiner-height: 1048px;
+}
+
+#title-container {
+	padding-bottom: 5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 0;
+
+	@media (min-width: 1048px) {
+		margin-top: var(--navbar-height-desktop);
+	}
+
+	.title-content {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+
+		@media (min-width: 1048px) {
+			flex-direction: row;
+			text-align: left;
+		}
+
+		.title-section-form {
+			flex-basis: 60%;
+			padding: 0 1rem;
+			margin-top: 1rem;
+			word-wrap: break-word;
+			white-space: normal;
+
+			@media (min-width: 1048px) {
+				padding: 0 5rem;
+				margin-top: 5rem;
+			}
+
+			.form-title {
+				font-size: 3.125rem;
+				line-height: 1.4;
+				letter-spacing: 2px;
+
+				@media (min-width: 1048px) {
+					font-size: 5.125rem;
+				}
+			}
+
+			h4 {
+				margin-bottom: 3rem;
+			}
+
+			.donate-button {
+				@media (min-width: 1048px) {
+					margin: 0;
+				}
+			}
+		}
+
+		.title-image-container {
+			flex: 40%;
+
+			img {
+				width: 100%;
+				height: calc(60vh - var(--navbar-height-desktop));
+				object-position: center;
+
+				@media (min-width: 1048px) {
+					height: calc(90vh - var(--navbar-height-desktop));
+					object-fit: cover;
+				}
+			}
+		}
+	}
+
+	.icon-container-1 {
+		display: none;
+
+		@media (min-width: 1600px) {
+			display: flex;
+			transform: translate(-10rem, -25rem);
+			margin-bottom: -30rem;
+		}
+	}
+}

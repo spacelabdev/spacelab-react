@@ -1,0 +1,22 @@
+.donate-payment-header-container {
+	display: flex;
+	max-width: 100vw;
+	background: black;
+	gap: 1rem;
+
+	@media (min-width: 1048px) {
+		margin-top: var(--navbar-height-desktop);
+	}
+
+	img {
+		flex: 1 1 30%;
+		object-fit: cover;
+		overflow: hidden;
+	}
+}
+
+@media (max-width: 767px) {
+	.donate-payment-header-container {
+		display: none;
+	}
+}

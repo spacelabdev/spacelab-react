@@ -1,0 +1,119 @@
+:root {
+	--background-color: #5700c6;
+	--primary-text-color: #0a0b0d;
+	--secondary-background-color: #d9d9d9;
+	--secondary-text-color: #6b7888;
+	--large-btn-radius: 30px;
+	--spacing: 2rem;
+	--form-width: 970px;
+}
+
+#donate-payment-wrapper {
+	width: 100%;
+	background-image: url("../../assets/SpaceLab_DonatePage1_Background.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-width: 480px;
+	padding: 1rem;
+}
+
+.donate-payment-form {
+	max-width: var(--form-width);
+	padding: 2rem 0;
+	margin: 0 auto;
+	position: relative;
+	min-inline-size: min-content;
+}
+
+.donate-payment-content {
+	margin-top: 4rem;
+	padding: 0 5rem;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing);
+
+	@media (min-width: 1500px) {
+		margin-bottom: -23rem; // this for fixing icon image gap
+		padding: 0 5rem;
+	}
+
+	input {
+		margin: 0;
+	}
+}
+
+//buttons
+.btn-container {
+	margin-top: 2rem;
+}
+
+.btn-large {
+	background-color: var(--background-color);
+	border: 5px solid var(--background-color);
+
+	a {
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: var(--background-color);
+		outline: none;
+	}
+
+	width: 100%;
+	border-radius: var(--large-btn-radius);
+	padding: 1.25rem 0;
+	min-width: 6rem;
+	text-transform: capitalize;
+}
+
+.outline-btn {
+	background-color: transparent;
+	color: white;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+	}
+}
+
+// logo placement
+.icon-container {
+	img {
+		height: 23rem;
+		width: 19rem;
+	}
+	display: none;
+
+	@media (min-width: 1500px) {
+		display: flex;
+		align-self: flex-start;
+		transform: translate(-22rem, -25rem);
+	}
+}
+
+// placing plus icons
+.star_icon {
+	position: absolute;
+	display: none;
+
+	@media (min-width: 768px) {
+		display: block;
+	}
+}
+
+.star1 {
+	top: 8rem;
+}
+
+.star2 {
+	top: 3rem;
+	right: 1px;
+}
+
+.star3 {
+	top: 13rem;
+	right: 1px;
+}
