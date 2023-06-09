@@ -21,7 +21,9 @@ export default function Podcast() {
 		const podcastList = [];
 		podcastArray
 			.filter((e) =>
-				e.title.toLowerCase().includes(searchResult.title.toLowerCase())
+				e.title
+					.toLowerCase()
+					.includes(searchResult?.title.toLowerCase())
 			)
 			.map((pod) => {
 				return podcastList.push(pod);
