@@ -6,7 +6,7 @@ import "./hero.scss";
 const Hero = () => {
 	return (
 		<>
-			<nav>
+			<nav className="donate-nav">
 				<div className="nav-wrapper">
 					<div className="logo-container">
 						<Link
