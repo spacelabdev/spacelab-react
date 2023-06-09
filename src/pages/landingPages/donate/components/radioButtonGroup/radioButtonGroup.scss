@@ -17,8 +17,8 @@
 	font-weight: bold;
 	color: var(--primary-text-color);
 	background-color: var(--secondary-background-color);
-	max-width: 30%;
-	min-width: 156px;
+	width: 22%;
+	min-width: 100%;
 	min-height: 3em;
 	display: flex;
 	flex-direction: column;
@@ -31,14 +31,19 @@
 	border-radius: 15px;
 	border: none;
 
+	@media (min-width: 600px) and (max-width: 800px) {
+		width: 45%;
+	}
+
 	@media (min-width: 600px) {
+		min-width: 185px;
 		&:last-child {
 			margin-right: -1.5rem;
 		}
 	}
 }
 
-input:checked + .radio-input-label {
+.radio-btn-input:checked + label {
 	color: white;
 	background-color: var(--background-color);
 }
@@ -51,6 +56,17 @@ input:checked + .radio-input-label {
 	margin-top: 0.5rem;
 }
 
-input:checked + .radio-input-label .radio-input-span {
+.radio-btn-input:checked + .radio-input-label .radio-input-span {
 	color: white;
+}
+
+.input-container {
+	input {
+		text-align: left;
+		padding-left: 2rem;
+
+		&:focus {
+			border-bottom: 2px solid white;
+		}
+	}
 }

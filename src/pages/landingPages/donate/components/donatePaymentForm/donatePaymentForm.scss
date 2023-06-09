@@ -14,26 +14,28 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	position: relative;
-	min-width: 400px;
+	min-width: 480px;
+	padding: 1rem;
 }
 
 .donate-payment-form {
 	max-width: var(--form-width);
 	padding: 2rem 0;
 	margin: 0 auto;
+	position: relative;
+	min-inline-size: min-content;
 }
 
 .donate-payment-content {
 	margin-top: 4rem;
-	padding: 0 1rem;
+	padding: 0 5rem;
 	display: flex;
 	flex-direction: column;
 	gap: var(--spacing);
 
-	@media (min-width: 1600px) {
+	@media (min-width: 1500px) {
 		margin-bottom: -23rem; // this for fixing icon image gap
-		padding: 0 8.5rem;
+		padding: 0 5rem;
 	}
 
 	input {
@@ -77,15 +79,6 @@
 	}
 }
 
-/* Input style */
-.input-container {
-	input {
-		text-align: left;
-		font-family: "Lato", sans-serif;
-		padding-left: 2rem;
-	}
-}
-
 // logo placement
 .icon-container {
 	img {
@@ -94,7 +87,7 @@
 	}
 	display: none;
 
-	@media (min-width: 896px) {
+	@media (min-width: 1500px) {
 		display: flex;
 		align-self: flex-start;
 		transform: translate(-22rem, -25rem);
@@ -106,22 +99,21 @@
 	position: absolute;
 	display: none;
 
-	@media (min-width: 896px) {
+	@media (min-width: 768px) {
 		display: block;
 	}
 }
 
 .star1 {
 	top: 8rem;
-	left: 20vw;
 }
 
 .star2 {
 	top: 3rem;
-	right: 20vw;
+	right: 1px;
 }
 
 .star3 {
 	top: 13rem;
-	right: 20vw;
+	right: 1px;
 }

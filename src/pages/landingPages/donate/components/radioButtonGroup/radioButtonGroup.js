@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./radioButtonGroup.scss";
+import RadioCard from "./radioCard";
 
 const RadioButtonGroup = ({ setAmount, name, options }) => {
 	const [selected, setSelected] = useState("");
 	const [inputVal, setInputVal] = useState("");
 
-	const handleChange = (e) => {
-		const { value } = e.target;
+	const handleChange = (value) => {
 		setSelected(value);
 
 		value === "Custom" ? setInputVal("") : setInputVal(`$ ${value}`);
@@ -25,32 +25,13 @@ const RadioButtonGroup = ({ setAmount, name, options }) => {
 	return (
 		<>
 			<div className="preset-amount-wrapper">
-				{options.map((val) => (
-					<React.Fragment key={val}>
-						<input
-							type="radio"
-							name={name}
-							id={`selection_preset-amounts_${val}`}
-							className="radio-btn-input"
-							value={val}
-							onChange={handleChange}
-						/>
-						<label
-							className="radio-input-label custom-text"
-							htmlFor={`selection_preset-amounts_${val}`}
-						>
-							{val === "Custom" ? (
-								val
-							) : (
-								<>
-									${val}
-									<span className="radio-input-span">
-										USD
-									</span>
-								</>
-							)}
-						</label>
-					</React.Fragment>
+				{options.map((val, index) => (
+					<RadioCard
+						key={index}
+						value={val}
+						handleChange={handleChange}
+						checked={val + "" === selected}
+					/>
 				))}
 			</div>
 			<div className="input-container">

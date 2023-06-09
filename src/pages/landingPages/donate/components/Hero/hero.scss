@@ -35,16 +35,14 @@ nav {
 		}
 
 		.logo-container {
-			height: 3.5em;
+			height: 4em;
 			padding-top: 0.25em;
 			text-align: left;
 			position: fixed;
 			width: 100vw;
 			background-color: black;
 			z-index: 99;
-			@media (min-width: 767px) and (max-width: 1023px) {
-				height: 4em;
-			}
+
 			@media (min-width: 1024px) {
 				height: 5.25em;
 				position: relative;
@@ -58,13 +56,13 @@ nav {
 				}
 
 				img {
-					max-width: 50vw;
+					max-width: 30vw;
+					min-height: 38px;
+					margin: auto auto;
 					margin-left: 0.5em;
 					position: fixed;
 					z-index: 98;
-					@media (min-width: 767px) and (max-width: 1023px) {
-						max-width: 30vw;
-					}
+
 					@media (min-width: 1024px) {
 						max-width: 290px;
 						margin: auto auto;

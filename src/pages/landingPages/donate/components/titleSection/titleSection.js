@@ -22,11 +22,7 @@ const TitleSection = () => {
 							to={"/campaigns/donate/donate-payment"}
 							style={{ textDecoration: "none" }}
 						>
-							<button
-								className="donate-button"
-								component={Link}
-								to={"/campaigns/donate/donate-payment"}
-							>
+							<button className="donate-button" component={Link}>
 								Donate
 							</button>
 						</Link>

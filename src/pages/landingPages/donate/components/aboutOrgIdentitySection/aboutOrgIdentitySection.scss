@@ -5,13 +5,16 @@
 		max-width: var(--content-width);
 		width: 100%;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		gap: 2rem;
 		padding: 0 4rem;
 		margin: 0 auto;
 
-		@media (max-width: 1024px) {
-			max-width: calc(0.8 * var(--content-width));
+		@media (min-width: 1200px) {
+			flex-direction: row;
+			gap: 0;
 		}
 
 		.card-section {

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { SPACELAB_TESTIMONIALS } from "./data";
+import TestimonialCard from "./testmonialCards";
 import "./testimonialSection.scss";
 
 const TestimonialSection = () => {
@@ -32,25 +33,13 @@ const TestimonialSection = () => {
 							({ name, feedback, imagePath }) => {
 								const image = require("../../assets/" +
 									imagePath);
-
 								return (
-									<div
-										className="testimonial-card"
-										key={`${name + name.length}`}
-									>
-										<img
-											src={image}
-											alt={`${name}.png`}
-											className="testimonial-image"
-											loading="lazy"
-										/>
-										<p className="feedback-text testimonial-feedback">
-											{feedback}
-										</p>
-										<p className="feedback-text testimonial-name">
-											{name}
-										</p>
-									</div>
+									<TestimonialCard
+										key={name}
+										image={image}
+										feedback={feedback}
+										name={name}
+									/>
 								);
 							}
 						)}

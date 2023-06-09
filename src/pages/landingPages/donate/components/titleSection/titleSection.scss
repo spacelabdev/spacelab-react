@@ -7,6 +7,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	margin-top: 0;
 
 	@media (min-width: 1048px) {
@@ -18,10 +19,10 @@
 		flex-direction: column-reverse;
 		justify-content: space-evenly;
 		flex-wrap: wrap;
-		text-align: left;
 
 		@media (min-width: 1048px) {
 			flex-direction: row;
+			text-align: left;
 		}
 
 		.title-section-form {
@@ -37,9 +38,13 @@
 			}
 
 			.form-title {
-				font-size: 5.125rem;
+				font-size: 3.125rem;
 				line-height: 1.4;
 				letter-spacing: 2px;
+
+				@media (min-width: 1048px) {
+					font-size: 5.125rem;
+				}
 			}
 
 			h4 {
@@ -47,21 +52,23 @@
 			}
 
 			.donate-button {
-				margin: 0;
+				@media (min-width: 1048px) {
+					margin: 0;
+				}
 			}
 		}
 
 		.title-image-container {
-			max-width: 100%;
-			flex: 1;
-			@media (min-width: 1024px) {
-				flex: 40%;
+			flex: 40%;
 
-				img {
-					width: 100%;
+			img {
+				width: 100%;
+				height: calc(60vh - var(--navbar-height-desktop));
+				object-position: center;
+
+				@media (min-width: 1024px) {
 					height: calc(90vh - var(--navbar-height-desktop));
 					object-fit: cover;
-					object-position: center;
 				}
 			}
 		}
