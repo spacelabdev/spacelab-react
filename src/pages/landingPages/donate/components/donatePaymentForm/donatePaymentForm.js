@@ -74,19 +74,20 @@ const DonatePaymentForm = () => {
 						handleChange={handleChange}
 						description={description}
 					/>
-					<button
-						className="custom-text btn-large"
-						// onClick={handleSubmit}
+					<a
+						href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
+						target="_blank"
+						rel="noreferrer"
+						style={{ textDecoration: "none" }}
 					>
-						<a
-							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
-							target="_blank"
-							rel="noreferrer"
-							style={{ textDecoration: "none" }}
+						<button
+							className="custom-text btn-large"
+							// onClick={handleSubmit}
 						>
 							Donate with PayPal
-						</a>
-					</button>
+						</button>
+					</a>
+
 					<button
 						className="custom-text btn-large outline-btn"
 						onClick={() => setIsDropdownOpen(!isDropdownOpen)}
