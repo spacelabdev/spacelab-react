@@ -3,11 +3,6 @@
 }
 
 #donate-success-wrapper {
-	background-image: url("../../assets/SpaceLab_DonatePage1_Background.png");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	min-width: 480px;
 	padding: 2rem 1rem;
 }
 
@@ -16,7 +11,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 2rem;
+	margin-top: 0;
+
+	@media (min-width: 1200px) {
+		margin-top: 2rem;
+	}
 }
 
 .donate-subtext {

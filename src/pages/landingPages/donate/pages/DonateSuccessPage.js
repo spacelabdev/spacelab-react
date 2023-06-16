@@ -14,8 +14,10 @@ export default function DonateSuccessPage() {
 	return (
 		<>
 			<Hero />
-			<DonatePaymentHeader />
-			<DonateSuccessMessage />
+			<div className="section-background">
+				<DonatePaymentHeader />
+				<DonateSuccessMessage />
+			</div>
 			<Footer />
 		</>
 	);

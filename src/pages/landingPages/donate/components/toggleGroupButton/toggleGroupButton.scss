@@ -19,7 +19,10 @@
 	border: none;
 	transition: background-color 1s ease-out;
 	text-transform: none;
-	padding: 1.25rem 3rem;
+
+	@media (min-width: 767px) {
+		padding: 1.25rem 3rem;
+	}
 
 	&:hover {
 		background-color: var(--secondary-background-color);

@@ -7,22 +7,16 @@ import "./donatePaymentHeader.scss";
 const DonatePaymentHeader = () => {
 	return (
 		<>
-			<div className="donate-payment-header-container">
-				<img
-					src={group_of_two_men}
-					alt="group-of-two-men"
-					className="header-image-1"
-				/>
-				<img
-					src={three_women_chatting}
-					alt="three-women-chatting"
-					className="header-image-2"
-				/>
+			<div className="donate-header-container">
+				<img src={group_of_two_men} alt="group-of-two-men" />
+				<img src={three_women_chatting} alt="three-women-chatting" />
 				<img
 					src={one_woman_talking_and_one_laughing}
 					alt="one-woman-talking-and-one-laughing"
-					className="header-image-3"
 				/>
+			</div>
+			<div className="donate-header-container-small">
+				<img src={three_women_chatting} alt="three-women-chatting" />
 			</div>
 		</>
 	);

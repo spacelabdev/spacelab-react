@@ -5,57 +5,82 @@
 	--padding: 4rem;
 	--navbar-height-desktop: 135px;
 	--navbar-height-mobile: 64px;
+	--custom-text-size: 2rem;
 }
 
 .custom-text {
 	font-family: "Lato", sans-serif;
-	font-size: 2rem;
-	line-height: 1.5rem;
-	letter-spacing: 1px;
+	font-size: 1.125rem;
+	line-height: 0.75;
+
+	@media (min-width: 767px) {
+		font-size: var(--custom-text-size);
+		line-height: 1.3;
+	}
 }
 
 .custom-text--large {
 	font-family: "Lato", sans-serif;
-	font-size: 1.95rem;
-	line-height: 1.2;
+	font-size: 1rem;
+	line-height: 1.18;
+
+	@media (min-width: 767px) {
+		font-size: 1.95rem;
+	}
 }
 
 .custom-text--larger {
 	font-family: "Lato", sans-serif;
-	font-size: 2.18rem;
+	font-size: 1.19rem;
 	line-height: 1.2;
-	letter-spacing: -1px;
+
+	@media (min-width: 767px) {
+		font-size: 2.18rem;
+	}
 }
 
 .custom-text--largest {
 	font-family: "Lato", sans-serif;
-	font-size: 3.75rem;
+	font-size: 1.81rem;
 	line-height: 1.2;
-	letter-spacing: -1px;
+
+	@media (min-width: 767px) {
+		font-size: 3.75rem;
+	}
 }
 
 .donate-title {
-	font-size: 3.75rem;
+	font-size: 1.625rem;
 	line-height: 1.5;
-	letter-spacing: 2px;
 	color: white;
 	font-weight: 600;
+	letter-spacing: 2px;
+
+	@media (min-width: 767px) {
+		font-size: 3.75rem;
+	}
 }
 
 .donate-button {
 	cursor: pointer;
 	background-color: var(--btn-background);
 	border: 8px solid var(--btn-border);
-	margin: 2rem auto;
-	padding: 1.5rem 8rem;
+	margin: 0 auto;
+	padding: 0.8rem 3rem;
 	font-family: "Lato", sans-serif;
-	font-size: 2.18rem;
+	font-size: 1.1875rem;
 	line-height: 1.2;
 	letter-spacing: -1px;
 
 	&:hover,
 	&:focus {
 		outline: none;
+	}
+
+	@media (min-width: 767px) {
+		font-size: 2.18rem;
+		padding: 1.5rem 8rem;
+		margin: 2rem auto;
 	}
 }
 

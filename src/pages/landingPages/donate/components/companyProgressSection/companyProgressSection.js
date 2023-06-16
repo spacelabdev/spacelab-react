@@ -41,6 +41,31 @@ const CompanyProgressSection = () => {
 					</div>
 				))}
 			</div>
+			<div className="progress-wrapper-small-screen">
+				{PROGRESS_DATA.map((item) => (
+					<div
+						className={`progress-card progress-card-${item.id}`}
+						key={item.id}
+					>
+						<div className="progress-percentage-container">
+							<span className="progress-percentage custom-text--largest">
+								{item.percentage}%&nbsp;
+							</span>
+							<div className="arrow-container">
+								<img
+									src={UpArrow}
+									alt={"shows the percentage difference"}
+									className="percentage-up-arrow"
+								/>
+								<span className="custom-text-small-larger">
+									more
+								</span>
+							</div>
+						</div>
+						<p className="custom-text--large">{item.title}</p>
+					</div>
+				))}
+			</div>
 		</section>
 	);
 };

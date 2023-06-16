@@ -14,8 +14,10 @@ export default function DonatePaymentPage() {
 	return (
 		<>
 			<Hero />
-			<DonatePaymentHeader />
-			<DonatePaymentForm />
+			<div className="section-background">
+				<DonatePaymentHeader />
+				<DonatePaymentForm />
+			</div>
 			<Footer />
 		</>
 	);
