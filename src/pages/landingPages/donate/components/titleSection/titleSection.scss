@@ -1,4 +1,5 @@
 #title-container {
+	position: relative;
 	padding-bottom: 5rem;
 	display: flex;
 	flex-direction: column;
@@ -91,6 +92,7 @@
 		}
 	}
 
+	// rocket icon
 	.icon-container-1 {
 		display: none;
 
@@ -99,5 +101,44 @@
 			transform: translate(-10rem, -25rem);
 			margin-bottom: -30rem;
 		}
+	}
+
+	// star icons
+	.small-screen-icon {
+		position: absolute;
+		display: inline-block;
+
+		@media (min-width: 767px) {
+			display: none;
+		}
+	}
+
+	.star1--title,
+	.star2--title,
+	.star3--title {
+		width: 0.625rem;
+		height: 0.625rem;
+	}
+
+	.star1--title {
+		bottom: 7rem;
+		left: 18vw;
+	}
+
+	.star2--title {
+		right: 25vw;
+		bottom: 2rem;
+	}
+
+	.star3--title {
+		right: 15vw;
+		bottom: 9rem;
+	}
+
+	.down_arrow {
+		width: 3.25rem;
+		height: 0.75rem;
+		right: 45vw;
+		bottom: 2rem;
 	}
 }

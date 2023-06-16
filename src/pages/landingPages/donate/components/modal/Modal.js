@@ -1,16 +1,26 @@
-import "./Modal.css";
+import Modal from "react-bootstrap/Modal";
+import "./modal.scss";
+import { useState } from "react";
 
-export default function Modal({ open, onClose, title, description }) {
-	if (!open) return null;
+const text =
+	"We appreciate your generosity and willingness to donate to our cause! We currently accept payment by credit card through our Paypal partner portal for added security. Thank you for your understanding!";
+
+export default function ShowModal({ open }) {
+	const [show, setShow] = useState(open);
+
+	const handleClose = () => setShow(false);
 
 	return (
 		<>
-			<div className="modal-container">
-				<div className="modal-text">
-					<span className="modal-heading">{title}</span>
-					<span className="modal-subheading">{description}</span>
-				</div>
-			</div>
+			<Modal
+				show={show}
+				onHide={handleClose}
+				aria-labelledby="contained-modal-title-vcenter"
+				centered
+			>
+				<Modal.Header closeButton></Modal.Header>
+				<Modal.Body className="modal-text">{text}</Modal.Body>
+			</Modal>
 		</>
 	);
 }
