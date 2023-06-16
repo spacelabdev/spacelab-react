@@ -1,6 +1,6 @@
 import Modal from "react-bootstrap/Modal";
-import "./modal.scss";
 import { useState } from "react";
+import "./showModal.scss";
 
 const text =
 	"We appreciate your generosity and willingness to donate to our cause! We currently accept payment by credit card through our Paypal partner portal for added security. Thank you for your understanding!";
