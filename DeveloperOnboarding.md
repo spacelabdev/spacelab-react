@@ -163,7 +163,7 @@ Branch Naming Conventions:
 -   enhancement/nameOfFeature: Enhancement of exsisting feature or component
 -   hotfix/nameOfBug: Quick bug or update
 
-### Rebase vs. Merge
+### Merge vs. Rebase
 
 Merge and rebase are two strategies for integrating branches in git.
 
@@ -173,13 +173,15 @@ Merge:
 -   Non destructive, keeps the original commit history of both branches
 -   In projects with lots of developers using merge can create a messy commit history
 -   `git rebase origin main`
-    Rebase:
+
+Rebase:
+
 -   Alters the commit history, gives the ability to squash commits
 -   Destructive, should only be used on private branches
 -   When used correctly can creates a neat commit history
 -   `git merge origin main`
 
-In general, use rebase ONLY when you are working on a private branch, meaning you are the only developer making changes to the branch, and you haven’t created a PR yet. You should rebase your feature branch every time before creating your PR, or if there are changes that have been made to main that you need to incorporate in your branch.
+Use rebase ONLY when you are working on a private branch, meaning you are the only developer making changes to the branch, and you haven’t created a PR yet. You should rebase your feature branch every time before creating your PR, or if there are changes that have been made to main that you need to incorporate in your branch.
 
 Use merge when on public branches, meaning there are multiple people making changes to the branch, or you have already submitted a PR and need to update something in the code.
 
@@ -247,8 +249,8 @@ Coding Conventions:
 2. Accessibility:
 
     - Write semantic html
-    - include alt attributes on all images
-    - include labels on all inputs
+    - Include alt attributes on all images
+    - Include labels on all inputs
 
 3. Performance:
     - Keep your code modular and resuable
