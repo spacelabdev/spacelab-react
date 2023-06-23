@@ -40,10 +40,10 @@
     <li><a href="#workflow">General Workflow</a></li>
     <li><a href="#ticketsAndBugs">Tickets and Bugs</a></li>
     <li>
-        <a href="#branchesAndPullRequests">Branches and Pull Requests</a>
+        <a href="#branchesAndPullRequests">Git Branching, Merge vs. Rebase, and Pull Requests</a>
         <ul>
             <li><a href="#creatingAFeatureBranch">Creating A Feature Branch</a></li>
-            <li><a href="#rebasingAFeatureBranch">Rebasing A Feature Branch</a></li>
+            <li><a href="#rebasingAFeatureBranch">Rebase vs. MErge</a></li>
             <li><a href="#submittingAPullRequest">Submitting A Pull Request</a></li>
         </ul>
     </li>
@@ -102,7 +102,7 @@ If you are on Mac or Linux you can install [nvm](https://github.com/nvm-sh/nvm) 
 
 ### Installation
 
-1. Clone the repo
+1. Clone (or fork) the repo
     ```sh
     git clone https://github.com/spacelabdev/spacelab-react
     ```
@@ -121,13 +121,14 @@ In general, the flow goes like this:
 
 1. Update your local version of main: (`git pull`) (in your main branch)
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request and include a screenshot of the feauture you worked on
+3. Commit some Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Rebase your branch to have the latest updates from main (`git rebase origin main`)
+5. Push your branch to the remote (`git push origin feature/AmazingFeature`)
+6. Open a Pull Request and include a screenshot of the feauture you worked on
 
 **Never push changes directly to main, always use a feature branch!**
 
-**Don't forget to delete your branches once they're merged.**
+**Delete your branches once they're merged.**
 
 ## Tickets and Bugs
 
@@ -135,7 +136,7 @@ To get started contributing, simply check out the current list of [issues](https
 
 We use Github to track updates that need to be made to the website. If you notice a bug, please create a ticket for it right away, so it doesn't get lost or forgotten.
 
-All tickets should be labelled for clarity. The exsisting labels and their purposes are:
+Tickets should be labelled for clarity. The exsisting labels and their purposes are:
 
 -   New Feature: For a new feature or component
 -   Enhancement: Improvement to be made to an existing feature or component
@@ -144,7 +145,7 @@ All tickets should be labelled for clarity. The exsisting labels and their purpo
 -   Good First Issue: Easy task, good for newcomers
 -   Help Wanted: Stuck on something or need a fresh pair of eyes
 
-## Branches and Pull Requests
+## Git Branching, Merge vs. Rebase, and Pull Requests
 
 When fixing a bug or creating a new feature, please use a separate branch called a feature branch.
 
@@ -162,52 +163,44 @@ Branch Naming Conventions:
 -   enhancement/nameOfFeature: Enhancement of exsisting feature or component
 -   hotfix/nameOfBug: Quick bug or update
 
-### Rebasing a Feature Branch
+### Rebase vs. Merge
 
-Say you and another developer have checked out feature branches and happen to both edit the same file. When you go to submit your pull request, you will likely end up with merge conflicts because Git doesn't know whose changes to apply.
+Merge and rebase are two strategies for integrating branches in git.
 
-To avoid merge conflicts, it's good practice to consistently "rebase" (or update) your branch with the current version of main. To rebase a feature branch, follow these steps:
+Merge:
 
-In main:
+-   Easiest option
+-   Non destructive, keeps the original commit history of both branches
+-   In projects with lots of developers using merge can create a messy commit history
+-   `git rebase origin main`
+    Rebase:
+-   Alters the commit history, gives the ability to squash commits
+-   Destructive, should only be used on private branches
+-   When used correctly can creates a neat commit history
+-   `git merge origin main`
 
-```
-git pull
-```
+In general, use rebase ONLY when you are working on a private branch, meaning you are the only developer making changes to the branch, and you haven’t created a PR yet. You should rebase your feature branch every time before creating your PR, or if there are changes that have been made to main that you need to incorporate in your branch.
 
-```
-git fetch --all
-```
+Use merge when on public branches, meaning there are multiple people making changes to the branch, or you have already submitted a PR and need to update something in the code.
 
-Then switch to your feature branch:
-
-```
-git checkout nameOfFeatureBranch
-```
-
-In your feature branch
-
-```
-git rebase origin/main
-```
-
-Alternatively, if someone else rebased your branch say -- github
-You would want to run
+To reset your branch to match the remote you can run:
 
 ```
 git reset --hard origin/"Your branch"
 ```
 
-**At a minimum, you should rebase every time a change or update is pushed to main.**
-
 ### Submitting a Pull Request
 
 PR's should be submitted when your feature/bug-fix is complete and has been tested.
 
-Before submitting a PR, run through this checklist:
+Before submitting a PR, run through this code checklist:
 
-1. Rebase your branch and check that it is up to date with main
-2. Make sure Webpack compiles without warnings
-3. Remove any console.logs and unnecessary comments in your code
+1. Remove any console.logs and unnecessary comments in your code
+2. Add alt tags to all images, labels to all inputs, and check that your html is semantic
+3. Make sure styles are properly nested so that other parts of the site aren't affected
+4. Test your feature/page on mobile/tablet/desktip in dev tools and check that it doesn't break
+5. Check that Webpack compiles without warnings, resolve any errors before pushing
+6. Rebase your branch with main and check that it is up to date
 
 Once you complete the checklist, open a PR and include a short description of what you accomplished. If you built a new feature, include a screenshot of the UI.
 
@@ -225,16 +218,13 @@ Some of these conventions haven't been implemented throughout the entire site ye
 
 Naming Conventions:
 
-1. As per convention, all React component names and file names should be capitalized.
+1. All React component names and file names should be Pascal Case.
 
-2. For css classes use hypen deliminated strings, for example: .example-class
+2. All files written in jsx should have the extension .jsx, and any files that are pure javascript should have the .js extension.
 
-3. Otherwise, please use CamelCase for everything including:
+3. For css classes use hypen deliminated strings, for example: .example-class
 
-    - folder names
-    - file names
-    - variable names
-    - function names
+4. Otherwise, please use camelCase for naming
 
 Coding Conventions:
 
@@ -258,10 +248,12 @@ Coding Conventions:
 
     - Write semantic html
     - include alt attributes on all images
+    - include labels on all inputs
 
 3. Performance:
     - Keep your code modular and resuable
     - Do not use let or var to declare your variables, instead use const
+    - Remove all console.logs
 
 ## Thank You For Reading and Welcome to Spacelab!
 
