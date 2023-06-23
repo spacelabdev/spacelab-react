@@ -1,7 +1,7 @@
 import React from "react";
-import "./glossary.scss";
+import "./Glossary.scss";
 import HeroImage from "../../components/HeroImage/HeroImage";
-import GlossaryList from "./glossaryList";
+import GlossaryList from "./GlossaryList";
 import Footer from "../../components/Footer/Footer";
 
 /**

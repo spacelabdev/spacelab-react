@@ -20,7 +20,7 @@ import {
 } from "./initialiseState";
 import DropdownButton from "../../components/styleComponents/buttons/DropDownButton/DropdownButton";
 import { downloadData } from "../../services/utilityFunctions";
-import "./discovery.scss";
+import "./Discovery.scss";
 import SimpleButton from "../../components/styleComponents/buttons/SimpleButton/SimpleButton";
 import CollapsibleSection from "../../components/CollapsibleSection/CollapsibleSection";
 import DataTable from "./table/dataTable";

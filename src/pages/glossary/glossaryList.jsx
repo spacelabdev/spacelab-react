@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import GlossaryListItem from "./glossaryListItem";
+import GlossaryListItem from "./GlossaryListItem";
 import { UniversalContext } from "../../App";
 import {
 	returnFilteredTerms,
@@ -7,7 +7,7 @@ import {
 	highlightCurrentFilter,
 	glossaryTermsArray,
 } from "./glossaryhelper";
-import "./glossary.scss";
+import "./Glossary.scss";
 import { handleGlossarySearchTermClick } from "../../components/SearchBar/SearchBarHelper";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
