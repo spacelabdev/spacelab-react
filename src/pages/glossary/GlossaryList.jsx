@@ -6,7 +6,7 @@ import {
 	handleTermImage,
 	highlightCurrentFilter,
 	glossaryTermsArray,
-} from "./glossaryHelper.js";
+} from "./glossaryHelper";
 import "./Glossary.scss";
 import { handleGlossarySearchTermClick } from "../../components/SearchBar/SearchBarHelper";
 import SearchBar from "../../components/SearchBar/SearchBar";
