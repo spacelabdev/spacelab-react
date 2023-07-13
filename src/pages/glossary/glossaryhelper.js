@@ -1,3 +1,5 @@
+/*GlossaryHelper*/
+
 /**
  * Returns glossary terms within specified alphabetic index range. Alphabet is NOT zero indexed. A=1 ... Z=26.
  * @param beginningAlphabeticIndex {int}
