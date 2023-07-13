@@ -1,8 +1,5 @@
-:root {
-	--conatiner-height: 1048px;
-}
-
 #title-container {
+	position: relative;
 	padding-bottom: 5rem;
 	display: flex;
 	flex-direction: column;
@@ -10,7 +7,7 @@
 	justify-content: center;
 	margin-top: 0;
 
-	@media (min-width: 1048px) {
+	@media (min-width: 1024px) {
 		margin-top: var(--navbar-height-desktop);
 	}
 
@@ -20,7 +17,7 @@
 		justify-content: space-evenly;
 		flex-wrap: wrap;
 
-		@media (min-width: 1048px) {
+		@media (min-width: 1024px) {
 			flex-direction: row;
 			text-align: left;
 		}
@@ -32,27 +29,48 @@
 			word-wrap: break-word;
 			white-space: normal;
 
-			@media (min-width: 1048px) {
+			@media (min-width: 1024px) {
 				padding: 0 5rem;
 				margin-top: 5rem;
 			}
 
-			.form-title {
-				font-size: 3.125rem;
-				line-height: 1.4;
-				letter-spacing: 2px;
+			.subtitle-container {
+				margin-right: 0;
 
-				@media (min-width: 1048px) {
-					font-size: 5.125rem;
+				@media (min-width: 1024px) {
+					margin-right: 5rem;
 				}
 			}
 
+			.form-title {
+				font-size: 1.69rem;
+				line-height: 1.48;
+				font-weight: 600;
+
+				@media (min-width: 767px) {
+					font-size: 5.125rem;
+					line-height: 1.4;
+					letter-spacing: 2px;
+					font-weight: 500;
+				}
+
+				@media (min-width: 768px) and (max-width: 1024px) {
+					font-size: 3.25rem;
+					font-weight: 600;
+				}
+			}
+
+			h2,
 			h4 {
-				margin-bottom: 3rem;
+				margin-bottom: 1rem;
+
+				@media (min-width: 767px) {
+					margin-bottom: 3rem;
+				}
 			}
 
 			.donate-button {
-				@media (min-width: 1048px) {
+				@media (min-width: 1024px) {
 					margin: 0;
 				}
 			}
@@ -63,10 +81,10 @@
 
 			img {
 				width: 100%;
-				height: calc(60vh - var(--navbar-height-desktop));
+				height: calc(50vh - var(--navbar-height-desktop));
 				object-position: center;
 
-				@media (min-width: 1048px) {
+				@media (min-width: 1024px) {
 					height: calc(90vh - var(--navbar-height-desktop));
 					object-fit: cover;
 				}
@@ -74,6 +92,7 @@
 		}
 	}
 
+	// rocket icon
 	.icon-container-1 {
 		display: none;
 
@@ -82,5 +101,44 @@
 			transform: translate(-10rem, -25rem);
 			margin-bottom: -30rem;
 		}
+	}
+
+	// star icons
+	.small-screen-icon {
+		position: absolute;
+		display: inline-block;
+
+		@media (min-width: 767px) {
+			display: none;
+		}
+	}
+
+	.star1--title,
+	.star2--title,
+	.star3--title {
+		width: 0.625rem;
+		height: 0.625rem;
+	}
+
+	.star1--title {
+		bottom: 7rem;
+		left: 18vw;
+	}
+
+	.star2--title {
+		right: 25vw;
+		bottom: 2rem;
+	}
+
+	.star3--title {
+		right: 15vw;
+		bottom: 9rem;
+	}
+
+	.down_arrow {
+		width: 3.25rem;
+		height: 0.75rem;
+		right: 45vw;
+		bottom: 2rem;
 	}
 }

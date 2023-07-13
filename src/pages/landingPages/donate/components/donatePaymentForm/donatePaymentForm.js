@@ -6,6 +6,7 @@ import AccordionText from "../accordionText/accordionText";
 import PaymentCardInfo from "../cardPaymentInfo/PaymentCardInfo";
 import STAR_ICON from "../../assets/small_star.svg";
 import ROCKET_ICON_IMAGE from "../../assets/icon _rocket.png";
+import ShowModal from "../modal/showModal";
 import "./donatePaymentForm.scss";
 
 const options = ["One Time", "Monthly"];
@@ -20,7 +21,7 @@ const initData = {
 
 const DonatePaymentForm = () => {
 	const [data, setData] = useState(initData);
-	const [isDropdownOpen, setIsDropdownOpen] = useState("");
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
 	const handleChange = ({ name, value }) => {
 		setData((prevState) => ({
@@ -29,12 +30,12 @@ const DonatePaymentForm = () => {
 		}));
 	};
 
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		// after submitting data to the backend
-		// reset the data to the initial values
-		setData(initData);
-	};
+	// const handleSubmit = (e) => {
+	// 	e.preventDefault();
+	// 	// after submitting data to the backend
+	// 	// reset the data to the initial values
+	// 	setData(initData);
+	// };
 
 	const { paymentFrequency, amount, recoveryFee, description } = data;
 
@@ -74,19 +75,20 @@ const DonatePaymentForm = () => {
 						handleChange={handleChange}
 						description={description}
 					/>
-					<button
-						className="custom-text btn-large"
-						// onClick={handleSubmit}
+					<a
+						href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
+						target="_blank"
+						rel="noreferrer"
+						style={{ textDecoration: "none" }}
 					>
-						<a
-							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
-							target="_blank"
-							rel="noreferrer"
-							style={{ textDecoration: "none" }}
+						<button
+							className="custom-text btn-large"
+							// onClick={handleSubmit}
 						>
 							Donate with PayPal
-						</a>
-					</button>
+						</button>
+					</a>
+
 					<button
 						className="custom-text btn-large outline-btn"
 						onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -94,6 +96,7 @@ const DonatePaymentForm = () => {
 						Donate with Debit or Credit Card
 					</button>
 					{isDropdownOpen && <PaymentCardInfo />}
+					{isDropdownOpen && <ShowModal open={true} />}
 					<div className="icon-container">
 						<img
 							src={ROCKET_ICON_IMAGE}

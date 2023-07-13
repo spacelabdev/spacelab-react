@@ -8,27 +8,34 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 2rem;
-		padding: 0 4rem;
 		margin: 0 auto;
 
-		@media (min-width: 1200px) {
+		@media (min-width: 1024px) {
 			flex-direction: row;
-			gap: 0;
+			padding: 0 4rem;
 		}
 
 		.card-section {
 			font-weight: 400;
-			border: 3px white solid;
-			margin-right: -3px; //prevent overlap boder
+			border: none;
 			align-self: stretch;
 			flex: 1 1 0;
-			padding: 2rem;
+			padding: 1rem;
+
+			@media (min-width: 1024px) {
+				border: 3px white solid;
+				margin-right: -3px; //prevent overlap boder
+				padding: 2rem;
+			}
 
 			.about-mission-content {
 				width: 90%;
 				margin: auto;
-				padding-top: 1rem;
+				padding-top: 0;
+
+				@media (min-width: 767px) {
+					padding-top: 1rem;
+				}
 
 				p {
 					color: white;

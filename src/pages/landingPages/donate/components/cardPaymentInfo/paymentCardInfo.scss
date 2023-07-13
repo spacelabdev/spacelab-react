@@ -5,22 +5,18 @@
 		border: 2px solid var(--secondary-background-color);
 		color: var(--secondary-text-color);
 		border-radius: 10px;
-		padding: 1.25rem 3rem;
+		padding: 0.5rem 1rem;
 		background-color: var(--secondary-background-color);
+
+		@media (min-width: 767px) {
+			padding: 1.25rem 3rem;
+		}
 	}
 
 	.form-content {
 		display: flex;
 		flex-direction: column;
 		gap: var(--spacing);
-
-		.form-input {
-			border: 2px solid var(--secondary-background-color);
-			color: var(--secondary-text-color);
-			border-radius: 10px;
-			padding: 1.25rem 3rem;
-			background-color: var(--secondary-background-color);
-		}
 
 		.input-error {
 			border-color: red;
@@ -36,12 +32,20 @@
 	}
 
 	.margin-top {
-		margin-top: var(--spacing);
+		margin-top: calc(0.5 * var(--spacing));
+
+		@media (min-width: 767px) {
+			margin-top: var(--spacing);
+		}
 	}
 }
 
 .form-sub-container {
 	.margin-top {
-		margin-top: calc(1.5 * var(--spacing));
+		margin-top: calc(0.75 * var(--spacing));
+
+		@media (min-width: 767px) {
+			margin-top: calc(1.5 * var(--spacing));
+		}
 	}
 }

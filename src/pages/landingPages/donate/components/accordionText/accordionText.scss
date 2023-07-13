@@ -25,7 +25,12 @@
 }
 
 .add_icon {
-	width: 1.5rem;
-	height: 1.5rem;
+	width: calc(0.5 * var(--custom-text-size));
+	height: calc(0.5 * var(--custom-text-size));
 	margin-right: 1rem;
+
+	@media (min-width: 767px) {
+		width: calc(0.75 * var(--custom-text-size));
+		height: calc(0.75 * var(--custom-text-size));
+	}
 }

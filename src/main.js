@@ -15,6 +15,7 @@ import BlogArchives from "./components/blogArchives/blogArchives";
 import {
 	DonateLandingPage,
 	DonatePaymentPage,
+	DonateSuccessPage,
 } from "./pages/landingPages/donate/Donate";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
@@ -51,6 +52,11 @@ export default function Main() {
 				exact
 				path="/campaigns/donate/donate-payment"
 				component={DonatePaymentPage}
+			/>
+			<Route
+				exact
+				path="/campaigns/donate/donate-success"
+				component={DonateSuccessPage}
 			/>
 			<Route exact path="/campaigns/endorseUs" component={EndorseUs} />
 			<Route

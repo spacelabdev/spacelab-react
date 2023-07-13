@@ -1,3 +1,4 @@
+// The "readonly" input is set to "true" as the debit or credit card feature is currently unsupported.
 const FormInput = ({
 	name,
 	type,
@@ -20,6 +21,7 @@ const FormInput = ({
 				onChange={onChange}
 				value={value}
 				className={`${className} ${error ? "input-error" : ""}`}
+				readOnly={true}
 			/>
 			{/* {error && <p>{error}</p>} */}
 		</>

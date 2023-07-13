@@ -10,32 +10,34 @@
 
 #donate-payment-wrapper {
 	width: 100%;
-	background-image: url("../../assets/SpaceLab_DonatePage1_Background.png");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	min-width: 480px;
-	padding: 1rem;
+	padding: 1rem 1rem 4rem;
 }
 
 .donate-payment-form {
 	max-width: var(--form-width);
-	padding: 2rem 0;
 	margin: 0 auto;
 	position: relative;
 	min-inline-size: min-content;
+
+	@media (min-width: 767px) {
+		padding: 2rem 0;
+	}
 }
 
 .donate-payment-content {
-	margin-top: 4rem;
-	padding: 0 5rem;
+	margin-top: 2rem;
 	display: flex;
 	flex-direction: column;
-	gap: var(--spacing);
+	gap: calc(0.5 * var(--spacing));
 
 	@media (min-width: 1500px) {
 		margin-bottom: -23rem; // this for fixing icon image gap
+	}
+
+	@media (min-width: 767px) {
+		margin-top: 4rem;
 		padding: 0 5rem;
+		gap: var(--spacing);
 	}
 
 	input {
@@ -64,9 +66,13 @@
 
 	width: 100%;
 	border-radius: var(--large-btn-radius);
-	padding: 1.25rem 0;
+	padding: 0.5rem 0;
 	min-width: 6rem;
 	text-transform: capitalize;
+
+	@media (min-width: 767px) {
+		padding: 1.25rem 0;
+	}
 }
 
 .outline-btn {
@@ -99,21 +105,22 @@
 	position: absolute;
 	display: none;
 
-	@media (min-width: 768px) {
+	@media (min-width: 1100px) {
 		display: block;
 	}
 }
 
 .star1 {
 	top: 8rem;
+	left: -5vw;
 }
 
 .star2 {
 	top: 3rem;
-	right: 1px;
+	right: -5vw;
 }
 
 .star3 {
-	top: 13rem;
-	right: 1px;
+	top: 18rem;
+	right: -2vw;
 }
