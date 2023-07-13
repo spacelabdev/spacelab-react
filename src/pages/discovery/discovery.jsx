@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import HeroImage from "../../components/HeroImage/HeroImage";
-import DiscoveryColumnFilterList from "./discoverySearchFilters/discoveryColumnFilterList";
+import DiscoveryColumnFilterList from "./discoverySearchFilters/DiscoveryColumnFilterList";
 import {
 	projectDispositionFiltersArray,
 	identificationFiltersArray,
@@ -23,7 +23,7 @@ import { downloadData } from "../../services/utilityFunctions";
 import "./Discovery.scss";
 import SimpleButton from "../../components/styleComponents/buttons/SimpleButton/SimpleButton";
 import CollapsibleSection from "../../components/CollapsibleSection/CollapsibleSection";
-import DataTable from "./table/dataTable";
+import DataTable from "./table/DataTable";
 
 /**
  * @returns {JSX.Element}

@@ -14,8 +14,8 @@ import {
 	kicParametersFiltersArray,
 	pixelBasedKoiVettingFiltersArray,
 } from "../discoveryHelper";
-import TableHeader from "./tableComponents/tableHeader";
-import TableBody from "./tableComponents/tableBody";
+import TableHeader from "./tableComponents/TableHeader";
+import TableBody from "./tableComponents/TableBody";
 
 // style imports
 import "./dataTable.scss";

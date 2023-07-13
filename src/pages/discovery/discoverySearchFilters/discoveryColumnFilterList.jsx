@@ -1,6 +1,5 @@
 import React from "react";
-import DiscoveryColumnFilterListItem from "./discoveryColumnFilterListItem";
-
+import DiscoveryColumnFilterListItem from "./DiscoveryColumnFilterListItem";
 
 /**
  * Maps over filtersArray and passes elements to DiscoveryColumnFilterListItem to be parsed and rendered.
@@ -36,9 +35,7 @@ export default function DiscoveryColumnFilterList(props) {
 	return (
 		<div className={"filters"}>
 			<div className={"title"}>{title}</div>
-			<div className={"planet-system"}>
-				{filtersArray}
-			</div>
+			<div className={"planet-system"}>{filtersArray}</div>
 		</div>
 	);
-};
+}

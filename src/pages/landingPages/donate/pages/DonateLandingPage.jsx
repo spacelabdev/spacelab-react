@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../components/Hero/hero";
-import TitleSection from "../components/titleSection/titleSection";
-import AboutOrgIdentitySection from "../components/aboutOrgIdentitySection/aboutOrgIdentitySection";
-import CompanyProgressSection from "../components/companyProgressSection/companyProgressSection";
-import TestimonialSection from "../components/testimonialSection/testimonialSection";
+import Hero from "../components/Hero/Hero";
+import TitleSection from "../components/TitleSection/TitleSection";
+import AboutOrgIdentitySection from "../components/AboutOrgIdentitySection/AboutOrgIdentitySection";
+import CompanyProgressSection from "../components/CompanyProgressSection/CompanyProgressSection";
+import TestimonialSection from "../components/TestimonialSection/TestimonialSection";
 import Footer from "../../../../components/Footer/Footer";
 import "../donate.scss";
 

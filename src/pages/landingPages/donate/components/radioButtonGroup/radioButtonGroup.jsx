@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import RadioCard from "./radioCard";
 import "./radioButtonGroup.scss";
+import RadioCard from "./RadioCard";
 
 const RadioButtonGroup = ({ setAmount, name, options }) => {
 	const [selected, setSelected] = useState("");

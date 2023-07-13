@@ -1,6 +1,6 @@
 import React from "react";
-import CurrentTeamSlider from "./teamSlider/currentTeam/currentTeamSlider";
-import CohortsSlider from "./teamSlider/cohorts/cohortsSlider";
+import CurrentTeamSlider from "./teamSlider/CurrentTeamSlider/CurrentTeamSlider";
+import CohortsSlider from "./teamSlider/CohortsSlider/CohortsSlider";
 import "./about.scss";
 
 /**

@@ -1,8 +1,8 @@
 import React from "react";
-import Hero from "../components/Hero/hero";
+import Hero from "../components/Hero/Hero";
 import Footer from "../../../../components/Footer/Footer";
-import DonatePaymentForm from "../components/donatePaymentForm/donatePaymentForm";
-import DonatePaymentHeader from "../components/donatePaymentHeader/donatePaymentHeader";
+import DonatePaymentForm from "../components/DonatePaymentForm/DonatePaymentForm";
+import DonatePaymentHeader from "../components/DonatePaymentHeader/DonatePaymentHeader";
 import "../donate.scss";
 
 /**

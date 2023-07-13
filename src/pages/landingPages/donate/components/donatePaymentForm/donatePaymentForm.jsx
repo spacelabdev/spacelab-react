@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ToggleGroupButton from "../toggleGroupButton/toggleGroupButton";
-import RadioButtonGroup from "../radioButtonGroup/radioButtonGroup";
-import CheckBox from "../checkBox/checkBox";
-import AccordionText from "../accordionText/accordionText";
-import PaymentCardInfo from "../cardPaymentInfo/PaymentCardInfo";
+import ToggleGroupButton from "../ToggleGroupButton/ToggleGroupButton";
+import RadioButtonGroup from "../RadioButtonGroup/RadioButtonGroup";
+import CheckBox from "../CheckBox/CheckBox";
+import AccordionText from "../AccordionText/AccordionText";
+import PaymentCardInfo from "../CardPaymentInfo/PaymentCardInfo";
 import STAR_ICON from "../../assets/small_star.svg";
 import ROCKET_ICON_IMAGE from "../../assets/icon _rocket.png";
 import ShowModal from "../modal/showModal";

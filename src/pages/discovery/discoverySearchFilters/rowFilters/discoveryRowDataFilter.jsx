@@ -1,6 +1,6 @@
 import React from "react";
-import DiscoveryRowDataFilterNumberAndDate from "./discoveryRowDataFilterNumberAndDate";
-import DiscoveryRowDataFilterStringAndEnum from "./discoveryRowDataFilterStringAndEnum";
+import DiscoveryRowDataFilterNumberAndDate from "./DiscoveryRowDataFilterNumberAndDate";
+import DiscoveryRowDataFilterStringAndEnum from "./DiscoveryRowDataFilterStringAndEnum";
 
 /**
  * Depending on the checked/selected column's data type, this function renders the appropriate filter component
@@ -9,18 +9,13 @@ import DiscoveryRowDataFilterStringAndEnum from "./discoveryRowDataFilterStringA
  * @constructor
  */
 export default function DiscoveryRowDataFilter(props) {
-	const {
-		dataType,
-		dataName,
-		whereFilter,
-		setWhereFilter,
-	} = props
+	const { dataType, dataName, whereFilter, setWhereFilter } = props;
 
 	// render the row data filter
 	const getFilterType = () => {
 		switch (dataType) {
-			case 'number':
-			case 'date':
+			case "number":
+			case "date":
 				return (
 					<DiscoveryRowDataFilterNumberAndDate
 						dataType={dataType}
@@ -29,8 +24,8 @@ export default function DiscoveryRowDataFilter(props) {
 						setWhereFilter={setWhereFilter}
 					/>
 				);
-			case 'string':
-			case 'enum':
+			case "string":
+			case "enum":
 				return (
 					<DiscoveryRowDataFilterStringAndEnum
 						dataType={dataType}
@@ -41,11 +36,7 @@ export default function DiscoveryRowDataFilter(props) {
 				);
 			default:
 		}
-	}
+	};
 
-	return (
-		<>
-			{getFilterType()}
-		</>
-	);
+	return <>{getFilterType()}</>;
 }

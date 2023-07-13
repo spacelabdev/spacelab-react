@@ -1,7 +1,7 @@
 import React from "react";
-import MemberCard from "../memberCard/memberCard";
+import MemberCard from "../MemberCard/MemberCard";
 import PropTypes from "prop-types";
-import './sliderComponent.scss';
+import "./sliderComponent.scss";
 
 /**
  * Builds slider component. Passes data to MemberCard component and renders what is returned.
@@ -11,12 +11,14 @@ import './sliderComponent.scss';
  * @returns {JSX.Element}
  * @constructor
  */
-const SliderComponent = ({title, members, active}) => {
-
+const SliderComponent = ({ title, members, active }) => {
 	return (
 		<div className={`team-slider-container ${active}`}>
 			{members.map((member) => (
-				<MemberCard key={`${title}-${member.fullName}`} member={member}/>
+				<MemberCard
+					key={`${title}-${member.fullName}`}
+					member={member}
+				/>
 			))}
 		</div>
 	);

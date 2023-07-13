@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { SPACELAB_TESTIMONIALS } from "./data";
-import TestimonialCard from "./testmonialCards";
+import TestimonialCard from "./TestmonialCards";
 import "./testimonialSection.scss";
 
 const TestimonialSection = () => {

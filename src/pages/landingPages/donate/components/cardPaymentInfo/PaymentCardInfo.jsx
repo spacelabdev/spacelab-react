@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormInput from "./formInput";
+import FormInput from "./FormInput";
 import "./paymentCardInfo.scss";
 
 const initData = {
