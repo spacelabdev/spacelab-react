@@ -6,7 +6,7 @@ import AccordionText from "../AccordionText/AccordionText";
 import PaymentCardInfo from "../CardPaymentInfo/PaymentCardInfo";
 import STAR_ICON from "../../assets/small_star.svg";
 import ROCKET_ICON_IMAGE from "../../assets/icon _rocket.png";
-import ShowModal from "../modal/showModal";
+import ShowModal from "../Modal/ShowModal";
 import "./donatePaymentForm.scss";
 
 const options = ["One Time", "Monthly"];
