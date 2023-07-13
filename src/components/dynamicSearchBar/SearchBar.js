@@ -43,7 +43,7 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 						? value.title.toLowerCase()
 						: null;
 					const levenshteinDistance = getLevenshteinDistance(
-						searchTerm,
+						searchTerm.toLowerCase(),
 						target
 					);
 					const fuzzyChars = 0;
