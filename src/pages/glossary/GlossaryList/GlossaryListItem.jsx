@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { UniversalContext } from "../../App";
-import Chip from "../../components/styleComponents/Chip/Chip";
+import { UniversalContext } from "../../../App";
+import Chip from "../../../components/styleComponents/Chip/Chip";
 import "./Glossary.scss";
 
 /**

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import GlossaryListItem from "./GlossaryListItem";
-import { UniversalContext } from "../../App";
+import { UniversalContext } from "../../../App";
 import {
 	returnFilteredTerms,
 	handleTermImage,
@@ -8,8 +8,8 @@ import {
 	glossaryTermsArray,
 } from "./glossaryHelper";
 import "./Glossary.scss";
-import { handleGlossarySearchTermClick } from "../../components/SearchBar/SearchBarHelper";
-import SearchBar from "../../components/SearchBar/SearchBar";
+import { handleGlossarySearchTermClick } from "../../../components/SearchBar/SearchBarHelper";
+import SearchBar from "../../../components/SearchBar/SearchBar";
 
 /**
  * GlossaryList
