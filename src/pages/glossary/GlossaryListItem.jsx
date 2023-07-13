@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { UniversalContext } from "../../../App";
-import Chip from "../../../components/styleComponents/Chip/Chip";
-import "../Glossary.scss";
+import { UniversalContext } from "../../App";
+import Chip from "../../components/styleComponents/Chip/Chip";
+import "./Glossary.scss";
 
 /**
  * Renders individual glossary terms
