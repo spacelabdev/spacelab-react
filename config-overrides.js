@@ -1,3 +1,5 @@
+/*DO NOT MODIFY THIS FILE UNLESS YOU ARE A SPACELAB ADMIN*/
+
 const webpack = require("webpack");
 module.exports = function override(config) {
 	const fallback = config.resolve.fallback || {};
