@@ -59,7 +59,6 @@ const MemberCard = (memberObject) => {
 	// function to close card
 	const handleCloseClick = () => {
 		setShowDetails(false);
-		console.log("closed");
 	};
 
 	return (
@@ -143,4 +142,5 @@ to do:
 	fix text inside box
 	fix text on screen
 	enable scrolling on long text people (amanda)
+	consult mobile view queries
 */
