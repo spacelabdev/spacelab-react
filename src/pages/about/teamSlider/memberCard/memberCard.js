@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import {
 	AiOutlineGithub,
-	AiOutlineGlobal,
-	AiOutlineLinkedin,
+	AiOutlineClose,
 } from "react-icons/ai";
+import {FaBriefcase, FaLinkedin} from "react-icons/fa";
 import Astronauts from "../../../../assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
 import "./memberCard.scss";
 
@@ -23,6 +23,9 @@ const MemberCard = (memberObject) => {
 	let hasPortfolio = false;
 	let hasLinkedIn = false;
 
+	// State to track if the details container should be displayed
+	const [showDetails, setShowDetails] = useState(false);
+
 	if (!member.image) {
 		image = Astronauts;
 	}
@@ -38,14 +41,21 @@ const MemberCard = (memberObject) => {
 		hasLinkedIn = true;
 	}
 
+	// Function to handle the card click event
+	const handleCardClick = () => {
+		setShowDetails(!showDetails); 
+	};
+
 	return (
-		<div className="member-card">
+		<div className="member-card" onClick={handleCardClick}>
 			<img src={image} alt={`${member.fullName}.png`} />
 			<div className="member-card-text-container">
 				<p className="member-card-text-name">{member.fullName}</p>
 				<p className="member-card-text-title">{member.title}</p>
 			</div>
-			<div className={"member-card-details-container"}>
+			{/* adding the pop-up modal */}
+			<div className="member-card-modal-overlay"></div> 
+			<div className={`member-card-details-container ${showDetails ? "show" : ""}`}>
 				<p className="member-card-text-name">{member.fullName}</p>
 				<p className="member-card-text-title">{member.title}</p>
 				<p className="member-card-text-quote">{member.bioQuote}</p>
@@ -53,6 +63,16 @@ const MemberCard = (memberObject) => {
 					<IconContext.Provider
 						value={{ color: "var(--text)", size: "2rem" }}
 					>
+						<a
+							className={`member-card-github ${
+								hasLinkedIn ? "" : "hidden"
+							}`}
+							href={member.linkedIn}
+							target="_blank"
+							rel="noreferrer"
+						>
+							<FaLinkedin />
+						</a>
 						<a
 							className={`member-card-github ${
 								hasGitHub ? "" : "hidden"
@@ -71,18 +91,9 @@ const MemberCard = (memberObject) => {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineGlobal />
+							<FaBriefcase />
 						</a>
-						<a
-							className={`member-card-github ${
-								hasLinkedIn ? "" : "hidden"
-							}`}
-							href={member.linkedIn}
-							target="_blank"
-							rel="noreferrer"
-						>
-							<AiOutlineLinkedin />
-						</a>
+
 					</IconContext.Provider>
 				</div>
 			</div>
