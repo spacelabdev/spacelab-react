@@ -11,7 +11,7 @@ export const returnFilteredTerms = (
 	endingAlphabeticIndex
 ) => {
 	const glossaryArray = [];
-	for (let i = 0; i < glossaryTermsArray.length; i++) {
+	for (let i = 0; i < glossaryTermsArray.length; ++i) {
 		if (
 			glossaryTermsArray[i][2] >= beginningAlphabeticIndex &&
 			glossaryTermsArray[i][2] <= endingAlphabeticIndex

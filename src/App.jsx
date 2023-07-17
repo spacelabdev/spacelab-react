@@ -3,7 +3,7 @@ import RSSParser from "rss-parser";
 import {
 	glossaryTermsArray,
 	returnFilteredTerms,
-} from "./pages/Glossary/glossaryhelper.js";
+} from "./pages/Glossary/glossaryHelper.js";
 import "./App.scss";
 import Main from "./main";
 
