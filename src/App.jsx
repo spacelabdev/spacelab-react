@@ -7,7 +7,7 @@ import {
 import "./App.scss";
 import Main from "./main";
 
-/** App
+/**
  * @returns {JSX.Element}
  * @constructor
  */
