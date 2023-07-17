@@ -12,6 +12,7 @@ import { handleGlossarySearchTermClick } from "../../components/SearchBar/Search
 import SearchBar from "../../components/SearchBar/SearchBar";
 
 /**
+ *
  * GlossaryList
  * @returns {JSX.Element}
  * @constructor
