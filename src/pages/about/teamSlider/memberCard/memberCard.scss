@@ -5,24 +5,6 @@
 	align-items: center;
 	padding: 0.5rem;
 	position: relative;
-	cursor: pointer;
-
-	.member-card-modal-overlay {
-		display: none;
-		position: fixed;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		height: 100%;
-		width: 100%;
-		background-color: rgba(0, 0, 0, 0.8);
-		z-index: 1;
-
-		&.show {
-			display: block;
-		}
-	}
 
 	.member-card-details-container {
 		display: none;
@@ -31,37 +13,72 @@
 		position: fixed; /* could be fixed */
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%); /* Center the container on the page */
+		transform: translate(-50%, -50%);
 		height: 21rem;
 		width: 35.5rem;
 		border-radius: 3%;
+		flex-direction: row;
+		z-index: 1;
+
+		&.show {
+			display: flex !important;
+		}
+
+		.member-card-close {
+			text-align: right;
+			margin: 1rem;
+			top:0%;
+			right:0%;
+			position: fixed;
+			cursor: pointer;
+		}
+
+		img.member-card-details-image {
+			height: 17rem;
+			width: 15.5rem;
+			margin: 2rem;
+			cursor: default;
+		}
 
 		.member-card-text-name, .member-card-text-title {
 			text-align: left;
-			margin-left: 1.5rem;
+		}
+
+		.member-card-text-name {
+			margin-top: 3rem;
 		}
 
 		.member-card-text-quote {
 			font-size: 0.75rem;
 			color: #ffffff;
-			margin: 1.5rem;
 			text-align: left;
+			margin-right: 1.2rem;
 		}
 
 		.member-card-link-container {
 			position: absolute;
-			width: 100%;
+			// width: 100%;
 			bottom: 0;
 			margin-bottom: 2rem;
 
 			a {
 				height: 2rem;
 				width: 2rem;
-				margin: 1rem;
+				margin: .5rem;
 			}
 		}
+		
 	}
 
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: 1;
+	}
 
 	img {
 		height: 21rem;
@@ -69,6 +86,7 @@
 		border-radius: 3%;
 		object-fit: cover;
 		background-size: auto;
+		cursor: pointer;
 	}
 
 	&-text {
