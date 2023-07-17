@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "../../assets/HeroImage.png";
 import { Link } from "react-router-dom";
-import "./HeroV2.scss";
+import "./heroV2.scss";
 
 export default function HeroV2() {
 	return (

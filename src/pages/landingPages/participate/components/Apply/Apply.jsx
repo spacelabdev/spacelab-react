@@ -1,5 +1,5 @@
-import "../../Participate.scss";
-import "./Apply.scss";
+import "../../participate.scss";
+import "./apply.scss";
 import { useForm, ValidationError } from "@formspree/react";
 import Navigation from "../../../../../components/navigation/MainNavigation/MainNavigation";
 import Footer from "../../../../../components/Footer/Footer";

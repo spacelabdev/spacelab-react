@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import collapseIcon from "../../assets/componentAssets/collapseIcon.svg";
 import expandIcon from "../../assets/componentAssets/expandIcon.svg";
-import "./CollapsibleSection.scss";
+import "./collapsibleSection.scss";
 
 /**
  * Renders Collapsible Section. Children will be displayed when section is open.

@@ -1,5 +1,5 @@
 import React from "react";
-import "./HowItWorksV2.scss";
+import "./howItWorksV2.scss";
 import Vector from "../../assets/Vector.png";
 import TeamIcon from "../../assets/ri_team-line.png";
 import ExperienceIcon from "../../assets/bx_world.png";

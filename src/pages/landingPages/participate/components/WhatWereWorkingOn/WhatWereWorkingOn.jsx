@@ -1,4 +1,4 @@
-import "./WhatWereWorkingOn.scss";
+import "./whatWereWorkingOn.scss";
 import exoplanetariumImage from "../../assets/exoplanetarium.png";
 
 export default function WhatWereWorkingOn() {

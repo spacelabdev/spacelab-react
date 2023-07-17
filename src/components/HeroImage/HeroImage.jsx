@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./HeroImage.scss";
+import "./heroImage.scss";
 import heroImage from "../../assets/componentAssets/purple-sky-unsplash.jpg";
 import Navigation from "../navigation/MainNavigation/MainNavigation";
 import { UniversalContext } from "../../App";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./TestimonialsV2.scss";
+import "./testimonialsV2.scss";
 //import TestimonialsBg from "../../assets/testimonials-bg.png";
 import angeliniesPhoto from "../../assets/alumni-angelinies.png";
 

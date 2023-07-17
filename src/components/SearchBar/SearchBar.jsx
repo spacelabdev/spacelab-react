@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import "./SearchBar.scss";
+import "./searchBar.scss";
 import searchIcon from "../../assets/componentAssets/magnifying_glass@0.5x.png";
 import closeIcon from "../../assets/componentAssets/close-icon@0.5x.png";
 import { UniversalContext } from "../../App";

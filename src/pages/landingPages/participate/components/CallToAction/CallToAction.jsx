@@ -1,4 +1,4 @@
-import "./CallToAction.scss";
+import "./callToAction.scss";
 import ctaBackground from "../../assets/cta-background.png";
 import star from "../../assets/star.png";
 import greenPlanet from "../../assets/green-planet.png";

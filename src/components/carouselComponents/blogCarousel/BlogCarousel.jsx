@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { UniversalContext } from "../../../App";
 import { Carousel } from "react-bootstrap";
-import "./BlogCarousel.scss";
+import "./blogCarousel.scss";
 import placeholder from "../../../assets/generalAssets/img_placeholder.png";
 import { Link } from "react-router-dom";
 

@@ -1,5 +1,5 @@
-import "../../Participate.scss";
-import "../Apply/Apply.scss";
+import "../../participate.scss";
+import "../Apply/apply.scss";
 import Navigation from "../../../../../components/navigation/MainNavigation/MainNavigation";
 import Footer from "../../../../../components/Footer/Footer";
 import thankYouImage from "../../assets/thank-you.jpg";

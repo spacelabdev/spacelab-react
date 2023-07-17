@@ -3,7 +3,7 @@ import HeroImage from "../../components/HeroImage/HeroImage";
 import Footer from "../../components/Footer/Footer";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import { termsArray, podcastArray } from "./podcastHelper";
-import "./Podcast.scss";
+import "./podcast.scss";
 import PodcastCard from "../../components/PodcastCard/PodcastCard";
 import Chip from "../../components/styleComponents/Chip/Chip";
 import NewsletterSubscribe from "../../components/formComponents/NewsletterSubscribe/NewsletterSubscribe";

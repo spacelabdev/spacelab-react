@@ -1,5 +1,5 @@
-import "../../../Participate.scss";
-import "./ApplyV2.scss";
+import "../../../participate.scss";
+import "./applyV2.scss";
 import { useForm, ValidationError } from "@formspree/react";
 import ThankYou from "../../../components/ThankYou/ThankYou";
 import internsImage from "../../assets/image1.jpg";

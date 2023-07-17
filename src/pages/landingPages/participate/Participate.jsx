@@ -7,7 +7,7 @@ import Internships from "./components/Internships/Internships";
 import Alumni from "./components/Alumni/Alumni";
 import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "../../../components/Footer/Footer";
-import "./Participate.scss";
+import "./participate.scss";
 
 /**
  * Renders Participate Landing page

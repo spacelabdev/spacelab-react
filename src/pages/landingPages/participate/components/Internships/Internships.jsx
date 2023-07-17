@@ -1,4 +1,4 @@
-import "./Internships.scss";
+import "./internships.scss";
 import contentCreationImage from "../../assets/internships-content-creation.png";
 import dataScienceImage from "../../assets/internships-data-science.png";
 import marketingImage from "../../assets/internships-marketing.png";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./UnderConstruction.scss";
+import "./underConstruction.scss";
 import Construction from "../../assets/componentAssets/UnderConstruction.svg";
 
 export default function UnderConstruction() {

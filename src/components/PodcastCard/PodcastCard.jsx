@@ -3,7 +3,7 @@ import tempImage from "../../../src/assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
 //import applePodcast from "../../../assets/podcastAssets/apple-podcasts.svg";
 import spotify from "../../assets/podcastAssets/spotify.svg";
 import youtube from "../../assets/podcastAssets/youtube.svg";
-import "./PodcastCard.scss";
+import "./podcastCard.scss";
 
 /**
  * Renders Podcast Cards

@@ -1,5 +1,5 @@
 import React from "react";
-import "./BlogArchivesCard.scss";
+import "./blogArchivesCard.scss";
 
 /**
  * Returns a single blog archives card

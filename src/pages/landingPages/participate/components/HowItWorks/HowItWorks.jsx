@@ -1,4 +1,4 @@
-import "./HowItWorks.scss";
+import "./howItWorks.scss";
 import workInTeams from "../../assets/how-it-works-teams.png";
 import crossCollab from "../../assets/how-it-works-cross-collab.png";
 import gainReal from "../../assets/how-it-works-gain-real.png";

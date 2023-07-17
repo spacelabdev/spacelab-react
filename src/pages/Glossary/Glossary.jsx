@@ -1,5 +1,5 @@
 import React from "react";
-import "./Glossary.scss";
+import "./glossary.scss";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import GlossaryList from "./GlossaryList";
 import Footer from "../../components/Footer/Footer";

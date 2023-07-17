@@ -10,12 +10,12 @@ const PaymentForm = () => {
 		e.preventDefault();
 
 		// Perform validation and submit the payment data
-		const paymentData = {
-			cardNumber,
-			cardHolder,
-			expiryDate,
-			cvv,
-		};
+		// const paymentData = {
+		// 	cardNumber,
+		// 	cardHolder,
+		// 	expiryDate,
+		// 	cvv,
+		// };
 
 		// Reset the form
 		setCardNumber("");

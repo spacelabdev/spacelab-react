@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import Footer from "../../components/Footer/Footer";
-import "./Cookiepolicy.scss";
+import "./cookiepolicy.scss";
 
 /**
  * Renders Blog page

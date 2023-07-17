@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { UniversalContext } from "../../App";
-import "./BlogArchives.scss";
+import "./blogArchives.scss";
 import placeholder from "../../assets/generalAssets/img_placeholder.png";
 import BlogArchivesCard from "../BlogArchivesCard/BlogArchivesCard";
 

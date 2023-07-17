@@ -2,7 +2,7 @@ import React from "react";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
-import "./Privacypolicy.scss";
+import "./privacypolicy.scss";
 
 /**
  * Renders Blog page

@@ -1,4 +1,4 @@
-import "./Alumni.scss";
+import "./alumni.scss";
 import lauraPhoto from "../../assets/alumni-laura.png";
 import angeliniesPhoto from "../../assets/alumni-angelinies.png";
 import purplePlanet from "../../assets/purple-planet.png";

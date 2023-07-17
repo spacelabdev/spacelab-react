@@ -1,4 +1,4 @@
-import "./Hero.scss";
+import "./hero.scss";
 import joinUsHeader from "../../assets/join-us-header.svg";
 import heroBackground from "../../assets/hero-background.png";
 import star from "../../assets/star.png";

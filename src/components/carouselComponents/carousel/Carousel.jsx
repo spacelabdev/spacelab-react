@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Carousel.scss";
+import "./carousel.scss";
 import PropTypes from "prop-types";
 import rightArrow from "../../assets/right-arrow.svg";
 import leftArrow from "../../assets/left-arrow.svg";

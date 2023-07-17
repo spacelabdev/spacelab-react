@@ -1,4 +1,4 @@
-import "./WhatWereWorkingOnV2.scss";
+import "./whatWereWorkingOnV2.scss";
 import exoplanetariumImage from "../../assets/exoplanetarium.png";
 import BackgroundImage from "../../assets/workingon-bg.png";
 

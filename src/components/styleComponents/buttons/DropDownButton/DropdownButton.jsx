@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./DropdownButton.scss";
+import "./dropdownButton.scss";
 import rightTriangleDown from "../../../../assets/componentAssets/right-triangle-down.png";
 import PropTypes from "prop-types";
 

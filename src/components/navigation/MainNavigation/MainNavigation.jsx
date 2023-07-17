@@ -4,7 +4,7 @@ import Logo from "../../../assets/spacelab.svg";
 import { UniversalContext } from "../../../App";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import AutoScroll from "../../AutoScroll/AutoScroll";
-import "./MainNavigation.scss";
+import "./mainNavigation.scss";
 
 /**
  * Renders Navigation Bar

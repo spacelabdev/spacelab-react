@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
 import PartyPopper from "../../../assets/contactAssets/emojione_party-popper.png";
-import "./ContactForm.scss";
+import "./contactForm.scss";
 
 /**
  * Renders Contact form. If state.succeeded is true, renders a thanks for your submission message instead.

@@ -1,7 +1,7 @@
 import React from "react";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import Footer from "../../components/Footer/Footer";
-import "./Projects.scss";
+import "./projects.scss";
 import ExoplanetariumLogo from "../../assets/projectsAssets/exoplanetarium.svg";
 import Exoplanetarium from "../../assets/projectsAssets/Exoplanetarium.png";
 

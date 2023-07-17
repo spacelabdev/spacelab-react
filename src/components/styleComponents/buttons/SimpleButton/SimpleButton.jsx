@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./SimpleButton.scss";
+import "./simpleButton.scss";
 import { useHistory } from "react-router";
 import PropTypes from "prop-types";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import PartyPopper from "../../../assets/contactAssets/emojione_party-popper.png";
-import "./NewsletterSubscribe.scss";
+import "./newsletterSubscribe.scss";
 
 /**
  * Renders Chip components

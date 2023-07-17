@@ -4,7 +4,7 @@ import {
 	glossaryTermsArray,
 	returnFilteredTerms,
 } from "./pages/Glossary/glossaryHelper.js";
-import "./App.scss";
+import "./app.scss";
 import Main from "./main";
 
 /**

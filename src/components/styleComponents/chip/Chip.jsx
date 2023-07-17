@@ -1,5 +1,5 @@
 import React from "react";
-import "./Chip.scss";
+import "./chip.scss";
 
 /**
  * Renders Chip components

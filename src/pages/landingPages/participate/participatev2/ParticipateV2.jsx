@@ -7,7 +7,7 @@ import HowItWorksV2 from "./components/HowItWorksV2/HowItWorksV2";
 import TestimonialsV2 from "./components/Testimonials/TestimonialsV2";
 import ApplyV2 from "./components/ApplyV2/ApplyV2";
 
-import "../Participate.scss";
+import "../participate.scss";
 
 /**
  * Renders Participate Landing page
