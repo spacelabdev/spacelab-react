@@ -1,5 +1,5 @@
 import React from "react";
-import "./about.scss";
+import "./About.scss";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import AboutMissionStatementSection from "./AboutMissionStatementSection";
 import AboutTeamSliderSection from "./AboutTeamSliderSection";
