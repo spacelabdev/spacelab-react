@@ -1,6 +1,6 @@
-import galaxy from "../../assets/podcastAssets/Galaxy.png";
-import planet from "../../assets/podcastAssets/Planet.png";
-import planets from "../../assets/podcastAssets/Planets.png";
+// import galaxy from "../../assets/podcastAssets/Galaxy.png";
+// import planet from "../../assets/podcastAssets/Planet.png";
+// import planets from "../../assets/podcastAssets/Planets.png";
 
 export const termsArray = [
 	"Our Solar System",
