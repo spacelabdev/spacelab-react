@@ -4,7 +4,7 @@ import About from "./pages/about/About";
 import Blog from "./pages/Blog/Blog";
 import Discovery from "./pages/discovery/Discovery";
 import Glossary from "./pages/Glossary/Glossary";
-import Home from "./pages/Home/Home";
+import Home from "./pages/home/Home";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Podcast from "./pages/Podcast/Podcast";
