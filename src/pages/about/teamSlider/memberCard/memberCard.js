@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import { AiOutlineGithub } from "react-icons/ai";
 import {FaBriefcase, FaLinkedin} from "react-icons/fa";
-import {MdClose, MdOutlineAlarmAdd} from "react-icons/md";
+import { MdClose } from "react-icons/md";
 import Astronauts from "../../../../assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
 import "./memberCard.scss";
 
@@ -72,13 +72,15 @@ const MemberCard = (memberObject) => {
 			{showDetails && (<div className="overlay" onClick={handleCloseClick}></div>)}
 			<div className={`member-card-details-container ${showDetails ? "show" : ""}`}>
 				<img src={image} alt={`${member.fullName}.png`} className="member-card-details-image" />
-				<div class="member-card-right-side">
+				<div className="member-card-right-side">
 					<IconContext.Provider value={{ color: "var(--text)", size: "2rem" }} >
 					<div className="member-card-close" onClick={handleCloseClick}> <MdClose /> </div>
 					</IconContext.Provider>
 					<p className="member-card-text-name">{member.fullName}</p>
 					<p className="member-card-text-title">{member.title}</p>
-					<p className="member-card-text-quote">{member.bioQuote}</p>
+					<div className= "quote-container">
+						<p className="member-card-text-quote">{member.bioQuote}</p>
+					</div>
 					<div className={"member-card-link-container"}>
 						<IconContext.Provider
 							value={{ color: "var(--text)", size: "2rem" }}
@@ -139,8 +141,9 @@ export default MemberCard;
 
 /*
 to do:
-	fix text inside box
-	fix text on screen
-	enable scrolling on long text people (amanda)
 	consult mobile view queries
+
+	IF we want to do hover, we can do onmouseenter but we need to amke an onmouseleave
+	Do we want to disable autoscroll
+	do we want that overflow scrollbar (amanda)
 */

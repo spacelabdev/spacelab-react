@@ -8,9 +8,8 @@
 
 	.member-card-details-container {
 		display: none;
-		background: linear-gradient(133deg, rgba(132,89,176,1) 0%, rgba(42,15,62,1) 60%);
-		color: #ffffff;
-		position: fixed; /* could be fixed */
+		background: linear-gradient(142deg, rgba(120,70,169,1) 4%, rgba(0,0,0,1) 99%, rgba(4,4,4,1) 99%);
+		position: fixed; 
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -36,7 +35,10 @@
 		img.member-card-details-image {
 			height: 17rem;
 			width: 15.5rem;
-			margin: 2rem;
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			margin-left: 1.4rem;
+			margin-right: 1.3rem;
 			cursor: default;
 		}
 
@@ -48,23 +50,32 @@
 			margin-top: 3rem;
 		}
 
+		.member-card-text-title {
+			margin-bottom: 2rem;
+		}
+
+		.quote-container {
+			height: 8rem;
+			overflow: auto;
+		}
+
 		.member-card-text-quote {
 			font-size: 0.75rem;
 			color: #ffffff;
 			text-align: left;
 			margin-right: 1.2rem;
+			overflow: auto;
 		}
 
 		.member-card-link-container {
 			position: absolute;
-			// width: 100%;
 			bottom: 0;
 			margin-bottom: 2rem;
 
 			a {
 				height: 2rem;
 				width: 2rem;
-				margin: .5rem;
+				margin-right: 1.3rem;
 			}
 		}
 		
@@ -97,6 +108,7 @@
 			color: #ffffff;
 			margin-top: 0.5rem;
 			font-weight: bold;
+			margin-bottom: 0rem;
 		}
 
 		&-title {
