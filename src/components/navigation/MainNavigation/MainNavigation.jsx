@@ -79,17 +79,21 @@ export default function MainNavigation() {
 						>
 							Blog
 						</Link>
-						{/* <Link className={'nav-link'} to={'/donate'} style={{textDecoration: 'none'}}>
+						<Link 
+							className={'nav-link'} 
+							to={'/donate'} 
+							style={{textDecoration: 'none'}}
+						>
 							Donate
-						</Link> */}
-						<a
+						</Link>
+						{/* <a
 							className="nav-link"
 							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 							target="_blank"
 							rel="noreferrer"
 						>
 							Donate
-						</a>
+						</a> */}
 						<Link
 							className={"nav-link"}
 							to={"/contact"}
