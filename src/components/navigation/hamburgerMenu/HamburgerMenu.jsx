@@ -60,7 +60,7 @@ class HamburgerMenu extends React.Component {
 								Blog
 							</Link>
 						</div>
-						<div>
+						{/* <div>
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/donate"}
@@ -68,8 +68,8 @@ class HamburgerMenu extends React.Component {
 							>
 								Donate
 							</Link>
-						</div>
-						{/* <div>
+						</div> */}
+						<div>
 							<a
 								className="hamburger-nav-link"
 								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
@@ -79,7 +79,7 @@ class HamburgerMenu extends React.Component {
 							>
 								Donate
 							</a>
-						</div> */}
+						</div>
 						<div>
 							<Link
 								className={"hamburger-nav-link"}
