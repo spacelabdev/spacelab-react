@@ -141,9 +141,8 @@ export default MemberCard;
 
 /*
 to do:
-	consult mobile view queries
+	consult mobile view queries -- make image stack on the text
 
-	IF we want to do hover, we can do onmouseenter but we need to amke an onmouseleave
-	Do we want to disable autoscroll
-	do we want that overflow scrollbar (amanda)
+	Do we want to disable autoscroll -- consult ux 
+	do we want that overflow scrollbar (amanda) -- consult ux 
 */

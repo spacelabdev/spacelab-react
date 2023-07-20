@@ -118,3 +118,40 @@
 		}
 	}
 }
+
+@media screen and (max-width: 591px) {
+	.member-card-details-container {
+		height: 38rem !important;
+		width: 20rem !important; 
+		flex-direction: column !important;
+	}
+
+	.member-card-close {
+		margin: .5rem !important; 
+	}
+
+	img.member-card-details-image {
+		margin-top: 3rem !important;
+		margin-left: 2.2rem !important;
+		margin-right: 0rem !important;
+	}
+
+	.member-card-details-container {
+		.member-card-text-name {
+			margin-top: 0rem !important;
+		}
+		.member-card-text-name, .member-card-text-title, .member-card-text-quote {
+			text-align: center !important;
+		}
+
+		.member-card-text-title {
+			margin-bottom: 1.5rem !important;
+		}
+	}
+
+	.member-card-link-container {
+		margin-top: 0rem !important;
+		width: 100% !important;
+		bottom: unset !important;
+	}
+}
