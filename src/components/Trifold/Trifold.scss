@@ -1,0 +1,17 @@
+.images-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 33.3%;
+        object-fit: cover;
+    }
+
+
+    @media screen and (max-width: 1150px) {
+        flex-direction: column;
+    }
+}
