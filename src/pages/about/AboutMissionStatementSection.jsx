@@ -1,4 +1,5 @@
 import React from "react";
+import heroImage from "../../assets/componentAssets/purple-sky-unsplash.jpg";
 import Rocket from "../../assets/aboutAssets/ridingRocket.png";
 import Planet from "../../assets/aboutAssets/bro.png";
 import Explorer from "../../assets/aboutAssets/Top.png";
@@ -8,75 +9,50 @@ import Explorer from "../../assets/aboutAssets/Top.png";
  * @constructor
  */
 export default function AboutMissionStatementSection() {
-	return (
-		<section id="about-mission-statement-container">
-			<div className="inner-section-two">
-				<div className="about-mission-segment-container">
-					<div className={"about-mission-image-wrapper"}>
-						<img
-							className={"about-mission-image"}
-							src={Planet}
-							alt={"Planet"}
-						/>
-					</div>
-					<h4 className="about-mission-header">Our Values</h4>
-					<div className={"about-mission-content"}>
-						<p>
-							We value the voices of those too often talked over
-							and under appreciated, because we firmly believe
-							that a diverse group of people approaching a problem
-							will arrive at a more creative and unique solution;
-							a solution that incorporates each individual's
-							perspectives, values, and needs. We aim to operate
-							from a starting point of equity, inclusion and
-							belonging.
-						</p>
-					</div>
-				</div>
-				<div className="about-mission-segment-container">
-					<div className={"about-mission-image-wrapper"}>
-						<img
-							className={"about-mission-image"}
-							src={Rocket}
-							alt={"Space Shuttle"}
-						/>
-					</div>
-					<h4 className="about-mission-header">Our Mission</h4>
-					<div className={"about-mission-content"}>
-						<p>
-							Spacelab is building the next generation of leaders
-							in outer-space-focused science and technology,
-							drawing from diverse, underrepresented communities,
-							including the intersectionality of women, members of
-							the LGBTQ+ community, and people of color, and
-							creating paid fellowships, internships, and
-							scholarship opportunities, as well as debt relief.
-						</p>
-					</div>
-				</div>
-				<div className="about-mission-segment-container">
-					<div className={"about-mission-image-wrapper"}>
-						<img
-							className={"about-mission-image"}
-							src={Explorer}
-							alt={"Planet"}
-						/>
-					</div>
-					<h4 className="about-mission-header">Our Vision</h4>
-					<div className={"about-mission-content"}>
-						<p>
-							Our vision of success includes a continuous stream
-							of space-related projects built by aspiring tech
-							professionals and invented by the leaders of
-							tomorrow. Through funding these big ideas and
-							mentoring the talent of the future, our goal is to
-							build momentum toward women, people of color, and
-							people from the LGBTQ+ community holding the helm of
-							the 500 largest companies in the United States.
-						</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	);
+    return (
+        <section id="about-mission-statement-container">
+            <div className="inner-section-two">
+                <div className="about-mission-segment-container">
+                    <div className={"about-values-background"}>
+                    <h4 className="about-mission-header">Values</h4>
+                    <div className={"about-mission-content"}>
+                        <p>
+                        We believe everyone's voice counts. 
+                        Diverse perspectives lead to better solutions. 
+                        We strive for equity, inclusion, and belonging.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {/*
+            <div className="about-mission-segment-container">
+                    <div className={"about-mission-background"}>
+                    <h4 className="about-mission-header">Mission</h4>
+                    <div className={"about-mission-content"}>
+                        <p>
+                        SpaceLab is creating opportunities for underrepresented 
+                        communities in space and technology. Our focus is building 
+                        the next generation of diverse leaders including women, 
+                        people of color, and the LGBTQ+ community.
+    </p> 
+                    </div>
+                    </div>
+                </div>
+                <div className="about-mission-segment-container">
+                    <div className={"about-vision-background"}>
+                    <h4 className="about-mission-header">Vision</h4>
+                    <div className={"about-mission-content"}>
+                        <p>
+                        We aim to empower underrepresented groups in tech to create 
+                        innovative space projects. We strive to cultivate diverse 
+                        leaders who will shape the future of the industry and 
+                        increase representation in top corporate positions.
+                        </p>
+                    </div>
+                    </div>
+                </div> 
+                */}
+                </div>
+        </section>
+    );
 }
