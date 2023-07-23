@@ -4,13 +4,15 @@
 	bottom: 0;
 	width: 100%;
 	height: calc(450px);
-	background: #160d39;
+	background: #000;
 	margin-top: 70px; //70px is the nav bar
+	
 
 	@media only screen and (max-width: 1024px) {
 		margin-top: 0;
 	}
 }
+
 
 .hero-image {
 	height: 450px;

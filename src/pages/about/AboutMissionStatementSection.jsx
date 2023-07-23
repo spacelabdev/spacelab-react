@@ -11,10 +11,11 @@ import Explorer from "../../assets/aboutAssets/Top.png";
 export default function AboutMissionStatementSection() {
     return (
         <section id="about-mission-statement-container">
-            <div className="inner-section-two">
-                <div className="about-mission-segment-container">
-                    <div className={"about-values-background"}>
-                    <h4 className="about-mission-header">Values</h4>
+            {/* <div className="inner-section-two"> */}
+            <div className="about-mission-segment-container about-values-background">
+                    <div className="about-mission-header-container">
+                        <h4 className="about-mission-header">Values</h4>
+                    </div>
                     <div className={"about-mission-content"}>
                         <p>
                         We believe everyone's voice counts. 
@@ -22,25 +23,24 @@ export default function AboutMissionStatementSection() {
                         We strive for equity, inclusion, and belonging.
                         </p>
                     </div>
+            </div>
+            <div className="about-mission-segment-container about-mission-background">
+                <div className="about-mission-header-container">
+                    <h4 className="about-mission-header">Mission</h4>
+                </div>
+                <div className={"about-mission-content"}>
+                    <p>
+                    SpaceLab is creating opportunities for underrepresented 
+                    communities in space and technology. Our focus is building 
+                    the next generation of diverse leaders including women, 
+                    people of color, and the LGBTQ+ community.
+                    </p> 
                 </div>
             </div>
-            {/*
-            <div className="about-mission-segment-container">
-                    <div className={"about-mission-background"}>
-                    <h4 className="about-mission-header">Mission</h4>
-                    <div className={"about-mission-content"}>
-                        <p>
-                        SpaceLab is creating opportunities for underrepresented 
-                        communities in space and technology. Our focus is building 
-                        the next generation of diverse leaders including women, 
-                        people of color, and the LGBTQ+ community.
-    </p> 
+                <div className="about-mission-segment-container about-vision-background">
+                    <div className="about-mission-header-container">
+                        <h4 className="about-mission-header">Vision</h4>
                     </div>
-                    </div>
-                </div>
-                <div className="about-mission-segment-container">
-                    <div className={"about-vision-background"}>
-                    <h4 className="about-mission-header">Vision</h4>
                     <div className={"about-mission-content"}>
                         <p>
                         We aim to empower underrepresented groups in tech to create 
@@ -49,10 +49,7 @@ export default function AboutMissionStatementSection() {
                         increase representation in top corporate positions.
                         </p>
                     </div>
-                    </div>
                 </div> 
-                */}
-                </div>
         </section>
     );
 }

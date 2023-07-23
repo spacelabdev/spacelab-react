@@ -14,7 +14,7 @@ import Footer from "../../components/Footer/Footer";
 export default function About() {
 	return (
 		<>
-			<HeroImage heroTitle="ABOUT" />
+			<HeroImage heroTitle = "ABOUT"/>
 			<AboutMissionStatementSection />
 			<AboutTeamSliderSection />
 			<AboutHistorySection />

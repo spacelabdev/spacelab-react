@@ -2,41 +2,87 @@
     --content-container: 1189px;
 }
 
+.about-header {
+	background-image: url("../../assets/componentAssets/purple-sky-unsplash.jpg");
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	font-size: 6rem;
+	font-weight: 600;
+	background-size: cover;
+	background-position: center 71%;
+	
+}
 
 #about-mission-statement-container {
     max-width: var(--content-container);
-    padding: 0 1rem;
     display: flex;
     justify-content: center;
-    margin: 5% auto;
-    
-    
+    background-color: #000;
+	margin: 0 auto;
+	padding: 0;
 
     @media screen and (min-width: 1024px) {
         max-width: 1500px;
     }
 
-    .inner-section-two {
-        font-family: "Latos", sans-serif;
+    @media screen and (min-width: 821px) {
+        display: flex;
+        flex-direction: column;
+    }
 
-        @media screen and (min-width: 821px) {
+        .about-container{
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .about-mission-header {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: white;
             font-weight: 600;
             text-align: left;
-            padding-left: 2rem;
-            border: solid 1px white;
-            width: fit-content;
-            align-content: center;
+            letter-spacing: 4px;
         }
+
         .about-mission-segment-container {
-            margin: 1em;
+            display: flex;
+            align-items: center;
+            height: 10rem;
+            margin: 1rem;
+			
+
             
+            .about-mission-header-container {
+                flex-basis: 30%;
+                height: 100%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+
+                h4 {
+                    font-family: 'Poppins';
+                }
+            }
+
+            .about-mission-content {
+                flex-basis: 70%;
+                height: 100%;
+                display: inline-flex;
+                align-items: center;
+                background: rgba(12, 5, 21, 0.60);
+
+                p {
+                    font-family: 'Poppins';
+					font-weight: 600;
+                    margin-bottom: 0;
+                    text-align: left;
+                    padding-inline: 2rem;
+                }
+            }
+        }
+
         .about-values-background {
             background-image: url("../../assets/componentAssets/purple-sky-unsplash.jpg");
             background-size: cover;
@@ -54,57 +100,6 @@
             background-size: cover;
             background-position: 25% 80%;
         }
-
-            .about-mission-image-wrapper {
-                width: 85%;
-                height: 35%;
-                max-height: 30vmin;
-                margin: 0 auto;
-                padding: 2em 0;
-                justify-content: flex-start;
-
-                .about-mission-image {
-                    margin: 0 auto;
-                }
-            }
-
-            @media screen and (max-width: 820px) {
-                flex-direction: column;
-                align-items: center;
-                width: 90%;
-                margin: 1em auto;
-
-                .about-mission-image-wrapper {
-                    padding-bottom: 0;
-                    max-height: 100%;
-                }
-            }
-
-            .about-mission-content {
-                padding: 2em 4em;
-                font-weight: 550;
-                display: flex;
-                font-family: 'Poppins';
-                background-color: hsla(266, 62%, 5%, 0.5);
-                width: 70%; 
-                margin-left: 30%;
-                margin-top: -68px;          
-                text-align: left;
-
-                p {
-                    color: white;
-
-                }
-
-                @media screen and (max-width: 820px) {
-                    width: 95%;
-                    text-align: center;
-                    padding-top: 0;
-                    padding-bottom: 1em;
-                }
-            }
-        }
-    }
 }
 
 #about-team-slider-section {

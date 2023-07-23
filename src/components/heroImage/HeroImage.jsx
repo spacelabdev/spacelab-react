@@ -9,7 +9,7 @@ import { UniversalContext } from "../../App";
  * @returns {JSX.Element}
  * @constructor
  */
-const HeroImage = ({ heroTitle = "SPACELAB" }) => {
+const HeroImage = ({ heroTitle = "SPACELAB"}) => {
 	// Use heroTitle prop to define heroImage based on the component
 	const context = useContext(UniversalContext);
 	const pageTitle =
@@ -22,12 +22,7 @@ const HeroImage = ({ heroTitle = "SPACELAB" }) => {
 		<>
 			<Navigation />
 			<div className={"hero-image-container"}>
-				<img
-					className={"hero-image"}
-					src={heroImage}
-					alt={"milky way at night"}
-				/>
-				<h1>{pageTitle}</h1>
+				<h1 className="about-header">{pageTitle}</h1>
 			</div>
 		</>
 	);
