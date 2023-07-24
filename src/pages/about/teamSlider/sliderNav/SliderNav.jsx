@@ -11,22 +11,21 @@ import "./sliderNav.scss";
  * @returns {JSX.Element}
  * @constructor
  */
-const SliderNav = ({ navObjects, activeSlide, setActive }) => {
+const SliderNav = ({navObjects, activeSlide, setActive}) => {
 	return (
-		<div className={"menu"}>
+		<div className={'menu'}>
 			<div className={`slider-nav-button-container`}>
 				{navObjects.map((navObject) => (
-					<SliderNavLink
-						key={`${navObject.activeFlag}`}
-						navObject={navObject}
-						activeSlide={activeSlide}
-						setActive={setActive}
+					<SliderNavLink key={`${navObject.activeFlag}`}
+					               navObject={navObject}
+					               activeSlide={activeSlide}
+					               setActive={setActive}
 					/>
 				))}
 			</div>
 		</div>
 	);
-};
+}
 
 SliderNav.propTypes = {
 	/**
@@ -42,12 +41,12 @@ SliderNav.propTypes = {
 	 * Function to update the activeSlide state variable to a new activeSlide
 	 */
 	setActive: PropTypes.func,
-};
+}
 
 SliderNav.defaultProps = {
 	navObjects: null,
 	activeSlide: null,
 	setActive: null,
-};
+}
 
 export default SliderNav;
