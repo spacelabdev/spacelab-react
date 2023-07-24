@@ -4,7 +4,6 @@ on tablets. Can be updated per UX team as necessary.
  */
 .footer-section {
 	background: black;
-	text-align: center;
 	width: auto;
 	@media (min-width: 766px) {
 		text-align: left;
@@ -19,43 +18,33 @@ on tablets. Can be updated per UX team as necessary.
 	}
 
 	.content-container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: auto;
-		max-width: 1189px;
-		margin: auto;
+		display: grid;
+		grid-template-columns: 2fr 1fr;
 		padding: 2rem;
-		@media (min-width: 766px) {
-			flex-direction: row;
-			padding: 4rem;
-		}
 	}
 
 	.left-container {
-		flex: 4;
-		padding-bottom: 1rem;
-		width: 100%;
 		@media (min-width: 766px) {
 			padding-bottom: 0;
 		}
 	}
 
 	.right-container {
-		flex: 1;
-		text-align: left;
-
 		ul {
 			list-style: none;
 			text-transform: uppercase;
-			text-align: center;
+			text-align: right;
 			@media (min-width: 766px) {
-				text-align: left;
+				text-align: right;
 				padding-left: 3.1rem;
 			}
 
 			li {
 				line-height: 2rem;
+			}
+
+			a {
+				text-align: right;
 			}
 		}
 	}

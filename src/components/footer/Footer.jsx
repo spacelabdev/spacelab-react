@@ -114,7 +114,7 @@ export default function Footer() {
 							<AiOutlineTwitter />
 						</a>
 					</IconContext.Provider>
-					<p>@2022 by SpaceLab</p>
+					<p>@2023 by SpaceLab</p>
 				</center>
 			</div>
 		</section>
