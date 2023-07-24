@@ -7,16 +7,16 @@ import Glossary from "./pages/Glossary/Glossary";
 import Home from "./pages/home/Home";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
-// import Podcast from "./pages/Podcast/Podcast";
+import Podcast from "./pages/Podcast/Podcast";
 import CookiePolicy from "./pages/Cookiepolicy/Cookiepolicy";
 import PrivacyPolicy from "./pages/Privacypolicy/Privacypolicy";
 import BlogArchives from "./components/BlogArchives/BlogArchives";
 /* landing pages */
-// import {
-// 	DonateLandingPage,
-// 	DonatePaymentPage,
-// 	DonateSuccessPage,
-// } from "pages/landingPages/donate/";
+import {
+	DonateLandingPage,
+	DonatePaymentPage,
+	DonateSuccessPage,
+} from "pages/landingPages/donate/";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
 import ParticipateV2 from "./pages/landingPages/participate/participatev2/ParticipateV2";
@@ -39,11 +39,11 @@ export default function Main() {
 			<Route exact path="/glossary" component={Glossary} />
 			<Route exact path="/home" component={Home} />
 			<Route exact path="/projects" component={Projects} />
-			{/* <Route exact path="/podcast" component={Podcast} /> */}
+			<Route exact path="/podcast" component={Podcast} />
 			<Route exact path="/cookie-policy" component={CookiePolicy} />
 			<Route exact path="/privacy-policy" component={PrivacyPolicy} />
 			{/* landing page routing must go BEFORE the catch all '/' route*/}
-			{/* <Route
+			<Route
 				exact
 				path="/pages/landingPages/donate"
 				component={DonateLandingPage}
@@ -57,7 +57,7 @@ export default function Main() {
 				exact
 				path="/pages/landingPages/donate"
 				component={DonateSuccessPage}
-			/> */}
+			/>
 			<Route exact path="/campaigns/endorseUs" component={EndorseUs} />
 			<Route
 				exact

@@ -2,11 +2,9 @@ import React from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
-import {
-	AiOutlineLinkedin,
-	AiOutlineInstagram,
-	AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
+import { BsMedium } from "react-icons/bs";
 import AutoScroll from "../AutoScroll/AutoScroll";
 import NewsletterSubscribe from "../formComponents/NewsletterSubscribe/NewsletterSubscribe";
 
@@ -97,8 +95,9 @@ export default function Footer() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineLinkedin />
+							<FaLinkedin />
 						</a>
+						<BsMedium />
 						<a
 							href="https://www.instagram.com/spacelab_space"
 							target="_blank"
