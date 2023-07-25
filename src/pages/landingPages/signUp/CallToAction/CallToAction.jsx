@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function CallToAction() {
 	const [success, setSuccess] = useState(false);
-	const [text] = useState("b");
+	//const [text] = useState("b");
 
 	function handleSuccess() {
 		setSuccess(true);
@@ -30,10 +30,10 @@ export default function CallToAction() {
 							</Link>
 						</div>
 
-						<ThankYou text={text} />
+						<ThankYou  />
 					</>
 				) : (
-					<LetsStayInOrbit text={text} />
+					<LetsStayInOrbit  />
 				)}
 
 				{!success && <SignUpForm onSuccess={handleSuccess} />}
