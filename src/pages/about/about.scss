@@ -18,7 +18,6 @@
     max-width: var(--content-container);
     display: flex;
     justify-content: center;
-    background-color: #000;
 	margin: 0 auto;
 	padding: 0;
 
@@ -71,7 +70,7 @@
                 height: 100%;
                 display: inline-flex;
                 align-items: center;
-                background: rgba(12, 5, 21, 0.60);
+                background: rgba(99, 48, 112, 0.70);
 
                 p {
                     font-family: 'Poppins';
@@ -98,7 +97,7 @@
         .about-vision-background {
             background-image: url("../../assets/componentAssets/purple-sky-unsplash.jpg");
             background-size: cover;
-            background-position: 25% 80%;
+            background-position: 25% 85%;
         }
 }
 

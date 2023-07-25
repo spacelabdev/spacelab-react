@@ -18,11 +18,15 @@ const HeroImage = ({ heroTitle = "SPACELAB"}) => {
 			: context.pageTitle;
 	context.setPageTitle(heroTitle);
 
+	
+
 	return (
 		<>
 			<Navigation />
 			<div className={"hero-image-container"}>
-				<h1 className="about-header">{pageTitle}</h1>
+			<h1 className={pageTitle !== "SPACELAB SUPPORTS DIVERSITY IN TECH" ? "about-header" : ""}>
+					{pageTitle}
+				</h1>
 			</div>
 		</>
 	);
