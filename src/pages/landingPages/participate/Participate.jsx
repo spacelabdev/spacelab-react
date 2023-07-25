@@ -8,6 +8,8 @@ import Alumni from "./components/Alumni/Alumni";
 import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "../../../components/Footer/Footer";
 import "./participate.scss";
+import { Experiment, Variant } from "react-ab-test";
+import ParticipateV2 from "./participatev2/ParticipateV2";
 
 /**
  * Renders Participate Landing page
@@ -15,16 +17,25 @@ import "./participate.scss";
  * @constructor
  */
 export default function Participate() {
-	return (
-		<div className="participate-landing-page">
-			<Navigation />
-			<Hero />
-			<HowItWorks />
-			<WhatWereWorkingOn />
-			<Internships />
-			<Alumni />
-			<CallToAction />
-			<Footer />
-		</div>
+	return (<>
+		<Experiment name="DonatePageTest">
+			<Variant name="Donate.v1">
+				<div className="participate-landing-page">
+					<Navigation />
+					<Hero />
+					<HowItWorks />
+					<WhatWereWorkingOn />
+					<Internships />
+					<Alumni />
+					<CallToAction />
+					<Footer />
+				</div>
+			</Variant>
+
+			<Variant name="Donate.v2">
+				<ParticipateV2 />
+			</Variant>
+		</Experiment>
+	</>
 	);
 }
