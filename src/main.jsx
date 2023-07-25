@@ -3,8 +3,9 @@ import { Route, Switch, Redirect } from "react-router";
 import About from "./pages/about/About";
 import Blog from "./pages/Blog/Blog";
 import Discovery from "./pages/discovery/Discovery";
+import Donate from "./pages/Donate/Donate";
 import Glossary from "./pages/Glossary/Glossary";
-import Home from "./pages/home/Home";
+import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Podcast from "./pages/Podcast/Podcast";
@@ -36,6 +37,7 @@ export default function Main() {
 			<Route exact path="/blog" component={Blog} />
 			<Route exact path="/contact" component={Contact} />
 			<Route exact path="/discovery" component={Discovery} />
+			<Route exact path="/donate" component={Donate} />
 			<Route exact path="/glossary" component={Glossary} />
 			<Route exact path="/home" component={Home} />
 			<Route exact path="/projects" component={Projects} />
