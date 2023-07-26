@@ -137,12 +137,3 @@ MemberCard.defaultProps = {
 };
 
 export default MemberCard;
-
-
-/*
-to do:
-	consult mobile view queries -- make image stack on the text
-
-	Do we want to disable autoscroll -- consult ux 
-	do we want that overflow scrollbar (amanda) -- consult ux 
-*/
