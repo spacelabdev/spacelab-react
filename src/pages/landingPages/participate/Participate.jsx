@@ -8,7 +8,7 @@ import Alumni from "./components/Alumni/Alumni";
 import CallToAction from "./components/CallToAction/CallToAction";
 import Footer from "../../../components/Footer/Footer";
 import "./participate.scss";
-import { Experiment, Variant } from "react-ab-test";
+import { Experiment, Variant } from "@marvelapp/react-ab-test";
 import ParticipateV2 from "./participatev2/ParticipateV2";
 
 /**
