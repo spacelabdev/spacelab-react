@@ -1,0 +1,24 @@
+#paypal-error-container {
+	width: 100%;
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 5% auto;
+
+	@media (min-width: 600px) {
+		width: 70%;
+	}
+
+	.paypal-error-title {
+		font-size: 2.4rem;
+		font-weight: 600;
+		margin-block: 1rem;
+	}
+
+	.paypal-error-desc {
+		font-weight: 500;
+		padding-inline: 2rem;
+	}
+}

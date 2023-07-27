@@ -1,18 +1,20 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router";
-import About from "./pages/about/About";
+import { Redirect, Route, Switch } from "react-router";
+import BlogArchives from "./components/BlogArchives/BlogArchives";
 import Blog from "./pages/Blog/Blog";
-import Discovery from "./pages/discovery/Discovery";
+import Contact from "./pages/Contact/Contact";
+import CookiePolicy from "./pages/Cookiepolicy/Cookiepolicy";
 import Donate from "./pages/Donate/Donate";
 import Glossary from "./pages/Glossary/Glossary";
 import Home from "./pages/Home/Home";
-import Projects from "./pages/Projects/Projects";
-import Contact from "./pages/Contact/Contact";
 import Podcast from "./pages/Podcast/Podcast";
-import CookiePolicy from "./pages/Cookiepolicy/Cookiepolicy";
 import PrivacyPolicy from "./pages/Privacypolicy/Privacypolicy";
-import BlogArchives from "./components/BlogArchives/BlogArchives";
+import Projects from "./pages/Projects/Projects";
+import About from "./pages/about/About";
+import Discovery from "./pages/discovery/Discovery";
 /* landing pages */
+import PaypalError from "./pages/Donate/PaypalError/PaypalError";
+import PaypalSuccess from "./pages/Donate/PaypalSuccess/PaypalSuccess";
 import {
 	DonateLandingPage,
 	DonatePaymentPage,
@@ -20,8 +22,8 @@ import {
 } from "./pages/landingPages/donate/Donate";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
-import ParticipateV2 from "./pages/landingPages/participate/participatev2/ParticipateV2";
 import Apply from "./pages/landingPages/participate/components/Apply/Apply";
+import ParticipateV2 from "./pages/landingPages/participate/participatev2/ParticipateV2";
 import SignUp from "./pages/landingPages/signUp/SignUp";
 
 /**
@@ -38,6 +40,8 @@ export default function Main() {
 			<Route exact path="/contact" component={Contact} />
 			<Route exact path="/discovery" component={Discovery} />
 			<Route exact path="/donate" component={Donate} />
+			<Route exact path="/donate/success" component={PaypalSuccess} />
+			<Route exact path="/donate/error" component={PaypalError} />
 			<Route exact path="/glossary" component={Glossary} />
 			<Route exact path="/home" component={Home} />
 			<Route exact path="/projects" component={Projects} />
