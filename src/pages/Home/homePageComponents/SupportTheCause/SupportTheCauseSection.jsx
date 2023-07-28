@@ -1,6 +1,6 @@
 import React from "react";
-import InternalNavButton from "../../../../components/styleComponents/navigationButtons/InternalNavButton";
 import "./supportTheCause.scss";
+import InternalNavButton from "../../../../components/styleComponents/navigationButtons/InternalNavButton";
 
 /**
  * Renders Support the Cause section

@@ -1,20 +1,20 @@
 import React from "react";
-import { Redirect, Route, Switch } from "react-router";
-import BlogArchives from "./components/BlogArchives/BlogArchives";
+import { Route, Switch, Redirect } from "react-router";
+import About from "./pages/about/About";
 import Blog from "./pages/Blog/Blog";
-import Contact from "./pages/Contact/Contact";
-import CookiePolicy from "./pages/Cookiepolicy/Cookiepolicy";
+import Discovery from "./pages/discovery/Discovery";
 import Donate from "./pages/Donate/Donate";
 import Glossary from "./pages/Glossary/Glossary";
 import Home from "./pages/Home/Home";
-import Podcast from "./pages/Podcast/Podcast";
-import PrivacyPolicy from "./pages/Privacypolicy/Privacypolicy";
 import Projects from "./pages/Projects/Projects";
-import About from "./pages/about/About";
-import Discovery from "./pages/discovery/Discovery";
-/* landing pages */
+import Contact from "./pages/Contact/Contact";
+import Podcast from "./pages/Podcast/Podcast";
+import CookiePolicy from "./pages/Cookiepolicy/Cookiepolicy";
+import PrivacyPolicy from "./pages/Privacypolicy/Privacypolicy";
+import BlogArchives from "./components/BlogArchives/BlogArchives";
 import PaypalError from "./pages/Donate/PaypalError/PaypalError";
 import PaypalSuccess from "./pages/Donate/PaypalSuccess/PaypalSuccess";
+/* landing pages */
 import {
 	DonateLandingPage,
 	DonatePaymentPage,
@@ -22,8 +22,8 @@ import {
 } from "./pages/landingPages/donate/Donate";
 import EndorseUs from "./pages/landingPages/endorseUs/EndorseUs";
 import Participate from "./pages/landingPages/participate/Participate";
-import Apply from "./pages/landingPages/participate/components/Apply/Apply";
 import ParticipateV2 from "./pages/landingPages/participate/participatev2/ParticipateV2";
+import Apply from "./pages/landingPages/participate/components/Apply/Apply";
 import SignUp from "./pages/landingPages/signUp/SignUp";
 
 /**
