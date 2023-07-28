@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 /**
  * Renders Blog page
@@ -16,6 +17,14 @@ export default function PaypalErrorMessage() {
                 be processed at this time, please verify your payment details 
                 or try again later.
             </p>
+            <Link
+                to={"/donate"}
+                style={{ textDecoration: "none" }}
+            >
+                <button className="paypal-back-btn" component={Link}>
+                    Back To Donations
+                </button>
+            </Link>
         </section>
     );
 }
