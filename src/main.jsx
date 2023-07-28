@@ -12,6 +12,8 @@ import Podcast from "./pages/Podcast/Podcast";
 import CookiePolicy from "./pages/Cookiepolicy/Cookiepolicy";
 import PrivacyPolicy from "./pages/Privacypolicy/Privacypolicy";
 import BlogArchives from "./components/BlogArchives/BlogArchives";
+import PaypalError from "./pages/Donate/PaypalError/PaypalError";
+import PaypalSuccess from "./pages/Donate/PaypalSuccess/PaypalSuccess";
 /* landing pages */
 import {
 	DonateLandingPage,
@@ -38,6 +40,8 @@ export default function Main() {
 			<Route exact path="/contact" component={Contact} />
 			<Route exact path="/discovery" component={Discovery} />
 			<Route exact path="/donate" component={Donate} />
+			<Route exact path="/donate/success" component={PaypalSuccess} />
+			<Route exact path="/donate/error" component={PaypalError} />
 			<Route exact path="/glossary" component={Glossary} />
 			<Route exact path="/home" component={Home} />
 			<Route exact path="/projects" component={Projects} />
