@@ -1,6 +1,6 @@
 import React from "react";
 import "./supportTheCause.scss";
-import ExternalNavButton from "../../../../components/styleComponents/navigationButtons/ExternalNavButton";
+import InternalNavButton from "../../../../components/styleComponents/navigationButtons/InternalNavButton";
 
 /**
  * Renders Support the Cause section
@@ -33,10 +33,10 @@ export default function SupportTheCauseSection() {
 					a tax-deductible donation to SpaceLab today.
 				</p>
 				<div id={"donate-button-container"}>
-					<ExternalNavButton
-						url="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
+					<InternalNavButton
+						path="/donate"
 						buttonText="Donate"
-					/>
+					></InternalNavButton>
 				</div>
 			</div>
 		</div>
