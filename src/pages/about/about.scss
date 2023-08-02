@@ -90,11 +90,12 @@
 
 	.team-slider-header {
 		display: flex;
-		justify-content: left;
+		justify-content: center;
 		max-width: 1200px;
 		margin: 0 auto;
 
 		h2 {
+			text-transform: uppercase;
 			font-size: 2.5rem;
 			color: white;
 			margin-bottom: 0.5rem;
