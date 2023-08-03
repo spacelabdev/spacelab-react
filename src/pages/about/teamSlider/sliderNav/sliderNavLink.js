@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./sliderNav.scss";
-import MenuItem from '@mui/material/MenuItem';
 
 /**
  * Creates each slider nav link JSX. Rendered by SliderNav
@@ -11,20 +10,13 @@ import MenuItem from '@mui/material/MenuItem';
  * @returns {JSX.Element}
  * @constructor
  */
-const SliderNavLink = ({ navObject, activeSlide, setActive, setAnchorEl}) => {
-	const handleClose = () => {
-		setActive(navObject.activeFlag);
-		setAnchorEl(null)
-	}
+const SliderNavLink = ({navObject, activeSlide, setActive}) => {
 	return (
-		<MenuItem className={`${activeSlide === navObject.activeFlag ? 'active' : ''}`}
-			onClick={() => {
-				handleClose()
-			}
-			}
+		<div className={`${activeSlide === navObject.activeFlag ? 'active' : ''}`}
+		     onClick={() => setActive(navObject.activeFlag)}
 		>
 			{navObject.title}
-			</MenuItem>
+		</div>
 	);
 }
 
