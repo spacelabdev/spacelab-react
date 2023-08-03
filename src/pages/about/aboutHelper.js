@@ -13,6 +13,7 @@ export const newAboutHistoryArray = [
         "Jan",
         "2021",
         jan2021,
+		"group of people gathered around a laptop looking at something",
         "Data Scientist Matt Paterson meets Dr. Andrew " + 
         "Vanderburg and Dr. Jessie Christiansen of CalTech to " + 
         "publish a paper on machine learning and exoplanets. " +
@@ -24,6 +25,7 @@ export const newAboutHistoryArray = [
         "Jan",
         "2021",
         image2,
+		"people in an office planning a project",
         "SpaceLab meets with aspiring UX Designers to create " +
         "a website for exoplanet discovery. Realizing the lack " +
         "of cross-functional collaboration experience for early " +
@@ -36,6 +38,7 @@ export const newAboutHistoryArray = [
         "Aug",
         "2021",
         aug2021,
+		"planet against a blue sky",
         "SpaceLab launches its website and receive help " +
         "from Meghan Slan (Director of DEIB) in becoming a non-" +
         "profit organization with the foundation of diversity and " +
@@ -49,8 +52,9 @@ export const newAboutHistoryArray = [
         "May",
         "2023",
         may2023,
-        "Exoplanetarium is launched as SpaceLab's pilot project!" + 
-        "OTHER INTERESTING FACTS HERE." +
+		"planets around a star, from Spacelab's Exoplanetarium project",
+        "Exoplanetarium is launched as SpaceLab's pilot project! " + 
+        "OTHER INTERESTING FACTS HERE. " +
         "ALSO HERE."
     ],
 ];

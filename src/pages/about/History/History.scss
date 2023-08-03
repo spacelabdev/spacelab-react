@@ -30,6 +30,12 @@
         gap: 13px;
     }
 
+    .arrow-wrapper, .arrow-wrapper:hover, .arrow-wrapper:active, .arrow-wrapper:focus{
+        all: revert;
+        border: none;
+        background: none;
+    }
+
     .scroll-outer {
         overflow: hidden;
         height: 525px;
@@ -55,6 +61,28 @@
         letter-spacing: 6.16px;
         text-transform: uppercase;
         animation: grow .5s ease-in-out;
+    }
+
+    .deselected-date {
+        animation: shrink .5s ease-in-out;
+    }
+
+    @keyframes fade-out {
+        0% { 
+            opacity: 100%;
+        }
+        100% { 
+            opacity: 0%;
+        }  
+    }
+
+    @keyframes fade-in {
+        0% { 
+            opacity: 0%;
+        }
+        100% { 
+            opacity: 100%;
+        }
     }
 
     @keyframes grow {
@@ -136,7 +164,15 @@
         100% {
             transform: translateY(450px);
         }
-        
+    }
+
+    @keyframes scroll-down-two {
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(-300px);
+        }
     }
 
     .content-wrapper {
