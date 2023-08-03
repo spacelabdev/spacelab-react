@@ -3,7 +3,7 @@ import "./about.scss";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import AboutMissionStatementSection from "./AboutMissionStatementSection";
 import AboutTeamSliderSection from "./AboutTeamSliderSection";
-import AboutHistorySection from "./AboutHistorySection";
+import History from "./History/History";
 import Footer from "../../components/Footer/Footer";
 
 /**
@@ -17,7 +17,7 @@ export default function About() {
 			<HeroImage heroTitle="ABOUT" />
 			<AboutMissionStatementSection />
 			<AboutTeamSliderSection />
-			<AboutHistorySection />
+			<History />
 			<Footer />
 		</>
 	);
