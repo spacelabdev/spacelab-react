@@ -93,7 +93,6 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 					alert(
 						"There was an error processing your donation. Please try again later."
 					);
-					console.log("Error: ", err);
 					return err;
 				}}
 			/>
