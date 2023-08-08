@@ -86,13 +86,9 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 						: undefined
 				}
 				onApprove={function (data, actions) {
-					alert("Thank you for your donation!");
 					history.push('donate/success', intent);
 				}}
-				// https://stackoverflow.com/questions/66017761/paypal-checkout-js-sdk-onerror-not-triggering-when-cards-not-processed
 				onError={function (err) {
-					console.log("Error: ", err);
-					alert(err);
 					window.location.href = '/donate/error';
 				}}
 			/>
