@@ -28,7 +28,6 @@ const planId = "P-4Y256783L52659318MS5NBKY";
 
 const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
-	console.log("Intent", intent);
 
 	useEffect(() => {
 		dispatch({
@@ -39,7 +38,7 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 				intent: intent,
 			},
 		});
-	}, [intent, currency, showSpinner]);
+	}, [intent, currency, showSpinner, dispatch]);
 
 	return (
 		<>
