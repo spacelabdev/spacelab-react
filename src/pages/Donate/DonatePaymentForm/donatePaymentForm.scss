@@ -45,46 +45,6 @@
 	}
 }
 
-//buttons
-// .btn-container {
-// 	margin-top: 2rem;
-// }
-
-// .btn-large {
-// 	background-color: var(--background-color);
-// 	border: 5px solid var(--background-color);
-
-// 	a {
-// 		text-decoration: none;
-// 	}
-
-// 	&:hover,
-// 	&:focus {
-// 		background-color: var(--background-color);
-// 		outline: none;
-// 	}
-
-// 	width: 100%;
-// 	border-radius: var(--large-btn-radius);
-// 	padding: 0.5rem 0;
-// 	min-width: 6rem;
-// 	text-transform: capitalize;
-
-// 	@media (min-width: 767px) {
-// 		padding: 1.25rem 0;
-// 	}
-// }
-
-// .outline-btn {
-// 	background-color: transparent;
-// 	color: white;
-
-// 	&:hover,
-// 	&:focus {
-// 		background-color: transparent;
-// 	}
-// }
-
 // logo placement
 .icon-container {
 	img {
@@ -126,7 +86,7 @@
 	right: -2vw;
 }
 
-// togglegroupbutton
+// Donation Type Toggle
 .tab-group-container {
 	width: 100%;
 }

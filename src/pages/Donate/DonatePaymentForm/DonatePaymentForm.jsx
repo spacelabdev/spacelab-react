@@ -102,9 +102,9 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 	);
 };
 
-
 const options = ["One Time", "Monthly"];
-const amountOptions = [10, 25, 100, "Custom"];
+const amountOptions = [10, 25, 100];
+const amountOptions2 = [10, 25, 100, "Custom"];
 
 const initData = {
 	paymentFrequency: options[0],
@@ -125,14 +125,13 @@ const ToggleGroup = ({ selected, handleChange, options, name, setForm }) => {
 					role="tab"
 					name={name}
 					key={option}
-					// onClick={(e) => handleChange({ name, value: option })}
 					onClick={(e) => {
 						handleChange({ name, value: option });
 						if (option === "One Time") {
 							setForm("One Time Donation");
 						}
 						if (option === "Monthly") {
-							setForm("Monthly Donation");
+							setForm("Recurring Donation");
 						}
 					}}
 				>
@@ -182,8 +181,7 @@ const RadioCard = ({ value, handleChange, checked }) => {
 	);
 };
 
-//radio card button
-const RadioButtonGroup = ({ setAmount, name, options }) => {
+const RadioButtonGroup = ({ setAmount, name, amountOptions, amountOptions2, dType }) => {
 	const [selected, setSelected] = useState("");
 	const [inputVal, setInputVal] = useState("");
 
@@ -206,14 +204,25 @@ const RadioButtonGroup = ({ setAmount, name, options }) => {
 	return (
 		<>
 			<div className="preset-amount-wrapper">
-				{options.map((val, index) => (
-					<RadioCard
-						key={index}
-						value={val}
-						handleChange={handleChange}
-						checked={val + "" === selected}
-					/>
-				))}
+				{dType === "One Time" ? (
+					amountOptions2.map((val, index) => (
+						< RadioCard
+							key={index}
+							value={val}
+							handleChange={handleChange}
+							checked={val + "" === selected}
+						/>
+					))
+				) : (
+					amountOptions.map((val, index) => (
+						<RadioCard
+							key={index}
+							value={val}
+							handleChange={handleChange}
+							checked={val + "" === selected}
+						/>
+					))
+				)}
 			</div>
 			<div className="input-container">
 				<input
@@ -245,7 +254,6 @@ const DonatePaymentForm = () => {
 			setDonationType(dType);
 		}
 	};
-
 
 	const handleChange = ({ name, value }) => {
 		setData((prevState) => ({
@@ -280,10 +288,11 @@ const DonatePaymentForm = () => {
 					<RadioButtonGroup
 						name="amount"
 						setAmount={handleChange}
-						options={amountOptions}
+						amountOptions={amountOptions}
+						amountOptions2={amountOptions2}
+						dType={data.paymentFrequency}
 					/>
 					{showForm && <span>{donationType}</span>}
-
 					{/*Need to leave forms this way as options is hardcoded in PayPalScriptProvider*/}
 					{showForm && donationType === "One Time Donation" && (
 						<PayPalScriptProvider
@@ -300,8 +309,7 @@ const DonatePaymentForm = () => {
 							/>
 						</PayPalScriptProvider>
 					)}
-
-					{showForm && donationType === "Monthly Donation" && (
+					{showForm && donationType === "Recurring Donation" && (
 						<PayPalScriptProvider
 							options={{
 								clientId: clientId,
@@ -317,30 +325,6 @@ const DonatePaymentForm = () => {
 							/>
 						</PayPalScriptProvider>
 					)}
-
-					{/* <a
-						href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
-						target="_blank"
-						rel="noreferrer"
-						style={{ textDecoration: "none" }}
-					>
-						<button
-							className="custom-text btn-large"
-						>
-							Donate with PayPal
-						</button>
-					</a> */}
-					{/* <PaypalDonate /> */}
-
-					{/* <button
-						className="custom-text btn-large outline-btn"
-						onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-					>
-						Donate with Debit or Credit Card
-					</button> */}
-					{/* 
-					{isDropdownOpen && <PaypalDonate/>}
-					{isDropdownOpen && <ShowModal open={true} />} */}
 					<div className="icon-container">
 						<img
 							src={ROCKET_ICON_IMAGE}
