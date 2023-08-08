@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../../components/Footer/Footer";
 import HeroImage from "../../../components/HeroImage/HeroImage";
 import PaypalSuccessMessage from "./PaypalSuccessMessage";
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./paypalSuccess.scss";
 
 /**
@@ -12,12 +12,11 @@ import "./paypalSuccess.scss";
  */
 export default function PaypalSuccess() {
     const location = useLocation();
-    const userData = location.state;
-    console.log("user: ", userData);
+    // const donateType = location.state;
     return (
         <>
             <HeroImage heroTitle="DONATE" />
-            <PaypalSuccessMessage />
+            <PaypalSuccessMessage donateType={location.state}/>
             <Footer />
         </>
     );

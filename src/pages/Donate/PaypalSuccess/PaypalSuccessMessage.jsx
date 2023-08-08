@@ -6,11 +6,15 @@ import { Link } from "react-router-dom";
  * @returns {JSX.Element}
  * @constructor
  */
-export default function PaypalSuccessMessage() {
+export default function PaypalSuccessMessage({donateType}) {
+    if (donateType === "capture") {
+        donateType = "one time donation"
+    }
+    donateType = donateType.toUpperCase();
     return (
         <section id="paypal-success-container">
             <h4 className="paypal-success-title">
-                THANK YOU FOR YOUR DONATION!
+                THANK YOU FOR YOUR {donateType}!
             </h4>
             <p className="paypal-success-desc">
                 Your generous donation to SpaceLab is greatly
