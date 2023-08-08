@@ -1,0 +1,35 @@
+.menu {
+	max-width: 1200px;
+	margin: 2rem auto;
+
+	.slider-nav-button-container {
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 5px;
+		padding-bottom: 10px;
+
+		div {
+			margin: 0 auto;
+			font-family: "Poppins", sans-serif;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 15px;
+			letter-spacing: -0.015em;
+			text-transform: uppercase;
+			color: #ffffff;
+
+			&:hover {
+				cursor: pointer;
+				border-bottom: 1px solid var(--neon-purple);
+			}
+		}
+	}
+
+	.active {
+		border-bottom: 1px solid var(--neon-purple);
+	}
+
+	.inactive {
+		border-bottom: 1px solid transparent;
+	}
+}
