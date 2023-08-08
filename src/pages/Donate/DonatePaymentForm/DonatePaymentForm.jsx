@@ -30,15 +30,15 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
 	useEffect(() => {
-		dispatch({
-			type: "resetOptions",
-			value: {
-				...options,
+		dispatch((state) => ({
+			...state,
+			options: {
+				...state.options,
 				currency: currency,
 				intent: intent,
 			},
-		});
-	}, [intent, currency, showSpinner, dispatch]);
+		}));
+	}, [intent, currency, dispatch, options]);
 
 	return (
 		<>
