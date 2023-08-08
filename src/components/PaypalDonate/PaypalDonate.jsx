@@ -4,6 +4,7 @@ import {
 	usePayPalScriptReducer,
 	PayPalButtons,
 } from "@paypal/react-paypal-js";
+import { useHistory } from "react-router-dom";
 import "./paypalDonate.scss";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
@@ -19,12 +20,14 @@ const recurringStyle = {
 	label: "subscribe",
 };
 
+
 /*Inputs from the client that will need to be replaced with variable props from the parent component*/
 const amount = "10";
 const currency = "USD";
 const planId = "P-4Y256783L52659318MS5NBKY";
 
 const ButtonWrapper = ({ currency, intent, showSpinner }) => {
+	const history = useHistory();
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 	console.log("Intent", intent);
 
@@ -86,17 +89,21 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 				onApprove={function (data, actions) {
 					/*TODO: Add redirect to Thank you component*/
 					alert("Thank you for your donation!");
-					window.location.href = "donate/success";
+					return actions.order.capture().then(function(details) {
+						console.log('Capture result', details);
+						history.push('donate/success', details.intent);
+					});
+					
+					// redirect to success page
+					// window.location.href = "/donate/success";
 				}}
 				// https://stackoverflow.com/questions/66017761/paypal-checkout-js-sdk-onerror-not-triggering-when-cards-not-processed
 				onError={function (err) {
 					/*TODO: Add redirect to Error component*/
 					console.log("Error: ", err);
-					alert(
-						"There was an error processing your donation. Please try again later."
-					);
-					window.location.href = "/donate/error";
-					return err;
+					alert(err);
+					// window.location.href = '/donate/error';
+					// return err;
 				}}
 			/>
 		</>
