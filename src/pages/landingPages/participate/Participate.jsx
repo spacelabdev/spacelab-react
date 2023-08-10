@@ -18,8 +18,8 @@ import ParticipateV2 from "./participatev2/ParticipateV2";
  */
 export default function Participate() {
 	return (<>
-		<Experiment name="DonatePageTest">
-			<Variant name="Donate.v1">
+		<Experiment name="ParticipatePageTest">
+			<Variant name="Participate.v1">
 				<div className="participate-landing-page">
 					<Navigation />
 					<Hero />
@@ -32,7 +32,7 @@ export default function Participate() {
 				</div>
 			</Variant>
 
-			<Variant name="Donate.v2">
+			<Variant name="Participate.v2">
 				<ParticipateV2 />
 			</Variant>
 		</Experiment>
