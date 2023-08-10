@@ -93,17 +93,11 @@ select {
 /*---------------------------------------------------------------------------------------*/
 
 h1 {
-	position: absolute;
-	width: 80%;
 	color: white;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 8vw;
 	letter-spacing: 3px;
-	top: calc(50%);
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 98;
 
 	@media screen and (min-width: 766px) {
 		font-size: 6.25rem;

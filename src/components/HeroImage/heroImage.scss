@@ -10,6 +10,27 @@
 	@media only screen and (max-width: 1024px) {
 		margin-top: 0;
 	}
+	h1 {
+		position: absolute;
+		width: 80%;
+		color: white;
+		font-family: "Poppins", sans-serif;
+		font-weight: bold;
+		font-size: 8vw;
+		letter-spacing: 3px;
+		top: calc(50%);
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 98;
+
+		@media screen and (min-width: 766px) {
+			font-size: 6.25rem;
+		}
+
+		@media (min-width: 767px) and (max-width: 1023px) {
+			font-size: 4.25rem;
+		}
+	}
 }
 
 .hero-image {
