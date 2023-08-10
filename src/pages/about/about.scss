@@ -1,59 +1,52 @@
-:root {
-	--content-container: 1189px;
-}
-
-.about-header {
+.about-title {
 	position: relative;
-	padding: 15vh 0 5vh 0;
+	padding: 5vh 0 2vh 0;
 	color: white;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
-	font-size: 8vw;
+	font-size: 7vw;
 	letter-spacing: 3px;
 
-	@media screen and (min-width: 766px) {
-		font-size: 6.25rem;
-	}
-
-	@media (min-width: 767px) and (max-width: 1023px) {
-		font-size: 4.25rem;
+	@media screen and (min-width: 768px) {
+		padding: 15vh 0 5vh 0;
 	}
 }
 
 #about-mission-statement-container {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	margin: 0 auto;
 	padding: 0;
+	max-width: 98vw;
 
 	@media screen and (min-width: 1024px) {
 		max-width: 80vw;
 	}
 
 	@media screen and (min-width: 821px) {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.about-container {
-		display: flex;
-		align-items: center;
-		justify-content: center;
 	}
 
 	.about-mission-header {
-		font-size: 2.5rem;
+		font-size: 1.7rem;
 		color: white;
 		font-weight: 600;
 		text-align: left;
 		letter-spacing: 4px;
+		@media screen and (min-width: 1024px) {
+			font-size: 2.5rem;
+		}
 	}
 
 	.about-mission-segment-container {
 		display: flex;
 		align-items: center;
-		height: 13rem;
+		height: 10rem;
 		margin: 1rem;
+
+		@media screen and (min-width: 1024px) {
+			height: 13rem;
+		}
 
 		.about-mission-header-container {
 			flex-basis: 40%;
@@ -61,7 +54,11 @@
 			display: inline-flex;
 			justify-content: center;
 			align-items: center;
-			padding: 1rem;
+			padding: 0.5rem;
+
+			@media screen and (min-width: 1024px) {
+				padding: 1rem;
+			}
 
 			h4 {
 				font-family: "Poppins";
@@ -70,6 +67,7 @@
 
 		.about-mission-content {
 			flex-basis: 60%;
+
 			height: 100%;
 			display: inline-flex;
 			align-items: center;
@@ -77,10 +75,20 @@
 
 			p {
 				font-family: "Poppins";
-				font-weight: 600;
+				font-weight: 400;
 				margin-bottom: 0;
 				text-align: left;
-				padding-inline: 2rem;
+				padding-inline: 0.2rem;
+				font-size: 12px;
+
+				@media screen and (min-width: 1024px) {
+					font-weight: 600;
+					font-size: 16px;
+					padding-inline: 2rem;
+				}
+
+				@media screen and (min-width: 821px) {
+				}
 			}
 		}
 	}
@@ -116,10 +124,12 @@
 		margin: 0 auto;
 
 		h2 {
-			font-size: 2.5rem;
-			color: white;
-			margin-bottom: 0.5rem;
 			text-transform: uppercase;
+			color: white;
+			font-family: "Poppins", sans-serif;
+			font-weight: bold;
+			font-size: 6vw;
+			letter-spacing: 3px;
 		}
 	}
 

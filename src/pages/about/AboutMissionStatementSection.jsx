@@ -7,7 +7,7 @@ import React from "react";
 export default function AboutMissionStatementSection() {
 	return (
 		<>
-			<h1 className="about-header">ABOUT</h1>
+			<h1 className="about-title">ABOUT</h1>
 			<section id="about-mission-statement-container">
 				<div className="about-mission-segment-container about-values-background">
 					<div className="about-mission-header-container">
