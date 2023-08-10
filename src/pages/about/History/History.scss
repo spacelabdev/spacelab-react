@@ -1,0 +1,198 @@
+#new-history-section {
+
+    .header {
+        color: #FFF;
+        text-align: center;
+        text-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.55);
+        font-family: Poppins;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        letter-spacing: 6.5px;
+        text-transform: uppercase;
+        padding-top: 50px;
+    }
+
+    .container {
+        height: 700px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 31px;
+    }
+
+    .date-picker-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 13px;
+    }
+
+    .arrow-wrapper, .arrow-wrapper:hover, .arrow-wrapper:active, .arrow-wrapper:focus{
+        all: revert;
+        border: none;
+        background: none;
+    }
+
+    .scroll-outer {
+        overflow: hidden;
+        height: 525px;
+        width: 250px;
+        position: relative;
+    }
+
+    .scroll-inner {
+        height: 100%;
+        width: inherit;
+        position: absolute;
+        top: 0px;
+        left: 0;
+    }
+
+    .selected-date {
+        text-align: right;
+        font-family: Poppins;
+        font-size: 94.762px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 111.05px; /* 117.188% */
+        letter-spacing: 6.16px;
+        text-transform: uppercase;
+        animation: grow .5s ease-in-out;
+    }
+
+    .deselected-date {
+        animation: shrink .5s ease-in-out;
+    }
+
+    @keyframes fade-out {
+        0% { 
+            opacity: 100%;
+        }
+        100% { 
+            opacity: 0%;
+        }  
+    }
+
+    @keyframes fade-in {
+        0% { 
+            opacity: 0%;
+        }
+        100% { 
+            opacity: 100%;
+        }
+    }
+
+    @keyframes grow {
+        0% { 
+            font-size: 63.646px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 74.586px; /* 117.188% */
+            letter-spacing: 4.137px;
+        }
+        100% { 
+            font-size: 94.762px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 111.05px; /* 117.188% */
+            letter-spacing: 6.16px;
+        }
+    }
+
+    @keyframes shrink {
+        0% { 
+            font-size: 94.762px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 111.05px; /* 117.188% */
+            letter-spacing: 6.16px;
+        }
+        100% { 
+            font-size: 63.646px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 74.586px; /* 117.188% */
+            letter-spacing: 4.137px;
+        }
+    }
+
+    .upcoming-date {
+        text-align: right;
+        font-family: Poppins;
+        font-size: 63.646px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 74.586px; /* 117.188% */
+        letter-spacing: 4.137px;
+        text-transform: uppercase;
+    }
+
+    @keyframes dates-scroll-down {
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(-150px);
+        }
+    }
+
+    @keyframes dates-scroll-up {
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(150px);
+        }
+    }
+
+    @keyframes top-to-bottom {
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(-450px);
+        }
+    }
+
+    @keyframes bottom-to-top {
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(450px);
+        }
+    }
+
+    @keyframes scroll-down-two {
+        0% {
+            transform: none;
+        }
+        100% {
+            transform: translateY(-300px);
+        }
+    }
+
+    .content-wrapper {
+        width: 601px;
+        color: #FFF;
+        font-family: Lato;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+    }
+
+    .selected-content {
+        text-align: left;
+    }
+
+    .content-image-wrapper {
+        width: 601px;
+        height: 400px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+}
