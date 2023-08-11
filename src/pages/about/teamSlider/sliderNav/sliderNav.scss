@@ -10,14 +10,16 @@
 		padding-bottom: 10px;
 
 		h4{
-			margin: 0 15px 0 5%;
+			margin: 0 15px 2px 5%;
 		}
 
-		#dropdown-basic{
+		#dropdown-basic,
+		#select-dropdown{
 			background-color: transparent;
 			border: none;
 			color: white;
 		}
+
 
 		#dropdown-basic:active,
 		#dropdown-basic:focus{
@@ -26,9 +28,10 @@
             box-shadow:none;
 		}
 
-		#dropdown-basic::after {
+		#dropdown-basic::after{
 			display: none !important; 
 		}
+
 
 		.dropdown-item {
 			font-family: "Poppins", sans-serif;
