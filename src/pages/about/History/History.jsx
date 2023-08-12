@@ -132,90 +132,116 @@ export default function History() {
 	}
 
 	return (
-		<section id="new-history-section">
-			<h2 className="header">History</h2>
+		<>
+			<section id="new-history-section">
+				<h2 className="header">History</h2>
 
-			<div className="container">
-				<div
-					aria-label="timeline with notable dates"
-					className="date-picker-wrapper"
-				>
-					<button
-						aria-label="up arrow"
-						className="arrow-wrapper"
-						onClick={() => handleCarousel("up")}
+				<div className="container">
+					<div
+						aria-label="timeline with notable dates"
+						className="date-picker-wrapper"
 					>
-						<img alt="up arrow" src={polygon1}></img>
-					</button>
+						<button
+							aria-label="up arrow"
+							className="arrow-wrapper"
+							onClick={() => handleCarousel("up")}
+						>
+							<img alt="up arrow" src={polygon1}></img>
+						</button>
 
-					<div className="scroll-outer">
-						<div style={style} className="scroll-inner">
-							{newAboutHistoryArray.map((item, i) => {
-								return (
-									<div
-										aria-label={
-											i === itemIndex
-												? "selected date"
-												: "upcoming date"
-										}
-										onClick={(evt) => handleClick(evt, i)}
-										className={
-											i !== itemIndex
-												? i === prevIndex
-													? "upcoming-date deselected-date"
-													: "upcoming-date"
-												: "selected-date"
-										}
-										key={i}
-									>
-										{item[0]}
-										<br></br>
-										{item[1]}
-									</div>
-								);
-							})}
+						<div className="scroll-outer">
+							<div style={style} className="scroll-inner">
+								{newAboutHistoryArray.map((item, i) => {
+									return (
+										<div
+											aria-label={
+												i === itemIndex
+													? "selected date"
+													: "upcoming date"
+											}
+											onClick={(evt) =>
+												handleClick(evt, i)
+											}
+											className={
+												i !== itemIndex
+													? i === prevIndex
+														? "upcoming-date deselected-date"
+														: "upcoming-date"
+													: "selected-date"
+											}
+											key={i}
+										>
+											{item[0]}
+											<br></br>
+											{item[1]}
+										</div>
+									);
+								})}
+							</div>
 						</div>
+
+						<button
+							aria-label="down arrow"
+							className="arrow-wrapper"
+							onClick={() => handleCarousel("down")}
+						>
+							<img alt="down arrow" src={polygon2}></img>
+						</button>
 					</div>
 
-					<button
-						aria-label="down arrow"
-						className="arrow-wrapper"
-						onClick={() => handleCarousel("down")}
-					>
-						<img alt="down arrow" src={polygon2}></img>
-					</button>
-				</div>
+					<div className={`content-wrapper`}>
+						<div className="selected-content">
+							<div className="content-image-wrapper">
+								<img
+									alt={historyItem[3]}
+									src={historyItem[2]}
+									style={{
+										animationName:
+											fade === "out"
+												? `fade-out`
+												: `fade-in`,
+										animationDuration: `.5s`,
+										animationTimingFunction: `ease-in-out`,
+									}}
+								></img>
+							</div>
 
-				<div className={`content-wrapper`}>
-					<div className="selected-content">
-						<div className="content-image-wrapper">
-							<img
-								alt={historyItem[3]}
-								src={historyItem[2]}
+							<br />
+
+							<p
 								style={{
 									animationName:
 										fade === "out" ? `fade-out` : `fade-in`,
 									animationDuration: `.5s`,
 									animationTimingFunction: `ease-in-out`,
 								}}
-							></img>
+							>
+								{historyItem[4]}
+							</p>
 						</div>
-
-						<br />
-
-						<p
-							style={{
-								animationName:
-									fade === "out" ? `fade-out` : `fade-in`,
-								animationDuration: `.5s`,
-								animationTimingFunction: `ease-in-out`,
-							}}
-						>
-							{historyItem[4]}
-						</p>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
+			<section id="new-history-section-mobile">
+				<h2 className="header">History</h2>
+				{newAboutHistoryArray.map((item, i) => {
+					return (
+						<div key={i}>
+							<div aria-label="date" className="mobile-date">
+								{item[0] + " " + item[1]}
+							</div>
+
+							<div className="mobile-image-wrapper">
+								<img alt={item[3]} src={item[2]} />
+							</div>
+
+							<br />
+
+							<p className="mobile-paragraph">{historyItem[4]}</p>
+						</div>
+					);
+				})}
+			</section>
+		</>
 	);
 }
