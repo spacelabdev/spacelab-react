@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import LoadingSpinner from "../../../components/LoadingSpinner/LoadingSpinner";
 import STAR_ICON from "../../../assets/donateAssets/small_star.svg"
 import ROCKET_ICON_IMAGE from "../../../assets/donateAssets/icon _rocket.png"
@@ -28,6 +29,7 @@ const planId = "P-4Y256783L52659318MS5NBKY";
 
 const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
+	const history = useHistory();
 
 	useEffect(() => {
 		dispatch((state) => ({
@@ -86,14 +88,12 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 				}
 				onApprove={function (data, actions) {
 					/*TODO: Add redirect to Thank you component*/
-					alert("Thank you for your donation!");
+					history.push('/donate/success', intent);
 				}}
 				onError={function (err) {
 					/*TODO: Add redirect to Error component*/
-					alert(
-						"There was an error processing your donation. Please try again later."
-					);
-					return err;
+					window.location.href = '/donate/error';
+					// return err;
 				}}
 			/>
 		</>
