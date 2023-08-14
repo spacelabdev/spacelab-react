@@ -4,29 +4,57 @@
 
 	.slider-nav-button-container {
 		display: flex;
-		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
 		padding-top: 5px;
 		padding-bottom: 10px;
 
-		div {
-			margin: 0 auto;
+		h4{
+			margin: 0 15px 2px 5%;
+		}
+
+		#dropdown-basic,
+		#select-dropdown{
+			background-color: transparent;
+			border: none;
+			color: white;
+		}
+
+
+		#dropdown-basic:active,
+		#dropdown-basic:focus{
+			border: none;
+			outline:none;
+            box-shadow:none;
+		}
+
+		#dropdown-basic::after{
+			display: none !important; 
+		}
+
+
+		.dropdown-item {
 			font-family: "Poppins", sans-serif;
 			font-style: normal;
 			font-weight: 400;
 			font-size: 15px;
 			letter-spacing: -0.015em;
 			text-transform: uppercase;
-			color: #ffffff;
 
 			&:hover {
 				cursor: pointer;
 				border-bottom: 1px solid var(--neon-purple);
+				background-color: transparent;
+			}
+
+			&:focus {
+				background-color: transparent;
 			}
 		}
 	}
 
 	.active {
-		border-bottom: 1px solid var(--neon-purple);
+		background-color: var(--neon-purple);
 	}
 
 	.inactive {
