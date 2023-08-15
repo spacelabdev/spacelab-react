@@ -40,6 +40,7 @@
 		all: revert;
 		border: none;
 		background: none;
+		cursor: pointer;
 	}
 
 	.scroll-outer {
@@ -67,6 +68,7 @@
 		letter-spacing: 6.16px;
 		text-transform: uppercase;
 		animation: grow 0.5s ease-in-out;
+		cursor: pointer;
 	}
 
 	.deselected-date {
@@ -134,6 +136,7 @@
 		line-height: 74.586px; /* 117.188% */
 		letter-spacing: 4.137px;
 		text-transform: uppercase;
+		cursor: pointer;
 	}
 
 	@keyframes dates-scroll-down {

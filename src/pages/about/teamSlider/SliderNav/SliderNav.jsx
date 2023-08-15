@@ -1,14 +1,11 @@
-import React, { useState } from "react";
-import SliderNavLink from "./sliderNavLink";
+import React from "react";
 import PropTypes from "prop-types";
 import "./sliderNav.scss";
-import Button from "@mui/material/Button";
-import Menu from "@mui/material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { AiOutlineDown, AiOutlineRight } from "react-icons/ai";
+import { AiOutlineRight } from "react-icons/ai";
 /**
  * Renders the Nav bar for the sliders
  * @param navObjects
@@ -30,15 +27,13 @@ const SliderNav = ({
 	setShowCurrent,
 	setShowPast,
 }) => {
-	const [anchorEl, setAnchorEl] = useState(null);
-	const open = Boolean(anchorEl);
-	const handleClick = (event) => {
-		setAnchorEl(event.currentTarget);
-	};
-
 	const handleChange = (event) => {
 		const updatedStatus = event.target.value;
 		setStatus(updatedStatus);
+	};
+	const handleTeamChange = (event) => {
+		const updatedTeam = event.target.value;
+		setActive(updatedTeam);
 	};
 	const MyIcon = (props) => {
 		const { style, ...otherProps } = props;
@@ -54,38 +49,10 @@ const SliderNav = ({
 			<div className={`slider-nav-button-container`}>
 				<Toolbar>
 					<h4>Filter</h4>
-					<Button
-						id="dropdown-basic"
-						aria-controls={open ? "basic-menu" : undefined}
-						aria-haspopup="true"
-						aria-expanded={open ? "true" : undefined}
-						onClick={handleClick}
-					>
-						{open ? <AiOutlineDown /> : <AiOutlineRight />}
-					</Button>
-					<Menu
-						id="basic-menu"
-						anchorEl={anchorEl}
-						open={open}
-						MenuListProps={{
-							"aria-labelledby": "basic-button",
-						}}
-					>
-						{navObjects.map((navObject) => (
-							<SliderNavLink
-								key={`${navObject.activeFlag}`}
-								navObject={navObject}
-								activeSlide={activeSlide}
-								setActive={setActive}
-								setAnchorEl={setAnchorEl}
-								className="dropdown-item"
-							/>
-						))}
-					</Menu>
 					<FormControl
 						id="select-form"
 						sx={{
-							minWidth: 250,
+							minWidth: 200,
 						}}
 					>
 						<Select
@@ -93,13 +60,65 @@ const SliderNav = ({
 								color: "white",
 								".MuiOutlinedInput-notchedOutline": {
 									border: "none",
+									cursor: "pointer",
 								},
 								"&.Mui-focused .MuiOutlinedInput-notchedOutline":
 									{
 										border: "none",
+										cursor: "pointer",
 									},
 								"&:hover .MuiOutlinedInput-notchedOutline": {
 									border: "none",
+									cursor: "pointer",
+								},
+							}}
+							id="select-dropdown-small"
+							value={activeSlide}
+							onChange={handleTeamChange}
+							IconComponent={MyIcon}
+						>
+							<MenuItem
+								value={"All Teams"}
+								onClick={() => {
+									setActive("All Teams");
+								}}
+							>
+								{"All Teams"}
+							</MenuItem>
+							{navObjects.map((navObject, index) => (
+								<MenuItem
+									key={index}
+									value={navObject.title}
+									onClick={() => {
+										setActive(navObject.title);
+									}}
+								>
+									{navObject.title}
+								</MenuItem>
+							))}
+						</Select>
+					</FormControl>
+					<FormControl
+						id="select-form"
+						sx={{
+							minWidth: 200,
+						}}
+					>
+						<Select
+							sx={{
+								color: "white",
+								".MuiOutlinedInput-notchedOutline": {
+									border: "none",
+									cursor: "pointer",
+								},
+								"&.Mui-focused .MuiOutlinedInput-notchedOutline":
+									{
+										border: "none",
+										cursor: "pointer",
+									},
+								"&:hover .MuiOutlinedInput-notchedOutline": {
+									border: "none",
+									cursor: "pointer",
 								},
 							}}
 							id="select-dropdown"
@@ -115,7 +134,7 @@ const SliderNav = ({
 									setShowPast(false);
 								}}
 							>
-								All
+								All Team Members
 							</MenuItem>
 							<MenuItem
 								value={"current"}

@@ -9,25 +9,26 @@
 		padding-top: 5px;
 		padding-bottom: 10px;
 
-		h4{
-			margin: 0 15px 2px 5%;
+		h4 {
+			font-family: "Poppins", sans-serif;
+			margin: 0 15px 2px 0;
 		}
 
-		#dropdown-basic{
+		#dropdown-basic {
 			background-color: transparent;
 			border: none;
 			color: white;
 		}
 
 		#dropdown-basic:active,
-		#dropdown-basic:focus{
+		#dropdown-basic:focus {
 			border: none;
-			outline:none;
-            box-shadow:none;
+			outline: none;
+			box-shadow: none;
 		}
 
 		#dropdown-basic::after {
-			display: none !important; 
+			display: none !important;
 		}
 
 		.dropdown-item {
