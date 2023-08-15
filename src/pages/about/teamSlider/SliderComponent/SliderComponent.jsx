@@ -32,11 +32,8 @@ const SliderComponent = ({
 	}
 	return (
 		<div className={`team-slider-container ${active}`}>
-			{filteredMembers.map((member) => (
-				<MemberCard
-					key={`${title}-${member.fullName}`}
-					member={member}
-				/>
+			{filteredMembers.map((member, index) => (
+				<MemberCard key={index} member={member} />
 			))}
 		</div>
 	);
