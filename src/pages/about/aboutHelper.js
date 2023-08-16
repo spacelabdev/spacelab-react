@@ -2,6 +2,62 @@
  * Array of Dates and descriptions for Spacelab History timeline
  * @type {string[][]}
  */
+
+import jan2021 from "../../assets/aboutAssets/jan2021.jpeg";
+import aug2021 from "../../assets/aboutAssets/aug2021.png";
+import may2023 from "../../assets/aboutAssets/may2023.png";
+import image2 from "../../assets/homeAssets/image2.jpg";
+
+export const newAboutHistoryArray = [
+	[
+		"Jan",
+		"2021",
+		jan2021,
+		"group of people gathered around a laptop looking at something",
+		"Data Scientist Matt Paterson meets Dr. Andrew " +
+			"Vanderburg and Dr. Jessie Christiansen of CalTech to " +
+			"publish a paper on machine learning and exoplanets. " +
+			"They connect him with former classmates Ollie" +
+			"Jackson and Jon Zivku to create SpaceLab: a web " +
+			"application for space exploration.",
+	],
+	[
+		"Jan",
+		"2021",
+		image2,
+		"people in an office planning a project",
+		"SpaceLab meets with aspiring UX Designers to create " +
+			"a website for exoplanet discovery. Realizing the lack " +
+			"of cross-functional collaboration experience for early " +
+			"tech professionals, they decide to become a non-profit " +
+			"organization aiming to provide experiences for women, " +
+			"people of color, and members of the LGBTQ+ " +
+			"community.",
+	],
+	[
+		"Aug",
+		"2021",
+		aug2021,
+		"planet against a blue sky",
+		"SpaceLab launches its website and receive help " +
+			"from Meghan Slan (Director of DEIB) in becoming a non-" +
+			"profit organization with the foundation of diversity and " +
+			"inclusion. " +
+			"Currently, a team of 25 cross-functional members are " +
+			"working on SpaceLab's first project: Exoplanetarium, " +
+			"where users can explore exoplanets in the Milky Way.",
+	],
+	[
+		"May",
+		"2023",
+		may2023,
+		"planets around a star, from Spacelab's Exoplanetarium project",
+		"Exoplanetarium is launched as SpaceLab's pilot project! " +
+			"OTHER INTERESTING FACTS HERE. " +
+			"ALSO HERE.",
+	],
+];
+
 export const aboutHistoryArray = [
 	[
 		"SPACELAB 2021.01.27",
@@ -89,7 +145,6 @@ export const boardOfDirectors = {
 			portfolio: "",
 			linkedIn: "",
 			status: "current",
-
 		},
 		{
 			image: "https://imgur.com/6KnXf6X.png",
@@ -119,7 +174,7 @@ export const boardOfDirectors = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const uxDesigners = {
-	title: "ux designers",
+	title: "UX Designers",
 	members: [
 		{
 			image: "https://imgur.com/OnDOWG8.png",
@@ -357,7 +412,7 @@ export const uxDesigners = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const frontEnd = {
-	title: "front end developers",
+	title: "Frontend Developers",
 	members: [
 		{
 			image: "https://imgur.com/HVUZ6bf.png",
@@ -621,7 +676,7 @@ export const frontEnd = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const backEnd = {
-	title: "back end developers",
+	title: "Backend Developers",
 	members: [
 		{
 			image: "https://i.imgur.com/pBo2sNX.png",
@@ -779,7 +834,7 @@ export const backEnd = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const dataScience = {
-	title: "data scientists",
+	title: "Data Scientists",
 	members: [
 		{
 			image: "https://i.imgur.com/FitwR6t.png",
@@ -1026,7 +1081,7 @@ export const dataScience = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const webGL = {
-	title: "WebGL Developers",
+	title: "3D Developers",
 	members: [
 		{
 			image: "https://imgur.com/HVUZ6bf.png",
@@ -1260,7 +1315,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-			status: "current", 
+			status: "current",
 		},
 		{
 			image: "https://imgur.com/zx1ROBo.png",
@@ -1424,15 +1479,15 @@ export const teamSliderNavLinks = {
 			activeFlag: "backend",
 		},
 		{
-			title: "WebGL Developers",
+			title: "3D Developers",
 			activeFlag: "webgl",
 		},
 		{
-			title: "Designers",
+			title: "UX Designers",
 			activeFlag: "designers",
 		},
 		{
-			title: "Data Scientist",
+			title: "Data Scientists",
 			activeFlag: "datascience",
 		},
 		{

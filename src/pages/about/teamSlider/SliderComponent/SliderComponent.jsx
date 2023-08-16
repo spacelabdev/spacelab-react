@@ -11,14 +11,29 @@ import "./sliderComponent.scss";
  * @returns {JSX.Element}
  * @constructor
  */
-const SliderComponent = ({ title, members, active }) => {
+const SliderComponent = ({
+	title,
+	members,
+	active,
+	showAll,
+	showCurrent,
+	showPast,
+}) => {
+	let filteredMembers = [];
+
+	if (showAll) {
+		filteredMembers = members;
+	} else if (showCurrent) {
+		filteredMembers = members.filter(
+			(member) => member.status === "current"
+		);
+	} else if (showPast) {
+		filteredMembers = members.filter((member) => member.status === "past");
+	}
 	return (
 		<div className={`team-slider-container ${active}`}>
-			{members.map((member) => (
-				<MemberCard
-					key={`${title}-${member.fullName}`}
-					member={member}
-				/>
+			{filteredMembers.map((member, index) => (
+				<MemberCard key={index} member={member} />
 			))}
 		</div>
 	);

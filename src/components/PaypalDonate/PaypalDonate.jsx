@@ -4,6 +4,7 @@ import {
 	usePayPalScriptReducer,
 	PayPalButtons,
 } from "@paypal/react-paypal-js";
+import { useHistory } from "react-router-dom";
 import "./paypalDonate.scss";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
@@ -19,14 +20,15 @@ const recurringStyle = {
 	label: "subscribe",
 };
 
+
 /*Inputs from the client that will need to be replaced with variable props from the parent component*/
 const amount = "10";
 const currency = "USD";
 const planId = "P-4Y256783L52659318MS5NBKY";
 
 const ButtonWrapper = ({ currency, intent, showSpinner }) => {
+	const history = useHistory();
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
-	console.log("Intent", intent);
 
 	useEffect(() => {
 		dispatch({
@@ -84,16 +86,10 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 						: undefined
 				}
 				onApprove={function (data, actions) {
-					/*TODO: Add redirect to Thank you component*/
-					alert("Thank you for your donation!");
+					history.push('donate/success', intent);
 				}}
 				onError={function (err) {
-					/*TODO: Add redirect to Error component*/
-					alert(
-						"There was an error processing your donation. Please try again later."
-					);
-					console.log("Error: ", err);
-					return err;
+					window.location.href = '/donate/error';
 				}}
 			/>
 		</>

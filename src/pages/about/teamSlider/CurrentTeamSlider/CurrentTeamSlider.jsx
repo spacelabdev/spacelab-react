@@ -21,7 +21,12 @@ import {
  * @constructor
  */
 export default function CurrentTeamSlider({ toggle }) {
-	const [activeTeam, setActiveTeam] = useState("frontend");
+	const [activeTeam, setActiveTeam] = useState("All Teams");
+	const [status, setStatus] = useState("current");
+
+	const [showAll, setShowAll] = useState(false);
+	const [showCurrent, setShowCurrent] = useState(true);
+	const [showPast, setShowPast] = useState(false);
 
 	// Nav link data
 	const { currentTeams: teamLinks } = teamSliderNavLinks;
@@ -36,6 +41,16 @@ export default function CurrentTeamSlider({ toggle }) {
 	const { title: writersTitle, members: writersMembers } = writers;
 	const { title: administrationTitle, members: administrationMembers } =
 		administration;
+	const allMembers = [
+		...boardMembers,
+		...uxMembers,
+		...frontEndMembers,
+		...backEndMembers,
+		...dataScienceMembers,
+		...webGLMembers,
+		...writersMembers,
+		...administrationMembers,
+	];
 
 	return (
 		<div className={`team-slider-component-container ${toggle}`}>
@@ -43,46 +58,96 @@ export default function CurrentTeamSlider({ toggle }) {
 				navObjects={teamLinks}
 				activeSlide={activeTeam}
 				setActive={setActiveTeam}
+				status={status}
+				setStatus={setStatus}
+				setShowAll={setShowAll}
+				setShowCurrent={setShowCurrent}
+				setShowPast={setShowPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "frontend" ? "" : "hidden"}`}
+				active={`${activeTeam === "All Teams" ? "" : "hidden"}`}
+				title={"All Teams"}
+				members={allMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
+			/>
+			<SliderComponent
+				active={`${
+					activeTeam === "Frontend Developers" ? "" : "hidden"
+				}`}
 				title={frontEndTitle}
 				members={frontEndMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "backend" ? "" : "hidden"}`}
+				active={`${
+					activeTeam === "Backend Developers" ? "" : "hidden"
+				}`}
 				title={backEndTitle}
 				members={backEndMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "webgl" ? "" : "hidden"}`}
+				active={`${activeTeam === "3D Developers" ? "" : "hidden"}`}
 				title={webGLTitle}
 				members={webGLMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "designers" ? "" : "hidden"}`}
+				active={`${activeTeam === "UX Designers" ? "" : "hidden"}`}
 				title={uxTitle}
 				members={uxMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "datascience" ? "" : "hidden"}`}
+				active={`${activeTeam === "Data Scientists" ? "" : "hidden"}`}
 				title={dataScienceTitle}
 				members={dataScienceMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "writers" ? "" : "hidden"}`}
+				active={`${activeTeam === "Writers" ? "" : "hidden"}`}
 				title={writersTitle}
 				members={writersMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "board" ? "" : "hidden"}`}
+				active={`${activeTeam === "Board" ? "" : "hidden"}`}
 				title={boardTitle}
 				members={boardMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 			<SliderComponent
-				active={`${activeTeam === "administration" ? "" : "hidden"}`}
+				active={`${activeTeam === "Administration" ? "" : "hidden"}`}
 				title={administrationTitle}
 				members={administrationMembers}
+				status={status}
+				showAll={showAll}
+				showCurrent={showCurrent}
+				showPast={showPast}
 			/>
 		</div>
 	);
