@@ -1,104 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom";
-import LoadingSpinner from "../../../components/LoadingSpinner/LoadingSpinner";
-import STAR_ICON from "../../../assets/donateAssets/small_star.svg"
-import ROCKET_ICON_IMAGE from "../../../assets/donateAssets/icon _rocket.png"
-import {
-	PayPalScriptProvider,
-	usePayPalScriptReducer,
-	PayPalButtons,
-} from "@paypal/react-paypal-js";
+import React, { useState } from "react";
+import STAR_ICON from "../../../assets/donateAssets/small_star.svg";
+import ROCKET_ICON_IMAGE from "../../../assets/donateAssets/icon _rocket.png";
 import "./donatePaymentForm.scss";
-
-/*NOTE: THIS IS HOOKED UP TO A SANDBOX RIGHT NOW. TO USE LIVE, CHANGE THE CLIENT ID TO THE LIVE CLIENT ID*/
-
-/*Paypal API Parameters*/
-const clientId =
-	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
-const oneTimeStyle = { layout: "vertical", color: "black", label: "paypal" };
-const recurringStyle = {
-	layout: "vertical",
-	color: "black",
-	label: "subscribe",
-};
-
-/*Inputs from the client that will need to be replaced with variable props from the parent component*/
-const amount = "10";
-const currency = "USD";
-const planId = "P-4Y256783L52659318MS5NBKY";
-
-const ButtonWrapper = ({ currency, intent, showSpinner }) => {
-	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
-	const history = useHistory();
-
-	useEffect(() => {
-		dispatch((state) => ({
-			...state,
-			options: {
-				...state.options,
-				currency: currency,
-				intent: intent,
-			},
-		}));
-	}, [intent, currency, dispatch, options]);
-
-	return (
-		<>
-			{showSpinner && isPending && (
-				<LoadingSpinner showLoadingSpinner={true} />
-			)}
-
-			<PayPalButtons
-				style={intent === "capture" ? oneTimeStyle : recurringStyle}
-				disabled={false}
-				forceReRender={[intent, amount, currency, oneTimeStyle]}
-				fundingSource={undefined}
-				createOrder={
-					intent === "capture"
-						? (data, actions) => {
-							return actions.order
-								.create({
-									purchase_units: [
-										{
-											amount: {
-												currency_code: currency,
-												value: amount,
-											},
-										},
-									],
-								})
-								.then((orderId) => {
-									return orderId;
-								});
-						}
-						: undefined
-				}
-				createSubscription={
-					intent === "subscription"
-						? (data, actions) => {
-							return actions.subscription
-								.create({
-									plan_id: planId,
-								})
-								.then((orderId) => {
-									return orderId;
-								});
-						}
-						: undefined
-				}
-				onApprove={function (data, actions) {
-					/*TODO: Add redirect to Thank you component*/
-					history.push('/donate/success', intent);
-				}}
-				onError={function (err) {
-					/*TODO: Add redirect to Error component*/
-					window.location.href = '/donate/error';
-					// return err;
-				}}
-			/>
-		</>
-	);
-};
+import PaypalDonate from "../../../components/PaypalDonate/PaypalDonate";
 
 const options = ["One Time", "Monthly"];
 const amountOptions = [10, 25, 100];
@@ -117,8 +21,9 @@ const ToggleGroup = ({ selected, handleChange, options, name, setForm }) => {
 		<>
 			{options.map((option) => (
 				<button
-					className={`text-caption-tab custom-text ${selected === option ? "active" : ""
-						}`}
+					className={`text-caption-tab custom-text ${
+						selected === option ? "active" : ""
+					}`}
 					type="button"
 					role="tab"
 					name={name}
@@ -179,7 +84,13 @@ const RadioCard = ({ value, handleChange, checked }) => {
 	);
 };
 
-const RadioButtonGroup = ({ setAmount, name, amountOptions, amountOptions2, dType }) => {
+const RadioButtonGroup = ({
+	setAmount,
+	name,
+	amountOptions,
+	amountOptions2,
+	dType,
+}) => {
 	const [selected, setSelected] = useState("");
 	const [inputVal, setInputVal] = useState("");
 
@@ -202,25 +113,23 @@ const RadioButtonGroup = ({ setAmount, name, amountOptions, amountOptions2, dTyp
 	return (
 		<>
 			<div className="preset-amount-wrapper">
-				{dType === "One Time" ? (
-					amountOptions2.map((val, index) => (
-						< RadioCard
-							key={index}
-							value={val}
-							handleChange={handleChange}
-							checked={val + "" === selected}
-						/>
-					))
-				) : (
-					amountOptions.map((val, index) => (
-						<RadioCard
-							key={index}
-							value={val}
-							handleChange={handleChange}
-							checked={val + "" === selected}
-						/>
-					))
-				)}
+				{dType === "One Time"
+					? amountOptions2.map((val, index) => (
+							<RadioCard
+								key={index}
+								value={val}
+								handleChange={handleChange}
+								checked={val + "" === selected}
+							/>
+					  ))
+					: amountOptions.map((val, index) => (
+							<RadioCard
+								key={index}
+								value={val}
+								handleChange={handleChange}
+								checked={val + "" === selected}
+							/>
+					  ))}
 			</div>
 			{dType === "One Time" && (
 				<div className="input-container">
@@ -244,7 +153,7 @@ const RadioButtonGroup = ({ setAmount, name, amountOptions, amountOptions2, dTyp
 const DonatePaymentForm = () => {
 	const [data, setData] = useState(initData);
 	const [showForm, setShowForm] = useState(false);
-	const [donationType, setDonationType] = useState();
+	const [donationType, setDonationType] = useState("One Time Donation");
 
 	const setForm = (dType) => {
 		if (showForm && donationType === dType) {
@@ -265,10 +174,10 @@ const DonatePaymentForm = () => {
 	const { paymentFrequency } = data;
 
 	return (
-		<section id="donate-payment-wrapper">
+		<section id="donate-page-payment-wrapper">
 			<div className="donate-payment-form">
 				{/* Donate Header */}
-				<div className="donate-payment-header">
+				<div>
 					<h4 className="donate-title">HELP US MAKE AN IMPACT</h4>
 					<p className="custom-text--large">
 						Your donation funds outer-space projects for early
@@ -292,21 +201,10 @@ const DonatePaymentForm = () => {
 						amountOptions2={amountOptions2}
 						dType={data.paymentFrequency}
 					/>
-					{/*Need to leave forms this way as options is hardcoded in PayPalScriptProvider*/}
-					<PayPalScriptProvider
-						options={{
-							clientId: clientId,
-							components: "buttons",
-							currency: currency,
-							vault: true,
-						}}
-					>
-						<ButtonWrapper
-							currency={currency}
-							intent={donationType === "Recurring Donation" ? "subscription" : "capture"}
-							showSpinner={true}
-						/>
-					</PayPalScriptProvider>
+					<PaypalDonate
+						donationType={donationType}
+						showForm={showForm}
+					/>
 					<div className="icon-container">
 						<img
 							src={ROCKET_ICON_IMAGE}

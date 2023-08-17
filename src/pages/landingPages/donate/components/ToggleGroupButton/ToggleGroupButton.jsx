@@ -2,7 +2,7 @@ import "./toggleGroupButton.scss";
 
 const ToggleGroup = ({ selected, handleChange, options, name }) => {
 	return (
-		<>
+		<div className="toggle-group">
 			{options.map((option) => (
 				<button
 					className={`text-caption-tab custom-text ${
@@ -17,7 +17,7 @@ const ToggleGroup = ({ selected, handleChange, options, name }) => {
 					{option}
 				</button>
 			))}
-		</>
+		</div>
 	);
 };
 
