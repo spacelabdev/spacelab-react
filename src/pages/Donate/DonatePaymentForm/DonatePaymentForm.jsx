@@ -222,19 +222,21 @@ const RadioButtonGroup = ({ setAmount, name, amountOptions, amountOptions2, dTyp
 					))
 				)}
 			</div>
-			<div className="input-container">
-				<input
-					value={inputVal}
-					className="custom-text"
-					disabled={selected !== "Custom"}
-					onChange={handleInputChange}
-					placeholder={
-						selected !== "Custom"
-							? "$ Donation amount"
-							: "Enter custom amount"
-					}
-				/>
-			</div>
+			{dType === "One Time" && (
+				<div className="input-container">
+					<input
+						value={inputVal}
+						className="custom-text"
+						disabled={selected !== "Custom"}
+						onChange={handleInputChange}
+						placeholder={
+							selected !== "Custom"
+								? "$ Donation amount"
+								: "Enter custom amount"
+						}
+					/>
+				</div>
+			)}
 		</>
 	);
 };
@@ -290,39 +292,21 @@ const DonatePaymentForm = () => {
 						amountOptions2={amountOptions2}
 						dType={data.paymentFrequency}
 					/>
-					{showForm && <span>{donationType}</span>}
 					{/*Need to leave forms this way as options is hardcoded in PayPalScriptProvider*/}
-					{showForm && donationType === "One Time Donation" && (
-						<PayPalScriptProvider
-							options={{
-								clientId: clientId,
-								components: "buttons",
-								currency: currency,
-							}}
-						>
-							<ButtonWrapper
-								currency={currency}
-								intent={"capture"}
-								showSpinner={true}
-							/>
-						</PayPalScriptProvider>
-					)}
-					{showForm && donationType === "Recurring Donation" && (
-						<PayPalScriptProvider
-							options={{
-								clientId: clientId,
-								components: "buttons",
-								currency: currency,
-								vault: true,
-							}}
-						>
-							<ButtonWrapper
-								currency={currency}
-								intent={"subscription"}
-								showSpinner={true}
-							/>
-						</PayPalScriptProvider>
-					)}
+					<PayPalScriptProvider
+						options={{
+							clientId: clientId,
+							components: "buttons",
+							currency: currency,
+							vault: true,
+						}}
+					>
+						<ButtonWrapper
+							currency={currency}
+							intent={donationType === "Recurring Donation" ? "subscription" : "capture"}
+							showSpinner={true}
+						/>
+					</PayPalScriptProvider>
 					<div className="icon-container">
 						<img
 							src={ROCKET_ICON_IMAGE}
