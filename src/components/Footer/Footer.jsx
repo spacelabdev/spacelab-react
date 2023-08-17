@@ -2,11 +2,9 @@ import React from "react";
 import "./footer.scss";
 import { Link } from "react-router-dom";
 import { IconContext } from "react-icons";
-import {
-	AiOutlineLinkedin,
-	AiOutlineInstagram,
-	AiOutlineTwitter,
-} from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
+import { BsMedium } from "react-icons/bs";
 import AutoScroll from "../AutoScroll/AutoScroll";
 import NewsletterSubscribe from "../formComponents/NewsletterSubscribe/NewsletterSubscribe";
 
@@ -97,8 +95,17 @@ export default function Footer() {
 							target="_blank"
 							rel="noreferrer"
 						>
-							<AiOutlineLinkedin />
+							<FaLinkedin />
 						</a>
+
+						<a
+							href="https://medium.com/@spacelabdev"
+							target="_blank"
+							rel="noreferrer"
+						>
+							<BsMedium />
+						</a>
+
 						<a
 							href="https://www.instagram.com/spacelab_space"
 							target="_blank"
@@ -114,7 +121,7 @@ export default function Footer() {
 							<AiOutlineTwitter />
 						</a>
 					</IconContext.Provider>
-					<p>@2022 by SpaceLab</p>
+					<p>@2023 by SpaceLab</p>
 				</center>
 			</div>
 		</section>
