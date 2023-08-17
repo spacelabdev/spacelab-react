@@ -103,7 +103,8 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
  * @returns {JSX.Element}
  * @constructor
  */
-export default function PaypalDonate({ donationType, showForm }) {
+export default function PaypalDonate({ donationType, showForm, formData }) {
+	console.log(formData);
 	return (
 		<div className="paypal-buttons-wrap">
 			{showForm && donationType === "One Time Donation" && (
