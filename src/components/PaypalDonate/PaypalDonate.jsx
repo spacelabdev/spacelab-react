@@ -68,7 +68,7 @@ const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 				intent: intent,
 			},
 		});
-	}, [intent, showSpinner]);
+	}, [intent, showSpinner, formData.currency]);
 
 	useEffect(() => {
 		const plan = planIds.find((e) => e.amount === formData.amount);
