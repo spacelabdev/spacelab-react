@@ -8,23 +8,8 @@ const options = ["One Time", "Monthly"];
 const amountOptions = [10, 25, 100];
 const amountOptions2 = [10, 25, 100, "Custom"];
 
-const initData = {
-	paymentFrequency: options[0],
-	amount: 0,
-	recoveryFee: false,
-	description: "",
-};
-
 // Donation Type Toggle
-const ToggleGroup = ({
-	selected,
-	handleChange,
-	options,
-	name,
-	setForm,
-	// setData,
-	// data,
-}) => {
+const ToggleGroup = ({ selected, handleChange, options, name, setForm }) => {
 	return (
 		<>
 			{options.map((option) => (
@@ -40,11 +25,9 @@ const ToggleGroup = ({
 						handleChange({ name, value: option });
 						if (option === `One Time`) {
 							setForm("One Time Donation");
-							// setData({ paymentFrequency: "One Time", ...data });
 						}
 						if (option === "Monthly") {
 							setForm("Recurring Donation");
-							// setData({ paymentFrequency: "Monthly", ...data });
 						}
 					}}
 				>
@@ -162,6 +145,11 @@ const RadioButtonGroup = ({
 };
 
 const DonatePaymentForm = () => {
+	const initData = {
+		paymentFrequency: options[0],
+		amount: 10,
+		currency: "USD",
+	};
 	const [data, setData] = useState(initData);
 	const [showForm, setShowForm] = useState(true);
 	const [donationType, setDonationType] = useState("One Time Donation");
@@ -204,8 +192,6 @@ const DonatePaymentForm = () => {
 						selected={paymentFrequency}
 						handleChange={handleChange}
 						setForm={setForm}
-						// setData={setData}
-						// data={data}
 					/>
 					<RadioButtonGroup
 						name="amount"
@@ -213,8 +199,6 @@ const DonatePaymentForm = () => {
 						amountOptions={amountOptions}
 						amountOptions2={amountOptions2}
 						dType={data.paymentFrequency}
-						// setData={setData}
-						// data={data}
 					/>
 					<PaypalDonate
 						donationType={donationType}
