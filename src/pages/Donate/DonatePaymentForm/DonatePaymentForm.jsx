@@ -30,7 +30,7 @@ const ToggleGroup = ({ selected, handleChange, options, name, setForm }) => {
 					key={option}
 					onClick={(e) => {
 						handleChange({ name, value: option });
-						if (option === "One Time") {
+						if (option === `One Time`) {
 							setForm("One Time Donation");
 						}
 						if (option === "Monthly") {
@@ -72,11 +72,12 @@ const RadioCard = ({ value, handleChange, checked }) => {
 				htmlFor={`selection_preset-amounts_${value}`}
 			>
 				{value === "Custom" ? (
-					value
+					<>
+						<span className="radio-input-span">{value}</span>
+					</>
 				) : (
 					<>
-						${value}
-						<span className="radio-input-span">USD</span>
+						<span className="radio-input-span">{`$${value}`}</span>
 					</>
 				)}
 			</label>
@@ -152,7 +153,7 @@ const RadioButtonGroup = ({
 
 const DonatePaymentForm = () => {
 	const [data, setData] = useState(initData);
-	const [showForm, setShowForm] = useState(false);
+	const [showForm, setShowForm] = useState(true);
 	const [donationType, setDonationType] = useState("One Time Donation");
 
 	const setForm = (dType) => {
@@ -204,6 +205,7 @@ const DonatePaymentForm = () => {
 					<PaypalDonate
 						donationType={donationType}
 						showForm={showForm}
+						formData={data}
 					/>
 					<div className="icon-container">
 						<img

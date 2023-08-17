@@ -23,7 +23,7 @@ const RadioButtonGroup = ({ setAmount, name, options }) => {
 	};
 
 	return (
-		<>
+		<div className="radio-buttons">
 			<div className="preset-amount-wrapper">
 				{options.map((val, index) => (
 					<RadioCard
@@ -47,7 +47,7 @@ const RadioButtonGroup = ({ setAmount, name, options }) => {
 					}
 				/>
 			</div>
-		</>
+		</div>
 	);
 };
 

@@ -16,7 +16,7 @@
 		margin: 0 auto;
 		position: relative;
 		min-inline-size: min-content;
-		background-color: red;
+		// background-color: red;
 
 		@media (min-width: 767px) {
 			padding: 2rem 0;
@@ -28,7 +28,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: calc(0.5 * var(--spacing));
-		background-color: blue;
+		// background-color: blue;
 		align-items: center;
 
 		@media (min-width: 1500px) {
@@ -58,8 +58,8 @@
 	}
 	.custom-text {
 		font-family: "Lato", sans-serif;
-		font-size: 1.125rem;
-		line-height: 0.75;
+		font-size: 1.2rem;
+		line-height: 1.2rem;
 
 		@media (min-width: 767px) {
 			font-size: 1.5rem;
@@ -67,7 +67,7 @@
 	}
 	.custom-text--large {
 		font-family: "Lato", sans-serif;
-		font-size: 0.5rem;
+		font-size: 1rem;
 
 		@media (min-width: 767px) {
 			font-size: 1.5rem;
@@ -117,15 +117,18 @@
 
 	// Donation Type Toggle
 	.tab-group-container {
-		width: 50%;
-		background-color: yellow;
+		width: 100%;
+		// background-color: yellow;
+		@media (min-width: 767px) {
+			width: 50%;
+		}
 	}
 
 	.tab-group {
 		display: flex;
 		align-items: stretch;
 		justify-content: flex-start;
-		flex-wrap: wrap;
+		// flex-wrap: wrap;
 		border-radius: var(--large-btn-radius);
 		background-color: var(--secondary-background-color);
 	}
@@ -164,39 +167,48 @@
 	// radio group button
 	.preset-amount-wrapper {
 		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		flex-direction: row;
+		justify-content: center;
+		// align-items: center;
 		flex-wrap: wrap;
+		// background-color: green;
 	}
 
 	.radio-btn-input {
-		position: absolute;
-		clip: rect(0px, 0px, 0px, 0px);
-		pointer-events: none;
-		width: 1px;
-		height: 1px;
+		display: none;
+		// position: absolute;
+		// clip: rect(0px, 0px, 0px, 0px);
+		// pointer-events: none;
+		// width: 1px;
+		// height: 1px;
 	}
 
 	.radio-input-label {
-		font-weight: bold;
-		color: var(--primary-text-color);
+		// font-weight: bold;
+		// color: var(--primary-text-color);
 		background-color: var(--secondary-background-color);
-		width: 45%;
-		min-height: 4.5em;
+		// width: 45%;
+		// min-height: 4.5em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
-		margin-top: 1rem;
-		margin-bottom: 0;
-		position: relative;
+		// width: 25%;
+		padding: 1rem 1rem;
+		margin: 0.5rem 10px;
+		// margin-top: 1rem;
+		// margin-bottom: 0;
+		// position: relative;
 		border-radius: 15px;
-		border: none;
+		// border: none;
+		cursor: pointer;
 
 		@media (min-width: 767px) {
-			width: 23%;
+			padding: 1rem 1rem;
+			margin: 0.5rem 10px;
+			// width: 23%;
 			margin-top: 0;
-			min-height: 3em;
+			// min-height: 3em;
 		}
 	}
 
@@ -207,13 +219,14 @@
 
 	.radio-input-span {
 		color: var(--secondary-text-color);
-		font-size: 19px;
-		line-height: 24px;
-		font-weight: 100;
-		margin-top: 0.5rem;
+		font-size: 18px;
+		line-height: 18px;
+		// font-weight: 100;
+		// margin-top: 0.5rem;
 
 		@media (min-width: 767px) {
-			font-size: 21px;
+			font-size: 20px;
+			line-height: 20px;
 		}
 	}
 
