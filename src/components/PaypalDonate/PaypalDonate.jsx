@@ -57,9 +57,7 @@ const recurringStyle = {
 const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 	const history = useHistory();
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
-	const [planId, setPlanId] = useState(
-		planIds.find((e) => e.amount === formData.amount).planId
-	);
+	const [planId, setPlanId] = useState("P-4Y256783L52659318MS5NBKY");
 
 	useEffect(() => {
 		dispatch({
@@ -73,7 +71,8 @@ const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 	}, [intent, showSpinner]);
 
 	useEffect(() => {
-		setPlanId(planIds.find((e) => e.amount === formData.amount).planId);
+		const plan = planIds.find((e) => e.amount === formData.amount);
+		setPlanId(plan !== undefined ? plan.planId : "");
 	}, [formData]);
 
 	return (
@@ -117,7 +116,8 @@ const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 						? (data, actions) => {
 								return actions.subscription
 									.create({
-										plan_id: planId,
+										plan_id:
+											planId !== undefined ? planId : "",
 									})
 									.then((orderId) => {
 										return orderId;
@@ -145,7 +145,6 @@ const ButtonWrapper = ({ intent, showSpinner, formData }) => {
  * @constructor
  */
 export default function PaypalDonate({ donationType, showForm, formData }) {
-	console.log(formData);
 	return (
 		<div className="paypal-buttons-wrap">
 			{/*Need to leave forms this way as options is hardcoded in PayPalScriptProvider*/}

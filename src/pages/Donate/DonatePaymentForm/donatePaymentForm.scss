@@ -16,7 +16,6 @@
 		margin: 0 auto;
 		position: relative;
 		min-inline-size: min-content;
-		// background-color: red;
 
 		@media (min-width: 767px) {
 			padding: 2rem 0;
@@ -28,7 +27,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: calc(0.5 * var(--spacing));
-		// background-color: blue;
 		align-items: center;
 
 		@media (min-width: 1500px) {
@@ -63,6 +61,7 @@
 
 		@media (min-width: 767px) {
 			font-size: 1.5rem;
+			line-height: 1.5rem;
 		}
 	}
 	.custom-text--large {
@@ -71,6 +70,7 @@
 
 		@media (min-width: 767px) {
 			font-size: 1.5rem;
+			line-height: 1.5rem;
 		}
 	}
 
@@ -118,9 +118,8 @@
 	// Donation Type Toggle
 	.tab-group-container {
 		width: 100%;
-		// background-color: yellow;
 		@media (min-width: 767px) {
-			width: 50%;
+			width: 80%;
 		}
 	}
 
@@ -128,7 +127,6 @@
 		display: flex;
 		align-items: stretch;
 		justify-content: flex-start;
-		// flex-wrap: wrap;
 		border-radius: var(--large-btn-radius);
 		background-color: var(--secondary-background-color);
 	}
@@ -141,10 +139,6 @@
 		border: none;
 		transition: background-color 1s ease-out;
 		text-transform: none;
-
-		@media (min-width: 767px) {
-			// padding: 1.25rem 3rem;
-		}
 
 		&:hover {
 			background-color: var(--secondary-background-color);
@@ -169,46 +163,28 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		// align-items: center;
 		flex-wrap: wrap;
-		// background-color: green;
 	}
 
 	.radio-btn-input {
 		display: none;
-		// position: absolute;
-		// clip: rect(0px, 0px, 0px, 0px);
-		// pointer-events: none;
-		// width: 1px;
-		// height: 1px;
 	}
 
 	.radio-input-label {
-		// font-weight: bold;
-		// color: var(--primary-text-color);
 		background-color: var(--secondary-background-color);
-		// width: 45%;
-		// min-height: 4.5em;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
-		// width: 25%;
 		padding: 1rem 1rem;
 		margin: 0.5rem 10px;
-		// margin-top: 1rem;
-		// margin-bottom: 0;
-		// position: relative;
 		border-radius: 15px;
-		// border: none;
 		cursor: pointer;
 
 		@media (min-width: 767px) {
 			padding: 1rem 1rem;
 			margin: 0.5rem 10px;
-			// width: 23%;
 			margin-top: 0;
-			// min-height: 3em;
 		}
 	}
 
