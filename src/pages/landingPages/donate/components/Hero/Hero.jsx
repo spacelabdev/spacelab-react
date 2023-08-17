@@ -7,6 +7,7 @@ const Hero = () => {
 	return (
 		<>
 			<nav className="donate-nav">
+				{/*Test */}
 				<div className="nav-wrapper">
 					<div className="logo-container">
 						<Link
