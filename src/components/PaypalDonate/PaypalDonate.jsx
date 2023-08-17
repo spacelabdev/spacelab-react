@@ -20,7 +20,6 @@ const recurringStyle = {
 	label: "subscribe",
 };
 
-
 /*Inputs from the client that will need to be replaced with variable props from the parent component*/
 const amount = "10";
 const currency = "USD";
@@ -86,10 +85,10 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 						: undefined
 				}
 				onApprove={function (data, actions) {
-					history.push('donate/success', intent);
+					history.push("donate/success", intent);
 				}}
 				onError={function (err) {
-					window.location.href = '/donate/error';
+					window.location.href = "/donate/error";
 				}}
 			/>
 		</>
@@ -104,39 +103,9 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
  * @returns {JSX.Element}
  * @constructor
  */
-export default function PaypalDonate(props) {
-	const [showForm, setShowForm] = useState(false);
-	const [donationType, setDonationType] = useState();
-
-	const setForm = (dType) => {
-		if (showForm && donationType === dType) {
-			setShowForm(false);
-		} else {
-			setShowForm(true);
-			setDonationType(dType);
-		}
-	};
-
+export default function PaypalDonate({ donationType, showForm }) {
 	return (
 		<div className="paypal-buttons-wrap">
-			<span style={{ margin: "1rem 0" }}>Choose A Donation Option</span>
-			<button
-				onClick={() => {
-					setForm("One Time Donation");
-				}}
-			>
-				One Time Donation
-			</button>
-			<span style={{ margin: "1rem 0" }}>Or</span>
-			<button
-				style={{ marginBottom: "1rem" }}
-				onClick={() => {
-					setForm("Recurring Donation");
-				}}
-			>
-				Recurring Donation
-			</button>
-			{showForm && <span>{donationType}</span>}
 			{/*Need to leave forms this way as options is hardcoded in PayPalScriptProvider*/}
 			{showForm && donationType === "One Time Donation" && (
 				<div className="paypal-buttons">
