@@ -34,7 +34,7 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 	return (
 		<div className="newsletter-subscribe">
 			<div className="inner-wrap">
-				<h4>Subscribe to our newsletter</h4>
+				<h4>Subscribe to Our Newsletter</h4>
 				<p>
 					Sign up to learn about the latest discoveries, news and
 					more! Delivered weekly.
