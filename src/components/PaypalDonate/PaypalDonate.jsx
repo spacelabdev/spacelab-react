@@ -149,39 +149,35 @@ export default function PaypalDonate({ donationType, showForm, formData }) {
 		<div className="paypal-buttons-wrap">
 			{/*Need to leave forms this way as options is hardcoded in PayPalScriptProvider*/}
 			{showForm && donationType === "One Time Donation" && (
-				<div className="paypal-buttons">
-					<PayPalScriptProvider
-						options={{
-							clientId: clientId,
-							components: "buttons",
-							currency: formData.currency,
-						}}
-					>
-						<ButtonWrapper
-							intent={"capture"}
-							showSpinner={true}
-							formData={formData}
-						/>
-					</PayPalScriptProvider>
-				</div>
+				<PayPalScriptProvider
+					options={{
+						clientId: clientId,
+						components: "buttons",
+						currency: formData.currency,
+					}}
+				>
+					<ButtonWrapper
+						intent={"capture"}
+						showSpinner={true}
+						formData={formData}
+					/>
+				</PayPalScriptProvider>
 			)}
 			{showForm && donationType === "Recurring Donation" && (
-				<div className="paypal-buttons">
-					<PayPalScriptProvider
-						options={{
-							clientId: clientId,
-							components: "buttons",
-							currency: formData.currency,
-							vault: true,
-						}}
-					>
-						<ButtonWrapper
-							intent={"subscription"}
-							showSpinner={true}
-							formData={formData}
-						/>
-					</PayPalScriptProvider>
-				</div>
+				<PayPalScriptProvider
+					options={{
+						clientId: clientId,
+						components: "buttons",
+						currency: formData.currency,
+						vault: true,
+					}}
+				>
+					<ButtonWrapper
+						intent={"subscription"}
+						showSpinner={true}
+						formData={formData}
+					/>
+				</PayPalScriptProvider>
 			)}
 		</div>
 	);
