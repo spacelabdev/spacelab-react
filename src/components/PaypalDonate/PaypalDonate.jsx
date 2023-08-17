@@ -8,11 +8,45 @@ import { useHistory } from "react-router-dom";
 import "./paypalDonate.scss";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
-/*NOTE: THIS IS HOOKED UP TO A SANDBOX RIGHT NOW. TO USE LIVE, CHANGE THE CLIENT ID TO THE LIVE CLIENT ID*/
+/*Live ClientId*/
+// const clientId =
+// 	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
 
-/*Paypal API Parameters*/
+/*Live Plan Id's*/
+// const planIds = [
+// 	{
+// 		amount: "10",
+// 		planId: "P-7XE10582DY6151643MS5LJCY",
+// 	},
+// 	{
+// 		amount: "25",
+// 		planId: "P-5E091476E6266123UMTPJLGI",
+// 	},
+// 	{
+// 		amount: "100",
+// 		planId: "P-93969204GM7400705MTPJL2A",
+// 	},
+// ];
+
+/*Sandbox ClientId*/
 const clientId =
 	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
+/*Sandbox Plan Id's*/
+const planIds = [
+	{
+		amount: 10,
+		planId: "P-4Y256783L52659318MS5NBKY",
+	},
+	{
+		amount: 25,
+		planId: "P-2L2687870R001935CMTPKE4Q",
+	},
+	{
+		amount: 100,
+		planId: "P-8VD11280BA252920MMTPKFTI",
+	},
+];
+
 const oneTimeStyle = { layout: "vertical", color: "black", label: "paypal" };
 const recurringStyle = {
 	layout: "vertical",
@@ -20,27 +54,11 @@ const recurringStyle = {
 	label: "subscribe",
 };
 
-/*Plan Id's from Paypal*/
-const planIds = [
-	{
-		amount: 10,
-		planId: "P-7XE10582DY6151643MS5LJCY",
-	},
-	{
-		amount: 25,
-		planId: "P-5E091476E6266123UMTPJLGI",
-	},
-	{
-		amount: 100,
-		planId: "P-93969204GM7400705MTPJL2A",
-	},
-];
-
 const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 	const history = useHistory();
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 	const [planId, setPlanId] = useState(
-		planIds.find((e) => e.amount === formData.amount)
+		planIds.find((e) => e.amount === formData.amount).planId
 	);
 
 	useEffect(() => {
@@ -55,7 +73,7 @@ const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 	}, [intent, showSpinner]);
 
 	useEffect(() => {
-		setPlanId(planIds.find((e) => e.amount === formData.amount));
+		setPlanId(planIds.find((e) => e.amount === formData.amount).planId);
 	}, [formData]);
 
 	return (
@@ -111,7 +129,7 @@ const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 					history.push("donate/success", intent);
 				}}
 				onError={function (err) {
-					// window.location.href = "/donate/error";
+					window.location.href = "/donate/error";
 				}}
 			/>
 		</>
