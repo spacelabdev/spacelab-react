@@ -5,133 +5,139 @@ import polygon2 from "../../../assets/aboutAssets/polygon2.svg";
 import "./History.scss";
 
 export default function History() {
-	const [itemIndex, setItemIndex] = useState(0);
-	const [historyItem, setHistoryItem] = useState(
-		newAboutHistoryArray[itemIndex]
-	);
-	const [scrollPosition, setScrollPosition] = useState(0);
-	const [style, setStyle] = useState({ top: 0 });
-	const [prevIndex, setPrevIndex] = useState(0);
-	const [fade, setFade] = useState(null);
+    const [itemIndex, setItemIndex] = useState(0);
+    const [historyItem, setHistoryItem] = useState(
+        newAboutHistoryArray[itemIndex]
+    );
+    const [scrollPosition, setScrollPosition] = useState(0);
+    const [style, setStyle] = useState({ top: 0 });
+    const [prevIndex, setPrevIndex] = useState(0);
+    const [fade, setFade] = useState(null);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Initialize based on current screen width
 
-	const dateHeight = 150;
+    // set date hight pixels based on whether mobile version or desktop version
+    const dateHeight = isMobile ? 70 : 150;
 
-	useEffect(() => {
-		setHistoryItem(newAboutHistoryArray[itemIndex]);
-	}, [itemIndex]);
+    useEffect(() => {
+        setHistoryItem(newAboutHistoryArray[itemIndex]);
+    }, [itemIndex]);
 
-	useEffect(() => {
-		setStyle({
-			top: `${scrollPosition}px`,
-		});
-	}, [scrollPosition]);
+    useEffect(() => {
+        setStyle({
+            top: `${scrollPosition}px`,
+        });
+    }, [scrollPosition]);
 
-	function scrollOne(scrollDirection) {
-		setStyle({
-			// from current scrollPosition...
-			top: `${scrollPosition}px`,
-			// if scrollDirection is negative, scroll down, otherwise scroll up
-			animationName:
-				scrollDirection < 0 ? "dates-scroll-down" : "dates-scroll-up",
-			animationDuration: `.5s`,
-			animationTimingFunction: `ease-in-out`,
-		});
-		// after scroll animation completes, update scrollPosition to selected value
-		setTimeout(() => {
-			setScrollPosition(scrollPosition + dateHeight * scrollDirection);
-		}, 499);
-	}
+    function scrollOne(scrollDirection) {
+        setStyle({
+            // from current scrollPosition...
+            top: `${scrollPosition}px`,
+            // if scrollDirection is negative, scroll down, otherwise scroll up
+            animationName:
+                scrollDirection < 0 ? 
+                    isMobile ? 
+                    "dates-scroll-down-mobile" : "dates-scroll-down" 
+                : isMobile ? 
+                    "dates-scroll-up-mobile": "dates-scroll-up",
+            animationDuration: `.5s`,
+            animationTimingFunction: `ease-in-out`,
+        });
+        // after scroll animation completes, update scrollPosition to selected value
+        setTimeout(() => {
+            setScrollPosition(scrollPosition + dateHeight * scrollDirection);
+        }, 499);
+    }
 
-	function handleCarousel(direction) {
-		setFade("out");
-		setPrevIndex(itemIndex);
+    function handleCarousel(direction) {
+        setFade("out");
+        setPrevIndex(itemIndex);
 
-		if (direction === "up") {
-			// if at top already, scroll to end
-			if (itemIndex === 0) {
-				//initiate scrolling animation from current scrollPosition
-				setStyle({
-					top: `${scrollPosition}px`,
-					animationName: `top-to-bottom`,
-					animationDuration: `.5s`,
-					animationTimingFunction: `ease-in-out`,
-				});
-				// after scroll animation is complete, set new position
-				setTimeout(() => {
-					setScrollPosition(-450);
-				}, 499);
-			} else {
-				//if NOT at top already, initiate scroll up
-				scrollOne(1);
-			}
-		} else if (direction === "down") {
-			// if at end already, scroll to top
-			if (itemIndex === newAboutHistoryArray.length - 1) {
-				//initiate scrolling animation from current scrollPosition
-				setStyle({
-					top: `${scrollPosition}px`,
-					animationName: `bottom-to-top`,
-					animationDuration: `.5s`,
-					animationTimingFunction: `ease-in-out`,
-				});
-				// after scroll animation is complete, set new position
-				setTimeout(() => {
-					setScrollPosition(0);
-				}, 499);
-			} else {
-				//if NOT at end already, initiate scroll down
-				scrollOne(-1);
-			}
-		}
-		// as scroll is happening, fade into newly selected image/text
-		setTimeout(() => {
-			if (direction === "up") {
-				setItemIndex(
-					itemIndex === 0
-						? newAboutHistoryArray.length - 1
-						: itemIndex - 1
-				);
-			} else if (direction === "down") {
-				setItemIndex(
-					itemIndex === newAboutHistoryArray.length - 1
-						? 0
-						: itemIndex + 1
-				);
-			}
-			setFade("in");
-		}, 250);
-	}
+        if (direction === "up") {
+            // if at top already, scroll to end
+            if (itemIndex === 0) {
+                //initiate scrolling animation from current scrollPosition
+                setStyle({
+                    top: `${scrollPosition}px`,
+                    animationName: isMobile ? `top-to-bottom-mobile` : `top-to-bottom`,
+                    animationDuration: `.5s`,
+                    animationTimingFunction: `ease-in-out`,
+                });
+                // after scroll animation is complete, set new position
+                setTimeout(() => {
+                    isMobile ? setScrollPosition(-210) : setScrollPosition(-450);
+                }, 499);
+            } else {
+                //if NOT at top already, initiate scroll up
+                scrollOne(1);
+            }
+        } else if (direction === "down") {
+            // if at end already, scroll to top
+            if (itemIndex === newAboutHistoryArray.length - 1) {
+                //initiate scrolling animation from current scrollPosition
+                setStyle({
+                    top: `${scrollPosition}px`,
+                    animationName: isMobile ? `bottom-to-top-mobile` : `bottom-to-top`,
+                    animationDuration: `.5s`,
+                    animationTimingFunction: `ease-in-out`,
+                });
+                // after scroll animation is complete, set new position
+                setTimeout(() => {
+                    setScrollPosition(0);
+                }, 499);
+            } else {
+                //if NOT at end already, initiate scroll down
+                scrollOne(-1);
+            }
+        }
+        // as scroll is happening, fade into newly selected image/text
+        setTimeout(() => {
+            if (direction === "up") {
+                setItemIndex(
+                    itemIndex === 0
+                        ? newAboutHistoryArray.length - 1
+                        : itemIndex - 1
+                );
+            } else if (direction === "down") {
+                setItemIndex(
+                    itemIndex === newAboutHistoryArray.length - 1
+                        ? 0
+                        : itemIndex + 1
+                );
+            }
+            setFade("in");
+        }, 250);
+    }
 
-	function handleClick(evt, idx) {
-		// no action if clicking on already selected date
-		if (itemIndex !== idx) {
-			// scroll down one
-			if (idx - itemIndex === 1) {
-				handleCarousel("down");
-			}
-			//scroll down two
-			if (idx - itemIndex === 2) {
-				setFade("out");
-				setPrevIndex(itemIndex);
-				//initiate scrolling animation from current scrollPosition
-				setStyle({
-					top: `${scrollPosition}px`,
-					animationName: `scroll-down-two`,
-					animationDuration: `.5s`,
-					animationTimingFunction: `ease-in-out`,
-				});
-				setTimeout(() => {
-					setScrollPosition(scrollPosition - dateHeight * 2);
-				}, 499);
-				setTimeout(() => {
-					setItemIndex(idx);
-					setFade("in");
-				}, 500);
-			}
-		}
-	}
+    function handleClick(evt, idx) {
+        // no action if clicking on already selected date
+        if (itemIndex !== idx) {
+            // scroll down one
+            if (idx - itemIndex === 1) {
+                handleCarousel("down");
+            }
+            //scroll down two
+            if (idx - itemIndex === 2) {
+                setFade("out");
+                setPrevIndex(itemIndex);
+                //initiate scrolling animation from current scrollPosition
+                setStyle({
+                    top: `${scrollPosition}px`,
+                    animationName: isMobile ? `scroll-down-two-mobile` : `scroll-down-two`,
+                    animationDuration: `.5s`,
+                    animationTimingFunction: `ease-in-out`,
+                });
+                setTimeout(() => {
+                    setScrollPosition(scrollPosition - dateHeight * 2);
+                }, 499);
+                setTimeout(() => {
+                    setItemIndex(idx);
+                    setFade("in");
+                }, 500);
+            }
+        }
+    }
 
-	return (
+    return (
 		<>
 			<section id="new-history-section">
 				<h2 className="header">History</h2>
@@ -159,9 +165,7 @@ export default function History() {
 													? "selected date"
 													: "upcoming date"
 											}
-											onClick={(evt) =>
-												handleClick(evt, i)
-											}
+											onClick={(evt) => handleClick(evt, i)}
 											className={
 												i !== itemIndex
 													? i === prevIndex
@@ -197,9 +201,7 @@ export default function History() {
 									src={historyItem[2]}
 									style={{
 										animationName:
-											fade === "out"
-												? `fade-out`
-												: `fade-in`,
+											fade === "out" ? `fade-out` : `fade-in`,
 										animationDuration: `.5s`,
 										animationTimingFunction: `ease-in-out`,
 									}}
@@ -222,7 +224,7 @@ export default function History() {
 					</div>
 				</div>
 			</section>
-			<section id="new-history-section-mobile">
+			{/* <section id="new-history-section-mobile">
 				<h2 className="header">History</h2>
 				{newAboutHistoryArray.map((item, i) => {
 					return (
@@ -241,7 +243,7 @@ export default function History() {
 						</div>
 					);
 				})}
-			</section>
+			</section> */}
 		</>
 	);
 }
