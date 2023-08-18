@@ -8,11 +8,46 @@ import { useHistory } from "react-router-dom";
 import "./paypalDonate.scss";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
-/*NOTE: THIS IS HOOKED UP TO A SANDBOX RIGHT NOW. TO USE LIVE, CHANGE THE CLIENT ID TO THE LIVE CLIENT ID*/
+/*Do Not uncomment this code until ready to push changes live*/
+/*Live ClientId*/
+// const clientId =
+// 	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
 
-/*Paypal API Parameters*/
+/*Live Plan Id's*/
+// const planIds = [
+// 	{
+// 		amount: "10",
+// 		planId: "P-7XE10582DY6151643MS5LJCY",
+// 	},
+// 	{
+// 		amount: "25",
+// 		planId: "P-5E091476E6266123UMTPJLGI",
+// 	},
+// 	{
+// 		amount: "100",
+// 		planId: "P-93969204GM7400705MTPJL2A",
+// 	},
+// ];
+
+/*Sandbox ClientId*/
 const clientId =
 	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
+/*Sandbox Plan Id's*/
+const planIds = [
+	{
+		amount: 10,
+		planId: "P-4Y256783L52659318MS5NBKY",
+	},
+	{
+		amount: 25,
+		planId: "P-2L2687870R001935CMTPKE4Q",
+	},
+	{
+		amount: 100,
+		planId: "P-8VD11280BA252920MMTPKFTI",
+	},
+];
+
 const oneTimeStyle = { layout: "vertical", color: "black", label: "paypal" };
 const recurringStyle = {
 	layout: "vertical",
@@ -20,37 +55,41 @@ const recurringStyle = {
 	label: "subscribe",
 };
 
-
-/*Inputs from the client that will need to be replaced with variable props from the parent component*/
-const amount = "10";
-const currency = "USD";
-const planId = "P-4Y256783L52659318MS5NBKY";
-
-const ButtonWrapper = ({ currency, intent, showSpinner }) => {
+const ButtonWrapper = ({ intent, showSpinner, formData }) => {
 	const history = useHistory();
 	const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
+	const [planId, setPlanId] = useState("P-4Y256783L52659318MS5NBKY");
 
 	useEffect(() => {
 		dispatch({
 			type: "resetOptions",
 			value: {
 				...options,
-				currency: currency,
+				currency: formData.currency,
 				intent: intent,
 			},
 		});
-	}, [intent, currency, showSpinner]);
+	}, [intent, showSpinner, formData.currency]);
+
+	useEffect(() => {
+		const plan = planIds.find((e) => e.amount === formData.amount);
+		setPlanId(plan !== undefined ? plan.planId : "");
+	}, [formData]);
 
 	return (
 		<>
 			{showSpinner && isPending && (
 				<LoadingSpinner showLoadingSpinner={true} />
 			)}
-
 			<PayPalButtons
 				style={intent === "capture" ? oneTimeStyle : recurringStyle}
 				disabled={false}
-				forceReRender={[intent, amount, currency, oneTimeStyle]}
+				forceReRender={[
+					intent,
+					formData.amount,
+					formData.currency,
+					oneTimeStyle,
+				]}
 				fundingSource={undefined}
 				createOrder={
 					intent === "capture"
@@ -60,8 +99,9 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 										purchase_units: [
 											{
 												amount: {
-													currency_code: currency,
-													value: amount,
+													currency_code:
+														formData.currency,
+													value: formData.amount,
 												},
 											},
 										],
@@ -77,7 +117,8 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 						? (data, actions) => {
 								return actions.subscription
 									.create({
-										plan_id: planId,
+										plan_id:
+											planId !== undefined ? planId : "",
 									})
 									.then((orderId) => {
 										return orderId;
@@ -86,10 +127,10 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
 						: undefined
 				}
 				onApprove={function (data, actions) {
-					history.push('donate/success', intent);
+					history.push("donate/success", intent);
 				}}
 				onError={function (err) {
-					window.location.href = '/donate/error';
+					window.location.href = "/donate/error";
 				}}
 			/>
 		</>
@@ -104,74 +145,40 @@ const ButtonWrapper = ({ currency, intent, showSpinner }) => {
  * @returns {JSX.Element}
  * @constructor
  */
-export default function PaypalDonate(props) {
-	const [showForm, setShowForm] = useState(false);
-	const [donationType, setDonationType] = useState();
-
-	const setForm = (dType) => {
-		if (showForm && donationType === dType) {
-			setShowForm(false);
-		} else {
-			setShowForm(true);
-			setDonationType(dType);
-		}
-	};
-
+export default function PaypalDonate({ donationType, showForm, formData }) {
 	return (
 		<div className="paypal-buttons-wrap">
-			<span style={{ margin: "1rem 0" }}>Choose A Donation Option</span>
-			<button
-				onClick={() => {
-					setForm("One Time Donation");
-				}}
-			>
-				One Time Donation
-			</button>
-			<span style={{ margin: "1rem 0" }}>Or</span>
-			<button
-				style={{ marginBottom: "1rem" }}
-				onClick={() => {
-					setForm("Recurring Donation");
-				}}
-			>
-				Recurring Donation
-			</button>
-			{showForm && <span>{donationType}</span>}
 			{/*Need to leave forms this way as options is hardcoded in PayPalScriptProvider*/}
 			{showForm && donationType === "One Time Donation" && (
-				<div className="paypal-buttons">
-					<PayPalScriptProvider
-						options={{
-							clientId: clientId,
-							components: "buttons",
-							currency: currency,
-						}}
-					>
-						<ButtonWrapper
-							currency={currency}
-							intent={"capture"}
-							showSpinner={true}
-						/>
-					</PayPalScriptProvider>
-				</div>
+				<PayPalScriptProvider
+					options={{
+						clientId: clientId,
+						components: "buttons",
+						currency: formData.currency,
+					}}
+				>
+					<ButtonWrapper
+						intent={"capture"}
+						showSpinner={true}
+						formData={formData}
+					/>
+				</PayPalScriptProvider>
 			)}
 			{showForm && donationType === "Recurring Donation" && (
-				<div className="paypal-buttons">
-					<PayPalScriptProvider
-						options={{
-							clientId: clientId,
-							components: "buttons",
-							currency: currency,
-							vault: true,
-						}}
-					>
-						<ButtonWrapper
-							currency={currency}
-							intent={"subscription"}
-							showSpinner={true}
-						/>
-					</PayPalScriptProvider>
-				</div>
+				<PayPalScriptProvider
+					options={{
+						clientId: clientId,
+						components: "buttons",
+						currency: formData.currency,
+						vault: true,
+					}}
+				>
+					<ButtonWrapper
+						intent={"subscription"}
+						showSpinner={true}
+						formData={formData}
+					/>
+				</PayPalScriptProvider>
 			)}
 		</div>
 	);

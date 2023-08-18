@@ -5,199 +5,219 @@
 	--secondary-text-color: #6b7888;
 	--large-btn-radius: 30px;
 	--spacing: 2rem;
-	--form-width: 970px;
 }
 
-#donate-payment-wrapper {
+#donate-page-payment-wrapper {
 	width: 100%;
 	padding: 1rem 1rem 4rem;
-}
 
-.donate-payment-form {
-	max-width: var(--form-width);
-	margin: 0 auto;
-	position: relative;
-	min-inline-size: min-content;
+	.donate-payment-form {
+		max-width: 60%;
+		margin: 0 auto;
+		position: relative;
+		min-inline-size: min-content;
 
-	@media (min-width: 767px) {
-		padding: 2rem 0;
-	}
-}
-
-.donate-payment-content {
-	margin-top: 2rem;
-	display: flex;
-	flex-direction: column;
-	gap: calc(0.5 * var(--spacing));
-
-	@media (min-width: 1500px) {
-		margin-bottom: -23rem; // this for fixing icon image gap
+		@media (min-width: 767px) {
+			padding: 2rem 0;
+		}
 	}
 
-	@media (min-width: 767px) {
-		margin-top: 4rem;
-		padding: 0 5rem;
-		gap: var(--spacing);
-	}
-
-	input {
-		margin: 0;
-	}
-}
-
-// logo placement
-.icon-container {
-	img {
-		height: 23rem;
-		width: 19rem;
-	}
-
-	display: none;
-
-	@media (min-width: 1500px) {
+	.donate-payment-content {
+		margin-top: 2rem;
 		display: flex;
-		align-self: flex-start;
-		transform: translate(-22rem, -25rem);
-	}
-}
+		flex-direction: column;
+		gap: calc(0.5 * var(--spacing));
+		align-items: center;
 
-// placing plus icons
-.star_icon {
-	position: absolute;
-	display: none;
+		@media (min-width: 1500px) {
+			margin-bottom: -23rem; // this for fixing icon image gap
+		}
 
-	@media (min-width: 1100px) {
-		display: block;
-	}
-}
+		@media (min-width: 767px) {
+			margin-top: 4rem;
+			padding: 0 5rem;
+			gap: var(--spacing);
+		}
 
-.star1 {
-	top: 8rem;
-	left: -5vw;
-}
-
-.star2 {
-	top: 3rem;
-	right: -5vw;
-}
-
-.star3 {
-	top: 18rem;
-	right: -2vw;
-}
-
-// Donation Type Toggle
-.tab-group-container {
-	width: 100%;
-}
-
-.tab-group {
-	display: flex;
-	align-items: stretch;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-	border-radius: var(--large-btn-radius);
-	background-color: var(--secondary-background-color);
-}
-
-.text-caption-tab {
-	flex-grow: 1;
-	border-radius: inherit;
-	color: var(--secondary-text-color);
-	background-color: var(--secondary-background-color);
-	border: none;
-	transition: background-color 1s ease-out;
-	text-transform: none;
-
-	@media (min-width: 767px) {
-		padding: 1.25rem 3rem;
+		input {
+			margin: 0;
+		}
 	}
 
-	&:hover {
+	.donate-title {
+		font-size: 1.5rem;
+		color: white;
+		font-weight: 600;
+		letter-spacing: 2px;
+
+		@media (min-width: 767px) {
+			font-size: 2rem;
+		}
+	}
+	.custom-text {
+		font-family: "Lato", sans-serif;
+		font-size: 1rem;
+		line-height: 1rem;
+
+		@media (min-width: 767px) {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+	}
+	.custom-text--large {
+		font-family: "Lato", sans-serif;
+		font-size: 1rem;
+
+		@media (min-width: 767px) {
+			font-size: 1.5rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	// logo placement
+	.icon-container {
+		img {
+			height: 23rem;
+			width: 19rem;
+		}
+
+		display: none;
+
+		@media (min-width: 1500px) {
+			display: flex;
+			align-self: flex-start;
+			transform: translate(-22rem, -25rem);
+		}
+	}
+
+	// placing plus icons
+	.star_icon {
+		position: absolute;
+		display: none;
+
+		@media (min-width: 1100px) {
+			display: block;
+		}
+	}
+
+	.star1 {
+		top: 8rem;
+		left: -5vw;
+	}
+
+	.star2 {
+		top: 3rem;
+		right: -5vw;
+	}
+
+	.star3 {
+		top: 18rem;
+		right: -2vw;
+	}
+
+	// Donation Type Toggle
+	.tab-group-container {
+		width: 100%;
+		@media (min-width: 992px) {
+			width: 70%;
+		}
+	}
+
+	.tab-group {
+		display: flex;
+		align-items: stretch;
+		width: 100%;
+		justify-content: flex-start;
+		border-radius: 15px;
 		background-color: var(--secondary-background-color);
 	}
 
-	&:focus {
-		outline: none;
-	}
-}
+	.text-caption-tab {
+		flex-grow: 1;
+		border-radius: inherit;
+		color: var(--secondary-text-color);
+		background-color: var(--secondary-background-color);
+		border: none;
+		transition: background-color 1s ease-out;
+		text-transform: none;
 
-.active {
-	background-color: #5700c6;
-	color: #e2e2e2;
-
-	&:hover {
-		background-color: #5700c6;
-	}
-}
-
-// radio group button
-.preset-amount-wrapper {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-.radio-btn-input {
-	position: absolute;
-	clip: rect(0px, 0px, 0px, 0px);
-	pointer-events: none;
-	width: 1px;
-	height: 1px;
-}
-
-.radio-input-label {
-	font-weight: bold;
-	color: var(--primary-text-color);
-	background-color: var(--secondary-background-color);
-	width: 45%;
-	min-height: 4.5em;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	margin-top: 1rem;
-	margin-bottom: 0;
-	position: relative;
-	border-radius: 15px;
-	border: none;
-
-	@media (min-width: 767px) {
-		width: 23%;
-		margin-top: 0;
-		min-height: 3em;
-	}
-}
-
-.radio-btn-input:checked+label {
-	color: white;
-	background-color: var(--background-color);
-}
-
-.radio-input-span {
-	color: var(--secondary-text-color);
-	font-size: 19px;
-	line-height: 24px;
-	font-weight: 100;
-	margin-top: 0.5rem;
-
-	@media (min-width: 767px) {
-		font-size: 21px;
-	}
-}
-
-.radio-btn-input:checked+.radio-input-label .radio-input-span {
-	color: white;
-}
-
-.input-container {
-	input {
-		text-align: left;
-		padding-left: 2rem;
+		&:hover {
+			background-color: var(--secondary-background-color);
+		}
 
 		&:focus {
-			border-bottom: 2px solid white;
+			outline: none;
+		}
+	}
+
+	.active {
+		background-color: #5700c6;
+		color: #e2e2e2;
+
+		&:hover {
+			background-color: #5700c6;
+		}
+	}
+
+	// radio group button
+	.preset-amount-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.radio-btn-input {
+		display: none;
+	}
+
+	.radio-input-label {
+		background-color: var(--secondary-background-color);
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		padding: 1rem;
+		margin: 0.5rem;
+		border-radius: 15px;
+		cursor: pointer;
+
+		@media (min-width: 767px) {
+			padding: 1.5rem;
+			margin: 0.5rem 10px;
+			margin-top: 0;
+		}
+	}
+
+	.radio-btn-input:checked + label {
+		color: white;
+		background-color: var(--background-color);
+	}
+
+	.radio-input-span {
+		color: var(--secondary-text-color);
+		font-size: 18px;
+		line-height: 18px;
+
+		@media (min-width: 767px) {
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+
+	.radio-btn-input:checked + .radio-input-label .radio-input-span {
+		color: white;
+	}
+
+	.input-container {
+		input {
+			text-align: left;
+			padding-left: 2rem;
+
+			&:focus {
+				border-bottom: 2px solid white;
+			}
 		}
 	}
 }
