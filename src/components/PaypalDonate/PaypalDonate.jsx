@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 import "./paypalDonate.scss";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
+/*Do Not uncomment this code until ready to push changes live*/
 /*Live ClientId*/
 // const clientId =
 // 	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
