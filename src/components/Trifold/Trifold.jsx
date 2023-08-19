@@ -1,9 +1,6 @@
 import React from "react";
 import "./Trifold.scss";
 
-
-
-
 /**
  * Returns a trifold of three images
  * @param {Path} image1 image path 1
@@ -18,34 +15,48 @@ import "./Trifold.scss";
  * @constructor
  */
 
-
-
-
-export default function Trifold({height, image1, alt1, image2, alt2, image3, alt3}) {
-    return (
-        <div className="images-container">
-            <img
-                height = {height}
-                width = "33.3%"
-                object-fit = 'cover'
-                src={image1}
-                alt={alt1}
-            />
-            <img
-                height = {height}
-                width = "33.3%"
-                object-fit = 'cover'
-                src={image2}
-                alt={alt2}
-            />
-            <img
-                height = {height}
-                width = "33.3%"
-                object-fit = 'cover'
-                src={image3}
-                alt={alt3}
-            />
-        </div>
-    );
+export default function Trifold({
+	height,
+	image1,
+	alt1,
+	link1,
+	image2,
+	alt2,
+	link2,
+	image3,
+	alt3,
+	link3,
+}) {
+	return (
+		<div className="images-container">
+			<a className="link" href={link1 ? link1 : "#"}>
+				<img
+					height={height ? height : "100%"}
+					// width="33.3%"
+					object-fit="cover"
+					src={image1}
+					alt={alt1}
+					href={link1 ? link1 : "#"}
+				/>
+			</a>
+			<a className="link" href={link2 ? link2 : "#"}>
+				<img
+					height={height ? height : "100%"}
+					// width="33.3%"
+					object-fit="cover"
+					src={image2}
+					alt={alt2}
+				/>
+			</a>
+			<a className="link" href={link3 ? link3 : "#"}>
+				<img
+					height={height ? height : "100%"}
+					// width="33.3%"
+					object-fit="cover"
+					src={image3}
+					alt={alt3}
+				/>
+			</a>
+		</div>
+	);
 }
-
