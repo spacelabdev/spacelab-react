@@ -8,12 +8,10 @@ import { useHistory } from "react-router-dom";
 import "./paypalDonate.scss";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
-/*Do Not uncomment this code until ready to push changes live*/
-/*Live ClientId*/
+/*LIVE CREDENTIALS*/
+
 // const clientId =
 // 	"AacIs63GItjJI69Ktse-8cNOWJKnouUF1bg3Wtem9ErTKrfJSXEhB_q6QIApJlHeBNyuWZfmKQtb0U4X";
-
-/*Live Plan Id's*/
 // const planIds = [
 // 	{
 // 		amount: "10",
@@ -29,10 +27,9 @@ import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 // 	},
 // ];
 
-/*Sandbox ClientId*/
+/*SANDBOX CREDENTIALS*/
 const clientId =
 	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
-/*Sandbox Plan Id's*/
 const planIds = [
 	{
 		amount: 10,
