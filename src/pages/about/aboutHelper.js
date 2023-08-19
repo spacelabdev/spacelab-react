@@ -177,37 +177,37 @@ export const uxDesigners = {
 	title: "UX Designers",
 	members: [
 		{
-			image: "",
+			image: "https://i.imgur.com/Umz7gGi.jpeg",
 			fullName: "Brianna Tran",
 			title: "UX Designer",
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
-			linkedIn: "",
+			linkedIn: "https://www.linkedin.com/in/briannantran/",
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/EAIpFlK.jpeg",
 			fullName: "Larry Chan",
 			title: "UX Designer",
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
-			linkedIn: "",
+			linkedIn: "https://www.linkedin.com/in/larry-chan-designs/",
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/tFmGYfz.jpeg",
 			fullName: "Clarence Jackson",
 			title: "UX Designer",
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
-			linkedIn: "",
+			linkedIn: "https://www.linkedin.com/in/clarenceamosjackson/",
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/2c00TVu.jpeg",
 			fullName: "Sayre Tripp",
 			title: "UX Designer",
 			bioQuote: "",
@@ -466,7 +466,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/7145a8u.jpeg",
 			fullName: "Neha Abbas",
 			title: "Front-End Developer",
 			bioQuote:
@@ -477,7 +477,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/CfSWrMs.jpeg",
 			fullName: "FJ Tria",
 			title: "Front-End Developer",
 			bioQuote:
@@ -488,7 +488,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/KMpDndL.jpeg",
 			fullName: "Anh Pham",
 			title: "Front-End Developer",
 			bioQuote:
@@ -499,7 +499,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/navaiiw.jpeg",
 			fullName: "Gavin Poley",
 			title: "Front-End Developer",
 			bioQuote:
@@ -510,7 +510,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/13aS1rA.jpeg",
 			fullName: "Cindy Wong",
 			title: "Front-End Developer",
 			bioQuote:
@@ -521,7 +521,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/qjMvsN5.jpeg",
 			fullName: "Laurie Liu",
 			title: "Front-End Developer",
 			bioQuote:
@@ -532,7 +532,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/AKnYMWD.jpeg",
 			fullName: "Tejaswini Edidi",
 			title: "Software Developer",
 			bioQuote:
@@ -543,7 +543,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/DXCAXcW.jpeg",
 			fullName: "Deepthi Rao",
 			title: "Front-End Developer",
 			bioQuote:
@@ -554,7 +554,7 @@ export const frontEnd = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/mnGxgMr.jpeg",
 			fullName: "Shirin Rokni",
 			title: "Front-End Developer",
 			bioQuote:
@@ -997,7 +997,7 @@ export const dataScience = {
 			status: "current",
 		},
 		{
-			image: "",
+			image: "https://i.imgur.com/P5s9s59.jpeg",
 			fullName: "Christopher Volpacchio",
 			title: "Data Engineer",
 			bioQuote:
@@ -1263,6 +1263,17 @@ export const webGL = {
 			gitHub: "https://github.com/jrkozak92",
 			portfolio: "http://joeykozak.com/",
 			linkedIn: "",
+			status: "current",
+		},
+		{
+			image: "https://imgur.com/HVUZ6bf.png",
+			fullName: "Laura Hiller",
+			title: "Front-End Developer",
+			bioQuote:
+				"Laura is an experienced Software Engineer specializing in Frontend/Fullstack development.",
+			gitHub: "https://github.com/lauraehiller",
+			portfolio: "https://lauraehiller.com/",
+			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
 			status: "current",
 		},
 		{

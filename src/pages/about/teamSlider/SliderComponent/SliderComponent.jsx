@@ -3,6 +3,20 @@ import MemberCard from "../MemberCard/MemberCard";
 import PropTypes from "prop-types";
 import "./sliderComponent.scss";
 
+const removeDuplicatesByName = (members) => {
+	let uniqueMembers = [];
+	members.forEach((member) => {
+		if (
+			!uniqueMembers.find(
+				(uniqueMember) => uniqueMember.fullName === member.fullName
+			)
+		) {
+			uniqueMembers.push(member);
+		}
+	});
+	return uniqueMembers;
+};
+
 /**
  * Builds slider component. Passes data to MemberCard component and renders what is returned.
  * @param title
@@ -32,7 +46,7 @@ const SliderComponent = ({
 	}
 	return (
 		<div className={`team-slider-container ${active}`}>
-			{filteredMembers.map((member, index) => (
+			{removeDuplicatesByName(filteredMembers).map((member, index) => (
 				<MemberCard key={index} member={member} />
 			))}
 		</div>
