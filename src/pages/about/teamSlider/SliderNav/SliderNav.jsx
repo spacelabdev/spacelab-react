@@ -47,12 +47,16 @@ const SliderNav = ({
 	return (
 		<div className={"menu"}>
 			<div className={`slider-nav-button-container`}>
-				<Toolbar>
+				<Toolbar
+					sx={{
+						width: "100%",
+					}}
+				>
 					<h4>Filter</h4>
 					<FormControl
 						id="select-form"
 						sx={{
-							minWidth: 200,
+							width: "100%",
 						}}
 					>
 						<Select
@@ -101,7 +105,7 @@ const SliderNav = ({
 					<FormControl
 						id="select-form"
 						sx={{
-							minWidth: 200,
+							width: "100%",
 						}}
 					>
 						<Select
