@@ -94,6 +94,7 @@ export default function Footer() {
 							href="https://www.linkedin.com/company/spacelab-space/"
 							target="_blank"
 							rel="noreferrer"
+							title="Follow us on LinkedIn"
 						>
 							<FaLinkedin />
 						</a>
@@ -102,6 +103,7 @@ export default function Footer() {
 							href="https://medium.com/@spacelabdev"
 							target="_blank"
 							rel="noreferrer"
+							title="Read Spacelab articles on Medium"
 						>
 							<BsMedium />
 						</a>
@@ -110,6 +112,7 @@ export default function Footer() {
 							href="https://www.instagram.com/spacelab_space"
 							target="_blank"
 							rel="noreferrer"
+							title="Follow us on Instagram"
 						>
 							<AiOutlineInstagram />
 						</a>
@@ -117,6 +120,7 @@ export default function Footer() {
 							href="https://twitter.com/SpaceLab_social"
 							target="_blank"
 							rel="noreferrer"
+							title="Follow us on Twitter"
 						>
 							<AiOutlineTwitter />
 						</a>
