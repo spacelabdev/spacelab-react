@@ -101,9 +101,13 @@ nav {
 				}
 
 				.dropdown-nav-name {
-					font-size: 1.25rem;
-					color: #ffffff;
+					// font-size: 1.25rem;
+					// color: #ffffff;
 					margin: 0;
+
+					&:hover{
+						text-decoration: none;
+					}
 				}
 
 				.dropdown-content {
