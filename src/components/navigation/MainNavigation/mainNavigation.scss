@@ -109,6 +109,10 @@ nav {
 					&:hover{
 						text-decoration: none;
 					}
+
+					&:focus{
+						outline-offset: 15px;
+					}
 				}
 
 				.dropdown-content {
