@@ -82,6 +82,7 @@ nav {
 		.nav-links {
 			display: none;
 			list-style-type: none;
+			margin: 0;
 			@media (min-width: 1024px) {
 				display: flex;
 				font-size: 1.5em;
