@@ -81,6 +81,7 @@ nav {
 
 		.nav-links {
 			display: none;
+			list-style-type: none;
 			@media (min-width: 1024px) {
 				display: flex;
 				font-size: 1.5em;
@@ -106,6 +107,7 @@ nav {
 				}
 
 				.dropdown-content {
+				    list-style-type: none;
 					display: none;
 					position: absolute;
 					z-index: 1;
@@ -115,7 +117,8 @@ nav {
 				}
 			}
 
-			.nav-dropdown:hover .dropdown-content {
+			.nav-dropdown:hover .dropdown-content,
+			.nav-dropdown:focus-within .dropdown-content {
 				display: block;
 			}
 

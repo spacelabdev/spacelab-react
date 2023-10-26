@@ -31,61 +31,78 @@ export default function MainNavigation() {
 							<img src={Logo} alt="logo" />
 						</Link>
 					</div>
-					<div className="nav-links">
-						<Link
-							className={"nav-link"}
-							to={"/about"}
-							style={{ textDecoration: "none" }}
-						>
-							About
-						</Link>
-						<div to={"#"} className={"nav-dropdown nav-link"}>
-							Resources
-							<div className={"dropdown-content"}>
-								<Link
-									className={"nav-link"}
-									to={"/projects"}
-									style={{ textDecoration: "none" }}
-								>
-									Projects
-								</Link>
-								<Link
-									className={"nav-link"}
-									to={"/discovery"}
-									style={{ textDecoration: "none" }}
-								>
-									Discovery
-								</Link>
-								<Link
-									className={"nav-link"}
-									to={"/glossary"}
-									style={{ textDecoration: "none" }}
-								>
-									Glossary
-								</Link>
-								<Link
-									className={"nav-link"}
-									to={"/podcast"}
-									style={{ textDecoration: "none" }}
-								>
-									Podcast
-								</Link>
-							</div>
-						</div>
-						<Link
-							className={"nav-link"}
-							to={"/blog"}
-							style={{ textDecoration: "none" }}
-						>
-							Blog
-						</Link>
-						<Link 
-							className={'nav-link'} 
-							to={'/donate'} 
-							style={{textDecoration: 'none'}}
-						>
-							Donate
-						</Link>
+					<ul className="nav-links">
+						<li>
+							<Link
+								className={"nav-link"}
+								to={"/about"}
+								style={{ textDecoration: "none" }}
+							>
+								About
+							</Link>
+						</li>
+						{/* <div to={"#"} className={"nav-dropdown nav-link"}> */}
+						<li className={"nav-dropdown nav-link"}>
+							<a href="#" className={"dropdown-nav-name"}>Resources</a>
+							<ul className={"dropdown-content"}>
+								<li>
+									<Link
+										className={"nav-link"}
+										to={"/projects"}
+										style={{ textDecoration: "none" }}
+									>
+										Projects
+									</Link>
+								</li>
+								<li>
+									<Link
+										className={"nav-link"}
+										to={"/discovery"}
+										style={{ textDecoration: "none" }}
+									>
+										Discovery
+									</Link>
+								</li>
+								<li>
+									<Link
+										className={"nav-link"}
+										to={"/glossary"}
+										style={{ textDecoration: "none" }}
+									>
+										Glossary
+									</Link>
+								</li>
+								<li>
+									<Link
+										className={"nav-link"}
+										to={"/podcast"}
+										style={{ textDecoration: "none" }}
+									>
+										Podcast
+									</Link>
+								</li>
+							</ul>
+						</li>
+						{/* </div> */}
+
+						<li>
+							<Link
+								className={"nav-link"}
+								to={"/blog"}
+								style={{ textDecoration: "none" }}
+							>
+								Blog
+							</Link>
+						</li>
+						<li>
+							<Link 
+								className={'nav-link'} 
+								to={'/donate'} 
+								style={{textDecoration: 'none'}}
+							>
+								Donate
+							</Link>
+						</li>
 						{/* <a
 							className="nav-link"
 							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
@@ -94,14 +111,16 @@ export default function MainNavigation() {
 						>
 							Donate
 						</a> */}
-						<Link
-							className={"nav-link"}
-							to={"/contact"}
-							style={{ textDecoration: "none" }}
-						>
-							Contact
-						</Link>
-					</div>
+						<li>
+							<Link
+								className={"nav-link"}
+								to={"/contact"}
+								style={{ textDecoration: "none" }}
+							>
+								Contact
+							</Link>
+						</li>
+					</ul>
 				</div>
 			</nav>
 		</>
