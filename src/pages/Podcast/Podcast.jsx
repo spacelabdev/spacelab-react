@@ -74,24 +74,16 @@ export default function Podcast() {
 						})
 					) : (
 						<div>
-							<p
-								style={{
-									fontSize: "40px",
-									paddingTop: "2rem",
-									paddingBottom: "2rem",
-								}}
-							>
-								New Episodes Coming Soon, Stay Tuned!
-							</p>
+							<p>New Episodes Coming Soon, Stay Tuned!</p>
 							<img
 								src={Astronaut}
 								alt="Astronaut floating in space"
-								style={{
-									width: "30%",
-									height: "auto",
-									margin: "auto",
-									paddingBottom: "8rem",
-								}}
+								// style={{
+								// 	width: "30%",
+								// 	height: "auto",
+								// 	margin: "auto",
+								// 	paddingBottom: "8rem",
+								// }}
 							/>
 							<p
 								style={{
