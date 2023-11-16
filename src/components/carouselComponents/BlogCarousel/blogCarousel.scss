@@ -44,6 +44,10 @@
 			object-fit: cover;
 		}
 	}
+	
+	.blog-carousel-image-wrapper:focus-within {
+		border: 1px solid white;
+	}
 
 	.d-block {
 		width: 100%;
