@@ -44,7 +44,7 @@
 			object-fit: cover;
 		}
 	}
-	
+
 	.blog-carousel-image-wrapper:focus-within {
 		border: 1px solid white;
 	}
@@ -92,12 +92,15 @@
 
 .carousel-control-prev {
 	height: 500px;
+	width: 100px;
 	@media (max-width: 767px) {
-		height: 500px;
+		height: 200px;
+		width: 50px;
 	}
 	@media (min-width: 767px) and (max-width: 1023px) {
 		border: 1px solid black;
 		display: none;
+		
 	}
 
 	.sr-only {
@@ -111,8 +114,10 @@
 
 .carousel-control-next {
 	height: 500px;
+	width: 100px;
 	@media (max-width: 767px) {
 		height: 200px;
+		width: 50px;
 	}
 	@media (min-width: 767px) and (max-width: 1023px) {
 		display: none;
