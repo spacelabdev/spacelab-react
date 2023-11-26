@@ -5,30 +5,36 @@
 
 	.inner-wrap {
 		width: 70%;
+
+		@media (max-width: 576px) {
+			width: 100%;
+		}
 	}
 
 	h4 {
 		font-family: "Poppins", sans-serif;
 		font-weight: 200;
 		font-style: italic;
-		font-size: 21px;
+		font-size: 25px;
 		margin-bottom: 1.25rem;
 		color: white;
-		@media (min-width: 766px) {
-			font-size: 30px;
+
+		@media (max-width: 576px) {
+			font-size: 20px;
 		}
-		p {
-			padding-bottom: 1rem;
-			@media (min-width: 766px) {
-				display: inline-block;
-			}
+	}
+
+	p {
+		padding-bottom: 1rem;
+
+		@media (max-width: 576px) {
+			font-size: 14px;
 		}
 	}
 
 	.subscription-form {
 		height: auto;
 		width: 100%;
-		margin-bottom: 5rem;
 		display: flex;
 		flex-direction: column;
 
@@ -66,13 +72,12 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-width: 0;
-	padding-top: 2em;
-	padding-bottom: 2em;
-	@media (min-width: 767px) and (max-width: 1023px) {
-		min-width: 280px;
+
+	h4{
+		font-size: 35px;
 	}
-	@media (min-width: 1024px) {
-		width: 100%;
+
+	img{
+		padding-bottom: 1.5em;
 	}
 }

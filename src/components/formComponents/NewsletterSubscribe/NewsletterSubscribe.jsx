@@ -16,7 +16,7 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 	if (state.succeeded) {
 		return (
 			<div className={"submit-form-container"}>
-				<h2>Thank You!</h2>
+				<h4>Thank You!</h4>
 				<img
 					src={PartyPopper}
 					alt={"Hooray!"}
