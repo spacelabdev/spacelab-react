@@ -81,6 +81,8 @@ nav {
 
 		.nav-links {
 			display: none;
+			list-style-type: none;
+			margin: 0;
 			@media (min-width: 1024px) {
 				display: flex;
 				font-size: 1.5em;
@@ -100,12 +102,21 @@ nav {
 				}
 
 				.dropdown-nav-name {
-					font-size: 1.25rem;
-					color: #ffffff;
+					// font-size: 1.25rem;
+					// color: #ffffff;
 					margin: 0;
+
+					&:hover{
+						text-decoration: none;
+					}
+
+					&:focus{
+						outline-offset: 15px;
+					}
 				}
 
 				.dropdown-content {
+				    list-style-type: none;
 					display: none;
 					position: absolute;
 					z-index: 1;
@@ -115,7 +126,8 @@ nav {
 				}
 			}
 
-			.nav-dropdown:hover .dropdown-content {
+			.nav-dropdown:hover .dropdown-content,
+			.nav-dropdown:focus-within .dropdown-content {
 				display: block;
 			}
 
