@@ -95,8 +95,9 @@ export default function Footer() {
 							target="_blank"
 							rel="noreferrer"
 							title="Follow us on LinkedIn"
+							aria-label="Follow us on LinkedIn"
 						>
-							<FaLinkedin />
+							<FaLinkedin aria-hidden="true"/>
 						</a>
 
 						<a
@@ -104,8 +105,9 @@ export default function Footer() {
 							target="_blank"
 							rel="noreferrer"
 							title="Read Spacelab articles on Medium"
+							aria-label="Read Spacelab articles on Medium"
 						>
-							<BsMedium />
+							<BsMedium aria-hidden="true"/>
 						</a>
 
 						<a
@@ -113,16 +115,18 @@ export default function Footer() {
 							target="_blank"
 							rel="noreferrer"
 							title="Follow us on Instagram"
+							aria-label="Follow us on Instagram"
 						>
-							<AiOutlineInstagram />
+							<AiOutlineInstagram aria-hidden="true"/>
 						</a>
 						<a
 							href="https://twitter.com/SpaceLab_social"
 							target="_blank"
 							rel="noreferrer"
 							title="Follow us on Twitter"
+							aria-label="Follow us on Twitter"
 						>
-							<AiOutlineTwitter />
+							<AiOutlineTwitter aria-hidden="true"/>
 						</a>
 					</IconContext.Provider>
 					<p>@2023 by SpaceLab</p>
