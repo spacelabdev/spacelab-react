@@ -1,46 +1,52 @@
 .page-wrap {
-	margin: 0 30vmin 0 30vmin;
+	max-width: 80%;
+	margin: 0 auto;
 }
 
 .page-description {
-	text-align: left;
-	margin: 3rem 0 3rem 0;
-	align-content: center;
-	justify-content: center;
 	text-align: center;
+	margin: 3rem 0 3rem 0;
 
 	p:first-child {
-		color: white;
-		font-size: 1.6rem;
-		margin: 1rem;
+		font-size: 1.8rem;
 	}
 
 	p {
 		margin: 1rem;
 	}
-}
 
-.bold-text {
-	font-weight: bold;
-	font-size: 26px;
+	@media (min-width: 766px) {
+		p:first-child {
+			font-size: 2.3rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
 }
 
 .search-bar {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+	max-width: 80%;
 	margin-bottom: 1rem;
 }
 
 .chip-container {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	margin-bottom: 5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom: 3rem;
 }
 
 .podcast-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	p {
+		font-size: 1.5rem;
+		padding-bottom: 2rem;
+	}
+
+	img {
+		width: 300px;
+		margin: 0 auto;
+		padding-bottom: 2rem;
+	}
 }
