@@ -5,12 +5,9 @@
 	width: 100%;
 	height: calc(450px);
 	background: #160d39;
-	margin-top: 70px; //70px is the nav bar
 
-	@media only screen and (max-width: 1024px) {
-		margin-top: 0;
-	}
 	h1 {
+		margin: 0 auto;
 		position: absolute;
 		width: 80%;
 		color: white;
@@ -23,11 +20,7 @@
 		transform: translate(-50%, -50%);
 		z-index: 98;
 
-		@media screen and (min-width: 766px) {
-			font-size: 6.25rem;
-		}
-
-		@media (min-width: 767px) and (max-width: 1023px) {
+		@media screen and (min-width: 768px) {
 			font-size: 4.25rem;
 		}
 	}
