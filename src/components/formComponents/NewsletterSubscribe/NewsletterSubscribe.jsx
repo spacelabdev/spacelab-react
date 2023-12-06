@@ -55,14 +55,14 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 							}
 						>
 							<input
-								type="firstName"
+								type="text"
 								id="firstName"
 								placeholder="FIRST NAME"
 								name="firstName"
 								required
 							/>
 							<input
-								type="lastName"
+								type="text"
 								id="lastName"
 								placeholder="LAST NAME"
 								name="lastName"
