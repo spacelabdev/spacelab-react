@@ -94,10 +94,6 @@
 	@media (min-width: 767px) and (max-width: 1023px) {
 		display: none;
 	}
-
-	.sr-only {
-		display: none;
-	}
 }
 
 .carousel-control-next {
@@ -106,10 +102,6 @@
 		height: 200px;
 	}
 	@media (min-width: 767px) and (max-width: 1023px) {
-		display: none;
-	}
-
-	.sr-only {
 		display: none;
 	}
 }
