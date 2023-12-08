@@ -17,12 +17,11 @@ export default function HorizonSection() {
 					<h2>What's On The Horizon</h2>
 					<p>
 						Our current project, the Exoplanetarium, focuses on
-						using data from previous and current NASA satellite
+						using data from previous and current <span title="National Aeronautics and Space Administration">NASA</span> satellite
 						missions in a convolutional neural network to search for
 						additional planetary candidates that went unclassified
-						by NASA. Our volunteers come from different disciplines,
-						including data scientists, front-end developers, WebGL
-						developers, and back-end developers, who collaborate and
+						by <span title="National Aeronautics and Space Administration">NASA</span>. Our volunteers come from different disciplines,
+						including data scientists, front-end developers, <span title="Web Graphics Library">WebGL</span> developers, and back-end developers, who collaborate and
 						use innovative problem-solving to find potential
 						exoplanets.
 					</p>
