@@ -102,10 +102,6 @@
 		display: none;
 		
 	}
-
-	.sr-only {
-		display: none;
-	}
 }
 
 .carousel-control-prev:focus-within {
@@ -120,10 +116,6 @@
 		width: 50px;
 	}
 	@media (min-width: 767px) and (max-width: 1023px) {
-		display: none;
-	}
-
-	.sr-only {
 		display: none;
 	}
 }
