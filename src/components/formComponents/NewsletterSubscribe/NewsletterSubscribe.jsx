@@ -55,17 +55,19 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 							}
 						>
 							<input
-								type="firstName"
+								type="text"
 								id="firstName"
 								placeholder="FIRST NAME"
 								name="firstName"
+								aria-label="First Name"
 								required
 							/>
 							<input
-								type="lastName"
+								type="text"
 								id="lastName"
 								placeholder="LAST NAME"
 								name="lastName"
+								aria-label="Last Name"
 								required
 							/>
 						</div>
@@ -74,6 +76,7 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 							id="email"
 							placeholder="EMAIL"
 							name="email"
+							aria-label="Email"
 							required
 						/>
 						<ValidationError
