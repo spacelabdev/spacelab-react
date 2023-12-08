@@ -1,17 +1,11 @@
 #blog-archive-container {
 	padding: 5em 1em;
-	margin: 0 auto;
 
 	#blog-archives {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		margin: 0 auto;
-
-		@media (min-width: 1024px) {
-			max-width: 80%;
-		}
 	}
 
 	.button-container {
