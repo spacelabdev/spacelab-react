@@ -6,9 +6,6 @@ on tablets. Can be updated per UX team as necessary.
 	background: black;
 	text-align: center;
 	width: auto;
-	@media (min-width: 766px) {
-		text-align: left;
-	}
 
 	a {
 		color: var(--text);
@@ -22,12 +19,19 @@ on tablets. Can be updated per UX team as necessary.
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		padding: 2rem;
+
+		@media (max-width: 767px) {
+			display: grid;
+			grid-template-columns: 1fr;
+			align-items: center;
+		}
 	}
 
 	.left-container {
 		@media (min-width: 766px) {
 			padding-bottom: 0;
 		}
+
 	}
 
 	.right-container {
@@ -35,9 +39,14 @@ on tablets. Can be updated per UX team as necessary.
 			list-style: none;
 			text-transform: uppercase;
 			text-align: right;
+			margin: 0;
 			@media (min-width: 766px) {
 				text-align: right;
 				padding-left: 3.1rem;
+			}
+			@media (max-width: 767px) {
+				padding: 2rem 0 0 0;
+				text-align: left;
 			}
 
 			li {
