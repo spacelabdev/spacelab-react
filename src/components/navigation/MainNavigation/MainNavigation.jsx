@@ -85,6 +85,8 @@ export default function MainNavigation() {
 						</li>
 						{/* </div> */}
 
+						{/*
+						// Removed until blog page on Medium is back up.
 						<li>
 							<Link
 								className={"nav-link"}
@@ -94,6 +96,8 @@ export default function MainNavigation() {
 								Blog
 							</Link>
 						</li>
+						*/}
+						
 						<li>
 							<Link 
 								className={'nav-link'} 
