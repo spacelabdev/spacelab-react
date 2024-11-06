@@ -206,6 +206,20 @@ Before submitting a PR, run through this code checklist:
 
 Once you complete the checklist, open a PR and include a short description of what you accomplished. If you built a new feature, include a screenshot of the UI.
 
+### Building the Project
+
+Before building the project, include an `.env` file containing the following keys in the root of the project:
+
+```
+REACT_APP_PAYPAL_CLIENT_ID=<PayPal Client ID Key>
+```
+
+To build the project you can run:
+
+```
+npm run build
+```
+
 ## Style Guide
 
 Please refer to [globalStyles](https://github.com/spacelabdev/spacelab-react/blob/main/src/globalStyles.scss) as it contains color pallettes for the website as well as default styles for headings, buttons, inputs, etc.
