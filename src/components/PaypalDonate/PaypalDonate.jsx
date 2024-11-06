@@ -8,28 +8,8 @@ import { useHistory } from "react-router-dom";
 import "./paypalDonate.scss";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
-/*LIVE CREDENTIALS*/
 
-// const clientId =
-// 	"AacIs63GItjJI69Ktse-8cNOWJKnouUF1bg3Wtem9ErTKrfJSXEhB_q6QIApJlHeBNyuWZfmKQtb0U4X";
-// const planIds = [
-// 	{
-// 		amount: "10",
-// 		planId: "P-7XE10582DY6151643MS5LJCY",
-// 	},
-// 	{
-// 		amount: "25",
-// 		planId: "P-5E091476E6266123UMTPJLGI",
-// 	},
-// 	{
-// 		amount: "100",
-// 		planId: "P-93969204GM7400705MTPJL2A",
-// 	},
-// ];
-
-/*SANDBOX CREDENTIALS*/
-const clientId =
-	"AYXrmDQruSv927DeXRGqKjik-aIZNvbB3DUizSd62SuHS6bUc_Enk1WEVwFe2y0EGegUG0lYbY1imHHc";
+const clientId = process.env.REACT_APP_PAYPAL_CLIENT_ID;
 const planIds = [
 	{
 		amount: 10,
