@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./heroImage.scss";
 import heroImage from "../../assets/componentAssets/purple-sky-unsplash.jpg";
 import Navigation from "../navigation/MainNavigation/MainNavigation";
@@ -16,7 +16,11 @@ const HeroImage = ({ heroTitle = "SPACELAB" }) => {
 		context.pageTitle === "" || context.pageTitle === "HOME"
 			? "SPACELAB SUPPORTS DIVERSITY IN TECH"
 			: context.pageTitle;
-	context.setPageTitle(heroTitle);
+
+	// Call setPageTitle() only AFTER HeroImage/heroTitle changes. Prevents the error from triggering state updates in App component.
+	useEffect(() => {
+		context.setPageTitle(heroTitle);
+	}, [heroTitle, context]);
 
 	return (
 		<>
@@ -25,7 +29,7 @@ const HeroImage = ({ heroTitle = "SPACELAB" }) => {
 				<img
 					className={"hero-image"}
 					src={heroImage}
-					alt={"milky way at night"}
+					alt={"Milky Way at Night"}
 				/>
 				<h1>{pageTitle}</h1>
 			</div>

@@ -50,52 +50,51 @@ export default function Podcast() {
 						clearData={clearData}
 					/>
 				</div>
-				<div className="chip-container">
-					{termsArray.map((term, index) => {
-						return (
-							<Chip
-								tag={term}
-								key={index}
-								onClick={() => displayPodcasts({ title: term })}
-							/>
-						);
-					})}
-				</div>
-				<div className="dropdown-container"></div>
-				<div className="podcast-container">
-					{podcasts.length > 0 ? (
-						podcasts.map((podcast) => {
+					<div className="chip-container">
+						{termsArray.map((term, index) => {
 							return (
-								<PodcastCard
-									key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
-									card={podcast}
+								<Chip
+									tag={term}
+									key={index}
+									onClick={() => displayPodcasts({ title: term })}
 								/>
 							);
-						})
-					) : (
-						<div>
-							<p>New Episodes Coming Soon, Stay Tuned!</p>
-							<img
-								src={Astronaut}
-								alt="Astronaut floating in space"
-								// style={{
-								// 	width: "30%",
-								// 	height: "auto",
-								// 	margin: "auto",
-								// 	paddingBottom: "8rem",
-								// }}
-							/>
-							<p
-								style={{
-									fontSize: "30px",
-									paddingBottom: "2rem",
-								}}
-							>
-								Want To Stay Updated?
-							</p>
-							<NewsletterSubscribe justifyContent="center" />
-						</div>
-					)}
+						})}
+					</div>
+					<div className="dropdown-container"></div>
+					<div className="podcast-container">
+						{podcasts.length > 0 ? (
+							podcasts.map((podcast) => {
+								return (
+									<PodcastCard
+										key={`s${podcast.seasonNumber}e${podcast.episodeNumber}`}
+										card={podcast}
+									/>
+								);
+							})
+						) : (
+							<div className="fallback-container">
+								<p>New Episodes Coming Soon, Stay Tuned!</p>
+								<img
+									src={Astronaut}
+									alt="Astronaut floating in space"
+									// style={{
+									// 	width: "30%",
+									// 	height: "auto",
+									// 	margin: "auto",
+									// 	paddingBottom: "8rem",
+									// }}
+								/>
+
+								{/* 
+								// Redundant, there's a newsletter subscription form in the footer.
+								<div>
+									<p> Want To Stay Updated? </p>
+									<NewsletterSubscribe/>
+								</div>
+								*/}
+							</div>
+						)}
 				</div>
 			</div>
 			<Footer />

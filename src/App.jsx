@@ -47,8 +47,16 @@ function App() {
 		const fetchPosts = async () => {
 			const proxyUrl = "https://lit-headland-79401.herokuapp.com/";
 			const url = `${proxyUrl}https://medium.com/feed/@spacelabdev/`;
-			const feed = await parser.parseURL(url);
-			setBlogArray(feed);
+
+			// Catch error from failing to fetch RSS feed. Prevents the full page popup from the error and limits UI issues.
+			try {
+				const feed = await parser.parseURL(url);
+				setBlogArray(feed);
+			} catch (error) {
+				console.error("Failed to fetch RSS feed:", error);
+				setBlogArray([]);
+			}
+			
 		};
 		fetchPosts();
 	}, []);

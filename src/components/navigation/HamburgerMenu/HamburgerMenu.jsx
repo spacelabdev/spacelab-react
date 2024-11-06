@@ -51,6 +51,8 @@ class HamburgerMenu extends React.Component {
 								Glossary
 							</Link>
 						</div>
+						{/*
+						// Removed until blog page on Medium is back up.
 						<div>
 							<Link
 								className={"hamburger-nav-link"}
@@ -60,6 +62,7 @@ class HamburgerMenu extends React.Component {
 								Blog
 							</Link>
 						</div>
+						*/}
 						<div>
 							<Link
 								className={"hamburger-nav-link"}

@@ -22,7 +22,10 @@ export default function Home() {
 			<HorizonSection />
 			<SupportTheCauseSection />
 			<ContactUsSection />
+			{/*
+			// Removed until blog page on Medium is back up.
 			<BlogCarousel isHomePage={true} />
+			*/}
 			<Footer />
 		</div>
 	);
