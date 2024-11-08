@@ -17,7 +17,7 @@ on tablets. Can be updated per UX team as necessary.
 
 	.content-container {
 		display: grid;
-		grid-template-columns: 2fr 1fr;
+		grid-template-columns: 1fr 1fr;
 		padding: 2rem;
 
 		@media (max-width: 767px) {
