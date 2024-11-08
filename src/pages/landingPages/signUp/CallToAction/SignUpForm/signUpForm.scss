@@ -1,0 +1,79 @@
+.cta-container {
+    .sign-up-button-container {
+        margin-top: 3%;
+        z-index: 600;
+        width: 561.56px;
+        height: 71.47px;
+        overflow: hidden;
+
+        border-radius: 30.6305px;
+        border-top: .25px solid rgba(255, 255, 255, 1);
+        border-right: .25px solid rgba(255, 255, 255, 0.5);
+        border-bottom: .25px solid rgba(103, 0, 255, 1);
+        border-left: .25px solid rgba(103, 0, 255, 0.5);
+        box-shadow: 0px 13.6135px 54.4542px rgba(104, 1, 255, 0.12);
+        background: conic-gradient(#08F969 75deg, #100BF7 90deg, #0BA2F7 100deg, #08F969 110deg, #F70ED2 200deg, #6804FD 330deg);
+
+        @media only screen and (max-width: 750px) {
+            width: max(320px, 50%);
+            margin-top: 10%;
+        }
+    }
+
+    .radial-gradient-container{
+        width: 100%;
+        height: 100%;
+    }
+
+    .sign-up-subscription-form {
+        z-index: 800;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        backdrop-filter: blur(15px);
+        background: linear-gradient(to right, transparent 70%, rgba(112, 0, 255, 0.8));
+    }
+
+    .sign-up-email-input {
+        z-index: 900;
+        border-bottom: none;
+        width: 70%;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        font-family: 'Poppins';
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    .sign-up-email-submit {
+        z-index: 900;
+        padding: 0;
+        margin: 0;
+        border: none;
+        mix-blend-mode: normal;
+        background: none;
+    }
+
+    .sign-up-email-submit:hover, .sign-up-email-submit:active {
+        z-index: 900;
+        background: none;
+    }
+    .submit-arrow-image {
+        margin-left: 60%
+    }
+
+    .submit-arrow-image:hover {
+        transform: translateX(2px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    }
+    .submit-arrow-image:active {
+        transform: translateX(-1px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
+
+
+}

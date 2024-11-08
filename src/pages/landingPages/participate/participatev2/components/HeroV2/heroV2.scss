@@ -1,0 +1,36 @@
+.participate-heroV2 {
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Poppins";
+	padding: 100px 0;
+
+	.heading {
+		font-size: 82px;
+		font-weight: 500;
+		line-height: 123px;
+		text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.85);
+		color: white;
+		text-align: center;
+		margin: auto;
+		margin-top: 50px;
+
+		@media only screen and (max-width: 800px) {
+			font-size: 2.8rem;
+		}
+	}
+
+	.header-text {
+		font-size: 60px;
+		text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.85);
+
+		@media only screen and (max-width: 800px) {
+			font-size: 2rem;
+		}
+	}
+
+	button {
+		display: block;
+		margin: 0 auto;
+		margin-top: 25px;
+	}
+}

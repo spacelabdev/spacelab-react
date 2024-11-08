@@ -2,6 +2,62 @@
  * Array of Dates and descriptions for Spacelab History timeline
  * @type {string[][]}
  */
+
+import jan2021 from "../../assets/aboutAssets/jan2021.jpeg";
+import aug2021 from "../../assets/aboutAssets/aug2021.png";
+import may2023 from "../../assets/aboutAssets/may2023.png";
+import image2 from "../../assets/homeAssets/image2.jpg";
+
+export const newAboutHistoryArray = [
+	[
+		"Jan",
+		"2021",
+		jan2021,
+		"group of people gathered around a laptop looking at something",
+		"Data Scientist Matt Paterson meets Dr. Andrew " +
+			"Vanderburg and Dr. Jessie Christiansen of CalTech to " +
+			"publish a paper on machine learning and exoplanets. " +
+			"They connect him with former classmates Ollie" +
+			"Jackson and Jon Zivku to create SpaceLab: a web " +
+			"application for space exploration.",
+	],
+	[
+		"Jan",
+		"2021",
+		image2,
+		"people in an office planning a project",
+		"SpaceLab meets with aspiring UX Designers to create " +
+			"a website for exoplanet discovery. Realizing the lack " +
+			"of cross-functional collaboration experience for early " +
+			"tech professionals, they decide to become a non-profit " +
+			"organization aiming to provide experiences for women, " +
+			"people of color, and members of the LGBTQ+ " +
+			"community.",
+	],
+	[
+		"Aug",
+		"2021",
+		aug2021,
+		"planet against a blue sky",
+		"SpaceLab launches its website and receive help " +
+			"from Meghan Slan (Director of DEIB) in becoming a non-" +
+			"profit organization with the foundation of diversity and " +
+			"inclusion. " +
+			"Currently, a team of 25 cross-functional members are " +
+			"working on SpaceLab's first project: Exoplanetarium, " +
+			"where users can explore exoplanets in the Milky Way.",
+	],
+	[
+		"May",
+		"2023",
+		may2023,
+		"planets around a star, from Spacelab's Exoplanetarium project",
+		"Exoplanetarium is launched as SpaceLab's pilot project! " +
+			"OTHER INTERESTING FACTS HERE. " +
+			"ALSO HERE.",
+	],
+];
+
 export const aboutHistoryArray = [
 	[
 		"SPACELAB 2021.01.27",
@@ -48,6 +104,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "https://HireMattPaterson.com",
 			linkedIn: "https://www.linkedin.com/in/hiremattpaterson/",
+			status: "current",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130990/team_pics/Ollie_pic_yabvpi.png",
@@ -57,6 +114,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130971/team_pics/Megan_ncesok.png",
@@ -66,6 +124,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/rddAX7C.png",
@@ -75,6 +134,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "https://imgur.com/vSQFMQh.png",
@@ -84,6 +144,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "https://imgur.com/6KnXf6X.png",
@@ -93,6 +154,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/JtNw1qE.png",
@@ -102,6 +164,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 	],
 };
@@ -111,8 +174,48 @@ export const boardOfDirectors = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const uxDesigners = {
-	title: "ux designers",
+	title: "UX Designers",
 	members: [
+		{
+			image: "https://i.imgur.com/Umz7gGi.jpeg",
+			fullName: "Brianna Tran",
+			title: "UX Designer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/briannantran/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/EAIpFlK.jpeg",
+			fullName: "Larry Chan",
+			title: "UX Designer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/larry-chan-designs/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/tFmGYfz.jpeg",
+			fullName: "Clarence Jackson",
+			title: "UX Designer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/clarenceamosjackson/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/2c00TVu.jpeg",
+			fullName: "Sayre Tripp",
+			title: "UX Designer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+			status: "current",
+		},
 		{
 			image: "https://imgur.com/OnDOWG8.png",
 			fullName: "Venus Lumayag",
@@ -122,6 +225,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "https://www.venuslumayag.com/",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "https://i.imgur.com/oFhnNer.png",
@@ -131,6 +235,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "https://www.faezehf.com/",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/paoGCSJ.png",
@@ -141,6 +246,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/kjXCkWW.png",
@@ -150,6 +256,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "https://charmypatel.github.io/index.html",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -160,6 +267,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/a8kkFwV.png",
@@ -170,6 +278,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "elizagonzales.com",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/Ovfpeog.png",
@@ -179,6 +288,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/Phaly_ieng0k.png",
@@ -188,6 +298,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130965/team_pics/subin_p8gjt5.png",
@@ -197,6 +308,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131338/team_pics/uma_n6hcdv.jpg",
@@ -206,6 +318,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/yumi_j5x47l.png",
@@ -215,6 +328,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131297/team_pics/Christy_kn3wxm.jpg",
@@ -224,6 +338,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/HttHaC0.png",
@@ -233,6 +348,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -242,6 +358,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/rarcG7w.png",
@@ -251,6 +368,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/gN6hybH.png",
@@ -260,6 +378,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/JfMphhG.png",
@@ -269,6 +388,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/yqSt1NS.png",
@@ -278,6 +398,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -287,6 +408,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/AExJLUf.png",
@@ -299,6 +421,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "https://victoriagonzalezux.squarespace.com/",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -308,6 +431,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 
 		{
@@ -318,6 +442,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 	],
 };
@@ -327,17 +452,117 @@ export const uxDesigners = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const frontEnd = {
-	title: "front end developers",
+	title: "Frontend Developers",
 	members: [
 		{
-			image: "https://imgur.com/HVUZ6bf.png",
-			fullName: "Laura Hiller",
+			image: "",
+			fullName: "Jaspreet Nijjar",
 			title: "Lead Front-End Developer",
 			bioQuote:
-				"Laura is a Software Engineer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of development experience.",
-			gitHub: "https://github.com/lauraehiller",
-			portfolio: "https://lauraehiller.com/",
-			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
+				"Jaspreet is Front End Developer with a strong interest in React. I enjoy the creative process of creating responsive applications with clean code.",
+			gitHub: "https://github.com/Jaspreet-Nijjar",
+			portfolio: "https://jn-portfolio-site.netlify.app/",
+			linkedIn: "https://www.linkedin.com/in/jaspreet-nijjar-3266a7276/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/7145a8u.jpeg",
+			fullName: "Neha Abbas",
+			title: "Front-End Developer",
+			bioQuote:
+				"Neha is a student software developer enthusiastic about coding, problem-solving, and creating meaningful applications that make a difference.",
+			gitHub: "https://github.com/neha-ha",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/neha-abbas-827406275/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/CfSWrMs.jpeg",
+			fullName: "FJ Tria",
+			title: "Front-End Developer",
+			bioQuote:
+				"FJ is a passionate and detail-oriented software developer that aspires to craft engaging user experiences and build innovative solutions.",
+			gitHub: "https://github.com/fjstria",
+			portfolio: "https://fjstria.github.io/",
+			linkedIn: "https://www.linkedin.com/in/fjstria/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/KMpDndL.jpeg",
+			fullName: "Anh Pham",
+			title: "Front-End Developer",
+			bioQuote:
+				"Anh is a self-taught Frontend Developer, possesses a background in Chemical Engineering. Intrigued by technology's intricacies, they embarked on a programming journey through online resources, emphasizing exceptional user experiences that resonate with user needs. Anh actively collaborates with various teams, including UX/UI designers, to create extraordinary products.",
+			gitHub: "https://github.com/anhvietq",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/anhvietq/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/navaiiw.jpeg",
+			fullName: "Gavin Poley",
+			title: "Front-End Developer",
+			bioQuote:
+				"Gavin is a software developer with experience in Full Stack development and strong passion for Front End development.",
+			gitHub: "https://github.com/Gav1012",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/gavin-poley",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/13aS1rA.jpeg",
+			fullName: "Cindy Wong",
+			title: "Front-End Developer",
+			bioQuote:
+				"Cindy is a dedicated software developer who finds joy in crafting beautiful user experiences through frontend and fullstack development, aspiring to better the world with her skills.",
+			gitHub: "https://github.com/cindywongdev",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/cindywongdev/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/qjMvsN5.jpeg",
+			fullName: "Laurie Liu",
+			title: "Front-End Developer",
+			bioQuote:
+				"Laurie is a software developer and is passionate about frontend development as well as learning more about current evolving technologies.",
+			gitHub: "https://github.com/lauriealiu",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/lauriealiu",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/AKnYMWD.jpeg",
+			fullName: "Tejaswini Edidi",
+			title: "Software Developer",
+			bioQuote:
+				"Teju is a passionate software developer with Frontend and Fullstack development experience, aspiring to create innovative digital solutions and lasting software experiences. ",
+			gitHub: "https://github.com/tejuedidi",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/teju-edidi/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/DXCAXcW.jpeg",
+			fullName: "Deepthi Rao",
+			title: "Front-End Developer",
+			bioQuote:
+				"Deepthi is a Full Stack Developer, specializes in building responsive and scalable solutions. ",
+			gitHub: "https://github.com/DeepthiSRao",
+			portfolio: "https://deepthisrao.com",
+			linkedIn: "https://www.linkedin.com/in/deepthi-srinidhi-rao/",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/mnGxgMr.jpeg",
+			fullName: "Shirin Rokni",
+			title: "Front-End Developer",
+			bioQuote:
+				"Shirin is a Software Developer who has a passion for Frontend and is learning more about Fullstack development.",
+			gitHub: "https://github.com/roknishirin",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/shirin-rokni/",
+			status: "current",
 		},
 		{
 			image: "",
@@ -348,6 +573,29 @@ export const frontEnd = {
 			gitHub: "https://github.com/jrkozak92",
 			portfolio: "http://joeykozak.com/",
 			linkedIn: "",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/afdlLMu.png",
+			fullName: "Asti Shalymova",
+			title: "Software Engineer",
+			bioQuote:
+				"Asti is a software engineer based in LA. Frontend developer @ Spacelab | Software Developer @ Femispace | Instructor associate @ General Assembly.",
+			gitHub: "https://github.com/AnastasiiaAsti",
+			portfolio: "https://asticodes.dev",
+			linkedIn: "https://www.linkedin.com/in/anastasiiaasti/",
+			status: "current",
+		},
+		{
+			image: "https://imgur.com/HVUZ6bf.png",
+			fullName: "Laura Hiller",
+			title: "Front-End Developer",
+			bioQuote:
+				"Laura is an experienced Software Engineer specializing in Frontend/Fullstack development.",
+			gitHub: "https://github.com/lauraehiller",
+			portfolio: "https://lauraehiller.com/",
+			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
+			status: "current",
 		},
 		{
 			image: "https://i.imgur.com/vutLmqW.png",
@@ -358,6 +606,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "https://terminal.turing.edu/alumni/1329-eric-matlock",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/bOmCTkN.png",
@@ -368,6 +617,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/megbuch",
 			portfolio: "https://meghanbucher.work",
 			linkedIn: "https://linkedin.com/in/meghanbucher",
+			status: "past",
 		},
 		{
 			image: "",
@@ -379,6 +629,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/pBo2sNX.png",
@@ -388,6 +639,7 @@ export const frontEnd = {
 				"My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
 			gitHub: "",
 			portfolio: "https://www.amandastern.dev",
+			status: "past",
 		},
 		{
 			image: "https://ca.slack-edge.com/T01NXS517FE-U02M259VB29-764495edcf61-512",
@@ -399,6 +651,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/aanand93",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/alexanderanand/",
+			status: "past",
 		},
 		{
 			image: "",
@@ -408,6 +661,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/LAAT4Ac.png",
@@ -417,6 +671,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/cAqeobu.png",
@@ -426,6 +681,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/ldukles",
 			portfolio: "https://lindsey-dukles-portfolio.netlify.app/",
 			linkedIn: "https://www.linkedin.com/in/lindsey-dukles/",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/brandon_ihzbvu.png",
@@ -437,6 +693,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/bcantello",
 			portfolio: "https://www.brandoncantello.com/",
 			linkedIn: "https://www.linkedin.com/in/brandon-cantello/",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/nDhtO48.png",
@@ -446,6 +703,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/kat_wzzzo3.png",
@@ -455,6 +713,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130969/team_pics/angelines_ygdgfi.png",
@@ -464,6 +723,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
@@ -473,6 +733,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/hlg0qD5.png",
@@ -482,6 +743,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 
 		/* TODO: The following members listed BELOW can be deleted upon the full implementation of Cohorts*/
@@ -494,6 +756,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
@@ -503,6 +766,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
@@ -512,6 +776,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -521,6 +786,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://ca.slack-edge.com/T01NXS517FE-U02MHPLFH4H-0a5296950b94-512",
@@ -530,6 +796,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -539,6 +806,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -548,6 +816,7 @@ export const frontEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 	],
 };
@@ -557,7 +826,7 @@ export const frontEnd = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const backEnd = {
-	title: "back end developers",
+	title: "Backend Developers",
 	members: [
 		{
 			image: "https://i.imgur.com/pBo2sNX.png",
@@ -567,6 +836,7 @@ export const backEnd = {
 				"My name's Amanda, and I'm a full-stack Software Engineer. My professional career started with working project management for software development programs in the Air Force's Space Command. Upon leaving the military, I went on to work outdoor education and became a Park Ranger in the Bureau of Land Management. As a Ranger I worked wildland fire response and collected field data for integration into SQL databases.",
 			gitHub: "",
 			portfolio: "https://www.amandastern.dev",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/FitwR6t.png",
@@ -576,6 +846,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/cAqeobu.png",
@@ -585,6 +856,7 @@ export const backEnd = {
 			gitHub: "https://github.com/ldukles",
 			portfolio: "https://lindsey-dukles-portfolio.netlify.app/",
 			linkedIn: "https://www.linkedin.com/in/lindsey-dukles/",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/zuLfuhP.png",
@@ -594,6 +866,7 @@ export const backEnd = {
 				'I am a graduate of General Assembly"s Full Stack Software Engineer Bootcamp, currently acting as a mentor for underrepresented communities in web development, with a focus on Node.js and Express.js.',
 			gitHub: "",
 			portfolio: "https://kheffycervantez.surge.sh",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/RrU84at.png",
@@ -602,6 +875,7 @@ export const backEnd = {
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "https://portfolio-site-seven-swart.vercel.app/",
+			status: "past",
 		},
 		{
 			image: "",
@@ -610,6 +884,7 @@ export const backEnd = {
 			bioQuote: "",
 			gitHub: "",
 			portfolio: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/UXz18XD.png",
@@ -619,6 +894,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/fPunQXz.png",
@@ -628,6 +904,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/EsUof5b.png",
@@ -637,6 +914,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/b86C11a.jpg",
@@ -646,6 +924,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/yV7uEjh.png",
@@ -655,6 +934,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/gEbk8B1.png",
@@ -664,6 +944,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/9Fd7Qwo.png",
@@ -673,6 +954,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/qsJ2bg4.png",
@@ -682,6 +964,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -691,6 +974,7 @@ export const backEnd = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 	],
 };
@@ -700,8 +984,29 @@ export const backEnd = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const dataScience = {
-	title: "data scientists",
+	title: "Data Scientists",
 	members: [
+		{
+			image: "",
+			fullName: "Joel Lashmore",
+			title: "Data Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedin: "",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/P5s9s59.jpeg",
+			fullName: "Christopher Volpacchio",
+			title: "Data Engineer",
+			bioQuote:
+				"Christopher is an seasoned Data Scientist with experience in Supply Chain, Veterinary Healthcare and Reinsurance industries. He has a passion for education and strives to leverage his experience by contributing to new projects and initiatives.",
+			gitHub: "https://github.com/chris-volpacchio",
+			portfolio: "",
+			linkedin: "https://www.linkedin.com/in/chrisvolpacchio/",
+			status: "current",
+		},
 		{
 			image: "https://i.imgur.com/FitwR6t.png",
 			fullName: "Lily Obeng",
@@ -710,6 +1015,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/Th806tx.png",
@@ -719,6 +1025,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",
+			status: "current",
 		},
 		{
 			image: "https://i.imgur.com/aLwVaRl.png",
@@ -729,6 +1036,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/aVfBvaL.png",
@@ -740,6 +1048,7 @@ export const dataScience = {
 			gitHub: "https://github.com/pramitbhatia25",
 			portfolio: "pramitbhatia25.github.io/Portfolio",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/nRhfo0Q.png",
@@ -751,6 +1060,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/PbwKBSo.png",
@@ -762,6 +1072,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "",
@@ -771,6 +1082,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/7kNmHvV.png",
@@ -780,6 +1092,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "https://i.imgur.com/Ag0eTFb.png",
@@ -789,6 +1102,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629131368/team_pics/ricky_fdzb1y.png",
@@ -798,6 +1112,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130966/team_pics/robert_oggyg8.png",
@@ -807,6 +1122,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/vxMri4M.png",
@@ -816,6 +1132,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/6QT53lE.png",
@@ -825,6 +1142,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/gZ2WUml.png",
@@ -834,6 +1152,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/oUuPU8w.png",
@@ -843,6 +1162,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/IyxqjJc.png",
@@ -852,6 +1172,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/Wcrm1AI.png",
@@ -861,6 +1182,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/UWe1RAo.png",
@@ -870,6 +1192,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/418ED2U.png",
@@ -879,6 +1202,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/FrSOSL3.png",
@@ -888,6 +1212,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/VKT4GAl.png",
@@ -897,6 +1222,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/C6PdpAK.png",
@@ -906,6 +1232,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/99Ecdd9.png",
@@ -915,6 +1242,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 	],
 };
@@ -924,18 +1252,8 @@ export const dataScience = {
  * @type {{members: [{image: string, fullName: string, title: string}, ]}}
  */
 export const webGL = {
-	title: "WebGL Developers",
+	title: "3D Developers",
 	members: [
-		{
-			image: "https://imgur.com/HVUZ6bf.png",
-			fullName: "Laura Hiller",
-			title: "Lead 3D Graphics Developer",
-			bioQuote:
-				"Laura is a Software Developer with a BS in Computer Science from the University of California, Santa Cruz, and over two years of experience in Web Development.",
-			gitHub: "https://github.com/lauraehiller",
-			portfolio: "https://lauraehiller.com/",
-			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
-		},
 		{
 			image: "",
 			fullName: "Joey Kozak",
@@ -945,6 +1263,18 @@ export const webGL = {
 			gitHub: "https://github.com/jrkozak92",
 			portfolio: "http://joeykozak.com/",
 			linkedIn: "",
+			status: "current",
+		},
+		{
+			image: "https://imgur.com/HVUZ6bf.png",
+			fullName: "Laura Hiller",
+			title: "Front-End Developer",
+			bioQuote:
+				"Laura is an experienced Software Engineer specializing in Frontend/Fullstack development.",
+			gitHub: "https://github.com/lauraehiller",
+			portfolio: "https://lauraehiller.com/",
+			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
+			status: "current",
 		},
 		{
 			image: "https://i.imgur.com/vutLmqW.png",
@@ -955,6 +1285,7 @@ export const webGL = {
 			gitHub: "",
 			portfolio: "https://terminal.turing.edu/alumni/1329-eric-matlock",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/c_scale,w_200/v1629131500/team_pics/raysean_dn1vww.png",
@@ -964,6 +1295,7 @@ export const webGL = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/mamadou_mtnlfc.png",
@@ -973,6 +1305,7 @@ export const webGL = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/tHUZq9s.png",
@@ -982,6 +1315,7 @@ export const webGL = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/Zmy00N4.png",
@@ -991,6 +1325,7 @@ export const webGL = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/aJgDqQw.png",
@@ -1000,6 +1335,7 @@ export const webGL = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 	],
 };
@@ -1019,6 +1355,7 @@ export const writers = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632850171/katgirl_lbfxk8.jpg",
@@ -1028,6 +1365,7 @@ export const writers = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/hpdfwjo.png",
@@ -1038,6 +1376,7 @@ export const writers = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/diana-alvarenga-52b8a4206",
+			status: "current",
 		},
 		{
 			image: "https://imgur.com/AtAebvj.png",
@@ -1047,6 +1386,7 @@ export const writers = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/jD3LFb0.png",
@@ -1056,6 +1396,7 @@ export const writers = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/paoGCSJ.png",
@@ -1065,6 +1406,7 @@ export const writers = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 	],
 };
@@ -1084,6 +1426,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/6YPKVbH.png",
@@ -1093,6 +1436,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/IZOE2tp.png",
@@ -1102,6 +1446,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/hCTKu88.png",
@@ -1111,6 +1456,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/zn2CSzP.png",
@@ -1120,6 +1466,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/k0OYag4.png",
@@ -1129,6 +1476,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/QLChPXs.png",
@@ -1138,6 +1486,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/zx1ROBo.png",
@@ -1147,6 +1496,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/nIwMI5E.png",
@@ -1156,6 +1506,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/PxBOUHA.png",
@@ -1165,6 +1516,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/6Zq0ldv.png",
@@ -1176,6 +1528,7 @@ export const administration = {
 			gitHub: "",
 			portfolio: "https://www.laurenmarieowen.com/",
 			linkedIn: "",
+			status: "past",
 		},
 	],
 };
@@ -1197,6 +1550,7 @@ export const december2021Cohort = {
 			gitHub: "https://github.com/aanand93",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/alexanderanand/",
+			status: "current",
 		},
 		{
 			image: "",
@@ -1206,6 +1560,7 @@ export const december2021Cohort = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "https://ca.slack-edge.com/T01NXS517FE-U02MHPLFH4H-0a5296950b94-512",
@@ -1215,6 +1570,7 @@ export const december2021Cohort = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "",
@@ -1224,6 +1580,7 @@ export const december2021Cohort = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "",
@@ -1233,6 +1590,7 @@ export const december2021Cohort = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 	],
 };
@@ -1252,6 +1610,7 @@ export const additionalContributors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130970/team_pics/deen_ex8fxt.png",
@@ -1261,6 +1620,7 @@ export const additionalContributors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 		{
 			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1629130963/team_pics/charlie_ibjvgs.png",
@@ -1270,6 +1630,7 @@ export const additionalContributors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
+			status: "current",
 		},
 	],
 };
@@ -1289,15 +1650,15 @@ export const teamSliderNavLinks = {
 			activeFlag: "backend",
 		},
 		{
-			title: "WebGL Developers",
+			title: "3D Developers",
 			activeFlag: "webgl",
 		},
 		{
-			title: "Designers",
+			title: "UX Designers",
 			activeFlag: "designers",
 		},
 		{
-			title: "Data Scientist",
+			title: "Data Scientists",
 			activeFlag: "datascience",
 		},
 		{

@@ -1,0 +1,176 @@
+.p-application-form {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.1rem;
+	z-index: 3;
+
+	@media only screen and (max-width: 1200px) {
+		width: 100%;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	select,
+	textarea {
+		background-color: rgb(236, 236, 236);
+		color: black;
+		border: 2px solid transparent;
+		border-radius: 6px;
+		padding: 2px 10px;
+		height: 2.3rem;
+		margin: 0;
+		display: block;
+
+		&:focus {
+			border: 2px solid var(--neon-purple);
+		}
+	}
+
+	textarea {
+		resize: none;
+		height: 6rem;
+		width: 100%;
+	}
+
+	select {
+		width: 50%;
+	}
+
+	label {
+		@media only screen and (max-width: 800px) {
+			font-size: 0.8rem;
+		}
+	}
+}
+
+.p-apply-thank-you {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+	min-height: 62vh;
+
+	h2 {
+		margin-top: 3rem;
+		font-size: 2rem;
+		z-index: 3;
+
+		@media only screen and (max-width: 1000px) {
+			font-size: 1.3rem;
+			margin: 0;
+		}
+	}
+
+	h3 {
+		font-size: 1.2rem;
+		letter-spacing: 1px;
+		padding: 0 1rem;
+		z-index: 3;
+
+		@media only screen and (max-width: 1000px) {
+			font-size: 0.9rem;
+			padding: 0 3rem;
+		}
+
+		a {
+			color: var(--neon-purple);
+		}
+	}
+
+	.learn-more {
+		font-size: 1.6rem;
+		z-index: 3;
+
+		@media only screen and (max-width: 1000px) {
+			font-size: 1.3rem;
+			margin: 0;
+			padding: 0 10px;
+		}
+	}
+
+	p {
+		@media only screen and (max-width: 1000px) {
+			font-size: 1.2rem;
+			padding: 0 2rem;
+		}
+	}
+
+	.app-img-container {
+		display: flex;
+		gap: 4rem;
+		align-items: center;
+		justify-content: center;
+		z-index: 3;
+
+		@media only screen and (max-width: 1000px) {
+			flex-direction: column;
+			margin: 0 auto;
+		}
+
+		img {
+			width: 28rem;
+			height: 28rem;
+			object-fit: cover;
+			object-position: 100%;
+			margin-top: 28px;
+
+			@media only screen and (max-width: 1000px) {
+				display: none;
+			}
+		}
+	}
+
+	.buttons-container {
+		display: flex;
+		gap: 5rem;
+
+		@media only screen and (max-width: 1000px) {
+			gap: 2rem;
+		}
+
+		button {
+			width: 180px;
+
+			@media only screen and (max-width: 1000px) {
+				width: 140px;
+				height: 55px;
+				margin-top: -55px;
+			}
+		}
+	}
+
+	/* this styling is to swap the order in which 
+	the elements are displayed on smaller screens */
+	.img-swap {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		width: 50vw;
+
+		@media only screen and (max-width: 1000px) {
+			flex-direction: column-reverse;
+			width: 100%;
+		}
+	}
+
+	.thank-you-img {
+		width: 100%;
+		height: 30rem;
+		object-fit: cover;
+		z-index: 3;
+
+		@media only screen and (max-width: 1000px) {
+			height: 15rem;
+		}
+	}
+}

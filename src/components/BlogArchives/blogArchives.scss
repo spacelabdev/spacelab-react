@@ -1,0 +1,17 @@
+#blog-archive-container {
+	padding: 5em 1em;
+
+	#blog-archives {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.button-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 2rem 0 1rem;
+	}
+}

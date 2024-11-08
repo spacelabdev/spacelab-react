@@ -1,0 +1,36 @@
+.donate-checkbox-wrapper {
+	margin: 1rem 0;
+	position: relative;
+	display: flex;
+	align-self: start;
+	align-items: center;
+
+	.donate-checkbox {
+		width: calc(0.45 * var(--custom-text-size));
+		height: calc(0.45 * var(--custom-text-size));
+		margin: 0;
+		position: absolute;
+		border: 2px solid #d9d9d9;
+
+		@media (min-width: 767px) {
+			width: calc(0.9 * var(--custom-text-size));
+			height: calc(0.9 * var(--custom-text-size));
+		}
+	}
+
+	.cover-fee {
+		display: inline-block;
+		padding-inline-start: 2rem;
+		position: relative;
+		text-align: start;
+		margin: 0;
+
+		.cover-fee-bold {
+			font-weight: bold;
+		}
+
+		@media (min-width: 767px) {
+			padding-inline-start: 2.75rem;
+		}
+	}
+}

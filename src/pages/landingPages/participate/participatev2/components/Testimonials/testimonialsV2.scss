@@ -1,0 +1,69 @@
+.p-testimonials {
+	background-image: url("../../assets/testimonials-bg.png");
+	background-repeat: no-repeat;
+	background-position: cover;
+	background-position: center;
+	font-family: "Poppins";
+	padding-bottom: 100px;
+	padding-top: 100px;
+
+	@media only screen and (max-width: 800px) {
+		background-image: none;
+	}
+
+	.testimonials-text {
+		text-transform: uppercase;
+	}
+
+	.testimonials-container {
+		margin: 0 auto;
+		display: grid;
+		gap: 50px;
+		grid-template-columns: 1fr 2fr;
+		justify-content: center;
+		align-items: center;
+		max-width: 80%;
+		background-color: #1c1a22;
+		border: 10px solid white;
+		border-radius: 37px;
+		padding: 20px;
+
+		@media only screen and (max-width: 800px) {
+			display: none;
+		}
+	}
+
+	p {
+		margin: 25px 0;
+		text-align: left;
+		padding: 0 20px;
+		font-size: 1.1rem;
+	}
+
+	.blockquote-quoted::before {
+		content: "\201c";
+		font-size: 100px;
+		color: #7000ff;
+		display: block;
+		margin-bottom: -100px;
+		margin-top: -20px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		text-align: left;
+	}
+
+	.blockquote-quoted::after {
+		content: "\201d";
+		font-size: 100px;
+		color: #7000ff;
+		display: block;
+		margin-bottom: -90px;
+		margin-top: -40px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		text-align: right;
+	}
+
+	img {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+}

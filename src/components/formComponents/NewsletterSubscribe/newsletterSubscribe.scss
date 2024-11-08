@@ -1,0 +1,84 @@
+.newsletter-subscribe {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+
+	.inner-wrap {
+		width: 70%;
+
+		@media (max-width: 576px) {
+			width: 100%;
+		}
+	}
+
+	h4 {
+		font-family: "Poppins", sans-serif;
+		font-weight: 200;
+		font-style: italic;
+		font-size: 25px;
+		margin-bottom: 1.25rem;
+		color: white;
+
+		@media (max-width: 576px) {
+			font-size: 20px;
+		}
+	}
+
+	p {
+		padding-bottom: 1rem;
+
+		@media (max-width: 576px) {
+			font-size: 14px;
+		}
+	}
+
+	.subscription-form {
+		height: auto;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+
+		.inner-wrap-left {
+			width: 100%;
+			display: flex;
+			justify-content: left;
+			flex-direction: column;
+		}
+
+		.inner-wrap-center {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+
+		.name-wrap-center {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			margin-bottom: 15px;
+		}
+
+		.name-wrap-left {
+			display: flex;
+			flex-direction: row;
+			align-items: left;
+			margin-bottom: 15px;
+			gap:6px;
+		}
+	}
+}
+
+.submit-form-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h4{
+		font-size: 35px;
+	}
+
+	img{
+		padding-bottom: 1.5em;
+	}
+}
