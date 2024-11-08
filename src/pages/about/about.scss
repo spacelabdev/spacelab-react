@@ -12,6 +12,26 @@
 	}
 }
 
+.mission-vision-values-container {
+	padding: 0 3rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 3rem;
+}
+
+.mission-vision-values-card {
+	border: 1px solid gray;
+	padding: 2rem;
+
+	h3 {
+		text-align: center;
+	}
+
+	p {
+		text-align: left;
+	}
+}
+
 #about-mission-statement-container {
 	display: flex;
 	justify-content: center;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.scss";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
-import AboutMissionStatementSection from "./AboutMissionStatementSection";
+import MissionVisionValuesSection from "./MissionVisionValuesSection";
 import AboutTeamSliderSection from "./AboutTeamSliderSection";
 import History from "./History/History";
 import Footer from "../../components/Footer/Footer";
@@ -15,7 +15,7 @@ export default function About() {
 	return (
 		<>
 			<Navigation />
-			<AboutMissionStatementSection />
+			<MissionVisionValuesSection />
 			<AboutTeamSliderSection />
 			<History />
 			<Footer />
