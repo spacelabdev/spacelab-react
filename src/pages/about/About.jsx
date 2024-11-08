@@ -1,9 +1,9 @@
 import React from "react";
-import "./about.scss";
+import "./About.scss";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
 import MissionVisionValuesSection from "./MissionVisionValuesSection";
-import AboutTeamSliderSection from "./AboutTeamSliderSection";
-import History from "./History/History";
+import OurTeamSection from "./OurTeamSection";
+import HistorySection from "./HistorySection/History";
 import Footer from "../../components/Footer/Footer";
 
 /**
@@ -13,12 +13,12 @@ import Footer from "../../components/Footer/Footer";
  */
 export default function About() {
 	return (
-		<>
+		<div id="about">
 			<Navigation />
 			<MissionVisionValuesSection />
-			<AboutTeamSliderSection />
-			<History />
+			<OurTeamSection />
+			<HistorySection />
 			<Footer />
-		</>
+		</div>
 	);
 }

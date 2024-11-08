@@ -8,7 +8,7 @@ export default function MissionVisionValuesSection() {
 	return (
 		<>
 			<h1 className="about-title">ABOUT</h1>
-			<section className="mission-vision-values-container">
+			<section id="mission-vision-values-container">
 				<div className="mission-vision-values-card">
 					<h3>Mission</h3>
 					<p>

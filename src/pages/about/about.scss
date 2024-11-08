@@ -1,141 +1,53 @@
+#about {
+	margin: 0;
+	padding: 0 3rem;
+}
+
 .about-title {
 	position: relative;
-	padding: 5vh 0 2vh 0;
+	padding: 4vh 0 2vh 0;
 	color: white;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
-	font-size: 7vw;
-	letter-spacing: 3px;
+	font-size: 3rem;
 
 	@media screen and (min-width: 768px) {
 		padding: 15vh 0 5vh 0;
 	}
 }
 
-.mission-vision-values-container {
-	padding: 0 3rem;
+#mission-vision-values-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 3rem;
+
+	.mission-vision-values-card {
+		border: 1px solid gray;
+		padding: 2rem;
+
+		h3 {
+			font-weight: bold;
+			text-align: center;
+		}
+
+		p {
+			text-align: left;
+		}
+	}
 }
 
-.mission-vision-values-card {
-	border: 1px solid gray;
-	padding: 2rem;
-
-	h3 {
-		text-align: center;
-	}
-
-	p {
-		text-align: left;
-	}
-}
-
-#about-mission-statement-container {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	margin: 0 auto;
-	padding: 0;
-	max-width: 98vw;
-
-	@media screen and (min-width: 1024px) {
-		max-width: 80vw;
-	}
-
-	@media screen and (min-width: 821px) {
-	}
-
-	.about-mission-header {
-		font-size: 1.7rem;
+#our-team-container {
+	.our-team-title {
 		color: white;
-		font-weight: 600;
+		font-family: "Poppins", sans-serif;
+		font-weight: bold;
+		font-size: 3rem;
 		text-align: left;
-		letter-spacing: 4px;
-		@media screen and (min-width: 1024px) {
-			font-size: 2.5rem;
+	
+		@media screen and (min-width: 768px) {
+			padding: 15vh 0 5vh 0;
 		}
 	}
-
-	.about-mission-segment-container {
-		display: flex;
-		align-items: center;
-		height: 10rem;
-		margin: 1rem;
-
-		@media screen and (min-width: 1024px) {
-			height: 13rem;
-		}
-
-		.about-mission-header-container {
-			flex-basis: 40%;
-			height: 100%;
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-			padding: 0.5rem;
-
-			@media screen and (min-width: 1024px) {
-				padding: 1rem;
-			}
-
-			h4 {
-				font-family: "Poppins";
-			}
-		}
-
-		.about-mission-content {
-			flex-basis: 60%;
-
-			height: 100%;
-			display: inline-flex;
-			align-items: center;
-			background: rgba(99, 48, 112, 0.7);
-
-			p {
-				font-family: "Poppins";
-				font-weight: 400;
-				margin-bottom: 0;
-				text-align: left;
-				padding-inline: 0.2rem;
-				font-size: 12px;
-
-				@media screen and (min-width: 1024px) {
-					font-weight: 600;
-					font-size: 16px;
-					padding-inline: 2rem;
-				}
-
-				@media screen and (min-width: 821px) {
-				}
-			}
-		}
-	}
-
-	.about-values-background {
-		background-image: url("../../assets/componentAssets/purple-sky-unsplash.jpg");
-		background-size: cover;
-		background-position: top;
-	}
-
-	.about-mission-background {
-		background-image: url("../../assets/componentAssets/purple-sky-unsplash.jpg");
-		background-size: cover;
-		background-position: 35% 50%;
-	}
-
-	.about-vision-background {
-		background-image: url("../../assets/componentAssets/purple-sky-unsplash.jpg");
-		background-size: cover;
-		background-position: 25% 85%;
-	}
-}
-
-#about-team-slider-section {
-	max-width: 1450px;
-	margin: 0 auto;
-	padding-top: 6em;
 
 	.team-slider-header {
 		display: flex;
