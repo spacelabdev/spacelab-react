@@ -1,10 +1,9 @@
 import { React, useState, useEffect } from "react";
-import { newAboutHistoryArray } from "../aboutHelper";
-import polygon1 from "../../../assets/aboutAssets/polygon1.svg";
-import polygon2 from "../../../assets/aboutAssets/polygon2.svg";
-import "./History.scss";
+import { newAboutHistoryArray } from "./aboutHelper";
+import polygon1 from "../../assets/aboutAssets/polygon1.svg";
+import polygon2 from "../../assets/aboutAssets/polygon2.svg";
 
-export default function History() {
+export default function HistorySection() {
     const [itemIndex, setItemIndex] = useState(0);
     const [historyItem, setHistoryItem] = useState(
         newAboutHistoryArray[itemIndex]
@@ -139,9 +138,8 @@ export default function History() {
 
     return (
 		<>
-			<section id="new-history-section">
-				<h2 className="header">History</h2>
-
+			<section id="history-container">
+				<h2 className="header">HISTORY</h2>
 				<div className="container">
 					<div
 						aria-label="timeline with notable dates"

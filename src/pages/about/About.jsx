@@ -3,7 +3,7 @@ import "./About.scss";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
 import MissionVisionValuesSection from "./MissionVisionValuesSection";
 import OurTeamSection from "./OurTeamSection";
-import HistorySection from "./HistorySection/History";
+import HistorySection from "./HistorySection";
 import Footer from "../../components/Footer/Footer";
 
 /**
