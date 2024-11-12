@@ -8,15 +8,11 @@
 
 .about-title {
 	position: relative;
-	padding: 4vh 0 2vh 0;
+	padding: 15vh 0 4vh 0;
 	color: white;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 3rem;
-
-	@media screen and (min-width: 768px) {
-		padding: 15vh 0 5vh 0;
-	}
 }
 
 #mission-vision-values-container {
