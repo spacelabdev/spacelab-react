@@ -61,7 +61,7 @@ on tablets. Can be updated per UX team as necessary.
 			hr {
 				border: 2px solid rgba($color: gray, $alpha: 0.5);
 				width: 40%;
-				margin: 2rem 0;
+				margin: 1rem 0;
 			}
 	
 			ul {
@@ -73,10 +73,6 @@ on tablets. Can be updated per UX team as necessary.
 			@media screen and (max-width: 576px) {
 				display: flex;
 				flex-direction: column;
-
-				hr {
-					margin: 1rem 0;
-				}
 			}
 		}
 
