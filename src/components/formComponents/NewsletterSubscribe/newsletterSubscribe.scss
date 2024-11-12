@@ -19,7 +19,7 @@
 	}
 
 	p {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		padding-bottom: 1rem;
 		color: var(--light-gray);
 
@@ -73,6 +73,12 @@
 			align-items: left;
 			margin-bottom: 15px;
 			gap: 1rem;
+		}
+
+		@media screen and (max-width: 768px) {
+			button {
+				margin: 1rem 0;
+			}
 		}
 	}
 }

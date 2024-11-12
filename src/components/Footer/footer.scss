@@ -16,64 +16,93 @@ on tablets. Can be updated per UX team as necessary.
 	}
 
 	.content-container {
+
+		
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		padding: 2rem;
+		gap: 4rem;
+		justify-content: left;
+		align-content: center;
+		padding: 4rem;
 
-		@media (max-width: 767px) {
-			display: grid;
-			grid-template-columns: 1fr;
-			align-items: center;
+		@media screen and (max-width: 1200px) {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 
-	.left-container {
-		@media (min-width: 766px) {
-			padding-bottom: 0;
-		}
-
+	/*
+	.vr {
+		margin: 0 0 0 4rem;
+		border: 1px solid gray;
+		background-color: gray;
+		width: 1px;
+		height: 60%;
 	}
+	*/
+	
 
 	.right-container {
-		ul {
-			list-style: none;
-			text-transform: uppercase;
-			text-align: right;
+		display: grid;
+		grid-template-columns: 1fr;
+
+		.footer-links {
 			margin: 0;
-			@media (min-width: 766px) {
-				text-align: right;
-				padding-left: 3.1rem;
-			}
-			@media (max-width: 767px) {
-				padding: 2rem 0 0 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 4rem;
+			text-align: left;
+
+			h4 {
+				font-size: 1rem;
 				text-align: left;
 			}
+	
+			hr {
+				border: 2px solid rgba($color: gray, $alpha: 0.5);
+				width: 40%;
+				margin: 2rem 0;
+			}
+	
+			ul {
+				margin: 0;
+				font-size: 1rem;
+				list-style: none;
+			}
 
-			li {
-				line-height: 2.2rem;
-				letter-spacing: 2px;
+			@media screen and (max-width: 576px) {
+				display: flex;
+				flex-direction: column;
+
+				hr {
+					margin: 1rem 0;
+				}
 			}
 		}
-	}
 
-	.socialmedia-container {
-		text-align: center;
-		padding-bottom: 2rem;
-		color: var(--text);
-		font-family: Lato, sans-serif;
-		letter-spacing: 1px;
-
-		a {
-			margin: 0 10px;
-		}
-
-		p {
-			width: 70%;
+		.socialmedia-container {
+			text-align: center;
+			padding-bottom: 2rem;
 			color: var(--text);
-			max-width: 1100px;
-			margin: 10px 0 0.5rem 0;
-			@media (min-width: 766px) {
-				width: 90%;
+			font-family: Lato, sans-serif;
+			letter-spacing: 1px;
+	
+			a {
+				margin: 0 1.25rem;
+			}
+	
+			p {
+				width: 70%;
+				color: var(--text);
+				max-width: 1100px;
+				margin: 10px 0 0.5rem 0;
+				@media (min-width: 766px) {
+					width: 90%;
+				}
+			}
+			
+			@media screen and (max-width: 768px) {
+				margin-top: 4rem;
 			}
 		}
 	}
