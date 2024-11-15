@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.scss";
+import "./about.scss";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
 import MissionVisionValuesSection from "./MissionVisionValuesSection";
 import OurTeamSection from "./OurTeamSection";

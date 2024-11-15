@@ -9,13 +9,14 @@ export default function HistorySection() {
         newAboutHistoryArray[itemIndex]
     );
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [style, setStyle] = useState({ top: 0 });
+    const [style, setStyle] = useState({ left: 0 });
     const [prevIndex, setPrevIndex] = useState(0);
     const [fade, setFade] = useState(null);
+    // eslint-disable-next-line ------- remove this line to enable eslint in production // ----- !!
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Initialize based on current screen width
 
     // set date hight pixels based on whether mobile version or desktop version
-    const dateHeight = isMobile ? 70 : 150;
+    const dateHeight = isMobile ? 70 : 150; // TODO: adjust for mobile version
 
     useEffect(() => {
         setHistoryItem(newAboutHistoryArray[itemIndex]);
@@ -23,14 +24,14 @@ export default function HistorySection() {
 
     useEffect(() => {
         setStyle({
-            top: `${scrollPosition}px`,
+            left: `${scrollPosition}px`,
         });
     }, [scrollPosition]);
 
     function scrollOne(scrollDirection) {
         setStyle({
             // from current scrollPosition...
-            top: `${scrollPosition}px`,
+            left: `${scrollPosition}px`,
             // if scrollDirection is negative, scroll down, otherwise scroll up
             animationName:
                 scrollDirection < 0 ? 
@@ -56,14 +57,14 @@ export default function HistorySection() {
             if (itemIndex === 0) {
                 //initiate scrolling animation from current scrollPosition
                 setStyle({
-                    top: `${scrollPosition}px`,
+                    left: `${scrollPosition}px`,
                     animationName: isMobile ? `top-to-bottom-mobile` : `top-to-bottom`,
                     animationDuration: `.5s`,
                     animationTimingFunction: `ease-in-out`,
                 });
                 // after scroll animation is complete, set new position
                 setTimeout(() => {
-                    isMobile ? setScrollPosition(-210) : setScrollPosition(-450);
+                    isMobile ? setScrollPosition(-210) : setScrollPosition(-450);  // TODO: adjust for mobile version
                 }, 499);
             } else {
                 //if NOT at top already, initiate scroll up
@@ -74,7 +75,7 @@ export default function HistorySection() {
             if (itemIndex === newAboutHistoryArray.length - 1) {
                 //initiate scrolling animation from current scrollPosition
                 setStyle({
-                    top: `${scrollPosition}px`,
+                    right: `${scrollPosition}px`,
                     animationName: isMobile ? `bottom-to-top-mobile` : `bottom-to-top`,
                     animationDuration: `.5s`,
                     animationTimingFunction: `ease-in-out`,
@@ -120,7 +121,7 @@ export default function HistorySection() {
                 setPrevIndex(itemIndex);
                 //initiate scrolling animation from current scrollPosition
                 setStyle({
-                    top: `${scrollPosition}px`,
+                    left: `${scrollPosition}px`,
                     animationName: isMobile ? `scroll-down-two-mobile` : `scroll-down-two`,
                     animationDuration: `.5s`,
                     animationTimingFunction: `ease-in-out`,
@@ -197,18 +198,20 @@ export default function HistorySection() {
 								<img
 									alt={historyItem[3]}
 									src={historyItem[2]}
+                                    className=".content-image"
 									style={{
 										animationName:
 											fade === "out" ? `fade-out` : `fade-in`,
 										animationDuration: `.5s`,
-										animationTimingFunction: `ease-in-out`,
+										animationTimingFunction: `ease-in-out`
 									}}
-								></img>
+								/>
 							</div>
 
-							<br />
+							{/* <br /> */}
 
 							<p
+                                className="content-paragraph"
 								style={{
 									animationName:
 										fade === "out" ? `fade-out` : `fade-in`,
