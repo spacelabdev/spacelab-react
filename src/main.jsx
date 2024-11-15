@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch, Redirect } from "react-router";
-import About from "./pages/about/About";
+import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
 import Discovery from "./pages/discovery/Discovery";
 import Donate from "./pages/Donate/Donate";

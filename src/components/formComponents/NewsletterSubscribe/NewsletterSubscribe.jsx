@@ -36,8 +36,7 @@ export default function NewsletterSubscribe({ justifyContent = "left" }) {
 			<div className="inner-wrap">
 				<h4>Subscribe to Our Newsletter</h4>
 				<p>
-					Sign up to learn about the latest discoveries, news and
-					more! Delivered weekly.
+					Sign up to learn about the latest discoveries, news, and more!
 				</p>
 				<form className="subscription-form" onSubmit={handleSubmit}>
 					<div
