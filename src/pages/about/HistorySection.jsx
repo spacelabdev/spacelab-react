@@ -12,8 +12,16 @@ export default function HistorySection() {
     const [style, setStyle] = useState({ left: 0 });
     const [prevIndex, setPrevIndex] = useState(0);
     const [fade, setFade] = useState(null);
-    // eslint-disable-next-line ------- remove this line to enable eslint in production // ----- !!
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Initialize based on current screen width
+    const [isMobile, setIsMobile] = useState(); 
+
+    useEffect(() => {
+        // Func to initialize isMobile based on current screen width 
+        function handleResize() {
+            setIsMobile(window.innerWidth <= 768);
+        }
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     // set date hight pixels based on whether mobile version or desktop version
     const dateWidth = isMobile ? 100 : 150; 
@@ -122,7 +130,7 @@ export default function HistorySection() {
                 //initiate scrolling animation from current scrollPosition
                 setStyle({
                     left: `${scrollPosition}px`,
-                    animationName: isMobile ? `scroll-right-two-mobile` : `scroll-right-two`,
+                    animationName: `scroll-right-two`,
                     animationDuration: `.5s`,
                     animationTimingFunction: `ease-in-out`,
                 });
@@ -207,9 +215,6 @@ export default function HistorySection() {
 									}}
 								/>
 							</div>
-
-							{/* <br /> */}
-
 							<p
                                 className="content-paragraph"
 								style={{
@@ -225,26 +230,6 @@ export default function HistorySection() {
 					</div>
 				</div>
 			</section>
-			{/* <section id="new-history-section-mobile">
-				<h2 className="header">History</h2>
-				{newAboutHistoryArray.map((item, i) => {
-					return (
-						<div key={i}>
-							<div aria-label="date" className="mobile-date">
-								{item[0] + " " + item[1]}
-							</div>
-
-							<div className="mobile-image-wrapper">
-								<img alt={item[3]} src={item[2]} />
-							</div>
-
-							<br />
-
-							<p className="mobile-paragraph">{historyItem[4]}</p>
-						</div>
-					);
-				})}
-			</section> */}
 		</>
 	);
 }
