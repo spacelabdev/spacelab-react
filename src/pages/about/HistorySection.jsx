@@ -16,8 +16,8 @@ export default function HistorySection() {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Initialize based on current screen width
 
     // set date hight pixels based on whether mobile version or desktop version
-    const dateHeight = isMobile ? 70 : 150; // TODO: adjust for mobile version
-
+    const dateWidth = isMobile ? 100 : 150; 
+   
     useEffect(() => {
         setHistoryItem(newAboutHistoryArray[itemIndex]);
     }, [itemIndex]);
@@ -32,19 +32,19 @@ export default function HistorySection() {
         setStyle({
             // from current scrollPosition...
             left: `${scrollPosition}px`,
-            // if scrollDirection is negative, scroll down, otherwise scroll up
+            // if scrollDirection is negative, scroll right, otherwise scroll up
             animationName:
                 scrollDirection < 0 ? 
                     isMobile ? 
-                    "dates-scroll-down-mobile" : "dates-scroll-down" 
+                    "dates-scroll-right-mobile" : "dates-scroll-right" 
                 : isMobile ? 
-                    "dates-scroll-up-mobile": "dates-scroll-up",
+                    "dates-scroll-left-mobile": "dates-scroll-left",
             animationDuration: `.5s`,
             animationTimingFunction: `ease-in-out`,
         });
         // after scroll animation completes, update scrollPosition to selected value
         setTimeout(() => {
-            setScrollPosition(scrollPosition + dateHeight * scrollDirection);
+            setScrollPosition(scrollPosition + dateWidth * scrollDirection);
         }, 499);
     }
 
@@ -52,31 +52,31 @@ export default function HistorySection() {
         setFade("out");
         setPrevIndex(itemIndex);
 
-        if (direction === "up") {
-            // if at top already, scroll to end
+        if (direction === "left") {
+            // if at left already, scroll to end
             if (itemIndex === 0) {
                 //initiate scrolling animation from current scrollPosition
                 setStyle({
                     left: `${scrollPosition}px`,
-                    animationName: isMobile ? `top-to-bottom-mobile` : `top-to-bottom`,
+                    animationName: isMobile ? `left-to-right-mobile` : `left-to-right`,
                     animationDuration: `.5s`,
                     animationTimingFunction: `ease-in-out`,
                 });
                 // after scroll animation is complete, set new position
                 setTimeout(() => {
-                    isMobile ? setScrollPosition(-210) : setScrollPosition(-450);  // TODO: adjust for mobile version
+                    isMobile ? setScrollPosition(-300) : setScrollPosition(-450);  
                 }, 499);
             } else {
-                //if NOT at top already, initiate scroll up
+                //if NOT at left already, initiate scroll left
                 scrollOne(1);
             }
-        } else if (direction === "down") {
-            // if at end already, scroll to top
+        } else if (direction === "right") {
+            // if at end already, scroll to left
             if (itemIndex === newAboutHistoryArray.length - 1) {
                 //initiate scrolling animation from current scrollPosition
                 setStyle({
                     right: `${scrollPosition}px`,
-                    animationName: isMobile ? `bottom-to-top-mobile` : `bottom-to-top`,
+                    animationName: isMobile ? `right-to-left-mobile` : `right-to-left`,
                     animationDuration: `.5s`,
                     animationTimingFunction: `ease-in-out`,
                 });
@@ -85,19 +85,19 @@ export default function HistorySection() {
                     setScrollPosition(0);
                 }, 499);
             } else {
-                //if NOT at end already, initiate scroll down
+                //if NOT at end already, initiate scroll right
                 scrollOne(-1);
             }
         }
         // as scroll is happening, fade into newly selected image/text
         setTimeout(() => {
-            if (direction === "up") {
+            if (direction === "left") {
                 setItemIndex(
                     itemIndex === 0
                         ? newAboutHistoryArray.length - 1
                         : itemIndex - 1
                 );
-            } else if (direction === "down") {
+            } else if (direction === "right") {
                 setItemIndex(
                     itemIndex === newAboutHistoryArray.length - 1
                         ? 0
@@ -111,23 +111,23 @@ export default function HistorySection() {
     function handleClick(evt, idx) {
         // no action if clicking on already selected date
         if (itemIndex !== idx) {
-            // scroll down one
+            // scroll right one
             if (idx - itemIndex === 1) {
-                handleCarousel("down");
+                handleCarousel("right");
             }
-            //scroll down two
+            //scroll right two
             if (idx - itemIndex === 2) {
                 setFade("out");
                 setPrevIndex(itemIndex);
                 //initiate scrolling animation from current scrollPosition
                 setStyle({
                     left: `${scrollPosition}px`,
-                    animationName: isMobile ? `scroll-down-two-mobile` : `scroll-down-two`,
+                    animationName: isMobile ? `scroll-right-two-mobile` : `scroll-right-two`,
                     animationDuration: `.5s`,
                     animationTimingFunction: `ease-in-out`,
                 });
                 setTimeout(() => {
-                    setScrollPosition(scrollPosition - dateHeight * 2);
+                    setScrollPosition(scrollPosition - dateWidth * 2);
                 }, 499);
                 setTimeout(() => {
                     setItemIndex(idx);
@@ -147,11 +147,11 @@ export default function HistorySection() {
 						className="date-picker-wrapper"
 					>
 						<button
-							aria-label="up arrow"
+							aria-label="left arrow"
 							className="arrow-wrapper"
-							onClick={() => handleCarousel("up")}
+							onClick={() => handleCarousel("left")}
 						>
-							<img alt="up arrow" src={polygon1}></img>
+							<img alt="left arrow" src={polygon1}></img>
 						</button>
 
 						<div className="scroll-outer">
@@ -184,11 +184,11 @@ export default function HistorySection() {
 						</div>
 
 						<button
-							aria-label="down arrow"
+							aria-label="right arrow"
 							className="arrow-wrapper"
-							onClick={() => handleCarousel("down")}
+							onClick={() => handleCarousel("right")}
 						>
-							<img alt="down arrow" src={polygon2}></img>
+							<img alt="right arrow" src={polygon2}></img>
 						</button>
 					</div>
 
