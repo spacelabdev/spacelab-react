@@ -6,7 +6,7 @@
 import jan2021 from "../../assets/aboutAssets/jan2021.jpeg";
 import aug2021 from "../../assets/aboutAssets/aug2021.png";
 import may2023 from "../../assets/aboutAssets/may2023.png";
-import image2 from "../../assets/homeAssets/image2.jpg";
+import feb2021 from "../../assets/homeAssets/image2.jpg";
 
 export const newAboutHistoryArray = [
 	[
@@ -14,19 +14,19 @@ export const newAboutHistoryArray = [
 		"2021",
 		jan2021,
 		"group of people gathered around a laptop looking at something",
-		"Data Scientist Matt Paterson meets Dr. Andrew " +
-			"Vanderburg and Dr. Jessie Christiansen of CalTech to " +
-			"publish a paper on machine learning and exoplanets. " +
-			"They connect him with former classmates Ollie" +
-			"Jackson and Jon Zivku to create SpaceLab: a web " +
-			"application for space exploration.",
+		"Matthew Paterson is working to publish a paper about " +
+			"machine learning and exoplanets. Eager about space " +
+			"exploration and exoplanets, Matt reconnects with friends Ollie " +
+			"Jackson and Jon Zivku. Together, they set out to create an " +
+			"interactive web application that will help young people and " +
+			"space enthusiasts learn about our galaxy. Thus, The Spacelab is born!",
 	],
 	[
-		"Jan",
+		"Feb",
 		"2021",
-		image2,
+		feb2021,
 		"people in an office planning a project",
-		"SpaceLab meets with aspiring UX Designers to create " +
+		"Spacelab meets with aspiring UX Designers to create " +
 			"a website for exoplanet discovery. Realizing the lack " +
 			"of cross-functional collaboration experience for early " +
 			"tech professionals, they decide to become a non-profit " +
@@ -39,12 +39,12 @@ export const newAboutHistoryArray = [
 		"2021",
 		aug2021,
 		"planet against a blue sky",
-		"SpaceLab launches its website and receive help " +
+		"Spacelab launches its website and receive help " +
 			"from Meghan Slan (Director of DEIB) in becoming a non-" +
 			"profit organization with the foundation of diversity and " +
 			"inclusion. " +
 			"Currently, a team of 25 cross-functional members are " +
-			"working on SpaceLab's first project: Exoplanetarium, " +
+			"working on Spacelab's first project: Exoplanetarium, " +
 			"where users can explore exoplanets in the Milky Way.",
 	],
 	[
@@ -52,12 +52,11 @@ export const newAboutHistoryArray = [
 		"2023",
 		may2023,
 		"planets around a star, from Spacelab's Exoplanetarium project",
-		"Exoplanetarium is launched as SpaceLab's pilot project! " +
-			"OTHER INTERESTING FACTS HERE. " +
-			"ALSO HERE.",
+		"Exoplanetarium is launched as Spacelab's pilot project! ",
 	],
 ];
 
+/*
 export const aboutHistoryArray = [
 	[
 		"SPACELAB 2021.01.27",
@@ -88,6 +87,7 @@ export const aboutHistoryArray = [
 			"Exoplanetarium, of which users will have the opportunity to explore exoplanets in our milky way system.",
 	],
 ];
+*/
 
 /**
  * Object containing details for the Board of Directors
