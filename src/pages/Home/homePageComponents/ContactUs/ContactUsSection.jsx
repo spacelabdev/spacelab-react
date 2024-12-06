@@ -1,7 +1,7 @@
 import React from "react";
 import "./contactUsSection.scss";
 import InternalNavButton from "../../../../components/styleComponents/navigationButtons/InternalNavButton";
-import ContactUsImage from "../../../../assets/homeAssets/image5.png";
+//import ContactUsImage from "../../../../assets/homeAssets/image5.png";
 
 export default function ContactUsSection() {
 	return (

@@ -17,15 +17,18 @@ export default function Home() {
 	return (
 		<div className={"homepage-container"}>
 			<HeroImage heroTitle="HOME" />
+
+			{/* About */}
 			<DiversityInTechSection />
+
+			{/* Statistics */}			
 			<DiversityInTechStatisticsSection />
+
+			{/* Future Explorations */}
 			<HorizonSection />
+
 			<SupportTheCauseSection />
 			<ContactUsSection />
-			{/*
-			// Removed until blog page on Medium is back up.
-			<BlogCarousel isHomePage={true} />
-			*/}
 			<Footer />
 		</div>
 	);
