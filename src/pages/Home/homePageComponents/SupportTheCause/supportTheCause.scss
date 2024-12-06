@@ -12,9 +12,14 @@
 			font-weight: bold;
 			font-size: 3rem;
 			letter-spacing: 2px;
+
+			@media screen and (max-width: 768px) {
+				font-size: 2rem;
+			}
 		}
 
 		p {
+			font-size: 1rem;
 			color: white;
 			padding: 1em 0 1em 0;
 		}
