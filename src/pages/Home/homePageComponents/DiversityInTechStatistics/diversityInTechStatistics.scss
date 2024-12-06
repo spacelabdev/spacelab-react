@@ -1,7 +1,3 @@
-* {
-	border: 1px solid red;
-}
-
 .diversity-in-tech-stats-section {
 	font-family: "Lato", sans-serif;
 	margin: 0;
@@ -31,11 +27,16 @@
 		
 			h3 {
 				font-size: 1.75rem;
+				margin: 0;
+				padding-bottom: 1rem;
 			}
 		
-			.stat-card {		
+			.stat-card {	
+				padding-top: 1rem;	
+				width: 100%;
 				display: flex;
-				align-content: center;
+				align-items: center;
+				gap: 1rem;
 				background-color: #1C1A22;
 				border: 2px solid #FCF0A6;
 				border-radius: 1rem;
@@ -44,6 +45,7 @@
 					font-family: "Poppins", sans-serif;
 					font-weight: bold;
 					font-size: 2rem;
+					padding: 0.5rem 1rem;
 				}
 			
 				.text {
