@@ -14,12 +14,21 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
 
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+		}
+
 		.about {
 			padding-left: 4rem;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			text-align: left;
+
+			@media screen and (max-width: 768px) {
+				padding: 4rem 4rem 0 4rem;
+			}
 
 			h3 {
 				font-family: "Poppins", sans-serif;

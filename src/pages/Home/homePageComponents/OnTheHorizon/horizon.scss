@@ -23,6 +23,11 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
+
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-direction: column-reverse;
+		}
 	}
 
 	.horizon-left-container {
@@ -32,11 +37,19 @@
 		justify-content: center;
 		text-align: left;
 
+		@media screen and (max-width: 768px) {
+			padding: 4rem;
+		}
+
 		h2 {
 			font-family: "Poppins", sans-serif;
 			font-weight: bold;
 			font-size: 3rem;
 			letter-spacing: 2px;
+
+			@media screen and (max-width: 768px) {
+				font-size: 2rem;
+			}
 		}
 
 		p {
@@ -47,8 +60,9 @@
 
 	.horizon-right-container {
 		height: 100%;
-			img {
-				object-fit: cover;
-			}
+		
+		img {
+			object-fit: cover;
 		}
+	}
 }

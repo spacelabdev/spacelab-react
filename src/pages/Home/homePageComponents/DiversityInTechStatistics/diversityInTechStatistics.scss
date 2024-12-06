@@ -9,6 +9,10 @@
 		font-weight: bold;
 		font-size: 3rem;
 		letter-spacing: 2px;
+
+		@media screen and (max-width: 768px) {
+			font-size: 2rem;
+		}
 	}
 
 	.stats-wrapper {
@@ -17,6 +21,12 @@
 		grid-template-columns: 1fr 1fr;	
 		flex-wrap: row;
 		gap: 12rem;
+
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+			gap: 4rem;
+		}
 		
 		.stats-column {
 			display: flex;
@@ -24,6 +34,11 @@
 			align-items: center;
 			justify-content: center;
 			gap: 1.5rem;
+
+			@media screen and (max-width: 768px) {
+				display: flex;
+				flex-direction: column;
+			}
 		
 			h3 {
 				font-size: 1.75rem;
@@ -40,6 +55,12 @@
 				background-color: #1C1A22;
 				border: 2px solid #FCF0A6;
 				border-radius: 1rem;
+
+				@media screen and (max-width: 768px) {
+					display: flex;
+					flex-direction: column;
+					gap: 0;
+				}
 			
 				.percentage {
 					font-family: "Poppins", sans-serif;
@@ -50,6 +71,11 @@
 			
 				.text {
 					text-align: left;
+
+					@media screen and (max-width: 768px) {
+						text-align: center;
+						padding: 0.5rem;
+					}
 				}
 			}
 		}
