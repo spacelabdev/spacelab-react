@@ -1,44 +1,53 @@
 .diversity-in-tech-section {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-bottom: 80px;
-
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	
 	.button-wrap {
 		display: flex;
 		justify-content: center;
 	}
-
+	
 	.content-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.about {
+			padding-left: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+
+			@media screen and (max-width: 768px) {
+				padding: 4rem 4rem 0 4rem;
+			}
+
+			h3 {
+				font-family: "Poppins", sans-serif;
+				font-weight: bold;
+				font-size: 2rem;
+			}
+
+			p {
+				font-size: 1rem;
+				line-height: 2;
+			}
+		}
 
 		.images-container {
-			display: flex;
-			flex-direction: row;
-			width: 100%;
-			height: auto;
+			height: 100%;
+
 			img {
-				width: 33.3%;
 				object-fit: cover;
 			}
-		}
-		.about {
-			margin-top: 2rem;
-			display: flex;
-			flex-direction: column;
-			width: 70%;
-			justify-content: center;
-			@media screen and (min-width: 1150px) {
-				width: 50%;
-			}
-		}
-
-		@media screen and (max-width: 1150px) {
-			flex-direction: column;
 		}
 	}
 }

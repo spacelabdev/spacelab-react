@@ -3,8 +3,13 @@
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	height: calc(450px);
-	background: #160d39;
+	height: 50vh;
+	background: radial-gradient(#1f0044, #0E001F);
+
+	@media screen and (max-width: 768px) {
+		height: 40vh;
+	}
+	
 
 	h1 {
 		margin: 0 auto;
@@ -13,25 +18,28 @@
 		color: white;
 		font-family: "Poppins", sans-serif;
 		font-weight: bold;
-		font-size: 8vw;
+		font-size: 3rem;
 		letter-spacing: 3px;
-		top: calc(50%);
-		left: 50%;
-		transform: translate(-50%, -50%);
+		top: 50%;
+		left: 10%;
 		z-index: 98;
 
-		@media screen and (min-width: 768px) {
-			font-size: 4.25rem;
+		
+		@media screen and (max-width: 768px) {
+			font-size: 2rem;
+			top: 40%
 		}
+		
 	}
 }
 
+/*
 .hero-image {
-	height: 450px;
+	background-color: #0E001F;
+	height: 100%;
 	width: 100%;
-	object-fit: cover;
-	object-position: 50% 85%;
 }
+*/
 
 .spacelab-container {
 	position: absolute;

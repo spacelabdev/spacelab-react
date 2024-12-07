@@ -1,25 +1,25 @@
 #support-the-cause-section {
-	width: 100%;
-	margin-bottom: 80px;
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 8rem 4rem;
+	background-color: rgba(red(#0E001F), green(#0E001F), blue(#0E001F), 0.85);
+	
 	.support-the-cause-wrap {
-		width: 90%;
-		margin: 0 auto 3em auto;
 		text-align: left;
-		color: white;
-		background-image: radial-gradient(
-			rgba(112, 0, 255, 0.8) 0%,
-			transparent 75%
-		);
-
-		@media only screen and (min-width: 1200px) {
-			width: 70%;
-		}
 
 		.support-the-cause-header {
-			text-align: center;
+			font-family: "Poppins", sans-serif;
+			font-weight: bold;
+			font-size: 3rem;
+			letter-spacing: 2px;
+
+			@media screen and (max-width: 768px) {
+				font-size: 2rem;
+			}
 		}
 
 		p {
+			font-size: 1rem;
 			color: white;
 			padding: 1em 0 1em 0;
 		}

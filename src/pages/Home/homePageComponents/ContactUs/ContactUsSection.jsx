@@ -1,11 +1,12 @@
 import React from "react";
 import "./contactUsSection.scss";
 import InternalNavButton from "../../../../components/styleComponents/navigationButtons/InternalNavButton";
-import ContactUsImage from "../../../../assets/homeAssets/image5.png";
+//import ContactUsImage from "../../../../assets/homeAssets/image5.png";
 
 export default function ContactUsSection() {
 	return (
 		<section id="contact-us-section">
+			{/*
 			<div className="image-wrap">
 				<img
 					src={ContactUsImage}
@@ -13,19 +14,24 @@ export default function ContactUsSection() {
 					className="contact-us-img"
 				/>
 			</div>
+			*/}
+
+			
 			<div className="text-content">
-				<h2>Want To Be A Part Of The Team?</h2>
+				<h2>WANT TO JOIN THE TEAM?</h2>
 				<p>
-					Are you fascinated by the mysteries of outer space? Do you
-					dream of being a part of the exploration and discovery of
-					our universe? If so, we invite you to join our organization
-					as a volunteer! As a volunteer, you will have the
-					opportunity to contribute to groundbreaking projects,
-					participate in educational programs, and engage with the
-					public about the wonders of outer space. You'll work
-					alongside some of the brightest minds in the field, and gain
-					valuable skills and experience that will serve you well in
-					any future endeavor.
+					If you are fascinated by space and want to be part of the exploration of our
+					universe, we invite you to join our organization as a volunteer!
+				</p>
+				<p>
+					As a volunteer, you will have the opportunity to contribute to groundbreaking
+					projects, participate in educational programs, and engage with the public about
+					the wonders of outer-space. Collaborate with some of the brightest minds in the
+					field, gain valuable skills, and build experiences that will bring you to new
+					heights.
+				</p>
+				<p>
+					The universe awaits! 🚀
 				</p>
 				<div className="button-wrap">
 					<InternalNavButton
