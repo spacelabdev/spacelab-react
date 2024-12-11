@@ -4,6 +4,10 @@
 	padding: 4rem;
 	background-color: rgba(red(#0E001F), green(#0E001F), blue(#0E001F), 0.85);
 
+	@media screen and (max-width: 768px) {
+		padding: 4rem 2rem;
+	}
+
 	h2 {
 		font-family: "Poppins", sans-serif;
 		font-weight: bold;
@@ -11,7 +15,7 @@
 		letter-spacing: 2px;
 
 		@media screen and (max-width: 768px) {
-			font-size: 2rem;
+			font-size: 1.5rem;
 		}
 	}
 
@@ -44,6 +48,10 @@
 				font-size: 1.75rem;
 				margin: 0;
 				padding-bottom: 1rem;
+
+				@media screen and (max-width: 768px) {
+					font-size: 1.5rem;
+				}
 			}
 		
 			.stat-card {	

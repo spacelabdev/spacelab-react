@@ -7,4 +7,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	@media screen and (max-width: 768px) {
+		background-position: 50% 500%;
+		background-size: 150%;
+		background-attachment: fixed;
+	}
 }
