@@ -27,15 +27,6 @@ class HamburgerMenu extends React.Component {
 						<div>
 							<Link
 								className={"hamburger-nav-link"}
-								to={"/discovery"}
-								style={{ textDecoration: "none" }}
-							>
-								Discovery
-							</Link>
-						</div>
-						<div>
-							<Link
-								className={"hamburger-nav-link"}
 								to={"/projects"}
 								style={{ textDecoration: "none" }}
 							>
@@ -45,10 +36,28 @@ class HamburgerMenu extends React.Component {
 						<div>
 							<Link
 								className={"hamburger-nav-link"}
+								to={"/discovery"}
+								style={{ textDecoration: "none" }}
+							>
+								Discovery
+							</Link>
+						</div>
+						<div>
+							<Link
+								className={"hamburger-nav-link"}
 								to={"/glossary"}
 								style={{ textDecoration: "none" }}
 							>
 								Glossary
+							</Link>
+						</div>
+						<div>
+							<Link
+								className={"hamburger-nav-link"}
+								to={"/podcast"}
+								style={{ textDecoration: "none" }}
+							>
+								Podcast
 							</Link>
 						</div>
 						{/*
@@ -63,6 +72,15 @@ class HamburgerMenu extends React.Component {
 							</Link>
 						</div>
 						*/}
+						<div>
+							<Link
+								className={"hamburger-nav-link"}
+								to={"/contact"}
+								style={{ textDecoration: "none" }}
+							>
+								Contact
+							</Link>
+						</div>
 						<div>
 							<Link
 								className={"hamburger-nav-link"}
@@ -83,15 +101,6 @@ class HamburgerMenu extends React.Component {
 								Donate
 							</a>
 						</div> */}
-						<div>
-							<Link
-								className={"hamburger-nav-link"}
-								to={"/contact"}
-								style={{ textDecoration: "none" }}
-							>
-								Contact
-							</Link>
-						</div>
 					</div>
 				</Menu>
 			</>
