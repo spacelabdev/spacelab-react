@@ -70,9 +70,9 @@ on tablets. Can be updated per UX team as necessary.
 				list-style: none;
 			}
 
-			@media screen and (max-width: 576px) {
-				display: flex;
-				flex-direction: column;
+			@media screen and (max-width: 768px) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 
