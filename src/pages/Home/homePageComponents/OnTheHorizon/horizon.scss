@@ -26,7 +26,7 @@
 
 		@media screen and (max-width: 768px) {
 			display: flex;
-			flex-direction: column-reverse;
+			flex-direction: column;
 		}
 	}
 
@@ -38,7 +38,7 @@
 		text-align: left;
 
 		@media screen and (max-width: 768px) {
-			padding: 4rem;
+			padding: 4rem 2rem;
 		}
 
 		h2 {
@@ -48,7 +48,8 @@
 			letter-spacing: 2px;
 
 			@media screen and (max-width: 768px) {
-				font-size: 2rem;
+				text-align: center;
+				font-size: 1.5rem;
 			}
 		}
 

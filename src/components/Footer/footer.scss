@@ -16,8 +16,6 @@ on tablets. Can be updated per UX team as necessary.
 	}
 
 	.content-container {
-
-		
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 4rem;
@@ -71,8 +69,8 @@ on tablets. Can be updated per UX team as necessary.
 			}
 
 			@media screen and (max-width: 576px) {
-				display: flex;
-				flex-direction: column;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
 			}
 		}
 

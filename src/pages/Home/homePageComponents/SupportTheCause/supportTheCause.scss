@@ -4,6 +4,10 @@
 	padding: 8rem 4rem;
 	background-color: rgba(red(#0E001F), green(#0E001F), blue(#0E001F), 0.85);
 	
+	@media screen and (max-width: 768px) {
+		padding: 8rem 2rem;
+	}
+
 	.support-the-cause-wrap {
 		text-align: left;
 
@@ -14,7 +18,8 @@
 			letter-spacing: 2px;
 
 			@media screen and (max-width: 768px) {
-				font-size: 2rem;
+				text-align: center;
+				font-size: 1.5rem;
 			}
 		}
 
