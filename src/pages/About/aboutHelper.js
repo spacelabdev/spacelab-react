@@ -134,7 +134,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/vSQFMQh.png",
@@ -144,7 +144,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/6KnXf6X.png",
@@ -164,7 +164,7 @@ export const boardOfDirectors = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 	],
 };
@@ -177,6 +177,36 @@ export const uxDesigners = {
 	title: "UX Designers",
 	members: [
 		{
+			image: "https://res.cloudinary.com/dwbygdu7w/image/upload/v1734047256/Burbridge_April_gn9sow.png",
+			fullName: "April Burbridge",
+			title: "Product Designer",
+			bioQuote: "After ten years as an air traffic controller, ensuring smooth and safe journeys in the skies, I’ve transitioned to a career as a product designer. My goal is to create user experiences that feel just as seamless and reliable as a well-coordinated flight.",
+			gitHub: "",
+			portfolio: "https://www.aprilburbridge.com",
+			linkedIn: "https://www.linkedin.com/in/april-burbridge",
+			status: "current",
+		},
+		{
+			image: "https://res.cloudinary.com/dwbygdu7w/image/upload/v1734047257/Mirageas_Alexa_py7d1l.png",
+			fullName: "Alexa Mirageas",
+			title: "UX Designer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "https://www.alexamirageas.com/",
+			linkedIn: "https://www.linkedin.com/in/alexamirageas/",
+			status: "current",
+		},
+		{
+			image: "https://res.cloudinary.com/dwbygdu7w/image/upload/v1734047259/Wong_Corinne_hd96ey.jpg",
+			fullName: "Corinne Wong",
+			title: "UX Designer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "https://coriwong.co",
+			linkedIn: "https://www.linkedin.com/in/corinne-e-wong/",
+			status: "current",
+		},
+		{
 			image: "https://i.imgur.com/Umz7gGi.jpeg",
 			fullName: "Brianna Tran",
 			title: "UX Designer",
@@ -184,7 +214,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/briannantran/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/EAIpFlK.jpeg",
@@ -194,7 +224,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/larry-chan-designs/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/tFmGYfz.jpeg",
@@ -204,7 +234,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/clarenceamosjackson/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/2c00TVu.jpeg",
@@ -214,7 +244,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/OnDOWG8.png",
@@ -225,7 +255,7 @@ export const uxDesigners = {
 			gitHub: "",
 			portfolio: "https://www.venuslumayag.com/",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/oFhnNer.png",
@@ -455,6 +485,27 @@ export const frontEnd = {
 	title: "Frontend Developers",
 	members: [
 		{
+			image: "https://res.cloudinary.com/dwbygdu7w/image/upload/v1734047256/Rusu_Alexei_dn0zk2.png",
+			fullName: "Alexei Rusu",
+			title: "Software Engineer",
+			bioQuote: "I'm a versatile software engineer with a background in arts, blending technical expertise with artistic creativity. I thrive in cross-functional teams with diverse skill sets. When I’m not coding, I enjoy working on robotics and experimenting with new ideas.",
+			gitHub: "https://github.com/Alex-dev7",
+			portfolio: "https://alexeirusu.com",
+			linkedIn: "https://www.linkedin.com/in/alexei-rusu-dev/",
+			status: "current",
+		},
+		{
+			image: "https://res.cloudinary.com/dwbygdu7w/image/upload/v1734047258/Tria_FJ_pzbidl.jpg",
+			fullName: "FJ Tria",
+			title: "Software Engineer",
+			bioQuote:
+				"A detail-oriented software engineer and web developer aiming to develop aesthetic, responsive, and user-centric software experiences.",
+			gitHub: "https://github.com/fjstria",
+			portfolio: "https://fjstria.github.io/",
+			linkedIn: "https://www.linkedin.com/in/fjstria/",
+			status: "current",
+		},
+		{
 			image: "",
 			fullName: "Jaspreet Nijjar",
 			title: "Lead Front-End Developer",
@@ -463,7 +514,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/Jaspreet-Nijjar",
 			portfolio: "https://jn-portfolio-site.netlify.app/",
 			linkedIn: "https://www.linkedin.com/in/jaspreet-nijjar-3266a7276/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/7145a8u.jpeg",
@@ -474,18 +525,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/neha-ha",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/neha-abbas-827406275/",
-			status: "current",
-		},
-		{
-			image: "https://i.imgur.com/CfSWrMs.jpeg",
-			fullName: "FJ Tria",
-			title: "Front-End Developer",
-			bioQuote:
-				"FJ is a passionate and detail-oriented software developer that aspires to craft engaging user experiences and build innovative solutions.",
-			gitHub: "https://github.com/fjstria",
-			portfolio: "https://fjstria.github.io/",
-			linkedIn: "https://www.linkedin.com/in/fjstria/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/KMpDndL.jpeg",
@@ -496,7 +536,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/anhvietq",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/anhvietq/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/navaiiw.jpeg",
@@ -507,7 +547,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/Gav1012",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/gavin-poley",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/13aS1rA.jpeg",
@@ -518,7 +558,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/cindywongdev",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/cindywongdev/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/qjMvsN5.jpeg",
@@ -529,18 +569,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/lauriealiu",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/lauriealiu",
-			status: "current",
-		},
-		{
-			image: "https://i.imgur.com/AKnYMWD.jpeg",
-			fullName: "Tejaswini Edidi",
-			title: "Software Developer",
-			bioQuote:
-				"Teju is a passionate software developer with Frontend and Fullstack development experience, aspiring to create innovative digital solutions and lasting software experiences. ",
-			gitHub: "https://github.com/tejuedidi",
-			portfolio: "",
-			linkedIn: "https://www.linkedin.com/in/teju-edidi/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/DXCAXcW.jpeg",
@@ -551,7 +580,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/DeepthiSRao",
 			portfolio: "https://deepthisrao.com",
 			linkedIn: "https://www.linkedin.com/in/deepthi-srinidhi-rao/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/mnGxgMr.jpeg",
@@ -562,7 +591,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/roknishirin",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/shirin-rokni/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "",
@@ -573,7 +602,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/jrkozak92",
 			portfolio: "http://joeykozak.com/",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/afdlLMu.png",
@@ -584,7 +613,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/AnastasiiaAsti",
 			portfolio: "https://asticodes.dev",
 			linkedIn: "https://www.linkedin.com/in/anastasiiaasti/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/HVUZ6bf.png",
@@ -595,7 +624,7 @@ export const frontEnd = {
 			gitHub: "https://github.com/lauraehiller",
 			portfolio: "https://lauraehiller.com/",
 			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/vutLmqW.png",
@@ -726,16 +755,6 @@ export const frontEnd = {
 			status: "past",
 		},
 		{
-			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
-			fullName: "Kausar Akther",
-			title: "Software Engineer",
-			bioQuote: "",
-			gitHub: "",
-			portfolio: "",
-			linkedIn: "",
-			status: "past",
-		},
-		{
 			image: "https://imgur.com/hlg0qD5.png",
 			fullName: "Shanti Betts",
 			title: "Software Engineer",
@@ -828,6 +847,37 @@ export const frontEnd = {
 export const backEnd = {
 	title: "Backend Developers",
 	members: [
+		{
+			image: "https://res.cloudinary.com/spacelabdev/image/upload/v1632849788/IMG_0286_bkf98r.jpg",
+			fullName: "Kausar Akther",
+			title: "Software Engineer",
+			bioQuote: "",
+			gitHub: "",
+			portfolio: "",
+			linkedIn: "",
+			status: "current",
+		},
+		{
+			image: "https://i.imgur.com/AKnYMWD.jpeg",
+			fullName: "Tejaswini Edidi",
+			title: "Software Engineer",
+			bioQuote:
+				"I am a software engineer with a passion for intersections of technology. With over 2 years of experience, I aim to create unique products and learn continuously.",
+			gitHub: "https://github.com/tejuedidi",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/teju-edidi/",
+			status: "current",
+		},
+		{
+			image: "https://res.cloudinary.com/dwbygdu7w/image/upload/v1734047257/Pickard_Benny_sgsdeq.jpg",
+			fullName: "Benny Pickard",
+			title: "Backend Software Engineer",
+			bioQuote: "Designer of SQL Database and GraphQL API on AWS services.",
+			gitHub: "https://github.com/bennypickard",
+			portfolio: "",
+			linkedIn: "https://www.linkedin.com/in/benny-pickard/",
+			status: "current",
+		},
 		{
 			image: "https://i.imgur.com/pBo2sNX.png",
 			fullName: "Amanda Stern",
@@ -987,6 +1037,16 @@ export const dataScience = {
 	title: "Data Scientists",
 	members: [
 		{
+			image: "https://res.cloudinary.com/dwbygdu7w/image/upload/v1734047255/Halbig_Kristina_zxfkzf.jpg",
+			fullName: "Kristina Halbig",
+			title: "Data Scientist",
+			bioQuote: "Data scientist with a background in analytical chemistry. I’ve visited JPL's control room six times (and counting!) and am excited to use data to explore and contribute to space exploration projects in fun ways.",
+			gitHub: "https://github.com/FragariaChemist",
+			portfolio: "https://fragariachemist.github.io/",
+			linkedin: "https://www.linkedin.com/in/khalbig/",
+			status: "current",
+		},
+		{
 			image: "",
 			fullName: "Joel Lashmore",
 			title: "Data Engineer",
@@ -994,7 +1054,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/P5s9s59.jpeg",
@@ -1005,7 +1065,7 @@ export const dataScience = {
 			gitHub: "https://github.com/chris-volpacchio",
 			portfolio: "",
 			linkedin: "https://www.linkedin.com/in/chrisvolpacchio/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/FitwR6t.png",
@@ -1025,7 +1085,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedin: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/aLwVaRl.png",
@@ -1092,7 +1152,7 @@ export const dataScience = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/Ag0eTFb.png",
@@ -1263,7 +1323,7 @@ export const webGL = {
 			gitHub: "https://github.com/jrkozak92",
 			portfolio: "http://joeykozak.com/",
 			linkedIn: "",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/HVUZ6bf.png",
@@ -1274,7 +1334,7 @@ export const webGL = {
 			gitHub: "https://github.com/lauraehiller",
 			portfolio: "https://lauraehiller.com/",
 			linkedIn: "https://www.linkedin.com/in/laura-e-hiller/",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://i.imgur.com/vutLmqW.png",
@@ -1376,7 +1436,7 @@ export const writers = {
 			gitHub: "",
 			portfolio: "",
 			linkedIn: "https://www.linkedin.com/in/diana-alvarenga-52b8a4206",
-			status: "current",
+			status: "past",
 		},
 		{
 			image: "https://imgur.com/AtAebvj.png",
