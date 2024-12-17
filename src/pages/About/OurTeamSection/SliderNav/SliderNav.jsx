@@ -105,14 +105,14 @@ const SliderNav = ({
 								All Teams
 							</div>
 							{navObjects.map((navObject, index) => (
-							<div
-								className="category-item"
-								key={index}
-								onClick={() => setActive(navObject.title)} 
-							>
-								{navObject.title}
-							</div>
-							))}
+							    <div
+									className="category-item"
+									key={index}
+									onClick={() => setActive(navObject.title)} 
+								>
+									{navObject.title}
+								</div>
+							))}	
 					</div>
 
 				</div>

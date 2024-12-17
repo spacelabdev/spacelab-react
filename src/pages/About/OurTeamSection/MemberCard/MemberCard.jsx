@@ -64,20 +64,18 @@ const MemberCard = (memberObject) => {
 	return (
 		<div className="member-card">
 			<img src={image} alt={`${member.fullName}.png`} onClick={handleCardClick}/>
-			<div className="member-card-text-container">
-				<p className="member-card-text-name">{member.fullName}</p>
-				<p className="member-card-text-title">{member.title}</p>
-			</div>
 			{/* overlay layer */}
 			{showDetails && (<div className="overlay" onClick={handleCloseClick}></div>)}
 			<div className={`member-card-details-container ${showDetails ? "show" : ""}`}>
-				<img src={image} alt={`${member.fullName}.png`} className="member-card-details-image" />
 				<div className="member-card-right-side">
 					<IconContext.Provider value={{ color: "var(--text)", size: "2rem" }} >
-					<div className="member-card-close" onClick={handleCloseClick}> <MdClose /> </div>
+					{/* <div className="member-card-close" onClick={handleCloseClick}> <MdClose /> </div> */}
 					</IconContext.Provider>
-					<p className="member-card-text-name">{member.fullName}</p>
-					<p className="member-card-text-title">{member.title}</p>
+					<div  className="member-card-text-container">
+						<p className="member-card-text-name">{member.fullName}</p>
+						<p className="member-card-text-title">{member.title}</p>						
+					</div>
+
 					<div className= "quote-container">
 						<p className="member-card-text-quote">{member.bioQuote}</p>
 					</div>

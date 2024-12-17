@@ -2,6 +2,9 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	gap: 3rem;
+	width: 100%;
+	max-width: 1800px;
 }
 
 .hidden {

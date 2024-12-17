@@ -3,83 +3,112 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 0.5rem;
 	position: relative;
+	overflow: hidden;
+	
+    &:hover .member-card-details-container {
+        transform: translateY(0%);
+		background: linear-gradient(142deg, rgba(120, 70, 169, 0.922) 4%, rgba(0,0,0,1) 99%, rgba(4,4,4,1) 99%);
+    }
 
 	.member-card-details-container {
-		display: none;
-		background: linear-gradient(142deg, rgba(120,70,169,1) 4%, rgba(0,0,0,1) 99%, rgba(4,4,4,1) 99%);
-		position: fixed; 
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		height: 21rem;
-		width: 35.5rem;
-		border-radius: 3%;
-		flex-direction: row;
+		height: 318px;
+		width: 269px;
+		position: absolute; 
+		bottom: 0%;
+		left: 0%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		background: linear-gradient(142deg, rgba(120, 70, 169, 0.77) 4%, rgba(0,0,0,1) 99%, rgba(4,4,4,1) 99%);
+		transform: translateY(75%);
+		transition: all 0.5s ease-in-out;
+
+		// border-radius: 3%;
+		// flex-direction: row;
 		z-index: 1;
+
 
 		&.show {
 			display: flex !important;
 		}
 
-		.member-card-close {
-			text-align: right;
-			margin: 1rem;
-			top:0%;
-			right:0%;
-			position: fixed;
-			cursor: pointer;
-		}
+		// .member-card-close {
+		// 	text-align: right;
+		// 	margin: 1rem;
+		// 	top:0%;
+		// 	right:0%;
+		// 	position: fixed;
+		// 	cursor: pointer;
+		// }
 
-		img.member-card-details-image {
-			height: 17rem;
-			width: 15.5rem;
-			margin-top: 2rem;
-			margin-bottom: 2rem;
-			margin-left: 1.4rem;
-			margin-right: 1.3rem;
-			cursor: default;
+		.member-card-text-container {
+			height: 80px;
+			place-content: center;
+			padding: 0 5px;
+			// margin-bottom: 5px;
 		}
 
 		.member-card-text-name, .member-card-text-title {
-			text-align: left;
-		}
-
-		.member-card-text-name {
-			margin-top: 3rem;
+			text-align: center;
 		}
 
 		.member-card-text-title {
-			margin-bottom: 2rem;
+			font-size: 16px;
 		}
 
 		.quote-container {
-			height: 8rem;
-			overflow: auto;
+			max-height: 180px;
+			overflow-y: scroll;
+
+			/* Custom scrollbar styles */
+			&::-webkit-scrollbar {
+				width: 5px;
+			}
+			&::-webkit-scrollbar-track {
+				background: #f1f1f100;
+			}
+			&::-webkit-scrollbar-thumb {
+				background: #7846a9;
+				border-radius: 5px;
+			}
+			&::-webkit-scrollbar-thumb:hover {
+				background: #7846a9; 
+			}
 		}
 
 		.member-card-text-quote {
-			font-size: 0.75rem;
+			font-size: 0.90rem;
 			color: #ffffff;
 			text-align: left;
-			margin-right: 1.2rem;
+			padding:0 5%;
 			overflow: auto;
 		}
 
 		.member-card-link-container {
 			position: absolute;
 			bottom: 0;
-			margin-bottom: 2rem;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: 1rem;
+			display: flex;
+			justify-content: center;
 
 			a {
 				height: 2rem;
 				width: 2rem;
 				margin-right: 1.3rem;
+
+				&:hover {
+					transform: scale(1.1);
+				}
 			}
+			
 		}
 		
 	}
+
 
 	.overlay {
 		position: fixed;
@@ -90,11 +119,11 @@
 		background-color: rgba(0, 0, 0, 0.6);
 		z-index: 1;
 	}
+	
 
 	img {
-		height: 21rem;
-		width: 17.5rem;
-		border-radius: 3%;
+		height: 318px;
+		width: 269px;
 		object-fit: cover;
 		background-size: auto;
 		cursor: pointer;
