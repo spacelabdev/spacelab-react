@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import "./sliderNav.scss";
 import MobileSliderNav from "./MobileSlider/MobileSliderNav";
+import { useState, useEffect } from "react";
 /**
  * Renders the Nav bar for the sliders
  * @param navObjects
@@ -39,22 +40,21 @@ const SliderNav = ({
 			setShowPast(true);
 		  }
 	};
-	// const handleTeamChange = (event) => {
-	// 	const updatedTeam = event.target.value;
-	// 	setActive(updatedTeam);
-	// };
-	// const MyIcon = (props) => {
-	// 	const { style, ...otherProps } = props;
-	// 	const colorStyle = {
-	// 		color: "white",
-	// 	};
-	// 	const styles = { ...style, ...colorStyle };
-	// 	return <AiOutlineRight {...otherProps} style={styles} />;
-	// };
+	const [screenSize, setScreenSize] = useState(window.innerWidth);
+
+	useEffect(() => {
+        const handleResize = () => {
+            setScreenSize(window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+	}, []);
 
 	return (
 		<>
-			{/* <div className={"menu"}>
+		{screenSize > 1100 ?	<div className={"menu"}>
 				<div className={`slider-nav-button-container`}>
 					<div className="status-container" style={{ width: "100%" }}>
 						<h4>Filter by Satus</h4>
@@ -105,6 +105,7 @@ const SliderNav = ({
 										className="category-item"
 										key={index}
 										onClick={() => setActive(navObject.title)} 
+										style={activeSlide === navObject.title ? { color: "var(--neon-purple)" } : {}}
 									>
 										{navObject.title}
 									</div>
@@ -113,7 +114,8 @@ const SliderNav = ({
 
 					</div>
 				</div>
-			</div> */}
+			</div>
+			:
 			<MobileSliderNav 
 				{...{
 					navObjects,
@@ -125,7 +127,7 @@ const SliderNav = ({
 					setShowCurrent,
 					setShowPast,
 				}} 
-				handleChange={handleChange} />
+				handleChange={handleChange} />}
 		</>
 	);
 };

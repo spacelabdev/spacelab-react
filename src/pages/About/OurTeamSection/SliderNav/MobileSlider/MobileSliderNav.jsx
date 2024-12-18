@@ -31,16 +31,23 @@ function MobileSliderNav({
 	return (
 		<div className={"menu"}>
 			<div className={`slider-nav-button-container`}>
+           
 				<Toolbar
 					sx={{
-						width: "100%",
+						width: "300px",
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "10px",
+
 					}}
 				>
-					<h4>Filter</h4>
+                     <h4>Filter</h4>
 					<FormControl
 						id="select-form"
 						sx={{
 							width: "100%",
+                            border: "1px solid var(--neon-purple)",
+                            borderRadius: "5px",
 						}}
 					>
 						<Select
@@ -90,6 +97,9 @@ function MobileSliderNav({
 						id="select-form"
 						sx={{
 							width: "100%",
+                            border: "1px solid var(--neon-purple)",
+                            borderRadius: "5px",
+
 						}}
 					>
 						<Select

@@ -1,5 +1,4 @@
 .menu {
-	// max-width: 80%;
 	margin: 2rem auto;
   
 	.slider-nav-button-container {
@@ -10,10 +9,14 @@
 	  gap: 16px;
 	  padding-top: 5px;
 	  padding-bottom: 10px;
-  
+
+	  @media screen and (max-width: 1100px) {
+		display: flex;
+	}
+	
 	  .status-container {
 		display: flex;
-  
+
 		h4 {
 		  font-size: 20px;
 		  font-family: "Poppins", sans-serif;
@@ -94,39 +97,39 @@
 	  }
   
 	  // ------------------ Dropdown ------------------
-	  #dropdown-basic {
-	    background-color: transparent;
-	    border: none;
-	    color: white;
-	  }
-	  #dropdown-basic:active,
-	  #dropdown-basic:focus {
-	    border: none;
-	    outline: none;
-	    box-shadow: none;
-	  }
-	  #dropdown-basic::after {
-	    display: none !important;
-	  }
-	  .dropdown-item {
-	    font-family: "Poppins", sans-serif;
-	    font-style: normal;
-	    font-weight: 400;
-	    font-size: 15px;
-	    letter-spacing: -0.015em;
-	    text-transform: uppercase;
-	    &:hover {
-	      cursor: pointer;
-	      border-bottom: 1px solid var(--neon-purple);
-	      background-color: transparent;
-	    }
-	    &:focus {
-	      background-color: transparent;
-	    }
-	  }
+	//   #dropdown-basic {
+	//     background-color: transparent;
+	//     border: none;
+	//     color: white;
+	//   }
+	//   #dropdown-basic:active,
+	//   #dropdown-basic:focus {
+	//     border: none;
+	//     outline: none;
+	//     box-shadow: none;
+	//   }
+	//   #dropdown-basic::after {
+	//     display: none !important;
+	//   }
+	//   .dropdown-item {
+	//     font-family: "Poppins", sans-serif;
+	//     font-style: normal;
+	//     font-weight: 400;
+	//     font-size: 15px;
+	//     letter-spacing: -0.015em;
+	//     text-transform: uppercase;
+	//     &:hover {
+	//       cursor: pointer;
+	//       border-bottom: 1px solid var(--neon-purple);
+	//       background-color: transparent;
+	//     }
+	//     &:focus {
+	//       background-color: transparent;
+	//     }
+	//   }
 	}
 
-	
+
   
 	.active {
 	  background-color: var(--neon-purple);

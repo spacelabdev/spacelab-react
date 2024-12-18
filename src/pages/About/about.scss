@@ -46,7 +46,7 @@
 }
 
 #our-team-container {
-	padding: 0 4vw;
+	padding: 4vh 4vw;
 
 	.our-team-title {
 		color: white;
@@ -137,14 +137,14 @@
 
 #history-container {
 	width: 100%;
-	padding: 0 4vw;
+	padding: 4vh 4vw;
 	overflow-x: hidden;
 
 	.header {
 		color: white;
 		font-family: "Poppins", sans-serif;
 		font-weight: bold;
-		font-size: 60px; 
+		font-size: 48px; 
 		text-align: left;
 	
 		@media screen and (min-width: 768px) {
