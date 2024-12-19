@@ -57,7 +57,7 @@ const SliderNav = ({
 		{screenSize > 1100 ?	<div className={"menu"}>
 				<div className={`slider-nav-button-container`}>
 					<div className="status-container" style={{ width: "100%" }}>
-						<h4>Filter by Satus</h4>
+						<h4>Filter by Status</h4>
 						<form >
 							<div className="status-item">
 								<label>

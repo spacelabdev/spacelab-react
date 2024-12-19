@@ -81,8 +81,7 @@ const MemberCard = (memberObject) => {
 								className="member-card-close"
 								onClick={handleCloseClick}
 							>
-								{" "}
-								<MdClose />{" "}
+								<MdClose />
 							</div>
 						)}
 					</IconContext.Provider>
