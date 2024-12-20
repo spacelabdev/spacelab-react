@@ -1,0 +1,138 @@
+:root {
+	--text-color: #449495;
+}
+
+#progress-container {
+	max-width: var(--content-width);
+	background: rgba($color: #fafafb, $alpha: 10%);
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 2rem;
+	margin: 5rem auto;
+
+	@media (min-width: 1024px) {
+		margin: 10rem auto;
+		border: none;
+		background: none;
+	}
+
+	.progress-image-wrapper {
+		display: none;
+		position: relative;
+		margin-top: 2rem;
+
+		@media (min-width: 1024px) {
+			display: block;
+		}
+
+		.progress-image {
+			margin: 0 auto;
+			padding: 1rem;
+		}
+
+		.progress-card {
+			position: absolute;
+
+			@media (max-width: 1400px) {
+				transform: scale(0.6);
+			}
+
+			.progress-percentage-container {
+				color: var(--text-color);
+				display: flex;
+				margin-bottom: 0;
+				font-weight: 500;
+
+				.progress-percentage {
+					align-self: flex-end;
+				}
+			}
+
+			p {
+				text-align: left;
+			}
+
+			.percentage-up-arrow {
+				max-height: 44px;
+				max-width: 44px;
+			}
+		}
+
+		.progress-card-1 {
+			top: 31%;
+			right: 6%;
+		}
+
+		.progress-card-2 {
+			top: 12%;
+			left: 8%;
+		}
+
+		.progress-card-3 {
+			white-space: pre-line;
+			bottom: 2%;
+			left: 46%;
+		}
+	}
+
+	.progress-wrapper-small-screen {
+		display: flex;
+		flex-direction: column;
+		padding-top: 1rem;
+		margin-bottom: -5rem; // fill the gap
+
+		.progress-card {
+			display: inline-flex;
+			flex-direction: column;
+			margin: 0 auto;
+			width: 60%;
+
+			.percentage-up-arrow {
+				max-height: 40px;
+				max-width: 42px;
+			}
+		}
+
+		.progress-card-1,
+		.progress-card-2,
+		.progress-card-3 {
+			align-items: center;
+		}
+
+		.progress-card-1 {
+			order: 2;
+			transform: translate(30%, -30%);
+		}
+
+		.progress-card-2 {
+			order: 1;
+			transform: translateX(-30%);
+		}
+
+		.progress-card-3 {
+			order: 3;
+			transform: translate(-30%, -60%);
+		}
+
+		.progress-percentage-container {
+			color: var(--text-color);
+			display: flex;
+			margin-bottom: 0;
+			font-weight: 500;
+
+			.progress-percentage {
+				align-self: flex-end;
+			}
+
+			.custom-text-small-larger {
+				font-size: 1.68rem;
+				line-height: 1.18;
+				font-weight: 700;
+			}
+		}
+
+		@media (min-width: 1024px) {
+			display: none;
+		}
+	}
+}

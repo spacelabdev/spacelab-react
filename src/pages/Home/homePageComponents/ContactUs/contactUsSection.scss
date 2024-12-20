@@ -1,0 +1,38 @@
+#contact-us-section {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 8rem 4rem;
+	background-color: rgba(0, 0, 0, 0.85);
+
+	@media screen and (max-width: 768px) {
+		padding: 8rem 2rem;
+	}
+	
+	.text-content {
+		text-align: left;
+
+		h2 {
+			font-family: "Poppins", sans-serif;
+			font-weight: bold;
+			font-size: 3rem;
+			letter-spacing: 2px;
+
+			@media screen and (max-width: 768px) {
+				text-align: center;
+				font-size: 1.5rem;
+			}
+		}
+
+		p {
+			font-size: 1rem;
+			color: white;
+			padding: 1em 0 1em 0;
+		}
+
+		.button-wrap {
+			padding-top: 2em;
+			display: flex;
+			justify-content: center;
+		}
+	}
+}

@@ -1,0 +1,103 @@
+/**
+Note: No media queries were added for tablet layouts. Desktop footer looks fine
+on tablets. Can be updated per UX team as necessary.
+ */
+.footer-section {
+	background: black;
+	text-align: center;
+	width: auto;
+
+	a {
+		color: var(--text);
+	}
+
+	a:hover {
+		color: var(--neon-purple);
+	}
+
+	.content-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+		justify-content: left;
+		align-content: center;
+		padding: 4rem;
+
+		@media screen and (max-width: 1200px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	/*
+	.vr {
+		margin: 0 0 0 4rem;
+		border: 1px solid gray;
+		background-color: gray;
+		width: 1px;
+		height: 60%;
+	}
+	*/
+	
+
+	.right-container {
+		display: grid;
+		grid-template-columns: 1fr;
+
+		.footer-links {
+			margin: 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			gap: 4rem;
+			text-align: left;
+
+			h4 {
+				font-size: 1rem;
+				text-align: left;
+			}
+	
+			hr {
+				border: 2px solid rgba($color: gray, $alpha: 0.5);
+				width: 40%;
+				margin: 1rem 0;
+			}
+	
+			ul {
+				margin: 0;
+				font-size: 1rem;
+				list-style: none;
+			}
+
+			@media screen and (max-width: 576px) {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+
+		.socialmedia-container {
+			text-align: center;
+			padding-bottom: 2rem;
+			color: var(--text);
+			font-family: Lato, sans-serif;
+			letter-spacing: 1px;
+	
+			a {
+				margin: 0 1.25rem;
+			}
+	
+			p {
+				width: 70%;
+				color: var(--text);
+				max-width: 1100px;
+				margin: 10px 0 0.5rem 0;
+				@media (min-width: 766px) {
+					width: 90%;
+				}
+			}
+			
+			@media screen and (max-width: 768px) {
+				margin-top: 4rem;
+			}
+		}
+	}
+}

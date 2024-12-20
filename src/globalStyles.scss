@@ -14,11 +14,11 @@ custom class.
 
 :root {
 	/*Color Palette*/
-	--neon-purple: #7000ff;
+	--neon-purple: #c08fff;
 	--black: black;
 	--dark-gray: #1c1a22;
 	--medium-gray: #282c34;
-	--light-gray: #d9d9d9;
+	--light-gray: #d3ced9;
 	--white: white;
 
 	/*Site Styles*/
@@ -51,7 +51,8 @@ ol[role="list"] {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html:focus-within,
+html {
 	scroll-behavior: smooth;
 }
 
@@ -92,17 +93,11 @@ select {
 /*---------------------------------------------------------------------------------------*/
 
 h1 {
-	position: absolute;
-	width: 80%;
 	color: white;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 8vw;
 	letter-spacing: 3px;
-	top: calc(50%);
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 98;
 
 	@media screen and (min-width: 766px) {
 		font-size: 6.25rem;
@@ -192,7 +187,7 @@ input {
 	border-bottom: solid white 2px;
 	background-color: transparent;
 	margin-bottom: 20px;
-	margin-right: 10px;
+	margin-right: 1px;
 	color: white;
 
 	&::placeholder {
@@ -211,4 +206,13 @@ input {
 input:focus {
 	outline: none;
 	border-bottom: 2px solid var(--highlight);
+}
+
+.sr-only{
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
 }

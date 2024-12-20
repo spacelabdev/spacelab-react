@@ -1,0 +1,74 @@
+.donate-nav {
+	height: var(--navbar-height-mobile);
+
+	@media (min-width: 1024px) {
+		top: 0;
+		left: 0;
+		height: var(--navbar-height-desktop);
+		width: 100%;
+		background: #000000;
+		color: white;
+		z-index: 99;
+		text-transform: uppercase;
+		font-family: "Lato", sans-serif;
+		font-size: 0.8em;
+		position: fixed;
+
+		a {
+			color: white;
+
+			&:hover {
+				color: var(--neon-purple);
+			}
+		}
+	}
+
+	.nav-wrapper {
+		@media (min-width: 1024px) {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			padding: 0 2rem;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.logo-container {
+			height: 4em;
+			padding-top: 0.25em;
+			text-align: left;
+			position: fixed;
+			width: 100vw;
+			background-color: black;
+			z-index: 99;
+
+			@media (min-width: 1024px) {
+				height: 5.25em;
+				position: relative;
+				font-family: "Seymour One", sans-serif;
+				max-width: 300px;
+			}
+
+			.logo-nav {
+				@media (min-width: 1024px) {
+					font-size: 2.2em;
+				}
+
+				img {
+					max-width: 30vw;
+					min-height: 38px;
+					margin: auto auto;
+					margin-left: 0.5em;
+					position: fixed;
+					z-index: 98;
+
+					@media (min-width: 1024px) {
+						max-width: 290px;
+						margin: auto auto;
+					}
+				}
+			}
+		}
+	}
+}

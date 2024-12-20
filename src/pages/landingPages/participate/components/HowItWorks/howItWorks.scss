@@ -1,0 +1,57 @@
+.p-how-it-works {
+	background-color: #fff;
+
+	h2,
+	h3,
+	p {
+		color: black;
+	}
+
+	.how-it-works-container {
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+
+		@media only screen and (max-width: 1400px) {
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 4rem;
+			width: 60vw;
+		}
+
+		@media only screen and (max-width: 800px) {
+			width: 90vw;
+		}
+
+		.how-it-works-element {
+			width: 30%;
+			display: flex;
+			flex-direction: column;
+			gap: 1.5rem;
+
+			@media only screen and (max-width: 1400px) {
+				width: 100%;
+			}
+
+			img {
+				width: 30rem;
+
+				@media only screen and (max-width: 1400px) {
+					width: 100%;
+				}
+			}
+
+			h3,
+			p {
+				text-align: left;
+			}
+
+			p {
+				width: 100%;
+				color: #4b4b4b;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}

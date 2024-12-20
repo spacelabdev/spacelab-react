@@ -1,0 +1,53 @@
+.diversity-in-tech-section {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	
+	.button-wrap {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.content-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+
+		@media screen and (max-width: 768px) {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.about {
+			padding-left: 4rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			text-align: left;
+
+			@media screen and (max-width: 768px) {
+				padding: 4rem 2rem 0 2rem;
+			}
+
+			h3 {
+				font-family: "Poppins", sans-serif;
+				font-weight: bold;
+				font-size: 1.75rem;
+			}
+
+			p {
+				font-size: 1rem;
+				line-height: 2;
+			}
+		}
+
+		.images-container {
+			height: 100%;
+
+			img {
+				object-fit: cover;
+			}
+		}
+	}
+}

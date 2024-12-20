@@ -1,0 +1,89 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+	position: fixed;
+	width: 32px;
+	height: 16px;
+	right: 20px;
+	top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+	background: white;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+	opacity: 90%;
+}
+
+.bm-burger-bars-click {
+	opacity: 90%;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+	height: 24px;
+	width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+	background: var(--neon-purple);
+}
+
+/* Sidebar wrapper styles */
+.bm-menu-wrap {
+	position: fixed;
+	height: 60vh !important;
+	width: 30vw !important;
+
+	@media screen and (max-width: 768px) {
+		height: 55vh !important;
+		width: 40vw !important;
+	}
+}
+
+/* General sidebar styles */
+.bm-menu {
+	background: black;
+	border: 1px solid var(--neon-purple);
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+	color: var(--text);
+	padding: 0.8em;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.hamburger-nav-links {
+	text-align: left;
+	padding-left: 0.5em;
+	padding-top: 2em;
+
+	div {
+		padding: 0.5em 0 !important;
+	}
+}
+
+.hamburger-nav-link {
+	font-size: 1.5rem;
+	color: white !important;
+	text-align: left;
+	font-family: "Lato", sans-serif;
+
+	@media screen and (max-width: 768px) {
+		font-size: 1.25rem;
+	}
+}
