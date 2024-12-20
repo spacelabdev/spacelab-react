@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import { AiOutlineGithub } from "react-icons/ai";
-import {FaBriefcase, FaLinkedin} from "react-icons/fa";
+import { FaBriefcase, FaLinkedin } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import Astronauts from "../../../../assets/ju-guan-D-jLxBtEwaA-unsplash.jpg";
 import "./memberCard.scss";
@@ -26,11 +26,11 @@ const MemberCard = (memberObject) => {
 
 	useEffect(() => {
 		if (showDetails) {
-		  // Prevent scrolling open
-		  document.body.style.overflow = "hidden";
+			// Prevent scrolling open
+			document.body.style.overflow = "hidden";
 		} else {
-		  // Re-enable scrolling when closed
-		  document.body.style.overflow = "auto";
+			// Re-enable scrolling when closed
+			document.body.style.overflow = "auto";
 		}
 	}, [showDetails]);
 
@@ -62,24 +62,40 @@ const MemberCard = (memberObject) => {
 	};
 
 	return (
-		<div className="member-card">
-			<img src={image} alt={`${member.fullName}.png`} onClick={handleCardClick}/>
-			<div className="member-card-text-container">
-				<p className="member-card-text-name">{member.fullName}</p>
-				<p className="member-card-text-title">{member.title}</p>
-			</div>
-			{/* overlay layer */}
-			{showDetails && (<div className="overlay" onClick={handleCloseClick}></div>)}
-			<div className={`member-card-details-container ${showDetails ? "show" : ""}`}>
-				<img src={image} alt={`${member.fullName}.png`} className="member-card-details-image" />
+		<div className="member-card" onClick={handleCardClick}>
+			<img src={image} alt={`${member.fullName}.png`} />
+			{showDetails && (
+				<div className="overlay" onClick={handleCloseClick}></div>
+			)}
+			<div
+				className={`member-card-details-container ${
+					showDetails ? "show" : ""
+				}`}
+			>
 				<div className="member-card-right-side">
-					<IconContext.Provider value={{ color: "var(--text)", size: "2rem" }} >
-					<div className="member-card-close" onClick={handleCloseClick}> <MdClose /> </div>
+					<IconContext.Provider
+						value={{ color: "var(--text)", size: "2rem" }}
+					>
+						{showDetails && (
+							<div
+								className="member-card-close"
+								onClick={handleCloseClick}
+							>
+								<MdClose />
+							</div>
+						)}
 					</IconContext.Provider>
-					<p className="member-card-text-name">{member.fullName}</p>
-					<p className="member-card-text-title">{member.title}</p>
-					<div className= "quote-container">
-						<p className="member-card-text-quote">{member.bioQuote}</p>
+					<div className="member-card-text-container">
+						<p className="member-card-text-name">
+							{member.fullName}
+						</p>
+						<p className="member-card-text-title">{member.title}</p>
+					</div>
+
+					<div className="quote-container">
+						<p className="member-card-text-quote">
+							{member.bioQuote}
+						</p>
 					</div>
 					<div className={"member-card-link-container"}>
 						<IconContext.Provider
@@ -115,7 +131,6 @@ const MemberCard = (memberObject) => {
 							>
 								<FaBriefcase />
 							</a>
-
 						</IconContext.Provider>
 					</div>
 				</div>
@@ -123,7 +138,6 @@ const MemberCard = (memberObject) => {
 		</div>
 	);
 };
-
 
 MemberCard.propTypes = {
 	/**
