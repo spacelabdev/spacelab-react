@@ -99,14 +99,7 @@ export default function MainNavigation() {
 						*/}
 						
 						
-						{/* <a
-							className="nav-link"
-							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
-							target="_blank"
-							rel="noreferrer"
-						>
-							Donate
-						</a> */}
+
 						<li>
 							<Link
 								className={"nav-link"}
@@ -116,7 +109,7 @@ export default function MainNavigation() {
 								Contact
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link 
 								className={"nav-link donate-page-link"} 
 								to={'/donate'} 
@@ -124,7 +117,15 @@ export default function MainNavigation() {
 							>
 								Donate
 							</Link>
-						</li>
+						</li> */}
+						<a
+							className="nav-link donate-page-link"
+							href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
+							target="_blank"
+							rel="noreferrer"
+						>
+							Donate
+						</a>
 					</ul>
 				</div>
 			</nav>
