@@ -5,6 +5,7 @@
 	align-items: center;
 	position: relative;
 	overflow: hidden;
+	cursor: pointer;
 
 	&:hover .member-card-details-container {
 		transform: translateY(0%);
@@ -21,9 +22,9 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
-		background: linear-gradient(142deg, rgba(120, 70, 169, 0.77) 4%, rgba(0, 0, 0, 1) 99%, rgba(4, 4, 4, 1) 99%);
+		background: linear-gradient(142deg, rgba(120, 70, 169, 0.893) 4%, rgba(0, 0, 0, 1) 99%, rgba(4, 4, 4, 1) 99%);
 		transform: translateY(75%);
-		transition: all 0.5s ease-in-out;
+		transition: all 0.3s ease-out;
 		overflow: hidden;
 		z-index: 1;
 
@@ -133,10 +134,11 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
+		width: 100dvw;
+		height: 100dvh;
 		background-color: rgba(0, 0, 0, 0.6);
-		z-index: 1;
+		z-index: 10;
+		overflow-y: scroll;
 	}
 
 
