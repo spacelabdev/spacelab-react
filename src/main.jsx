@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router";
 import About from "./pages/About/About";
 import Blog from "./pages/Blog/Blog";
 import Discovery from "./pages/discovery/Discovery";
-import Donate from "./pages/Donate/Donate";
+// import Donate from "./pages/Donate/Donate";
 import Glossary from "./pages/Glossary/Glossary";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects/Projects";
@@ -39,7 +39,7 @@ export default function Main() {
 			<Route exact path="/blog" component={Blog} />
 			<Route exact path="/contact" component={Contact} />
 			<Route exact path="/discovery" component={Discovery} />
-			<Route exact path="/donate" component={Donate} />
+			{/* <Route exact path="/donate" component={Donate} /> */}
 			<Route exact path="/donate/success" component={PaypalSuccess} />
 			<Route exact path="/donate/error" component={PaypalError} />
 			<Route exact path="/glossary" component={Glossary} />
