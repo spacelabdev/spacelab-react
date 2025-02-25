@@ -7,7 +7,7 @@ export const glossaryTerms = [
     {
         term: "Astrometric Solution",
         definition: "A technique in astronomical imaging that matches starts in " +
-                    "an image to a a star catalog. By analysing star positions, " +
+                    "an image to a star catalog. By analyzing star positions, " +
                     "angles, and distances, the image can be linked to a known " +
                     "location in the sky. Originally done by hand, this process is " +
                     'now automated with software "solvers." An astrometric solution' +
