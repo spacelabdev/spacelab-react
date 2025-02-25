@@ -1,7 +1,10 @@
 /**
  * GlossaryTerms.js
- * For Glossary.jsx, exports a list containing glossary entries as objects, each with a term and associated definition.
+ * For Glossary.jsx, exports an array containing glossary entries as objects, each
+ * with a term and associated definition.
  */
+
+// Note: This array gets sorted for you in GlossaryEntries.jsx
 
 export const glossaryTerms = [
     {
@@ -10,7 +13,7 @@ export const glossaryTerms = [
                     "an image to a star catalog. By analyzing star positions, " +
                     "angles, and distances, the image can be linked to a known " +
                     "location in the sky. Originally done by hand, this process is " +
-                    'now automated with software "solvers." An astrometric solution' +
+                    'now automated with software "solvers." An astrometric solution ' +
                     "provides a model pinpointing each pixel's astronomical position."
     },
     {
@@ -106,27 +109,27 @@ export const glossaryTerms = [
     {
         term: "Insolation Flux",
         definition: "The amount of solar radiation an exoplanet receives. In astronomy, " +
-                    '"flux" refers to the flow of radiation through a surface' +
+                    '"flux" refers to the flow of radiation through a surface. ' +
                     "Insolation flux is the solar energy hitting a planet's surface " +
                     "over a given time. On Earth, this varies with the season and, " +
                     "at ground level, with weather and cloud cover."
     },
     {
         term: "Limb Darkening",
-        definition: "Optical affect seen in stars where the outer edge of the star " +
+        definition: "Optical effect seen in stars where the outer edge of the star " +
                     "appears dimmer or darker, while the center of the star appears " +
-                    "brighter. The darker outer edge is referred to as the stellar limb."
+                    "brighter. The darker, outer edge is referred to as the stellar limb."
     },
     {
         term: "log g (CGS)",
         definition: "log g, in units of CGS, describes the surface gravity on an " +
                     "exoplanet, otherwise known as the acceleration due to gravity. " +
                     'On Earth, the gravitational constant "g" is 9.81 meters per ' + 
-                    "second squared (m/s^2), meaning that when something falls it's " +
+                    "second squared (m/s^2), meaning that when something falls, it's " +
                     "speed is increasing as it falls by 9.81 meters per second every " +
                     "second. On the moon, where gravity is weaker, the gravitational " +
                     "constant is smaller. log g allows us to describe the " +
-                    "gravitational constant of exoplanets/other planets and " +
+                    "gravitational constant of other planets or " +
                     'planetary objects (where "log" is a mathematical method of ' +
                     "scaling values)."
     },
@@ -185,15 +188,15 @@ export const glossaryTerms = [
     },
     {
         term: "Scale Heights",
-        definition: "Scale height refers to the distance over which a physical " +
-                    "variable decreases by a factor of e (e being a naturally " +
+        definition: "The distance over which a physical " +
+                    "variable decreases by a factor of e (a naturally " +
                     "occurring number with a value of approximately 2.718). In " +
                     "terms of a galaxy, the scale height describes the height above " +
-                    'the galactic disk/ galactic plane "at which the density of a ' +
-                    'particular constituent of the disk has declined by e". In the ' +
+                    'the galactic disk/galactic plane "at which the density of a ' +
+                    'particular constituent of the disk has declined by e." In the ' +
                     "study of planetary atmospheres, the scale height is the " +
                     "altitude at which the atmospheric pressure decreases by a " +
-                    "factor of e (2.718). On Earth, the scale height is 8.5 " +
+                    "factor of e. On Earth, the scale height is 8.5 " +
                     "kilometers, which means that at an altitude of 8.5 kilometers " +
                     "the atmospheric pressure has decreased by 2.718."
     },
