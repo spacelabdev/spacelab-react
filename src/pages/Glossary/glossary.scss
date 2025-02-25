@@ -1,22 +1,26 @@
 #glossary {
 	font-family: "Lato", sans-serif;
 	margin: 0;
-	padding: 0 1rem;
+	padding: 0;
 	box-sizing: border-box;
+	height: 100vh;
+	overflow: hidden;	// prevent full page scroll
+	display: flex;
+	flex-direction: column;
 	background-image: url(../../assets/background.jpg);
 	background-position: center;
 	background-size: contain;
 }
 
-@media screen and (min-width: 768px) {
-	#glossary {
-		padding: 0 4rem;
-	}
+#glossary .no-scroll {
+	z-index: 99;
+	flex: 0 0 auto;				// stay fixed
+	background: transparent;
 }
 
 // Page title
 #glossary h1 {
-	padding: 15vh 0 4vh 0;
+	padding: 15vh 0 3vh 0;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 3rem;
@@ -25,16 +29,45 @@
 }
 
 #glossary .scrollable {
+	scroll-behavior: smooth;
+	overflow-y: auto;	// vertical scroll in this area
+	display: grid;
+	flex: 1 1 auto;		// fill remaining page space
+	gap: 1rem;
+}
+
+// Glossary cards
+
+#glossary .alphabetical-section {
 	display: grid;
 	gap: 1rem;
 }
 
-// Glossary card
-#glossary .glossary-entry {
+#glossary .alphabetical-section h2 {
+	margin: 0 1rem;
+	text-align: left;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+	#glossary .alphabetical-section h2 {
+		margin: 0 4rem;
+	}
+}
+
+#glossary .alphabetical-section .glossary-entry {
+	margin: 0 1rem;
 	display: grid;
 	gap: 0.5rem;
 	padding: 1rem;
 	background-color: #C08FFFAD;
+}
+
+@media screen and (min-width: 768px) {
+	#glossary .alphabetical-section .glossary-entry {
+		margin: 0 4rem;
+	}
 }
 
 #glossary .glossary-entry h3 {

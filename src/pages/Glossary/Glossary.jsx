@@ -8,6 +8,9 @@ import "./glossary.scss";
 import { glossaryTerms } from "./GlossaryTerms";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import { handleGlossarySearchTermClick } from "../../components/SearchBar/SearchBarHelper";
+import GlossaryEntries from "./GlossaryEntries";
+import Footer from "../../components/Footer/Footer";
 
 
 export default function Glossary() {
@@ -17,17 +20,14 @@ export default function Glossary() {
 			<div className="no-scroll">
 				<Navigation></Navigation>
 				<h1>Glossary</h1>
-				<SearchBar></SearchBar>
+				<SearchBar
+					data={glossaryTerms}
+					HandleSearchTermClick={handleGlossarySearchTermClick}
+				></SearchBar>
 			</div>
 			<div className="scrollable">
-				{
-					glossaryTerms.map((item, index) => (
-						<div key={index} className="glossary-entry" id={item.term}>
-							<h3>{item.term}:</h3>
-							<p>{item.definition}</p>
-						</div>
-					))
-				}
+				<GlossaryEntries terms={glossaryTerms}></GlossaryEntries>
+				<Footer></Footer>
 			</div>
 		</div>
 	);
