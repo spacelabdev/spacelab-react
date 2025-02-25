@@ -1,116 +1,49 @@
-.glossary-results-wrapper {
-	max-width: 1400px;
-	margin: 0 auto;
-	width: 80%;
+#glossary {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0 1rem;
+	box-sizing: border-box;
+	background-image: url(../../assets/background.jpg);
+	background-position: center;
+	background-size: contain;
+}
+
+@media screen and (min-width: 768px) {
+	#glossary {
+		padding: 0 4rem;
+	}
+}
+
+// Page title
+#glossary h1 {
+	padding: 15vh 0 4vh 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
 	color: white;
-	@media (min-width: 766px) {
-		max-width: 95vw;
-	}
 }
 
-#glossary-term-wrapper {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+#glossary .scrollable {
+	display: grid;
+	gap: 1rem;
 }
 
-.searchbar-container {
-	width: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 1em auto;
+// Glossary card
+#glossary .glossary-entry {
+	display: grid;
+	gap: 0.5rem;
+	padding: 1rem;
+	background-color: #C08FFFAD;
 }
 
-#glossary-term-name {
-	font-family: "Poppins";
-	padding: 1em;
-	font-size: 1.75em;
-	@media (min-width: 766px) {
-		font-size: 2.5em;
-	}
+#glossary .glossary-entry h3 {
+	font-weight: bold;
 }
 
-.glossary-term {
-	margin: 0.4em;
-	text-align: center;
-	padding: 0.5em;
-	font-size: 1em;
+#glossary .glossary-entry h3, #glossary .glossary-entry p{
+	margin: 0;
+	font-size: 1rem;
 	color: white;
-	background: black;
-	border-radius: 6px;
-	@media (min-width: 766px) {
-		font-size: 1.5em;
-	}
-}
-
-.glossary-term:hover {
-	background: var(--neon-purple);
-	cursor: pointer;
-}
-
-#glossary-term-def {
-	padding-bottom: 3em;
-	max-width: 60vw;
-	height: 100%;
-	margin: auto;
-
-	@media (min-width: 767px) {
-		font-size: 1.5em;
-	}
-
-	@media (max-width: 820px) {
-		max-width: 80vw;
-	}
-
-	p {
-		color: rgb(224, 224, 224);
-		text-align: center;
-		font-size: 0.9em;
-		line-height: 2;
-	}
-
-	#glossary-term-image-wrapper {
-		img {
-			margin: 2em auto;
-		}
-	}
-
-	#glossary-term-image-source-wrapper {
-		text-align: left;
-		font-size: 0.55em;
-		margin: -3em auto 0;
-		@media (min-width: 767px) {
-			width: 600px;
-		}
-
-		#glossary-term-image-source {
-			color: black;
-		}
-	}
-}
-
-#glossary-button-container {
-	width: 100%;
-	padding: 2em;
-}
-
-#glossary-filter-button-A-J {
-	color: var(--neon-purple);
-	border-bottom: 2px solid var(--neon-purple);
-}
-
-.glossary-filter-button {
-	color: var(--text);
-	margin: 0 0.5em;
-	font-size: 1.75em;
-	border-bottom: 2px solid lightgray;
-	@media (min-width: 766px) {
-		font-size: 2.5em;
-	}
-}
-
-.glossary-filter-button:hover {
-	cursor: pointer;
+	text-align: left;
 }
