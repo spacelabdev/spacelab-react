@@ -20,12 +20,38 @@
 
 // Page title
 #glossary h1 {
-	padding: 15vh 0 3vh 0;
+	padding: 8rem 0 2rem 0;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: white;
+}
+
+.glossary-nav {
+	margin: 1rem;
+	padding: 0.5rem;
+	background-color: #C08FFFAD;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+
+.glossary-nav p {
+	margin: 0;
+	color: white;
+}
+
+.glossary-nav a, .glossary-nav a:visited {
+	color: white;
+}
+
+@media screen and (min-width: 768px) {
+	.glossary-nav {
+		margin: 1rem 4rem;
+	}
 }
 
 #glossary .scrollable {

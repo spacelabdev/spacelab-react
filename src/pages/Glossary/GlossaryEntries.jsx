@@ -29,7 +29,8 @@ export default function GlossaryEntries({ terms }) {
         {Object.keys(groupedTerms)
             .sort() // Ensure the letter headers are in alphabetical order
             .map((letter) => (
-                <div key={letter} className="alphabetical-section">
+                // letter is capital
+                <div key={letter} className="alphabetical-section" id={`${letter}-section`}> 
                     <h2 className="alphabetical-header">{letter}</h2>
                     {groupedTerms[letter].map((item, index) => (
                         <div key={index} className="glossary-entry" id={item.term}>
