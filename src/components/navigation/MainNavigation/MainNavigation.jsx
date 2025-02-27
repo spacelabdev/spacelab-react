@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../../assets/spacelab.svg";
 import { UniversalContext } from "../../../App";
@@ -13,14 +13,36 @@ import "./mainNavigation.scss";
  */
 export default function MainNavigation() {
 	const context = useContext(UniversalContext);
+	const [stickyClass, setStickyClass] = useState({});
+
+	// Set up event listener for scroll to make navbar sticky
+	useEffect(() => {
+	  window.addEventListener('scroll', stickNavbar);
+  
+	  return () => {
+		window.removeEventListener('scroll', stickNavbar);
+	  };
+	}, []);
+
+	const stickNavbar = () => {
+		if (window !== undefined) {
+			let windowHeight = window.scrollY;
+			windowHeight > 0
+				? setStickyClass({
+						position: "fixed"
+				  })
+				: setStickyClass({});
+		}
+	};
 
 	return (
-		<>
-			<div className={"hamburger-wrapper"}>
-				<HamburgerMenu />
-			</div>
-			<nav id={context.navToggle}>
-				<div className="nav-wrapper">
+		<div className="outer-container">
+
+			<nav id={context.navToggle} style={stickyClass}>
+				<div className={"hamburger-wrapper"}>
+					<HamburgerMenu />
+				</div>
+				<div className="nav-wrapper" >
 					<AutoScroll />
 					<div className="logo-container">
 						<Link
@@ -41,7 +63,6 @@ export default function MainNavigation() {
 								About
 							</Link>
 						</li>
-						{/* <div to={"#"} className={"nav-dropdown nav-link"}> */}
 						<li className={"nav-dropdown nav-link"}>
 							<a href="#" className={"dropdown-nav-name"}>Resources</a>
 							<ul className={"dropdown-content"}>
@@ -97,9 +118,6 @@ export default function MainNavigation() {
 							</Link>
 						</li>
 						*/}
-						
-						
-
 						<li>
 							<Link
 								className={"nav-link"}
@@ -129,6 +147,6 @@ export default function MainNavigation() {
 					</ul>
 				</div>
 			</nav>
-		</>
+		</div>
 	);
 }
