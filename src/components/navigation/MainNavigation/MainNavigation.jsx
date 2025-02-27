@@ -64,7 +64,7 @@ export default function MainNavigation() {
 							</Link>
 						</li>
 						<li className={"nav-dropdown nav-link"}>
-							<a href="#" className={"dropdown-nav-name"}>Resources</a>
+							<span  className={"dropdown-nav-name"}>Resources</span>
 							<ul className={"dropdown-content"}>
 								<li>
 									<Link
