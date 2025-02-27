@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import "./hamburgerMenu.scss";
+import { useState } from "react";
 
 /**
  * Renders the hamburger menu for smaller scree sizes.
@@ -9,8 +10,9 @@ import "./hamburgerMenu.scss";
  *  More information on react-burger-menu can be found here:
  *  https://github.com/negomi/react-burger-menu
  */
-class HamburgerMenu extends React.Component {
-	render() {
+function HamburgerMenu() {
+		const [menuOpen, setMenuOpen] = useState(false);
+
 		return (
 			<>
 				<Menu right>
@@ -24,7 +26,10 @@ class HamburgerMenu extends React.Component {
 								About
 							</Link>
 						</div>
-						<div>
+						<div class="hamburger-nav-link" onClick={() => setMenuOpen(!menuOpen)}>Resources 
+							<span class="fa fa-caret-down" >{menuOpen ? '╱╲' : '╲╱'}</span>
+						</div>
+						<div class="dropdown-container" style={{display: menuOpen ? "flex" : "none"}}>
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/projects"}
@@ -32,8 +37,6 @@ class HamburgerMenu extends React.Component {
 							>
 								Projects
 							</Link>
-						</div>
-						<div>
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/discovery"}
@@ -41,8 +44,6 @@ class HamburgerMenu extends React.Component {
 							>
 								Discovery
 							</Link>
-						</div>
-						<div>
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/glossary"}
@@ -50,8 +51,6 @@ class HamburgerMenu extends React.Component {
 							>
 								Glossary
 							</Link>
-						</div>
-						<div>
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/podcast"}
@@ -59,19 +58,15 @@ class HamburgerMenu extends React.Component {
 							>
 								Podcast
 							</Link>
-						</div>
-						{/*
-						// Removed until blog page on Medium is back up.
-						<div>
-							<Link
+							{/* // Removed until blog page on Medium is back up. */}
+							{/* <Link
 								className={"hamburger-nav-link"}
 								to={"/blog"}
 								style={{ textDecoration: "none" }}
 							>
 								Blog
-							</Link>
+							</Link> */}
 						</div>
-						*/}
 						<div>
 							<Link
 								className={"hamburger-nav-link"}
@@ -90,9 +85,9 @@ class HamburgerMenu extends React.Component {
 								Donate
 							</Link>
 						</div> */}
-						<div>
+						<div className="donate-btn">
 							<a
-								className="hamburger-nav-link"
+								className="hamburger-donate-link"
 								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 								target="_blank"
 								rel="noreferrer"
@@ -105,7 +100,6 @@ class HamburgerMenu extends React.Component {
 				</Menu>
 			</>
 		);
-	}
 }
 
 export default HamburgerMenu;
