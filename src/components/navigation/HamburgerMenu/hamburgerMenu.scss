@@ -7,10 +7,11 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
 	position: fixed;
-	width: 32px;
-	height: 16px;
+	width: 34px;
+	height: 22px;
 	right: 20px;
 	top: 20px;
+	z-index: 100;
 }
 
 /* Color/shape of burger icon bars */
@@ -29,8 +30,8 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-	height: 24px;
-	width: 24px;
+	height: 30px;
+	width: 30px;
 }
 
 /* Color/shape of close button cross */
@@ -45,15 +46,21 @@
 	width: 30vw !important;
 
 	@media screen and (max-width: 768px) {
-		height: 55vh !important;
-		width: 40vw !important;
+		position: absolute;
+		top: 64px;
+		height: fit-content !important;
+		width: 70vw !important;
 	}
 }
 
 /* General sidebar styles */
 .bm-menu {
+	max-height: fit-content !important;
+	width: 100%;
 	background: black;
 	border: 1px solid var(--neon-purple);
+	display: flex;
+	justify-content: center;
 }
 
 /* Wrapper for item list */
@@ -70,10 +77,36 @@
 .hamburger-nav-links {
 	text-align: left;
 	padding-left: 0.5em;
-	padding-top: 2em;
+	padding: 10px 0;
 
 	div {
 		padding: 0.5em 0 !important;
+	}
+
+	@media screen and (max-width: 768px) {
+		text-align: left;
+	}
+}
+
+.donate-btn {
+	height: 50px;
+	width: 150px;
+	margin: 10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid var(--neon-purple);
+}
+
+.hamburger-donate-link {
+	font-size: 1.5rem;
+	color: white !important;
+	text-align: left;
+	font-family: "Lato", sans-serif;
+	letter-spacing: 1px;
+
+	@media screen and (max-width: 768px) {
+		font-size: 1.25rem;
 	}
 }
 
@@ -82,8 +115,29 @@
 	color: white !important;
 	text-align: left;
 	font-family: "Lato", sans-serif;
+	letter-spacing: 1px;
 
 	@media screen and (max-width: 768px) {
 		font-size: 1.25rem;
 	}
 }
+  
+// Dropdown container (hidden by default)
+.dropdown-container {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	margin-left: 30px;
+	a {
+		font-size: 17px;
+		letter-spacing: 1px;
+	}
+}
+
+.fa-caret-down {
+	width: 20px;
+	text-align: end;
+	padding-left: 8px;
+	font-size: 10px;
+}
+  
