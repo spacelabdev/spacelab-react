@@ -13,7 +13,7 @@ export const handleGlossarySearchTermClick = (searchResult) => {
 	const glossaryEntryElement = document.getElementById(glossaryTerm);
 	if (glossaryEntryElement) {
 		glossaryEntryElement.scrollIntoView({
-			block: "center",
+			block: "start",
 		});
 	}
 };  

@@ -20,7 +20,7 @@
 
 // Page title
 #glossary h1 {
-	padding: 8rem 0 2rem 0;
+	padding: 8rem 0 1rem 0;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 3rem;
@@ -28,30 +28,39 @@
 	color: white;
 }
 
+.glossary-nav-container {
+	display: flex;
+	justify-content: center;
+}
+
 .glossary-nav {
-	margin: 1rem;
-	padding: 0.5rem;
+	margin: 0 1rem 1rem 1rem;
+	padding: 0.25rem 1.5rem;
 	background-color: #C08FFFAD;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	gap: 16px;
-}
-
-.glossary-nav p {
-	margin: 0;
-	color: white;
-}
-
-.glossary-nav a, .glossary-nav a:visited {
-	color: white;
+	gap: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
 	.glossary-nav {
-		margin: 1rem 4rem;
+		margin: 0 4rem 1rem 4rem;
+		padding: 0.25rem 1.75rem;
+		gap: 2.5rem;
 	}
+}
+
+.glossary-nav p {
+	margin: 0;
+	font-size: 1.25rem;
+	color: white;
+}
+
+.glossary-nav a, .glossary-nav a:visited {
+	font-size: 1.25rem;
+	color: white;
 }
 
 #glossary .scrollable {
@@ -63,7 +72,6 @@
 }
 
 // Glossary cards
-
 #glossary .alphabetical-section {
 	display: grid;
 	gap: 1rem;
