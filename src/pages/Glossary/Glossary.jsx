@@ -18,16 +18,14 @@ export default function Glossary() {
 	return (
 		
 		<div id="glossary">
-			<div className="no-scroll">
-				<Navigation></Navigation>
-				<h1>Glossary</h1>
-				<SearchBar
-					data={glossaryTerms}
-					HandleSearchTermClick={handleGlossarySearchTermClick}
-				></SearchBar>
-				<GlossaryNav></GlossaryNav>
-			</div>
-			<div className="scrollable">
+			<Navigation></Navigation>
+			<h1>Glossary</h1>
+			<SearchBar
+				data={glossaryTerms}
+				HandleSearchTermClick={handleGlossarySearchTermClick}
+			></SearchBar>
+			<GlossaryNav></GlossaryNav>
+			<div className="inner-scroll">
 				<GlossaryEntries terms={glossaryTerms}></GlossaryEntries>
 				<Footer></Footer>
 			</div>
