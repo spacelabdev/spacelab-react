@@ -3,21 +3,13 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	height: 100vh;
-	overflow: hidden;	// prevent full page scroll
+	height: 116vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	background-image: url(../../assets/background.jpg);
 	background-position: center;
 	background-size: contain;
-}
-
-#glossary .no-scroll {
-	z-index: 99;
-	flex: 0 0 auto;				// stay fixed
-	background: transparent;
 }
 
 // Page title
@@ -30,6 +22,7 @@
 	color: white;
 }
 
+// Page jumps
 .glossary-nav-container {
 	display: flex;
 	justify-content: center;
@@ -65,11 +58,10 @@
 	color: white;
 }
 
-#glossary .scrollable {
+#glossary .inner-scroll {
+	overflow: auto;
+	flex-grow: 1;
 	scroll-behavior: smooth;
-	overflow-y: auto;	// vertical scroll in this area
-	display: grid;
-	flex: 1 1 auto;		// fill remaining page space
 	gap: 1rem;
 }
 
@@ -93,16 +85,15 @@
 }
 
 #glossary .alphabetical-section .glossary-entry {
-	margin: 0 1rem;
+	margin: 0 1rem 1rem 1rem;
 	display: grid;
-	gap: 0.5rem;
 	padding: 1rem;
 	background-color: #C08FFFAD;
 }
 
 @media screen and (min-width: 768px) {
 	#glossary .alphabetical-section .glossary-entry {
-		margin: 0 4rem;
+		margin: 0 4rem 1rem 4rem;
 	}
 }
 
