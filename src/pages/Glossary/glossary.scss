@@ -7,6 +7,8 @@
 	overflow: hidden;	// prevent full page scroll
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	background-image: url(../../assets/background.jpg);
 	background-position: center;
 	background-size: contain;
