@@ -7,7 +7,7 @@ import { UniversalContext } from "../../App";
 function SearchBar({ data, HandleSearchTermClick, clearData }) {
 	const context = useContext(UniversalContext);
 	const [searchTerm, setSearchTerm] = useState("");
-	const [placeHolder, setPlaceHolder] = useState("Search");
+	// const [placeHolder, setPlaceHolder] = useState("Search");
 	const [filteredSearchResults, setFilteredSearchResults] = useState([]);
 	const [isSearchBarActive, setIsSearchBarActive] = useState(false);
 	const [filteredSearchResultIndex, setFilteredSearchResultIndex] =
@@ -21,7 +21,7 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 	 */
 	const handleChange = (e) => {
 		setSearchTerm(e.target.value);
-		setPlaceHolder(e.target.value);
+		// setPlaceHolder(e.target.value);
 		setClearButton(true);
 	};
 
@@ -37,11 +37,17 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 			if (searchTerm) {
 				// check the Levenshtein distance between the target and the search term
 				const newFilter = data.filter((value) => {
-					const target = value[0]
+					const target = value.term
+						? value.term.toLowerCase()
+						: value[0]
 						? value[0].toLowerCase()
 						: value.title
 						? value.title.toLowerCase()
 						: null;
+
+					// no target string found, skip entry
+					if (!target) return false;
+
 					const levenshteinDistance = getLevenshteinDistance(
 						searchTerm.toLowerCase(),
 						target
@@ -132,7 +138,7 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 	const reset = () => {
 		setFilteredSearchResults([]);
 		setSearchTerm("");
-		setPlaceHolder("Search");
+		// setPlaceHolder("Search...");
 		setIsSearchBarActive(false);
 		clearData();
 		setFilteredSearchResultIndex(null);
@@ -183,7 +189,7 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 				const searchResult =
 					filteredSearchResults[filteredSearchResultIndex];
 
-				setPlaceHolder(searchResult.title || searchResult[0]);
+				// setPlaceHolder(searchResult.title || searchResult[0]);
 				setSearchTerm("");
 				HandleSearchTermClick(searchResult, context);
 				clearInput();
@@ -242,7 +248,7 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 
 	// Allows us to call multiple function back to back in onClick
 	const onClickMultiFunction = (searchResult, context) => {
-		setPlaceHolder(searchResult.title || searchResult[0]);
+		// setPlaceHolder(searchResult.title || searchResult[0]);
 		setSearchTerm("");
 		HandleSearchTermClick(searchResult, context);
 		clearInput();
@@ -271,7 +277,7 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 				</div>
 				<input
 					type="search"
-					placeholder={`${placeHolder}...`}
+					placeholder={searchTerm || "Search"}
 					value={searchTerm}
 					onChange={handleChange}
 					onFocus={handleOnFocus}
@@ -299,11 +305,12 @@ function SearchBar({ data, HandleSearchTermClick, clearData }) {
 							}
 							tabIndex={0}
 						>
-							{searchResult[0]
-								? searchResult[0]
-								: searchResult.title
-								? searchResult.title
-								: "Not Found"}
+							{
+								searchResult.term ||
+								searchResult[0] ||
+								searchResult.title ||
+								"Not Found"
+							}
 						</div>
 					))}
 				</div>

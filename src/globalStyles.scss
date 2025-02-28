@@ -28,6 +28,12 @@ custom class.
 	--text: var(--light-gray);
 	--table-header: var(--medium-gray);
 	--highlight-hover: var(--neon-purple);
+
+	/*Default Background*/
+	background-color: black;	// Black makes any overflow scroll seamless w/ the navbar and footer
+
+	/*Scrollbar Styling*/
+	scrollbar-color: var(--neon-purple) rgba(0,0,0,0);
 }
 
 body {

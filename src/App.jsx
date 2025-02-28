@@ -1,9 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import RSSParser from "rss-parser";
-import {
-	glossaryTermsArray,
-	returnFilteredTerms,
-} from "./pages/Glossary/glossaryHelper.js";
 import "./app.scss";
 import Main from "./main";
 
@@ -17,20 +13,6 @@ function App() {
 	const [hamburgerToggle, setHamburgerToggle] = useState("open");
 	const [hamburgerToggleIcon, setHamburgerToggleIcon] =
 		useState("hamburger-toggle");
-	/** Glossary Page State */
-	const [glossaryTerms, setGlossaryTerms] = useState();
-	const [currentGlossaryTerm, setCurrentGlossaryTerm] = useState(
-		glossaryTermsArray[0][0]
-	);
-	const [glossaryTermDef, setGlossaryTermDef] = useState(
-		glossaryTermsArray[0][1]
-	);
-	const [glossaryTermImg, setGlossaryTermImg] = useState(
-		glossaryTermsArray[0][3]
-	);
-	const [glossaryTermImgSource, setGlossaryTermImgSource] = useState(
-		glossaryTermsArray[0][4]
-	);
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
 	/** Medium Blog RSS Feed State */
@@ -61,11 +43,6 @@ function App() {
 		fetchPosts();
 	}, []);
 
-	// Set initial state for glossaryTerms on app load
-	useEffect(() => {
-		setGlossaryTerms(returnFilteredTerms(1, 9));
-	}, []);
-
 	return (
 		<div className="App">
 			<div className={"content"}>
@@ -77,16 +54,6 @@ function App() {
 						setHamburgerToggle,
 						hamburgerToggleIcon,
 						setHamburgerToggleIcon,
-						glossaryTerms,
-						setGlossaryTerms,
-						glossaryTermDef,
-						setGlossaryTermDef,
-						glossaryTermImg,
-						setGlossaryTermImg,
-						glossaryTermImgSource,
-						setGlossaryTermImgSource,
-						currentGlossaryTerm,
-						setCurrentGlossaryTerm,
 						pageTitle,
 						setPageTitle,
 						blogArray,
