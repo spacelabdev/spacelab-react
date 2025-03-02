@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { IconContext } from "react-icons";
 import { AiOutlineGithub } from "react-icons/ai";
@@ -23,16 +23,6 @@ const MemberCard = (memberObject) => {
 
 	// State to track if the details container should be displayed
 	const [showDetails, setShowDetails] = useState(false);
-
-	useEffect(() => {
-		if (showDetails) {
-			// Prevent scrolling open
-			document.body.style.overflow = "hidden";
-		} else {
-			// Re-enable scrolling when closed
-			document.body.style.overflow = "auto";
-		}
-	}, [showDetails]);
 
 	if (!member.image) {
 		image = Astronauts;
