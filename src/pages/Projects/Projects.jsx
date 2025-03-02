@@ -40,7 +40,7 @@ export default function Projects() {
 					<img className="exoplanetarium-preview" src={Exoplanetarium} alt="Screenshot of Exoplanetarium"></img>
 				</div>				
 				<div className="projects-button">
-					<a href="https://spacelabdev.github.io/Exoplanetarium-3D/" target="_blank">
+					<a href="https://spacelabdev.github.io/Exoplanetarium-3D/" rel="noreferrer" target="_blank">
 						<button>Explore Exoplanetarium</button>
 					</a>
 				</div>
@@ -60,7 +60,7 @@ export default function Projects() {
 				<div className="pairs-pods-description">
 					<img className="pairs-pods-preview" src={Donate} alt="Screenshot of the Donate landing page" />
 					<div className="projects-button">
-						<a href="/campaigns/donate" target="_blank">
+						<a href="/campaigns/donate" rel="noreferrer" target="_blank">
 							<button>Explore The Donate Landing Page</button>
 						</a>
 					</div>
@@ -68,7 +68,7 @@ export default function Projects() {
 				<div className="pairs-pods-description">
 					<img className="pairs-pods-preview" src={Participate} alt="Screenshot of the Participate landing page" />
 					<div className="projects-button">
-						<a href="/campaigns/participate" target="_blank">
+						<a href="/campaigns/participate" rel="noreferrer" target="_blank">
 							<button>Explore The Participate Landing Page</button>
 						</a>
 					</div>
@@ -76,7 +76,7 @@ export default function Projects() {
 				<div className="pairs-pods-description">
 					<img className="pairs-pods-preview" src={SignUp} alt="Screenshot of the Sign Up landing page" />
 					<div className="projects-button">
-						<a href="/campaigns/signUp" target="_blank">
+						<a href="/campaigns/signUp" rel="noreferrer" target="_blank">
 							<button>Explore The Sign Up Landing Page</button>
 						</a>
 					</div>
