@@ -8,16 +8,18 @@ import "./projects.scss";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
 import ExoplanetariumLogo from "../../assets/projectsAssets/exoplanetarium.svg";
 import Exoplanetarium from "../../assets/projectsAssets/exoplanetarium.png";
-//import Donate from "../../assets/projectsAssets/Donate.png";
-//import Participate from "../../assets/projectsAssets/Participate.png";
-//import SignUp from "../../assets/projectsAssets/SignUp.png";
+import Donate from "../../assets/projectsAssets/Donate.png";
+import Participate from "../../assets/projectsAssets/Participate.png";
+import SignUp from "../../assets/projectsAssets/SignUp.png";
 import Footer from "../../components/Footer/Footer";
 
 export default function Projects() {
 	return (
 		<div id="projects">
 			<Navigation></Navigation>
+
 			<h1>Projects</h1>
+			
 			<div className="project-section">
 				<img className="exoplanetarium-title" src={ExoplanetariumLogo} alt="Exoplanetarium Logo"></img>
 				<div className="exoplanetarium-description">
@@ -44,9 +46,9 @@ export default function Projects() {
 				</div>
 			</div>
 
-			{/**	
+
 			<div className={"project-section"}>
-				<h2>Pairs Pods</h2>
+				<h2 className="pairs-pods-title">Pairs Pods</h2>
 				<div className="project-description">
 					<p>
 						A project where teams of designers and developers worked 
@@ -55,27 +57,31 @@ export default function Projects() {
 						with The Spacelab Nonprofit website.
 					</p>
 				</div>
-				<img src={Donate} alt="Screenshot of the Donate landing page" />
-				<div className="projects-button">
-					<a href="/campaigns/donate">
-						<button>Explore The Donate Landing Page</button>
-					</a>
+				<div className="pairs-pods-description">
+					<img className="pairs-pods-preview" src={Donate} alt="Screenshot of the Donate landing page" />
+					<div className="projects-button">
+						<a href="/campaigns/donate">
+							<button>Explore The Donate Landing Page</button>
+						</a>
+					</div>
 				</div>
-				<img src={Participate} alt="Screenshot of the Participate landing page" />
-				<div className="projects-button">
-					<a href="/campaigns/participate">
-						<button>Explore The Participate Landing Page</button>
-					</a>
+				<div className="pairs-pods-description">
+					<img className="pairs-pods-preview" src={Participate} alt="Screenshot of the Participate landing page" />
+					<div className="projects-button">
+						<a href="/campaigns/participate">
+							<button>Explore The Participate Landing Page</button>
+						</a>
+					</div>
 				</div>
-
-				<img src={SignUp} alt="Screenshot of the Sign Up landing page" />
-				<div className="projects-button">
-					<a href="/campaigns/signUp">
-						<button>Explore The Sign Up Landing Page</button>
-					</a>
+				<div className="pairs-pods-description">
+					<img className="pairs-pods-preview" src={SignUp} alt="Screenshot of the Sign Up landing page" />
+					<div className="projects-button">
+						<a href="/campaigns/signUp">
+							<button>Explore The Sign Up Landing Page</button>
+						</a>
+					</div>
 				</div>
 			</div>
-			*/}
 			
 			<Footer />
 		</div>

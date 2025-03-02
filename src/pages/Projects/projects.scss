@@ -35,6 +35,7 @@
 }
 
 #projects .project-description {
+	max-width: 900px;
 	text-align: left;
 }
 
@@ -77,6 +78,32 @@
 }
 
 #projects .exoplanetarium-preview {
+	border: 1px solid white;
+	border-radius: 0.5rem;
+}
+
+// Pairs Pods
+#projects .pairs-pods-title {
+	margin: 2rem 0;
+	font-weight: bold;
+}
+
+#projects .pairs-pods-description {
+	padding: 1.5rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+	#projects .pairs-pods-description {
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+#projects .pairs-pods-preview {
 	border: 1px solid white;
 	border-radius: 0.5rem;
 }
