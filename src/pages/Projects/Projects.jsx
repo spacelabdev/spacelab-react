@@ -1,94 +1,83 @@
-import React from "react";
-import HeroImage from "../../components/HeroImage/HeroImage";
-import Footer from "../../components/Footer/Footer";
-import "./projects.scss";
-import ExoplanetariumLogo from "../../assets/projectsAssets/exoplanetarium.svg";
-import Exoplanetarium from "../../assets/projectsAssets/Exoplanetarium.png";
-import Donate from "../../assets/projectsAssets/Donate.png";
-import Participate from "../../assets/projectsAssets/Participate.png";
-import SignUp from "../../assets/projectsAssets/SignUp.png";
-import Trifold from "../../components/Trifold/Trifold";
-
 /**
- * Renders Projects Page
- * @returns {JSX.Element}
- * @constructor
+ * Projects.jsx
+ * Webpage featuring TSN's current and past projects.
  */
+
+import React from "react";
+import "./projects.scss";
+import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
+import ExoplanetariumLogo from "../../assets/projectsAssets/exoplanetarium.svg";
+import Exoplanetarium from "../../assets/projectsAssets/exoplanetarium.png";
+//import Donate from "../../assets/projectsAssets/Donate.png";
+//import Participate from "../../assets/projectsAssets/Participate.png";
+//import SignUp from "../../assets/projectsAssets/SignUp.png";
+import Footer from "../../components/Footer/Footer";
+
 export default function Projects() {
 	return (
-		<>
-			<HeroImage heroTitle="PROJECTS" />
-			<div className={"projects-main-container"}>
-				<div className={"projects-exoplanetarium-logo"}>
-					<img
-						className={"exoplanetarium-logo"}
-						src={ExoplanetariumLogo}
-						alt={""}
-					/>
-				</div>
-				<p className={"exoplanetarium-paragraphs"}>
-					Exoplanetarium is a project with the goal to explore
-					NASA/CallTech data from the TESS, Kepler and K2 Missions
-					using various degrees of Machine Learning and Deep Natural
-					Networks in the pursuit of Earth-Like planets around nearby
-					stars in the Milky Way Galaxy.
-				</p>
-				<br />
-				<p className={"exoplanetarium-paragraphs"}>
-					Our short-term goal is to find objects on interest for
-					professional Astronomers to explore, and to classify
-					already-identified candidates that have not yet been
-					classified as either exoplanets or false-positives by the
-					astronomical community.
-				</p>
-
-				<div className="image-wrap">
-					<img src={Exoplanetarium} alt="starry sky" />
-				</div>
-				<div className="button-wrap">
+		<div id="projects">
+			<Navigation></Navigation>
+			<h1>Projects</h1>
+			<div className="project-section">
+				<img className="exoplanetarium-title" src={ExoplanetariumLogo} alt="Exoplanetarium Logo"></img>
+				<div className="exoplanetarium-description">
+					<div className="project-description">
+						<p>
+							A project with the goal to explore NASA/CalTech data from the
+							TESS, Kepler, and K2 missions using various degrees of machine 
+							learning and deep neural networks in the pursuit of Earth-like
+							planets around nearby stars in the Milky Way galaxy.
+						</p>
+						<p>
+							Our short-term goal is to find objects of interest for professional
+							astronomers to explore and to classify already-identified candidates
+							that have not yet been classified as either exoplanets or 
+							false-positives by the astronomical community.
+						</p>
+					</div>
+					<img className="exoplanetarium-preview" src={Exoplanetarium} alt="Screenshot of Exoplanetarium"></img>
+				</div>				
+				<div className="projects-button">
 					<a href="https://spacelabdev.github.io/Exoplanetarium-3D/">
 						<button>Explore Exoplanetarium</button>
 					</a>
 				</div>
-				<h2 className="project-title">PAIRS PODS</h2>
-				<p className={"exoplanetarium-paragraphs"}>
-					Pairs Pods was a project with the goal of allowing teams of
-					designers and developers to work together to create a series
-					of unique landing pages for the purpose of researching ways
-					of improving user engagement with the Spacelab website.
-				</p>
-				<div className="image-wrap">
-					<a href="/campaigns/donate">
-						<img src={Donate} alt="starry sky" />
-					</a>
+			</div>
+
+			{/**	
+			<div className={"project-section"}>
+				<h2>Pairs Pods</h2>
+				<div className="project-description">
+					<p>
+						A project where teams of designers and developers worked 
+						together to create a series of unique landing pages for the 
+						purpose of researching ways of improving user engagement 
+						with The Spacelab Nonprofit website.
+					</p>
 				</div>
-				<div className="button-wrap">
+				<img src={Donate} alt="Screenshot of the Donate landing page" />
+				<div className="projects-button">
 					<a href="/campaigns/donate">
 						<button>Explore The Donate Landing Page</button>
 					</a>
 				</div>
-				<div className="image-wrap">
-					<a href="/campaigns/participate">
-						<img src={Participate} alt="starry sky" />
-					</a>
-				</div>
-				<div className="button-wrap">
+				<img src={Participate} alt="Screenshot of the Participate landing page" />
+				<div className="projects-button">
 					<a href="/campaigns/participate">
 						<button>Explore The Participate Landing Page</button>
 					</a>
 				</div>
-				<div className="image-wrap">
-					<a href="/campaigns/signUp">
-						<img src={SignUp} alt="starry sky" />
-					</a>
-				</div>
-				<div className="button-wrap">
+
+				<img src={SignUp} alt="Screenshot of the Sign Up landing page" />
+				<div className="projects-button">
 					<a href="/campaigns/signUp">
 						<button>Explore The Sign Up Landing Page</button>
 					</a>
 				</div>
 			</div>
+			*/}
+			
 			<Footer />
-		</>
+		</div>
 	);
 }
