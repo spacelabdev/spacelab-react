@@ -1,69 +1,109 @@
-.projects-main-container {
-	max-width: 90vw;
-	margin: 0 auto;
+#projects {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	background-image: url(../../assets/background.jpg);
+	background-position: center;
+	background-size: contain;
+}
 
-	.projects-exoplanetarium-logo {
-		width: 100%;
-		margin: 2em auto;
-		max-width: 1050px;
+// Page title
+#projects h1 {
+	padding: 4rem 0 1rem 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
 
-		.exoplanetarium-logo {
-			width: 100%;
-		}
-	}
+#projects .project-section {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
-	.exoplanetarium-paragraphs {
-		text-align: left;
-		width: 80%;
-		max-width: 800px;
-		margin: 0 auto 1rem auto;
-		font-size: 18px;
+@media screen and (min-width: 992px) {
+	#projects .project-section {
+		padding: 0 4rem;
+	}
+}
 
-		&:nth-of-type(2) {
-			padding-bottom: 3em;
-		}
-	}
-	.project-title {
-		font-size: 4vw;
-		letter-spacing: 3px;
-		font-weight: bold;
-		font-family: "Poppins", sans-serif;
-		text-transform: capitalize;
-	}
-	.image-wrap {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		a {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			margin: 1rem;
-		}
-		img {
-			width: 50%;
-			box-shadow: 5px 5px 10px black;
-		}
-	}
+#projects .project-description {
+	max-width: 900px;
+	text-align: left;
+}
 
-	.button-wrap {
-		margin: 2rem 0;
-		display: flex;
-		justify-content: center;
-		width: 100%;
-		a {
-			color: white;
-			text-decoration: none;
-		}
-		a:hover {
-			color: white;
-			text-decoration: none;
-		}
+#projects .projects-button {
+	margin: 2rem 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	a, a:hover {
+		color: white;
+		text-decoration: none;
 	}
+}
+
+// Exoplanetarium
+#projects .exoplanetarium-title {
+	width: 325px;
+}
+
+@media screen and (min-width: 992px) {
+	#projects .exoplanetarium-title {
+		width: 625px;
+	}
+}
+
+#projects .exoplanetarium-description {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: center;
+	gap: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+	#projects .exoplanetarium-description {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+	}
+}
+
+#projects .exoplanetarium-preview {
+	border: 1px solid white;
+	border-radius: 0.5rem;
+}
+
+// Pairs Pods
+#projects .pairs-pods-title {
+	margin: 2rem 0;
+	font-weight: bold;
+}
+
+#projects .pairs-pods-description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+	#projects .pairs-pods-description {
+		padding: 1rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+#projects .pairs-pods-preview {
+	margin-top: 1rem;
+	border: 1px solid white;
+	border-radius: 0.5rem;
 }
