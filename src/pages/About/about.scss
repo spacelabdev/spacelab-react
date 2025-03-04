@@ -14,7 +14,7 @@
 	color: white;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
-	font-size: 3rem;
+	font-size: calc(30px + 2.2vmin);
 }
 
 #mission-vision-values-container {
@@ -24,7 +24,7 @@
 	gap: 4rem;
 
 	.mission-vision-values-card {
-		border: 1px solid gray;
+		border: 1px solid rgb(128, 128, 128);
 		padding: 3rem 2rem 1rem 2rem;
 
 		h3 {
@@ -38,11 +38,26 @@
 			line-height: 1.75;
 		}
 	}
-
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 992px) {
 		display: flex;
 		flex-direction: column;
+		gap: 2.5rem;
 		padding-bottom: 4rem;
+
+		.mission-vision-values-card {
+			padding: 1.5rem 1rem;
+			display: flex;
+			flex-direction: column;
+	
+			h3 {
+				font-size: 20px;
+				margin-bottom: 1rem;
+			}
+	
+			p {
+				font-size: 1.1rem;
+			}
+		}
 	}
 }
 
@@ -53,7 +68,7 @@
 		color: white;
 		font-family: "Poppins", sans-serif;
 		font-weight: bold;
-		font-size: 3rem;
+		font-size: calc(30px + 2.2vmin);
 		text-align: left;
 	
 		@media screen and (min-width: 768px) {
@@ -145,7 +160,7 @@
 		color: white;
 		font-family: "Poppins", sans-serif;
 		font-weight: bold;
-		font-size: 48px; 
+		font-size: calc(30px + 2.2vmin);
 		text-align: left;
 	
 		@media screen and (min-width: 768px) {
@@ -461,6 +476,9 @@
 					@media only screen and (max-width: 1200px) {
 						font-size: 20px;
 						padding: 0;
+					}
+					@media only screen and (max-width: 992px) {
+						font-size: 1.1rem;
 					}
 				}
 			}
