@@ -70,11 +70,14 @@ export default function Footer() {
 										Projects
 									</Link>
 								</li>
+								{/* // Removed this link until podcast page becomes active. */}
+								{/*}
 								<li>
 									<Link to={"/podcast"} style={link_style}>
 										Podcast
 									</Link>
 								</li>
+								*/}
 							</ul>
 						</div>
 						
