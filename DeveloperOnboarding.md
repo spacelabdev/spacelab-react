@@ -60,11 +60,11 @@
     <img src="Images/banner.png">
 </a>
 
-<h4>Welcome to the developer guide for Spacelab!</h4>
+<h4>Welcome to the developer guide for the Spacelab Nonprofit!</h4>
 
 This guide is intended to provide instructions on how to contribute to the project, including coding conventions and style guidelines that ensure consistency throughout the codebase. By following these guidelines, you can help us create a high-quality project that is easy to update and maintain.
 
-Whether you are a seasoned developer or just starting out, this guide will provide you with the information you need to contribute effectively to the project. If you are new to Spacelab please read through this document carefully!
+Whether you are a seasoned developer or just starting out, this guide will provide you with the information you need to contribute effectively to the project. If you are new to the Spacelab Nonprofit please read through this document carefully!
 
 Let's get started!
 
@@ -136,7 +136,7 @@ To get started contributing, simply check out the current list of [issues](https
 
 We use Github to track updates that need to be made to the website. If you notice a bug, please create a ticket for it right away, so it doesn't get lost or forgotten.
 
-Tickets should be labelled for clarity. The exsisting labels and their purposes are:
+Tickets should be labelled for clarity. The existing labels and their purposes are:
 
 -   New Feature: For a new feature or component
 -   Enhancement: Improvement to be made to an existing feature or component
@@ -159,8 +159,8 @@ git checkout -b feature/amazingFeature
 
 Branch Naming Conventions:
 
--   feature/nameOfFeature: New feature or comoponent
--   enhancement/nameOfFeature: Enhancement of exsisting feature or component
+-   feature/nameOfFeature: New feature or component
+-   enhancement/nameOfFeature: Enhancement of existing feature or component
 -   hotfix/nameOfBug: Quick bug or update
 
 ### Merge vs. Rebase
@@ -206,6 +206,8 @@ Before submitting a PR, run through this code checklist:
 
 Once you complete the checklist, open a PR and include a short description of what you accomplished. If you built a new feature, include a screenshot of the UI.
 
+All pull requests need at least one approving review before they can be merged. Send a message in Slack asking another developer in your team to review your code and approve.
+
 ### Building the Project
 
 Before building the project, include an `.env` file containing the following keys in the root of the project:
@@ -222,7 +224,7 @@ npm run build
 
 ## Style Guide
 
-Please refer to [globalStyles](https://github.com/spacelabdev/spacelab-react/blob/main/src/globalStyles.scss) as it contains color pallettes for the website as well as default styles for headings, buttons, inputs, etc.
+Please refer to [globalStyles](https://github.com/spacelabdev/spacelab-react/blob/main/src/globalStyles.scss) as it contains color palettes for the website as well as default styles for headings, buttons, inputs, etc.
 
 In general, developers should try to follow designs from the UX/UI team as closely as possible (down to the pixel if you can).
 
@@ -267,10 +269,16 @@ Coding Conventions:
     - Include labels on all inputs
 
 3. Performance:
-    - Keep your code modular and resuable
+    - Keep your code modular and reusable
     - Do not use let or var to declare your variables, instead use const
     - Remove all console.logs
 
-## Thank You For Reading and Welcome to Spacelab!
+4. Use camelCase for everything else including:
+    - folder names
+    - file names
+    - variable names
+    - function names      
+
+## Thank You For Reading and Welcome to the Spacelab Nonprofit!
 
 <p>(<a href="#top">back to top</a>)</p>
