@@ -93,6 +93,8 @@ export default function MainNavigation() {
 										Glossary
 									</Link>
 								</li>
+								{/*
+								// Removed this link until podcast page becomes active.
 								<li>
 									<Link
 										className={"nav-link"}
@@ -102,6 +104,7 @@ export default function MainNavigation() {
 										Podcast
 									</Link>
 								</li>
+								*/}
 							</ul>
 						</li>
 						{/* </div> */}

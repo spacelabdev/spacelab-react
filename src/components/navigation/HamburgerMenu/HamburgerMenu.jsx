@@ -5,7 +5,7 @@ import "./hamburgerMenu.scss";
 import { useState } from "react";
 
 /**
- * Renders the hamburger menu for smaller scree sizes.
+ * Renders the hamburger menu for smaller screen sizes.
  *
  *  More information on react-burger-menu can be found here:
  *  https://github.com/negomi/react-burger-menu
@@ -51,13 +51,14 @@ function HamburgerMenu() {
 							>
 								Glossary
 							</Link>
-							<Link
+							{/* // Removed this link until podcast page becomes active. */}
+							{/* <Link
 								className={"hamburger-nav-link"}
 								to={"/podcast"}
 								style={{ textDecoration: "none" }}
 							>
 								Podcast
-							</Link>
+							</Link> */}
 							{/* // Removed until blog page on Medium is back up. */}
 							{/* <Link
 								className={"hamburger-nav-link"}
