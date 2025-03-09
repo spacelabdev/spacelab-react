@@ -243,8 +243,7 @@
 						transition: all 0.5s ease-in-out;
 
 						@media only screen and (max-width: 1200px) {
-							font-size: 40px;
-							width: 100px;
+							font-size: 25px;
 							min-width: 100px; 
 						}
 					}
@@ -276,46 +275,46 @@
 						}
 					}
 				
-					@keyframes grow-mobile {
-						0% {
-							font-style: normal;
-							font-weight: 600;
-							letter-spacing: 4.137px;
-							font-size: 25px;
-							line-height: 35px;
-						}
-						100% {
-							font-style: normal;
-							font-weight: 600;
-							letter-spacing: 6.16px;
-							font-size: 40px;
-							line-height: 50px;
-						}
-					}
+					// @keyframes grow-mobile {
+					// 	0% {
+					// 		font-style: normal;
+					// 		font-weight: 600;
+					// 		letter-spacing: 4.137px;
+					// 		font-size: 25px;
+					// 		line-height: 35px;
+					// 	}
+					// 	100% {
+					// 		font-style: normal;
+					// 		font-weight: 600;
+					// 		letter-spacing: 6.16px;
+					// 		font-size: 40px;
+					// 		line-height: 50px;
+					// 	}
+					// }
 				
-					@keyframes shrink-mobile {
-						0% { 
-							font-size: 40px;
-							line-height: 50px;
-							font-style: normal;
-							font-weight: 600;
-							letter-spacing: 6.16px;
-						}
-						100% {
-							font-style: normal;
-							font-weight: 600;
-							letter-spacing: 4.137px;
-							font-size: 25px;
-							line-height: 35px;
-						}
-					}
+					// @keyframes shrink-mobile {
+					// 	0% { 
+					// 		font-size: 40px;
+					// 		line-height: 50px;
+					// 		font-style: normal;
+					// 		font-weight: 600;
+					// 		letter-spacing: 6.16px;
+					// 	}
+					// 	100% {
+					// 		font-style: normal;
+					// 		font-weight: 600;
+					// 		letter-spacing: 4.137px;
+					// 		font-size: 25px;
+					// 		line-height: 35px;
+					// 	}
+					// }
 				
 					.upcoming-date {
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						width: 150px; 
-						min-width: 150px; 
+						min-width:  150px; 
 						transition: all 0.5s ease-in-out;
 						font-family: Poppins;
 						font-size: 32px;
@@ -325,9 +324,10 @@
 						cursor: pointer;
 	
 						@media only screen and (max-width: 1200px) {
-							width: 100px;
 							min-width: 100px;
 							font-size: 25px;
+							color: #ffffff7e;
+							// transition: all 0.5s ease-in-out;
 						}
 					}
 				
