@@ -57,14 +57,14 @@
 ## Introduction
 
 <a href="https://github.com/spacelabdev/spacelab-react">
-    <img src="Images/banner.png">
+    <img src="src/assets/spacelab.svg">
 </a>
 
-<h4>Welcome to the developer guide for the Spacelab Nonprofit!</h4>
+<h4>Welcome to the developer guide for The Spacelab Nonprofit!</h4>
 
 This guide is intended to provide instructions on how to contribute to the project, including coding conventions and style guidelines that ensure consistency throughout the codebase. By following these guidelines, you can help us create a high-quality project that is easy to update and maintain.
 
-Whether you are a seasoned developer or just starting out, this guide will provide you with the information you need to contribute effectively to the project. If you are new to the Spacelab Nonprofit please read through this document carefully!
+Whether you are a seasoned developer or just starting out, this guide will provide you with the information you need to contribute effectively to the project. If you are new to The Spacelab Nonprofit please read through this document carefully!
 
 Let's get started!
 
@@ -279,6 +279,6 @@ Coding Conventions:
     - variable names
     - function names      
 
-## Thank You For Reading and Welcome to the Spacelab Nonprofit!
+## Thank You For Reading and Welcome to The Spacelab Nonprofit!
 
 <p>(<a href="#top">back to top</a>)</p>
