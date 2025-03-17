@@ -5,7 +5,7 @@
     <img src="Images/logo.jpeg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Spacelab</h3>
+<h3 align="center">The Spacelab Nonprofit</h3>
 
   <p align="center">
     <br />
@@ -55,12 +55,12 @@
 ## About The Project
 
 <a href="https://github.com/spacelabdev/spacelab-react">
-    <img src="Images/banner.png">
+    <img src="src/assets/spacelab.svg">
   </a>
 
-### What is Spacelab
+### What is The Spacelab Nonprofit? 
 
-Spacelab is a people-incubator drawing from diverse, underrepresented communities and with a goal of building the leaders of tomorrow through the creation of cross-functional outer-space-focused projects.
+The Spacelab Nonprofit is a people-incubator drawing from diverse, underrepresented communities and with a goal of building the leaders of tomorrow through the creation of cross-functional outer-space-focused projects.
 
 Our first project uses Machine Learning and Deep Neural Networks to discover and classify exoplanets or planets that orbit stars other than our own sun. We are excited to be able to build on models that NASA Fellows and Scientists first created in prior programs with similar aims.
 
@@ -68,7 +68,7 @@ Our current project, the Exoplanetarium, focuses on using data from previous and
 
 ### Our Mission
 
-Spacelab is building the next generation of leaders in outer-space-focused science and technology, drawing from diverse, underrepresented communities, including women, members of the LGBTQ+ community, and people of color, and creating paid fellowships, internships, and scholarship opportunities, as well as debt relief.
+The Spacelab Nonprofit is building the next generation of leaders in outer-space-focused science and technology, drawing from diverse, underrepresented communities, including women, members of the LGBTQ+ community, and people of color, and creating paid fellowships, internships, and scholarship opportunities, as well as debt relief.
 
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
@@ -129,7 +129,7 @@ If you are on Mac or Linux you can install [nvm](https://github.com/nvm-sh/nvm) 
 
 ### New Developers
 
-If you've just joined the Spacelab as a new Developer, please read through the [Dev Docs](https://github.com/spacelabdev/spacelab-react/blob/main/DeveloperOnboarding.md) to get started contributing!
+If you've just joined The Spacelab Nonprofit as a new Developer, please read through the [Dev Docs](https://github.com/spacelabdev/spacelab-react/blob/main/DeveloperOnboarding.md) to get started contributing!
 
 ### Open Source
 
@@ -150,7 +150,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 [Website](https://github.com/spacelabdev/spacelab-react)<br />
 [Twitter](https://twitter.com/SpaceLab)<br />
 [LinkedIn](https://www.linkedin.com/company/spacelab-space/)<br />
-[Instagram](https://www.instagram.com/Spacelab)<br />
+[Instagram](https://www.instagram.com/spacelab_space)<br />
 [Email](mailto:spacelabdev@gmail.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
