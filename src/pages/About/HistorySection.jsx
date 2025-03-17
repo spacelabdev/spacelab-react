@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { newAboutHistoryArray } from "./aboutHelper";
 import polygon1 from "../../assets/aboutAssets/polygon1.svg";
 import polygon2 from "../../assets/aboutAssets/polygon2.svg";
@@ -17,8 +17,9 @@ export default function HistorySection() {
     useEffect(() => {
         // Func to initialize isMobile based on current screen width 
         function handleResize() {
-            setIsMobile(window.innerWidth <= 768);
+            setIsMobile(window.innerWidth <= 1199);
         }
+        handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);
@@ -40,7 +41,7 @@ export default function HistorySection() {
         setStyle({
             // from current scrollPosition...
             left: `${scrollPosition}px`,
-            // if scrollDirection is negative, scroll right, otherwise scroll up
+            // if scrollDirection is negative, scroll right, otherwise scroll left
             animationName:
                 scrollDirection < 0 ? 
                     isMobile ? 

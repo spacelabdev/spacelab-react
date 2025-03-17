@@ -182,7 +182,7 @@
 			justify-content: center;
 			gap: 31px;
 
-			@media only screen and (max-width: 750px) {
+			@media only screen and (max-width: 768px) {
 				gap: 0;
 			}
 
@@ -193,6 +193,7 @@
 				background: none;
 				outline: none;
 				opacity: 0.5;
+				transform: rotate(30deg);
 				transition: all 0.1s ease-in-out;
 				&:hover {
 					opacity: 1;
@@ -215,17 +216,17 @@
 					width: 300px;
 					min-width: 300px
 				}
-				@media only screen and (max-width: 750px) {
+				@media only screen and (max-width: 768px) {
 					height: 100px;
-					min-width: 200px;
 					width: 200px;
+					min-width: 200px;
 				}
 
 				.scroll-inner {
 					height: inherit;
 					width:100%;
 					position: absolute;
-					top: 0;
+					top: 0px;
 					left: 0px;
 					display: flex;
 
@@ -250,10 +251,10 @@
 
 
 					.deselected-date {
-						animation: shrink .5s ease-in-out;
+						// animation: shrink .5s ease-in-out;
 
-						@media only screen and (max-width: 750px) {
-							animation: shrink-mobile .5s ease-in-out;
+						@media only screen and (max-width: 768px) {
+							animation: none;
 						}
 					}
 
@@ -275,39 +276,6 @@
 						}
 					}
 				
-					// @keyframes grow-mobile {
-					// 	0% {
-					// 		font-style: normal;
-					// 		font-weight: 600;
-					// 		letter-spacing: 4.137px;
-					// 		font-size: 25px;
-					// 		line-height: 35px;
-					// 	}
-					// 	100% {
-					// 		font-style: normal;
-					// 		font-weight: 600;
-					// 		letter-spacing: 6.16px;
-					// 		font-size: 40px;
-					// 		line-height: 50px;
-					// 	}
-					// }
-				
-					// @keyframes shrink-mobile {
-					// 	0% { 
-					// 		font-size: 40px;
-					// 		line-height: 50px;
-					// 		font-style: normal;
-					// 		font-weight: 600;
-					// 		letter-spacing: 6.16px;
-					// 	}
-					// 	100% {
-					// 		font-style: normal;
-					// 		font-weight: 600;
-					// 		letter-spacing: 4.137px;
-					// 		font-size: 25px;
-					// 		line-height: 35px;
-					// 	}
-					// }
 				
 					.upcoming-date {
 						display: flex;
@@ -326,8 +294,11 @@
 						@media only screen and (max-width: 1200px) {
 							min-width: 100px;
 							font-size: 25px;
-							color: #ffffff7e;
-							// transition: all 0.5s ease-in-out;
+							color: #ffffff74;
+						}
+						@media only screen and (max-width: 768px) {
+							width: 100px;
+							min-width: 100px;
 						}
 					}
 				
