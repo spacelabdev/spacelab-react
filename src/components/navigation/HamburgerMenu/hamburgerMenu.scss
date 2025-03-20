@@ -48,6 +48,7 @@
 	@media screen and (max-width: 768px) {
 		position: absolute;
 		top: 64px;
+		min-height: 350px !important;
 		height: fit-content !important;
 		width: 290px !important;
 	}
