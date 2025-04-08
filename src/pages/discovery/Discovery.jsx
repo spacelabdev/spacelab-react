@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import HeroImage from "../../components/HeroImage/HeroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/DiscoveryColumnFilterList";
 import {
 	projectDispositionFiltersArray,
@@ -24,6 +23,8 @@ import "./discovery.scss";
 import SimpleButton from "../../components/styleComponents/buttons/SimpleButton/SimpleButton";
 import CollapsibleSection from "../../components/CollapsibleSection/CollapsibleSection";
 import DataTable from "./table/DataTable";
+import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
+import ArrowImg from '../../assets/dropdown-arrow.svg'
 
 /**
  * @returns {JSX.Element}
@@ -39,6 +40,8 @@ export default function Discovery() {
 	);
 	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false);
 	const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
+
+	const [toggleFilters, setToggleFilters] = useState(false);
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var. If a query is sent for the purpose
@@ -157,140 +160,167 @@ export default function Discovery() {
 	};
 
 	return (
-		<>
-			<HeroImage heroTitle="DISCOVERY" />
-			<div id={"discovery-title"}>Current Discoveries</div>
-			<div id={"database-search-wrapper"}>
-				<DataTable
-					isSortIconResetNeeded={isSortIconResetNeeded}
-					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
-					showLoadingSpinner={showLoadingSpinner}
-				/>
-				<div id={"filtersContainer"}>
-					<div id={"filtersHeader"}>
-						<p>Filters</p>
-						<div id={"discovery-filter-buttons-container"}>
-							<div id="searchBttn">
-								<SimpleButton
-									buttonName={"Filter"}
-									buttonEffectAsync={() =>
-										queryExoplanetDatabase(
-											"json",
-											true,
-											true
-										)
-									}
-								/>
-							</div>
-							<DropdownButton
-								buttonLabel={"Download"}
-								dropdownItemClick={dropdownItemClick}
-								item1={{ href: "#/action-1", label: "csv" }}
-								item2={{ href: "#/action-2", label: "json" }}
+		<div id="discovery">
+			<Navigation></Navigation>
+			<h1>Discovery</h1>
+
+			<div class="filters collapsible">
+                    <div
+                        id="header"
+                        class="collapsible-card-header"
+                        onClick={() => {
+                            setToggleFilters(prev => {
+                            return !prev;
+                            });
+                        }}
+                    >
+                        <p>Filters</p>
+                        <img 
+                            src={ArrowImg} 
+                            alt="arrow"
+                            className={toggleFilters ? "arrow-up" : "arrow-down"}
+                            />
+                    </div>
+                    <div
+                        class="collapsible-card-content"
+                        style={{
+                            height: toggleFilters ? "100%" : "0"
+                        }}
+                    >
+                        TODO
+                    </div>
+                </div>
+
+
+			<div id="filters collapisble">
+				<div id="filters-header">
+					<p>Filters</p>
+					<div id={"discovery-filter-buttons-container"}>
+						<div id="searchBttn">
+							<SimpleButton
+								buttonName={"Filter"}
+								buttonEffectAsync={() =>
+									queryExoplanetDatabase(
+										"json",
+										true,
+										true
+									)
+								}
 							/>
 						</div>
+						<DropdownButton
+							buttonLabel={"Download"}
+							dropdownItemClick={dropdownItemClick}
+							item1={{ href: "#/action-1", label: "csv" }}
+							item2={{ href: "#/action-2", label: "json" }}
+						/>
 					</div>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"Identifications"}
-						defaultOpen={true}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={identificationFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"Exoplanets"}
-						defaultOpen={true}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={exoplanetArchiveFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"Dispositions"}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={projectDispositionFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"Transit Properties"}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={transitPropertiesFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"Threshold Crossing Events"}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={thresholdCrossingEventFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"Stellar Parameters"}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={stellarParametersFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"KIC Parameters"}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={kicParametersFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
-					<CollapsibleSection
-						className={"discover-filter-collapsible"}
-						title={"Pixel Based KOI Vetting"}
-					>
-						<DiscoveryColumnFilterList
-							filterArray={pixelBasedKoiVettingFiltersArray}
-							selectedColumns={selectedColumns}
-							setSelectedColumns={setSelectedColumns}
-							whereFilter={whereFilter}
-							setWhereFilter={setWhereFilter}
-						/>
-					</CollapsibleSection>
 				</div>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"Identifications"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={identificationFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"Exoplanets"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={exoplanetArchiveFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"Dispositions"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={projectDispositionFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"Transit Properties"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={transitPropertiesFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"Threshold Crossing Events"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={thresholdCrossingEventFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"Stellar Parameters"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={stellarParametersFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"KIC Parameters"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={kicParametersFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
+				<CollapsibleSection
+					className={"discover-filter-collapsible"}
+					title={"Pixel Based KOI Vetting"}
+				>
+					<DiscoveryColumnFilterList
+						filterArray={pixelBasedKoiVettingFiltersArray}
+						selectedColumns={selectedColumns}
+						setSelectedColumns={setSelectedColumns}
+						whereFilter={whereFilter}
+						setWhereFilter={setWhereFilter}
+					/>
+				</CollapsibleSection>
 			</div>
+
+			{/* Discoveries Table */}
+			<DataTable
+				isSortIconResetNeeded={isSortIconResetNeeded}
+				setIsSortIconResetNeeded={setIsSortIconResetNeeded}
+				showLoadingSpinner={showLoadingSpinner}
+			/>
 			<Footer />
-		</>
+		</div>
 	);
 }

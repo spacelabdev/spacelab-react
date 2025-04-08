@@ -1,81 +1,87 @@
-#discovery-title {
-	font-size: 3rem;
-	margin: 0 auto;
-	padding: 2rem;
+#discovery {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url(../../assets/background.jpg);
+	background-position: center;
+	background-size: contain;
 }
 
-#database-search-wrapper {
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: space-between;
-	width: 80%;
-	margin: 0 auto;
-	padding-bottom: 2rem;
-	gap: 1rem;
-	height: 100%;
+// Page title
+#discovery h1 {
+	padding: 8rem 0 1rem 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
 
-	@media (min-width: 1360px) {
-		flex-direction: row;
+
+
+
+
+
+#filters {
+	width: 40vw;
+	border-style: groove;
+	text-align: left;
+	padding-bottom: 1rem;
+	vertical-align: middle;
+	height: auto;
+
+
+	p {
+		font-size: 2rem;
+		padding-left: 2rem;
 	}
 
-	#filtersContainer {
-		width: 80vw;
-		border-style: groove;
-		text-align: left;
-		padding-bottom: 1rem;
-		vertical-align: middle;
-		height: auto;
-		@media (min-width: 1360px) {
-			width: 35vw;
+	& #filtersHeader {
+		margin-bottom: 2rem;
+		max-height: 80px;
+		position: relative;
+		top: -34px;
+	}
+
+	& #filtersHeader > p {
+		display: inline-block;
+		padding: 10px;
+		margin-left: 20px;
+		background-color: #1c1a22;
+	}
+
+	#discovery-filter-buttons-container {
+		display: flex;
+		padding: 0 2rem;
+		width: 100%;
+		justify-content: space-between;
+		gap: 1rem;
+
+		@media (min-width: 700px) {
+			//flex: 1 1 8rem;
+			width: 60%;
 		}
 
-		p {
-			font-size: 2rem;
-			padding-left: 2rem;
-		}
+		& > div {
+			flex: 1 0 8rem;
 
-		& #filtersHeader {
-			margin-bottom: 2rem;
-			max-height: 80px;
-			position: relative;
-			top: -34px;
-		}
+			@media (max-width: 450px) {
+				flex: 1 1 9rem;
 
-		& #filtersHeader > p {
-			display: inline-block;
-			padding: 10px;
-			margin-left: 20px;
-			background-color: #1c1a22;
-		}
-
-		#discovery-filter-buttons-container {
-			display: flex;
-			padding: 0 2rem;
-			width: 100%;
-			justify-content: space-between;
-			gap: 1rem;
-
-			@media (min-width: 700px) {
-				//flex: 1 1 8rem;
-				width: 60%;
-			}
-
-			& > div {
-				flex: 1 0 8rem;
-
-				@media (max-width: 450px) {
-					flex: 1 1 9rem;
-
-					& > button {
-						padding-left: 0px;
-					}
-				}
-
-				& button {
-					width: 100%;
+				& > button {
+					padding-left: 0px;
 				}
 			}
+
+			& button {
+				width: 100%;
+			}
 		}
+	}
 
 		.filters {
 			padding: 0 2rem 1rem 2rem;
@@ -125,5 +131,4 @@
 				}
 			}
 		}
-	}
 }
