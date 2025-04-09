@@ -7,6 +7,7 @@
 	flex-direction: column;
 	align-items: center;
 	background-image: url(../../assets/background.jpg);
+	background-attachment: fixed;
 	background-position: center;
 	background-size: contain;
 }
@@ -22,51 +23,34 @@
 }
 
 /* Filters Dropdown */
-#discovery .collapsible {
-	width: 80vw;
-	margin-bottom: 2rem;
-	padding: 0 1rem;
-	background-color: rgba(0, 0, 0, 0.85);
-	border: 2px solid #C08FFF;
-	border-radius: 0.25rem;
-  }
-  
-  #discovery .collapsible-header {
-	padding: 1rem;
-	width: 100%;
+#discovery .collapsible-container {
+	margin-bottom: 0.25rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	cursor: pointer;
 }
 
-#discovery .collapsible-header p {
-	margin-bottom: 0;
+#discovery .collapsible-title {
+	margin: 0;
 	font-size: 1.25rem;
-	color: white;
 }
 
-#discovery .collapsible-content {
-	padding: 0 1.5rem;
-	overflow: hidden;
+#discovery .collapsible {
+	width: 80vw;
+	margin-bottom: 2rem;
+	padding: 1rem 2rem;
+	background-color: rgba(0, 0, 0, 0.85);
+	border: 2px solid #C08FFF;
+	font-size: 1.25rem;
 }
 
-#discovery .arrow-up { transform: rotate(270deg); }
-
-#discovery .arrow-down { transform: rotate(90deg);}
+#discovery .discover-filter-collapsible {
+	padding: 1rem 2rem 0 2rem;
+}
 
 #discovery .filter-buttons {
 	display: flex;
 	gap: 1rem;
-}
-
-#discovery .collapsible-content p {
-	font-size: 1.125rem;
-}
-
-#discovery .filter-container .filters {
-	padding: 0 1rem;
-	border-bottom: 1px solid lightgray;
 }
 
 #discovery .discoveries-table {

@@ -11,27 +11,34 @@
 }
 
 #column-header-container {
+	background-color: var(--neon-purple);
 	display: flex;
 	position: sticky;
 	top: 0;
-	gap: 4px;
-	background-color: var(--neon-purple);
+	gap: 3px;
 	border-bottom: 2px solid var(--neon-purple);
 
 	& .column-header {
+		background-color: var(--dark-gray);
 		padding: 2px;
 		flex: 0 0 6rem;
-		background-color: var(--background);
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		gap: 1rem;
+
+		& p {
+			margin: 0;
+			font-size: 0.75rem;
+			font-weight: bold;
+		}
 
 		&:first-of-type {
 			flex: 0 0 3rem;
 
 			& img {
-				width: 20px;
+				width: 12px;
 				align-self: center;
 			}
 		}
@@ -56,8 +63,8 @@
 
 			& p {
 				color: var(--text);
-				font-size: 1rem;
-				vertical-align: bottom;
+				font-size: 0.75rem;
+				font-weight: bold;
 
 				&.align-right {
 					text-align: right;

@@ -29,7 +29,6 @@ import SimpleButton from "../../components/styleComponents/buttons/SimpleButton/
 import CollapsibleSection from "../../components/CollapsibleSection/CollapsibleSection";
 import DataTable from "./table/DataTable";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
-import ArrowImg from '../../assets/dropdown-arrow.svg'
 
 /**
  * @returns {JSX.Element}
@@ -45,8 +44,6 @@ export default function Discovery() {
 	);
 	const [isSortIconResetNeeded, setIsSortIconResetNeeded] = useState(false);
 	const [showLoadingSpinner, setShowLoadingSpinner] = useState(true);
-
-	const [toggleFilters, setToggleFilters] = useState(false);
 
 	/**
 	 * Query CalTech db and set exoplanetData in App state and store as session var. If a query is sent for the purpose
@@ -170,26 +167,10 @@ export default function Discovery() {
 		<div id="discovery">
 			<h1>Discovery</h1>
 
-			<div class="filter-container collapsible">
-				<div
-					class="collapsible-header"
-					onClick={() => {
-						setToggleFilters(prev => {
-						return !prev;
-						});
-					}}
-				>
-					<p>Filters</p>
-					<img 
-						src={ArrowImg} 
-						alt="arrow"
-						className={toggleFilters ? "arrow-up" : "arrow-down"}
-						/>
-				</div>
-				<div
-					class="collapsible-content"
-					style={{ height: toggleFilters ? "100%" : "0" }}
-				>
+			<CollapsibleSection
+				className="collapsible"
+				title={"Filters"}
+			>
 					<CollapsibleSection
 						className={"discover-filter-collapsible"}
 						title={"Identifications"}
@@ -286,8 +267,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-				</div>
-			</div>
+			</CollapsibleSection>
 			
 			{/* Buttons */}
 			<div className="filter-buttons">

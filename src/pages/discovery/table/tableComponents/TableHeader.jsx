@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import dragIcon from "../../../../assets/componentAssets/drag_icon@0.5x.png";
-import rightTriangleUp from "../../../../assets/componentAssets/right-triangle-up.png";
-import rightTriangleDown from "../../../../assets/componentAssets/right-triangle-down.png";
 import SortIcon from "./SortIcon";
 
 /**
@@ -67,13 +65,8 @@ export default function TableHeader({
 	return (
 		<div id={"column-header-container"}>
 			<div className={"column-header first-column"}>
-				<p>1</p>
-				<img src={rightTriangleUp} alt={"right triangle pointing up"} />
-				<img
-					src={rightTriangleDown}
-					alt={"right triangle pointing down"}
-				/>
-				<p>{exoPlanetData.length.toLocaleString()}</p>
+				<div></div>
+				<p>{exoPlanetData.length.toLocaleString()}<br />Results</p>
 			</div>
 			{columnHeaders.map((colName, key) => {
 				// find colLabel associated with colName
