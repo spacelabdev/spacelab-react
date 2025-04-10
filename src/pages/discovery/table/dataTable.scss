@@ -2,33 +2,47 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	max-height: 143vh;
+	max-height: 100vh;
 	overflow: scroll;
 	font-size: 11px;
+	background-color: var(--medium-gray);
+	border: 2px solid var(--neon-purple);
+	scrollbar-color: var(--light-gray) var(--medium-gray);
+	overscroll-behavior: none;	// Prevents "bounce" effect on scroll, hiding mismatched background colors
 }
 
 #column-header-container {
-	display: flex;
 	position: sticky;
 	top: 0;
-	gap: 5px;
-	background-color: var(--background-color);
+	// Must manually set width of the table to properly render the border colors
+	// on the column headers
+	width: 2724px;
+	display: flex;
+	gap: 3px;
+	background-color: var(--neon-purple);
+	border-bottom: 2px solid var(--neon-purple);
 
 	& .column-header {
 		flex: 0 0 6rem;
-		padding: 3px;
-		background-color: var(--table-header);
-		border-radius: 2px;
+		background-color: var(--dark-gray);
+		padding: 2px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		gap: 1rem;
+
+		& p {
+			margin: 0;
+			font-size: 0.75rem;
+			font-weight: bold;
+		}
 
 		&:first-of-type {
 			flex: 0 0 3rem;
 
 			& img {
-				width: 20px;
+				width: 12px;
 				align-self: center;
 			}
 		}
@@ -53,8 +67,8 @@
 
 			& p {
 				color: var(--text);
+				font-size: 0.75rem;
 				font-weight: bold;
-				vertical-align: bottom;
 
 				&.align-right {
 					text-align: right;
@@ -87,7 +101,7 @@
 .row {
 	flex: 0 0 0;
 	display: flex;
-	gap: 5px;
+	gap: 3px;
 	flex-wrap: nowrap;
 	// for some reason the object inherits a margin of -15px which is being unset with this 0
 	margin: 0;
@@ -95,7 +109,7 @@
 	& .row-element {
 		flex: 0 0 6rem;
 		color: var(text);
-		padding: 3px;
+		padding: 2px;
 		word-break: break-all;
 		overflow-wrap: break-word;
 

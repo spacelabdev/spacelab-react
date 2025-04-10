@@ -1,5 +1,9 @@
+/**
+ * Discovery.jsx
+ * Discovery page of the website.
+ */
+
 import React, { useContext, useEffect, useState } from "react";
-import HeroImage from "../../components/HeroImage/HeroImage";
 import DiscoveryColumnFilterList from "./discoverySearchFilters/DiscoveryColumnFilterList";
 import {
 	projectDispositionFiltersArray,
@@ -18,12 +22,13 @@ import {
 	initialiseSelectedColumnsState,
 	initialiseWhereFilterState,
 } from "./initialiseState";
-import DropdownButton from "../../components/styleComponents/buttons/DropDownButton/DropdownButton";
-import { downloadData } from "../../services/utilityFunctions";
+// import DropdownButton from "../../components/styleComponents/buttons/DropDownButton/DropdownButton";
+// import { downloadData } from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/styleComponents/buttons/SimpleButton/SimpleButton";
 import CollapsibleSection from "../../components/CollapsibleSection/CollapsibleSection";
 import DataTable from "./table/DataTable";
+import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
 
 /**
  * @returns {JSX.Element}
@@ -124,7 +129,7 @@ export default function Discovery() {
 
 	/**
 	 * This function is passed as a prop to the dropdown item and is executed when the user clicks on the item
-	 */
+	 *
 	const dropdownItemClick = (e) => {
 		// set format, dataType, and filename, subject to selected data type
 		let format;
@@ -155,45 +160,25 @@ export default function Discovery() {
 			})
 			.catch((e) => console.error(e));
 	};
+	*/
 
 	return (
 		<>
-			<HeroImage heroTitle="DISCOVERY" />
-			<div id={"discovery-title"}>Current Discoveries</div>
-			<div id={"database-search-wrapper"}>
-				<DataTable
-					isSortIconResetNeeded={isSortIconResetNeeded}
-					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
-					showLoadingSpinner={showLoadingSpinner}
-				/>
-				<div id={"filtersContainer"}>
-					<div id={"filtersHeader"}>
-						<p>Filters</p>
-						<div id={"discovery-filter-buttons-container"}>
-							<div id="searchBttn">
-								<SimpleButton
-									buttonName={"Filter"}
-									buttonEffectAsync={() =>
-										queryExoplanetDatabase(
-											"json",
-											true,
-											true
-										)
-									}
-								/>
-							</div>
-							<DropdownButton
-								buttonLabel={"Download"}
-								dropdownItemClick={dropdownItemClick}
-								item1={{ href: "#/action-1", label: "csv" }}
-								item2={{ href: "#/action-2", label: "json" }}
-							/>
-						</div>
-					</div>
+		<div id="discovery">
+			<Navigation></Navigation>
+			<h1>Discovery</h1>
+			<p className="discovery-description">Explore Kepler Objects of Interest (KOIs) from the NASA Exoplanet Archive by applying the filters below.</p>
+
+			<CollapsibleSection
+				className="collapsible"
+				title={"Filters"}
+			>
+				<>
+					<p className="filter-instructions">Select the desired filters, then click the "Apply Filters" button below to view the filtered results.</p>
+
 					<CollapsibleSection
 						className={"discover-filter-collapsible"}
 						title={"Identifications"}
-						defaultOpen={true}
 					>
 						<DiscoveryColumnFilterList
 							filterArray={identificationFiltersArray}
@@ -206,7 +191,6 @@ export default function Discovery() {
 					<CollapsibleSection
 						className={"discover-filter-collapsible"}
 						title={"Exoplanets"}
-						defaultOpen={true}
 					>
 						<DiscoveryColumnFilterList
 							filterArray={exoplanetArchiveFiltersArray}
@@ -288,9 +272,44 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
-				</div>
+
+					{/* Buttons */}
+					<div className="filter-buttons">
+						<div id="searchBttn">
+							<SimpleButton
+								buttonName={"Apply Filters"}
+								buttonEffectAsync={() =>
+									queryExoplanetDatabase(
+										"json",
+										true,
+										true
+									)
+								}
+							/>
+						</div>
+						{/* Disabled for being non-functional, created ticket to fix.
+							Also uncomment DropdownButton and downloadData import, and dropdownItemClick function.
+						<DropdownButton
+							buttonLabel={"Download"}
+							dropdownItemClick={dropdownItemClick}
+							item1={{ href: "#/action-1", label: "csv" }}
+							item2={{ href: "#/action-2", label: "json" }}
+						/>
+						*/}
+					</div>
+				</>
+			</CollapsibleSection>
+
+			{/* Discoveries Table */}
+			<div className="discoveries-table">
+				<DataTable
+					isSortIconResetNeeded={isSortIconResetNeeded}
+					setIsSortIconResetNeeded={setIsSortIconResetNeeded}
+					showLoadingSpinner={showLoadingSpinner}
+				/>
 			</div>
-			<Footer />
+		</div>
+		<Footer />
 		</>
 	);
 }

@@ -1,127 +1,145 @@
-#discovery-title {
-	font-size: 3rem;
-	margin: 0 auto;
-	padding: 2rem;
+#discovery {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url(../../assets/background.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: contain;
 }
 
-#database-search-wrapper {
+// Page title
+#discovery h1 {
+	padding: 4rem 0 1rem 0;
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+
+#discovery .discovery-description {
+	max-width: 80vw;
+}
+
+/* Filters Dropdown */
+
+/* General Styles */
+#discovery .collapsible-container {
+	margin-bottom: 0.25rem;
 	display: flex;
-	flex-direction: column-reverse;
 	justify-content: space-between;
-	width: 80%;
-	margin: 0 auto;
-	padding-bottom: 2rem;
-	gap: 1rem;
-	height: 100%;
+	align-items: center;
+}
 
-	@media (min-width: 1360px) {
-		flex-direction: row;
-	}
+#discovery .collapsible-title {
+	margin: 0;
+	font-size: 1.25rem;
+}
 
-	#filtersContainer {
+/* Outer Collapsible */
+#discovery .collapsible {
+	width: 90vw;
+	padding: 1rem 2rem;
+	background-color: var(--dark-gray);
+	border: 2px solid var(--neon-purple);
+	font-size: 1.25rem;
+}
+
+@media screen and (min-width: 576px) {
+	#discovery .collapsible {
 		width: 80vw;
-		border-style: groove;
-		text-align: left;
-		padding-bottom: 1rem;
-		vertical-align: middle;
-		height: auto;
-		@media (min-width: 1360px) {
-			width: 35vw;
-		}
+	}
+}
 
-		p {
-			font-size: 2rem;
-			padding-left: 2rem;
-		}
+@media screen and (min-width: 768px) {
+	#discovery .collapsible {
+		width: 60vw;
+	}
+}
 
-		& #filtersHeader {
-			margin-bottom: 2rem;
-			max-height: 80px;
-			position: relative;
-			top: -34px;
-		}
+@media screen and (min-width: 992px) {
+	#discovery .collapsible {
+		width: 50vw;
+	}
+}
 
-		& #filtersHeader > p {
-			display: inline-block;
-			padding: 10px;
-			margin-left: 20px;
-			background-color: #1c1a22;
-		}
+@media screen and (min-width: 1200px) {
+	#discovery .collapsible {
+		width: 40vw;
+	}
+}
 
-		#discovery-filter-buttons-container {
+#discovery .collapsible .filter-instructions {
+	margin: 0;
+	padding: 1rem 4rem 0 2rem;
+	text-align: left;
+	font-size: 1rem;
+	font-style: italic;
+}
+
+/* Inner Collapsibles */
+#discovery .discover-filter-collapsible {
+	padding: 1rem 2rem 0 2rem;
+}
+
+#discovery .discover-filter-collapsible .collapsible-title{
+	font-size: 1.125rem;
+}
+
+#discovery .filter-buttons {
+	margin: 2rem 0 1rem 0;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+}
+
+#discovery .discoveries-table {
+	width: 90vw;
+	padding: 2rem 0;
+}
+
+
+/* Original Filter Styles */
+#discovery .filters {
+	.planet-system {
+		.filter-item {
+			cursor: help;
 			display: flex;
-			padding: 0 2rem;
-			width: 100%;
-			justify-content: space-between;
-			gap: 1rem;
 
-			@media (min-width: 700px) {
-				//flex: 1 1 8rem;
-				width: 60%;
-			}
+			.discovery-checkbox-wrapper {
+				padding-right: 1em;
 
-			& > div {
-				flex: 1 0 8rem;
-
-				@media (max-width: 450px) {
-					flex: 1 1 9rem;
-
-					& > button {
-						padding-left: 0px;
-					}
+				.discovery-checkbox:hover {
+					cursor: pointer;
 				}
 
-				& button {
-					width: 100%;
+				.discovery-checkbox:active,
+				.discovery-checkbox:checked:active {
+					box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+						inset 0 1px 3px rgba(0, 0, 0, 0.1);
 				}
-			}
-		}
 
-		.filters {
-			padding: 0 2rem 1rem 2rem;
-			border-bottom: 2px solid #a0a0aa;
+				.discovery-checkbox:checked {
+					background: #e9ecee;
+					border: 1px solid #adb8c0;
+					box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+						inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05),
+						inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+					color: var(--text);
+				}
 
-			.title {
-				padding: 0.5rem 0;
-				font-size: 1.5rem;
-			}
-
-			.planet-system {
-				.filter-item {
-					display: flex;
-					padding-bottom: 0.5rem;
-
-					.discovery-checkbox-wrapper {
-						padding-right: 1em;
-
-						.discovery-checkbox:hover {
-							cursor: pointer;
-						}
-
-						.discovery-checkbox:active,
-						.discovery-checkbox:checked:active {
-							box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-								inset 0 1px 3px rgba(0, 0, 0, 0.1);
-						}
-
-						.discovery-checkbox:checked {
-							background: #e9ecee;
-							border: 1px solid #adb8c0;
-							box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-								inset 0 -15px 10px -12px rgba(0, 0, 0, 0.05),
-								inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-							color: var(--text);
-						}
-
-						.discovery-checkbox:checked:after {
-							content: "\2714";
-							font-size: 14px;
-							position: absolute;
-							top: 0;
-							left: 3px;
-							color: var(--text);
-						}
-					}
+				.discovery-checkbox:checked:after {
+					content: "\2714";
+					font-size: 14px;
+					position: absolute;
+					top: 0;
+					left: 3px;
+					color: var(--text);
 				}
 			}
 		}

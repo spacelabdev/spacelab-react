@@ -16,8 +16,8 @@ import Footer from "../../components/Footer/Footer";
 export default function Projects() {
 	return (
 		<>
-			<Navigation></Navigation>
 			<div id="projects">
+				<Navigation></Navigation>
 				<h1>Projects</h1>
 				
 				<div className="project-section">
