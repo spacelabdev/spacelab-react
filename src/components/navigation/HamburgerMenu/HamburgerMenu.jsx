@@ -26,10 +26,10 @@ function HamburgerMenu() {
 								About
 							</Link>
 						</div>
-						<div class="hamburger-nav-link" onClick={() => setMenuOpen(!menuOpen)}>Resources 
-							<span class="fa fa-caret-down" >{menuOpen ? '╱╲' : '╲╱'}</span>
+						<div className="hamburger-nav-link" onClick={() => setMenuOpen(!menuOpen)}>Resources 
+							<span className="fa fa-caret-down" >{menuOpen ? '╱╲' : '╲╱'}</span>
 						</div>
-						<div class="dropdown-container" style={{display: menuOpen ? "flex" : "none"}}>
+						<div className="dropdown-container" style={{display: menuOpen ? "flex" : "none"}}>
 							<Link
 								className={"hamburger-nav-link"}
 								to={"/projects"}
