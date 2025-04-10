@@ -22,6 +22,10 @@
 	color: white;
 }
 
+#discovery .discovery-description {
+	max-width: 80vw;
+}
+
 /* Filters Dropdown */
 
 /* General Styles */
@@ -71,13 +75,23 @@
 	}
 }
 
+#discovery .collapsible .filter-instructions {
+	margin: 0;
+	padding: 1rem 4rem 0 2rem;
+	text-align: left;
+	font-size: 1rem;
+	font-style: italic;
+}
+
 /* Inner Collapsibles */
 #discovery .discover-filter-collapsible {
 	padding: 1rem 2rem 0 2rem;
 }
 
 #discovery .filter-buttons {
+	margin: 2rem 0 1rem 0;
 	display: flex;
+	justify-content: center;
 	gap: 1rem;
 }
 

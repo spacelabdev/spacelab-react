@@ -166,12 +166,15 @@ export default function Discovery() {
 		<div id="discovery">
 			<Navigation></Navigation>
 			<h1>Discovery</h1>
+			<p className="discovery-description">Explore Kepler Objects of Interest (KOIs) from the NASA Exoplanet Archive by applying the filters below.</p>
 
 			<CollapsibleSection
 				className="collapsible"
 				title={"Filters"}
 			>
 				<>
+					<p className="filter-instructions">Select the desired filters, then click the "Apply Filters" button below to view the filtered results.</p>
+
 					<CollapsibleSection
 						className={"discover-filter-collapsible"}
 						title={"Identifications"}
@@ -268,30 +271,32 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
+
+					{/* Buttons */}
+					<div className="filter-buttons">
+						<div id="searchBttn">
+							<SimpleButton
+								buttonName={"Apply Filters"}
+								buttonEffectAsync={() =>
+									queryExoplanetDatabase(
+										"json",
+										true,
+										true
+									)
+								}
+							/>
+						</div>
+						{/* Disabled for being non-functional, created ticket to fix
+						<DropdownButton
+							buttonLabel={"Download"}
+							dropdownItemClick={dropdownItemClick}
+							item1={{ href: "#/action-1", label: "csv" }}
+							item2={{ href: "#/action-2", label: "json" }}
+						/>
+						*/}
+					</div>
 				</>
 			</CollapsibleSection>
-			
-			{/* Buttons */}
-			<div className="filter-buttons">
-				<div id="searchBttn">
-					<SimpleButton
-						buttonName={"Apply Filters"}
-						buttonEffectAsync={() =>
-							queryExoplanetDatabase(
-								"json",
-								true,
-								true
-							)
-						}
-					/>
-				</div>
-				<DropdownButton
-					buttonLabel={"Download"}
-					dropdownItemClick={dropdownItemClick}
-					item1={{ href: "#/action-1", label: "csv" }}
-					item2={{ href: "#/action-2", label: "json" }}
-				/>
-			</div>
 
 			{/* Discoveries Table */}
 			<div className="discoveries-table">
