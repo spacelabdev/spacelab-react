@@ -23,6 +23,8 @@
 }
 
 /* Filters Dropdown */
+
+/* General Styles */
 #discovery .collapsible-container {
 	margin-bottom: 0.25rem;
 	display: flex;
@@ -35,8 +37,9 @@
 	font-size: 1.25rem;
 }
 
+/* Outer Collapsible */
 #discovery .collapsible {
-	width: 80vw;
+	width: 90vw;
 	margin-bottom: 2rem;
 	padding: 1rem 2rem;
 	background-color: rgba(0, 0, 0, 0.85);
@@ -44,6 +47,31 @@
 	font-size: 1.25rem;
 }
 
+@media screen and (min-width: 576px) {
+	#discovery .collapsible {
+		width: 80vw;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	#discovery .collapsible {
+		width: 60vw;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	#discovery .collapsible {
+		width: 50vw;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#discovery .collapsible {
+		width: 40vw;
+	}
+}
+
+/* Inner Collapsibles */
 #discovery .discover-filter-collapsible {
 	padding: 1rem 2rem 0 2rem;
 }
