@@ -163,8 +163,8 @@ export default function Discovery() {
 
 	return (
 		<>
-		<Navigation></Navigation>
 		<div id="discovery">
+			<Navigation></Navigation>
 			<h1>Discovery</h1>
 
 			<CollapsibleSection
