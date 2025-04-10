@@ -171,6 +171,7 @@ export default function Discovery() {
 				className="collapsible"
 				title={"Filters"}
 			>
+				<>
 					<CollapsibleSection
 						className={"discover-filter-collapsible"}
 						title={"Identifications"}
@@ -267,6 +268,7 @@ export default function Discovery() {
 							setWhereFilter={setWhereFilter}
 						/>
 					</CollapsibleSection>
+				</>
 			</CollapsibleSection>
 			
 			{/* Buttons */}

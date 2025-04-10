@@ -8,6 +8,7 @@
 	background-color: var(--medium-gray);
 	border: 2px solid var(--neon-purple);
 	scrollbar-color: var(--light-gray) var(--medium-gray);
+	overscroll-behavior: none;	// Prevents "bounce" effect on scroll, hiding mismatched background colors
 }
 
 #column-header-container {
