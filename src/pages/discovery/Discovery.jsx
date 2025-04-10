@@ -23,7 +23,7 @@ import {
 	initialiseWhereFilterState,
 } from "./initialiseState";
 // import DropdownButton from "../../components/styleComponents/buttons/DropDownButton/DropdownButton";
-import { downloadData } from "../../services/utilityFunctions";
+// import { downloadData } from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/styleComponents/buttons/SimpleButton/SimpleButton";
 import CollapsibleSection from "../../components/CollapsibleSection/CollapsibleSection";
@@ -288,7 +288,7 @@ export default function Discovery() {
 							/>
 						</div>
 						{/* Disabled for being non-functional, created ticket to fix.
-							Also uncomment DropdownButton import and dropdownItemClick function.
+							Also uncomment DropdownButton and downloadData import, and dropdownItemClick function.
 						<DropdownButton
 							buttonLabel={"Download"}
 							dropdownItemClick={dropdownItemClick}
