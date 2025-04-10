@@ -16,14 +16,14 @@
 	top: 0;
 	// Must manually set width of the table to properly render the border colors
 	// on the column headers
-	width: 2750px;
+	width: 2328px;
 	display: flex;
 	gap: 3px;
 	background-color: var(--neon-purple);
 	border-bottom: 2px solid var(--neon-purple);
 
 	& .column-header {
-		width: 12.5%;
+		flex: 0 0 6rem;
 		background-color: var(--dark-gray);
 		padding: 2px;
 		display: flex;
@@ -101,7 +101,7 @@
 .row {
 	flex: 0 0 0;
 	display: flex;
-	gap: 4px;
+	gap: 3px;
 	flex-wrap: nowrap;
 	// for some reason the object inherits a margin of -15px which is being unset with this 0
 	margin: 0;
@@ -109,7 +109,7 @@
 	& .row-element {
 		flex: 0 0 6rem;
 		color: var(text);
-		padding: 3px;
+		padding: 2px;
 		word-break: break-all;
 		overflow-wrap: break-word;
 
