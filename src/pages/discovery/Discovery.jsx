@@ -22,7 +22,7 @@ import {
 	initialiseSelectedColumnsState,
 	initialiseWhereFilterState,
 } from "./initialiseState";
-import DropdownButton from "../../components/styleComponents/buttons/DropDownButton/DropdownButton";
+// import DropdownButton from "../../components/styleComponents/buttons/DropDownButton/DropdownButton";
 import { downloadData } from "../../services/utilityFunctions";
 import "./discovery.scss";
 import SimpleButton from "../../components/styleComponents/buttons/SimpleButton/SimpleButton";
@@ -129,7 +129,7 @@ export default function Discovery() {
 
 	/**
 	 * This function is passed as a prop to the dropdown item and is executed when the user clicks on the item
-	 */
+	 *
 	const dropdownItemClick = (e) => {
 		// set format, dataType, and filename, subject to selected data type
 		let format;
@@ -160,6 +160,7 @@ export default function Discovery() {
 			})
 			.catch((e) => console.error(e));
 	};
+	*/
 
 	return (
 		<>
@@ -286,7 +287,8 @@ export default function Discovery() {
 								}
 							/>
 						</div>
-						{/* Disabled for being non-functional, created ticket to fix
+						{/* Disabled for being non-functional, created ticket to fix.
+							Also uncomment DropdownButton import and dropdownItemClick function.
 						<DropdownButton
 							buttonLabel={"Download"}
 							dropdownItemClick={dropdownItemClick}
