@@ -15,12 +15,19 @@
 
 // Page title
 #glossary h1 {
-	padding: 8rem 0 1rem 0;
+	padding: 4rem 0 1rem 0;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
 	font-size: 3rem;
 	text-transform: uppercase;
 	color: white;
+}
+
+// Padding adjustment on desktop (main) nav vs. mobile (hamburger) nav
+@media screen and (min-width: 1024px) {	
+	#glossary h1 {
+		padding: 8rem 0 1rem 0;
+	}
 }
 
 // Page jumps
