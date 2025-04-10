@@ -4,8 +4,9 @@
 	margin: 0;
 	padding: 0;
 	background-image: url(../../assets/background.jpg);
+	background-attachment: fixed;
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
 }
 
 .about-title {
