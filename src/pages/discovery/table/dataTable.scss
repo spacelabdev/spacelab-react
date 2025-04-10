@@ -11,17 +11,20 @@
 }
 
 #column-header-container {
-	background-color: var(--neon-purple);
-	display: flex;
 	position: sticky;
 	top: 0;
+	// Must manually set width of the table to properly render the border colors
+	// on the column headers
+	width: 2750px;
+	display: flex;
 	gap: 3px;
+	background-color: var(--neon-purple);
 	border-bottom: 2px solid var(--neon-purple);
 
 	& .column-header {
+		width: 12.5%;
 		background-color: var(--dark-gray);
 		padding: 2px;
-		flex: 0 0 6rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
