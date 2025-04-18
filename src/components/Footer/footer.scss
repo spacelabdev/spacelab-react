@@ -27,6 +27,10 @@ on tablets. Can be updated per UX team as necessary.
 			display: flex;
 			flex-direction: column;
 		}
+		@media (max-width: 576px) {
+			gap: 3rem;
+			padding: 2rem;
+		}
 	}
 
 	/*
