@@ -2,6 +2,7 @@ import React from "react";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import ContactForm from "../../components/formComponents/ContactForm/ContactForm";
 import Footer from "../../components/Footer/Footer";
+import './contact.scss'
 
 /**
  * Renders Contact form page with hero image, nav, and footer
@@ -10,10 +11,10 @@ import Footer from "../../components/Footer/Footer";
  */
 export default function Contact() {
 	return (
-		<>
+		<div className="contact-page-container">
 			<HeroImage heroTitle="CONTACT" />
 			<ContactForm />
 			<Footer />
-		</>
+		</div>
 	);
 }
