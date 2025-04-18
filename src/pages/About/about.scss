@@ -10,12 +10,12 @@
 }
 
 .about-title {
-	position: relative;
 	padding: 4rem 0 1rem 0;
-	color: white;
 	font-family: "Poppins", sans-serif;
 	font-weight: bold;
-	font-size: calc(30px + 2.2vmin);
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
 }
 
 #mission-vision-values-container {
@@ -30,7 +30,8 @@
 
 		h3 {
 			font-weight: bold;
-			text-align: center;
+			text-align: center;				
+			margin-bottom: 1rem;
 		}
 
 		p {
@@ -52,103 +53,12 @@
 	
 			h3 {
 				font-size: 20px;
-				margin-bottom: 1rem;
 			}
 	
 			p {
 				font-size: 1.1rem;
 			}
 		}
-	}
-}
-
-#our-team-container {
-	padding: 4vh 4vw;
-
-	.our-team-title {
-		color: white;
-		font-family: "Poppins", sans-serif;
-		font-weight: bold;
-		font-size: calc(30px + 2.2vmin);
-		text-align: left;
-	
-		@media screen and (min-width: 768px) {
-			padding-top: 4rem;
-			font-size: 3rem; 
-		}
-	}
-
-	.team-slider-header {
-		display: flex;
-		justify-content: center;
-		max-width: 1200px;
-		margin: 0 auto;
-
-		h2 {
-			text-transform: uppercase;
-			color: white;
-			font-family: "Poppins", sans-serif;
-			font-weight: bold;
-			font-size: 6vw;
-			letter-spacing: 3px;
-		}
-	}
-
-	.about-team-toggle {
-		.toggle-button {
-			margin: 0 2rem;
-
-			&:focus {
-				outline: none;
-				box-shadow: 0 0 0 0.25rem var(--neon-purple);
-			}
-
-			&:hover {
-				background-color: var(--neon-purple);
-				border-color: var(--neon-purple);
-				cursor: pointer;
-				color: #ffffff;
-			}
-		}
-
-		.active {
-			background-color: var(--neon-purple);
-			border: 1px solid transparent;
-			color: white;
-			display: inline-block;
-			font-weight: 400;
-			-webkit-user-select: none;
-			user-select: none;
-			padding: 0.375rem 0.75rem;
-			font-size: 1rem;
-			border-radius: 0.25rem;
-			transition: background-color 0.15s ease-in-out,
-				box-shadow 0.15s ease-in-out;
-			white-space: nowrap;
-		}
-
-		.inactive {
-			background-color: #ffffff;
-			color: var(--background-color);
-			display: inline-block;
-			font-weight: 400;
-			-webkit-user-select: none;
-			user-select: none;
-			padding: 0.375rem 0.75rem;
-			font-size: 1rem;
-			border-radius: 0.25rem;
-			transition: background-color 0.15s ease-in-out,
-				box-shadow 0.15s ease-in-out;
-			white-space: nowrap;
-		}
-	}
-
-	.hidden {
-		display: none;
-	}
-
-	.show {
-		display: block;
 	}
 }
 
@@ -162,7 +72,7 @@
 		font-family: "Poppins", sans-serif;
 		font-weight: bold;
 		font-size: calc(30px + 2.2vmin);
-		text-align: left;
+		text-align: center;
 	
 		@media screen and (min-width: 768px) {
 			padding-top: 4rem;
