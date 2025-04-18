@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useForm, ValidationError } from "@formspree/react";
-import PartyPopper from "../../../assets/contactAssets/emojione_party-popper.png";
+import PartyPopper from "../../../assets/contactAssets/rocketShip.svg";
 import "./contactForm.scss";
 
 /**
@@ -14,20 +14,22 @@ export default function ContactForm() {
 	if (state.succeeded) {
 		return (
 			<div className={"submit-form-container"}>
-				<h2>Thank You!</h2>
-				<img
-					className={"party_popper-image"}
-					src={PartyPopper}
-					alt={"Hooray!"}
-				/>
-				<p>
-					Your submission has been received! We'll be in touch with
-					you shortly.
-				</p>
+				<h2>Success!</h2>
+				<div className="message-container">
+					<img
+						className={"party_popper-image"}
+						src={PartyPopper}
+						alt={"Hooray!"}
+					/>
+					<p>
+						You have successfully sent your message. One of our team members will be in contact with you soon. 
+					</p>					
+				</div>
+
 				<div className={"contact-button-container"}>
-					<button className="submit-button-back_home">
-						<Link to="/">Home Page</Link>
-					</button>
+					<span className="submit-button-back_home">
+						<Link className='home-btn' to="/">Return to Home Page <span>&#8690;</span></Link>
+					</span>
 				</div>
 			</div>
 		);
