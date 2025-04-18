@@ -73,6 +73,10 @@
 			align-items: left;
 			margin-bottom: 15px;
 			gap: 1rem;
+			@media (max-width: 576px) {
+				flex-direction: column;
+				gap: 0;
+			}
 		}
 
 		@media screen and (max-width: 768px) {
