@@ -2,7 +2,6 @@ import React from "react";
 import "./about.scss";
 import Navigation from "../../components/navigation/MainNavigation/MainNavigation";
 import MissionVisionValuesSection from "./MissionVisionValuesSection";
-import OurTeamSection from "./OurTeamSection";
 import HistorySection from "./HistorySection";
 import Footer from "../../components/Footer/Footer";
 
@@ -16,7 +15,6 @@ export default function About() {
 		<div id="about">
 			<Navigation />
 			<MissionVisionValuesSection />
-			<OurTeamSection />
 			<HistorySection />
 			<Footer />
 		</div>
