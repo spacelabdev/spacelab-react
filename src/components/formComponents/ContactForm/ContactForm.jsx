@@ -36,8 +36,8 @@ export default function ContactForm() {
 	return (
 		<div id={"contact-form-container"}>
 			<div className="contact-form-wrapper">
-				<h2>Contact Us</h2>
 				<div className={"contact-form-field-container"}>
+					<h2>Contact Us</h2>
 					<form method={"POST"} onSubmit={handleSubmit}>
 						<div className="first-input-row">
 							<input
