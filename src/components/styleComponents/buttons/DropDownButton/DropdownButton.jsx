@@ -18,6 +18,7 @@ const DropdownButton = ({
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [buttonWidth, setButtonWidth] = useState();
 	const dropdownMenuRef = useRef();
+	const wrapperRef = useRef();
 
 	/**
 	 * Set the width of the drop down menu
@@ -28,6 +29,23 @@ const DropdownButton = ({
 			dropdownMenuRef.current.style.width = `${buttonWidth}px`;
 		}
 		// eslint-disable-next-line
+	}, [isDropdownOpen]);
+
+	/**
+	 * Close the dropdown when the user clicks outside of it
+	 */
+	useEffect(() => {
+		function handleClickOutside(event) {
+			if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+				setIsDropdownOpen(false);
+			}
+		}
+		if (isDropdownOpen) {
+			document.addEventListener("mousedown", handleClickOutside);
+		}
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
 	}, [isDropdownOpen]);
 
 	/**
@@ -53,7 +71,7 @@ const DropdownButton = ({
 	};
 
 	return (
-		<div className={"dropdown-button-container"}>
+		<div className={"dropdown-button-container"} ref={wrapperRef}>
 			<button onClick={handleDropdownToggleClick}>
 				{buttonLabel}
 				<img
