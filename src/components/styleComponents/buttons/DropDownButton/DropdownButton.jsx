@@ -12,6 +12,7 @@ import PropTypes from "prop-types";
 const DropdownButton = ({
 	buttonLabel,
 	dropdownItemClick,
+	dropdownItems: _dropdownItems,
 	...dropdownItems
 }) => {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -28,9 +29,6 @@ const DropdownButton = ({
 		}
 		// eslint-disable-next-line
 	}, [isDropdownOpen]);
-
-	// convert the values of the dictionary into an array whose elements can be mapped over
-	const dropdownItemsArray = Object.values(dropdownItems);
 
 	/**
 	 * set drop down button width in state and set isDropdownOpen to true or false
@@ -68,7 +66,7 @@ const DropdownButton = ({
 					className={"dropdown-items-container"}
 					ref={dropdownMenuRef}
 				>
-					{dropdownItemsArray.map((dropdownItem, index) => {
+					{Object.values(dropdownItems).map((dropdownItem, index) => {
 						return (
 							<button
 								key={index}
