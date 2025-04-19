@@ -49,16 +49,14 @@ const DropdownButton = ({
 
 	const handleDropdownItemClick = (e) => {
 		e.preventDefault();
-		// execute the provided function that governs the effects a click on the dropdown item has
 		dropdownItemClick(e);
+		// close menu after selection
+		setIsDropdownOpen(false);
 	};
 
 	return (
 		<div className={"dropdown-button-container"}>
-			<button
-				onClick={handleDropdownToggleClick}
-				onBlur={() => setIsDropdownOpen(false)}
-			>
+			<button onClick={handleDropdownToggleClick}>
 				{buttonLabel}
 				<img
 					src={rightTriangleDown}
