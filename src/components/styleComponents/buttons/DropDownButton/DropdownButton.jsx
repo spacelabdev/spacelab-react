@@ -12,11 +12,13 @@ import PropTypes from "prop-types";
 const DropdownButton = ({
 	buttonLabel,
 	dropdownItemClick,
+	dropdownItems: _dropdownItems,
 	...dropdownItems
 }) => {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const [buttonWidth, setButtonWidth] = useState();
 	const dropdownMenuRef = useRef();
+	const wrapperRef = useRef();
 
 	/**
 	 * Set the width of the drop down menu
@@ -29,8 +31,22 @@ const DropdownButton = ({
 		// eslint-disable-next-line
 	}, [isDropdownOpen]);
 
-	// convert the values of the dictionary into an array whose elements can be mapped over
-	const dropdownItemsArray = Object.values(dropdownItems);
+	/**
+	 * Close the dropdown when the user clicks outside of it
+	 */
+	useEffect(() => {
+		function handleClickOutside(event) {
+			if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+				setIsDropdownOpen(false);
+			}
+		}
+		if (isDropdownOpen) {
+			document.addEventListener("mousedown", handleClickOutside);
+		}
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [isDropdownOpen]);
 
 	/**
 	 * set drop down button width in state and set isDropdownOpen to true or false
@@ -49,16 +65,14 @@ const DropdownButton = ({
 
 	const handleDropdownItemClick = (e) => {
 		e.preventDefault();
-		// execute the provided function that governs the effects a click on the dropdown item has
 		dropdownItemClick(e);
+		// close menu after selection
+		setIsDropdownOpen(false);
 	};
 
 	return (
-		<div className={"dropdown-button-container"}>
-			<button
-				onClick={handleDropdownToggleClick}
-				onBlur={() => setIsDropdownOpen(false)}
-			>
+		<div className={"dropdown-button-container"} ref={wrapperRef}>
+			<button onClick={handleDropdownToggleClick}>
 				{buttonLabel}
 				<img
 					src={rightTriangleDown}
@@ -70,7 +84,7 @@ const DropdownButton = ({
 					className={"dropdown-items-container"}
 					ref={dropdownMenuRef}
 				>
-					{dropdownItemsArray.map((dropdownItem, index) => {
+					{Object.values(dropdownItems).map((dropdownItem, index) => {
 						return (
 							<button
 								key={index}

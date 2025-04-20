@@ -1,6 +1,7 @@
 .dropdown-button-container {
 	display: flex;
 	flex-direction: column;
+	position: relative;
 
 	& > button {
 		display: flex;
@@ -28,11 +29,24 @@
 
 .dropdown-items-container {
 	background-color: white;
-	position: relative;
-	top: 5px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin-top: 0.25rem;
+	display: flex;
+	flex-direction: column;
+	z-index: 99;
 	border-radius: 0.25rem;
 
-	& .dropdown-item:hover {
-		background-color: var(--highlight-hover);
+	.dropdown-item {
+		display: block;
+		width: 100%;
+		padding: 0.75rem 1.375rem;
+		font-size: 1rem;
+		text-align: left;
+		cursor: pointer;
+		&:hover {
+			background-color: var(--highlight-hover);
+		}
 	}
 }
