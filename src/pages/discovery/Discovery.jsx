@@ -143,6 +143,7 @@ export default function Discovery() {
 			.catch((e) => console.error(e));
 	};
 	
+	// eslint-disable-next-line
 	useEffect(queryExoplanetDatabase, []);
 
 	return (
