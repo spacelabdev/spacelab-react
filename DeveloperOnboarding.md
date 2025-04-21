@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/spacelabdev/spacelab-react">
-    <img src="Images/logo.jpeg" alt="Logo" width="80" height="80">
+    <img src="public/SpaceLab-Icon.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Developer Docs</h3>
