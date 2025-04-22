@@ -18,7 +18,7 @@ export default function DiversityInTechSection() {
 				<div className="about">
 					<h3>About</h3>
 					<p>
-						Spacelab is a program dedicated to outer-space tech initiatives while 
+						The Spacelab Nonprofit is a program dedicated to outer-space tech initiatives while 
 						promoting diversity in the tech space! We empower underrepresented communities
 						by providing them with hands-on experience in real-world projects. Through our program,
 						these tech enthusiasts become equipped with the skills and opportunities needed
