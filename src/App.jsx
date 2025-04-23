@@ -23,6 +23,7 @@ function App() {
 		return result ? JSON.parse(result) : {};
 	});
 
+	/*
 	// Get RSS feed from Medium for Blog page
 	useEffect(() => {
 		const parser = new RSSParser();
@@ -42,6 +43,7 @@ function App() {
 		};
 		fetchPosts();
 	}, []);
+	*/
 
 	return (
 		<div className="App">
