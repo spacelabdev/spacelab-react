@@ -3,20 +3,13 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@emotion/react": "^11.14.0",
-		"@emotion/styled": "^11.14.0",
 		"@formspree/react": "^2.5.5",
 		"@marvelapp/react-ab-test": "^3.1.0",
-		"@mui/material": "^5.17.1",
 		"@paypal/react-paypal-js": "^8.8.3",
 		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/react": "^11.2.7",
-		"@testing-library/user-event": "^12.8.3",
 		"axios": "^0.30.0",
-		"bootstrap": "^5.3.5",
-		"caniuse-lite": "^1.0.30001715",
 		"react": "^17.0.2",
-		"react-ab-test": "^2.0.1",
 		"react-bootstrap": "^1.6.8",
 		"react-burger-menu": "^3.1.0",
 		"react-dom": "^17.0.2",
@@ -24,8 +17,6 @@
 		"react-router": "^5.3.4",
 		"react-scripts": "5.0.1",
 		"rss-parser": "^3.13.0",
-		"sass": "^1.86.3",
-		"sass-loader": "^12.6.0",
 		"web-vitals": "^1.1.2",
 		"webpack": "^5.99.6"
 	},
@@ -54,16 +45,12 @@
 		]
 	},
 	"devDependencies": {
-		"assert": "^2.1.0",
 		"buffer": "^6.0.3",
 		"crypto-browserify": "^3.12.1",
-		"dotenv": "^10.0.0",
 		"dotenv-webpack": "^8.1.0",
 		"https-browserify": "^1.0.0",
 		"os-browserify": "^0.3.0",
 		"path-browserify": "^1.0.1",
-		"postcss-flexbugs-fixes": "^5.0.2",
-		"postcss-normalize": "^10.0.1",
 		"process": "^0.11.10",
 		"prop-types": "^15.8.1",
 		"react-app-rewired": "^2.2.1",
@@ -73,20 +60,20 @@
 		"timers-browserify": "^2.0.12",
 		"url": "^0.11.4"
 	},
-  	"overrides": {
+	"overrides": {
 		"node-fetch": ">=2.6.7",
 		"nth-check": ">=2.0.2",
 		"postcss": ">=8.4.31",
 		"isomorphic-fetch": {
-		"node-fetch": ">=2.6.7"
+			"node-fetch": ">=2.6.7"
 		},
 		"svgo": {
-		"nth-check": ">=2.0.2"
+			"nth-check": ">=2.0.2"
 		},
 		"resolve-url-loader": {
-		"postcss": ">=8.4.31"
+			"postcss": ">=8.4.31"
 		}
-  	},
+	},
 	"engines": {
 		"node": ">= 18.0.0",
 		"npm": ">=7"
