@@ -6,7 +6,6 @@ import { termsArray, podcastArray } from "./podcastHelper";
 import "./podcast.scss";
 import PodcastCard from "../../components/PodcastCard/PodcastCard";
 import Chip from "../../components/styleComponents/Chip/Chip";
-import NewsletterSubscribe from "../../components/formComponents/NewsletterSubscribe/NewsletterSubscribe";
 import Astronaut from "../../assets/podcastAssets/Astronaut.jpg";
 
 /**

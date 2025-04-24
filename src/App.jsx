@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import RSSParser from "rss-parser";
+import { createContext, useState } from "react";
+// import RSSParser from "rss-parser";
 import "./app.scss";
 import Main from "./main";
 
@@ -16,6 +16,7 @@ function App() {
 	/** Hero Image State */
 	const [pageTitle, setPageTitle] = useState("");
 	/** Medium Blog RSS Feed State */
+	// eslint-disable-next-line
 	const [blogArray, setBlogArray] = useState([]);
 	/** Cal Tech API Initial Data */
 	const [exoplanetData, setExoplanetData] = useState(() => {
@@ -23,6 +24,7 @@ function App() {
 		return result ? JSON.parse(result) : {};
 	});
 
+	/*
 	// Get RSS feed from Medium for Blog page
 	useEffect(() => {
 		const parser = new RSSParser();
@@ -42,6 +44,7 @@ function App() {
 		};
 		fetchPosts();
 	}, []);
+	*/
 
 	return (
 		<div className="App">

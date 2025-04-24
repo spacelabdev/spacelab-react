@@ -1,6 +1,5 @@
 import React from "react";
 import "./diversityInTechStatistics.scss";
-import earthImage from "../../../../assets/homeAssets/image4.jpg";
 
 export default function DiversityInTechStatistics() {
 	return (
