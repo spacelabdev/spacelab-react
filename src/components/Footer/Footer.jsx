@@ -70,14 +70,6 @@ export default function Footer() {
 										Projects
 									</Link>
 								</li>
-								{/* // Removed this link until podcast page becomes active. */}
-								{/*}
-								<li>
-									<Link to={"/podcast"} style={link_style}>
-										Podcast
-									</Link>
-								</li>
-								*/}
 							</ul>
 						</div>
 						
@@ -85,10 +77,15 @@ export default function Footer() {
 							<h4>Resources</h4>
 							<hr></hr>
 							<ul>
-								{/*}
+								{/*
 								<li>
 									<Link to={"/blog"} style={link_style}>
 										Blog
+									</Link>
+								</li>
+								<li>
+									<Link to={"/podcast"} style={link_style}>
+										Podcast
 									</Link>
 								</li>
 								*/}
