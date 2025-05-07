@@ -11,78 +11,51 @@ import { useState } from "react";
  *  https://github.com/negomi/react-burger-menu
  */
 function HamburgerMenu() {
-		const [menuOpen, setMenuOpen] = useState(false);
+		const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
+		const [resourcesMenuOpen, setResourcesMenuOpen] = useState(false);
+
 
 		return (
 			<>
 				<Menu right>
 					<div className="hamburger-nav-links">
-						<div>
-							<Link
-								className={"hamburger-nav-link"}
-								to={"/about"}
-								style={{ textDecoration: "none" }}
-							>
+						<div className="hamburger-nav-link" onClick={() => setAboutMenuOpen(!aboutMenuOpen)}>Who We Are 
+							<span className="fa fa-caret-down" >{aboutMenuOpen ? '╱╲' : '╲╱'}</span>
+						</div>
+						<div className="dropdown-container" style={{display: aboutMenuOpen ? "flex" : "none"}}>
+							<Link className={"hamburger-nav-link"} to={"/about"}>
 								About
 							</Link>
-						</div>
-						<div className="hamburger-nav-link" onClick={() => setMenuOpen(!menuOpen)}>Resources 
-							<span className="fa fa-caret-down" >{menuOpen ? '╱╲' : '╲╱'}</span>
-						</div>
-						<div className="dropdown-container" style={{display: menuOpen ? "flex" : "none"}}>
-							<Link
-								className={"hamburger-nav-link"}
-								to={"/projects"}
-								style={{ textDecoration: "none" }}
-							>
+							<Link className={"hamburger-nav-link"} to={"/projects"}>
 								Projects
 							</Link>
-							<Link
-								className={"hamburger-nav-link"}
-								to={"/discovery"}
-								style={{ textDecoration: "none" }}
-							>
-								Discovery
-							</Link>
-							<Link
-								className={"hamburger-nav-link"}
-								to={"/glossary"}
-								style={{ textDecoration: "none" }}
-							>
-								Glossary
-							</Link>
-							{/* // Removed this link until podcast page becomes active. */}
-							{/* <Link
-								className={"hamburger-nav-link"}
-								to={"/podcast"}
-								style={{ textDecoration: "none" }}
-							>
+						</div>
+
+						<div className="hamburger-nav-link" onClick={() => setResourcesMenuOpen(!resourcesMenuOpen)}>Resources 
+							<span className="fa fa-caret-down" >{resourcesMenuOpen ? '╱╲' : '╲╱'}</span>
+						</div>
+						<div className="dropdown-container" style={{display: resourcesMenuOpen ? "flex" : "none"}}>
+							{/* <Link className={"hamburger-nav-link"} to={"/podcast"}>
 								Podcast
-							</Link> */}
-							{/* // Removed until blog page on Medium is back up. */}
-							{/* <Link
-								className={"hamburger-nav-link"}
-								to={"/blog"}
-								style={{ textDecoration: "none" }}
-							>
+							</Link>
+							<Link className={"hamburger-nav-link"} to={"/blog"}>
 								Blog
 							</Link> */}
+							
+							<Link className={"hamburger-nav-link"} to={"/discovery"}>
+								Discovery
+							</Link>
+							<Link className={"hamburger-nav-link"} to={"/glossary"}>
+								Glossary
+							</Link>
 						</div>
 						<div>
-							<Link
-								className={"hamburger-nav-link"}
-								to={"/contact"}
-								style={{ textDecoration: "none" }}
-							>
+							<Link className={"hamburger-nav-link"} to={"/contact"}>
 								Contact
 							</Link>
 						</div>
 						{/* <div>
-							<Link
-								className={"hamburger-nav-link"}
-								to={"/donate"}
-								style={{ textDecoration: "none" }}
-							>
+							<Link className={"hamburger-nav-link"} to={"/donate"}>
 								Donate
 							</Link>
 						</div> */}
@@ -92,7 +65,6 @@ function HamburgerMenu() {
 								href="https://www.paypal.com/donate/?hosted_button_id=PK9D4A3HEWV8C"
 								target="_blank"
 								rel="noreferrer"
-								style={{ textDecoration: "none" }}
 							>
 								Donate
 							</a>

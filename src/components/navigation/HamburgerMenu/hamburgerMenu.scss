@@ -30,8 +30,8 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-	height: 30px;
-	width: 30px;
+	height: 32px;
+	width: 32px;
 }
 
 /* Color/shape of close button cross */
@@ -44,10 +44,10 @@
 	position: fixed;
 	height: 60vh !important;
 	width: 30vw !important;
+	top: 64px;
 
 	@media screen and (max-width: 768px) {
 		position: absolute;
-		top: 64px;
 		min-height: 350px !important;
 		height: fit-content !important;
 		width: 290px !important;
@@ -90,50 +90,47 @@
 }
 
 .donate-btn {
-	height: 50px;
-	width: 150px;
-	margin: 10px 0;
+	height: 3.5rem;
+	width: 9.5rem;
+	margin-top: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 3px solid var(--neon-purple);
+	border: 2px solid var(--neon-purple);
 }
 
 .hamburger-donate-link {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	color: white !important;
 	text-align: left;
 	font-family: "Lato", sans-serif;
 	letter-spacing: 1px;
-
-	@media screen and (max-width: 768px) {
-		font-size: 1.25rem;
-	}
 }
 
 .hamburger-nav-link {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	color: white !important;
 	text-align: left;
 	font-family: "Lato", sans-serif;
 	letter-spacing: 1px;
 	cursor: pointer;
-
-	@media screen and (max-width: 768px) {
-		font-size: 1.25rem;
-	}
 }
   
 // Dropdown container (hidden by default)
 .dropdown-container {
 	display: flex;
 	flex-direction: column;
-	gap: 3px;
+	gap: 2px;
 	margin-left: 30px;
 	a {
-		font-size: 17px;
+		font-size: 1.125rem;
 		letter-spacing: 1px;
 	}
+}
+
+.fa, .fa-caret-down {
+	color: white;
+	letter-spacing: -1px;
 }
 
 .fa-caret-down {
