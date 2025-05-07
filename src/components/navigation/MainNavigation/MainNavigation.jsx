@@ -25,7 +25,7 @@ export default function MainNavigation() {
 					<AutoScroll />
 
 					<div className="logo-container">
-						<Link className={"logo-nav"} to={"/"}>
+						<Link to={"/"}>
 							<img src={Logo} alt="logo" />
 						</Link>
 					</div>
