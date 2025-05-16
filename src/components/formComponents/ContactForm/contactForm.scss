@@ -47,6 +47,7 @@
 				display: flex;
 				flex-direction: row;
 				gap:6px;
+				margin-bottom: 20px;
 				@media (min-width: 1024px) {
 					flex-direction: row;
 					margin-top: 0;
@@ -59,6 +60,8 @@
 				@media (max-width: 576px) {
 					flex-direction: column;
 					width: 100%;
+					gap: 10px;
+					margin-bottom: 10px;
 					input{
 						width: 100%;
 					}
@@ -68,6 +71,12 @@
 				width: 50%;
 				border: 1px solid rgb(255, 255, 255);
 				padding-left:10px;
+			}
+			#email {
+				margin-bottom: 20px;
+				@media (max-width: 767px) {
+					margin-bottom: 10px;
+				}
 			}
 			#email, #phone {
 				border: 1px solid rgb(255, 255, 255);
